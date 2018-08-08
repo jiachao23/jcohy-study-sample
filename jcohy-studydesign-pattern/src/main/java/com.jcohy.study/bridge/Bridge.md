@@ -166,4 +166,3 @@
     
     
     
-最后附上代码的地址[Briage](https://github.com/jiachao23/IdeaStudy/tree/master/src/com/study/designpattern/Briage)    

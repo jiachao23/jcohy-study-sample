@@ -25,6 +25,7 @@
 
 ## 状态模式的角色
 
+>  ![结构图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-studydesign-pattern/src/main/resources/static/images/state.png)
 >  *  state:抽象状态类，定义一个接口以封装 与COntext的一个特定状态相关的行为。
 >  *  Context: 维护一个ConcreteState子类的实例，这个实例定义当前的状态。
 >  *  ConcreteState(A,B,C....)：具体状态，每一个子类实现一个与Context相关的状态的行为。
@@ -60,5 +61,3 @@ javax.faces.lifecycle.LifeCycle#execute()
 
 ##  扩展
 
-
-最后附上代码的地址[State](https://github.com/jiachao23/IdeaStudy/tree/master/src/com/study/designpattern/State)

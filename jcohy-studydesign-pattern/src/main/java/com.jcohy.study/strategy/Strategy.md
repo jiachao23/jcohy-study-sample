@@ -24,6 +24,7 @@
 
 ## 策略模式的角色
 
+>  ![结构图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-studydesign-pattern/src/main/resources/static/images/strategy.png)
 >  *  Context
 
 >  Context上下文，用一个ConcreteStrategy来配置，维护一个对Strategy对象的引用。
@@ -127,4 +128,3 @@
 
 ##  扩展
     
-最后附上代码的地址[Strategy](https://github.com/jiachao23/IdeaStudy/tree/master/src/com/study/designpattern/Strategy)    

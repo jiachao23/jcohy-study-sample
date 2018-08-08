@@ -39,6 +39,8 @@
 <p id ="role" />
 
 ####  原型模式的参与者
+
+>  ![结构图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-studydesign-pattern/src/main/resources/static/images/prototype.png)
 >  *  Prototype(原型):Prototype规定复制对象实例建立新对象实例的方法。</br>
 >  *  ConcretePrototype:实际上实现先复制对象实例再建立新对象实例的方法。</br>
 >  *  Client:利用复制对象的方法以产生另一个新对象实例</br>
@@ -84,7 +86,6 @@
                 		System.out.println(pro1.getName());
                 	}
 java中clone()方法做的是浅复制。要实现深复制，需要采用流的形式读入当前对象的二进制输入，再写出二进制数据对应的对象。
-可以[Prototype](https://github.com/jiachao23/IdeaStudy/blob/master/src/com/study/designpattern/Prototype/)实现。
 
 <p id ="qa" />
 

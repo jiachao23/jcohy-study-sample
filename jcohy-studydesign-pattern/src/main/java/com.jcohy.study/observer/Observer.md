@@ -25,6 +25,7 @@
 
 ## 观察者模式的角色
 
+>  ![结构图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-studydesign-pattern/src/main/resources/static/images/observer.png)
 >  *  Subject:
 
 >  他把所有观察者对象的引用保存在一个聚类中，每个主题都可以有任务数量的观察者，抽象主题提供一个接口，可以增加和删除观察者对象。
@@ -229,4 +230,3 @@
     
     
     
-最后附上代码的地址[Observer](https://github.com/jiachao23/IdeaStudy/tree/master/src/com/study/designpattern/Observer)    

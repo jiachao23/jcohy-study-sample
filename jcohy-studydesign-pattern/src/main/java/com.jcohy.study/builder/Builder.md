@@ -27,6 +27,7 @@
 <p id="role">
 
 ####  建造者模式的参与者
+![结构图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-studydesign-pattern/src/main/resources/static/images/builder.png)
 >  *  Builder:规定产生对象实例的接口
 >  *  ConcreteBuilder;实现Builder的接口
 >  *  Director:利用Builder的接口产生对象实例
@@ -196,4 +197,3 @@
 ##  扩展
 >  *  将程序中的Builder类修改成接口。配合修改其他类
 >  *  修改示例程序，让确定在调出makeString，makeItems和getResult方法之前一定会先调用makeTitle方法
-最后附上代码的地址[Builder](https://github.com/jiachao23/IdeaStudy/tree/master/src/com/study/designpattern/Builder)

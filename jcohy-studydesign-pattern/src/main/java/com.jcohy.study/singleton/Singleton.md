@@ -26,7 +26,7 @@
 >  * 有些类如交易所的核心交易引擎，控制着交易流程，如果该类可以创建多个的话，系统完全乱了。（比如一个军队出现了多个司令员同时指挥，肯定会乱成一团），所以只有使用单例模式，才能保证核心交易服务器独立控制整个流程。
 >    单例模式的结构如图“”
 
->  * ![Singleton](https://github.com/jiachao23/StudyNote/tree/master/src/img/Singleton.png)
+>  * ![Singleton](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-studydesign-pattern/src/main/resources/static/images/Singleton.png)
 
 <p id="method" />
 
@@ -158,4 +158,3 @@
 
 ​	关于单例模式还有其他的问题，比如单例模式中对象的序列化和反序列化，我们在用枚举类型的时候创建单例的过程等等。这些大家都可以自己下来研究研究。
 
-最后附上代码的地址[Singaleton](https://github.com/jiachao23/IdeaStudy/blob/master/src/com/study/designpattern/Singleton/Singleton.java)

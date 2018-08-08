@@ -25,7 +25,7 @@
 
 ## 代理模式的角色
 
-
+>  ![结构图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-studydesign-pattern/src/main/resources/static/images/interpreter.png)
 
 <p id="sign">
 
@@ -55,5 +55,3 @@
 
 ##  扩展
 
-
-最后附上代码的地址[Interpreter](https://github.com/jiachao23/IdeaStudy/tree/master/src/com/study/designpattern/Interpreter)

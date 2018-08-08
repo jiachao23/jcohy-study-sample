@@ -22,7 +22,7 @@
 ##  概述
 >  适配器模式：将一个类的接口转化成客户希望的另一个接口。Adapter模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作
 >  适配器模式是结构型设计模式的起源。我们来看下面这张图
->  ![结构图](https://github.com/jiachao23/StudyNote/blob/master/src/img/adapter.png)
+>  ![结构图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-studydesign-pattern/src/main/resources/static/images/adapter.png)
 
 ##  适配器模式的角色
 >  *  Target:对象参与者，决定现在需要什么方法的参与者。即客户端所期待的接口。目标可以是具体的或抽象的类，也可以是接口。
@@ -75,7 +75,6 @@
         		// 使用特殊功能类，即适配类
         		Target adapter = new Adapter();
         		adapter.request(); 
-最后附上代码的地址[Adapter](https://github.com/jiachao23/IdeaStudy/blob/master/src/com/study/designpattern/adapter)
        		     
 <p id ="qa" />
 

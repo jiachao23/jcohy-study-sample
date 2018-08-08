@@ -24,6 +24,7 @@
 
 ## 装饰器模式的角色
 
+>  ![结构图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-studydesign-pattern/src/main/resources/static/images/decorator.png)
 >  * Component </br>
 >   &nbsp;&nbsp;Component定义了一个对象接口，可以动态的给这些对象添加职责。</br>
 >  * ConcreteComponent </br>
@@ -247,5 +248,3 @@
 <p id="kuozhan">
 
 ##  扩展
-
-最后附上代码的地址[Decorator](https://github.com/jiachao23/IdeaStudy/tree/master/src/com/study/designpattern/Decorator)

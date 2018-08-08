@@ -24,6 +24,7 @@
 
 ## 亨元模式的角色
 
+>  ![结构图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-studydesign-pattern/src/main/resources/static/images/flyweight.png)
 >  *  FlyweightFactory
 
 >   一个亨元工厂，用来创建并管理Flyweight对象，他主要是用来确保合理的共享Flyweight，当一个用户请求Flyweight时，FlyweightFactory对象提供一个已经创建好的实例或创建一个（当没有时）
@@ -77,8 +78,5 @@
     
     
     
-最后附上代码的地址[Flyweight](https://github.com/jiachao23/IdeaStudy/tree/master/src/com/study/designpattern/Flyweight
 
 
-
-)    

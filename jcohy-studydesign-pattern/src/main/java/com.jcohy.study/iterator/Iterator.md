@@ -27,6 +27,7 @@
 
 ## 迭代器模式的角色
 
+>  ![结构图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-studydesign-pattern/src/main/resources/static/images/iterator.png)
 >  *  Aggregate
 
 >  聚集抽象类
@@ -202,4 +203,3 @@
 
 ##  扩展
     
-最后附上代码的地址[Iterator](https://github.com/jiachao23/IdeaStudy/tree/master/src/com/study/designpattern/Iterator)    
