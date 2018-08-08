@@ -13,7 +13,7 @@ public class ServerTest {
 
 	public static void main(String[] args) {
 
-		String address = "http://225.25.4.211:8080/hello1";
+		String address = "web://225.25.4.211:8080/hello1";
 		Endpoint.publish(address , new HelloWSImpl());
 		System.out.println("webservice 发布成功");
 	}
