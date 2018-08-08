@@ -1,0 +1,28 @@
+1. VS 自实现:
+
+1). 搭建 Struts2 的开发环境
+
+2). 不需要显式的定义 Filter, 而使用的是 struts2 的配置文件. 
+
+3). details.jsp 比先前变得简单了.
+
+${requestScope.product.productName} -> ${productName}
+
+4). 步骤:
+
+I.  由 product-input.action 转到 /WEB-INF/pages/input.jsp
+	
+	在 struts2 中配置一个 action
+	
+	<action name="product-input">
+		<result>/WEB-INF/pages/input.jsp</result>
+	</action>
+	
+II. 由 input.jsp 页面的 action: product-save.action 到 Product's save, 再到  /WEB-INF/pages/details.jsp
+
+	<action name="product-save" class="com.atguigu.struts2.helloworld.Product"
+		method="save">
+		<result name="details">/WEB-INF/pages/details.jsp</result>	
+	</action>
+	
+	在 Prodcut 中定义一个 save 方法, 且返回值为 details

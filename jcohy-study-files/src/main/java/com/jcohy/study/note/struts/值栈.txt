@@ -1,0 +1,41 @@
+1. 关于值栈:
+
+1). helloWorld 时, ${productName} 读取 productName 值, 实际上该属性并不在 request 等域对象中, 而是从值栈中获取的. 
+
+2). ValueStack: 
+
+I.  可以从 ActionContext 中获取值栈对象
+II. 值栈分为两个逻辑部分
+
+	> Map 栈: 实际上是 OgnlContext 类型, 是个 Map, 也是对 ActionContext 的一个引用. 里边保存着各种 Map:
+	         requestMap, sessionMap, applicationMap, parametersMap, attr
+	         
+	> 对象栈: 实际上是 CompoundRoot 类型, 是一个使用 ArrayList 定义的栈. 里边保存各种和当前 Action 实例相关的对象.
+	                   是一个数据结构意义的栈.
+	                   
+ 2. Struts2 利用 s:property 标签和 OGNL 表达式来读取值栈中的属性值
+ 
+ 1). 值栈中的属性值:
+ 
+ 	> 对于对象栈: 对象栈中某一个对象的属性值
+ 	
+ 	> Map 栈: request, session, application 的一个属性值 或 一个请求参数的值. 
+ 	
+ 2). 读取对象栈中对象的属性:
+ 
+ 	> 若想访问 Object Stack 里的某个对象的属性. 可以使用以下几种形式之一: 
+		
+	  object.propertyName ; object['propertyName'] ; object["propertyName"]	
+		
+	> ObjectStack 里的对象可以通过一个从零开始的下标来引用. ObjectStack 里的栈顶对象可以用 [0] 来引用, 
+	     它下面的那个对象可以用 [1] 引用. 
+	   
+	  [0].message   
+	     
+	> [n] 的含义是从第 n 个开始搜索, 而不是只搜索第 n 个对象
+	
+	> 若从栈顶对象开始搜索, 则可以省略下标部分: message 
+	
+	> 结合 s:property 标签: <s:property value="[0].message" />  <s:property value="message" />
+ 
+ 3). 默认情况下, Action 对象会被 Struts2 自动的放到值栈的栈顶. 

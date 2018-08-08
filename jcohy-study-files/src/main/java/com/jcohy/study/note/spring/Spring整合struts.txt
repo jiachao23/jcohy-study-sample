@@ -1,0 +1,34 @@
+2. Spring 如何整合 Struts2 ?
+
+1). 整合目标 ? 使 IOC 容器来管理 Struts2 的 Action!
+
+2). 如何进行整合 ? 
+
+①. 正常加入 Struts2
+
+②. 在 Spring 的 IOC 容器中配置 Struts2 的 Action
+注意: 在 IOC 容器中配置 Struts2 的 Action 时, 需要配置 scope 属性, 其值必须为 prototype
+
+<bean id="personAction" 
+	class="com.atguigu.spring.struts2.actions.PersonAction"
+	scope="prototype">
+	<property name="personService" ref="personService"></property>	
+</bean>
+
+③. 配置 Struts2 的配置文件: action 节点的 class 属性需要指向 IOC 容器中该 bean 的 id
+
+<action name="person-save" class="personAction">
+	<result>/success.jsp</result>
+</action> 
+
+④. 加入 struts2-spring-plugin-2.3.15.3.jar
+
+3). 整合原理: 通过添加 struts2-spring-plugin-2.3.15.3.jar 以后, Struts2 会先从 IOC 容器中
+获取 Action 的实例.
+
+if (appContext.containsBean(beanName)) {
+    o = appContext.getBean(beanName);
+} else {
+    Class beanClazz = getClassInstance(beanName);
+    o = buildBean(beanClazz, extraContext);
+}

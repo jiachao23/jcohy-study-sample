@@ -1,0 +1,140 @@
+1. 文件的上传:
+
+1). 表单需要注意的 3 点
+
+2). Struts2 的文件上传实际上使用的是 Commons FileUpload 组件, 所以需要导入
+
+commons-fileupload-1.3.jar
+commons-io-2.0.1.jar
+
+3). Struts2 进行文件上传需要使用 FileUpload 拦截器
+
+4). 基本的文件的上传: 直接在 Action 中定义如下 3 个属性, 并提供对应的 getter 和 setter
+
+//文件对应的 File 对象
+private File [fileFieldName];
+//文件类型
+private String [fileFieldName]ContentType;
+//文件名
+private String [fileFieldName]FileName;
+
+5). 使用 IO 流进行文件的上传即可. 
+
+6). 一次传多个文件怎么办 ?
+
+若传递多个文件, 则上述的 3 个属性, 可以改为 List 类型! 多个文件域的 name 属性值需要一致. 
+
+7). 可以对上传的文件进行限制吗 ? 例如扩展名, 内容类型, 上传文件的大小 ? 若可以, 则若出错, 显示什么错误消息呢 ? 消息可以定制吗 ? 
+
+可以的!
+
+可以通过配置 FileUploadInterceptor 拦截器的参数的方式来进行限制
+
+maximumSize (optional) - 默认的最大值为 2M. 上传的单个文件的最大值
+
+allowedTypes (optional) - 允许的上传文件的类型. 多个使用 , 分割
+
+allowedExtensions (optional) - 允许的上传文件的扩展名. 多个使用 , 分割.
+
+注意: 在 org.apache.struts2 下的 default.properties 中有对上传的文件总的大小的限制. 可以使用常量的方式来修改该限制
+
+struts.multipart.maxSize=2097152
+
+定制错误消息. 可以在国际化资源文件中定义如下的消息:
+
+struts.messages.error.uploading - 文件上传出错的消息
+
+struts.messages.error.file.too.large - 文件超过最大值的消息
+
+struts.messages.error.content.type.not.allowed - 文件内容类型不合法的消息
+
+struts.messages.error.file.extension.not.allowed - 文件扩展名不合法的消息
+
+问题: 此种方式定制的消息并不完善. 可以参考 org.apache.struts2 下的 struts-messages.properties, 可以提供更多的定制信息.
+
+2. 文件的下载:
+
+1). Struts2 中使用 type="stream" 的 result 进行下载即可
+
+2). 具体使用细节参看 struts-2.3.15.3-all/struts-2.3.15.3/docs/WW/docs/stream-result.html
+
+3). 可以为 stream 的 result 设定如下参数
+
+contentType: 结果类型
+contentLength: 下载的文件的长度
+contentDisposition: 设定 Content-Dispositoin 响应头. 该响应头指定接应是一个文件下载类型, 一般取值为  attachment;filename="document.pdf".
+
+inputName: 指定文件输入流的 getter 定义的那个属性的名字. 默认为 inputStream
+
+bufferSize: 缓存的大小. 默认为 1024
+allowCaching: 是否允许使用缓存 
+contentCharSet: 指定下载的字符集 
+
+4). 以上参数可以在 Action 中以 getter 方法的方式提供!
+
+3. 表单的重复提交问题
+
+1). 什么是表单的重复提交
+
+	> 在不刷新表单页面的前提下:?
+		>> 多次点击提交按钮
+		>> 已经提交成功, 按 "回退" 之后, 再点击 "提交按钮".
+		>> 在控制器响应页面的形式为转发情况下，若已经提交成功, 然后点击 "刷新(F5)"
+		
+	> 注意:
+		>> 若刷新表单页面, 再提交表单不算重复提交
+		>> 若使用的是 redirect 的响应类型, 已经提交成功后, 再点击 "刷新", 不是表单的重复提交
+		
+2). 表单重复提交的危害:  			
+
+3). Struts2 解决表单的重复提交问题:
+
+I. 在 s:form 中添加 s:token 子标签
+
+	> 生成一个隐藏域
+	> 在 session 添加一个属性值
+	> 隐藏域的值和 session 的属性值是一致的. 
+	
+II. 使用 Token 或 TokenSession 拦截器. 
+
+	> 这两个拦截器均不在默认的拦截器栈中, 所以需要手工配置一下
+	> 若使用 Token 拦截器, 则需要配置一个 token.valid 的 result
+	> 若使用 TokenSession 拦截器, 则不需要配置任何其它的 result
+	
+III. Token VS TokenSession
+
+	> 都是解决表单重复提交问题的
+	> 使用 token 拦截器会转到 token.valid 这个 result
+	> 使用 tokenSession 拦截器则还会响应那个目标页面, 但不会执行 tokenSession 的后续拦截器. 就像什么都没发生过一样!
+	
+IV. 可以使用 s:actionerror 标签来显示重复提交的错误消息. 
+该错误消息可以在国际化资源文件中覆盖. 该消息可以在 struts-messages.properties 文件中找到
+
+struts.messages.invalid.token=^^The form has already been processed or no token was supplied, please try again.
+
+4. 自定义拦截器
+
+1). 具体步骤
+
+I. 定义一个拦截器的类
+
+	> 可以实现 Interceptor 接口
+	> 继承 AbstractInterceptor 抽象类
+
+II. 在 struts.xml 文件配置.	
+
+	<interceptors>
+			
+		<interceptor name="hello" class="com.atguigu.struts2.interceptors.MyInterceptor"></interceptor>
+		
+	</interceptors>
+	
+	<action name="testToken" class="com.atguigu.struts2.token.app.TokenAction">
+		<interceptor-ref name="hello"></interceptor-ref>
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<result>/success.jsp</result>
+		<result name="invalid.token">/token-error.jsp</result>
+	</action>
+	
+III. 注意: 在自定义的拦截器中可以选择不调用 ActionInvocation 的 invoke() 方法. 那么后续的拦截器和 Action 方法将不会被调用.
+Struts 会渲染自定义拦截器 intercept 方法返回值对应的 result
