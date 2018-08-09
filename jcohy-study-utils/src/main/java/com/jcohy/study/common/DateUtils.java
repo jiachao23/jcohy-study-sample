@@ -3,12 +3,15 @@ package com.jcohy.study.common;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.TimeZone;
+import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
+import java.time.temporal.TemporalUnit;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static java.time.Clock.systemUTC;
+import static java.time.ZoneOffset.UTC;
 
 /**
  * Copyright  : 2015-2033 Beijing
@@ -198,6 +201,44 @@ public class DateUtils {
         final Calendar c = Calendar.getInstance(tz);
         c.setTime(date);
         return c;
+    }
+    public static LocalDateTime nowUtc() {
+        return LocalDateTime.now(systemUTC());
+    }
+
+    /**
+     * Calculate and return an expiration date as of {@code nowUtc} using the given period time.
+     *
+     * @param time time period
+     * @param unit time unit of {@code time}
+     * @return an expiration date
+     */
+    public static LocalDateTime expireNowUtc(int time, TemporalUnit unit) {
+        return nowUtc().plus(time, unit);
+    }
+    /**
+     * Returns a {@link Date} instance representing the given {@link LocalDateTime} according to UTC.
+     *
+     * @return a date time in UTC
+     */
+    public static Date toDate(LocalDateTime localDateTime) {
+        return Optional.ofNullable(localDateTime)
+                .map(ldt -> ldt.toInstant(UTC))
+                .map(Date::from)
+                .orElse(null);
+    }
+
+    /**
+     * Returns a {@link LocalDateTime} instance representing the given {@link Date} according to UTC.
+     *
+     * @return a date time in UTC
+     */
+    public static LocalDateTime toLocalDateTime(Date date) {
+        return Optional.ofNullable(date)
+                .map(Date::toInstant)
+                .map(i -> i.atOffset(UTC))
+                .map(OffsetDateTime::toLocalDateTime)
+                .orElse(null);
     }
 
     /**

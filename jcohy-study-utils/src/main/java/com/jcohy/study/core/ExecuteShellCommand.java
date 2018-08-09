@@ -1,4 +1,4 @@
-package com.jcohy.study.common;
+package com.jcohy.study.core;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

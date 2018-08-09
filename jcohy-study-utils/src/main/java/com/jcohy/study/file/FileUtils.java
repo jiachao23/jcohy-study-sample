@@ -415,7 +415,33 @@ public class FileUtils extends org.apache.commons.io.FileUtils {
 			logger.debug("文件 " + fileName + " 写入失败! " + e.getMessage());
 		}
 	}
-	
+
+	public static boolean appendFile(String fileName,String content){
+		BufferedWriter out = null;
+		try {
+			File file = new File(fileName);
+			out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileName, true)));
+			if(file.length()>0){
+				out.newLine();
+				out.write(content);
+			}else{
+				out.write(content);
+			}
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		} finally {
+			try {
+				if(out != null){
+					out.close();
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+				return false;
+			}
+		}
+	}
 	/**
 	 * 压缩文件或目录
 	 * @param srcDirName 压缩的根目录

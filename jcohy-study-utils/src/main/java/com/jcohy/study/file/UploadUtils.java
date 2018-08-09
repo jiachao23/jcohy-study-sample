@@ -160,7 +160,6 @@ public class UploadUtils {
 	 * 处理上传内容
 	 * 
 	 * @param request
-	 * @param maxSize
 	 * @return
 	 */
 //	@SuppressWarnings("unchecked")
@@ -226,9 +225,7 @@ public class UploadUtils {
 	/**
 	 * 保存文件
 	 * 
-	 * @param obj
 	 *            要上传的文件域
-	 * @param file
 	 * @return
 	 */
 	private String saveFile(FileItem item) {

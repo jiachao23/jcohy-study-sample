@@ -1,5 +1,7 @@
 package com.jcohy.study.jcopy;
 
+import com.jcohy.study.file.FileUtils;
+
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -42,7 +44,7 @@ public class ResFileByDelFile {
     public static void copyFileToDir(String toDir, String[] filePath) {  
         if (toDir == null || "".equals(toDir)) {// 目录路径为空  
 //            System.out.println("参数错误，目标路径不能为空");  
-        	FileUtils.appendFile(rootPath, 
+        	FileUtils.appendFile(rootPath,
             		sdf.format(new Date())+"参数错误，目标路径不能为空!!");
             return;  
         }  

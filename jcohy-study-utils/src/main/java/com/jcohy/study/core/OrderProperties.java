@@ -1,4 +1,4 @@
-package com.jcohy.study.common;
+package com.jcohy.study.core;
 
 import com.google.common.base.Objects;
 import com.google.common.collect.Lists;

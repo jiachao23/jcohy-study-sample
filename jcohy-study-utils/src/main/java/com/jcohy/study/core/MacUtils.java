@@ -1,7 +1,7 @@
 /**
  * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
  */
-package com.jcohy.study.common;
+package com.jcohy.study.core;
 
 import java.io.BufferedReader;
 import java.io.IOException;
