@@ -5,8 +5,5 @@
 
 > #### PS:我的学习笔记,点击可以跳转到相应分类
 
-## [Nginx]
- #### Ps:本文讲解nginx相关知识。
- * [nginx](https://github.com/jiachao23/StudyNote/blob/master/src/nginx/Nginx.pdf)
- * [keepalived](https://github.com/jiachao23/StudyNote/blob/master/src/nginx/keepalived.pdf)
- * [nginx服务器基础配置](https://github.com/jiachao23/StudyNote/blob/master/src/nginx/conf.md)
+## [File]
+ #### Ps:File相关文件。
