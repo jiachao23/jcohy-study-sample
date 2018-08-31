@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Security</title>
+    <link rel="stylesheet" type="text/css" href="../style/prettify.css"/>
+    <link rel="stylesheet" type="text/css" href="../style/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../style/love.css"/>
+    <script type="text/javascript" src="../style/jquery.min.js"></script>
+    <script type="text/javascript" src="../style/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../style/prettify.js"></script>
+</head>
+<body>
+<div  class="m-bg">
+
+    <div>
+        <blockquote>
+            <h1>Java</h1>
+            <h4>PS:待开发中。。。。</h4>
+            <h4>作者网页：<a href="http://www.jcohy.com">www.jcohy.com</a></h4>
+            <p> 我的学习笔记，记录学习过程中的笔记以及遇到的问题,以及我的一些经验总结。如果出现链接失效,或者想知道更多的内容等情况可以提交 Issues 提醒我修改相关内容。</p></blockquote>
+    </div>
+    <h2>Spring Security</h2>
+    <blockquote>
+        <ul>
+            <li><a href="https://blog.csdn.net/zhixinhuacom/article/details/79113589">项目搭建</a></li>
+            <li><a href=""></a>Restful简介
+                <ul>
+                    <li><a href="#在url声明中使用正则表达式">在url声明中使用正则表达式</a></li>
+                    <li><a href="#JsonView控制json输出的内容">JsonView控制json输出的内容</a></li>
+                    <li><a href="#@Valid和BindingResult验证请求的合法性并处理校验结果">@Valid和BindingResult验证请求的合法性并处理校验结果</a></li>
+                    <li><a href="#自定义校验">自定义校验</a></li>
+                    <li><a href="#异步处理Rest服务">异步处理Rest服务</a></li>
+                </ul>
+            </li>
+            <li><a href=""></a>SpringBoot Security基本原理
+                <ul>
+                    <li><a href="#自定义用户认证逻辑">自定义用户认证逻辑</a></li>
+                    <li><a href="#个性化用户认证流程">个性化用户认证流程</a></li>
+                    <li><a href="#认证流程源码级详解">认证流程源码级详解</a></li>
+                    <li><a href="#图片验证码">图片验证码</a></li>
+                    <li><a href="#添加记住我功能">添加记住我功能</a>.</li>
+                    <li><a href="#短信验证码">短信验证码</a></li>
+                </ul>
+            </li>
+        </ul>
+    </blockquote>
+
+    <div class="breadcrumb">
+        <h2 id="Restful简介">Restful简介</h2>
+        <p>一种软件架构风格、设计风格，而不是标准，只是提供了一组设计原则和约束条件。它主要用于客户端和服务器交互类的软件。</p>
+        <img src="./images/restful1.jpg" alt="">
+        <img src="./images/restful2.jpg" alt="">
+        <a href="http://www.runoob.com/w3cnote/restful-architecture.html">RESTful 架构详解</a>
+        <blockquote>
+            <ol>
+                <li id="在url声明中使用正则表达式"><strong>在url声明中使用正则表达式。</strong>
+                <pre class="prettyprint lang-java">@PutMapping("/{id:\\d+}")
+public User update(@Valid @RequestBody User user, BindingResult errors) {
+    System.out.println(user.getId());
+    System.out.println(user.getUsername());
+    System.out.println(user.getPassword());
+    System.out.println(user.getBirthday());
+    user.setId("1");
+    return user;
+}</pre>
+                </li>
+                <li id="JsonView控制json输出的内容"><strong>JsonView控制json输出的内容。</strong>
+                    <p>1.在实体类中使用接口来声明多个视图，并在值的对象的get方法上指定视图</p>
+                <pre class="prettyprint lang-java">
+
+public class User {
+	public interface UserSimpleView {};
+	public interface UserDetailView extends UserSimpleView {};
+
+	private String id;
+
+	private String username;
+
+	private String password;
+
+	private Date birthday;
+
+	@JsonView(UserSimpleView.class)
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	@JsonView(UserDetailView.class)
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	@JsonView(UserSimpleView.class)
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	@JsonView(UserSimpleView.class)
+	public Date getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
+
+}
+                    </pre>
+                <p>2.在Controller方法上指定视图</p>
+<pre class="prettyprint lang-java">
+
+
+
+@GetMapping
+@JsonView(User.UserSimpleView.class)
+@ApiOperation(value = "用户查询服务")
+public List&lt;User&gt; query(UserQueryCondition condition,
+        @PageableDefault(page = 2, size = 17, sort = "username,asc") Pageable pageable) {
+    System.out.println(ReflectionToStringBuilder.toString(condition, ToStringStyle.MULTI_LINE_STYLE));
+    System.out.println(pageable.getPageSize());
+    System.out.println(pageable.getPageNumber());
+    System.out.println(pageable.getSort());
+    List&lt;User&gt; users = new ArrayList<>();
+    users.add(new User());
+    users.add(new User());
+    users.add(new User());
+    return users;
+}
+
+@GetMapping("/{id:\\d+}")
+@JsonView(User.UserDetailView.class)
+public User getInfo(@ApiParam("用户id") @PathVariable String id) {
+//		throw new RuntimeException("user not exist");
+    System.out.println("进入getInfo服务");
+    User user = new User();
+    user.setUsername("tom");
+    return user;
+}
+                </pre>
+                </li>
+                <li id="@Valid和BindingResult验证请求的合法性并处理校验结果"><strong>@Valid和BindingResult验证请求的合法性并处理校验结果</strong>
+                    <p>使用hibernate.validator进行校验</p>
+                    <pre class="prettyprint lang-java">
+@NotBlank(message = "密码不能为空")
+private String password;
+                    </pre>
+                    <img src="./images/validate.jpg" alt="">
+                    <img src="./images/validate2.jpg" alt="">
+                    <p>当前台传入的参数不符合校验规则的时候，会直接报错，不会进入到方法体中，当我们希望可以进入到方法体中，可以使用 <code>BindingResult</code>对象</p>
+                    <pre class="prettyprint lang-java">@PutMapping("/{id:\\d+}")
+public User update(@Valid @RequestBody User user, BindingResult errors) {
+
+    System.out.println(user.getId());
+    System.out.println(user.getUsername());
+    System.out.println(user.getPassword());
+    System.out.println(user.getBirthday());
+
+    user.setId("1");
+    return user;
+}
+                    </pre>
+                </li>
+                <li id="自定义校验"><strong>自定义校验</strong>
+                    <p>声明自定义校验接口</p>
+<pre class="prettyprint lang-java">@Target({ElementType.METHOD, ElementType.FIELD})
+@Retention(RetentionPolicy.RUNTIME)
+@Constraint(validatedBy = MyConstraintValidator.class)
+public @interface MyConstraint {
+    //下面三个属性必写
+	String message();
+
+	Class<?>[] groups() default { };
+
+	Class<? extends Payload>[] payload() default { };
+
+}
+</pre>
+                    <p>真正的校验逻辑在 <code>MyConstraintValidator</code>类中</p>
+                    <pre class="prettyprint lang-java">public class MyConstraintValidator implements ConstraintValidator&lt;MyConstraint, Object&gt; {
+    //可以注入Spring容器中任何东西来执行校验逻辑
+	@Autowired
+	private HelloService helloService;
+
+	@Override
+	public void initialize(MyConstraint constraintAnnotation) {
+		System.out.println("my validator init");
+	}
+
+	@Override
+	public boolean isValid(Object value, ConstraintValidatorContext context) {
+		helloService.greeting("tom");
+		System.out.println(value);
+		return true;
+	}
+
+}
+                    </pre>
+                    <p>然后就可以使用注解来进行校验了</p>
+                </li>
+                <li id="异步处理Rest服务"><strong>异步处理Rest服务</strong>
+                    <ul>
+                        <li>使用runnable异步处理Rest服务</li>
+                        <pre class="prettyprint lang-java">@RequestMapping("/order")
+public Callable&lt;String&gt; order(){
+
+    Callable&lt;String&gt; result = new Callable&lt;String&gt;() {
+			@Override
+			public String call() throws Exception {
+				logger.info("副线程开始");
+				Thread.sleep(1000);
+				logger.info("副线程返回");
+				return "success";
+			}
+		};
+    logger.info("主线程返回");
+    return result;
+}
+                        </pre>
+                        <li>
+                            <p>使用DeferredResult异步处理Rest服务
+                                模拟一个订单请求，当placeOrder有值时，接到下单请求
+                                completeOrder有值时，下单请求完成。</p>
+                            <img src="./images/queue.jpg" alt="">
+                            <pre class="prettyprint lang-java">
+@Component
+public class MockQueue {
+
+	private String placeOrder;
+
+	private String completeOrder;
+
+	private Logger logger = LoggerFactory.getLogger(getClass());
+
+	public String getPlaceOrder() {
+		return placeOrder;
+	}
+
+	public void setPlaceOrder(String placeOrder) throws Exception {
+		new Thread(() -> {
+			logger.info("接到下单请求, " + placeOrder);
+			try {
+				Thread.sleep(1000);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			this.completeOrder = placeOrder;
+			logger.info("下单请求处理完毕," + placeOrder);
+		}).start();
+	}
+
+	public String getCompleteOrder() {
+		return completeOrder;
+	}
+
+	public void setCompleteOrder(String completeOrder) {
+		this.completeOrder = completeOrder;
+	}
+
+}
+                            </pre>
+                            <p></p>
+                            <pre class="prettyprint lang-java">@Component
+public class DeferredResultHolder {
+
+	private Map&lt;String, DeferredResult&lt;String&gt;&gt; map = new HashMap&lt;String, DeferredResult&lt;String&gt;&gt;();
+
+	public Map&lt;String, DeferredResult&lt;String&gt;&gt; getMap() {
+		return map;
+	}
+
+	public void setMap(Map&lt;String, DeferredResult&lt;String&gt;&gt; map) {
+		this.map = map;
+	}
+
+}
+                            </pre>
+                            <p>Controller</p>
+                            <pre class="prettyprint lang-java">@RequestMapping("/order")
+	public DeferredResult&lt;String&gt; order() throws Exception {
+		logger.info("主线程开始");
+
+		String orderNumber = RandomStringUtils.randomNumeric(8);
+		mockQueue.setPlaceOrder(orderNumber);
+
+		DeferredResult&lt;String&gt; result = new DeferredResult<>();
+		deferredResultHolder.getMap().put(orderNumber, result);
+
+		return result;
+	}
+                            </pre>
+                            <p>QueueListener:实现ApplicationListener&lt;ContextRefreshedEvent&gt;。当初始化完成后开始监听</p>
+                            <pre class="prettyprint lang-java">@Component
+public class QueueListener implements ApplicationListener&lt;ContextRefreshedEvent&gt; {
+
+	@Autowired
+	private MockQueue mockQueue;
+
+	@Autowired
+	private DeferredResultHolder deferredResultHolder;
+
+	private Logger logger = LoggerFactory.getLogger(getClass());
+
+	@Override
+	public void onApplicationEvent(ContextRefreshedEvent event) {
+		new Thread(() -> {
+			while (true) {
+
+				if (StringUtils.isNotBlank(mockQueue.getCompleteOrder())) {
+
+					String orderNumber = mockQueue.getCompleteOrder();
+					logger.info("返回订单处理结果:"+orderNumber);
+					deferredResultHolder.getMap().get(orderNumber).setResult("place order success");
+					mockQueue.setCompleteOrder(null);
+
+				}else{
+					try {
+						Thread.sleep(100);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+
+			}
+		}).start();
+	}
+}
+                            </pre>
+                        </li>
+                        <li>异步处理配置
+                        <p>重写 <code>WebMvcConfigAdapter</code>中的 <code>ConfigureAsyncSupport方法</code></p>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </blockquote>
+
+    </div>
+
+    <div class="breadcrumb margin-t-10">
+        <h2 id="gaishu">SpringBoot Security基本原理</h2>
+        <blockquote>
+            <p> SpringBoot Security基本原理</p>
+            <p>当引入spring secrity时，默认开启安全验证。想要关闭可以在配置文件中书写：<code>security.basic.enabled = false</code></p>
+            <img src="./images/3.jpg" alt="">
+            <pre class="prettyprint lang-java">
+@Configuration
+public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        // 表单登录配置项
+//       http.formLogin()
+        //默认弹出框验证
+        http.httpBasic()
+               .and()
+               .authorizeRequests()
+               .anyRequest()
+               .authenticated();
+    }
+}
+            </pre>
+            <ol>
+                <li id="自定义用户认证逻辑"><strong>自定义用户认证逻辑</strong>
+                    <ul>
+                        <li>处理用户信息获取逻辑 <code>UserDetailsService</code>
+                        <pre class="prettyprint lang-java">@Component
+public class MyUserDetailsService implements UserDetailsService, SocialUserDetailsService {
+
+	private Logger logger = LoggerFactory.getLogger(getClass());
+
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see org.springframework.security.core.userdetails.UserDetailsService#
+	 * loadUserByUsername(java.lang.String)
+	 */
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		logger.info("表单登录用户名:" + username);
+		return buildUser(username);
+	}
+
+	@Override
+	public SocialUserDetails loadUserByUserId(String userId) throws UsernameNotFoundException {
+		logger.info("设计登录用户Id:" + userId);
+		return buildUser(userId);
+	}
+
+	private SocialUserDetails buildUser(String userId) {
+		// 根据用户名查找用户信息
+		//根据查找到的用户信息判断用户是否被冻结
+		String password = passwordEncoder.encode("123456");
+		logger.info("数据库密码是:"+password);
+		return new SocialUser(userId, password,
+				true, true, true, true,
+				AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
+	}
+
+}
+                        </pre></li>
+                        <li>处理用户校验逻辑<code>UserDetails</code>
+                        <pre class="prettyprint lang-java">
+
+                        </pre>
+                        </li>
+                        <li>处理密码加密解密<code>PasswordEncoder</code>
+                        <pre class="prettyprint lang-java">@Bean
+public PasswordEncoder passwordEncoder() {
+    return new BCryptPasswordEncoder();
+}
+
+                        </pre></li>
+                    </ul>
+                </li>
+
+                <li id="个性化用户认证流程"><strong>个性化用户认证流程</strong>
+                    <ul>
+                        <li>自定义登录页面 <code>http.formLogin().loginPage("/singIn.html")</code></li>
+                        <li>自定义登录成功处理 <code>AuthenticationSuccessHandler</code></li>
+                        <li>自定义登录失败处理 <code>AuthenticationFailureHandler</code></li>
+                    </ul>
+                </li>
+
+                <li id="认证流程源码分析"><strong>认证流程源码分析</strong>
+                    <ul>
+                        <li>认证处理流程说明
+                            <p>SpringBoot的过滤器链</p>
+                            <img src="./images/3.jpg" alt="">
+                            <img src="./images/springsecurity4.jpg" alt="">
+                              <p class="font-s-18">首先进入 <code>UserNamePasswordAuthenticationFilter</code>过滤器来处理表单登录请求。</p>
+
+
+                          <pre class="prettyprint lang-java">public Authentication attemptAuthentication(HttpServletRequest request,
+			HttpServletResponse response) throws AuthenticationException {
+		if (postOnly && !request.getMethod().equals("POST")) {
+			throw new AuthenticationServiceException(
+					"Authentication method not supported: " + request.getMethod());
+		}
+
+		String username = obtainUsername(request);
+		String password = obtainPassword(request);
+
+		if (username == null) {
+			username = "";
+		}
+
+		if (password == null) {
+			password = "";
+		}
+
+		username = username.trim();
+    //构建UsernamePasswordAuthenticationToken，继承AbstractAuthenticationToken，而AbstractAuthenticationToken实现了Authentication
+    //Authentication接口封装了用户认证信息
+		UsernamePasswordAuthenticationToken authRequest = new UsernamePasswordAuthenticationToken(
+				username, password);
+
+		// Allow subclasses to set the "details" property
+     //把请求的一些信息设置到UsernamePasswordAuthenticationToken
+		setDetails(request, authRequest);
+    //调用getAuthenticationManager，本身并不进行认证，用来管理AuthenticationProvider,
+		return this.getAuthenticationManager().authenticate(authRequest);
+	}</pre>
+                          <p class="font-s-18"><code>UsernamePasswordAuthenticationToken</code></p>
+                          <pre class="prettyprint lang-java">public UsernamePasswordAuthenticationToken(Object principal, Object credentials) {
+    //调用父类AbstractAuthenticationToken的构造方法，需要传入一组权限，由于还没进行用户认证，不知道权限是什么。所以传false、
+    super(null);
+		this.principal = principal;
+		this.credentials = credentials;
+    //代表我传进去的身份信息是否经过验证。
+		setAuthenticated(false);
+	}</pre>
+                          <p class="font-s-18"><code>AbstractAuthenticationToken</code></p>
+                          <pre class="prettyprint lang-java">public AbstractAuthenticationToken(Collection&lt;? extends GrantedAuthority&gt; authorities) {
+		if (authorities == null) {
+			this.authorities = AuthorityUtils.NO_AUTHORITIES;
+			return;
+		}
+
+		for (GrantedAuthority a : authorities) {
+			if (a == null) {
+				throw new IllegalArgumentException(
+						"Authorities collection cannot contain any null elements");
+			}
+		}
+		ArrayList&lt;GrantedAuthority&gt;temp = new ArrayList&lt;GrantedAuthority&gt;(
+				authorities.size());
+		temp.addAll(authorities);
+		this.authorities = Collections.unmodifiableList(temp);
+	}</pre>
+                          <p class="font-s-18"><code>ProviderManager：</code>实现了 <code>AuthenticationManager</code>。程序会进入authenticate()方法中，获取 <code>AuthenticationProvider：真正的校验逻辑处理</code></p>
+                          <pre class="prettyprint lang-java">public Authentication authenticate(Authentication authentication)
+			throws AuthenticationException {
+    //以表单登录为例：此处的toTest应为UsernamePasswordAuthenticationToken
+    //此外，第三方登录SocialAuthenticationToken
+		Class<? extends Authentication> toTest = authentication.getClass();
+		AuthenticationException lastException = null;
+		Authentication result = null;
+		boolean debug = logger.isDebugEnabled();
+    //拿到所有的AuthenticationProvider接口。真正的校验逻辑是写在AuthenticationProvider里的。不同的登录方式对应的校验逻辑不一样
+		for (AuthenticationProvider provider : getProviders()) {
+       //判断当前的provider是否支持当前Authentication的类型
+			if (!provider.supports(toTest)) {
+				continue;
+			}
+
+			if (debug) {
+				logger.debug("Authentication attempt using "
+						+ provider.getClass().getName());
+			}
+
+			try {
+        //真正的认证处理。调用DaoAuthenticationProvider.authenticate(authentication)
+				result = provider.authenticate(authentication);
+
+				if (result != null) {
+					copyDetails(authentication, result);
+					break;
+				}
+			}
+			catch (AccountStatusException e) {
+				prepareException(e, authentication);
+				// SEC-546: Avoid polling additional providers if auth failure is due to
+				// invalid account status
+				throw e;
+			}
+			catch (InternalAuthenticationServiceException e) {
+				prepareException(e, authentication);
+				throw e;
+			}
+			catch (AuthenticationException e) {
+				lastException = e;
+			}
+		}
+
+		if (result == null && parent != null) {
+			// Allow the parent to try.
+			try {
+				result = parent.authenticate(authentication);
+			}
+			catch (ProviderNotFoundException e) {
+				// ignore as we will throw below if no other exception occurred prior to
+				// calling parent and the parent
+				// may throw ProviderNotFound even though a provider in the child already
+				// handled the request
+			}
+			catch (AuthenticationException e) {
+				lastException = e;
+			}
+		}
+
+		if (result != null) {
+			if (eraseCredentialsAfterAuthentication
+					&& (result instanceof CredentialsContainer)) {
+				// Authentication is complete. Remove credentials and other secret data
+				// from authentication
+				((CredentialsContainer) result).eraseCredentials();
+			}
+
+			eventPublisher.publishAuthenticationSuccess(result);
+			return result;
+		}
+
+		// Parent was null, or didn't authenticate (or throw an exception).
+
+		if (lastException == null) {
+			lastException = new ProviderNotFoundException(messages.getMessage(
+					"ProviderManager.providerNotFound",
+					new Object[] { toTest.getName() },
+					"No AuthenticationProvider found for {0}"));
+		}
+
+		prepareException(lastException, authentication);
+
+		throw lastException;
+	}</pre>
+                          <p class="font-s-18"><code>DaoAuthenticationProvider:继承自AbstractUserDetailsAuthenticationProvider校验逻辑主要写在抽象类中的authenticate(authentication)</code></p>
+                          <pre class="prettyprint lang-java">public Authentication authenticate(Authentication authentication)
+			throws AuthenticationException {
+		Assert.isInstanceOf(UsernamePasswordAuthenticationToken.class, authentication,
+				messages.getMessage(
+						"AbstractUserDetailsAuthenticationProvider.onlySupports",
+						"Only UsernamePasswordAuthenticationToken is supported"));
+
+		// Determine username 获取用户对象
+		String username = (authentication.getPrincipal() == null) ? "NONE_PROVIDED"
+				: authentication.getName();
+
+		boolean cacheWasUsed = true;
+    // 获取用户对象
+		UserDetails user = this.userCache.getUserFromCache(username);
+
+		if (user == null) {
+			cacheWasUsed = false;
+
+			try {
+        //调用我们提供的UserDetailService的实现的loadUserByUsername获取User
+				user = retrieveUser(username,
+						(UsernamePasswordAuthenticationToken) authentication);
+			}
+			catch (UsernameNotFoundException notFound) {
+				logger.debug("User '" + username + "' not found");
+
+				if (hideUserNotFoundExceptions) {
+					throw new BadCredentialsException(messages.getMessage(
+							"AbstractUserDetailsAuthenticationProvider.badCredentials",
+							"Bad credentials"));
+				}
+				else {
+					throw notFound;
+				}
+			}
+
+			Assert.notNull(user,
+					"retrieveUser returned null - a violation of the interface contract");
+		}
+
+		try {
+      //预检查，主要检查用户，也就是UserDetail中的四个boolean值的三个是否锁定，过期，可用
+			preAuthenticationChecks.check(user);
+      //附加检查，主要对密码进行检查
+			additionalAuthenticationChecks(user,
+					(UsernamePasswordAuthenticationToken) authentication);
+		}
+		catch (AuthenticationException exception) {
+			if (cacheWasUsed) {
+				// There was a problem, so try again after checking
+				// we're using latest data (i.e. not from the cache)
+				cacheWasUsed = false;
+				user = retrieveUser(username,
+						(UsernamePasswordAuthenticationToken) authentication);
+				preAuthenticationChecks.check(user);
+				additionalAuthenticationChecks(user,
+						(UsernamePasswordAuthenticationToken) authentication);
+			}
+			else {
+				throw exception;
+			}
+		}
+    //后检查，检查四个boolean中最后一个。
+		postAuthenticationChecks.check(user);
+
+		if (!cacheWasUsed) {
+			this.userCache.putUserInCache(user);
+		}
+
+		Object principalToReturn = user;
+
+		if (forcePrincipalAsString) {
+			principalToReturn = user.getUsername();
+		}
+    //如果认证成功。就创建authentication
+		return createSuccessAuthentication(principalToReturn, authentication, user);
+	}</pre>
+                          <p class="font-s-18"><code>additionalAuthenticationChecks:附加检查</code></p>
+                          <pre class="prettyprint lang-java">protected void additionalAuthenticationChecks(UserDetails userDetails,
+			UsernamePasswordAuthenticationToken authentication)
+			throws AuthenticationException {
+		Object salt = null;
+
+		if (this.saltSource != null) {
+			salt = this.saltSource.getSalt(userDetails);
+		}
+
+		if (authentication.getCredentials() == null) {
+			logger.debug("Authentication failed: no credentials provided");
+
+			throw new BadCredentialsException(messages.getMessage(
+					"AbstractUserDetailsAuthenticationProvider.badCredentials",
+					"Bad credentials"));
+		}
+
+		String presentedPassword = authentication.getCredentials().toString();
+   //密码加解密器，是否匹配
+		if (!passwordEncoder.isPasswordValid(userDetails.getPassword(),
+				presentedPassword, salt)) {
+			logger.debug("Authentication failed: password does not match stored value");
+
+			throw new BadCredentialsException(messages.getMessage(
+					"AbstractUserDetailsAuthenticationProvider.badCredentials",
+					"Bad credentials"));
+		}
+	}</pre>
+                          <p class="font-s-18"><code>createSuccessAuthentication</code></p>
+                          <pre class="prettyprint lang-java">protected Authentication createSuccessAuthentication(Object principal,
+			Authentication authentication, UserDetails user) {
+		// Ensure we return the original credentials the user supplied,
+		// so subsequent attempts are successful even with encoded passwords.
+		// Also ensure we return the original getDetails(), so that future
+		// authentication events after cache expiry contain the details
+    //重新new了一次UsernamePasswordAuthenticationToken。调用的是有三个参数的构造函数，而不是之前的两个参数的构造函数
+		UsernamePasswordAuthenticationToken result = new UsernamePasswordAuthenticationToken(
+				principal, authentication.getCredentials(),
+				authoritiesMapper.mapAuthorities(user.getAuthorities()));
+		result.setDetails(authentication.getDetails());
+
+		return result;
+	}</pre>
+                          <p class="font-s-18">当用户校验通过后，会调用一个 <code>successfulAuthentication(request,response,chain,authResult)</code>方法，使用我们自定义的那个AuthenticationSuccessHandler成功的处理器来处理</p>
+                          <p class="font-s-18">当用户校验过程中某一项不通过时，会调用一个 <code>unsuccessfulAuthentication(request,response,failed)</code>方法，使用我们自定义的那个AuthenticationFailedHandler失败的处理器来处理</p>
+                        </li>
+                        <li>认证结果如何在多个请求之间共享
+                        <p class="font-s-18">首先来看用户认证通过后会进入到 <code>AbstractAuthenticationProcessingFilter的successfulAuthentication </code></p>
+                          <pre class="prettyprint lang-java">protected void successfulAuthentication(HttpServletRequest request,
+			HttpServletResponse response, FilterChain chain, Authentication authResult)
+			throws IOException, ServletException {
+
+		if (logger.isDebugEnabled()) {
+			logger.debug("Authentication success. Updating SecurityContextHolder to contain: "
+					+ authResult);
+		}
+    //SecurityContextHolder实际上是ThreadLocal的封装，把当前认证放到一个线程里去，以供后续的SecurityContextPersistenceFilter使用，
+    //此过滤器链位于整个过滤器的最前面，请求进来检查Session中是否有SecurityContext，如果有，就把SecurityContext拿出来放到线程里。 返回时，检查线程，如果线程有SecurityContext，就放到session中去
+		SecurityContextHolder.getContext().setAuthentication(authResult);
+
+		rememberMeServices.loginSuccess(request, response, authResult);
+
+		// Fire event
+		if (this.eventPublisher != null) {
+			eventPublisher.publishEvent(new InteractiveAuthenticationSuccessEvent(
+					authResult, this.getClass()));
+		}
+    //调用我们自己定义的成功处理器
+		successHandler.onAuthenticationSuccess(request, response, authResult);
+	}</pre>
+                        </li>
+                        <li>获取认证用户信息
+                        <pre class="prettyprint lang-java">@GetMapping("/me")
+  public Object getCurrentUser(Authentication authentication){
+    return authentication;
+  }
+  @GetMapping("/me")
+  public Object getCurrentUser(@AuthenticationPrincipal authentication){
+    return authentication;
+  }
+                        </pre>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </blockquote>
+    </div>
+
+</div>
+
+<div class="m-bg text-center margin-t-10">
+    <p>
+        <a class="btn btn-xs btn-default" href="http://www.jcohy.com">Jcohy</a>
+    </p>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $("pre").addClass("prettyprint linenums");
+        //代码高亮
+        prettyPrint();
+        $("table").attr('class','table table-striped table-bordered table-condensed');
+    });
+</script>
+</body>
+</html>

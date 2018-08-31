@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Security</title>
+    <link rel="stylesheet" type="text/css" href="../style/prettify.css"/>
+    <link rel="stylesheet" type="text/css" href="../style/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../style/love.css"/>
+    <script type="text/javascript" src="../style/jquery.min.js"></script>
+    <script type="text/javascript" src="../style/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../style/prettify.js"></script>
+</head>
+<body>
+<div  class="m-bg">
+
+    <div>
+        <blockquote>
+            <h1>Java</h1>
+            <h4>PS:待开发中。。。。</h4>
+            <h4>作者网页：<a href="http://www.jcohy.com">www.jcohy.com</a></h4>
+            <p> 我的学习笔记，记录学习过程中的笔记以及遇到的问题,以及我的一些经验总结。如果出现链接失效,或者想知道更多的内容等情况可以提交 Issues 提醒我修改相关内容。</p></blockquote>
+    </div>
+    <h2>Spring Security</h2>
+    <blockquote>
+        <ul>
+            <li><a href="#Security Oauth2.0">Security Oauth2.0</a>
+                <ul>
+                    <li><a href="#OAuth协议">OAuth协议</a></li>
+                    <li><a href="#认证服务器">认证服务器</a></li>
+                    <li><a href="#资源服务器">资源服务器</a></li>
+										<li><a href="#源码分析">源码分析</a></li>
+										<li><a href="#自定义认证">源码分析</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#Spring Social">Spring Social</a></li>
+        </ul>
+    </blockquote>
+
+    <div class="breadcrumb margin-t-10">
+        <h2 id="OAuth协议">Security Oauth2.0</h2>
+			<img src="./images/oauth1.png" alt="">
+        <blockquote>
+					<p class="font-s-18"><a href="http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html" target="_blank">OAuth协议简介</a></p>
+					<p class="font-s-18"><a href="http://www.rfcreader.com/#rfc6749" target="_blank">OAuth协议官方文档</a></p>
+
+					<ol>
+						<li id="认证服务器"><strong>SpringBoot 实现认证服务器(SpringBoot自带的认证实现)只需要两个注解 <code>@Configuration和@EnableAuthorizationServer</code></strong>
+						<pre>@Configuration
+@EnableAuthorizationServer
+public class ImoocAuthorizationServerConfig{
+
+}
+						</pre>
+							<p>1.首先，需要请求获取授权码。请求地址：<code>oauth/authorize</code>。需要传递几个参数</p>
+							<table class="table-bordered">
+								<tr>
+									<td>参数</td>
+									<td>是否必须</td>
+									<td>描述</td>
+								</tr>
+								<tr>
+									<td>response_type</td>
+									<td>是</td>
+									<td>值必须为code</td>
+								</tr>
+								<tr>
+									<td>client_id</td>
+									<td>是</td>
+									<td>此值在Springboot启动过程中在控制台打印</td>
+								</tr>
+								<tr>
+									<td>redirect_url</td>
+									<td>可选</td>
+									<td>重定向的地址</td>
+								</tr>
+								<tr>
+									<td>scope</td>
+									<td>可选</td>
+									<td>授权范围，可有自己定义</td>
+								</tr>
+								<tr>
+									<td>state</td>
+									<td>可选</td>
+									<td>授权范围，可有自己定义</td>
+								</tr>
+							</table>
+							<code>client_id和client_secret可由security.0auth2.client.clientId和security.0auth2.client.secret在配置文件中指定</code>
+							<p>2.拿到授权码后，需要到 <code>/oauth/token</code> 换取令牌，需要传递几个参数</p>
+							需要在头部加入：authorization：讲id和secret填进去
+							<table>
+								<tr>
+									<td>请求头</td>
+									<td>是否可选</td>
+									<td>描述</td>
+								</tr>
+								<tr>
+									<td>grant_type</td>
+									<td>必填</td>
+									<td>authorization_code</td>
+								</tr>
+								<tr>
+									<td>code</td>
+									<td>必填</td>
+									<td>获取到的授权码</td>
+								</tr>
+								<tr>
+									<td>redirect_url</td>
+									<td>必填</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>client_id</td>
+									<td>必填</td>
+									<td></td>
+								</tr>
+							</table>
+						</li>
+
+						<li id="资源服务器">
+							<p><strong>SpringBoot 实现资源服务器(SpringBoot自带的资源实现)只需要两个注解 <code>@Configuration和@EnableResourceService</code></strong></p>
+						</li>
+
+						<li id="源码分析">
+							<p><strong>源码分析</strong>:绿色代表实体类，蓝色代表接口</p>
+							<img src="./images/oauth2.png" alt="">
+							<p> <code>TokenEndPoint</code>:整个流程的入口点，可以理解为一个Controller </p>
+							<p> <code>ClientDetails</code>:封装了请求中应用的信息</p>
+							<p> <code>TokenRequest</code>:封装了请求中其他参数的信息，同时也包括ClientDetails</p>
+							<p> <code>ClientDetailsService</code>:读取地方应用的信息，这些信息都会被读取到ClientDetails中</p>
+							<p> <code>TokenGranter</code>:令牌生产者，对应四种不同授权模式的实现</p>
+							<p> <code>OAuth2Request</code>:ClientDetails和TokenRequest的整合</p>
+							<p> <code>Authentication</code>:封装当前授权用户的一些信息</p>
+							<p> <code>Oauth2Authentication</code>:</p>
+							<p> <code>AuthorizationServerTokenServices</code>:生成令牌</p>
+							<p> <code>OAuth2AccessToken</code>:</p>
+							<p class="font-s-18">下面来分析下具体源码的实现，从 <code>TokenEndPoint开始</code></p>
+							 <pre class="prettyprint lang-java">public class TokenEndpoint extends AbstractEndpoint {
+
+	.....
+
+	@RequestMapping(value = "/oauth/token", method=RequestMethod.POST)
+	public ResponseEntity&lt;OAuth2AccessToken&gt; postAccessToken(Principal principal, @RequestParam
+	Map&lt;String, String&gt; parameters) throws HttpRequestMethodNotSupportedException {
+
+		if (!(principal instanceof Authentication)) {
+			throw new InsufficientAuthenticationException(
+					"There is no client authentication. Try adding an appropriate authentication filter.");
+		}
+		 //首先获取clientId
+		String clientId = getClientId(principal);
+		 //获取第三方应用的详细信息
+		ClientDetails authenticatedClient = getClientDetailsService().loadClientByClientId(clientId);
+		//创建TokenRequest
+		TokenRequest tokenRequest = getOAuth2RequestFactory().createTokenRequest(parameters, authenticatedClient);
+
+		if (clientId != null && !clientId.equals("")) {
+			// Only validate the client details if a client authenticated during this
+			// request.
+			if (!clientId.equals(tokenRequest.getClientId())) {
+				// double check to make sure that the client ID in the token request is the same as that in the
+				// authenticated client
+				throw new InvalidClientException("Given client ID does not match authenticated client");
+			}
+		}
+		if (authenticatedClient != null) {
+			oAuth2RequestValidator.validateScope(tokenRequest, authenticatedClient);
+		}
+		if (!StringUtils.hasText(tokenRequest.getGrantType())) {
+			throw new InvalidRequestException("Missing grant type");
+		}
+		 //是否是简化模式，不支持
+		if (tokenRequest.getGrantType().equals("implicit")) {
+			throw new InvalidGrantException("Implicit grant type not supported from token endpoint");
+		}
+
+		if (isAuthCodeRequest(parameters)) {
+			// The scope was requested or determined during the authorization step
+			if (!tokenRequest.getScope().isEmpty()) {
+				logger.debug("Clearing scope of incoming token request");
+				tokenRequest.setScope(Collections.&lt;String&gt; emptySet());
+			}
+		}
+
+		if (isRefreshTokenRequest(parameters)) {
+			// A refresh token has its own default scopes, so we should ignore any added by the factory here.
+			tokenRequest.setScope(OAuth2Utils.parseParameterList(parameters.get(OAuth2Utils.SCOPE)));
+		}
+
+		OAuth2AccessToken token = getTokenGranter().grant(tokenRequest.getGrantType(), tokenRequest);
+		if (token == null) {
+			throw new UnsupportedGrantTypeException("Unsupported grant type: " + tokenRequest.getGrantType());
+		}
+
+		return getResponse(token);
+
+	}
+
+	/**
+	 * @param principal the currently authentication principal
+	 * @return a client id if there is one in the principal
+	 */
+	protected String getClientId(Principal principal) {
+		Authentication client = (Authentication) principal;
+		if (!client.isAuthenticated()) {
+			throw new InsufficientAuthenticationException("The client is not authenticated.");
+		}
+		String clientId = client.getName();
+		if (client instanceof OAuth2Authentication) {
+			// Might be a client and user combined authentication
+			clientId = ((OAuth2Authentication) client).getOAuth2Request().getClientId();
+		}
+		return clientId;
+	}
+
+}</pre>
+							<p class="font-s-18">OAuth2AccessToken的实现类DefaultOAuth2AccessToken就是最终在控制台得到的token序列化之前的原始类</p>
+							 <pre class="prettyprint lang-java">public class DefaultOAuth2AccessToken implements Serializable, OAuth2AccessToken {
+
+    private static final long serialVersionUID = 914967629530462926L;
+
+    private String value;
+
+    private Date expiration;
+
+    private String tokenType = BEARER_TYPE.toLowerCase();
+
+    private OAuth2RefreshToken refreshToken;
+
+    private Set&lt;String&gt; scope;
+
+    private Map&lt;String, Object&gt; additionalInformation = Collections.emptyMap();
+
+    //getter,setter
+}
+
+
+@org.codehaus.jackson.map.annotate.JsonSerialize(using = OAuth2AccessTokenJackson1Serializer.class)
+@org.codehaus.jackson.map.annotate.JsonDeserialize(using = OAuth2AccessTokenJackson1Deserializer.class)
+@com.fasterxml.jackson.databind.annotation.JsonSerialize(using = OAuth2AccessTokenJackson2Serializer.class)
+@com.fasterxml.jackson.databind.annotation.JsonDeserialize(using = OAuth2AccessTokenJackson2Deserializer.class)
+
+public interface OAuth2AccessToken {
+
+    public static String BEARER_TYPE = "Bearer";
+
+    public static String OAUTH2_TYPE = "OAuth2";
+
+    /**
+     * The access token issued by the authorization server. This value is REQUIRED.
+     */
+    public static String ACCESS_TOKEN = "access_token";
+
+    /**
+     * The type of the token issued as described in &lt;a href="http://tools.ietf.org/html/draft-ietf-oauth-v2-22#section-7.1"&gt;Section 7.1&lt;/a&gt;. Value is case insensitive.
+     * This value is REQUIRED.
+     */
+    public static String TOKEN_TYPE = "token_type";
+
+    /**
+     * The lifetime in seconds of the access token. For example, the value "3600" denotes that the access token will
+     * expire in one hour from the time the response was generated. This value is OPTIONAL.
+     */
+    public static String EXPIRES_IN = "expires_in";
+
+    /**
+     * The refresh token which can be used to obtain new access tokens using the same authorization grant as described
+     * in &lt;a href="http://tools.ietf.org/html/draft-ietf-oauth-v2-22#section-6"&gt;Section 6&lt;/a&gt;. This value is OPTIONAL.
+     */
+    public static String REFRESH_TOKEN = "refresh_token";
+
+    /**
+     * The scope of the access token as described by &lt;a href="http://tools.ietf.org/html/draft-ietf-oauth-v2-22#section-3.3"&gt;Section 3.3&lt;/a&gt;
+     */
+    public static String SCOPE = "scope";
+
+    ...
+}</pre>
+							<p>一个典型的样例token响应,如下所示，就是上述类序列化后的结果：</p>
+							 <pre class="prettyprint lang-java">{
+    "access_token":"950a7cc9-5a8a-42c9-a693-40e817b1a4b0",
+    "token_type":"bearer",
+    "refresh_token":"773a0fcd-6023-45f8-8848-e141296cb3cb",
+    "expires_in":27036,
+    "scope":"select"
+}</pre>
+							<p class="font-s-18"><code>TokenGranter</code>:TokenGranter的设计思路是使用CompositeTokenGranter管理一个List列表，每一种grantType对应一个具体的真正授权者，在debug过程中可以发现CompositeTokenGranter 内部就是在循环调用五种TokenGranter实现类的grant方法，而granter内部则是通过grantType来区分是否是各自的授权类型。</p>
+							
+							<p class="font-s-18"><code>CompositeTokenGranter</code></p>
+							 <pre class="prettyprint lang-java">public class CompositeTokenGranter implements TokenGranter {
+
+	private final List&lt;TokenGranter&gt; tokenGranters;
+
+	public CompositeTokenGranter(List&lt;TokenGranter&gt; tokenGranters) {
+		this.tokenGranters = new ArrayList&lt;TokenGranter&gt;(tokenGranters);
+	}
+
+	public OAuth2AccessToken grant(String grantType, TokenRequest tokenRequest) {
+		for (TokenGranter granter : tokenGranters) {
+			OAuth2AccessToken grant = granter.grant(grantType, tokenRequest);
+			if (grant!=null) {
+				return grant;
+			}
+		}
+		return null;
+	}
+
+	public void addTokenGranter(TokenGranter tokenGranter) {
+		if (tokenGranter == null) {
+			throw new IllegalArgumentException("Token granter is null");
+		}
+		tokenGranters.add(tokenGranter);
+	}
+
+}</pre>
+							<p class="font-s-18">五种类型分别是：</p>
+							<ul>
+								<li>ResourceOwnerPasswordTokenGranter ==> password密码模式</li>
+								<li>AuthorizationCodeTokenGranter ==> authorization_code授权码模式</li>
+								<li>ClientCredentialsTokenGranter ==> client_credentials客户端模式</li>
+								<li>ImplicitTokenGranter ==> implicit简化模式</li>
+								<li>RefreshTokenGranter ==>refresh_token 刷新token专用</li>
+							</ul>
+
+							<p class="font-s-18"><code>AuthorizationServerTokenServices</code></p>
+							 <pre class="prettyprint lang-java">public interface AuthorizationServerTokenServices {
+    //创建token
+    OAuth2AccessToken createAccessToken(OAuth2Authentication authentication) throws AuthenticationException;
+    //刷新token
+    OAuth2AccessToken refreshAccessToken(String refreshToken, TokenRequest tokenRequest)
+            throws AuthenticationException;
+    //获取token
+    OAuth2AccessToken getAccessToken(OAuth2Authentication authentication);
+
+}</pre>
+							<p>在默认的实现类DefaultTokenServices中，可以看到token是如何产生的，并且了解了框架对token进行哪些信息的关联。</p>
+							 <pre class="prettyprint lang-java">@Transactional
+public OAuth2AccessToken createAccessToken(OAuth2Authentication authentication) throws AuthenticationException {
+
+    OAuth2AccessToken existingAccessToken = tokenStore.getAccessToken(authentication);
+    OAuth2RefreshToken refreshToken = null;
+    if (existingAccessToken != null) {
+        if (existingAccessToken.isExpired()) {
+            if (existingAccessToken.getRefreshToken() != null) {
+                refreshToken = existingAccessToken.getRefreshToken();
+                // The token store could remove the refresh token when the
+                // access token is removed, but we want to
+                // be sure...
+                tokenStore.removeRefreshToken(refreshToken);
+            }
+            tokenStore.removeAccessToken(existingAccessToken);
+        }
+        else {
+            // Re-store the access token in case the authentication has changed
+            tokenStore.storeAccessToken(existingAccessToken, authentication);
+            return existingAccessToken;
+        }
+    }
+
+    // Only create a new refresh token if there wasn't an existing one
+    // associated with an expired access token.
+    // Clients might be holding existing refresh tokens, so we re-use it in
+    // the case that the old access token
+    // expired.
+    if (refreshToken == null) {
+        refreshToken = createRefreshToken(authentication);
+    }
+    // But the refresh token itself might need to be re-issued if it has
+    // expired.
+    else if (refreshToken instanceof ExpiringOAuth2RefreshToken) {
+        ExpiringOAuth2RefreshToken expiring = (ExpiringOAuth2RefreshToken) refreshToken;
+        if (System.currentTimeMillis() > expiring.getExpiration().getTime()) {
+            refreshToken = createRefreshToken(authentication);
+        }
+    }
+
+    OAuth2AccessToken accessToken = createAccessToken(authentication, refreshToken);
+    tokenStore.storeAccessToken(accessToken, authentication);
+    // In case it was modified
+    refreshToken = accessToken.getRefreshToken();
+    if (refreshToken != null) {
+        tokenStore.storeRefreshToken(refreshToken, authentication);
+    }
+    return accessToken;
+
+}</pre>
+							<p class="font-s-18"><code>简单总结一下AuthorizationServerTokenServices的作用，他提供了创建token，刷新token，获取token的实现。在创建token时，他会调用tokenStore对产生的token和相关信息存储到对应的实现类中，可以是redis，数据库，内存，jwt。</code></p>
+						</li>
+
+						<li id="自定义认证">
+							<img src="./images/oauth3.png" alt="">
+							<p class="font-s-18">无论使用那种登录方法，校验成功后都会进入到AuthenticationSuccessfulHandler的实现类里面，而我们要做的是在这个实现类中调用TokenService去产生令牌当作一个返回。
+							</p>
+						</li>
+					</ol>
+        </blockquote>
+
+    </div>
+
+    <div class="breadcrumb margin-t-10">
+        <h2 id="Spring Social">3.Spring Social</h2>
+        <blockquote>
+					<ol>
+						<li id=""><strong>第三方登录</strong>
+							<p><a href="http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html" target="_blank">OAuth协议简介</a></p>
+							<p><a href="http://www.rfcreader.com/#rfc6749" target="_blank">OAuth协议官方文档</a></p>
+
+							<p>三个角色：服务提供商（Provider），资源所有者（Resource Owner），第三方应用（Client）</p>
+							<img src="./images/oauth1.jpg" alt="">
+							<p>在标准的OAuth2协议中，1-6步都是固定，只有最后一步，不通的服务提供商返回的用户信息是不同的。Spring Social已经为我们封装好了1-6步。</p>
+							<p>OAuth协议中的授权模式</p>
+							<ul>
+								<li><code>授权码模式（authorization code）</code></li>
+								<li><code>密码模式（resource owner password credentials）</code></li>
+								<li><code>客户端模式(client credentials)</code></li>
+								<li><code>简化模式(implicit)</code></li>
+							</ul>
+							<p><strong>第三方应用授权码模式流程</strong></p>
+							<img src="./images/oauth2.jpg" alt="">
+
+						</li>
+
+						<li id="SpringSocial原理"><strong>SpringSocial原理</strong>
+							<p>SpringSocial使用SocialAuthenticationFilter过滤器实现上图的流程，并将这个过滤器加到SpringSecurity的过滤器链上</p>
+							<p>ServiceProvider：针对每一个服务提供商，都必须提供一个ServiceProvider，继承AbstractOAuth2ServiceProvider这个抽象类，里面实现了最基本的功能</p>
+							<img src="./images/oauth3.jpg" alt="">
+							<p>第三方登陆涉及到的类和接口</p>
+							<img src="./images/oauth4.jpg" alt="">
+						</li>
+					</ol>
+        </blockquote>
+    </div>
+
+    <div class="breadcrumb margin-t-10">
+        <h2 id="qa">8.Q&amp;A</h2>
+        <blockquote>
+            <ul>
+                <li>
+                    <p>当两个对象的hashcode相同会发生什么？</p>
+                    <div class="blockquote-inline">
+                        因为hashcode相同，所以它们的bucket位置相同，‘碰撞’会发生。因为HashMap使用链表存储对象，这个Entry(包含有键值对的Map.Entry对象)会存储在链表中。
+                    </div>
+                </li>
+                <li>
+                    <p>如果两个键的hashcode相同，你如何获取值对象？</p>
+                    <div class="blockquote-inline">
+                        当我们调用get()方法，HashMap会使用键对象的hashcode找到bucket位置，找到bucket位置之后，会调用keys.equals()方法去找到链表中正确的节点，最终找到要找的值对象。
+                    </div>
+                </li>
+                <li>
+                    <p>为什么String, Interger这样的wrapper类适合作为键？</p>
+                    <div class="blockquote-inline">
+                        可能产生条件竞争(race condition)。因为如果两个线程都发现HashMap需要重新调整大小了，它们会同时试着调整大小。在调整大小的过程中，存储在链表中的元素的次序会反过来，因为移动到新的bucket位置的时候，HashMap并不会将元素放在链表的尾部，而是放在头部，这是为了避免尾部遍历(tail traversing)。如果条件竞争发生了，那么就死循环了。
+                    </div>
+                </li>
+                <li>
+                    <p>如果两个键的hashcode相同，你如何获取值对象？</p>
+                    <div class="blockquote-inline">
+                        因为String是不可变的，也是final的，而且已经重写了equals()和hashCode()方法了。其他的wrapper类也有这个特点。不可变性是必要的，因为为了要计算hashCode()，就要防止键值改变，如果键值在放入时和获取时返回不同的hashcode的话，那么就不能从HashMap中找到你想要的对象。不可变性还有其他的优点如线程安全。
+                    </div>
+                </li>
+            </ul>
+        </blockquote>
+    </div>
+
+    <div class="breadcrumb margin-t-10">
+        <h2 id="kuozhan">9.扩展</h2>
+
+        <blockquote>
+        </blockquote>
+
+    </div>
+
+</div>
+
+<div class="m-bg text-center margin-t-10">
+    <p>
+        <a class="btn btn-xs btn-default" href="http://www.jcohy.com">Jcohy</a>
+    </p>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $("pre").addClass("prettyprint linenums");
+        //代码高亮
+        prettyPrint();
+        $("table").attr('class','table table-striped table-bordered table-condensed');
+    });
+</script>
+</body>
+</html>
