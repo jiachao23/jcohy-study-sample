@@ -52,6 +52,31 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-mail</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.searchbox/jest -->
+    <!--<dependency>-->
+      <!--<groupId>io.searchbox</groupId>-->
+      <!--<artifactId>jest</artifactId>-->
+      <!--<version>6.3.1</version>-->
+    <!--</dependency>-->
+
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-amqp</artifactId>
+    </dependency>
   </dependencies>
 
   <!-- 这个插件，可以将应用打包成一个可执行的jar包；-->
