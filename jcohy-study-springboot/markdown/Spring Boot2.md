@@ -186,7 +186,7 @@ redisTemplate.opsForZSet();//操作有序set
 
 –RabbitMQ是AMQP的实现
 
-![RabbitMQ](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-springboot/src/main/resources/static/img/TIM截图20180902132058.png)
+![RabbitMQ](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-springboot/src/main/resources/static/img/20180902132058.png)
 
 8.Spring支持
 
@@ -306,7 +306,7 @@ topic 交换器通过模式匹配分配消息的路由键属性，将路由键�
 >
 > ​		2.RabbitTemplate：消息发送处理组件
 
-![RabbitMQ](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-springboot/src/main/resources/static/img/TIM截图20180902133718.png)
+![RabbitMQ](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-springboot/src/main/resources/static/img/20180902133718.png)
 
 
 
@@ -392,7 +392,7 @@ public class MyAMQPConfig {
 
   –属性-列
 
-  ![ElasticSearch](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-springboot/src/main/resources/static/img/TIM截图20180902141509.png)
+  ![ElasticSearch](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-springboot/src/main/resources/static/img/20180902141509.png)
 
 #### ElasticSearch安装（使用Docker） 
 
@@ -859,3 +859,297 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter{
     }
 }
 ```
+
+## 6.SpringBoot之分布式
+
+在分布式系统中，国内常用zookeeper+dubbo组合，而Spring Boot推荐使用全栈的Spring，Spring Boot+Spring Cloud
+
+分布式系统：
+
+![](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-springboot/src/main/resources/static/img/1.jpg)
+
+
+
+* 单一应用架构
+
+当网站流量很小时，只需一个应用，将所有功能都部署在一起，以减少部署节点和成本。此时，用于简化增删改查工作量的数据访问框架(ORM)是关键。
+
+* 垂直应用架构
+
+当访问量逐渐增大，单一应用增加机器带来的加速度越来越小，将应用拆成互不相干的几个应用，以提升效率。此时，用于加速前端页面开发的Web框架(MVC)是关键。
+
+* 分布式服务架构
+
+当垂直应用越来越多，应用之间交互不可避免，将核心业务抽取出来，作为独立的服务，逐渐形成稳定的服务中心，使前端应用能更快速的响应多变的市场需求。此时，用于提高业务复用及整合的分布式服务框架(RPC)是关键。
+
+* 流动计算架构
+
+当服务越来越多，容量的评估，小服务资源的浪费等问题逐渐显现，此时需增加一个调度中心基于访问压力实时管理集群容量，提高集群利用率。此时，用于提高机器利用率的资源调度和治理中心(SOA)是关键。
+
+#### Zookeeper和Dubbo
+
+##### ZooKeeper
+
+    ZooKeeper 是一个分布式的，开放源码的分布式应用程序协调服务。它是一个为分布式应用提供一致性服务的软件，提供的功能包括：配置维护、域名服务、分布式同步、组服务等。
+
+##### Dubbo
+
+Dubbo是Alibaba开源的分布式服务框架，它最大的特点是按照分层的方式来架构，使用这种方式可以使各个层之间解耦合（或者最大限度地松耦合）。从服务模型的角度来看，Dubbo采用的是一种非常简单的模型，要么是提供方提供服务，要么是消费方消费服务，所以基于这一点可以抽象出服务提供方（Provider）和服务消费方（Consumer）两个角色。
+
+![](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-springboot/src/main/resources/static/img/2.jpg)
+
+#### SpringBoot整合
+
+##### dubbo和zookeeper结合
+
+1）、引入dubbo和zkclient依赖
+
+```
+
+<dependency>
+    <groupId>com.alibaba.boot</groupId>
+    <artifactId>dubbo-spring-boot-starter</artifactId>
+    <version>0.1.0</version>
+</dependency>
+
+<!--引入zookeeper的客户端工具-->
+<!-- https://mvnrepository.com/artifact/com.github.sgroschupf/zkclient -->
+<dependency>
+    <groupId>com.github.sgroschupf</groupId>
+    <artifactId>zkclient</artifactId>
+    <version>0.1</version>
+</dependency>
+```
+
+2）、配置dubbo的扫描包和注册中心地址
+
+```
+dubbo.application.name=provider-ticket
+
+dubbo.registry.address=zookeeper://118.24.44.169:2181
+
+dubbo.scan.base-packages=com.atguigu.ticket.service
+```
+
+3）、使用@Service发布服务
+
+4）、使用@Reference引用服务
+
+##### SpringCloud
+
+Spring Cloud是一个分布式的整体解决方案。Spring Cloud 为开发者提供了在分布式系统（配置管理，服务发现，熔断，路由，微代理，控制总线，一次性token，全局琐，leader选举，分布式session，集群状态）中快速构建的工具，使用Spring Cloud的开发者可以快速的启动服务或构建应用、同时能够快速和云平台资源进行对接。
+
+**SpringCloud分布式开发五大常用组件**
+
+- 服务发现——Netflix Eureka
+- 客服端负载均衡——Netflix Ribbon
+- 断路器——Netflix Hystrix
+- 服务网关——Netflix Zuul
+- 分布式配置——Spring Cloud 
+
+1）、引入Eureka-server
+
+	<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka-server</artifactId>
+	</dependency>
+2）、配置Eureka信息
+
+```yaml
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: eureka-server  # eureka实例的主机名
+  client:
+    register-with-eureka: false #不把自己注册到eureka上
+    fetch-registry: false #不从eureka上来获取服务的注册信息
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+```
+
+3）、使用@EnableEurekaServer注解开启服务
+
+4）、测试
+
+localhost:8761 可以查看Eureka服务注册相关信息
+
+5）、服务提供者配置
+
+```yaml
+server:
+  port: 8002
+spring:
+  application:
+    name: provider-ticket
+
+eureka:
+  instance:
+    prefer-ip-address: true # 注册服务的时候使用服务的ip地址
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+```
+
+6）、服务消费者配置
+
+@EnableDiscoveryClient :开启发现服务功能
+
+添加RestTemplate
+
+```java
+@LoadBalanced
+@Bean
+public RestTemplate restTemplate(){
+	return new RestTemplate
+}
+```
+
+```
+@Autowired
+RestTemplate restTemplate;
+public String buTicket(String name){
+    String forObject = restTemplate.getForObject("http://PROVIDER-RICKET/ticket",String.class);
+    return name+"购买了"+forObject；
+}
+```
+
+## 7.SpringBoot之热部署
+
+在开发中我们修改一个Java文件后想看到效果不得不重启应用，这导致大量时间花费，我们希望不重启应用的情况下，程序可以自动部署（热部署）。有以下四种情况，如何能实现热部署。
+
+
+- 1、模板引擎
+
+  **在Spring Boot中开发情况下禁用模板引擎的cache**
+
+  **页面模板改变ctrl+F9可以重新编译当前页面并生效**
+
+- 2、Spring Loaded
+
+  Spring官方提供的热部署程序，实现修改类文件的热部署
+
+  **下载Spring Loaded**（项目地址<https://github.com/spring-projects/spring-loaded>）
+
+  **添加运行时参数；**
+
+  -javaagent:C:/springloaded-1.2.5.RELEASE.jar –noverify
+
+- 3、JRebel
+
+  **收费的一个热部署软件**
+
+  **安装插件使用即可**
+
+- 4.Spring Boot Devtools（推荐）
+
+  **引入依赖**
+
+  ```yam
+  <dependency>  
+         <groupId>org.springframework.boot</groupId>  
+         <artifactId>spring-boot-devtools</artifactId>   
+  </dependency> 
+  
+  ```
+
+  **IDEA使用ctrl+F9**
+
+  **或做一些小调整**
+
+    Intellij IEDA和Eclipse不同，Eclipse设置了自动编译之后，修改类它会自动编译，而IDEA在非RUN或DEBUG情况下才会自动编译（前提是你已经设置了Auto-Compile）。
+
+  设置自动编译（settings-compiler-make project automatically）
+
+  ctrl+shift+alt+/（maintenance）
+
+  勾选compiler.automake.allow.when.app.running
+
+## SpringBoot之监控管理
+
+通过引入spring-boot-starter-actuator，可以使用Spring Boot为我们提供的准生产环境下的应用监控和管理功能。我们可以通过HTTP，JMX，SSH协议来进行操作，自动得到审计、健康及指标信息等
+
+#### 整合
+
+1）、引入spring-boot-starter-actuator
+
+```
+<dependency>  
+       <groupId>org.springframework.boot</groupId>  
+       <artifactId>spring-boot-starter-actuator</artifactId>   
+</dependency> 
+```
+
+2）、修改配置application.yml
+
+```yaml
+management.security.enabled=false
+spring.redis.host=118.24.44.169
+info.app.id=hello
+info.app.version=1.0.0
+# endpoints.metrics.enabled=false
+endpoints.shutdown.enabled=true
+# endpoints.beans.id=mybean
+# endpoints.beans.path=/bean
+# endpoints.beans.enabled=false
+#
+# endpoints.dump.path=/du
+# \u5173\u95ED\u6240\u6709\u7AEF\u70B9\u8BBF\u95E
+# endpoints.enabled=false
+# endpoints.beans.enabled=true
+management.context-path=/manage
+management.port=8181
+```
+
+3）、可进行shutdown（POST 提交，此端点默认关闭）
+
+4）、通过http方式访问监控端点
+
+| 端点名      | 描述                        |
+| ----------- | :-------------------------- |
+| autoconfig  | 所有自动配置信息            |
+| auditevents | 审计事件                    |
+| beans       | 所有Bean的信息              |
+| configprops | 所有配置属性                |
+| dump        | 线程状态信息                |
+| env         | 当前环境信息                |
+| health      | 应用健康状况                |
+| info        | 当前应用信息                |
+| metrics     | 应用的各项指标              |
+| mappings    | 应用@RequestMapping映射路径 |
+| shutdown    | 关闭当前应用（默认关闭）    |
+| trace       | 追踪信息（最新的http请求）  |
+
+#### 定制端点信息 
+
+- 定制端点一般通过endpoints+端点名+属性名来设置。
+- 修改端点id（endpoints.beans.id=mybeans）
+- 开启远程应用关闭功能（endpoints.shutdown.enabled=true）
+- 关闭端点（endpoints.beans.enabled=false）
+- 开启所需端点
+  - endpoints.enabled=false
+  - endpoints.beans.enabled=true
+- 定制端点访问根路径
+  - management.context-path=/manage
+- 关闭http端点
+  - management.port=-1
+
+#### 自定义HealthIndicator
+
+1）、编写一个指示器，实现HealthIndicator
+
+2）、指示器名字必须写 xxxHealthIndicator
+
+3）、加入容器
+
+```
+@Component
+public class MyAppHealthIndicator implatements HealthIndicator{
+    @Override
+    public Health health(){
+        //自定义检查方法
+        return Health.down().withDetail("").build;
+    }
+}
+```
+
