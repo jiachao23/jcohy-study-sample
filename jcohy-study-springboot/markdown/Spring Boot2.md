@@ -866,7 +866,7 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter{
 
 分布式系统：
 
-![](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-springboot/src/main/resources/static/img/1.jpg)
+![分布式](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-springboot/src/main/resources/static/img/1.jpg)
 
 
 
@@ -896,7 +896,7 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter{
 
 Dubbo是Alibaba开源的分布式服务框架，它最大的特点是按照分层的方式来架构，使用这种方式可以使各个层之间解耦合（或者最大限度地松耦合）。从服务模型的角度来看，Dubbo采用的是一种非常简单的模型，要么是提供方提供服务，要么是消费方消费服务，所以基于这一点可以抽象出服务提供方（Provider）和服务消费方（Consumer）两个角色。
 
-![](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-springboot/src/main/resources/static/img/2.jpg)
+![Dubbo](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-springboot/src/main/resources/static/img/2.jpg)
 
 #### SpringBoot整合
 
