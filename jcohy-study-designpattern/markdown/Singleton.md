@@ -26,7 +26,7 @@
 >  * 有些类如交易所的核心交易引擎，控制着交易流程，如果该类可以创建多个的话，系统完全乱了。（比如一个军队出现了多个司令员同时指挥，肯定会乱成一团），所以只有使用单例模式，才能保证核心交易服务器独立控制整个流程。
 >    单例模式的结构如图“”
 
->  * ![Singleton](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-studydesign-pattern/src/main/resources/static/images/Singleton.png)
+>  * ![Singleton](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/src/main/resources/static/images/Singleton.png)
 
 <p id="method" />
 

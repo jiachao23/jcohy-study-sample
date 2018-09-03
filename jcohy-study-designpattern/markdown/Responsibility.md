@@ -24,7 +24,7 @@
 <p id="role">
 
 ## 责任链模式的角色
-![结构图](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-studydesign-pattern/src/main/resources/static/images/chainofresponsibility.png)
+![结构图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/src/main/resources/static/images/chainofresponsibility.png)
 >  *  Handler
 
 >  定义一个处理请求的接口

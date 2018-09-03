@@ -25,7 +25,7 @@
 
 ## 访问者模式的角色
 
->  ![结构图](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-studydesign-pattern/src/main/resources/static/images/visitor.png)
+>  ![结构图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/src/main/resources/static/images/visitor.png)
 
 <p id="sign">
 

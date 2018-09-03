@@ -25,7 +25,7 @@
 
 ## 外观模式的角色
 
->  ![结构图](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-studydesign-pattern/src/main/resources/static/images/facade.png)
+>  ![结构图](https://github.com/jiachao23/jcohy-study-sample/jcohy-study-designpattern/master/jcohy-studydesign-pattern/src/main/resources/static/images/facade.png)
 >  * Facade
 >  外观类，知道那些子系统类负责处理请求。将客户的请求代理给适当的子系统对象。
 >  *  SubSystem（One，Two，Three，。。。。）

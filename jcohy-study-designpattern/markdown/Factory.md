@@ -115,7 +115,7 @@
 >   *  工厂模式降低了客户端程序与产品对象的耦合度，使用多态。保持了简单工厂的有点，克服了他的缺点。但是由于每增加一个
 一个产品，就需要加一个产品工厂的类，增加了额外的开销。
 
->  ![factory](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-studydesign-pattern/src/main/resources/static/images/factory2.png)
+>  ![factory](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/src/main/resources/static/images/factory2.png)
 
 #### 实现
         上面例子的一二步不变，创建共同的接口和实现类。
@@ -153,7 +153,7 @@
 <p id ="abstractfactory" />
 
 >  ### 抽象工厂(工具箱模式)
-    ![factory](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-studydesign-pattern/src/main/resources/static/images/abstractfactory.png)
+    ![factory](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-studydesign-pattern/src/main/resources/static/images/abstractfactory.png)
 >    *  抽象工厂模式（Abstract Factory Pattern）;提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。
 >    * 优点：当一个产品族中的多个对象被设计成一起工作时，它能保证客户端始终只使用同一个产品族中的对象。
 >    * 缺点：产品族扩展非常困难，要增加一个系列的某一产品，既要在抽象的 Creator 里加代码，又要在具体的里面加代码。

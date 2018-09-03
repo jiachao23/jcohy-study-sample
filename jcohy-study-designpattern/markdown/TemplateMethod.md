@@ -25,7 +25,7 @@
 
 ## 模板方法模式的角色
 
->  ![结构图](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-studydesign-pattern/src/main/resources/static/images/templatemethod.png)
+>  ![结构图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/src/main/resources/static/images/templatemethod.png)
 >  *  AbstractClass:
 
 >  声明模板方法所使用的抽象方法，这个抽象方法由子类ConcreteClass实现。
