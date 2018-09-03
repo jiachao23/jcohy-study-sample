@@ -24,7 +24,7 @@
 
 ## 备忘录模式的角色
 
->  ![结构图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-studydesign-pattern/src/main/resources/static/images/memento.png)
+>  ![结构图](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-studydesign-pattern/src/main/resources/static/images/memento.png)
 >  *  Originator:负责创建一个备忘录Memento,用来记录当前时刻他的内部状态，并可使用备忘录恢复他的内部状态。
 >  *  Memento：负责存储Originator对象的内部状态，并可防止Originator以外的其他对象访问备忘录Memento。
 >  *  Caretaker: 负责保存好备忘录Memento

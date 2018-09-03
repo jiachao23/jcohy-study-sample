@@ -27,7 +27,7 @@
 
 ## 中介者模式的角色
 
->  ![结构图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-studydesign-pattern/src/main/resources/static/images/mediator.png)
+>  ![结构图](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-studydesign-pattern/src/main/resources/static/images/mediator.png)
 >  *  Mediator :抽象中介者，定义了同事对象到中介者对象之间的接口。
 >  *  Colleague：同事对象。
 >  *  ConcreteMediator：具体中介者对象，实现抽象类的方法，他需要知道所有具体的同事类，并从具体同事接受消息，向具体同事对象发送命令。

@@ -23,7 +23,7 @@
 <p id="role">
 
 ## 命令模式的角色
->  ![结构图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-studydesign-pattern/src/main/resources/static/images/command.png)
+>  ![结构图](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-studydesign-pattern/src/main/resources/static/images/command.png)
 >  *  Command</br>
 >  用来声明 执行操作的接口
 
@@ -229,7 +229,7 @@
                          }
                          
                          7.result
-                         ![result](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-studydesign-pattern/src/main/resources/static/images/result.png)
+                         ![result](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-studydesign-pattern/src/main/resources/static/images/result.png)
                   
 <p id="qa">
 
