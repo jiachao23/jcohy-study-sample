@@ -22,8 +22,6 @@
 
 [详细参照微服务文档](https://martinfowler.com/articles/microservices.html#MicroservicesAndSoa)
 
-
-
 ## 3、环境准备
 
 http://www.gulixueyuan.com/ 谷粒学院
@@ -286,8 +284,6 @@ J2EE的整体整合解决方案和自动配置都在spring-boot-autoconfigure-1.
 
 ==Spring注解版（谷粒学院）==
 
-
-
 ## 6、使用Spring Initializer快速创建Spring Boot项目
 
 ### 1、IDEA：使用 Spring Initializer快速创建项目
@@ -354,8 +350,6 @@ server:
 	<port>8081</port>
 </server>
 ```
-
-
 
 ## 2、YAML语法：
 
@@ -429,8 +423,6 @@ pets:
 ```yaml
 pets: [cat,dog,pig]
 ```
-
-
 
 ## 3、配置文件值注入
 
@@ -661,8 +653,6 @@ person.dog.name=${person.hello:hello}_dog
 person.dog.age=15
 ```
 
-
-
 ## 5、Profile
 
 ### 1、多Profile文件
@@ -715,7 +705,6 @@ spring:
 ​	3、虚拟机参数；
 
 ​		-Dspring.profiles.active=dev
-
 
 
 ## 6、配置文件加载位置
@@ -3264,7 +3253,6 @@ public ConfigurableApplicationContext run(String... args) {
 ```
 
 **==启动Servlet容器，再启动SpringBoot应用==**
-
 
 
 # 五、Docker

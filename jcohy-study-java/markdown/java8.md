@@ -1,10 +1,22 @@
 # Java8新特性
 
+> * [Lambda表达式](#Lambda)
+> * [函数式接口](#函数式接口)
+> * [方法引用与构造器引用](#方法引用与构造器引用)
+> * [Stream API](#Stream API)
+> * [Optional容器](#Optional容器)
+> * [接口中的默认方法与静态方法](#接口中的默认方法与静态方法)
+> * [新时间日期API](#新时间日期API)
+> * [其他新特性](#其他新特性)
+
 - 速度更快
 - 代码更少（增加了新的语法Lambda 表达式）
 - 强大的Stream API
 - 便于并行
 - 最大化减少空指针异常Optional
+
+
+<p id="Lambda">
 
 ## 1.Lambda表达式
 
@@ -196,7 +208,9 @@ public void calculate(Long num,Long num2,Func2<Long,Long> myFun){
 }
 ```
 
-##2.函数式接口
+<p id="函数式接口">
+
+## 2.函数式接口
 
 ####  什么是函数式接口
 
@@ -323,7 +337,7 @@ ToDoubleFunction<T> | T               | int,long,double | 分别计算int、long
 <br/>LongFunction<R>
 DoubleFunction<R>       | int,long,double | R               | 参数分别为int、long、double类型的函数                        |
 
-
+<p id="方法引用与构造器引用">
 
 ## 3.方法引用与构造器引用
 
@@ -381,7 +395,7 @@ DoubleFunction<R>       | int,long,double | R               | 参数分别为int
 	Function<Integer,Integer[]> fun = Integer[]::new;
 ```
 
-
+<p id="Stream API">
 
 ## 4.Stream API
 
@@ -997,7 +1011,7 @@ public class TestForkJoin {
 }
 ```
 
-
+<p id="Optional容器">
 
 ## 5.Optional容器
 
@@ -1110,7 +1124,7 @@ public class TestOptional {
 
 ```
 
-
+<p id="接口中的默认方法与静态方法">
 
 ## 6.接口中的默认方法与静态方法
 
@@ -1123,6 +1137,8 @@ Java8 中，接口中允许添加静态方法
 
 - 选择父类中的方法。如果一个父类提供了具体的实现，那么接口中具有相同名称和参数的默认方法会被忽略。
 - 接口冲突。如果一个父接口提供一个默认方法，而另一个接口也提供了一个具有相同名称和参数列表的方法（不管方法是否是默认方法），那么必须覆盖该方法来解决冲突
+
+<p id="新时间日期API">
 
 ## 7.新时间日期API
 
@@ -1338,7 +1354,7 @@ of(id) : 用指定的时区信息获取ZoneId 对象
 | java.time.ZoneId<br/>java.util.TimeZone                     | Timezone.getTimeZone(id)              | timeZone.toZoneId()         |
 | java.time.format.DateTimeFormatter<br/>java.text.DateFormat | formatter.toFormat()                  | 无                          |
 
-
+<p id="其他新特性">
 
 ## 8.其他新特性
 

@@ -1,6 +1,19 @@
-# 一、Spring Boot 之高级特性
+# Spring Boot 之高级特性
 
-## 1、JSR107 
+> * [SpringBoot之缓存](#SpringBoot之缓存)
+> * [SpringBoot之消息队列](#SpringBoot之消息队列)
+> * [SpringBoot之检索](#SpringBoot之检索)
+> * [SpringBoot之异步任务](#SpringBoot之异步任务)
+> * [SpringBoot之安全](#SpringBoot之安全)
+> * [SpringBoot之分布式](#SpringBoot之分布式)
+> * [SpringBoot之热部署](#SpringBoot之热部署)
+> * [SpringBoot之监控管理](#SpringBoot之监控管理)
+
+<p id="SpringBoot之缓存">
+
+## 一、SpringBoot之缓存
+
+### 1、JSR107 
 
 > Java Caching定义了5个核心接口，分别是CachingProvider, CacheManager, Cache, Entry 和 Expiry。
 >
@@ -20,7 +33,7 @@
 
 ![缓存的类图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-springboot/src/main/resources/static/img/1535858535929.png)
 
-## 2、Spring的缓存抽象
+### 2、Spring的缓存抽象
 
 Spring从3.1开始定义了org.springframework.cache.Cache和org.springframework.cache.CacheManager接口来统一不同的缓存技术；
 
@@ -38,9 +51,7 @@ Spring从3.1开始定义了org.springframework.cache.Cache和org.springframework
 
   2、从缓存中读取之前缓存存储的数据
 
-
-
-##  3.几个重要概念&缓存注解 
+###  3.几个重要概念&缓存注解 
 
 - Cache :缓存接口，定义缓存操作。实现有：RedisCache、EhCacheCache、ConcurrentMapCache等 
 - CacheManager :缓存管理器，管理各种缓存（Cache）组件 
@@ -61,7 +72,7 @@ Spring从3.1开始定义了org.springframework.cache.Cache和org.springframework
 | beforeInvocation            | 是否在方法执行前就清空，缺省为 false                         | 例如：@CachEvict(value=”testcache”，beforeInvocation=true)   |
 | unless                      | 用于否决缓存的，不像condition，该表达式只在方法执行之后判断，此时可以拿到返回值result进行判断。条件为true不会缓存，fasle才缓存 | 例如：  @Cacheable(value=”testcache”,unless=”#result == null”) m |
 
-## 4.缓存机制的原理
+### 4.缓存机制的原理
 
 1）、自动配置类：CacheAutoConfiguration
 
@@ -117,9 +128,7 @@ key是按照某种策略生成的，默认使用SimpleKeyGenerator生成key
 
 4）、将目标方法返回的结构，放进缓存中
 
-
-
-##  5.整合redis
+###  5.整合redis
 
 1）、引入spring-boot-starter-data-redis
 
@@ -147,10 +156,11 @@ redisTemplate.opsForZSet();//操作有序set
 > - 默认创建RedisCacheManager操作redis的时候使用的死RedisTemplate<Object,Object>。默认使用jdk的序列化机制
 > - 自定义CacheManager
 
+<p id="SpringBoot之消息队列">
 
-# 二、SpringBoot之消息队列
+## 2、SpringBoot之消息队列
 
-## 1、概述
+### 1、概述
 
 1.大多应用中，可通过消息服务中间件来提升系统异步通信、扩展解耦能力
 
@@ -208,7 +218,7 @@ redisTemplate.opsForZSet();//操作有序set
 
 RabbitAutoConfiguration
 
-## 2、RabbitMQ
+### 2、RabbitMQ
 
 ##### RabbitMQ简介：
 
@@ -372,9 +382,12 @@ public class MyAMQPConfig {
     }
 }
 ```
+
+<p id="SpringBoot之检索">
+
 ## 3.SpringBoot之检索
 
-#### 概念
+### 概念
 
 我们的应用经常需要添加检索功能，开源的 [ElasticSearch](https://www.elastic.co/) 是目前全文搜索引擎的首选。他可以快速的存储、搜索和分析海量数据。Spring Boot通过整合Spring Data ElasticSearch为我们提供了非常便捷的检索功能支持；**Elasticsearch**是一个分布式搜索服务，提供Restful API，底层基于Lucene，采用多shard（分片）的方式保证数据安全，并且提供自动resharding的功能，github等大型的站点也是采用了ElasticSearch作为其搜索服务。
 
@@ -464,7 +477,7 @@ spring.data.elasticsearch.cluster-nodes=http://localhost:9301
 
 3）、测试
 
-###### Jest
+##### Jest
 
 ```java
     @Autowired
@@ -501,7 +514,7 @@ spring.data.elasticsearch.cluster-nodes=http://localhost:9301
      }
 ```
 
-###### SpringData
+##### SpringData
 
  	编写ElasticSearchRepository
 
@@ -595,8 +608,6 @@ public class Book {
     }
 ```
 
-
-
 #### ElasticSearch自动配置
 
 ##### SpringBoot默认支持两种技术来和ES交互
@@ -611,6 +622,8 @@ public class Book {
 ​	
 
 [文档链接](https://docs.spring.io/spring-data/elasticsearch/docs/3.0.9.RELEASE/reference/html/)
+
+<p id="SpringBoot之异步任务">
 
 ## 4.SpringBoot之异步任务
 
@@ -791,6 +804,8 @@ public class MailTest {
 }
 ```
 
+<p id="SpringBoot之安全">
+
 ## 5.SpringBoot之安全
 
 Spring Security是针对Spring项目的安全框架，也是Spring Boot底层安全模块默认的技术选型。他可以实现强大的web安全控制。对于安全控制，我们仅需引入spring-boot-starter-security模块，进行少量的配置，即可实现强大的安全管理。
@@ -811,9 +826,6 @@ Spring Security是针对Spring项目的安全框架，也是Spring Boot底层安
 - “授权”（Authorization）指确定一个主体是否允许在你的应用程序执行一个动作的过程。为了抵达需要授权的店，主体的身份已经有认证过程建立。
 
 - 这个概念是通用的而不只在Spring Security中。
-
-  
-
 
 
 #### SpringSecurity整合
@@ -859,6 +871,9 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter{
     }
 }
 ```
+
+
+<p id="SpringBoot之分布式">
 
 ## 6.SpringBoot之分布式
 
@@ -1014,6 +1029,9 @@ public String buTicket(String name){
 }
 ```
 
+
+<p id="SpringBoot之热部署">
+
 ## 7.SpringBoot之热部署
 
 在开发中我们修改一个Java文件后想看到效果不得不重启应用，这导致大量时间花费，我们希望不重启应用的情况下，程序可以自动部署（热部署）。有以下四种情况，如何能实现热部署。
@@ -1065,7 +1083,10 @@ public String buTicket(String name){
 
   勾选compiler.automake.allow.when.app.running
 
-## SpringBoot之监控管理
+
+<p id="SpringBoot之监控管理">
+
+## 8.SpringBoot之监控管理
 
 通过引入spring-boot-starter-actuator，可以使用Spring Boot为我们提供的准生产环境下的应用监控和管理功能。我们可以通过HTTP，JMX，SSH协议来进行操作，自动得到审计、健康及指标信息等
 
