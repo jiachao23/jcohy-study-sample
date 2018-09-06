@@ -223,16 +223,10 @@ public void calculate(Long num,Long num2,Func2<Long,Long> myFun){
 
 | 函数式接口               | 参数类型 | 返回类型 | 用途                                                         |
 | ------------------------ | -------- | -------- | ------------------------------------------------------------ |
-| Consumer<T>
-消费型接口    | T        | void     | 对类型为T的对象应用操作，包含方法：
-void accept(T t)          |
-| Supplier<T>
-供给型接口    | 无       | T        | 返回类型为T的对象，包含方法：T get();                        |
-| Function<T, R>
-函数型接口 | T        | R        | 对类型为T的对象应用操作，并返回结果。结果是R类型的对象。包含方法：R apply(T t); |
-| Predicate<T>
-断定型接口   | T        | boolean  | 确定类型为T的对象是否满足某约束，并返回boolean 值。包含方法
-boolean test(T t); |
+| Consumer&lt;T&gt; 消费型接口    | T        | void     | 对类型为T的对象应用操作，包含方法：void accept(T t)          |
+| Supplier&lt;T&gt;供给型接口    | 无       | T        | 返回类型为T的对象，包含方法：T get();                        |
+| Function<T, R> 函数型接口 | T        | R        | 对类型为T的对象应用操作，并返回结果。结果是R类型的对象。包含方法：R apply(T t); |
+| Predicate&lt;T&gt;断定型接口   | T        | boolean  | 确定类型为T的对象是否满足某约束，并返回boolean 值。包含方法boolean test(T t); |
 
 
 
@@ -321,22 +315,14 @@ boolean test(T t); |
 
 | 函数式接口                                                | 参数类型        | 返回类型        | 用途                                                         |
 | --------------------------------------------------------- | --------------- | --------------- | ------------------------------------------------------------ |
-| BiFunction<T,U,R>                                         | T,U             | R               | 对类型为T,U参数应用操作，返回R类型的结果。包含方法为
-<br/>Rapply(Tt,Uu); |
-| UnaryOperator<T>
-<br/>(Function子接口)                     | T               | T               | 对类型为T的对象进行一元运算，并返回T类型的结果。包含方法为
-<br/>Tapply(Tt); |
-| BinaryOperator<T>
-<br/>(BiFunction子接口)                  | T,T             | T               | 对类型为T的对象进行二元运算，并返回T类型的结果。包含方法为
-<br/>Tapply(Tt1,Tt2); |
-| BiConsumer<T,U>                                           | T,U             | void            | 对类型为T,U参数应用操作。包含方法为
-<br/>voidaccept(Tt,Uu)    |
-| ToIntFunction<T>
-<br/>ToLongFunction<T>
-ToDoubleFunction<T> | T               | int,long,double | 分别计算int、long、double、值的函数                          |
-| IntFunction<R>
-<br/>LongFunction<R>
-DoubleFunction<R>       | int,long,double | R               | 参数分别为int、long、double类型的函数                        |
+| BiFunction<T,U,R>    | T,U             | R       | 对类型为T,U参数应用操作，返回R类型的结果。包含方法为Rapply(Tt,Uu); |
+| UnaryOperator&lt;T&gt;(Function子接口)| T   | T    | 对类型为T的对象进行一元运算，并返回T类型的结果。包含方法为Tapply(Tt); |
+| BinaryOperator&lt;T&gt;(BiFunction子接口)  | T,T    | T    | 对类型为T的对象进行二元运算，并返回T类型的结果。包含方法为Tapply(Tt1,Tt2); |
+| BiConsumer<T,U>       | T,U             | void            | 对类型为T,U参数应用操作。包含方法为voidaccept(Tt,Uu)    |
+| ToIntFunction&lt;T&gt; ToLongFunction&lt;T&gt;
+ToDoubleFunction&lt;T&gt; | T               | int,long,double | 分别计算int、long、double、值的函数                          |
+| IntFunction&lt;R&gt;LongFunction&lt;R&gt;
+DoubleFunction&lt;R&gt;       | int,long,double | R               | 参数分别为int、long、double类型的函数                        |
 
 <p id="方法引用与构造器引用">
 
