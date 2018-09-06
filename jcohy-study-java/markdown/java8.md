@@ -314,15 +314,13 @@ public void calculate(Long num,Long num2,Func2<Long,Long> myFun){
 #### 其他接口
 
 | 函数式接口                                                | 参数类型        | 返回类型        | 用途                                                         |
-| --------------------------------------------------------- | --------------- | --------------- | ------------------------------------------------------------ |
+| --------------------------------------------------------- | --------------- | --------------- | -----------------------------------|
 | BiFunction<T,U,R>    | T,U             | R       | 对类型为T,U参数应用操作，返回R类型的结果。包含方法为Rapply(Tt,Uu); |
 | UnaryOperator&lt;T&gt;(Function子接口)| T   | T    | 对类型为T的对象进行一元运算，并返回T类型的结果。包含方法为Tapply(Tt); |
 | BinaryOperator&lt;T&gt;(BiFunction子接口)  | T,T    | T    | 对类型为T的对象进行二元运算，并返回T类型的结果。包含方法为Tapply(Tt1,Tt2); |
 | BiConsumer<T,U>       | T,U             | void            | 对类型为T,U参数应用操作。包含方法为voidaccept(Tt,Uu)    |
-| ToIntFunction&lt;T&gt; ToLongFunction&lt;T&gt;
-ToDoubleFunction&lt;T&gt; | T               | int,long,double | 分别计算int、long、double、值的函数                          |
-| IntFunction&lt;R&gt;LongFunction&lt;R&gt;
-DoubleFunction&lt;R&gt;       | int,long,double | R               | 参数分别为int、long、double类型的函数                        |
+| ToIntFunction&lt;T&gt; ToLongFunction&lt;T&gt;ToDoubleFunction&lt;T&gt; | T| int,long,double | 分别计算int、long、double、值的函数   |
+| IntFunction&lt;R&gt;LongFunction&lt;R&gt;DoubleFunction&lt;R&gt; | int,long,double | R | 参数分别为int、long、double类型的函数       |
 
 <p id="方法引用与构造器引用">
 
@@ -536,9 +534,9 @@ stream4.forEach(System.out::println);
 
 | 方法                             | 描述                                                    |
 | -------------------------------- | ------------------------------------------------------- |
-| reduce(T iden, BinaryOperator b) | 可以将流中元素反复结合起来，得到一个值。<br/>
-返回T      |
+| reduce(T iden, BinaryOperator b) | 可以将流中元素反复结合起来，得到一个值。返回T      |
 | reduce(BinaryOperator b)         | 可以将流中元素反复结合起来，得到一个值。返回Optional<T> |
+	
 **备注：map 和reduce 的连接通常称为map-reduce 模式，因Google 用它来进行网络搜索而出名。**
 
 ###### 收集
@@ -1136,8 +1134,7 @@ Java8 中，接口中允许添加静态方法
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | now()                                                        | 静态方法，根据当前时间创建对象                               |
 | of()                                                         | 静态方法，根据指定日期/时间创建对象                          |
-| plusDays,plusWeeks,<br/>
-plusMonths,plusYears                 | 向当前LocalDate对象添加几天、几周、几个月、几年              |
+| plusDays,plusWeeks,plusMonths,plusYears                 | 向当前LocalDate对象添加几天、几周、几个月、几年              |
 | minusMonths,minusYears                                       | 从当前LocalDate对象减去几天、几周、几个月、几年              |
 | plus,minus                                                   | 添加或减少一个Duration或Period                               |
 | withDayOfMonth, <br/>withDayOfYear,<br/>withMonth,<br/>withYear | 将月份天数、年份天数、月份、年份修改为指定的值并返回新的LocalDate对象 |
