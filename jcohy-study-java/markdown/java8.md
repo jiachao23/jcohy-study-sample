@@ -3,7 +3,7 @@
 > * [Lambda表达式](#Lambda)
 > * [函数式接口](#函数式接口)
 > * [方法引用与构造器引用](#方法引用与构造器引用)
-> * [Stream API](#Stream API)
+> * [Stream API](#StreamAPI)
 > * [Optional容器](#Optional容器)
 > * [接口中的默认方法与静态方法](#接口中的默认方法与静态方法)
 > * [新时间日期API](#新时间日期API)
@@ -208,6 +208,7 @@ public void calculate(Long num,Long num2,Func2<Long,Long> myFun){
 }
 ```
 
+
 <p id="函数式接口">
 
 ## 2.函数式接口
@@ -395,7 +396,7 @@ DoubleFunction<R>       | int,long,double | R               | 参数分别为int
 	Function<Integer,Integer[]> fun = Integer[]::new;
 ```
 
-<p id="Stream API">
+<p id="StreamAPI">
 
 ## 4.Stream API
 
