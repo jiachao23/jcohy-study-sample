@@ -13,4 +13,4 @@
  * [Java集合之HashSet](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-java/markdown/HashSet.md)
  * [Java集合之ArrayList](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-java/markdown/ArrayList.md)
  * [Java集合之LinkedHashMap](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-java/markdown/LinkedHashMap.md)
- * [Java8新特性](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-java/markdown/jdk8.md)
+ * [Java8新特性](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-java/markdown/java8.md)
