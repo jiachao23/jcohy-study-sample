@@ -414,7 +414,7 @@ Stream 是Java8 中处理集合的关键抽象概念，它可以指定你希望�
 
   一个终止操作，执行中间操作链，并产生结果
 
-  ![](C:\Users\10006984\Desktop\新建文件夹\java8\1.jpg)
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/91bd78d2d059f56b2090ea52e53e61b194788628/jcohy-study-java/src/main/resources/static/images/1.jpg)
 
 ##### 创建Stream
 
@@ -886,7 +886,7 @@ public class TestTransaction {
 
   Fork/Join 框架：就是在必要的情况下，将一个大任务，进行拆分(fork)成若干个小任务（拆到不可再拆时），再将一个个的小任务运算的结果进行join 汇总.
 
-  ![](C:\Users\10006984\Desktop\新建文件夹\java8\2.jpg)
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/91bd78d2d059f56b2090ea52e53e61b194788628/jcohy-study-java/src/main/resources/static/images/2.jpg)
 
   ##### Fork/Join 框架与传统线程池的区别
 

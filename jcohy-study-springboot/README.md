@@ -9,4 +9,5 @@
  #### Ps:本文讲解SpringBoot相关知识。
  * [SpringBoot概述](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-springboot/markdown/SpringBoot.md)
  * [SpringBoot常用配置](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-springboot/markdown/Conf.md)
- * [SpringBoot常用配置](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-springboot/markdown/SecurityConf.md)
+ * [SpringBoot基础](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-springboot/markdown/SpringBoot.md)
+ * [SpringBoot高级](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-springboot/markdown/SpringBoot2.md)
