@@ -1,4 +1,4 @@
-package com.study.dataStructures.StackAndQueue;
+package com.jcohy.study.StackAndQueue;
 
 public class RoundQueue {
 /*
