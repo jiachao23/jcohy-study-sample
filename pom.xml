@@ -24,6 +24,7 @@
     <module>jcohy-study-linux</module>
     <module>jcohy-study-zookeeper</module>
     <module>com-jcohy-nginx</module>
+    <module>jcohy-study-shiro</module>
   </modules>
 
   <dependencies>
