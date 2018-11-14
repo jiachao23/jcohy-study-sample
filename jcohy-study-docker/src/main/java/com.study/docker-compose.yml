@@ -1,0 +1,28 @@
+version: '2'
+services:
+  zk_server: 
+    image: daocloud.io/library/zookeeper:3.3.6
+    restart: always
+  dubbo_admin: 
+    image: bolingcavalry/dubbo_admin_tomcat:0.0.1
+    links: 
+      - zk_server:zkhost
+    ports: 
+      - "8080:8080"
+    restart: always
+  dubbo_provider: 
+    image: bolingcavalry/dubbo_provider_tomcat:0.0.1
+    links: 
+      - zk_server:zkhost
+    environment:
+      TOMCAT_SERVER_ID: dubbo_provider_tomcat
+    restart: always
+  dubbo_consumer: 
+    image: bolingcavalry/dubbo_consumer_tomcat:0.0.1
+    links: 
+      - zk_server:zkhost
+    ports: 
+      - "8082:8080"
+    environment:
+      TOMCAT_SERVER_ID: dubbo_consumer_tomcat
+    restart: always
