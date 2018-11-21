@@ -1,93 +1,94 @@
 package com.jcohy.study.juc;
 
-/**
- * Created by jiac on 2018/10/23.
- * ClassName  : com.jcohy.study.juc
- * Description  :
+/*
+ * ç”Ÿäº§è€…å’Œæ¶ˆè´¹è€…æ¡ˆä¾‹
  */
 public class TestProductorAndConsumer {
-    public static void main(String[] args) {
-        Clerk clerk = new Clerk();
 
-        Productor pro = new Productor(clerk);
-        Consumer cus = new Consumer(clerk);
-
-        new Thread(pro, "Éú²úÕß A").start();
-        new Thread(cus, "Ïû·ÑÕß B").start();
-
-        new Thread(pro, "Éú²úÕß C").start();
-        new Thread(cus, "Ïû·ÑÕß D").start();
-    }
+	public static void main(String[] args) {
+		Clerk clerk = new Clerk();
+		
+		Productor pro = new Productor(clerk);
+		Consumer cus = new Consumer(clerk);
+		
+		new Thread(pro, "ç”Ÿäº§è€… A").start();
+		new Thread(cus, "æ¶ˆè´¹è€… B").start();
+		
+		new Thread(pro, "ç”Ÿäº§è€… C").start();
+		new Thread(cus, "æ¶ˆè´¹è€… D").start();
+	}
+	
 }
 
-//µêÔ±
+/*//åº—å‘˜
 class Clerk{
 	private int product = 0;
-
-	//½ø»õ
-	public synchronized void get(){//Ñ­»·´ÎÊı£º0
-		while(product >= 1){//ÎªÁË±ÜÃâĞé¼Ù»½ĞÑÎÊÌâ£¬Ó¦¸Ã×ÜÊÇÊ¹ÓÃÔÚÑ­»·ÖĞ
-			System.out.println("²úÆ·ÒÑÂú£¡");
-
+	
+	//è¿›è´§
+	public synchronized void get(){//å¾ªç¯æ¬¡æ•°ï¼š0
+		while(product >= 1){//ä¸ºäº†é¿å…è™šå‡å”¤é†’é—®é¢˜ï¼Œåº”è¯¥æ€»æ˜¯ä½¿ç”¨åœ¨å¾ªç¯ä¸­
+			System.out.println("äº§å“å·²æ»¡ï¼");
+			
 			try {
 				this.wait();
 			} catch (InterruptedException e) {
 			}
-
+			
 		}
-
+		
 		System.out.println(Thread.currentThread().getName() + " : " + ++product);
 		this.notifyAll();
 	}
-
-	//Âô»õ
-	public synchronized void sale(){//product = 0; Ñ­»·´ÎÊı£º0
+	
+	//å–è´§
+	public synchronized void sale(){//product = 0; å¾ªç¯æ¬¡æ•°ï¼š0
 		while(product <= 0){
-			System.out.println("È±»õ£¡");
-
+			System.out.println("ç¼ºè´§ï¼");
+			
 			try {
 				this.wait();
 			} catch (InterruptedException e) {
 			}
 		}
-
+		
 		System.out.println(Thread.currentThread().getName() + " : " + --product);
 		this.notifyAll();
 	}
 }
-//Éú²úÕß
+
+//ç”Ÿäº§è€…
 class Productor implements Runnable{
-    private Clerk clerk;
+	private Clerk clerk;
 
-    public Productor(Clerk clerk) {
-        this.clerk = clerk;
-    }
+	public Productor(Clerk clerk) {
+		this.clerk = clerk;
+	}
 
-    @Override
-    public void run() {
-        for (int i = 0; i < 20; i++) {
-            try {
-                Thread.sleep(200);
-            } catch (InterruptedException e) {
-            }
-
-            clerk.get();
-        }
-    }
+	@Override
+	public void run() {
+		for (int i = 0; i < 20; i++) {
+			try {
+				Thread.sleep(200);
+			} catch (InterruptedException e) {
+			}
+			
+			clerk.get();
+		}
+	}
 }
 
-//Ïû·ÑÕß
-class Consumer implements Runnable {
-    private Clerk clerk;
+//æ¶ˆè´¹è€…
+class Consumer implements Runnable{
+	private Clerk clerk;
 
-    public Consumer(Clerk clerk) {
-        this.clerk = clerk;
-    }
+	public Consumer(Clerk clerk) {
+		this.clerk = clerk;
+	}
 
-    @Override
-    public void run() {
-        for (int i = 0; i < 20; i++) {
-            clerk.sale();
-        }
-    }
-}
+	@Override
+	public void run() {
+		for (int i = 0; i < 20; i++) {
+			clerk.sale();
+		}
+	}
+}*/
