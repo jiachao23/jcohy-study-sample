@@ -276,13 +276,11 @@ int bytesRead = inChannel.read(buf)；
 
 将数据从源通道传输到其他Channel 中：
 
-![transferFrom](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/markdown/9.jpg)
 
 **transferTo**()
 
 将数据从源通道传输到其他Channel 中：
 
-![**transferTo**](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/markdown/10.jpg)
 
 #### FileChannel 的常用方法
 
@@ -429,6 +427,70 @@ int bytesRead = inChannel.read(buf)；
 
 - Java NIO 是非阻塞模式的。当线程从某通道进行读写数据时，若没有数据可用时，该线程可以进行其他任务。线程通常将非阻塞IO 的空闲时间用于在其他通道上执行IO 操作，所以单独的线程可以管理多个输入和输出通道。因此，NIO 可以让服务器端使用一个或有限几个线程来同时处理连接到服务器端的所有客户端。
 
+#### 传统的阻塞IO
+
+```java
+     /**
+     *  客户端
+     */
+    @Test
+    public void client() throws IOException {
+        //1.获取通道
+        SocketChannel socketChannel = SocketChannel.open(new InetSocketAddress("127.0.0.1",9898));
+        FileChannel fileChannel = FileChannel.open(Paths.get("D:\\413.avi"), StandardOpenOption.READ);
+
+        //2.分配一个缓冲区
+        ByteBuffer buffer = ByteBuffer.allocate(1024);
+        //3.读取本地文件，并发送到服务端
+        while (fileChannel.read(buffer) != -1){
+            buffer.flip();
+            socketChannel.write(buffer);
+            buffer.clear();
+        }
+        socketChannel.shutdownOutput();
+        //4.接受到服务端反馈
+        int len = 0;
+        while((len = socketChannel.read(buffer)) != -1){
+            buffer.flip();
+            System.out.println(new String(buffer.array(), 0, len));
+            buffer.clear();
+        }
+        socketChannel.close();
+        fileChannel.close();
+    }
+
+    /**
+     * 服务端
+     * @throws IOException
+     */
+    @Test
+    public void server() throws IOException {
+        //1.获取通道
+        ServerSocketChannel socketChannel = ServerSocketChannel.open();
+        FileChannel outChannel = FileChannel.open(Paths.get("D:\\get.avi"), StandardOpenOption.WRITE, StandardOpenOption.CREATE);
+        //2.绑定连接
+        socketChannel.bind(new InetSocketAddress(9898));
+        //3.获取客户端连接的通道
+        SocketChannel accept = socketChannel.accept();
+        //4. 分配指定大小的缓冲区
+        ByteBuffer buffer = ByteBuffer.allocate(1024);
+        //5. 接收客户端的数据，并保存到本地
+        while (accept.read(buffer) != -1){
+            buffer.flip();
+            outChannel.write(buffer);
+            buffer.clear();
+        }
+        //6.发送反馈给客户端
+        buffer.put("服务端接收数据成功".getBytes());
+        buffer.flip();
+        accept.write(buffer);
+
+        socketChannel.close();
+        outChannel.close();
+        accept.close();
+    }
+
+```
 #### 选择器（Selector）
 
 **选择器（Selector）**是SelectableChannle 对象的多路复用器，Selector 可以同时监控多个SelectableChannel 的IO 状况，也就是说，利用Selector 可使一个单独的线程管理多个Channel。Selector 是非阻塞IO 的核心。
@@ -491,6 +553,96 @@ Java NIO中的SocketChannel是一个连接到TCP网络套接字的通道。
 
 Java NIO中的ServerSocketChannel 是一个可以监听新进来的TCP连接的通道，就像标准IO中的ServerSocket一样。
 
+#### 非阻塞IO
+
+```java
+ //客户端
+    @Test
+    public void client() throws IOException{
+        //1. 获取通道
+        SocketChannel sChannel = SocketChannel.open(new InetSocketAddress("127.0.0.1", 9898));
+
+        //2. 切换非阻塞模式
+        sChannel.configureBlocking(false);
+
+        //3. 分配指定大小的缓冲区
+        ByteBuffer buf = ByteBuffer.allocate(1024);
+
+        //4. 发送数据给服务端
+        Scanner scan = new Scanner(System.in);
+
+        while(scan.hasNext()){
+            String str = scan.next();
+            buf.put((new Date().toString() + "\n" + str).getBytes());
+            buf.flip();
+            sChannel.write(buf);
+            buf.clear();
+        }
+
+        //5. 关闭通道
+        sChannel.close();
+    }
+
+    //服务端
+    @Test
+    public void server() throws IOException{
+        //1. 获取通道
+        ServerSocketChannel ssChannel = ServerSocketChannel.open();
+
+        //2. 切换非阻塞模式
+        ssChannel.configureBlocking(false);
+
+        //3. 绑定连接
+        ssChannel.bind(new InetSocketAddress(9898));
+
+        //4. 获取选择器
+        Selector selector = Selector.open();
+
+        //5. 将通道注册到选择器上, 并且指定“监听接收事件”
+        ssChannel.register(selector, SelectionKey.OP_ACCEPT);
+
+        //6. 轮询式的获取选择器上已经“准备就绪”的事件
+        while(selector.select() > 0){
+
+            //7. 获取当前选择器中所有注册的“选择键(已就绪的监听事件)”
+            Iterator<SelectionKey> it = selector.selectedKeys().iterator();
+
+            while(it.hasNext()){
+                //8. 获取准备“就绪”的是事件
+                SelectionKey sk = it.next();
+
+                //9. 判断具体是什么事件准备就绪
+                if(sk.isAcceptable()){
+                    //10. 若“接收就绪”，获取客户端连接
+                    SocketChannel sChannel = ssChannel.accept();
+
+                    //11. 切换非阻塞模式
+                    sChannel.configureBlocking(false);
+
+                    //12. 将该通道注册到选择器上
+                    sChannel.register(selector, SelectionKey.OP_READ);
+                }else if(sk.isReadable()){
+                    //13. 获取当前选择器上“读就绪”状态的通道
+                    SocketChannel sChannel = (SocketChannel) sk.channel();
+
+                    //14. 读取数据
+                    ByteBuffer buf = ByteBuffer.allocate(1024);
+
+                    int len = 0;
+                    while((len = sChannel.read(buf)) > 0 ){
+                        buf.flip();
+                        System.out.println(new String(buf.array(), 0, len));
+                        buf.clear();
+                    }
+                }
+
+                //15. 取消选择键 SelectionKey
+                it.remove();
+            }
+        }
+    }
+
+```
 #### DatagramChannel
 
 Java NIO中的DatagramChannel是一个能收发UDP包的通道。
@@ -499,6 +651,60 @@ Java NIO中的DatagramChannel是一个能收发UDP包的通道。
 
 1. 打开DatagramChannel
 2. 接收/发送数据
+
+```java
+  @Test
+    public void send() throws IOException {
+        DatagramChannel dc = DatagramChannel.open();
+        dc.configureBlocking(false);
+
+        ByteBuffer buf = ByteBuffer.allocate(1024);
+
+        Scanner scan = new Scanner(System.in);
+
+        while(scan.hasNext()){
+            String str = scan.next();
+            buf.put((new Date().toString() + ":\n" + str).getBytes());
+            buf.flip();
+            dc.send(buf, new InetSocketAddress("127.0.0.1", 9898));
+            buf.clear();
+        }
+
+        dc.close();
+    }
+    @Test
+    public void receive() throws IOException{
+        DatagramChannel dc = DatagramChannel.open();
+
+        dc.configureBlocking(false);
+
+        dc.bind(new InetSocketAddress(9898));
+
+        Selector selector = Selector.open();
+
+        dc.register(selector, SelectionKey.OP_READ);
+
+        while(selector.select() > 0){
+            Iterator<SelectionKey> it = selector.selectedKeys().iterator();
+
+            while(it.hasNext()){
+                SelectionKey sk = it.next();
+
+                if(sk.isReadable()){
+                    ByteBuffer buf = ByteBuffer.allocate(1024);
+
+                    dc.receive(buf);
+                    buf.flip();
+                    System.out.println(new String(buf.array(), 0, buf.limit()));
+                    buf.clear();
+                }
+            }
+
+            it.remove();
+        }
+    }
+
+```
 
 <p id="pipe">
 ##  管道(Pipe)
@@ -511,7 +717,28 @@ Java NIO 管道是2个线程之间的单向数据连接。Pipe有一个source通
 
 从管道读取数据
 
+```java
 
+@Test
+    public void test() throws IOException {
+        //1. 获取管道
+        Pipe pipe = Pipe.open();
+        //2. 将缓冲区中的数据写入管道
+        ByteBuffer buffer = ByteBuffer.allocate(1024);
+        Pipe.SinkChannel sinkChannel = pipe.sink();
+        buffer.put("通过单向管道发送数据".getBytes());
+        buffer.flip();
+        sinkChannel.write(buffer);
+        //3. 读取缓冲区中的数据
+        Pipe.SourceChannel sourceChannel = pipe.source();
+        buffer.flip();
+        int len = sourceChannel.read(buffer);
+        System.out.println(new String(buffer.array(), 0, len));
+
+        sourceChannel.close();
+        sinkChannel.close();
+    }
+```
 
 
 <p id="nio2">
@@ -590,5 +817,20 @@ finally{
 ②可以在一条try 语句中管理多个资源，每个资源以“;” 隔开即可。
 ③需要关闭的资源，必须实现了AutoCloseable 接口或其自接口Closeable
 
+```java
+//自动资源管理：自动关闭实现 AutoCloseable 接口的资源
+	@Test
+	public void test8(){
+		try(FileChannel inChannel = FileChannel.open(Paths.get("1.jpg"), StandardOpenOption.READ);
+				FileChannel outChannel = FileChannel.open(Paths.get("2.jpg"), StandardOpenOption.WRITE, StandardOpenOption.CREATE)){
+			
+			ByteBuffer buf = ByteBuffer.allocate(1024);
+			inChannel.read(buf);
+			
+		}catch(IOException e){
+			
+		}
+	}
+```
 
 最后附上代码的地址[Proxy](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/src/main/java/com/jcohy/study/)    
