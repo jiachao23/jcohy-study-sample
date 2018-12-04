@@ -833,4 +833,4 @@ finally{
 	}
 ```
 
-最后附上代码的地址[Proxy](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/src/main/java/com/jcohy/study/)    
+最后附上代码的地址[NIO](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/src/main/java/com/jcohy/study/)    
