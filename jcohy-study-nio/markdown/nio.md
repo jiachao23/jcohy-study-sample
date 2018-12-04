@@ -17,7 +17,7 @@
 
 ##  Java NIO简介
 
-	java NIO(New IO)是从java1.4开始引入的一个新的IO API。可以替代标准的Java IO API。NIO和原来的IO有同样的作用和目的，但是使用的方式完全不同
+java NIO(New IO)是从java1.4开始引入的一个新的IO API。可以替代标准的Java IO API。NIO和原来的IO有同样的作用和目的，但是使用的方式完全不同
 NIO支持面向缓冲区的，基于通道的IO操作。NIO将以更加高效的方式进行文件的读写操作。
 
 
@@ -35,7 +35,7 @@ NIO支持面向缓冲区的，基于通道的IO操作。NIO将以更加高效的
 
 ##  缓冲区和通道
 
-	Java NIO系统的核心在于：通道(Channel)和缓冲区(Buffer)。通道表示打开到IO 设备(例如：文件、套接字)的连接。若需要使用NIO 系统，需要获取用于连接IO 设备的通道以及用于容纳数据的缓冲区。然后操作缓冲区，对数据进行处理。
+Java NIO系统的核心在于：通道(Channel)和缓冲区(Buffer)。通道表示打开到IO 设备(例如：文件、套接字)的连接。若需要使用NIO 系统，需要获取用于连接IO 设备的通道以及用于容纳数据的缓冲区。然后操作缓冲区，对数据进行处理。
 
 **简而言之，Channel 负责传输，Buffer 负责存**储
 
@@ -76,7 +76,7 @@ Buffer 中的重要概念：
 
   **标记、位置、限制、容量遵守以下不变式：0<=mark<=position<=limit<=capacity**
 
-  ![缓冲区基本属性](C:\Users\10006984\Desktop\新建文件夹\java8\3.jpg)
+  ![缓冲区基本属性](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/markdown/3.jpg)
 
 #### Buffer常用方法：
 
@@ -123,15 +123,100 @@ Buffer 所有子类提供了两个用于数据操作的方法：get() 与put() �
 
 - 字节缓冲区是直接缓冲区还是非直接缓冲区可通过调用其isDirect()方法来确定。提供此方法是为了能够在性能关键型代码中执行显式缓冲区管理。
 
-  ![非直接缓冲区](C:\Users\10006984\Desktop\新建文件夹\java8\4.jpg)
+  ![非直接缓冲区](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/markdown/4.jpg)
 
-  ![直接缓冲区](C:\Users\10006984\Desktop\新建文件夹\java8\5.jpg)
+  ![直接缓冲区](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/markdown/5.jpg)
+
+
+#### Buffer简单示例
+
+```java
+ @Test
+    public void test3(){
+        //分配直接缓冲区
+        ByteBuffer buffer = ByteBuffer.allocateDirect(1024);
+        System.out.println(buffer.isDirect());
+    }
+    @Test
+    public void test2(){
+        String str = "abcde";
+        ByteBuffer buffer = ByteBuffer.allocate(1024);
+        buffer.put(str.getBytes());
+        buffer.flip();
+        byte[] dst = new byte[buffer.limit()];
+        buffer.get(dst,0,2);
+        System.out.println(new String(dst,0,2));
+        System.out.println(buffer.position());
+        //mark() : 标记
+        buffer.mark();
+        buffer.get(dst,2,2);
+        System.out.println(new String(dst,2,2));
+        System.out.println(buffer.position());
+        //reset() : 恢复到 mark 的位置
+        buffer.reset();
+        System.out.println(buffer.position());
+
+        //判断缓冲区中是否还有剩余数据
+        if(buffer.hasRemaining()){
+
+            //获取缓冲区中可以操作的数量
+            System.out.println(buffer.remaining());
+        }
+    }
+    @Test
+    public void test1(){
+        String str = "abcde";
+        //1、分配一个指定大小的缓冲区
+        ByteBuffer buf = ByteBuffer.allocate(1024);
+        System.out.println("-------------allocate----------");
+        System.out.println(buf.position());
+        System.out.println(buf.limit());
+        System.out.println(buf.capacity());
+        //2、利用put()存入数据到缓冲区
+        buf.put(str.getBytes());
+
+        System.out.println("-------------put----------");
+        System.out.println(buf.position());
+        System.out.println(buf.limit());
+        System.out.println(buf.capacity());
+
+        //3、切换到读取数据的模式
+        buf.flip();
+        System.out.println("-------------flip----------");
+        System.out.println(buf.position());
+        System.out.println(buf.limit());
+        System.out.println(buf.capacity());
+
+        //4、读取数据
+        byte[] dst = new byte[buf.limit()];
+        buf.get(dst);
+        System.out.println(new String(dst,0,dst.length));
+        System.out.println("-------------get----------");
+        System.out.println(buf.position());
+        System.out.println(buf.limit());
+        System.out.println(buf.capacity());
+
+        //5、rewind()重读
+        buf.rewind();
+        System.out.println("-------------rewind----------");
+        System.out.println(buf.position());
+        System.out.println(buf.limit());
+        System.out.println(buf.capacity());
+
+        //6、清空缓冲区，缓冲区中的数据依然存在，但是出于被“遗忘状态”
+        buf.clear();
+        System.out.println("-------------clear----------");
+        System.out.println(buf.position());
+        System.out.println(buf.limit());
+        System.out.println(buf.capacity());
+    }
+```
 
 #### 通道
 
 通道（Channel）：由java.nio.channels 包定义的。Channel 表示IO 源与目标打开的连接。Channel 类似于传统的“流”。只不过Channel 本身不能直接访问数据，Channel 只能与Buffer 进行交互。
 
-![通道](C:\Users\10006984\Desktop\新建文件夹\java8\6.jpg)
+![通道](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/markdown/6.jpg)
 
 Java 为Channel 接口提供的最主要实现类如下：
 
@@ -177,13 +262,13 @@ int bytesRead = inChannel.read(buf)；
 
 分散读取（Scattering Reads）是指从Channel 中读取的数据“分散”到多个Buffer 中。
 
-![分散读取](C:\Users\10006984\Desktop\新建文件夹\java8\7.jpg)
+![分散读取](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/markdown/7.jpg)
 
 **注意：按照缓冲区的顺序，从Channel 中读取的数据依次将Buffer 填满。**
 
 聚集写入（Gathering Writes）是指将多个Buffer 中的数据“聚集”到Channel。
 
-![聚集写入](C:\Users\10006984\Desktop\新建文件夹\java8\8.jpg)
+![聚集写入](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/markdown/8.jpg)
 
 **注意：按照缓冲区的顺序，写入position 和limit 之间的数据到Channel 。**
 
@@ -191,13 +276,13 @@ int bytesRead = inChannel.read(buf)；
 
 将数据从源通道传输到其他Channel 中：
 
-![transferFrom](C:\Users\10006984\Desktop\新建文件夹\java8\9.jpg)
+![transferFrom](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/markdown/9.jpg)
 
 **transferTo**()
 
 将数据从源通道传输到其他Channel 中：
 
-![**transferTo**](C:\Users\10006984\Desktop\新建文件夹\java8\10.jpg)
+![**transferTo**](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/markdown/10.jpg)
 
 #### FileChannel 的常用方法
 
@@ -213,6 +298,126 @@ int bytesRead = inChannel.read(buf)；
 | FileChannel truncate(long s)  | 将此通道的文件截取为给定大小                 |
 | void  force(boolean metaData) | 强制将所有对此通道的文件更新写入到存储设备中 |
 
+#### FileChannel示例
+
+```java
+  //分散和聚集
+    @Test
+    public void test4() throws IOException {
+        RandomAccessFile raf1 = new RandomAccessFile("1.txt", "rw");
+        //1. 获取通道
+        FileChannel channel = raf1.getChannel();
+        //2. 分配指定大小的缓冲区
+        ByteBuffer buffer1 = ByteBuffer.allocate(48);
+        ByteBuffer buffer2 = ByteBuffer.allocate(1024);
+
+        //3. 分散读取
+        ByteBuffer[] bufs ={buffer1,buffer2};
+        channel.read(bufs);
+        for (ByteBuffer byteBuffer : bufs) {
+            byteBuffer.flip();
+        }
+        System.out.println(new String(bufs[0].array(), 0, bufs[0].limit()));
+        System.out.println("-----------------");
+        System.out.println(new String(bufs[1].array(), 0, bufs[1].limit()));
+
+        //4. 聚集写入
+        RandomAccessFile raf2 = new RandomAccessFile("2.txt", "rw");
+        FileChannel channel2 = raf2.getChannel();
+        channel2.write(bufs);
+
+    }
+    //通道之间的数据传输(直接缓冲区)
+    @Test
+    public void test3() throws IOException {
+        FileChannel inChannel = FileChannel.open(Paths.get("d:/413.avi"), StandardOpenOption.READ);
+        FileChannel outChannel = FileChannel.open(Paths.get("d:/444.mkv"), StandardOpenOption.READ, StandardOpenOption.WRITE, StandardOpenOption.CREATE);
+        inChannel.transferTo(0,inChannel.size(),outChannel);
+//        outChannel.transferFrom(inChannel,0,inChannel.size());
+        inChannel.close();
+        outChannel.close();
+    }
+
+    //使用直接缓冲区完成文件的复制(内存映射文件)
+    @Test
+    public void test2() throws IOException {
+        FileChannel inChannel = FileChannel.open(Paths.get("d:/413.avi"), StandardOpenOption.READ);
+        FileChannel outChannel = FileChannel.open(Paths.get("d:/444.mkv"), StandardOpenOption.READ, StandardOpenOption.WRITE, StandardOpenOption.CREATE);
+        //内存映射文件
+        MappedByteBuffer inMappedBuf = inChannel.map(FileChannel.MapMode.READ_ONLY, 0, inChannel.size());
+        MappedByteBuffer outMappedBuf = outChannel.map(FileChannel.MapMode.READ_WRITE, 0, inChannel.size());
+
+        //直接对缓冲区进行数据的读写操作
+        byte[] dst = new byte[inMappedBuf.limit()];
+        inMappedBuf.get(dst);
+        outMappedBuf.put(dst);
+        inChannel.close();
+        outChannel.close();
+    }
+    //利用通道完成文件的复制（非直接缓冲区）
+    @Test
+    public void test1() {
+        Instant start = Instant.now();
+        FileInputStream fis = null;
+        FileOutputStream fos = null;
+        //①获取通道
+        FileChannel inChannel = null;
+        FileChannel outChannel = null;
+        try {
+            fis = new FileInputStream("d:/413.avi");
+            fos = new FileOutputStream("d:/444.mkv");
+
+            inChannel = fis.getChannel();
+            outChannel = fos.getChannel();
+
+            //②分配指定大小的缓冲区
+            ByteBuffer buf = ByteBuffer.allocate(1024);
+
+            //③将通道中的数据存入缓冲区中
+            while(inChannel.read(buf) != -1){
+                buf.flip(); //切换读取数据的模式
+                //④将缓冲区中的数据写入通道中
+                outChannel.write(buf);
+                buf.clear(); //清空缓冲区
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if(outChannel != null){
+                try {
+                    outChannel.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if(inChannel != null){
+                try {
+                    inChannel.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if(fos != null){
+                try {
+                    fos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if(fis != null){
+                try {
+                    fis.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        System.out.println(Duration.between(start,Instant.now()).toMillis());
+    }
+```
 
 <p id="blocking">
 
@@ -230,7 +435,7 @@ int bytesRead = inChannel.read(buf)；
 
 **SelectableChannle** 的结构如下图：
 
-![SelectableChannle](C:\Users\10006984\Desktop\新建文件夹\java8\11.jpg)
+![SelectableChannle](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/markdown/11.jpg)
 
 #### 选择器（Selector）的应用
 
@@ -251,7 +456,6 @@ int bytesRead = inChannel.read(buf)；
    连接: SelectionKey.OP_CONNECT（8）
    接收: SelectionKey.OP_ACCEPT （16）
 5. 若注册时不止监听一个事件，则可以使用“位或”操作符连接。
-6. 
 
 #### SelectionKey
 
@@ -301,7 +505,7 @@ Java NIO中的DatagramChannel是一个能收发UDP包的通道。
 
 Java NIO 管道是2个线程之间的单向数据连接。Pipe有一个source通道和一个sink通道。数据会被写到sink通道，从source通道读取。
 
-![Pipe](C:\Users\10006984\Desktop\新建文件夹\java8\12.png)
+![Pipe](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/markdown/12.png)
 
 向管道写数据
 
@@ -387,4 +591,4 @@ finally{
 ③需要关闭的资源，必须实现了AutoCloseable 接口或其自接口Closeable
 
 
-最后附上代码的地址[Proxy](https://github.com/jiachao23/IdeaStudy/tree/master/src/com/study/designpattern/Proxy)    
+最后附上代码的地址[Proxy](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/src/main/java/com/jcohy/study/)    
