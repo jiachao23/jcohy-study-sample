@@ -707,7 +707,8 @@ Java NIO中的DatagramChannel是一个能收发UDP包的通道。
 ```
 
 <p id="pipe">
-##  管道(Pipe)
+
+####  管道(Pipe)
 
 Java NIO 管道是2个线程之间的单向数据连接。Pipe有一个source通道和一个sink通道。数据会被写到sink通道，从source通道读取。
 
@@ -742,7 +743,8 @@ Java NIO 管道是2个线程之间的单向数据连接。Pipe有一个source通
 
 
 <p id="nio2">
-##  Java NIO2
+
+####  Java NIO2
 
 随着JDK 7 的发布，Java对NIO进行了极大的扩展，增强了对文件处理和文件系统特性的支持，以至于我们称他们为NIO.2。因为NIO 提供的一些功能，NIO已经成为文件处理中越来越重要的部分。
 
@@ -752,17 +754,21 @@ Java NIO 管道是2个线程之间的单向数据连接。Pipe有一个source通
 - Paths 提供的get() 方法用来获取Path 对象：Pathget(String first, String … more) : 用于将多个字符串串连成路径。
 - Path常用方法：
 
-boolean endsWith(String path) : 判断是否以path 路径结束
-boolean startsWith(String path) : 判断是否以path 路径开始
-boolean isAbsolute() : 判断是否是绝对路径
-Path getFileName() : 返回与调用Path 对象关联的文件名
-Path getName(int idx) : 返回的指定索引位置idx 的路径名称
-int getNameCount() : 返回Path 根目录后面元素的数量
-Path getParent() ：返回Path对象包含整个路径，不包含Path 对象指定的文件路径
-Path getRoot() ：返回调用Path 对象的根路径
-Path resolve(Path p) :将相对路径解析为绝对路径
-Path toAbsolutePath() : 作为绝对路径返回调用Path 对象
-String toString() ：返回调用Path 对象的字符串表示形式
+| 方法                            | 描述                                                    |
+| ------------------------------- | ------------------------------------------------------- |
+| boolean endsWith(String path)   | 判断是否以path 路径结束                                 |
+| boolean startsWith(String path) | 判断是否以path 路径开始                                 |
+| boolean isAbsolute()            | 判断是否是绝对路径                                      |
+| Path getFileName()              | 返回与调用Path 对象关联的文件名                         |
+| Path getName(int idx)           | 返回的指定索引位置idx 的路径名称                        |
+| int getNameCount()              | 返回Path 根目录后面元素的数量                           |
+| Path getParent()                | 返回Path对象包含整个路径，不包含Path 对象指定的文件路径 |
+| Path getRoot()                  | 返回调用Path 对象的根路径                               |
+| Path resolve(Path p)            | 将相对路径解析为绝对路径                                |
+| Path toAbsolutePath()           | 作为绝对路径返回调用Path 对象                           |
+| String toString()               | 返回调用Path 对象的字符串表示形式                       |
+| Path resolve(Path p)            | 将相对路径解析为绝对路径                                |
+| Path resolve(Path p)            | 将相对路径解析为绝对路径                                |
 
 #### Files 类
 
@@ -770,27 +776,26 @@ java.nio.file.Files 用于操作文件或目录的工具类。
 
 Files常用方法：
 
-Path copy(Path src, Path dest, CopyOption … how) : 文件的复制
-PathcreateDirectory(Path path, FileAttribute<?> … attr) : 创建一个目录
-Path createFile(Path path, FileAttribute<?> … arr) : 创建一个文件
-void delete(Path path) : 删除一个文件
-Path move(Path src, Path dest, CopyOption…how) : 将src 移动到dest 位置
-long size(Path path) : 返回path 指定文件的大小
-
-Files常用方法：用于判断
-boolean exists(Path path, LinkOption … opts) : 判断文件是否存在
-boolean isDirectory(Path path, LinkOption … opts) : 判断是否是目录
-boolean isExecutable(Path path) : 判断是否是可执行文件
-boolean isHidden(Path path) : 判断是否是隐藏文件
-boolean isReadable(Path path) : 判断文件是否可读
-boolean isWritable(Path path) : 判断文件是否可写
-boolean notExists(Path path, LinkOption … opts) : 判断文件是否不存在
-public static <A extends BasicFileAttributes> A readAttributes(Path path,Class<A> type,LinkOption... options) : 获取与path 指定的文件相关联的属性。
-Files常用方法：用于操作内容
-SeekableByteChannel newByteChannel(Path path, OpenOption…how) : 获取与指定文件的连接，how 指定打开方式。
-DirectoryStream newDirectoryStream(Path path) : 打开path 指定的目录
-InputStream newInputStream(Path path, OpenOption…how):获取InputStream 对象
-OutputStream newOutputStream(Path path, OpenOption…how) : 获取OutputStream 对象
+| 方法                                                         | 描述                                   |
+| ------------------------------------------------------------ | -------------------------------------- |
+| Path copy(Path src, Path dest, CopyOption … how)             | 文件的复制                             |
+| PathcreateDirectory(Path path, FileAttribute<?> … attr)      | 创建一个目录                           |
+| Path createFile(Path path, FileAttribute<?> … arr)           | 创建一个文件                           |
+| void delete(Path path)                                       | 删除一个文件                           |
+| Path move(Path src, Path dest, CopyOption…how)               | 将src 移动到dest 位置                  |
+| long size(Path path)                                         | 返回path 指定文件的大小                |
+| boolean exists(Path path, LinkOption … opts)                 | 判断文件是否存在                       |
+| boolean isDirectory(Path path, LinkOption … opts)            | 判断是否是目录                         |
+| boolean isExecutable(Path path)                              | 判断是否是可执行文件                   |
+| boolean isHidden(Path path)                                  | 判断是否是隐藏文件                     |
+| boolean isReadable(Path path)                                | 判断文件是否可读                       |
+| boolean isWritable(Path path)                                | 判断文件是否可写                       |
+| boolean notExists(Path path, LinkOption … opts)              | 判断文件是否不存在                     |
+| public static <A extends BasicFileAttributes> A readAttributes(Path path,Class<A> type,LinkOption... options) | 获取与path 指定的文件相关联的属性      |
+| SeekableByteChannel newByteChannel(Path path, OpenOption…how) | 获取与指定文件的连接，how 指定打开方式 |
+| DirectoryStream newDirectoryStream(Path path)                | 打开path 指定的目录                    |
+| InputStream newInputStream(Path path, OpenOption…how)        | 获取InputStream 对象                   |
+| OutputStream newOutputStream(Path path, OpenOption…how)      | 获取OutputStream 对象                  |
 
 #### 自动资源管理
 
