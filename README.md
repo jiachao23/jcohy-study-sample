@@ -82,6 +82,7 @@
   
 ## jcohy-study-alogrithm
 > #### Ps:经典算法，排序相关代码
+> * [简单编程题](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/markdown/SimpleQuestion.md)
 
 ## jcohy-study-DateStructures
 > #### Ps:数据结构相关
@@ -139,7 +140,7 @@
 
 ## jcohy-study-utils
 > #### Ps:相关工具类操作
-
+>   * [Jenkins](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-utils/markdown/Jenkins.md)
 
 ##  Swagger
 > #### Ps:Swagger相关知识。
