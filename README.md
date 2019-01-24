@@ -1,152 +1,151 @@
-#### ×÷ÕßÍøÒ³£º[www.jcohy.com](http://www.jcohy.com)  	
-> #### PS:´ý¿ª·¢ÖÐ¡£¡£¡£¡£
+#### ä½œè€…ç½‘é¡µï¼š[www.jcohy.com](http://www.jcohy.com)  	
+> #### PS:å¾…å¼€å‘ä¸­ã€‚ã€‚ã€‚ã€‚
 
->  ÎÒµÄÑ§Ï°±Ê¼Ç£¬¼ÇÂ¼Ñ§Ï°¹ý³ÌÖÐµÄ±Ê¼ÇÒÔ¼°Óöµ½µÄÎÊÌâ,ÒÔ¼°ÎÒµÄÒ»Ð©¾­Ñé×Ü½á¡£Èç¹û³öÏÖÁ´½ÓÊ§Ð§,»òÕßÏëÖªµÀ¸ü¶àµÄÄÚÈÝµÈÇé¿ö¿ÉÒÔÌá½» Issues ÌáÐÑÎÒÐÞ¸ÄÏà¹ØÄÚÈÝ¡£
+>  æˆ‘çš„å­¦ä¹ ç¬”è®°ï¼Œè®°å½•å­¦ä¹ è¿‡ç¨‹ä¸­çš„ç¬”è®°ä»¥åŠé‡åˆ°çš„é—®é¢˜,ä»¥åŠæˆ‘çš„ä¸€äº›ç»éªŒæ€»ç»“ã€‚å¦‚æžœå‡ºçŽ°é“¾æŽ¥å¤±æ•ˆ,æˆ–è€…æƒ³çŸ¥é“æ›´å¤šçš„å†…å®¹ç­‰æƒ…å†µå¯ä»¥æäº¤ Issues æé†’æˆ‘ä¿®æ”¹ç›¸å…³å†…å®¹ã€‚
 
-> #### PS:ÎÒµÄÑ§Ï°±Ê¼Ç,µã»÷¿ÉÒÔÌø×ªµ½ÏàÓ¦·ÖÀà
+> #### PS:æˆ‘çš„å­¦ä¹ ç¬”è®°,ç‚¹å‡»å¯ä»¥è·³è½¬åˆ°ç›¸åº”åˆ†ç±»
 
 ## jcohy-study-java
 
-> #### Ps:java »ù´¡
->  * [Java¼¯ºÏÖ®HashMap](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/HashMap.md)
->  * [Java¼¯ºÏÖ®HashSet](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/HashSet.md)
->  * [Java¼¯ºÏÖ®ArrayList](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/ArrayList.md)
->  * [Java¼¯ºÏÖ®LinkedHashMap](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/LinkedHashMap.md)
+> #### Ps:java åŸºç¡€
+>  * [Javaé›†åˆä¹‹HashMap](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/HashMap.md)
+>  * [Javaé›†åˆä¹‹HashSet](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/HashSet.md)
+>  * [Javaé›†åˆä¹‹ArrayList](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/ArrayList.md)
+>  * [Javaé›†åˆä¹‹LinkedHashMap](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/LinkedHashMap.md)
 
 > #### Ps:Java 8
->  * [Java8ÐÂÌØÐÔ](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/java8.md)
+>  * [Java8æ–°ç‰¹æ€§](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/java8.md)
 
 
 > #### Ps:java NIO
-> * [Java NIO¼ò½é](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#gaishu)
-> * [Java NIOºÍ´«Í³IOÇø±ð](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#qubie)
-> * [»º³åÇøºÍÍ¨µÀ](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#buffer)
-> * [NIO µÄ·Ç×èÈûÊ½ÍøÂçÍ¨ÐÅ](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#blocking)
-> * [¹ÜµÀ(Pipe)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#pipe)
+> * [Java NIOç®€ä»‹](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#gaishu)
+> * [Java NIOå’Œä¼ ç»ŸIOåŒºåˆ«](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#qubie)
+> * [ç¼“å†²åŒºå’Œé€šé“](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#buffer)
+> * [NIO çš„éžé˜»å¡žå¼ç½‘ç»œé€šä¿¡](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#blocking)
+> * [ç®¡é“(Pipe)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#pipe)
 > * [Java NIO2](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#nio2)
 
 > #### Ps:java JUC
-> * [½ø³Ì½éÉÜ](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/Thread.md#jincheng)
-> * [Ïß³Ì½éÉÜ](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/Thread.md#xiancheng)
-> * [¶àÏß³Ì½éÉÜ](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/Thread.md#duoxiancheng)
+> * [è¿›ç¨‹ä»‹ç»](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/Thread.md#jincheng)
+> * [çº¿ç¨‹ä»‹ç»](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/Thread.md#xiancheng)
+> * [å¤šçº¿ç¨‹ä»‹ç»](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/Thread.md#duoxiancheng)
 
 > #### Ps:java GUI
-> * [¼òÒ×¼ÆËãÆ÷](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/src/main/java/com/jcohy/study/gui/Calculator.java)
-> * [Ä£·ÂQQ½çÃæ](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/src/main/java/com/jcohy/study/gui/QQLogin.java)
+> * [ç®€æ˜“è®¡ç®—å™¨](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/src/main/java/com/jcohy/study/gui/Calculator.java)
+> * [æ¨¡ä»¿QQç•Œé¢](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/src/main/java/com/jcohy/study/gui/QQLogin.java)
 
 
 ## jcohy-study-designpattern
-> #### Ps:JavaÉè¼ÆÄ£Ê½
-> * [Éè¼ÆÔ­Ôò]
->     * [µ¥Ò»Ö°ÔðÔ­Ôò]
->     * [ÀïÊÏÌæ»»Ô­Ôò]
->     * [ÒÀÀµµ¹×ªÔ­Ôò]
->     * [½Ó¿Ú¸ôÀëÔ­Ôò]
->     * [µÏÃ×ÌØ·¨Ôò]
->     * [ºÏ³É¸´ÓÃÔ­Ôò]
-> * Éè¼ÆÄ£Ê½ 
->     * ´´½¨ÐÍÄ£Ê½(5ÖÖ)
->       * [¹¤³§Ä£Ê½(Factory Method)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Factory.md)
->       * [³éÏó¹¤³§Ä£Ê½(Abstra)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Factory.md)
->       * [µ¥ÀýÄ£Ê½(Singleton)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Singleton.md)
->       * [½¨ÔìÕßÄ£Ê½(Builder)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Builder.md)
->       * [Ô­ÐÍÄ£Ê½(Prototype)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Prototype.md)
->     * ½á¹¹ÐÍÄ£Ê½(7ÖÖ)
->       * [ÊÊÅäÆ÷Ä£Ê½(Adapter)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Adapter.md)
->       * [×°ÊÎÄ£Ê½(Decorator)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Decorator.md)
->       * [´úÀíÄ£Ê½(Proxy)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Proxy.md)
->       * [Íâ¹ÛÄ£Ê½(Facade)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Facade.md)
->       * [ÇÅ½ÓÄ£Ê½(Bridge)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Bridge.md)
->       * [×éºÏÄ£Ê½(Composite)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Composite.md)
->       * [ºàÔªÄ£Ê½(Flyweight)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Flyweight.md)
->     * ¹ØÏµÐÍÄ£Ê½(11ÖÖ)
->       * [²ßÂÔÄ£Ê½(Strategy)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Strategy.md)  
->       * [Ä£°å·½·¨Ä£Ê½(Template Method)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/TemplateMethod.md)
->       * [¹Û²ìÕßÄ£Ê½(Observer)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Observer.md)
->       * [µü´úÆ÷Ä£Ê½(Iterator)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Iterator.md)
->       * [ÔðÈÎÁ´Ä£Ê½(Chain Of Responsibility)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Responsibility.md)
->       * [ÃüÁîÄ£Ê½(Command)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Command.md)
->       * [±¸ÍüÂ¼Ä£Ê½(Memento)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Memento.md)
->       * [×´Ì¬Ä£Ê½(State)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/State.md)
->       * [·ÃÎÊÕßÄ£Ê½(Visitor)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Visitor.md)
->       * [ÖÐ½éÕßÄ£Ê½(Mediator)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Mediator.md)
->       * [½âÊÍÆ÷Ä£Ê½(Interpreter)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Interpreter.md)
-     
-         
->     #### ÊÊÅäÆ÷Ä£Ê½¡¢×°ÊÎÄ£Ê½¡¢´úÀíÄ£Ê½¡¢Íâ¹ÛÄ£Ê½¡¢ÇÅ½ÓÄ£Ê½¡¢×éºÏÄ£Ê½¡¢ÏíÔªÄ£Ê½¡£ÆäÖÐ¶ÔÏóµÄÊÊÅäÆ÷Ä£Ê½ÊÇ¸÷ÖÖÄ£Ê½µÄÆðÔ´£¬ÎÒÃÇ¿´ÏÂÃæµÄÍ¼£º
+> #### Ps:Javaè®¾è®¡æ¨¡å¼
+> * [è®¾è®¡åŽŸåˆ™]
+>     * [å•ä¸€èŒè´£åŽŸåˆ™]
+>     * [é‡Œæ°æ›¿æ¢åŽŸåˆ™]
+>     * [ä¾èµ–å€’è½¬åŽŸåˆ™]
+>     * [æŽ¥å£éš”ç¦»åŽŸåˆ™]
+>     * [è¿ªç±³ç‰¹æ³•åˆ™]
+>     * [åˆæˆå¤ç”¨åŽŸåˆ™]
+> * è®¾è®¡æ¨¡å¼ 
+>     * åˆ›å»ºåž‹æ¨¡å¼(5ç§)
+>       * [å·¥åŽ‚æ¨¡å¼(Factory Method)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Factory.md)
+>       * [æŠ½è±¡å·¥åŽ‚æ¨¡å¼(Abstra)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Factory.md)
+>       * [å•ä¾‹æ¨¡å¼(Singleton)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Singleton.md)
+>       * [å»ºé€ è€…æ¨¡å¼(Builder)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Builder.md)
+>       * [åŽŸåž‹æ¨¡å¼(Prototype)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Prototype.md)
+>     * ç»“æž„åž‹æ¨¡å¼(7ç§)
+>       * [é€‚é…å™¨æ¨¡å¼(Adapter)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Adapter.md)
+>       * [è£…é¥°æ¨¡å¼(Decorator)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Decorator.md)
+>       * [ä»£ç†æ¨¡å¼(Proxy)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Proxy.md)
+>       * [å¤–è§‚æ¨¡å¼(Facade)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Facade.md)
+>       * [æ¡¥æŽ¥æ¨¡å¼(Bridge)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Bridge.md)
+>       * [ç»„åˆæ¨¡å¼(Composite)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Composite.md)
+>       * [äº¨å…ƒæ¨¡å¼(Flyweight)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Flyweight.md)
+>     * å…³ç³»åž‹æ¨¡å¼(11ç§)
+>       * [ç­–ç•¥æ¨¡å¼(Strategy)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Strategy.md)  
+>       * [æ¨¡æ¿æ–¹æ³•æ¨¡å¼(Template Method)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/TemplateMethod.md)
+>       * [è§‚å¯Ÿè€…æ¨¡å¼(Observer)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Observer.md)
+>       * [è¿­ä»£å™¨æ¨¡å¼(Iterator)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Iterator.md)
+>       * [è´£ä»»é“¾æ¨¡å¼(Chain Of Responsibility)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Responsibility.md)
+>       * [å‘½ä»¤æ¨¡å¼(Command)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Command.md)
+>       * [å¤‡å¿˜å½•æ¨¡å¼(Memento)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Memento.md)
+>       * [çŠ¶æ€æ¨¡å¼(State)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/State.md)
+>       * [è®¿é—®è€…æ¨¡å¼(Visitor)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Visitor.md)
+>       * [ä¸­ä»‹è€…æ¨¡å¼(Mediator)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Mediator.md)
+>       * [è§£é‡Šå™¨æ¨¡å¼(Interpreter)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Interpreter.md)
+
+>  #### é€‚é…å™¨æ¨¡å¼ã€è£…é¥°æ¨¡å¼ã€ä»£ç†æ¨¡å¼ã€å¤–è§‚æ¨¡å¼ã€æ¡¥æŽ¥æ¨¡å¼ã€ç»„åˆæ¨¡å¼ã€äº«å…ƒæ¨¡å¼ã€‚å…¶ä¸­å¯¹è±¡çš„é€‚é…å™¨æ¨¡å¼æ˜¯å„ç§æ¨¡å¼çš„èµ·æºï¼Œæˆ‘ä»¬çœ‹ä¸‹é¢çš„å›¾ï¼š
     
    ![adapter](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/images/adapter.png)
             
->     #### ²ßÂÔÄ£Ê½¡¢Ä£°å·½·¨Ä£Ê½¡¢¹Û²ìÕßÄ£Ê½¡¢µü´ú×ÓÄ£Ê½¡¢ÔðÈÎÁ´Ä£Ê½¡¢ÃüÁîÄ£Ê½¡¢±¸ÍüÂ¼Ä£Ê½¡¢×´Ì¬Ä£Ê½¡¢·ÃÎÊÕßÄ£Ê½¡¢ÖÐ½éÕßÄ£Ê½¡¢½âÊÍÆ÷Ä£Ê½¡£´óÖÂ·ÖÎªËÄÀà¹ØÏµ£º
+> #### ç­–ç•¥æ¨¡å¼ã€æ¨¡æ¿æ–¹æ³•æ¨¡å¼ã€è§‚å¯Ÿè€…æ¨¡å¼ã€è¿­ä»£å­æ¨¡å¼ã€è´£ä»»é“¾æ¨¡å¼ã€å‘½ä»¤æ¨¡å¼ã€å¤‡å¿˜å½•æ¨¡å¼ã€çŠ¶æ€æ¨¡å¼ã€è®¿é—®è€…æ¨¡å¼ã€ä¸­ä»‹è€…æ¨¡å¼ã€è§£é‡Šå™¨æ¨¡å¼ã€‚å¤§è‡´åˆ†ä¸ºå››ç±»å…³ç³»ï¼š
     
    ![real](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/images/real.png)
   
 ## jcohy-study-alogrithm
-> #### Ps:¾­µäËã·¨£¬ÅÅÐòÏà¹Ø´úÂë
-> * [±à³ÌÌâÄ¿Â¼](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/README.md)
+> #### Ps:ç»å…¸ç®—æ³•ï¼ŒæŽ’åºç›¸å…³ä»£ç 
+> * [ç¼–ç¨‹é¢˜ç›®å½•](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/README.md)
 
 ## jcohy-study-security
-> #### Ps:°²È«Ëã·¨Ïà¹Ø
+> #### Ps:å®‰å…¨ç®—æ³•ç›¸å…³
 
 ## jcohy-study-web
-> #### Ps:WebÏà¹Ø
+> #### Ps:Webç›¸å…³
 
 ##  jcohy-study-SpringBoot
-> #### Ps:SpringBootÏà¹ØÖªÊ¶¡£
->  * [SpringBoot¸ÅÊö](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-springboot/markdown/SpringBoot.md)
->  * [SpringBoot³£ÓÃÅäÖÃ](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-springboot/markdown/Conf.md)
->  * [SpringBoot»ù´¡](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-springboot/markdown/SpringBoot.md)
->  * [SpringBoot¸ß¼¶](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-springboot/markdown/SpringBoot2.md)
+> #### Ps:SpringBootç›¸å…³çŸ¥è¯†ã€‚
+>  * [SpringBootæ¦‚è¿°](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-springboot/markdown/SpringBoot.md)
+>  * [SpringBootå¸¸ç”¨é…ç½®](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-springboot/markdown/Conf.md)
+>  * [SpringBootåŸºç¡€](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-springboot/markdown/SpringBoot.md)
+>  * [SpringBooté«˜çº§](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-springboot/markdown/SpringBoot2.md)
 
 
 ##  jcohy-study-linux
-> #### Ps:±¾Ä¿Â¼½²½âLinuxÏà¹ØÖªÊ¶¡£
->  * [LinuxµÄ¾µÏñµØÖ·](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-linux/markdown/Mirrors.md)
->  * [LinuxµÄÎÄ¼þÄ¿Â¼½á¹¹](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-linux/markdown/LinuxDir.md)
->  * [LinuxµÄÎÄ¼þ³£ÓÃÃüÁî](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-linux/markdown/Command.md)
->  * [LinuxÏÂ³£ÓÃÈí¼þ°²×°](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-linux/markdown/install.md)
+> #### Ps:æœ¬ç›®å½•è®²è§£Linuxç›¸å…³çŸ¥è¯†ã€‚
+>  * [Linuxçš„é•œåƒåœ°å€](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-linux/markdown/Mirrors.md)
+>  * [Linuxçš„æ–‡ä»¶ç›®å½•ç»“æž„](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-linux/markdown/LinuxDir.md)
+>  * [Linuxçš„æ–‡ä»¶å¸¸ç”¨å‘½ä»¤](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-linux/markdown/Command.md)
+>  * [Linuxä¸‹å¸¸ç”¨è½¯ä»¶å®‰è£…](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-linux/markdown/install.md)
 
 
 ##  jcohy-study-nginx
-> #### Ps:nginxÏà¹ØÖªÊ¶¡£
+> #### Ps:nginxç›¸å…³çŸ¥è¯†ã€‚
 >  * [nginx](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nginx/markdown/Nginx.pdf)
 >  * [keepalived](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nginx/markdown/keepalived.pdf)
->  * [nginx·þÎñÆ÷»ù´¡ÅäÖÃ](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nginx/markdown//conf.md)
+>  * [nginxæœåŠ¡å™¨åŸºç¡€é…ç½®](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nginx/markdown//conf.md)
 
 
 ##  jcohy-study-nosql
-> #### Ps:NoSqlÏà¹ØÖªÊ¶¡£
->  * [NoSqlÈëÃÅºÍ¸ÅÊö](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/NoSql.md)
->  * [NoSqlÈëÃÅºÍ¸ÅÊö](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/NoSql2.md)
->  * [RedisÈëÃÅºÍ¸ÅÊö](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/Redis.md)
->  * [RedisÎå´óÊý¾ÝÀàÐÍ](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/five.md)
->  * [RedisÅäÖÃÎÄ¼þ](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/conf.md)
->  * [RedisµÄ³Ö¾Ã»¯](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/rdb.md)
+> #### Ps:NoSqlç›¸å…³çŸ¥è¯†ã€‚
+>  * [NoSqlå…¥é—¨å’Œæ¦‚è¿°](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/NoSql.md)
+>  * [NoSqlå…¥é—¨å’Œæ¦‚è¿°](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/NoSql2.md)
+>  * [Rediså…¥é—¨å’Œæ¦‚è¿°](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/Redis.md)
+>  * [Redisäº”å¤§æ•°æ®ç±»åž‹](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/five.md)
+>  * [Redisé…ç½®æ–‡ä»¶](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/conf.md)
+>  * [Redisçš„æŒä¹…åŒ–](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/rdb.md)
 
 
 ##  jcohy-study-zookeeper
-> #### Ps:zookeeperÏà¹ØÖªÊ¶¡£
->  * [zookeeper¸ÅÊöÓë°²×°](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-zookeeper/markdown/zookeeper.md)
->  * [zookeeper½á¹¹ºÍÃüÁî](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-zookeeper/markdown/zkStructure.md)
->  * [zookeeperÓ¦ÓÃ°¸Àý](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-zookeeper/markdown/zkExample.md)
->  * [zookeeperÔ­Àí](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-zookeeper/markdown/zkTheory.md)
+> #### Ps:zookeeperç›¸å…³çŸ¥è¯†ã€‚
+>  * [zookeeperæ¦‚è¿°ä¸Žå®‰è£…](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-zookeeper/markdown/zookeeper.md)
+>  * [zookeeperç»“æž„å’Œå‘½ä»¤](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-zookeeper/markdown/zkStructure.md)
+>  * [zookeeperåº”ç”¨æ¡ˆä¾‹](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-zookeeper/markdown/zkExample.md)
+>  * [zookeeperåŽŸç†](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-zookeeper/markdown/zkTheory.md)
 
 
 ## jcohy-study-files
-> #### Ps:¹ú¼ÒÁÐ±í£¬ÕýÔò±í´ïÊ½£¬±Ê¼Ç£¬ÅäÖÃÎÄ¼þµÈ
+> #### Ps:å›½å®¶åˆ—è¡¨ï¼Œæ­£åˆ™è¡¨è¾¾å¼ï¼Œç¬”è®°ï¼Œé…ç½®æ–‡ä»¶ç­‰
 
 
 ## jcohy-study-utils
-> #### Ps:Ïà¹Ø¹¤¾ßÀà²Ù×÷
+> #### Ps:ç›¸å…³å·¥å…·ç±»æ“ä½œ
 >   * [Jenkins](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-utils/markdown/Jenkins.md)
 
 ##  Swagger
-> #### Ps:SwaggerÏà¹ØÖªÊ¶¡£
->   * [Swagger¼ò½é](https://github.com/jiachao23/jcohy-study-sample/blob/master/Swagger.md#what)
->   * [SwaggerµÄÊ¹ÓÃ](https://github.com/jiachao23/jcohy-study-sample/blob/master/Swagger.md#how)
->   * [SwaggerÔÚJavaÖÐ³£ÓÃ×¢½â](https://github.com/jiachao23/jcohy-study-sample/blob/master/Swagger.md#annotations)
->   * [SwaggerÔÚSpringBoot¼¯³É](https://github.com/jiachao23/jcohy-study-sample/blob/master/Swagger.md#jicheng)
+> #### Ps:Swaggerç›¸å…³çŸ¥è¯†ã€‚
+>   * [Swaggerç®€ä»‹](https://github.com/jiachao23/jcohy-study-sample/blob/master/Swagger.md#what)
+>   * [Swaggerçš„ä½¿ç”¨](https://github.com/jiachao23/jcohy-study-sample/blob/master/Swagger.md#how)
+>   * [Swaggeråœ¨Javaä¸­å¸¸ç”¨æ³¨è§£](https://github.com/jiachao23/jcohy-study-sample/blob/master/Swagger.md#annotations)
+>   * [Swaggeråœ¨SpringBooté›†æˆ](https://github.com/jiachao23/jcohy-study-sample/blob/master/Swagger.md#jicheng)
 
 ##  WebSite
-> #### Ps:Ïà¹ØÍøÕ¾
+> #### Ps:ç›¸å…³ç½‘ç«™
 >   * [Coding](https://github.com/jiachao23/jcohy-study-sample/blob/master/website.md#Coding)
