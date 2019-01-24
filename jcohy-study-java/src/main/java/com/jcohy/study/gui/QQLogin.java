@@ -18,39 +18,39 @@ public class QQLogin extends JFrame
 	public static void main(String[] args)
 	{
 		QQLogin a=new QQLogin();
-	} 
+	}
 	public QQLogin()
 	{
-		bq1=new JLabel("»¶Ó­¹âÁÙ",JLabel.CENTER);//±³²¿
+		bq1=new JLabel("æ¬¢è¿å…‰ä¸´",JLabel.CENTER);//èƒŒéƒ¨
 
-		bq2=new JLabel("QQºÅÂë",JLabel.CENTER);//ÖĞ²¿
+		bq2=new JLabel("QQå·ç ",JLabel.CENTER);//ä¸­éƒ¨
 		wbk=new JTextField();
-		bq3=new JLabel("Çå³ıºÅÂë",JLabel.CENTER);
-		bq4=new JLabel("QQÃÜÂë",JLabel.CENTER);
-		bq5=new JLabel("Íü¼ÇÃÜÂë",JLabel.CENTER);
+		bq3=new JLabel("æ¸…é™¤å·ç ",JLabel.CENTER);
+		bq4=new JLabel("QQå¯†ç ",JLabel.CENTER);
+		bq5=new JLabel("å¿˜è®°å¯†ç ",JLabel.CENTER);
 		mmk=new JPasswordField();
-		bq6=new JLabel("<html><a href='www.qq.com'>ÉêÇëÃÜÂë±£»¤</a>");
+		bq6=new JLabel("<html><a href='www.qq.com'>ç”³è¯·å¯†ç ä¿æŠ¤</a>");
 		bq6.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		fxk1=new JCheckBox("ÒşÉíµÇÂ¼");
-		fxk2=new JCheckBox("¼Ç×¡ÃÜÂë");
+		fxk1=new JCheckBox("éšèº«ç™»å½•");
+		fxk2=new JCheckBox("è®°ä½å¯†ç ");
 
-		mb1=new JPanel();      //ÄÏ²¿
-		an1=new JButton("µÇÂ¼");
-		an2=new JButton("±ê¼Ç");
-		an3=new JButton("¹Ø±Õ");
+		mb1=new JPanel();      //å—éƒ¨
+		an1=new JButton("ç™»å½•");
+		an2=new JButton("æ ‡è®°");
+		an3=new JButton("å…³é—­");
 
 		xxk=new JTabbedPane();
 		mb2=new JPanel();
 		mb3=new JPanel();
 		mb3.setBackground(Color.gray);
 		mb4=new JPanel();
-		
+
 		ImageIcon tp1=new ImageIcon("com.gui.images\\163logo.gif");
-		
-		
+
+
 		mb4.setBackground(Color.GREEN);
 
-		xxk.add("ÆÕÍ¨ÓÃ»§",mb2);  	xxk.add("»áÔ±µÇÂ¼",mb3); 		xxk.add("¹ÜÀíÔ±",mb4);
+		xxk.add("æ™®é€šç”¨æˆ·",mb2);  	xxk.add("ä¼šå‘˜ç™»å½•",mb3); 		xxk.add("ç®¡ç†å‘˜",mb4);
 		mb2.setLayout(new GridLayout(3,3));
 		mb1.add(an1);				mb1.add(an2);				mb1.add(an3);
 		mb2.add(bq2);				mb2.add(wbk);				mb2.add(bq3);
@@ -65,11 +65,11 @@ public class QQLogin extends JFrame
 
 		//ImageIcon tp1=new ImageIcon("images\\163logo.gif");
 		this.setIconImage(tp1.getImage());
-		this.setTitle("ÓÃ»§µÇÂ¼");
+		this.setTitle("ç”¨æˆ·ç™»å½•");
 		this.setSize(340,270);
 		this.setLocation(300,280);
 		this.setResizable(false);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setVisible(true);	
+		this.setVisible(true);
 	}
 }

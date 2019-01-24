@@ -8,7 +8,7 @@ package com.jcohy.study.juc;
 public class VolatileTest {
 
     public static void main(String[] args) {
-        ThreadDemo td = new ThreadDemo();
+        ThreadDemo2 td = new ThreadDemo2();
         new Thread(td).start();
         while (true){
             if(td.isFlag()){
@@ -19,7 +19,7 @@ public class VolatileTest {
     }
 }
 
-class ThreadDemo implements Runnable{
+class ThreadDemo2 implements Runnable{
     //        private boolean flag = false;
     private volatile boolean flag = false;
     @Override

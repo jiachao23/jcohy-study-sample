@@ -8,24 +8,28 @@ import java.awt.event.ActionListener;
 
 public class Calculator extends JFrame{
 
-	//¶¨Òå×é¼ş
-	private String remindOp;//±£´æ·ûºÅ
-	private boolean start;//ÅĞ¶ÏÊÇ·ñÊÇÊı×ÖµÄ¿ªÊ¼
-	private Container container; 
-	private GridBagLayout layout; //¶¨Òå²¼¾Ö·½Ê½ÎªÍø¸ñ°ü²¼¾Ö
-	private GridBagConstraints constraints; 
-	private JTextField wbk;//ÏÔÊ¾µÄµØ·½
+	//å®šä¹‰ç»„ä»¶
+	//ä¿å­˜ç¬¦å·
+	private String remindOp;
+	//åˆ¤æ–­æ˜¯å¦æ˜¯æ•°å­—çš„å¼€å§‹
+	private boolean start;
+	private Container container;
+	//å®šä¹‰å¸ƒå±€æ–¹å¼ä¸ºç½‘æ ¼åŒ…å¸ƒå±€
+	private GridBagLayout layout;
+	private GridBagConstraints constraints;
+	//æ˜¾ç¤ºçš„åœ°æ–¹
+	private JTextField wbk;
 	private double result;
 	Calculator(){
-		//´´½¨×é¼ş¼°³õÊ¼»¯
+		//åˆ›å»ºç»„ä»¶åŠåˆå§‹åŒ–
 		start=true;
 		remindOp="=";
 		result=0;
 		container=getContentPane();
 		layout =new GridBagLayout();
-		container.setLayout(layout); 
+		container.setLayout(layout);
 		constraints=new GridBagConstraints();
-		//ÉèÖÃÎÄ±¾ÈİÆ÷µÄ²¼¾Ö
+		//è®¾ç½®æ–‡æœ¬å®¹å™¨çš„å¸ƒå±€
 		constraints.gridx=0;
 		constraints.gridy=0;
 		constraints.gridheight=1;
@@ -33,50 +37,50 @@ public class Calculator extends JFrame{
 		constraints.fill=GridBagConstraints.BOTH;
 		constraints.weightx=100;
 		constraints.weighty=100;
-		//ÎÄ±¾¿òÏÔÊ¾·½Ê½¼°Ìí¼ÓÎÄ±¾×é¼ş
+		//æ–‡æœ¬æ¡†æ˜¾ç¤ºæ–¹å¼åŠæ·»åŠ æ–‡æœ¬ç»„ä»¶
 		wbk=new JTextField(20);
 		wbk.setHorizontalAlignment(JTextField.RIGHT);
 		wbk.setBackground(Color.black);
 		wbk.setForeground(Color.white);
 		layout.setConstraints(wbk,constraints);
 		container.add(wbk);
-		//¶¨ÒåÁ½¸ö¼àÊÓÆ÷
+		//å®šä¹‰ä¸¤ä¸ªç›‘è§†å™¨
 		ActionListener btn = new btnAction();
 		ActionListener command = new commandAction();
-		//Ìí¼Ó°´Å¥
+		//æ·»åŠ æŒ‰é’®
 		addButton("AC",0,1,1,1,btn);
 		addButton("+/-",1,1,1,1,btn);
-		addButton("%",2,1,1,1,btn); 
-		addButton("7",0,2,1,1,btn); 
-		addButton("8",1,2,1,1,btn); 
-		addButton("9",2,2,1,1,btn); 
-		addButton("/",3,1,1,1,command); 
-		addButton("4",0,3,1,1,btn); 
-		addButton("5",1,3,1,1,btn); 
-		addButton("6",2,3,1,1,btn); 
-		addButton("*",3,2,1,1,command); 
-		addButton("1",0,4,1,1,btn); 
-		addButton("2",1,4,1,1,btn); 
-		addButton("3",2,4,1,1,btn); 
-		addButton("-",3,3,1,1,command); 
-		addButton("0",0,5,2,1,btn); 
-		addButton(".",2,5,1,1,btn); 
+		addButton("%",2,1,1,1,btn);
+		addButton("7",0,2,1,1,btn);
+		addButton("8",1,2,1,1,btn);
+		addButton("9",2,2,1,1,btn);
+		addButton("/",3,1,1,1,command);
+		addButton("4",0,3,1,1,btn);
+		addButton("5",1,3,1,1,btn);
+		addButton("6",2,3,1,1,btn);
+		addButton("*",3,2,1,1,command);
+		addButton("1",0,4,1,1,btn);
+		addButton("2",1,4,1,1,btn);
+		addButton("3",2,4,1,1,btn);
+		addButton("-",3,3,1,1,command);
+		addButton("0",0,5,2,1,btn);
+		addButton(".",2,5,1,1,btn);
 		addButton("+",3,4,1,1,command);
-		addButton("=",3,5,1,1,command); 
+		addButton("=",3,5,1,1,command);
 	}
 
 	private void addButton(String op, int row, int column, int weight, int height,ActionListener listener) {
 		// TODO Auto-generated method stub
-		JButton button=new JButton(op); 
-		constraints.gridx=row; 
-		constraints.gridy=column; 
-		constraints.gridwidth=weight; 
-		constraints.gridheight=height; 
-		constraints.fill=GridBagConstraints.BOTH; 
-		button.addActionListener(listener); 
-		layout.setConstraints(button,constraints); 
-		container.add(button); 
-		constraints.insets=new Insets(0,0,0,0);//ÉèÖÃ°´Å¥¼äµÄ¼ä¾à
+		JButton button=new JButton(op);
+		constraints.gridx=row;
+		constraints.gridy=column;
+		constraints.gridwidth=weight;
+		constraints.gridheight=height;
+		constraints.fill=GridBagConstraints.BOTH;
+		button.addActionListener(listener);
+		layout.setConstraints(button,constraints);
+		container.add(button);
+		constraints.insets=new Insets(0,0,0,0);//è®¾ç½®æŒ‰é’®é—´çš„é—´è·
 		button.setBorderPainted(true);
 		button.setContentAreaFilled(true);
 		button.setBounds(2,2,2,2);
@@ -91,14 +95,14 @@ public class Calculator extends JFrame{
 			button.setForeground(Color.black);
 		}
 	}
-	//ÊµÏÖbtnAction ¼àÌı
+	//å®ç°btnAction ç›‘å¬
 	public class btnAction implements ActionListener{
 
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
 			String input =e.getActionCommand();
 			if(start){
-				wbk.setText("");//ÎÄ±¾¿ò¼ÆËãÇøÓòÎª¿Õ
+				wbk.setText("");//æ–‡æœ¬æ¡†è®¡ç®—åŒºåŸŸä¸ºç©º
 				start=false;
 				if(input.equals("+/-"))
 					wbk.setText(wbk.getText()+"-");
@@ -109,7 +113,7 @@ public class Calculator extends JFrame{
 					start=true;
 				}else if(input.equals("%")){
 					double b=Double.parseDouble(wbk.getText());
-					wbk.setText(String.valueOf(b*0.01));//½«double×ª»»³É×Ö·û´®
+					wbk.setText(String.valueOf(b*0.01));//å°†doubleè½¬æ¢æˆå­—ç¬¦ä¸²
 				}	else if(input.equals(".")){
 					if(wbk.getText().trim().indexOf(".")!=-1){
 
@@ -122,18 +126,18 @@ public class Calculator extends JFrame{
 			}
 		}
 	}
-	//ÊµÏÖcommandAction¼àÌı
+	//å®ç°commandActionç›‘å¬
 	public class commandAction implements ActionListener{
 
 		public void actionPerformed(ActionEvent a) {
 			// TODO Auto-generated method stub
 			String command=a.getActionCommand();
-			if(start) { 
-				remindOp=command; 
-			}else { 
+			if(start) {
+				remindOp=command;
+			}else {
 				calculate(Double.parseDouble(wbk.getText()));
 				remindOp=command;
-				start=true; //¼ÇÒäÊäÈëµÄ²Ù×÷·ûºÅ
+				start=true; //è®°å¿†è¾“å…¥çš„æ“ä½œç¬¦å·
 			}
 		}
 	}
@@ -143,15 +147,15 @@ public class Calculator extends JFrame{
 		else if(remindOp.equals("-")) result-=x;
 		else if(remindOp.equals("*")) result*=x;
 		else if(remindOp.equals("/")) result/=x;
-		else if(remindOp.equals("=")) result=x;   //ÊµÏÖ¼ÆËã¹¦ÄÜ¡£
-		wbk.setText(""+ result); //ÏÔÊ¾¼ÆËãµÄ½á¹û
+		else if(remindOp.equals("=")) result=x;   //å®ç°è®¡ç®—åŠŸèƒ½ã€‚
+		wbk.setText(""+ result); //æ˜¾ç¤ºè®¡ç®—çš„ç»“æœ
 	}
 
 
 	public static void main(String[] args){
 		Calculator a=new Calculator();
-		//ÉèÖÃ´°Ìå
-		a.setTitle("javaÄ£·ÂÆ»¹û¼ÆËãÆ÷");
+		//è®¾ç½®çª—ä½“
+		a.setTitle("javaæ¨¡ä»¿è‹¹æœè®¡ç®—å™¨");
 		a.setSize(400,650);
 		a.setVisible(true);
 		a.setLocation(400, 30);

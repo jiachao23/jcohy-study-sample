@@ -7,10 +7,10 @@ import java.awt.event.ActionListener;
 
 
 public class FlowLayoutText extends JFrame implements ActionListener{
-	Button b=new Button("Ìí¼Ó");	
+	Button b=new Button("æ·»åŠ ");
 	int i;
 	FlowLayoutText(){
-		this.setTitle("²¼¾Ö¹ÜÀíÆ÷");
+		this.setTitle("å¸ƒå±€ç®¡ç†å™¨");
 		this.setLayout(new FlowLayout());
 		this.add(b);
 		b.addActionListener(this);
@@ -20,11 +20,12 @@ public class FlowLayoutText extends JFrame implements ActionListener{
 	}
 	public static void main(String[] args){
 		new FlowLayoutText();
-		
+
 	}
+	@Override
 	public void actionPerformed(ActionEvent e) {
 		i++;
-		Button bi=new Button("°´Å¥"+i);
+		Button bi=new Button("æŒ‰é’®"+i);
 		this.add(bi);
 		this.show(true);
 		// TODO Auto-generated method stub

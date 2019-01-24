@@ -6,15 +6,43 @@
 > #### PS:我的学习笔记,点击可以跳转到相应分类
 
 ## [jcohy-study-java](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-java/README.md)
-> #### Java基础
+
+> #### Ps:java 基础
+
+>  * [Java集合之HashMap](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/HashMap.md)
+>  * [Java集合之HashSet](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/HashSet.md)
+>  * [Java集合之ArrayList](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/ArrayList.md)
+>  * [Java集合之LinkedHashMap](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/LinkedHashMap.md)
+
+> #### Ps:Java 8
+>  * [Java8新特性](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/java8.md)
 
 
-## [jcohy-study-thread](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-thread/README.md)
-> #### Ps:线程相关
+>  * [Java NIO]()
+>  * [Java JUC](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/juc.md)
+>  * [Java GUI](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/gui.md)
 
+> #### Ps:java NIO
 
-## [jcohy-study-gui](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-gui/README.md)
+> * [Java NIO简介](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#gaishu)
+> * [Java NIO和传统IO区别](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#qubie)
+> * [缓冲区和通道](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#buffer)
+> * [NIO 的非阻塞式网络通信](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#blocking)
+> * [管道(Pipe)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#pipe)
+> * [Java NIO2](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#nio2)
+
+> #### Ps:java JUC
+> * [概述](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/Thread.md#gaishu)
+> * [进程介绍](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/Thread.md#jincheng)
+> * [线程介绍](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/Thread.md#xiancheng)
+> * [多线程介绍](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/Thread.md#duoxiancheng)
+
 > #### Ps:java GUI
+> * [简易计算器](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/src/main/java/com/jcohy/study/gui/Calculator.java)
+> * [模仿QQ界面](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/src/main/java/com/jcohy/study/gui/QQLogin.java)
+
+
+
 
 
 ## [jcohy-study-web](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-web/README.md)

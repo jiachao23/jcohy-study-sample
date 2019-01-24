@@ -1388,3 +1388,4 @@ public class TestAnnotation {
 
 ```
 
+最后附上所有代码地址  ![Java8 Code](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-java/src/main/java/com/jcohy/study/java8)

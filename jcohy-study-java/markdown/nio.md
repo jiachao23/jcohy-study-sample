@@ -76,7 +76,7 @@ Buffer 中的重要概念：
 
   **标记、位置、限制、容量遵守以下不变式：0<=mark<=position<=limit<=capacity**
 
-  ![缓冲区基本属性](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/markdown/3.jpg)
+  ![缓冲区基本属性](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/images/3.jpg)
 
 #### Buffer常用方法：
 
@@ -123,9 +123,9 @@ Buffer 所有子类提供了两个用于数据操作的方法：get() 与put() �
 
 - 字节缓冲区是直接缓冲区还是非直接缓冲区可通过调用其isDirect()方法来确定。提供此方法是为了能够在性能关键型代码中执行显式缓冲区管理。
 
-  ![非直接缓冲区](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/markdown/4.jpg)
+  ![非直接缓冲区](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/images/4.jpg)
 
-  ![直接缓冲区](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/markdown/5.jpg)
+  ![直接缓冲区](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/images/5.jpg)
 
 
 #### Buffer简单示例
@@ -216,7 +216,7 @@ Buffer 所有子类提供了两个用于数据操作的方法：get() 与put() �
 
 通道（Channel）：由java.nio.channels 包定义的。Channel 表示IO 源与目标打开的连接。Channel 类似于传统的“流”。只不过Channel 本身不能直接访问数据，Channel 只能与Buffer 进行交互。
 
-![通道](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/markdown/6.jpg)
+![通道](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/images/6.jpg)
 
 Java 为Channel 接口提供的最主要实现类如下：
 
@@ -262,13 +262,13 @@ int bytesRead = inChannel.read(buf)；
 
 分散读取（Scattering Reads）是指从Channel 中读取的数据“分散”到多个Buffer 中。
 
-![分散读取](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/markdown/7.jpg)
+![分散读取](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/images/7.jpg)
 
 **注意：按照缓冲区的顺序，从Channel 中读取的数据依次将Buffer 填满。**
 
 聚集写入（Gathering Writes）是指将多个Buffer 中的数据“聚集”到Channel。
 
-![聚集写入](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/markdown/8.jpg)
+![聚集写入](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/images/8.jpg)
 
 **注意：按照缓冲区的顺序，写入position 和limit 之间的数据到Channel 。**
 
@@ -497,7 +497,7 @@ int bytesRead = inChannel.read(buf)；
 
 **SelectableChannle** 的结构如下图：
 
-![SelectableChannle](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/markdown/11.jpg)
+![SelectableChannle](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/images/11.jpg)
 
 #### 选择器（Selector）的应用
 
@@ -712,7 +712,7 @@ Java NIO中的DatagramChannel是一个能收发UDP包的通道。
 
 Java NIO 管道是2个线程之间的单向数据连接。Pipe有一个source通道和一个sink通道。数据会被写到sink通道，从source通道读取。
 
-![Pipe](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nio/markdown/12.png)
+![Pipe](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/images/12.png)
 
 向管道写数据
 
