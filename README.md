@@ -8,7 +8,6 @@
 ## [jcohy-study-java](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-java/README.md)
 
 > #### Ps:java 基础
-
 >  * [Java集合之HashMap](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/HashMap.md)
 >  * [Java集合之HashSet](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/HashSet.md)
 >  * [Java集合之ArrayList](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/ArrayList.md)
@@ -18,12 +17,7 @@
 >  * [Java8新特性](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/java8.md)
 
 
->  * [Java NIO]()
->  * [Java JUC](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/juc.md)
->  * [Java GUI](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/gui.md)
-
 > #### Ps:java NIO
-
 > * [Java NIO简介](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#gaishu)
 > * [Java NIO和传统IO区别](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#qubie)
 > * [缓冲区和通道](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#buffer)
@@ -32,7 +26,6 @@
 > * [Java NIO2](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/nio.md#nio2)
 
 > #### Ps:java JUC
-> * [概述](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/Thread.md#gaishu)
 > * [进程介绍](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/Thread.md#jincheng)
 > * [线程介绍](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/Thread.md#xiancheng)
 > * [多线程介绍](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/Thread.md#duoxiancheng)

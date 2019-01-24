@@ -708,7 +708,7 @@ Java NIO中的DatagramChannel是一个能收发UDP包的通道。
 
 <p id="pipe">
 
-####  管道(Pipe)
+##  管道(Pipe)
 
 Java NIO 管道是2个线程之间的单向数据连接。Pipe有一个source通道和一个sink通道。数据会被写到sink通道，从source通道读取。
 
@@ -744,7 +744,7 @@ Java NIO 管道是2个线程之间的单向数据连接。Pipe有一个source通
 
 <p id="nio2">
 
-####  Java NIO2
+##  Java NIO2
 
 随着JDK 7 的发布，Java对NIO进行了极大的扩展，增强了对文件处理和文件系统特性的支持，以至于我们称他们为NIO.2。因为NIO 提供的一些功能，NIO已经成为文件处理中越来越重要的部分。
 
