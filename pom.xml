@@ -15,7 +15,6 @@
     <module>jcohy-study-files</module>
     <module>jcohy-study-security</module>
     <module>jcohy-study-alogrithm</module>
-    <module>jcohy-study-thread</module>
     <module>jcohy-study-java</module>
     <module>jcohy-study-springboot</module>
     <module>jcohy-study-nosql</module>
@@ -23,6 +22,7 @@
     <module>jcohy-study-zookeeper</module>
     <module>com-jcohy-nginx</module>
     <module>jcohy-study-docker</module>
+    <module>jcohy-study-ViewGuide</module>
   </modules>
 
   <dependencies>
