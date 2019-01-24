@@ -37,40 +37,40 @@
 
 ## jcohy-study-designpattern
 > #### Ps:Java设计模式
-* [设计原则]
-    * [单一职责原则]
-    * [里氏替换原则]
-    * [依赖倒转原则]
-    * [接口隔离原则]
-    * [迪米特法则]
-    * [合成复用原则]
-* 设计模式 
-    * 创建型模式(5种)
-      * [工厂模式(Factory Method)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Factory.md)
-      * [抽象工厂模式(Abstra)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Factory.md)
-      * [单例模式(Singleton)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Singleton.md)
-      * [建造者模式(Builder)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Builder.md)
-      * [原型模式(Prototype)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Prototype.md)
-    * 结构型模式(7种)
-      * [适配器模式(Adapter)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Adapter.md)
-      * [装饰模式(Decorator)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Decorator.md)
-      * [代理模式(Proxy)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Proxy.md)
-      * [外观模式(Facade)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Facade.md)
-      * [桥接模式(Bridge)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Bridge.md)
-      * [组合模式(Composite)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Composite.md)
-      * [亨元模式(Flyweight)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Flyweight.md)
-    * 关系型模式(11种)
-      * [策略模式(Strategy)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Strategy.md)  
-      * [模板方法模式(Template Method)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/TemplateMethod.md)
-      * [观察者模式(Observer)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Observer.md)
-      * [迭代器模式(Iterator)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Iterator.md)
-      * [责任链模式(Chain Of Responsibility)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Responsibility.md)
-      * [命令模式(Command)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Command.md)
-      * [备忘录模式(Memento)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Memento.md)
-      * [状态模式(State)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/State.md)
-      * [访问者模式(Visitor)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Visitor.md)
-      * [中介者模式(Mediator)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Mediator.md)
-      * [解释器模式(Interpreter)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Interpreter.md)
+> * [设计原则]
+>     * [单一职责原则]
+>     * [里氏替换原则]
+>     * [依赖倒转原则]
+>     * [接口隔离原则]
+>     * [迪米特法则]
+>     * [合成复用原则]
+> * 设计模式 
+>     * 创建型模式(5种)
+>       * [工厂模式(Factory Method)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Factory.md)
+>       * [抽象工厂模式(Abstra)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Factory.md)
+>       * [单例模式(Singleton)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Singleton.md)
+>       * [建造者模式(Builder)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Builder.md)
+>       * [原型模式(Prototype)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Prototype.md)
+>     * 结构型模式(7种)
+>       * [适配器模式(Adapter)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Adapter.md)
+>       * [装饰模式(Decorator)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Decorator.md)
+>       * [代理模式(Proxy)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Proxy.md)
+>       * [外观模式(Facade)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Facade.md)
+>       * [桥接模式(Bridge)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Bridge.md)
+>       * [组合模式(Composite)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Composite.md)
+>       * [亨元模式(Flyweight)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Flyweight.md)
+>     * 关系型模式(11种)
+>       * [策略模式(Strategy)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Strategy.md)  
+>       * [模板方法模式(Template Method)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/TemplateMethod.md)
+>       * [观察者模式(Observer)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Observer.md)
+>       * [迭代器模式(Iterator)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Iterator.md)
+>       * [责任链模式(Chain Of Responsibility)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Responsibility.md)
+>       * [命令模式(Command)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Command.md)
+>       * [备忘录模式(Memento)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Memento.md)
+>       * [状态模式(State)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/State.md)
+>       * [访问者模式(Visitor)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Visitor.md)
+>       * [中介者模式(Mediator)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Mediator.md)
+>       * [解释器模式(Interpreter)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Interpreter.md)
               
     #### 适配器模式、装饰模式、代理模式、外观模式、桥接模式、组合模式、享元模式。其中对象的适配器模式是各种模式的起源，我们看下面的图：
     
@@ -82,10 +82,7 @@
   
 ## jcohy-study-alogrithm
 > #### Ps:经典算法，排序相关代码
-> * [简单编程题](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/markdown/SimpleQuestion.md)
-
-## jcohy-study-DateStructures
-> #### Ps:数据结构相关
+> * [编程题目录](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/README.md)
 
 ## jcohy-study-security
 > #### Ps:安全算法相关
@@ -94,44 +91,44 @@
 > #### Ps:Web相关
 
 ##  jcohy-study-SpringBoot
-#### Ps:SpringBoot相关知识。
- * [SpringBoot概述](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-springboot/markdown/SpringBoot.md)
- * [SpringBoot常用配置](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-springboot/markdown/Conf.md)
- * [SpringBoot基础](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-springboot/markdown/SpringBoot.md)
- * [SpringBoot高级](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-springboot/markdown/SpringBoot2.md)
+> #### Ps:SpringBoot相关知识。
+>  * [SpringBoot概述](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-springboot/markdown/SpringBoot.md)
+>  * [SpringBoot常用配置](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-springboot/markdown/Conf.md)
+>  * [SpringBoot基础](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-springboot/markdown/SpringBoot.md)
+>  * [SpringBoot高级](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-springboot/markdown/SpringBoot2.md)
 
 
 ##  jcohy-study-linux
-#### Ps:本目录讲解Linux相关知识。
- * [Linux的镜像地址](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-linux/markdown/Mirrors.md)
- * [Linux的文件目录结构](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-linux/markdown/LinuxDir.md)
- * [Linux的文件常用命令](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-linux/markdown/Command.md)
- * [Linux下常用软件安装](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-linux/markdown/install.md)
+> #### Ps:本目录讲解Linux相关知识。
+>  * [Linux的镜像地址](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-linux/markdown/Mirrors.md)
+>  * [Linux的文件目录结构](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-linux/markdown/LinuxDir.md)
+>  * [Linux的文件常用命令](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-linux/markdown/Command.md)
+>  * [Linux下常用软件安装](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-linux/markdown/install.md)
 
 
 ##  jcohy-study-nginx
-#### Ps:nginx相关知识。
- * [nginx](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nginx/markdown/Nginx.pdf)
- * [keepalived](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nginx/markdown/keepalived.pdf)
- * [nginx服务器基础配置](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nginx/markdown//conf.md)
+> #### Ps:nginx相关知识。
+>  * [nginx](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nginx/markdown/Nginx.pdf)
+>  * [keepalived](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nginx/markdown/keepalived.pdf)
+>  * [nginx服务器基础配置](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nginx/markdown//conf.md)
 
 
 ##  jcohy-study-nosql
-#### Ps:NoSql相关知识。
- * [NoSql入门和概述](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/NoSql.md)
- * [NoSql入门和概述](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/NoSql2.md)
- * [Redis入门和概述](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/Redis.md)
- * [Redis五大数据类型](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/five.md)
- * [Redis配置文件](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/conf.md)
- * [Redis的持久化](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/rdb.md)
+> #### Ps:NoSql相关知识。
+>  * [NoSql入门和概述](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/NoSql.md)
+>  * [NoSql入门和概述](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/NoSql2.md)
+>  * [Redis入门和概述](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/Redis.md)
+>  * [Redis五大数据类型](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/five.md)
+>  * [Redis配置文件](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/conf.md)
+>  * [Redis的持久化](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-nosql/markdown/rdb.md)
 
 
 ##  jcohy-study-zookeeper
-#### Ps:zookeeper相关知识。
- * [zookeeper概述与安装](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-zookeeper/markdown/zookeeper.md)
- * [zookeeper结构和命令](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-zookeeper/markdown/zkStructure.md)
- * [zookeeper应用案例](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-zookeeper/markdown/zkExample.md)
- * [zookeeper原理](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-zookeeper/markdown/zkTheory.md)
+> #### Ps:zookeeper相关知识。
+>  * [zookeeper概述与安装](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-zookeeper/markdown/zookeeper.md)
+>  * [zookeeper结构和命令](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-zookeeper/markdown/zkStructure.md)
+>  * [zookeeper应用案例](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-zookeeper/markdown/zkExample.md)
+>  * [zookeeper原理](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-zookeeper/markdown/zkTheory.md)
 
 
 ## jcohy-study-files

@@ -29,13 +29,32 @@
 >  * [字符统计](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/SimpleQuestion/TotalCharAndNumber.java)
 >  * [最大公约数和最小公倍数](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/SimpleQuestion/CommonDivisor.java)
 >  * [正整数分解质因数](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/SimpleQuestion/Factorizations.java)
->  * [兔子问题](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/SimpleQuestion/Fibhabit.java)
 >  * [数字组合](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/SimpleQuestion/shuzi.java)
->  * [汉诺塔问题](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/SimpleQuestion/hanoiCode.java)
 >  * [指定位置复制](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/SimpleQuestion/CopyArrayByPosition.java)
 >  * [求方程的根](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/SimpleQuestion/EquationResult.java)
->  * [数组数字组成最小值](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/SimpleQuestion/GetMin.java)
->  * [猜拳游戏](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/SimpleQuestion/Guess.java)
->  * [大数的加减](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/SimpleQuestion/BigData.java)
 >  * [杨辉三角](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/SimpleQuestion/Yanghui.java)
 
+> #### Ps:递归
+>  * [汉诺塔问题](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/SimpleQuestion/hanoiCode.java)
+>  * [兔子问题](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/SimpleQuestion/Fibhabit.java)
+
+
+
+> #### Ps:数组
+
+> #### Ps:链表
+
+> #### Ps:栈
+
+> #### Ps:队列
+
+> #### Ps:树
+
+> #### Ps:图
+
+> #### Ps:各种排序算法
+
+> #### Ps:其他
+>  * [大数的加减](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/SimpleQuestion/BigData.java)
+>  * [猜拳游戏](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/SimpleQuestion/Guess.java)
+>  * [数组数字组成最小值](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/SimpleQuestion/GetMin.java)
