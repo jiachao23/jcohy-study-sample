@@ -12,7 +12,7 @@
 > * [创建工程](#create)
 > * [创建webhook](#webhook)
 
-<p class="gaishu"></p>
+<p id="gaishu"></p>
 
 ##  概述
 
@@ -64,7 +64,7 @@ Jenkins支持各种运行方式，可通过系统包,Docker或者通过一个独
 ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-utils/image/jenkins02.jpg)
 
 
-<p class="install"></p>
+<p id="install"></p>
 
 ## 安装
 
@@ -88,7 +88,7 @@ Jenkins的安装可参考官方文档，里面有很详细的安装教程
 
 ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-utils/image/jenkins04.jpg)
 
-<p class="config"></p>
+<p id="config"></p>
 
 ## 常用配置
 
@@ -134,7 +134,7 @@ Jenkins的安装可参考官方文档，里面有很详细的安装教程
 
 [配置邮件发送](http://www.cnblogs.com/imyalost/p/8781759.html)
 
-<p class="create"></p>
+<p id="create"></p>
 
 ## 创建工程
 
@@ -170,7 +170,7 @@ Jenkins的安装可参考官方文档，里面有很详细的安装教程
 
    ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-utils/image/jenkins22.jpg)
    
-<p class="webhook"></p>
+<p id="webhook"></p>
 
 ## 创建webhook
 
