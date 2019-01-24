@@ -71,14 +71,15 @@
 >       * [访问者模式(Visitor)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Visitor.md)
 >       * [中介者模式(Mediator)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Mediator.md)
 >       * [解释器模式(Interpreter)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Interpreter.md)
-              
-    #### 适配器模式、装饰模式、代理模式、外观模式、桥接模式、组合模式、享元模式。其中对象的适配器模式是各种模式的起源，我们看下面的图：
+     
+         
+>     #### 适配器模式、装饰模式、代理模式、外观模式、桥接模式、组合模式、享元模式。其中对象的适配器模式是各种模式的起源，我们看下面的图：
     
-     ![adapter](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/images/adapter.png)
+   ![adapter](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/images/adapter.png)
             
-    #### 策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。大致分为四类关系：
+>     #### 策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。大致分为四类关系：
     
-     ![real](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/images/real.png)
+   ![real](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/images/real.png)
   
 ## jcohy-study-alogrithm
 > #### Ps:经典算法，排序相关代码
