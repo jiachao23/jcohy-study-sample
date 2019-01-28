@@ -132,6 +132,8 @@
 
 ## jcohy-study-files
 > #### Ps:国家列表，正则表达式，笔记，配置文件等
+>  * [Log4j2常用配置文件](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-files/src/main/java/com/jcohy/study/properties/log4j2.yaml)
+>  * [正则表达式](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-files/markdown/RegularExpression.md)
 
 
 ## jcohy-study-utils
