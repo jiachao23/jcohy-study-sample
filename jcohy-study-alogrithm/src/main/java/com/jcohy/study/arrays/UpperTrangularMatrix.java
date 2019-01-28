@@ -2,18 +2,18 @@ package com.jcohy.study.arrays;
 
 public class UpperTrangularMatrix {
 	/*
-	 * ÏÂÈý½Ç¾ØÕó:¾ÍÊÇÒ»ÖÖ¶Ô½ÇÏßÒÔÉÏ½ÔÎª0µÄn*n¾ØÕó£¬ÆäÖÐÓÖ·ÖÎªÓÒÏÂÈý½Ç¾ØÕóºÍ×óÏÂÈý½Ç¾ØÕó¡£ºÍÉÏÈý½Ç
-	 * ¾ØÕó´¦Àí·½Ê½ÀàËÆ
-	 * Ò²¿É·ÖÎª¡°ÒÔÐÐÎªÖ÷¡±ºÍ¡°ÒÔÁÐÎªÖ÷¡±¡£ÏÂÃæÒÔ×óÏÂÈý½Ç¾ØÕóÎªÀý£º
-	 * ÇóA[i][j]ÔÚÊý×éÖÐËù¶ÔÓ¦µÄkÖµ£¬n*n¾ØÕó¡£
-	 * ÒÔÐÐÎªÖ÷£ºk=i*(i-1)/2+j;
-	 * ÒÔÁÐÎªÖ÷:k=n*(j-1)+i-j*(j-1)/2;
-	 * ¼ÙÈçÓÐÒ»¸ö6*6µÄÓÒÉÏÈý½Ç¾ØÕóA£¬ÒÔÁÐÎªÖ÷¶ÔÓ¦µ½Ò»Î¬Êý×éB£¬ÇëÎÊa32Ëù¶ÔÓ¦B(k)µÄkÖµ¶àÉÙ£¿
+	 * ä¸‹ä¸‰è§’çŸ©é˜µ:å°±æ˜¯ä¸€ç§å¯¹è§’çº¿ä»¥ä¸Šçš†ä¸º0çš„n*nçŸ©é˜µï¼Œå…¶ä¸­åˆåˆ†ä¸ºå³ä¸‹ä¸‰è§’çŸ©é˜µå’Œå·¦ä¸‹ä¸‰è§’çŸ©é˜µã€‚å’Œä¸Šä¸‰è§’
+	 * çŸ©é˜µå¤„ç†æ–¹å¼ç±»ä¼¼
+	 * ä¹Ÿå¯åˆ†ä¸ºâ€œä»¥è¡Œä¸ºä¸»â€å’Œâ€œä»¥åˆ—ä¸ºä¸»â€ã€‚ä¸‹é¢ä»¥å·¦ä¸‹ä¸‰è§’çŸ©é˜µä¸ºä¾‹ï¼š
+	 * æ±‚A[i][j]åœ¨æ•°ç»„ä¸­æ‰€å¯¹åº”çš„kå€¼ï¼Œn*nçŸ©é˜µã€‚
+	 * ä»¥è¡Œä¸ºä¸»ï¼šk=i*(i-1)/2+j;
+	 * ä»¥åˆ—ä¸ºä¸»:k=n*(j-1)+i-j*(j-1)/2;
+	 * å‡å¦‚æœ‰ä¸€ä¸ª6*6çš„å³ä¸Šä¸‰è§’çŸ©é˜µAï¼Œä»¥åˆ—ä¸ºä¸»å¯¹åº”åˆ°ä¸€ç»´æ•°ç»„Bï¼Œè¯·é—®a32æ‰€å¯¹åº”B(k)çš„kå€¼å¤šå°‘ï¼Ÿ
 	 * k=n*(j-1)+i-j*(j-1)/2=6*(2-1)+3-2*(2-1)/2=8   a23=B(8)
-	 * ÓÒÏÂÈý½Ç¾ØÕó:
-	 * ÇóA[i][j]ÔÚÊý×éÖÐËù¶ÔÓ¦µÄkÖµ£¬n*n¾ØÕó¡£
-	 * ÒÔÐÐÎªÖ÷£ºk=i*(i+1)/2+j-n;
-	 * ÒÔÁÐÎªÖ÷:k=j*(j+1)/2+i-n;
+	 * å³ä¸‹ä¸‰è§’çŸ©é˜µ:
+	 * æ±‚A[i][j]åœ¨æ•°ç»„ä¸­æ‰€å¯¹åº”çš„kå€¼ï¼Œn*nçŸ©é˜µã€‚
+	 * ä»¥è¡Œä¸ºä¸»ï¼šk=i*(i+1)/2+j-n;
+	 * ä»¥åˆ—ä¸ºä¸»:k=j*(j+1)/2+i-n;
 	 */
 	public static void main(String[] args) {
 		int[][] array={{76,0,0,0,0},
@@ -26,7 +26,7 @@ public class UpperTrangularMatrix {
 	}
 
 	private static void showArray(int[][] array) {
-		System.out.println("ÏÂÈý½Ç¾ØÕó");
+		System.out.println("ä¸‹ä¸‰è§’çŸ©é˜µ");
 		for(int i=0;i<array.length;i++){
 			for(int j=0;j<array.length;j++){
 				System.out.print(array[i][j]+" ");
@@ -48,7 +48,7 @@ public class UpperTrangularMatrix {
 				}
 			}
 		}
-		System.out.println("ÒÔÐÐÎªÖ÷Ò»Î¬Êý×é±íÊ¾Îª:");
+		System.out.println("ä»¥è¡Œä¸ºä¸»ä¸€ç»´æ•°ç»„è¡¨ç¤ºä¸º:");
 		System.out.print("[");
 		for(int i=0;i<arr.length;i++){
 			System.out.print(arr[i]+" ");

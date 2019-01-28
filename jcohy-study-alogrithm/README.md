@@ -41,16 +41,29 @@
 
 
 #### Ps:数组
+>  * [两个矩阵相加](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/arrays/matrixAdd.java)
+>  * [矩阵相乘](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/arrays/matrixAdd.java)
+>  * [矩阵转置](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/arrays/matrixZZ.java)
+>  * [稀疏矩阵](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/arrays/SparseMatrix.java)
+>  * [下三角矩阵](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/arrays/UpperTrangularMatrix.java)
+>  * [多项式表达](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/arrays/PolyAdd.java)
+>  * [迷宫问题](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/arrays/maze.java)
+
 
 #### Ps:链表
 
 #### Ps:栈
+>  * [用两个栈实现一个队列](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/stack/TwoStackQueue.java)
+>  * [用一个栈实现另一个栈的排序](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/stack/SortStackByStack.java)
+>  * [利用递归函数实现一个栈的反转](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/stack/ReverseStack.java)
+>  * [汉诺塔问题](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/stack/Hano1.java)
 
 #### Ps:队列
 
 #### Ps:树
 
 #### Ps:图
+>  * [迷宫问题](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/graph/TravresingGraph.java)
 
 #### Ps:各种排序算法
 

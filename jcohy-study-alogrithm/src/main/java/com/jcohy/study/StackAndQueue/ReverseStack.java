@@ -3,10 +3,10 @@ package com.jcohy.study.StackAndQueue;
 import java.util.Stack;
 
 /*
- * ÀûÓÃµİ¹éº¯ÊıÊµÏÖÒ»¸öÕ»µÄ·´×ª
+ * åˆ©ç”¨é€’å½’å‡½æ•°å®ç°ä¸€ä¸ªæ ˆçš„åè½¬
  */
 public class ReverseStack {
-	//·µ»Ø²¢ÒÆ³ıÕ»µ×ÔªËØ
+	//è¿”å›å¹¶ç§»é™¤æ ˆåº•å…ƒç´ 
 	public int getAndRemoveLastNumber(Stack<Integer> stack){
 		int result = stack.pop();
 		if(stack.empty()){

@@ -1,7 +1,7 @@
 package com.jcohy.study.arrays;
 
 
-public class migong {
+public class maze {
 	public static int ExitX=8;
 	public static int ExitY=10;
 	public static int [][] MAZE={{1,1,1,1,1,1,1,1,1,1,1,1},
@@ -19,7 +19,7 @@ public class migong {
 		TraceRecord path=new TraceRecord();
 		x=1;
 		y=1;
-		System.out.println("[ÃÔ¹¬µÄÂ·¾¶(0µÄ²¿·Ö)]");
+		System.out.println("[è¿·å®«çš„è·¯å¾„(0çš„éƒ¨åˆ†)]");
 		for( i=0;i<10;i++){
 			for(j=0;j<12;j++){
 				System.out.print(MAZE[i][j]);
@@ -49,7 +49,7 @@ public class migong {
 				y=path.last.y;
 			}
 		}
-		System.out.println("ÀÏÊó×ß¹ýµÄ²¿·Ö");
+		System.out.println("è€é¼ èµ°è¿‡çš„éƒ¨åˆ†");
 		for( i=0;i<10;i++){
 			for(j=0;j<12;j++){
 				System.out.print(MAZE[i][j]);

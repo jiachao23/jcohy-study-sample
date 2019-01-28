@@ -9,16 +9,16 @@ public class matrixZZ {
     public static void main(String[] args) throws  IOException {
         int m,n;
         int row,col;;
-        String temp;//ÓÃÀ´½ÓÊÕ¾ØÕóÊäÈëµÄÖµ
+        String temp;//ç”¨æ¥æ¥æ”¶çŸ©é˜µè¾“å…¥çš„å€¼
         BufferedReader keyin=new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("ÇëÊäÈëm*n¾ØÕóµÄÎ¬Êı(m,n)");
-        System.out.println("ÇëÏÈÊäÈë¾ØÕóÎ¬¶ÈµÄm:");
+        System.out.println("è¯·è¾“å…¥m*nçŸ©é˜µçš„ç»´æ•°(m,n)");
+        System.out.println("è¯·å…ˆè¾“å…¥çŸ©é˜µç»´åº¦çš„m:");
         m=Integer.parseInt(keyin.readLine());
-        System.out.println("½ÓÏÂÀ´ÊäÈë¾ØÕóÎ¬¶ÈµÄn:");
+        System.out.println("æ¥ä¸‹æ¥è¾“å…¥çŸ©é˜µç»´åº¦çš„n:");
         n=Integer.parseInt(keyin.readLine());
         int A[][]=new int[m][n];
         int B[][]=new int[n][m];
-        System.out.println("ÇëÊäÈë¾ØÕóµÄÄÚÈİ");
+        System.out.println("è¯·è¾“å…¥çŸ©é˜µçš„å†…å®¹");
         for(row=1;row<=m;row++){
             for(col=1;col<=n;col++){
                 System.out.println("a"+row+col+"=");
@@ -27,7 +27,7 @@ public class matrixZZ {
             }
         }
 
-        System.out.println("ÊäÈëµÄ¾ØÕóÎª:");
+        System.out.println("è¾“å…¥çš„çŸ©é˜µä¸º:");
         for(row=1;row<=m;row++){
             for(col=1;col<=n;col++){
                 System.out.print(A[row-1][col-1]+"\t");
@@ -35,13 +35,13 @@ public class matrixZZ {
             }
             System.out.println();
         }
-        //½øĞĞ×ªÖÃµÄ¶¯×÷
+        //è¿›è¡Œè½¬ç½®çš„åŠ¨ä½œ
         for(row=1;row<=n;row++){
             for(col=1;col<=m;col++){
                 B[(row-1)][(col-1)]=A[(col-1)][(row-1)];
             }
         }
-        System.out.println("×ªÖÃ¾ØÕóÎª:");
+        System.out.println("è½¬ç½®çŸ©é˜µä¸º:");
         for(row=1;row<=n;row++){
             for(col=1;col<=m;col++){
                 System.out.print(B[row-1][col-1]+"\t");

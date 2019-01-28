@@ -3,7 +3,7 @@ package com.jcohy.study.StackAndQueue;
 import java.util.Stack;
 
 /**
- * ÓÃÒ»¸öÕ»ÊµÏÖÁíÒ»¸öÕ»µÄÅÅĞò
+ * ç”¨ä¸€ä¸ªæ ˆå®ç°å¦ä¸€ä¸ªæ ˆçš„æ’åº
  * @author jiachao
  *
  */

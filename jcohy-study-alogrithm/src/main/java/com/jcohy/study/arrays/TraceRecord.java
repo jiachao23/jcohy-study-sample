@@ -30,7 +30,7 @@ public class TraceRecord {
 	public void delete(){
 		Node newNode;
 		if(this.isEmpty()){
-			System.out.println("队列已经空了");
+			System.out.println("闃熷垪宸茬粡绌轰簡");
 			return ;
 		}
 		newNode=first;

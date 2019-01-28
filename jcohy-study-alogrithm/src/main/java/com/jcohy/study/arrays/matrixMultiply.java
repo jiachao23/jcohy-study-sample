@@ -6,12 +6,12 @@ import java.io.InputStreamReader;
 
 public class matrixMultiply {
 	/*
-	 * ¾ØÕóÏà³Ë
+	 * çŸ©é˜µç›¸ä¹˜
 	 */
     private static void MatrixMultiply(int[][] arrA, int[][] arrB, int[][] arrC, int m,
             int n, int p) {
         if(m<=0||n<=0||p<=0){
-            System.out.println("ÊäÈë´íÎó£ºn£¬m£¬p±ØĞë´óÓÚ0");
+            System.out.println("è¾“å…¥é”™è¯¯ï¼šnï¼Œmï¼Œpå¿…é¡»å¤§äº0");
             return;
         }
         for(int i=0;i<m;i++){
@@ -27,15 +27,15 @@ public class matrixMultiply {
     public static void main(String[] args) throws  IOException {
         int m,n,p;
         int i,j;;
-        String temp;//ÓÃÀ´½ÓÊÕ¾ØÕóÊäÈëµÄÖµ
+        String temp;//ç”¨æ¥æ¥æ”¶çŸ©é˜µè¾“å…¥çš„å€¼
         BufferedReader keyin=new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("ÇëÊäÈë¾ØÕóAµÄÎ¬Êı(m,n)");
-        System.out.println("ÇëÏÈÊäÈë¾ØÕóAµÄmÖµ");
+        System.out.println("è¯·è¾“å…¥çŸ©é˜µAçš„ç»´æ•°(m,n)");
+        System.out.println("è¯·å…ˆè¾“å…¥çŸ©é˜µAçš„må€¼");
         m=Integer.parseInt(keyin.readLine());
-        System.out.println("½ÓÏÂÀ´ÊäÈë¾ØÕóAµÄnÖµ");
+        System.out.println("æ¥ä¸‹æ¥è¾“å…¥çŸ©é˜µAçš„nå€¼");
         n=Integer.parseInt(keyin.readLine());
         int[][] A = new int[m][n];
-        System.out.println("ÇëÊäÈë¾ØÕóAµÄ¸÷¸öÔªËØ");
+        System.out.println("è¯·è¾“å…¥çŸ©é˜µAçš„å„ä¸ªå…ƒç´ ");
         for(i=0;i<m;i++){
             for(j=0;j<n;j++){
                 System.out.println("a"+i+j+"=");
@@ -43,13 +43,13 @@ public class matrixMultiply {
                 A[i][j]=Integer.parseInt(temp);
             }
         }
-        System.out.println("ÇëÊäÈë¾ØÕóBµÄÎ¬Êı(n,p)");
-        System.out.println("ÇëÏÈÊäÈë¾ØÕóBµÄnÖµ");
+        System.out.println("è¯·è¾“å…¥çŸ©é˜µBçš„ç»´æ•°(n,p)");
+        System.out.println("è¯·å…ˆè¾“å…¥çŸ©é˜µBçš„nå€¼");
         n=Integer.parseInt(keyin.readLine());
-        System.out.println("½ÓÏÂÀ´ÊäÈë¾ØÕóBµÄpÖµ");
+        System.out.println("æ¥ä¸‹æ¥è¾“å…¥çŸ©é˜µBçš„på€¼");
         p=Integer.parseInt(keyin.readLine());
         int B[][]=new int[n][p];
-        System.out.println("ÇëÊäÈë¾ØÕóBµÄ¸÷¸öÔªËØ");
+        System.out.println("è¯·è¾“å…¥çŸ©é˜µBçš„å„ä¸ªå…ƒç´ ");
         for(i=0;i<n;i++){
             for(j=0;j<p;j++){
                 System.out.println("b"+i+j+"=");
@@ -59,7 +59,7 @@ public class matrixMultiply {
         }
         int[][] C=new int[m][p];
         MatrixMultiply(A,B,C,m,n,p);
-        System.out.println("AºÍBÏà³Ë½á¹ûÎª");
+        System.out.println("Aå’ŒBç›¸ä¹˜ç»“æœä¸º");
         for(i=0;i<m;i++){
             for(j=0;j<p;j++){
                 System.out.print(C[i][j]+"\t");

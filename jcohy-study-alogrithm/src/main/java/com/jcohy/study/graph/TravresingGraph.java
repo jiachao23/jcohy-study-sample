@@ -5,9 +5,9 @@ package com.jcohy.study.graph;
 import java.util.LinkedList;
 import java.util.Queue;
 
-// Í¼µÄ±éÀú  
+// å›¾çš„éå†  
 public class TravresingGraph {  
-    // ÁÚ½Ó¾ØÕó´æ´¢Í¼  
+    // é‚»æ¥çŸ©é˜µå­˜å‚¨å›¾  
     // --A B C D E F G H I  
     // A 0 1 0 0 0 1 1 0 0  
     // B 1 0 1 0 0 0 1 0 1  
@@ -19,32 +19,32 @@ public class TravresingGraph {
     // H 0 0 0 1 1 0 1 0 0  
     // I 0 1 1 1 0 0 0 0 0  
   
-    // ¶¥µãÊı  
+    // é¡¶ç‚¹æ•°  
     private int number = 9;  
-    // ¼ÇÂ¼¶¥µãÊÇ·ñ±»·ÃÎÊ  
+    // è®°å½•é¡¶ç‚¹æ˜¯å¦è¢«è®¿é—®  
     private boolean[] flag;  
-    // ¶¥µã  
+    // é¡¶ç‚¹  
     private String[] vertexs = { "A", "B", "C", "D", "E", "F", "G", "H", "I" };  
-    // ±ß  
+    // è¾¹  
     private int[][] edges = {   
             { 0, 1, 0, 0, 0, 1, 1, 0, 0 }, { 1, 0, 1, 0, 0, 0, 1, 0, 1 }, { 0, 1, 0, 1, 0, 0, 0, 0, 1 },  
             { 0, 0, 1, 0, 1, 0, 1, 1, 1 }, { 0, 0, 0, 1, 0, 1, 0, 1, 0 }, { 1, 0, 0, 0, 1, 0, 1, 0, 0 },  
             { 0, 1, 0, 1, 0, 1, 0, 1, 0 }, { 0, 0, 0, 1, 1, 0, 1, 0, 0 }, { 0, 1, 1, 1, 0, 0, 0, 0, 0 }   
             };  
   
-    // Í¼µÄÉî¶È±éÀú²Ù×÷(µİ¹é)  
+    // å›¾çš„æ·±åº¦éå†æ“ä½œ(é€’å½’)  
     void DFSTraverse() {  
         flag = new boolean[number];  
         for (int i = 0; i < number; i++) {  
-            if (flag[i] == false) {// µ±Ç°¶¥µãÃ»ÓĞ±»·ÃÎÊ  
+            if (flag[i] == false) {// å½“å‰é¡¶ç‚¹æ²¡æœ‰è¢«è®¿é—®  
                 DFS(i);  
             }  
         }  
     }  
   
-    // Í¼µÄÉî¶ÈÓÅÏÈµİ¹éËã·¨  
+    // å›¾çš„æ·±åº¦ä¼˜å…ˆé€’å½’ç®—æ³•  
     void DFS(int i) {  
-        flag[i] = true;// µÚi¸ö¶¥µã±»·ÃÎÊ  
+        flag[i] = true;// ç¬¬iä¸ªé¡¶ç‚¹è¢«è®¿é—®  
         System.out.print(vertexs[i] + " ");  
         for (int j = 0; j < number; j++) {  
             if (flag[j] == false && edges[i][j] == 1) {  
@@ -53,7 +53,7 @@ public class TravresingGraph {
         }  
     }  
   
-    // Í¼µÄ¹ã¶È±éÀú²Ù×÷  
+    // å›¾çš„å¹¿åº¦éå†æ“ä½œ  
     void BFSTraverse() {  
         flag = new boolean[number];  
         Queue<Integer> queue = new LinkedList<Integer>();  
@@ -76,13 +76,13 @@ public class TravresingGraph {
         }  
     }  
   
-    // ²âÊÔ  
+    // æµ‹è¯•  
     public static void main(String[] args) {  
         TravresingGraph graph = new TravresingGraph();  
-        System.out.println("Í¼µÄÉî¶È±éÀú²Ù×÷(µİ¹é):");  
+        System.out.println("å›¾çš„æ·±åº¦éå†æ“ä½œ(é€’å½’):");  
         graph.DFSTraverse();  
         System.out.println("\n-------------");  
-        System.out.println("Í¼µÄ¹ã¶È±éÀú²Ù×÷:");  
+        System.out.println("å›¾çš„å¹¿åº¦éå†æ“ä½œ:");  
         graph.BFSTraverse();  
     }  
 }
