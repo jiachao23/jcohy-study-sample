@@ -147,6 +147,14 @@
 >   * [Swagger在Java中常用注解](https://github.com/jiachao23/jcohy-study-sample/blob/master/Swagger.md#annotations)
 >   * [Swagger在SpringBoot集成](https://github.com/jiachao23/jcohy-study-sample/blob/master/Swagger.md#jicheng)
 
+##  面试指南
+> #### Ps:面试指南。
+>   * Java
+>     * [Java基础(语言、集合框架、OOP、设计模式等)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/javabase.md)
+>     * [Java高级(JavaEE、框架、服务器、工具等)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/javaad.md)
+>     * [多线程和并发](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/juc.md)
+>     * [Java虚拟机](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/jvm.md)
+
 ##  WebSite
 > #### Ps:相关网站
 >   * [Coding](https://github.com/jiachao23/jcohy-study-sample/blob/master/website.md#Coding)
