@@ -413,7 +413,7 @@ Stream 是Java8 中处理集合的关键抽象概念，它可以指定你希望�
 
   一个终止操作，执行中间操作链，并产生结果
 
-  ![](https://github.com/jiachao23/jcohy-study-sample/blob/91bd78d2d059f56b2090ea52e53e61b194788628/jcohy-study-java/src/main/resources/static/images/1.jpg)
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/src/main/resources/static/images/1.jpg)
 
 ##### 创建Stream
 
