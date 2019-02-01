@@ -6,24 +6,24 @@
 >  我的学习笔记，记录学习过程中的笔记以及遇到的问题,以及我的一些经验总结。如果出现链接失效,或者想知道更多的内容等情况可以提交 Issues 提醒我修改相关内容。
 
 ## java集合相关面试题
-> * [java集合框架](#1)
-> * [java的线程安全](#2)
-> * [List、Map、Set三个接口存取元素时，各有什么特点？](#3)
-> * [ArrayList、LinkedList、Vector的区别](#4)
-> * [Map集合](#5)
-> * [为什么使用ConcurrentHashMap而不是HashMap或Hashtable？](#6)
-> * [Collection 和 Collections的区别？](#7)
-> * [Map、Set、List、Queue、Stack的特点与用法](#8)
-> * [HashMap的工作原理](#9)
-> * [Map的实现类的介绍](#10)
-> * [LinkedList 和 PriorityQueue 的区别？](#11)
-> * [BlockingQueue](#12)
-> * [如何对一组对象进行排序](#13)
-> * [HashMap和Hashtable的区别？](#14)
-> * [TreeMap和TreeSet在排序时如何比较元素？Collections工具类中的sort()方法如何比较元素？](#15)
+> * [java集合框架](#collection-1)
+> * [java的线程安全](#collection-2)
+> * [List、Map、Set三个接口存取元素时，各有什么特点？](#collection-3)
+> * [ArrayList、LinkedList、Vector的区别](#collection-4)
+> * [Map集合](#collection-5)
+> * [为什么使用ConcurrentHashMap而不是HashMap或Hashtable？](#collection-6)
+> * [Collection 和 Collections的区别？](#collection-7)
+> * [Map、Set、List、Queue、Stack的特点与用法](#collection-8)
+> * [HashMap的工作原理](#collection-9)
+> * [Map的实现类的介绍](#collection-10)
+> * [LinkedList 和 PriorityQueue 的区别？](#collection-11)
+> * [BlockingQueue](#collection-12)
+> * [如何对一组对象进行排序](#collection-13)
+> * [HashMap和Hashtable的区别？](#collection-14)
+> * [TreeMap和TreeSet在排序时如何比较元素？Collections工具类中的sort()方法如何比较元素？](#collection-15)
 
 
-<p id="1">
+<p id="collection-1">
 
 ####  java集合框架(常用)
 
@@ -43,13 +43,13 @@ Map - LinkedHashMap
 Map - ConcurrentHashMap
 ```
 
-<p id="2">
+<p id="collection-2">
 
 #### java的线程安全
 
 Vector、Stack、HashTable、ConcurrentHashMap、Properties
 
-<p id="3">
+<p id="collection-3">
 
 #### List、Map、Set三个接口存取元素时，各有什么特点？
 
@@ -61,7 +61,7 @@ Map保存键值对（key-value pair）映射，映射关系可以是一对一或
 
 Set和Map容器都有基于哈希存储和排序树的两种实现版本，基于哈希存储的版本理论存取时间复杂度为O(1)，而基于排序树版本的实现在插入或删除元素时会按照元素或元素的键（key）构成排序树从而达到排序和去重的效果。
 
-<p id="4">
+<p id="collection-4">
 
 ####  ArrayList、LinkedList、Vector的区别
 
@@ -76,7 +76,7 @@ ArrayList、LinkedList的区别：
 Vector属于遗留容器（Java早期的版本中提供的容器，除此之外，Hashtable、Dictionary、BitSet、Stack、Properties都是遗留容器），已经不推荐使用，但是由于ArrayList和LinkedListed都是非线程安全的，如果遇到多个线程操作同一个容器的场景，则可以通过工具类Collections中的synchronizedList方法将其转换成线程安全的容器后再使用（这是对装饰模式的应用，将已有对象传入另一个类的构造器中创建新的对象来增强实现）。
 补充：遗留容器中的Properties类和Stack类在设计上有严重的问题，Properties是一个键和值都是字符串的特殊的键值对映射，在设计上应该是关联一个Hashtable并将其两个泛型参数设置为String类型，但是Java API中的Properties直接继承了Hashtable，这很明显是对继承的滥用。这里复用代码的方式应该是Has-A关系而不是Is-A关系，另一方面容器都属于工具类，继承工具类本身就是一个错误的做法，使用工具类最好的方式是Has-A关系（关联）或Use-A关系（依赖）。同理，Stack类继承Vector也是不正确的。Sun公司的工程师们也会犯这种低级错误，让人唏嘘不已。
 
-<p id="5">
+<p id="collection-5">
 
 #### Map集合
 
@@ -97,7 +97,7 @@ Vector属于遗留容器（Java早期的版本中提供的容器，除此之外�
 - ConcurrentHashMap:是JUC包下的一个并发集合。
 
 
-<p id="6">
+<p id="collection-6">
 
 #### 为什么使用ConcurrentHashMap而不是HashMap或Hashtable？
 
@@ -153,20 +153,20 @@ get操作：
 
 2\.ConcurrentHashMap既不允许null key也不允许null value
 
-<p id="7">
+<p id="collection-7">
 
 ####  Collection 和 Collections的区别
 
 Collection是集合类的上级接口，子接口主要有Set 和List、Queue
 Collections是针对集合类的一个辅助类，提供了操作集合的工具方法：一系列静态方法实现对各种集合的搜索、排序、线程安全化等操作。
 
-<p id="8">
+<p id="collection-8">
 
 ####  Map、Set、List、Queue、Stack的特点与用法
 
 Set集合类似于一个罐子，"丢进"Set集合里的多个对象之间没有明显的顺序。 List集合代表元素有序、可重复的集合，集合中每个元素都有其对应的顺序索引。 Stack是Vector提供的一个子类，用于模拟"栈"这种数据结构(LIFO后进先出) Queue用于模拟"队列"这种数据结构(先进先出 FIFO)。 Map用于保存具有"映射关系"的数据，因此Map集合里保存着两组值。
 
-<p id="9">
+<p id="collection-9">
 
 ####  HashMap的工作原理
 
@@ -174,7 +174,7 @@ HashMap维护了一个Entry数组，Entry内部类有key,value，hash和next四�
 
 关于HashMap[的源码分析请参考](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/HashMap.md)
 
-<p id="10">
+<p id="collection-10">
 
 ####  Map的实现类的介绍
 
@@ -198,26 +198,26 @@ HashMap基于散列表来的实现，即使用hashCode()进行快速查询元素
 - HashTable：基于Dictionary类的Map接口的实现，它是线程安全的。
 
 
-<p id="11">
+<p id="collection-11">
 
 ####  LinkedList 和 PriorityQueue 的区别
 
 它们均是Queue接口的实现。拥有FIFO的特点，它们的区别在于排序行为。LinkedList支持双向列表操作，
 PriorityQueue 按优先级组织的队列，元素的出队次序由元素的自然排序或者由Comparator比较器指定。
 
-<p id="12">
+<p id="collection-12">
 
 ####  BlockingQueue
 
 Java.util.concurrent.BlockingQueue是一个队列，在进行获取元素时，它会等待队列变为非空；当在添加一个元素时，它会等待队列中的可用空间。BlockingQueue接口是Java集合框架的一部分，主要用于实现生产者-消费者模式。我们不需要担心等待生产者有可用的空间，或消费者有可用的对象，因为它都在BlockingQueue的实现类中被处理了。Java提供了集中BlockingQueue的实现，比如ArrayBlockingQueue、LinkedBlockingQueue、PriorityBlockingQueue,、SynchronousQueue等。
 
-<p id="13">
+<p id="collection-13">
 
 ####  如何对一组对象进行排序
 
 如果需要对一个对象数组进行排序，我们可以使用Arrays.sort()方法。如果我们需要排序一个对象列表，我们可以使用Collections.sort()方法。排序时是默认根据元素的自然排序（使用Comparable）或使用Comparator外部比较器。Collections内部使用数组排序方法，所有它们两者都有相同的性能，只是Collections需要花时间将列表转换为数组。
 
-<p id="14">
+<p id="collection-14">
 
 #### HashMap和Hashtable的区别
 
@@ -229,7 +229,7 @@ Java.util.concurrent.BlockingQueue是一个队列，在进行获取元素时，�
 
 注：Fast-fail机制:在使用迭代器的过程中有其它线程修改了集合对象结构或元素数量,都将抛出ConcurrentModifiedException，但是抛出这个异常是不保证的，我们不能编写依赖于此异常的程序。
 
-<p id="15">
+<p id="collection-15">
 
 ####  TreeMap和TreeSet在排序时如何比较元素？Collections工具类中的sort()方法如何比较元素？
 

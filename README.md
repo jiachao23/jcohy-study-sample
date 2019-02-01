@@ -149,13 +149,14 @@
 
 ##  面试指南
 > #### Ps:面试指南。
->   * Java
->     * [Java基础(语言、OOP、异常等)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/javabase.md)
->     * [Java集合相关)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/collection.md)
->     * [Java线程相关](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/juc.md)
->     * [JavaIO相关)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/javaad.md)
->     * [Java网络编程相关)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/javaad.md)
->     * [Java虚拟机](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/jvm.md)
+>  * Java
+>     * [Java基础(语言、OOP、异常等)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/java-base.md)
+>     * [Java集合相关)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/java-collection.md)
+>     * [Java线程相关](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/java-thread.md)
+>     * [Java流，反射，网络编程相关)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/java-stream.md)
+>     * [Java虚拟机](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/java-jvm.md)
+>     * [JavaEE](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/java-javaee.md)
+>  * 设计模式:查看jcohy-study-designpattern模块。
 
 ##  WebSite
 > #### Ps:相关网站
