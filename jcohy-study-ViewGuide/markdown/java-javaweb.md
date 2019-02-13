@@ -7,6 +7,8 @@
 
 ## javaWebÃæÊÔ
 > * [XMLÎÄµµ¶¨ÒåÓÐ¼¸ÖÖÐÎÊ½£¿ËüÃÇÖ®¼äÓÐºÎ±¾ÖÊÇø±ð£¿½âÎöXMLÎÄµµÓÐÄÄ¼¸ÖÖ·½Ê½£¿](#javaweb-1)
+> * [XMLÓëJSON¶Ô±ÈºÍÇø±ð?](#javaweb-43)
+> * [Servlet](#javaweb-42)
 > * [ÄãÔÚÏîÄ¿ÖÐÄÄÐ©µØ·½ÓÃµ½ÁËXML£¿](#javaweb-2)
 > * [²ûÊöJDBC²Ù×÷Êý¾Ý¿âµÄ²½Öè¡£](#javaweb-3)
 > * [StatementºÍPreparedStatementÓÐÊ²Ã´Çø±ð£¿ÄÄ¸öÐÔÄÜ¸üºÃ£¿](#javaweb-4)
@@ -55,6 +57,7 @@ XMLÎÄµµ¶¨Òå·ÖÎªDTDºÍSchemaÁ½ÖÖÐÎÊ½£¬¶þÕß¶¼ÊÇ¶ÔXMLÓï·¨µÄÔ¼Êø£¬Æä±¾ÖÊÇø±ðÔÚÓÚSchem
 
 
 <p id="javaweb-2">
+
 #### ÄãÔÚÏîÄ¿ÖÐÄÄÐ©µØ·½ÓÃµ½ÁËXML£¿
 
 XMLµÄÖ÷Òª×÷ÓÃÓÐÁ½¸ö·½Ãæ£ºÊý¾Ý½»»»ºÍÐÅÏ¢ÅäÖÃ¡£ÔÚ×öÊý¾Ý½»»»Ê±£¬XML½«Êý¾ÝÓÃ±êÇ©×é×°³ÉÆðÀ´£¬È»ºóÑ¹Ëõ´ò°ü¼ÓÃÜºóÍ¨¹ýÍøÂç´«ËÍ¸ø½ÓÊÕÕß£¬½ÓÊÕ½âÃÜÓë½âÑ¹ËõºóÔÙ´ÓXMLÎÄ¼þÖÐ»¹Ô­Ïà¹ØÐÅÏ¢½øÐÐ´¦Àí¡£
@@ -62,6 +65,7 @@ XMLÔø¾­ÊÇÒì¹¹ÏµÍ³¼ä½»»»Êý¾ÝµÄÊÂÊµ±ê×¼£¬µ«´ËÏî¹¦ÄÜ¼¸ºõÒÑ¾­±»JSON£¨JavaScript Obje
 ²¹³ä£ºÏÖÔÚÓÐºÜ¶àÊ±÷ÖµÄÈí¼þ£¨ÈçSublime£©ÒÑ¾­¿ªÊ¼½«ÅäÖÃÎÄ¼þÊéÐ´³ÉJSON¸ñÊ½£¬ÎÒÃÇÒÑ¾­Ç¿ÁÒµÄ¸ÐÊÜµ½XMLµÄÁíÒ»Ïî¹¦ÄÜÒ²½«Öð½¥±»Òµ½çÅ×Æú¡£
 
 <p id="javaweb-3">
+
 #### ²ûÊöJDBC²Ù×÷Êý¾Ý¿âµÄ²½Öè¡£
 
 ÏÂÃæµÄ´úÂëÒÔÁ¬½Ó±¾»úµÄOracleÊý¾Ý¿âÎªÀý£¬ÑÝÊ¾JDBC²Ù×÷Êý¾Ý¿âµÄ²½Öè¡£
@@ -102,23 +106,27 @@ finally {
 ÌáÊ¾£º¹Ø±ÕÍâ²¿×ÊÔ´µÄË³ÐòÓ¦¸ÃºÍ´ò¿ªµÄË³ÐòÏà·´£¬Ò²¾ÍÊÇËµÏÈ¹Ø±ÕResultSet¡¢ÔÙ¹Ø±ÕStatement¡¢ÔÚ¹Ø±ÕConnection¡£ÉÏÃæµÄ´úÂëÖ»¹Ø±ÕÁËConnection£¨Á¬½Ó£©£¬ËäÈ»Í¨³£Çé¿öÏÂÔÚ¹Ø±ÕÁ¬½ÓÊ±£¬Á¬½ÓÉÏ´´½¨µÄÓï¾äºÍ´ò¿ªµÄÓÎ±êÒ²»á¹Ø±Õ£¬µ«²»ÄÜ±£Ö¤×ÜÊÇÈç´Ë£¬Òò´ËÓ¦¸Ã°´ÕÕ¸Õ²ÅËµµÄË³Ðò·Ö±ð¹Ø±Õ¡£´ËÍâ£¬µÚÒ»²½¼ÓÔØÇý¶¯ÔÚJDBC 4.0ÖÐÊÇ¿ÉÒÔÊ¡ÂÔµÄ£¨×Ô¶¯´ÓÀàÂ·¾¶ÖÐ¼ÓÔØÇý¶¯£©£¬µ«ÊÇÎÒÃÇ½¨Òé±£Áô¡£
 
 <p id="javaweb-4">
+
 #### StatementºÍPreparedStatementÓÐÊ²Ã´Çø±ð£¿ÄÄ¸öÐÔÄÜ¸üºÃ£¿
 
 ÓëStatementÏà±È£¬¢ÙPreparedStatement½Ó¿Ú´ú±íÔ¤±àÒëµÄÓï¾ä£¬ËüÖ÷ÒªµÄÓÅÊÆÔÚÓÚ¿ÉÒÔ¼õÉÙSQLµÄ±àÒë´íÎó²¢Ôö¼ÓSQLµÄ°²È«ÐÔ£¨¼õÉÙSQL×¢Éä¹¥»÷µÄ¿ÉÄÜÐÔ£©£»¢ÚPreparedStatementÖÐµÄSQLÓï¾äÊÇ¿ÉÒÔ´ø²ÎÊýµÄ£¬±ÜÃâÁËÓÃ×Ö·û´®Á¬½ÓÆ´½ÓSQLÓï¾äµÄÂé·³ºÍ²»°²È«£»¢Ûµ±ÅúÁ¿´¦ÀíSQL»òÆµ·±Ö´ÐÐÏàÍ¬µÄ²éÑ¯Ê±£¬PreparedStatementÓÐÃ÷ÏÔµÄÐÔÄÜÉÏµÄÓÅÊÆ£¬ÓÉÓÚÊý¾Ý¿â¿ÉÒÔ½«±àÒëÓÅ»¯ºóµÄSQLÓï¾ä»º´æÆðÀ´£¬ÏÂ´ÎÖ´ÐÐÏàÍ¬½á¹¹µÄÓï¾äÊ±¾Í»áºÜ¿ì£¨²»ÓÃÔÙ´Î±àÒëºÍÉú³ÉÖ´ÐÐ¼Æ»®£©¡£
 ²¹³ä£ºÎªÁËÌá¹©¶Ô´æ´¢¹ý³ÌµÄµ÷ÓÃ£¬JDBC APIÖÐ»¹Ìá¹©ÁËCallableStatement½Ó¿Ú¡£´æ´¢¹ý³Ì£¨Stored Procedure£©ÊÇÊý¾Ý¿âÖÐÒ»×éÎªÁËÍê³ÉÌØ¶¨¹¦ÄÜµÄSQLÓï¾äµÄ¼¯ºÏ£¬¾­±àÒëºó´æ´¢ÔÚÊý¾Ý¿âÖÐ£¬ÓÃ»§Í¨¹ýÖ¸¶¨´æ´¢¹ý³ÌµÄÃû×Ö²¢¸ø³ö²ÎÊý£¨Èç¹û¸Ã´æ´¢¹ý³Ì´øÓÐ²ÎÊý£©À´Ö´ÐÐËü¡£ËäÈ»µ÷ÓÃ´æ´¢¹ý³Ì»áÔÚÍøÂç¿ªÏú¡¢°²È«ÐÔ¡¢ÐÔÄÜÉÏ»ñµÃºÜ¶àºÃ´¦£¬µ«ÊÇ´æÔÚÈç¹ûµ×²ãÊý¾Ý¿â·¢ÉúÇ¨ÒÆÊ±¾Í»áÓÐºÜ¶àÂé·³£¬ÒòÎªÃ¿ÖÖÊý¾Ý¿âµÄ´æ´¢¹ý³ÌÔÚÊéÐ´ÉÏ´æÔÚ²»ÉÙµÄ²î±ð¡£
 
 <p id="javaweb-5">
+
 #### ÔÚ½øÐÐÊý¾Ý¿â±à³ÌÊ±£¬Á¬½Ó³ØÓÐÊ²Ã´×÷ÓÃ£¿
 
 ÓÉÓÚ´´½¨Á¬½ÓºÍÊÍ·ÅÁ¬½Ó¶¼ÓÐºÜ´óµÄ¿ªÏú£¨ÓÈÆäÊÇÊý¾Ý¿â·þÎñÆ÷²»ÔÚ±¾µØÊ±£¬Ã¿´Î½¨Á¢Á¬½Ó¶¼ÐèÒª½øÐÐTCPµÄÈý´ÎÎÕÊÖ£¬ÊÍ·ÅÁ¬½ÓÐèÒª½øÐÐTCPËÄ´ÎÎÕÊÖ£¬Ôì³ÉµÄ¿ªÏúÊÇ²»¿ÉºöÊÓµÄ£©£¬ÎªÁËÌáÉýÏµÍ³·ÃÎÊÊý¾Ý¿âµÄÐÔÄÜ£¬¿ÉÒÔÊÂÏÈ´´½¨Èô¸ÉÁ¬½ÓÖÃÓÚÁ¬½Ó³ØÖÐ£¬ÐèÒªÊ±Ö±½Ó´ÓÁ¬½Ó³Ø»ñÈ¡£¬Ê¹ÓÃ½áÊøÊ±¹é»¹Á¬½Ó³Ø¶ø²»±Ø¹Ø±ÕÁ¬½Ó£¬´Ó¶ø±ÜÃâÆµ·±´´½¨ºÍÊÍ·ÅÁ¬½ÓËùÔì³ÉµÄ¿ªÏú£¬ÕâÊÇµäÐÍµÄÓÃ¿Õ¼ä»»È¡Ê±¼äµÄ²ßÂÔ£¨ÀË·ÑÁË¿Õ¼ä´æ´¢Á¬½Ó£¬µ«½ÚÊ¡ÁË´´½¨ºÍÊÍ·ÅÁ¬½ÓµÄÊ±¼ä£©¡£³Ø»¯¼¼ÊõÔÚJava¿ª·¢ÖÐÊÇºÜ³£¼ûµÄ£¬ÔÚÊ¹ÓÃÏß³ÌÊ±´´½¨Ïß³Ì³ØµÄµÀÀíÓë´ËÏàÍ¬¡£»ùÓÚJavaµÄ¿ªÔ´Êý¾Ý¿âÁ¬½Ó³ØÖ÷ÒªÓÐ£ºC3P0¡¢Proxool¡¢DBCP¡¢BoneCP¡¢DruidµÈ¡£
 ²¹³ä£ºÔÚ¼ÆËã»úÏµÍ³ÖÐÊ±¼äºÍ¿Õ¼äÊÇ²»¿Éµ÷ºÍµÄÃ¬¶Ü£¬Àí½âÕâÒ»µã¶ÔÉè¼ÆÂú×ãÐÔÄÜÒªÇóµÄËã·¨ÊÇÖÁ¹ØÖØÒªµÄ¡£´óÐÍÍøÕ¾ÐÔÄÜÓÅ»¯µÄÒ»¸ö¹Ø¼ü¾ÍÊÇÊ¹ÓÃ»º´æ£¬¶ø»º´æ¸úÉÏÃæ½²µÄÁ¬½Ó³ØµÀÀí·Ç³£ÀàËÆ£¬Ò²ÊÇÊ¹ÓÃ¿Õ¼ä»»Ê±¼äµÄ²ßÂÔ¡£¿ÉÒÔ½«ÈÈµãÊý¾ÝÖÃÓÚ»º´æÖÐ£¬µ±ÓÃ»§²éÑ¯ÕâÐ©Êý¾ÝÊ±¿ÉÒÔÖ±½Ó´Ó»º´æÖÐµÃµ½£¬ÕâÎÞÂÛÈçºÎÒ²¿ì¹ýÈ¥Êý¾Ý¿âÖÐ²éÑ¯¡£µ±È»£¬»º´æµÄÖÃ»»²ßÂÔµÈÒ²»á¶ÔÏµÍ³ÐÔÄÜ²úÉúÖØÒªÓ°Ïì£¬¶ÔÓÚÕâ¸öÎÊÌâµÄÌÖÂÛÒÑ¾­³¬³öÁËÕâÀïÒª²ûÊöµÄ·¶Î§¡£
 
 <p id="javaweb-6">
+
 #### Ê²Ã´ÊÇDAOÄ£Ê½£¿
 
 DAO£¨Data Access Object£©¹ËÃûË¼ÒåÊÇÒ»¸öÎªÊý¾Ý¿â»òÆäËû³Ö¾Ã»¯»úÖÆÌá¹©ÁË³éÏó½Ó¿ÚµÄ¶ÔÏó£¬ÔÚ²»±©Â¶µ×²ã³Ö¾Ã»¯·½°¸ÊµÏÖÏ¸½ÚµÄÇ°ÌáÏÂÌá¹©ÁË¸÷ÖÖÊý¾Ý·ÃÎÊ²Ù×÷¡£ÔÚÊµ¼ÊµÄ¿ª·¢ÖÐ£¬Ó¦¸Ã½«ËùÓÐ¶ÔÊý¾ÝÔ´µÄ·ÃÎÊ²Ù×÷½øÐÐ³éÏó»¯ºó·â×°ÔÚÒ»¸ö¹«¹²APIÖÐ¡£ÓÃ³ÌÐòÉè¼ÆÓïÑÔÀ´Ëµ£¬¾ÍÊÇ½¨Á¢Ò»¸ö½Ó¿Ú£¬½Ó¿ÚÖÐ¶¨ÒåÁË´ËÓ¦ÓÃ³ÌÐòÖÐ½«»áÓÃµ½µÄËùÓÐÊÂÎñ·½·¨¡£ÔÚÕâ¸öÓ¦ÓÃ³ÌÐòÖÐ£¬µ±ÐèÒªºÍÊý¾ÝÔ´½øÐÐ½»»¥µÄÊ±ºòÔòÊ¹ÓÃÕâ¸ö½Ó¿Ú£¬²¢ÇÒ±àÐ´Ò»¸öµ¥¶ÀµÄÀàÀ´ÊµÏÖÕâ¸ö½Ó¿Ú£¬ÔÚÂß¼­ÉÏ¸ÃÀà¶ÔÓ¦Ò»¸öÌØ¶¨µÄÊý¾Ý´æ´¢¡£DAOÄ£Ê½Êµ¼ÊÉÏ°üº¬ÁËÁ½¸öÄ£Ê½£¬Ò»ÊÇData Accessor£¨Êý¾Ý·ÃÎÊÆ÷£©£¬¶þÊÇData Object£¨Êý¾Ý¶ÔÏó£©£¬Ç°ÕßÒª½â¾öÈçºÎ·ÃÎÊÊý¾ÝµÄÎÊÌâ£¬¶øºóÕßÒª½â¾öµÄÊÇÈçºÎÓÃ¶ÔÏó·â×°Êý¾Ý¡£
 
 <p id="javaweb-7">
+
 #### ÊÂÎñµÄACIDÊÇÖ¸Ê²Ã´£¿
 
 - Ô­×ÓÐÔ(Atomic)£ºÊÂÎñÖÐ¸÷Ïî²Ù×÷£¬ÒªÃ´È«×öÒªÃ´È«²»×ö£¬ÈÎºÎÒ»Ïî²Ù×÷µÄÊ§°Ü¶¼»áµ¼ÖÂÕû¸öÊÂÎñµÄÊ§°Ü
@@ -211,12 +219,14 @@ DAO£¨Data Access Object£©¹ËÃûË¼ÒåÊÇÒ»¸öÎªÊý¾Ý¿â»òÆäËû³Ö¾Ã»¯»úÖÆÌá¹©ÁË³éÏó½Ó¿ÚµÄ¶
 ÐèÒªËµÃ÷µÄÊÇ£¬ÊÂÎñ¸ôÀë¼¶±ðºÍÊý¾Ý·ÃÎÊµÄ²¢·¢ÐÔÊÇ¶ÔÁ¢µÄ£¬ÊÂÎñ¸ôÀë¼¶±ðÔ½¸ß²¢·¢ÐÔ¾ÍÔ½²î¡£ËùÒÔÒª¸ù¾Ý¾ßÌåµÄÓ¦ÓÃÀ´È·¶¨ºÏÊÊµÄÊÂÎñ¸ôÀë¼¶±ð£¬Õâ¸öµØ·½Ã»ÓÐÍòÄÜµÄÔ­Ôò¡£
 
 <p id="javaweb-8">
+
 #### JDBCÖÐÈçºÎ½øÐÐÊÂÎñ´¦Àí£¿
 
 ConnectionÌá¹©ÁËÊÂÎñ´¦ÀíµÄ·½·¨£¬Í¨¹ýµ÷ÓÃsetAutoCommit(false)¿ÉÒÔÉèÖÃÊÖ¶¯Ìá½»ÊÂÎñ£»µ±ÊÂÎñÍê³ÉºóÓÃcommit()ÏÔÊ½Ìá½»ÊÂÎñ£»Èç¹ûÔÚÊÂÎñ´¦Àí¹ý³ÌÖÐ·¢ÉúÒì³£ÔòÍ¨¹ýrollback()½øÐÐÊÂÎñ»Ø¹ö¡£³ý´ËÖ®Íâ£¬´ÓJDBC 3.0ÖÐ»¹ÒýÈëÁËSavepoint£¨±£´æµã£©µÄ¸ÅÄî£¬ÔÊÐíÍ¨¹ý´úÂëÉèÖÃ±£´æµã²¢ÈÃÊÂÎñ»Ø¹öµ½Ö¸¶¨µÄ±£´æµã¡£
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/src/main/resources/static/images/2.jpg)
 
 <p id="javaweb-9">
+
 #### JDBCÄÜ·ñ´¦ÀíBlobºÍClob£¿
 
 BlobÊÇÖ¸¶þ½øÖÆ´ó¶ÔÏó£¨Binary Large Object£©£¬¶øClobÊÇÖ¸´ó×Ö·û¶ÔÏó£¨Character Large Objec£©£¬Òò´ËÆäÖÐBlobÊÇÎª´æ´¢´óµÄ¶þ½øÖÆÊý¾Ý¶øÉè¼ÆµÄ£¬¶øClobÊÇÎª´æ´¢´óµÄÎÄ±¾Êý¾Ý¶øÉè¼ÆµÄ¡£JDBCµÄPreparedStatementºÍResultSet¶¼Ìá¹©ÁËÏàÓ¦µÄ·½·¨À´Ö§³ÖBlobºÍClob²Ù×÷¡£ÏÂÃæµÄ´úÂëÕ¹Ê¾ÁËÈçºÎÊ¹ÓÃJDBC²Ù×÷LOB£º 
@@ -1173,3 +1183,111 @@ JavaÁìÓòµÄWeb Service¿ò¼ÜºÜ¶à£¬°üÀ¨Axis2£¨AxisµÄÉý¼¶°æ±¾£©¡¢Jersey£¨RESTfulµÄWeb
 2. µã»÷Ò»´ÎÖ®ºó£¬°´Å¥Ê§Ð§
 3. Í¨¹ýloading(LoadingÔ­ÀíÊÇÔÚµã»÷Ìá½»Ê±£¬Éú³ÉLoadingÑùÊ½£¬ÔÚÌá½»Íê³ÉÖ®ºóÒþ²Ø¸ÃÑùÊ½)
 4. ×Ô¶¨ÒåÖØ¸´Ìá½»¹ýÂËÆ÷
+
+<p id="javaweb-42">
+
+#### Servlet
+
+1.1 Servlet¼Ì³ÐÊµÏÖ½á¹¹
+
+```sh
+Servlet (½Ó¿Ú) 			-->      init|service|destroy·½·¨
+GenericServlet(³éÏóÀà)  -->      ÓëÐ­ÒéÎÞ¹ØµÄServlet
+HttpServlet(³éÏóÀà)		-->		 ÊµÏÖÁËhttpÐ­Òé
+×Ô¶¨ÒåServlet			-->		 ÖØÐ´doGet/doPost
+```
+
+1.2 ±àÐ´ServletµÄ²½Öè
+
+1. ¼Ì³ÐHttpServlet
+2. ÖØÐ´doGet/doPost·½·¨
+3. ÔÚweb.xmlÖÐ×¢²áservlet
+
+1.3 ServletÉúÃüÖÜÆÚ
+
+1. `init`:½öÖ´ÐÐÒ»´Î,¸ºÔð×°ÔØservletÊ±³õÊ¼»¯servlet¶ÔÏó
+2. `service`:ºËÐÄ·½·¨,Ò»°ãget/postÁ½ÖÖ·½Ê½
+3. `destroy`:Í£Ö¹²¢Ð¶ÔØservlet,ÊÍ·Å×ÊÔ´
+
+1.4 ¹ý³Ì
+
+1. ¿Í»§¶ËrequestÇëÇó -> ·þÎñÆ÷¼ì²éServletÊµÀýÊÇ·ñ´æÔÚ -> Èô´æÔÚµ÷ÓÃÏàÓ¦service·½·¨
+2. ¿Í»§¶ËrequestÇëÇó -> ·þÎñÆ÷¼ì²éServletÊµÀýÊÇ·ñ´æÔÚ -> Èô²»´æÔÚ×°ÔØServletÀà²¢´´½¨ÊµÀý -> µ÷ÓÃinit³õÊ¼»¯ -> µ÷ÓÃservice
+3. ¼ÓÔØºÍÊµÀý»¯¡¢³õÊ¼»¯¡¢´¦ÀíÇëÇó¡¢·þÎñ½áÊø
+
+1.5 doPost·½·¨ÒªÅ×³öµÄÒì³£:ServletExcception¡¢IOException
+
+1.6 ServletÈÝÆ÷×°ÔØServlet
+
+1. web.xmlÖÐÅäÖÃload-on-startupÆô¶¯Ê±×°ÔØ
+2. ¿Í»§Ê×´ÎÏòServlet·¢ËÍÇëÇó
+3. ServletÀàÎÄ¼þ±»¸üÐÂºó, ÖØÐÂ×°ÔØServlet
+
+1.7 HttpServletÈÝÆ÷ÏìÓ¦web¿Í»§ÇëÇóÁ÷³Ì
+
+1. Web¿Í»§ÏòservletÈÝÆ÷·¢³öhttpÇëÇó
+2. servletÈÝÆ÷½âÎöWeb¿Í»§µÄhttpÇëÇó
+3. servletÈÝÆ÷´´½¨Ò»¸öHttpRequest¶ÔÏó, ·â×°httpÇëÇóÐÅÏ¢
+4. servletÈÝÆ÷´´½¨Ò»¸öHttpResponse¶ÔÏó
+5. servletÈÝÆ÷µ÷ÓÃHttpServletµÄservice·½·¨, °ÑHttpRequestºÍHttpResponse¶ÔÏó×÷Îªservice·½·¨µÄ²ÎÊý´«¸øHttpServlet¶ÔÏó
+6. HttpServletµ÷ÓÃhttprequestµÄÓÐ¹Ø·½·¨, »ñÈ¡httpÇëÇóÐÅÏ¢
+7. httpservletµ÷ÓÃhttpresponseµÄÓÐ¹Ø·½·¨, Éú³ÉÏìÓ¦Êý¾Ý
+8. ServletÈÝÆ÷°ÑHttpServletµÄÏìÓ¦½á¹û´«¸øweb¿Í»§
+
+1.8 HttpServletRequestÍê³ÉµÄÒ»Ð©¹¦ÄÜ
+
+1. request.getCookie()
+2. request.getHeader(String s)
+3. request.getContextPath()
+4. request.getSession()
+
+```
+HttpSession session = request.getSession(boolean create)
+·µ»Øµ±Ç°ÇëÇóµÄ»á»°
+```
+
+1.9 HttpServletResponseÍê³ÉÒ»Ð©µÄ¹¦ÄÜ
+
+1. ÉèhttpÏìÓ¦Í·
+2. ÉèÖÃCookie
+3. Êä³ö·µ»ØÊý¾Ý
+
+1.10 ServletÓëJSP¾Å´óÄÚÖÃ¶ÔÏóµÄ¹ØÏµ
+
+JSP¶ÔÏó 				ÔõÑù»ñµÃ
+```
+1. out				->		response.getWriter
+2. request 		->		Service·½·¨ÖÐµÄreq²ÎÊý
+3. response 		->		Service·½·¨ÖÐµÄresp²ÎÊý
+4. session 		->		request.getSession
+5. application 	->		getServletContext
+6. exception 		->		Throwable
+7. page  			->		this
+8. pageContext  	->		PageContext
+9. Config 			->		getServletConfig
+```
+
+exceptionÊÇJSP¾Å´óÄÚÖÃ¶ÔÏóÖ®Ò»£¬ÆäÊµÀý´ú±íÆäËûÒ³ÃæµÄÒì³£ºÍ´íÎó¡£Ö»ÓÐµ±Ò³ÃæÊÇ´íÎó´¦ÀíÒ³ÃæÊ±£¬¼´isErroePageÎª trueÊ±£¬¸Ã¶ÔÏó²Å¿ÉÒÔÊ¹ÓÃ¡£
+
+<p id="javaweb-43">
+
+#### XMLÓëJSON¶Ô±ÈºÍÇø±ð
+
+XML
+
+```
+1£©Ó¦ÓÃ¹ã·º£¬¿ÉÀ©Õ¹ÐÔÇ¿£¬±»¹ã·ºÓ¦ÓÃ¸÷ÖÖ³¡ºÏ
+2£©¶ÁÈ¡¡¢½âÎöÃ»ÓÐJSON¿ì
+3£©¿É¶ÁÐÔÇ¿£¬¿ÉÃèÊö¸´ÔÓ½á¹¹
+```
+
+JSON
+
+```
+1£©½á¹¹¼òµ¥£¬¶¼ÊÇ¼üÖµ¶Ô
+2£©¶ÁÈ¡¡¢½âÎöËÙ¶È¿ì£¬ºÜ¶àÓïÑÔÖ§³Ö
+3£©´«ÊäÊý¾ÝÁ¿Ð¡£¬´«ÊäËÙÂÊ´ó´óÌá¸ß
+4£©ÃèÊö¸´ÔÓ½á¹¹ÄÜÁ¦½ÏÈõ
+
+JavaScript¡¢PHPµÈÔ­ÉúÖ§³Ö£¬¼ò»¯ÁË¶ÁÈ¡½âÎö¡£³ÉÎªµ±Ç°»¥ÁªÍøÊ±´úÆÕ±éÓ¦ÓÃµÄÊý¾Ý½á¹¹¡£
+```

@@ -158,8 +158,11 @@
 >     * [JavaWeb](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/java-javaweb.md)
 >     * [JavaEE](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/java-javaee.md)
 >  * 设计模式:查看jcohy-study-designpattern模块。
->  * Sql:[Sql简单的demo)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/sql.md)
-
+>  * 数据库:[数据库)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/sql.md)
+>  * 算法和数据结构:[算法和数据结构)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/alogrithm.md)
+>  * 计算机网络:[计算机网络)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/network.md)
+>  * 操作系统:[操作系统)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/os.md)
+>  * 其他:[其他)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/others.md)
 ##  WebSite
 > #### Ps:相关网站
 >   * [Coding](https://github.com/jiachao23/jcohy-study-sample/blob/master/website.md#Coding)
