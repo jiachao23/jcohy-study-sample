@@ -82,6 +82,7 @@
 ## jcohy-study-alogrithm
 > #### Ps:经典算法，排序相关代码
 > * [编程题目录](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/README.md)
+> * [排序算法](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/markdown/sort.md)
 
 ## jcohy-study-security
 > #### Ps:安全算法相关
