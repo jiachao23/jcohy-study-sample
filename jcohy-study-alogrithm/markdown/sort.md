@@ -9,10 +9,13 @@
 > * [相关概念](#sort-1)
 > * [算法分类](#sort-2)
 > * [算法复杂度](#sort-3)
-> * [直接插入排序（Insert Sort](#sort-3)
-> * [希尔排序（Shell Sort）](#sort-3)
-> * [冒泡排序（Bubble Sort）](#sort-3)
-> * [选择排序（Selection Sort）](#sort-3)
+> * [直接插入排序（Insertion Sort](#sort-4)
+> * [希尔排序（Shell Sort）](#sort-5)
+> * [冒泡排序（Bubble Sort）](#sort-6)
+> * [选择排序（Selection Sort）](#sort-7)
+>  * [直接选择排序（Selection Sort）](#sort-8)
+>  * [堆排序（Heap Sort）](#sort-9)
+
 
 #### 相关概念
 
@@ -51,7 +54,7 @@
 
 
 
-#### 直接插入排序
+#### 直接插入排序（Insertion Sort）
 
 - 基本原理
 
@@ -82,7 +85,7 @@
 
   
 
-#### 希尔排序
+#### 希尔排序（Shell Sort）
 
 - 基本原理
 
@@ -179,9 +182,47 @@
 
 - 代码实现
 
+#### 快速排序（Quick Sort）
 
+- 基本原理
 
-#### 选择排序（Selection Sort）
+  通过一趟排序将待排记录分隔成独立的两部分，其中一部分记录的关键字均比另一部分的关键字小，则可分别对这两部分记录继续进行排序，以达到整个序列有序。
+
+- 算法描述
+
+  快速排序使用分治法来把一个串（list）分为两个子串（sub-lists）。具体算法描述如下：
+
+  - 从数列中挑出一个元素，称为 “基准”（pivot）；
+  - 重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相同的数可以到任一边）。在这个分区退出之后，该基准就处于数列的中间位置。这个称为分区（partition）操作；
+  - 递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序。
+
+- 排序过程
+
+  例如：8个关键码分别为：49	38	65	97	76	13	27	49
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/QuickSort.jpeg)
+
+- 动图演示
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/QuickSort.gif)
+
+- 快速排序算法分析
+
+  1、基准关键字的选取
+
+  - "三者取中"的规则
+
+    "三者取中"规则，即在当前的区间里，将该区间首，尾和中间位置上的关键字比较，取三者的中值所对应的记录作为基准，在划分开始前将基准记录和该区间的第1个记录进行交换。此后的划分过程和上面所给的Partition算法完全相同
+
+  - 取位于low和high之间的随机数k（low<=k<=high），用R[k]作为基准
+
+    选取基准的最好的方法是用一个随机函数产生一个位于low和high之间的随机数k（low<=k<=high）,用R[k]作为基准。这相当于强迫R[low....high]中的记录是随机分布的，用此方法所得到的快速排序一般称为随机的快速排序。
+
+- 代码实现
+
+  
+## 选择排序（Selection Sort）
+#### 直接选择排序（Selection Sort）
 
 - 基本原理
   首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置，然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。以此类推，直到所有元素均排序完毕。 
@@ -194,22 +235,80 @@
   - 第i趟排序(i=1,2,3…n-1)开始时，当前有序区和无序区分别为R[1..i-1]和R(i..n）。该趟排序从当前无序区中-选出关键字最小的记录 R[k]，将它与无序区的第1个记录R交换，使R[1..i]和R[i+1..n)分别变为记录个数增加1个的新有序区和记录个数减少1个的新无序区；
   - n-1趟结束，数组有序化了。
 
-- 原理
+- 排序过程
 
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/1.jpg)
-  
+
 - 动图演示
 
-  
-
-    ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/3.png)
+    ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/SelectionSort.gif)
 
 - 代码实现
 
-#### 插入排序
+#### 堆排序（Heap Sort）
 
 - 基本原理
+
+  堆排序（Heapsort）是利用完全二叉树排序的方法。满足下列条件之一：
+
+  1、 Ki≤K2i	并且Ki≤K2i+1 （i=1,2,......,n/2）
+
+  2、 Ki≥K2i	并且Ki≥K2i+1 （i=1,2,......,n/2）
+
+  上面的1称为小顶堆（二叉树的所有节点值小于或等于左右孩子的值）。2称为大顶堆（二叉树的所有节点值大于或等于左右孩子的值）
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/heap.jpg)
+
 - 算法描述
-- 排序过程
+
+  - 将初始待排序关键字序列(R1,R2….Rn)构建成大顶堆，此堆为初始的无序区；
+  - 将堆顶元素R[1]与最后一个元素R[n]交换，此时得到新的无序区(R1,R2,……Rn-1)和新的有序区(Rn),且满足R[1,2…n-1]<=R[n]；
+  - 由于交换后新的堆顶R[1]可能违反堆的性质，因此需要对当前无序区(R1,R2,……Rn-1)调整为新堆，然后再次将R[1]与无序区最后一个元素交换，得到新的无序区(R1,R2….Rn-2)和新的有序区(Rn-1,Rn)。不断重复此过程直到有序区的元素个数为n-1，则整个排序过程完成。
+
+- 排序过程（以大顶堆为例）
+
+  建立初始堆（把放在数组里的元素的序列看成是一颗完全二叉树，对该二叉树进行调整，使之称为堆）
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/2.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/3.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/4.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/5.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/6.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/7.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/8.jpg)
+
+  堆排序
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/9.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/10.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/11.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/12.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/13.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/14.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/15.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/16.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/17.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/18.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/19.jpg)
+
 - 动图演示
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/HeapSort.gif)
+
 - 代码实现
