@@ -15,9 +15,10 @@
 > * [选择排序（Selection Sort）](#sort-7)
 >  * [直接选择排序（Selection Sort）](#sort-8)
 >  * [堆排序（Heap Sort）](#sort-9)
+>  * [归并排序（Merge Sort）](#sort-10)
 
 
-#### 相关概念
+## 相关概念
 
 **稳定**：如果a原本在b前面，而a=b，排序之后a仍然在b的前面。
 
@@ -33,11 +34,11 @@
 
 
 
-#### 算法分类
+## 算法分类
 
 ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/3.png)
 
-#### 算法复杂度
+## 算法复杂度
 | 排序方法 | 时间复杂度（平均） | 时间复杂度（最坏） | 时间复杂度（最好） | 空间复杂度     | 稳定性 |
 | -------- | ------------------ | ------------------ | ------------------ | -------------- | ------ |
 | 插入排序 | $O（n^2）$         | $O（n^2）$         | $O（n）$           | $O（1）$       | 稳定   |
@@ -54,7 +55,7 @@
 
 
 
-#### 直接插入排序（Insertion Sort）
+## 直接插入排序（Insertion Sort）
 
 - 基本原理
 
@@ -85,7 +86,7 @@
 
   
 
-#### 希尔排序（Shell Sort）
+## 希尔排序（Shell Sort）
 
 - 基本原理
 
@@ -133,7 +134,7 @@
 
 
 
-#### 冒泡排序（Bubble Sort）
+## 冒泡排序（Bubble Sort）
 
 - 基本原理
 
@@ -182,7 +183,7 @@
 
 - 代码实现
 
-#### 快速排序（Quick Sort）
+## 快速排序（Quick Sort）
 
 - 基本原理
 
@@ -287,21 +288,31 @@
 
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/9.jpg)
 
+  调整
+
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/10.jpg)
 
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/11.jpg)
+
+  调整
 
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/12.jpg)
 
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/13.jpg)
 
+  调整
+
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/14.jpg)
 
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/15.jpg)
 
+  调整
+
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/16.jpg)
 
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/17.jpg)
+
+  调整
 
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/18.jpg)
 
@@ -311,4 +322,50 @@
 
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/HeapSort.gif)
 
+- 代码实现
+
+## 归并排序（Merge Sort）
+
+- 基本原理
+
+  将两个或者两个以上的有序表组合成一个新的有序表。即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为2-路归并。 
+
+- 算法描述
+
+  - 把长度为n的输入序列分成两个长度为n/2的子序列；
+  - 对这两个子序列分别采用归并排序；
+  - 将两个排序好的子序列合并成一个最终的排序序列。
+
+- 排序过程
+
+  例如，讲下列两个已排序的顺序表合并成一个已排序表。顺序比较两者的相应元素，小者移入另一个表中，反复如此，直至其中任一表全部移入另一表为止
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/20.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/21.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/22.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/23.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/24.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/25.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/26.jpg)
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/27.jpg)
+
+- 动图演示
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/MergeSort.gif)
+
+- 代码实现
+
+## demo（Shell Sort）
+
+- 基本原理
+- 算法描述
+- 排序过程
+- 动图演示
 - 代码实现
