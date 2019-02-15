@@ -181,7 +181,7 @@
 - 代码实现
 
 <p id="sort-7" />
-  
+
 #### 折半插入排序（BinaryInsertSort）
 - 基本原理
 
@@ -368,7 +368,8 @@
 
 - 排序过程
 
-  例如，将下列两个已排序的顺序表合并成一个已排序表。顺序比较两者的相应元素，小者移入另一个表中，反复如此，直至其中任一表全部移入另一表为止
+  - 例如，将下列两个已排序的顺序表合并成一个已排序表。顺序比较两者的相应元素，小者移入另一个表中，反复如此，直至其中任一表全部移入另一表为止
+
 
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/20.jpg)
 
@@ -386,15 +387,18 @@
 
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/27.jpg)
 
+  - 二路并归过程
+
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/MergeSort2.jpeg)
+
 - 动图演示
 
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/MergeSort.gif)
 
-  二路并归过程
-
-  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/MergeSort2.jpeg)
+  
 
 - 代码实现
+
 - 
 <p id="sort-12" />
 
@@ -436,7 +440,7 @@
 
   以下为例： 5，4，2，4，1 使用桶式排序
 
-  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/29.jpeg)
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/29.jpg)
 
 - 代码实现
 
@@ -460,7 +464,7 @@
 
 - 排序过程
 
-  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/30.jpeg)
+  ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/30.jpg)
 
 - 动图演示
 
