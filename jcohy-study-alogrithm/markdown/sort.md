@@ -22,6 +22,9 @@
 > * [计数排序（Counting Sort）](#sort-12)
 > * [桶排序（Bucket Sort）](#sort-13)
 > * [基数排序（Radix Sort）](#sort-14)
+> * [各种内部排序方法性能比较](#sort-15)
+> * [排序方法的选择](#sort-16)
+> * [完整代码地址](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/src/main/java/com/jcohy/study/sort)
 
 <p id="sort-1" />
 
@@ -105,6 +108,71 @@
 
 - 代码实现
 
+  ```java
+  public class BubbleSort {
+      public static void bubbleSort(int[] data) {
+          System.out.println("开始排序");
+          int count = 0;
+          int arrayLength = data.length;
+          for (int i = 0; i < arrayLength - 1; i++) {
+              for (int j = 0; j < arrayLength - 1 - i; j++) {
+                  if (data[j]>=(data[j + 1])) {
+                      int temp = data[j + 1];
+                      data[j + 1] = data[j];
+                      data[j] = temp;
+                  }
+              }
+              count++;
+              System.out.println(java.util.Arrays.toString(data));
+          }
+          System.out.println("排序趟数："+count);
+      }
+      public static void main(String[] args) {
+          int[] data = {9,-16,21,23,-30,-49,21,30,30};
+          System.out.println("排序之前：\n" + java.util.Arrays.toString(data));
+          bubbleSort(data);
+          System.out.println("排序之后：\n" + java.util.Arrays.toString(data));
+      }
+  }
+  ```
+
+  优化后代码
+
+  ```java
+  public class BubbleSort2 {
+      public static void bubbleSort(int[] data) {
+          System.out.println("开始排序");
+          int count = 0;
+          int arrayLength = data.length;
+          for (int i = 0; i < arrayLength - 1; i++) {
+              boolean flag = false;
+              for (int j = 0; j < arrayLength - 1 - i; j++) {
+                  if (data[j]>=(data[j + 1])) {
+                      int temp = data[j + 1];
+                      data[j + 1] = data[j];
+                      data[j] = temp;
+                      flag = true;
+                  }
+              }
+              if (!flag){
+                  break;
+              }
+              count++;
+              System.out.println(java.util.Arrays.toString(data));
+          }
+          System.out.println("排序趟数："+count);
+      }
+      public static void main(String[] args) {
+          int[] data = {9,-16,21,23,-30,-49,21,30,30};
+          System.out.println("排序之前：\n" + java.util.Arrays.toString(data));
+          bubbleSort(data);
+          System.out.println("排序之后：\n" + java.util.Arrays.toString(data));
+      }
+  }
+  ```
+
+  
+
 <p id="sort-5" />
 
 #### 快速排序（Quick Sort）
@@ -123,7 +191,7 @@
 
 - 排序过程
 
-  例如：8个关键码分别为：49	38	65	97	76	13	27	49
+  例如：8个关键码分别为：49，38，65，97，76，13，27，49
 
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/QuickSort.jpeg)
 
@@ -144,6 +212,61 @@
     选取基准的最好的方法是用一个随机函数产生一个位于low和high之间的随机数k（low<=k<=high）,用R[k]作为基准。这相当于强迫R[low....high]中的记录是随机分布的，用此方法所得到的快速排序一般称为随机的快速排序。
 
 - 代码实现
+
+  ```java
+  public class QuickSort {
+  
+      private int process = 0;
+      private  void subSort(int[] data, int start, int end) {
+          if(start<end){
+              int base = data[start];
+              int i = start;
+              int j = end + 1;
+              while (true){
+                  System.out.print("[处理过程"+(process++)+"]=> ");
+                  for(int t=0;t<data.length;t++)
+                      System.out.print("["+data[t]+"] ");
+  
+                  System.out.print("\n");
+                  //由左向右找出一个键值大于base者
+                  while (i < end && data[++i]<=base) ;
+                  //由右向左找出一个键值小于base者
+                  while (j > start && data[--j]>=base) ;
+                  //若i<j，则d[i]和d[j]互换，继续排序，否则，跳出排序
+                  if (i < j) {
+                      swap(data, i, j);
+                  } else {
+                      break;
+                  }
+              }
+              //若i大于等于j，//则将d[start]和d[j]互换
+              swap(data, start, j);
+              //并以j为基准点分成左右两半
+              subSort(data, start, j - 1);
+              subSort(data, j + 1, end);
+          }
+      }
+      public  void quickSort(int[] data) {
+          subSort(data,0,data.length-1);
+      }
+      private  void swap(int[] data, int i, int j) {
+          int temp = data[i];
+          data[i] = data[j];
+          data[j] = temp;
+      }
+  
+      public static void main(String[] args) {
+          QuickSort quickSort = new QuickSort();
+          int[] data = {9,-16,21,23,-30,-49,21,30,30};
+          System.out.println("排序之前：\n" + java.util.Arrays.toString(data));
+          quickSort.quickSort(data);
+          System.out.println("排序之后：\n" + java.util.Arrays.toString(data));
+      }
+  }
+  
+  ```
+
+  
 
 <p id="sort-6" />
 
@@ -180,6 +303,42 @@
 
 - 代码实现
 
+  ```java
+  public class InsertSort {
+  
+      public static void main(String[] args) {
+          InsertSort quickSort = new InsertSort();
+          int[] data = {9,-16,21,23,-30,-49,21,30,30};
+          System.out.println("排序之前：\n" + java.util.Arrays.toString(data));
+          quickSort.insertSort(data);
+          System.out.println("排序之后：\n" + java.util.Arrays.toString(data));
+      }
+  
+      private void insertSort(int[] data) {
+          System.out.println("开始排序");
+          int arrayLength = data.length;
+          //扫描循环次数为SIZE-1,//i为扫描次数
+          for(int i = 1;i < arrayLength;i++){
+              int temp = data[i];
+              if(data[i] < data[i-1]){
+                  //以j来定位比较的元素
+                  int j = i -1;
+                  ////如果第二元素小于第一元素,就把所有元素往后推一个位置
+                  for(;j >= 0 && data[j] > temp;j--){
+                      data[j +1] = data[j];
+                  }
+                  //最小的元素放到第一个元素
+                  data[j + 1] = temp;
+              }
+              System.out.print("第" + i + "次比较：");
+              System.out.println(java.util.Arrays.toString(data));
+          }
+      }
+  }
+  ```
+
+  
+
 <p id="sort-7" />
 
 #### 折半插入排序（BinaryInsertSort）
@@ -193,6 +352,45 @@
   与直接插入排序的效果相同，只是更快了一些，因为折半插入排序可以更快地确定第i个元素的插入位置
 
 - 代码实现
+
+  ```java
+  public class BinaryInsertSort {
+      public  void binaryInsertSort(int[] data) {
+          System.out.println("开始排序");
+          int arrayLength = data.length;
+          for (int i = 1; i < arrayLength; i++) {
+              int temp = data[i];
+              int low = 0;
+              int high = i - 1;
+              while (low <= high) {
+                  int mid = (low + high) / 2;
+                  if (temp > data[mid]) {
+                      low = mid + 1;
+                  } else {
+                      high = mid - 1;
+                  }
+              }
+              for (int j = i; j > low; j--) {
+                  data[j] = data[j - 1];
+              }
+              data[low] = temp;
+              System.out.print("第" + i + "次比较：");
+              System.out.println(java.util.Arrays.toString(data));
+          }
+  
+      }
+      public static void main(String[] args) {
+          BinaryInsertSort binaryInsertSort = new BinaryInsertSort();
+          int[] data = {9,-16,21,23,-30,-49,21,30,30};
+          System.out.println("排序之前：\n" + java.util.Arrays.toString(data));
+          binaryInsertSort.binaryInsertSort(data);
+          System.out.println("排序之后：\n" + java.util.Arrays.toString(data));
+      }
+  }
+  
+  ```
+
+  
 
 <p id="sort-8" />
 
@@ -242,6 +440,46 @@
 
 - 代码实现
 
+  ```java
+  public class ShellSort {
+  	public static void ShellSort(int[] data) {
+  		System.out.println("开始排序");
+  		int arrayLength = data.length;
+  
+  		int h = 1;
+  		//增量的选择
+  		while (h <= arrayLength / 3) {
+  			h = h * 3 + 1;
+  		}
+  		while (h > 0) {
+  			System.out.println("增量h的值：" + h);
+  			for (int i = h; i < arrayLength; i++) {
+                  int temp = data[i];
+  				if (data[i] < data[i - h]) {
+  					int j = i - h;
+  					for (; j >= 0 && data[j] > temp; j -= h) {
+  						data[j + h] = data[j];
+  					}
+  					data[j + h] = temp;
+  				}
+  				System.out.println(java.util.Arrays.toString(data));
+  			}
+  			h = (h - 1) / 3;
+  		}
+  	}
+  
+  	public static void main(String[] args) {
+          int[] data = {9,-16,21,23,-30,-49,21,30,30};
+  		System.out.println("排序之前：\n" + java.util.Arrays.toString(data));
+  		ShellSort(data);
+  		System.out.println("排序之后：\n" + java.util.Arrays.toString(data));
+  	}
+  }
+  
+  ```
+
+  
+
 
 <p id="sort-9" />
 
@@ -271,6 +509,67 @@
     ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/SelectionSort.gif)
 
 - 代码实现
+
+    ```java
+    public class SelectSort {
+    	public static void selectSort(int[] data) {
+    		System.out.println("开始排序");
+    		int arrayLength = data.length;
+    		for (int i = 0; i < arrayLength - 1; i++) {
+    			for (int j = i + 1; j < arrayLength; j++) {
+    				if (data[i] > data[j]) {
+                        int temp = data[i];
+    					data[i] = data[j];
+    					data[j] = temp;
+    				}
+    			}
+    			System.out.println(java.util.Arrays.toString(data));
+    		}
+    	}
+    
+    	public static void main(String[] args) {
+            int[] data = {9,-16,21,23,-30,-49,21,30,30};
+    		System.out.println("排序之前：\n" + java.util.Arrays.toString(data));
+    		selectSort(data);
+    		System.out.println("排序之后：\n" + java.util.Arrays.toString(data));
+    	}
+    }
+    ```
+
+    简单选择排序优化
+
+    ```java
+    public class SelectSort2 {
+    	public static void selectSort(int[] data) {
+    		System.out.println("开始排序");
+    		int arrayLength = data.length;
+    		for (int i = 0; i < arrayLength - 1; i++) {
+    			int minIndex = i;
+    			for (int j = i + 1; j < arrayLength; j++) {
+    				if (data[minIndex] > data[j]) {
+    					minIndex = j;
+    					
+    				}
+    			}
+    			if(minIndex != i){
+                    int temp = data[i];
+    				data[i] = data[minIndex];
+    				data[minIndex] = temp;
+    			}
+    			System.out.println(java.util.Arrays.toString(data));
+    		}
+    	}
+    
+    	public static void main(String[] args) {
+            int[] data = {9,-16,21,23,-30,-49,21,30,30};
+    		System.out.println("排序之前：\n" + java.util.Arrays.toString(data));
+    		selectSort(data);
+    		System.out.println("排序之后：\n" + java.util.Arrays.toString(data));
+    	}
+    }
+    ```
+
+    
 
 <p id="sort-10" />
 
@@ -352,6 +651,72 @@
 
 - 代码实现
 
+  ```java
+  public class HeapSort {
+  	public static void heapSort(int[] data) {
+  		System.out.println("开始排序");
+  		int arrayLength = data.length;
+  		// 循环建堆
+  		for (int i = 0; i < arrayLength - 1; i++) {
+  			// 建堆
+  			builMaxdHeap(data, arrayLength - 1 - i);
+  			// 交换堆顶和最后一个元素
+  			swap(data, 0, arrayLength - 1 - i);
+  			System.out.println(java.util.Arrays.toString(data));
+  		}
+  	}
+  
+  	// 对data数组从0到lastIndex建大顶堆
+  	private static void builMaxdHeap(int[] data, int lastIndex) {
+  		// 从lastIndex处节点（最后一个节点）的父节点开始
+  		for (int i = (lastIndex - 1) / 2; i >= 0; i--) {
+  			// k保存当前正在判断的节点
+  			int k = i;
+  			// 如果当前k节点的子节点存在
+  			while (k * 2 + 1 <= lastIndex) {
+  				// k节点的左子节点的索引
+  				int biggerIndex = 2 * k + 1;
+  				// 如果biggerIndex小于lastIndex，即biggerIndex +1
+  				// 代表k节点的右子节点存在
+  				if (biggerIndex < lastIndex) {
+  					// 如果右子节点的值较大
+  					if (data[biggerIndex] < data[biggerIndex + 1]) {
+  						// biggerIndex总是记录较大子节点的索引
+  						biggerIndex++;
+  					}
+  				}
+  				// 如果k节点的值小于其较大子节点的值
+  				if (data[k] < data[biggerIndex]) {
+  					// 交换它们
+  					swap(data, k, biggerIndex);
+  					// 将biggerIndex赋给k，开始while循环的下一次循环
+  					// 重新保证k节点的值大于其左、右节点的值
+  					k = biggerIndex;
+  				} else {
+  					break;
+  				}
+  			}
+  		}
+  	}
+  
+  	// 交换data数组中i、j两个索引处的元素
+  	private static void swap(int[] data, int i, int j) {
+  		int temp = data[i];
+  		data[i] = data[j];
+  		data[j] = temp;
+  	}
+  
+  	public static void main(String[] args) {
+  		int[] data = {9,-16,21,23,-30,-49,21,30,30};
+  		System.out.println("排序之前：\n" + java.util.Arrays.toString(data));
+  		heapSort(data);
+  		System.out.println("排序之后：\n" + java.util.Arrays.toString(data));
+  	}
+  }
+  ```
+
+  
+
 <p id="sort-11" />
 
 ## 归并排序（Merge Sort）
@@ -395,11 +760,59 @@
 
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/MergeSort.gif)
 
-  
-
 - 代码实现
 
-- 
+  ```java
+  public class MergeSort {
+  	public static void mergeSort(int[] data) {
+  		// 归并排序
+  		sort(data, 0, data.length - 1);
+  	}
+  
+  	// 将索引从left到right范围的数组元素进行归并排序
+  	private static void sort(int[] data, int left, int right) {
+  		if(left < right){
+  			//找出中间索引
+  			int center = (left + right)/2;
+  			sort(data,left,center);
+  			sort(data,center+1,right);
+  			//合并
+  			merge(data,left,center,right);
+  		}
+  	}
+  
+  	// 将两个数组进行归并，归并前两个数组已经有序，归并后依然有序
+  	private static void merge(int[] data, int left, int center, int right) {
+          int[] tempArr = new int[data.length];
+  		int mid = center + 1;
+  		int third = left;
+  		int temp = left;
+  		while (left <= center && mid <= right) {
+  			if (data[left] <= data[mid]) {
+  				tempArr[third++] = data[left++];
+  			} else {
+  				tempArr[third++] = data[mid++];
+  			}
+  		}
+  		while (mid <= right) {
+  			tempArr[third++] = data[mid++];
+  		}
+  		while (left <= center) {
+  			tempArr[third++] = data[left++];
+  		}
+  		while (temp <= right) {
+  			data[temp] = tempArr[temp++];
+  		}
+  	}
+  
+  	public static void main(String[] args) {
+          int[] data = {9,-16,21,23,-30,-49,21,30,30};
+  		System.out.println("排序之前：\n" + java.util.Arrays.toString(data));
+  		mergeSort(data);
+  		System.out.println("排序之后：\n" + java.util.Arrays.toString(data));
+  	}
+  }
+  ```
 <p id="sort-12" />
 
 ## 计数排序（Counting Sort）
@@ -420,6 +833,53 @@
 - 动图演示
 
 - 代码实现
+
+  ```java
+  public class CountingSort {
+  
+      public static void main(String[] args) {
+          int[] data = {9,5,-1,8,5,7,3,-3,1,3};
+          System.out.println("排序之前：\n" + java.util.Arrays.toString(data));
+          countingSort(data);
+          System.out.println("排序之后：\n" + java.util.Arrays.toString(data));
+      }
+  
+      public static void countingSort(int[] data){
+          if(data.length == 0){
+              return;
+          }
+          //找出待排序的数组中最大和最小的元素；
+          int max  = data[0];
+          int min = data[0];
+          for(int i= 0;i < data.length ;i++){
+              if(data[i] > max){
+                  max = data[i];
+              }
+              if(data[i] < min){
+                  min = data[i];
+              }
+          }
+          int bias = 0 - min;
+          int[] bucket = new int[max - min +1];
+          Arrays.fill(bucket,0);
+          for(int i = 0 ; i< data.length;i++){
+              bucket[data[i]+bias]++;
+          }
+          int index=0 ,i = 0;
+          while (index < data.length){
+              if(bucket[i] != 0){
+                  data[index] = i - bias;
+                  bucket[i]--;
+                  index++;
+              }else{
+                  i++;
+              }
+          }
+      }
+  }
+  ```
+
+  
 
 <p id="sort-13" />
 
@@ -443,6 +903,40 @@
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/images/29.jpg)
 
 - 代码实现
+
+  ```java
+  public class BucketSort {
+  	public  void bucketSort(int[] data, int min, int max) {
+  		System.out.println("开始排序");
+  		int arrayLength = data.length;
+  		int[] temp = new int[arrayLength];
+  		int[] buckets = new int[max - min];
+  		for (int i = 0; i < arrayLength; i++) {
+  			buckets[data[i] - min]++;
+  		}
+  		System.out.println(Arrays.toString(buckets));
+  		for (int i = 1; i < max - min; i++) {
+  			buckets[i] = buckets[i] + buckets[i - 1];
+  		}
+  		System.out.println(Arrays.toString(buckets));
+  		System.arraycopy(data, 0, temp, 0, arrayLength);
+  		for (int k = arrayLength - 1; k >= 0; k--) {
+  			data[--buckets[temp[k] - min]] = temp[k];
+  		}
+  	}
+  
+  	public static void main(String[] args) {
+          BucketSort bucketSort = new BucketSort();
+          int[] data = {9,5,-1,8,5,7,3,-3,1,3};
+  		System.out.println("排序之前：\n" + Arrays.toString(data));
+          bucketSort.bucketSort(data, -3, 10);
+  		System.out.println("排序之后：\n" + Arrays.toString(data));
+  	}
+  }
+  
+  ```
+
+  
 
 <p id="sort-14" />
 
@@ -473,7 +967,69 @@
 - 算法分析
 
   - MSD法和LSD法的比较
-  
+
     比较MSD法和LSD法，一般来讲，LSD法要比MSD法来得简单，因为LSD法是从头到尾进行若干次分配和收集，执行的次数取决于构成关键字值的成分为多少；而MSD法则要处理各序列与子序列的独立排序问题，就可能复杂一些。
 
 - 代码实现
+
+  ```java
+  public class MultiKeyRadixSort {
+  	public static void radixSort(int[] data, int radix, int d) {
+  		System.out.println("开始排序：");
+  		int arrayLength = data.length;
+  		int[] temp = new int[arrayLength];
+  		int[] buckets = new int[radix];
+  		for (int i = 0, rate = 1; i < d; i++) {
+  			// 重置count数组，开始统计第二个关键字
+  			Arrays.fill(buckets, 0);
+  			// 当data数组的元素复制到temp数组中进行缓存
+  			System.arraycopy(data, 0, temp, 0, arrayLength);
+  			for (int j = 0; j < arrayLength; j++) {
+  				int subKey = (temp[j] / rate) % radix;
+  				buckets[subKey]++;
+  			}
+  			for (int j = 1; j < radix; j++) {
+  				buckets[j] = buckets[j] + buckets[j - 1];
+  			}
+  			for (int m = arrayLength - 1; m >= 0; m--) {
+  				int subKey = (temp[m] / rate) % radix;
+  				data[--buckets[subKey]] = temp[m];
+  			}
+  			System.out.println("对" + rate + "位上子关键字排序："
+  					+ Arrays.toString(data));
+  			rate *= radix;
+  		}
+  	}
+  
+  	public static void main(String[] args) {
+  		int[] data = { 1100, 192, 221, 12, 13 };
+  		System.out.println("排序之前：\n" + Arrays.toString(data));
+  		radixSort(data, 10, 4);
+  		System.out.println("排序之后：\n" + Arrays.toString(data));
+  	}
+  }
+  
+  ```
+
+  
+
+<p id="sort-15" />
+
+## 各种内部排序方法性能比较
+
+- 从平均时间而言：快速排序最佳。但在最坏情况下时间性能不如堆排序和归并排序。
+
+- 从算法简单性看：由于直接选择排序、直接插入排序和冒泡排序的算法比较简单，将其认为是简单算法，都包含在上图的“简单排序”中。对于Shell排序、堆排序、快速排序和归并排序算法，其算法比较复杂，认为是复杂排序。
+
+- 从稳定性看：直接插入排序、冒泡排序和归并排序时稳定的；而直接选择排序、快速排序、 Shell排序和堆排序是不稳定排序
+
+- 从待排序的记录数n的大小看，n较小时，宜采用简单排序；而n较大时宜采用改进排序。
+
+<p id="sort-16" />
+
+## 排序方法的选择
+
+- 若n较小(如n≤50)，可采用直接插入或直接选择排序。
+  当记录规模较小时，直接插入排序较好；否则因为直接选择移动的记录数少于直接插入，应选直接选择排序为宜。
+- 若文件初始状态基本有序(指正序)，则应选用直接插入、冒泡或随机的快速排序为宜；
+- 若n较大，则应采用时间复杂度为O(nlgn)的排序方法：快速排序、堆排序或归并排序。

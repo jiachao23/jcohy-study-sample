@@ -4,10 +4,9 @@ package com.jcohy.study.sort;
 // 程序目的：快速排序法
 // ===================================================
 
-import java.io.*;
-import java.util.*;
+import java.util.Random;
 
-public class CH08_06 extends Object
+public class QuickSort2 extends Object
 {
 	int process = 0;
 	int size;
@@ -15,22 +14,24 @@ public class CH08_06 extends Object
 	
 	public static void main(String args[])
 	{
-		CH08_06 test = new CH08_06();
+		QuickSort2 test = new QuickSort2();
 		
-		System.out.print("请输入数组大小(100以下)：");
-		try{			
-			InputStreamReader isr = new InputStreamReader(System.in);
-			BufferedReader br = new BufferedReader(isr);
-			test.size=Integer.parseInt(br.readLine());
-		}catch(Exception e){}		
+//		System.out.print("请输入数组大小(100以下)：");
+//		try{
+//			InputStreamReader isr = new InputStreamReader(System.in);
+//			BufferedReader br = new BufferedReader(isr);
+//			test.size=Integer.parseInt(br.readLine());
+//		}catch(Exception e){}
 		
-		test.inputarr ();
-		System.out.print("原始数据是：");		
-		test.showdata ();
-		
-		test.quick(test.data,test.size,0,test.size-1);
-		System.out.print("\n排序结果：");
-		test.showdata();
+//		test.inputarr ();
+//		System.out.print("原始数据是：");
+//		test.showdata ();
+		int[] datas = {9, -16, 21, 23, -30, -49, 21, 30, 30};
+		System.out.println("排序之前：\n" + java.util.Arrays.toString(datas));
+		test.quick(datas,datas.length,0,datas.length-1);
+//		System.out.print("\n排序结果：");
+		System.out.println("排序之后：\n" + java.util.Arrays.toString(datas));
+//		test.showdata();
 	}	
 	
 	void inputarr()

@@ -1,74 +1,41 @@
 package com.jcohy.study.sort;
-// =============== Program Description ===============
-// ³ÌĞòÃû³Æ£º CH08_05.java                               
-// ³ÌĞòÄ¿µÄ£ºÏ£¶ûÅÅĞò·¨
-// ===================================================
-import java.io.*;
 
-public class ShellSort extends Object
-{
-	int data[]=new int[8];
-	int size=8;	
-	
-	public static void main(String args[])
-	{ 		
-		ShellSort test =  new ShellSort();
-		test.inputarr();		
-		System.out.print("ÄúÊäÈëµÄÔ­Ê¼Êı×éÊÇ£º");
-		test.showdata();
-		test.shell();
-	}
+/**
+ * Created by jiac on 2019/2/15.
+ * ClassName  : com.jcohy.study.sort
+ * Description  : å¸Œå°”æ’åº
+ */
+public class ShellSort {
+	public static void ShellSort(int[] data) {
+		System.out.println("å¼€å§‹æ’åº");
+		int arrayLength = data.length;
 
-	void inputarr()
-	{
-		int i=0;
-		for (i=0;i<size;i++)
-		{ 
-			System.out.print("ÇëÊäÈëµÚ"+(i+1)+"¸öÔªËØ£º");
-			try{				
-				InputStreamReader isr = new InputStreamReader(System.in);
-				BufferedReader br = new BufferedReader(isr);
-				data[i]=Integer.parseInt(br.readLine());
-			}catch(Exception e){}
+		int h = 1;
+		//å¢é‡çš„é€‰æ‹©
+		while (h <= arrayLength / 3) {
+			h = h * 3 + 1;
 		}
-	}
-
-	void showdata()
-	{
-		int i=0;		
-		for (i=0;i<size;i++)
-		{
-			System.out.print(data[i]+" ");
-		}
-		System.out.print("\n");
-	}
-	
-	void shell()
-	{  
-		int i;        //iÎªÉ¨Ãè´ÎÊı
-		int j;        //ÒÔjÀ´¶¨Î»±È½ÏµÄÔªËØ
-		int k=1;      //k´òÓ¡¼ÆÊı
-		int tmp;      //tmpÓÃÀ´Ôİ´æÊı¾İ
-		int jmp;      //Éè¶¨¼ä¸ôÎ»ÒÆÁ¿
-
-		jmp=size/2;
-		while (jmp != 0)
-		{  
-			for (i=jmp ;i<size ;i++)
-			{  
-				tmp=data[i];
-				j=i-jmp;
-				while(j>=0 && tmp<data[j])  //²åÈëÅÅĞò·¨
-				{  
-					data[j+jmp] = data[j];
-					j=j-jmp;
-				}	
-				data[jmp+j]=tmp;				
+		while (h > 0) {
+			System.out.println("å¢é‡hçš„å€¼ï¼š" + h);
+			for (int i = h; i < arrayLength; i++) {
+                int temp = data[i];
+				if (data[i] < data[i - h]) {
+					int j = i - h;
+					for (; j >= 0 && data[j] > temp; j -= h) {
+						data[j + h] = data[j];
+					}
+					data[j + h] = temp;
+				}
+				System.out.println(java.util.Arrays.toString(data));
 			}
-			
-			System.out.print("µÚ"+ (k++) +"´ÎÅÅĞò£º");			
-			showdata();
-			jmp=jmp/2;    //¿ØÖÆÑ­»·Êı
+			h = (h - 1) / 3;
 		}
-        }
+	}
+
+	public static void main(String[] args) {
+        int[] data = {9,-16,21,23,-30,-49,21,30,30};
+		System.out.println("æ’åºä¹‹å‰ï¼š\n" + java.util.Arrays.toString(data));
+		ShellSort(data);
+		System.out.println("æ’åºä¹‹åï¼š\n" + java.util.Arrays.toString(data));
+	}
 }
