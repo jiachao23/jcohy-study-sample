@@ -1,4 +1,4 @@
-#### 构造SpringApplication对象，调用initialize()方法
+### 构造SpringApplication对象，调用initialize()方法
 
 当Springboot启动后，首先调用run方法。构造一个SpringApplication对象，使用默认设置和用户提供的参数加载配置。如下：
 
@@ -21,7 +21,7 @@ public SpringApplication(Object... sources) {
 }
 ```
 
-#### 我们主要看分析**initialize()**方法都做了那些事？
+### 一：我们主要看分析**initialize()**方法都做了那些事？
 
 ```java
 private void initialize(Object[] sources) {
@@ -45,9 +45,9 @@ private void initialize(Object[] sources) {
 }
 ```
 
-1、配置source。
+#### 1、配置source。
 
-2、判断是否是web环境。
+#### 2、判断是否是web环境。
 
 ```java
 
@@ -63,7 +63,9 @@ private boolean deduceWebEnvironment() {
 }
 ```
 
-3、查找并加载所有可用的 ApplicationContextInitializer，initializers成员变量，是一个ApplicationContextInitializer类型对象的集合。 顾名思义，ApplicationContextInitializer是一个可以用来初始化ApplicationContext的接口。`getSpringFactoriesInstances` 请留意此方法，下面多出会使用到此方法。
+#### 3、查找并加载所有可用的 ApplicationContextInitializer
+
+initializers成员变量，是一个ApplicationContextInitializer类型对象的集合。 顾名思义，ApplicationContextInitializer是一个可以用来初始化ApplicationContext的接口。`getSpringFactoriesInstances` 请留意此方法，下面多出会使用到此方法。
 
 ```java
 private <T> Collection<? extends T> getSpringFactoriesInstances(Class<T> type,
@@ -108,13 +110,14 @@ public static List<String> loadFactoryNames(Class<?> factoryClass, ClassLoader c
 }
 ```
 
-4、同理，查找并加载所有可用的 ApplicationListener，此类的全限定类名为 `org.springframework.context.ApplicationListener`。从`META-INF/spring.factories`文件中加载key为`org.springframework.context.ApplicationContextInitializer`的工厂类名：
+#### 4、查找并加载所有可用的 ApplicationListener
+同理此类的全限定类名为 `org.springframework.context.ApplicationListener`。从`META-INF/spring.factories`文件中加载key为`org.springframework.context.ApplicationContextInitializer`的工厂类名：
 
 ```java
 setListeners((Collection) getSpringFactoriesInstances(ApplicationListener.class));
 ```
 
-5、推断并设置main方法的定义类。
+#### 5、推断并设置main方法的定义类。
 
 ```java
 private Class<?> deduceMainApplicationClass() {
@@ -133,7 +136,7 @@ private Class<?> deduceMainApplicationClass() {
 }
 ```
 
-#### 初始化完成后，开始执行run方法
+### 二、初始化完成后，开始执行run方法
 
 ```java
 public ConfigurableApplicationContext run(String... args) {
@@ -180,7 +183,7 @@ public ConfigurableApplicationContext run(String... args) {
 }
 ```
 
-1、开启屏幕打印。
+#### 1、开启屏幕打印。
 
 ```java
 private static final String SYSTEM_PROPERTY_JAVA_AWT_HEADLESS = "java.awt.headless";
@@ -189,7 +192,9 @@ private void configureHeadlessProperty() {
          SYSTEM_PROPERTY_JAVA_AWT_HEADLESS, Boolean.toString(this.headless)));
 }
 ```
-2、获取启动时的监听器，当触发启动事件，相应的监听器会被调用。其加载机制原理和加载ApplicationContextInitializer与ApplicationListener原理一样。只不过它是从classpath下面查找名为`org.springframework.boot.SpringApplicationRunListener` 的类加载并实例化。
+#### 2、获取启动时的监听器
+
+当触发启动事件，相应的监听器会被调用。其加载机制原理和加载ApplicationContextInitializer与ApplicationListener原理一样。只不过它是从classpath下面查找名为`org.springframework.boot.SpringApplicationRunListener` 的类加载并实例化。
 
 ```java
 private SpringApplicationRunListeners getRunListeners(String[] args) {
@@ -241,9 +246,16 @@ public void multicastEvent(final ApplicationEvent event, ResolvableType eventTyp
 
 `getApplicationListeners`方法过滤出的监听器都会被调用，过滤出来的监听器包括`LoggingApplicationListener、BackgroundPreinitializer、DelegatingApplicationListener、LiquibaseServiceLocatorApplicationListener、EnableEncryptablePropertiesBeanFactoryPostProcessor`五种类型的对象。当执行`invokeListener`方法时，这五个对象的onApplicationEvent都会被调用。
 
-3、封装命令行参数
+#### 3、封装命令行参数
 
-4、环境准备，如果为web环境，则创建StandardServletEnvironment。否则创建StandardEnvironment
+```java
+ApplicationArguments applicationArguments = new DefaultApplicationArguments(
+      args);
+```
+
+#### 4、环境准备
+
+如果为web环境，则创建StandardServletEnvironment。否则创建StandardEnvironment
 
 ```java
 private ConfigurableEnvironment prepareEnvironment(
@@ -261,15 +273,34 @@ private ConfigurableEnvironment prepareEnvironment(
 }
 ```
 
-5、打印banner，到此为止，控制台上终于有输出了、就是打印SpringBoot默认的banner。默认从classpath：下加载名为 banner.txt 的文件。如果不存在。则打印默认banner。此实现在 `SpringBootBanner` 类中。下面贴出相关代码：
+```java
+private ConfigurableEnvironment getOrCreateEnvironment() {
+   if (this.environment != null) {
+      return this.environment;
+   }
+   if (this.webEnvironment) {
+      return new StandardServletEnvironment();
+   }
+   return new StandardEnvironment();
+}
+```
+
+#### 5、打印banner
+
+到此为止，控制台上终于有输出了、就是打印SpringBoot默认的banner。默认从classpath：下加载名为 banner.txt 的文件。如果不存在。则打印默认banner。此实现在 `SpringBootBanner` 类中。下面贴出相关代码：
 
 ```java
+//默认为Banner.Mode.CONSOLE;
+private Banner.Mode bannerMode = Banner.Mode.CONSOLE;
+
 private Banner printBanner(ConfigurableEnvironment environment) {
    if (this.bannerMode == Banner.Mode.OFF) {
       return null;
    }
+    //如果不存在资源文件加载器，则创建默认加载器。
    ResourceLoader resourceLoader = this.resourceLoader != null ? this.resourceLoader
          : new DefaultResourceLoader(getClassLoader());
+    //创建SpringApplicationBannerPrinter对象，此对象有一个Banner接口的引用
    SpringApplicationBannerPrinter bannerPrinter = new SpringApplicationBannerPrinter(
          resourceLoader, this.banner);
    if (this.bannerMode == Mode.LOG) {
@@ -278,52 +309,74 @@ private Banner printBanner(ConfigurableEnvironment environment) {
    return bannerPrinter.print(environment, this.mainApplicationClass, System.out);
 }
 ```
+SpringApplicationBannerPrinter.print
 
 ```java
-private Banner printBanner(ConfigurableEnvironment environment) {
-   if (this.bannerMode == Banner.Mode.OFF) {
-      return null;
-   }
-   ResourceLoader resourceLoader = this.resourceLoader != null ? this.resourceLoader
-         : new DefaultResourceLoader(getClassLoader());
-   SpringApplicationBannerPrinter bannerPrinter = new SpringApplicationBannerPrinter(
-         resourceLoader, this.banner);
-   if (this.bannerMode == Mode.LOG) {
-      return bannerPrinter.print(environment, this.mainApplicationClass, logger);
-   }
-   return bannerPrinter.print(environment, this.mainApplicationClass, System.out);
+public Banner print(Environment environment, Class<?> sourceClass, PrintStream out) {
+    Banner banner = getBanner(environment, this.fallbackBanner);
+    //此方法会调用banner具体实现类的printBanner方法输出banner。
+    banner.printBanner(environment, sourceClass, out);
+    return new PrintedBanner(banner, sourceClass);
 }
 ```
 
-```java
-public Banner print(Environment environment, Class<?> sourceClass, Log logger) {
-   Banner banner = getBanner(environment, this.fallbackBanner);
-   try {
-      logger.info(createStringFromBanner(banner, environment, sourceClass));
-   }
-   catch (UnsupportedEncodingException ex) {
-      logger.warn("Failed to create String for banner", ex);
-   }
-   return new PrintedBanner(banner, sourceClass);
-}
-```
 
 ```java
+
+static final String BANNER_LOCATION_PROPERTY = "banner.location";
+
+static final String BANNER_IMAGE_LOCATION_PROPERTY = "banner.image.location";
+
+static final String DEFAULT_BANNER_LOCATION = "banner.txt";
+
+static final String[] IMAGE_EXTENSION = { "gif", "jpg", "png" };
+
 private static final Banner DEFAULT_BANNER = new SpringBootBanner();
 
 private Banner getBanner(Environment environment, Banner definedBanner) {
-   Banners banners = new Banners();
-   banners.addIfNotNull(getImageBanner(environment));
-   banners.addIfNotNull(getTextBanner(environment));
-   if (banners.hasAtLeastOneBanner()) {
-      return banners;
-   }
-   if (this.fallbackBanner != null) {
-      return this.fallbackBanner;
-   }
-   return DEFAULT_BANNER;
+    Banners banners = new Banners();
+    //获取图片banner
+    banners.addIfNotNull(getImageBanner(environment));
+    //获取文字banner
+    banners.addIfNotNull(getTextBanner(environment));
+    if (banners.hasAtLeastOneBanner()) {
+        return banners;
+    }
+    if (this.fallbackBanner != null) {
+        return this.fallbackBanner;
+    }
+    return DEFAULT_BANNER;
+}
+
+
+private Banner getImageBanner(Environment environment) {
+    
+    String location = environment.getProperty(BANNER_IMAGE_LOCATION_PROPERTY);
+    if (StringUtils.hasLength(location)) {
+        Resource resource = this.resourceLoader.getResource(location);
+        return (resource.exists() ? new ImageBanner(resource) : null);
+    }
+    for (String ext : IMAGE_EXTENSION) {
+        Resource resource = this.resourceLoader.getResource("banner." + ext);
+        if (resource.exists()) {
+            return new ImageBanner(resource);
+        }
+    }
+    return null;
+}
+private Banner getTextBanner(Environment environment) {
+    String location = environment.getProperty(BANNER_LOCATION_PROPERTY,
+                                              DEFAULT_BANNER_LOCATION);
+    Resource resource = this.resourceLoader.getResource(location);
+    if (resource.exists()) {
+        return new ResourceBanner(resource);
+    }
+    return null;
 }
 ```
+
+
+
 
 ```java
 class SpringBootBanner implements Banner {
@@ -362,27 +415,32 @@ class SpringBootBanner implements Banner {
 }
 ```
 
-6、创建上下文，创建FailureAnalyzers实例。在刷新之前将所有配置应用于上下文
+#### 6、创建上下文
+
+根据当前的环境，创建不同
 
 ```java
 //创建上下文
 public static final String DEFAULT_WEB_CONTEXT_CLASS = "org.springframework."
-			+ "boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext";
+    + "boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext";
+
+public static final String DEFAULT_CONTEXT_CLASS = "org.springframework.context."
+    + "annotation.AnnotationConfigApplicationContext";
 protected ConfigurableApplicationContext createApplicationContext() {
-   Class<?> contextClass = this.applicationContextClass;
-   if (contextClass == null) {
-      try {
-         contextClass = Class.forName(this.webEnvironment
-               ? DEFAULT_WEB_CONTEXT_CLASS : DEFAULT_CONTEXT_CLASS);
-      }
-      catch (ClassNotFoundException ex) {
-         throw new IllegalStateException(
-               "Unable create a default ApplicationContext, "
-                     + "please specify an ApplicationContextClass",
-               ex);
-      }
-   }
-   return (ConfigurableApplicationContext) BeanUtils.instantiate(contextClass);
+    Class<?> contextClass = this.applicationContextClass;
+    if (contextClass == null) {
+        try {
+            contextClass = Class.forName(this.webEnvironment
+                                         ? DEFAULT_WEB_CONTEXT_CLASS : DEFAULT_CONTEXT_CLASS);
+        }
+        catch (ClassNotFoundException ex) {
+            throw new IllegalStateException(
+                "Unable create a default ApplicationContext, "
+                + "please specify an ApplicationContextClass",
+                ex);
+        }
+    }
+    return (ConfigurableApplicationContext) BeanUtils.instantiate(contextClass);
 }
 ```
 
