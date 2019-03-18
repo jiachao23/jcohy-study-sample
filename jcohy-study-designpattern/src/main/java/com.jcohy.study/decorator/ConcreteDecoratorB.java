@@ -12,7 +12,7 @@ public class ConcreteDecoratorB extends Decorator {
 	public void eat() {
         super.eat();
         System.out.println("===============");
-        System.out.println("ConcreteDecoratorB¿‡");
+        System.out.println("ConcreteDecoratorBÁ±ª");
     }
 
     

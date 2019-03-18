@@ -7,7 +7,7 @@ package com.jcohy.study.decorator;
  * Description:
  **/
 /**
- * 维持一个指向Component对象的指针，并定义一个与Component接口一致的接口
+ * 缁存寔涓�涓寚鍚慍omponent瀵硅薄鐨勬寚閽堬紝骞跺畾涔変竴涓笌Component鎺ュ彛涓�鑷寸殑鎺ュ彛
  * @author admin
  *
  */
