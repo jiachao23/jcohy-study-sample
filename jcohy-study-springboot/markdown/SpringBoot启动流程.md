@@ -82,6 +82,7 @@ private <T> Collection<? extends T> getSpringFactoriesInstances(Class<T> type,
    return instances;
 }
 ```
+
 我们看看 `SpringFactoriesLoader.loadFactoryNames(type, classLoader));` 中的代码：
 
 ```java
@@ -198,7 +199,7 @@ private void configureHeadlessProperty() {
 ```
 #### 2、获取启动时的监听器
 
-当触发启动事件，相应的监听器会被调用。其加载机制原理和加载ApplicationContextInitializer与ApplicationListener原理一样。只不过它是从classpath下面查找名为`org.springframework.boot.SpringApplicationRunListener` 的类加载并实例化。
+当触发启动事件，相应的监听器会被调用。其加载机制原理和加载 ApplicationContextInitializer与ApplicationListener 原理一样。只不过它是从classpath下面查找名为 `org.springframework.boot.SpringApplicationRunListener`  的类加载并实例化。
 
 ```java
 private SpringApplicationRunListeners getRunListeners(String[] args) {
@@ -207,15 +208,17 @@ private SpringApplicationRunListeners getRunListeners(String[] args) {
          SpringApplicationRunListener.class, types, this, args));
 }
 ```
+
 这里简单说明一下，在 `META-INF/spring.factories` 文件中，只有一个此类的实现为：
 
 ```xml
 org.springframework.boot.SpringApplicationRunListener=\
 org.springframework.boot.context.event.EventPublishingRunListener
 ```
+
 说的再简单点，getRunListeners就是准备好了运行时监听器`EventPublishingRunListener`。
 
-当执行 `listeners.starting()` 时，我们看看发生了什么。
+当执行 `listeners#starting()` 时，我们看看发生了什么。
 
 ```java
 public void starting() {
