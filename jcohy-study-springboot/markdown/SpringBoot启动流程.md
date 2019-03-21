@@ -610,29 +610,29 @@ public void refresh() throws BeansException, IllegalStateException {
       // 9.1 刷新回调必要的初始化和验证
       prepareRefresh();
 
-      // 9.2 通知子类刷新内部BeanFactory
+      // 9.2 刷新所有BeanFactory子容器
       ConfigurableListableBeanFactory beanFactory = obtainFreshBeanFactory();
 
-      // 9.3 准备各种类型的Bean工厂
+      // 9.3 创建BeanFactory
       prepareBeanFactory(beanFactory);
 
       try {
-         // 9.4 允许在上下文子类中对bean工厂进行后处理。
+         // 9.4 注册实现了BeanPostProcessor接口的bean。
          postProcessBeanFactory(beanFactory);
 
-         // 9.5 调用已经注册到容器中的处理器
+         // 9.5 初始化和执行BeanFactoryPostProcessor beans
          invokeBeanFactoryPostProcessors(beanFactory);
 
-         // 9.6 注册Bean的后置处理器拦截Bean的创建.
+         // 9.6 初始化和执行BeanPostProcessor beans
          registerBeanPostProcessors(beanFactory);
 
          // 9.7 初始化消息资源，各种国际化资源
          initMessageSource();
 
-         // 9.8 初始化上下文事件多播器
+         // 9.8 初始化Event Multicaster
          initApplicationEventMulticaster();
 
-         // 9.9 在特定的上下文子类中初始化其他特殊bean。
+         // 9.9 刷新由子类实现的方法。
          onRefresh();
 
          // 9.10 检查并注册监听器
@@ -696,7 +696,7 @@ protected void prepareRefresh() {
 }
 ```
 
-##### 9.2、通知子类刷新内部BeanFactory
+##### 9.2、刷新所有BeanFactory子容器
 
 ```java
 /**
@@ -744,7 +744,7 @@ public final ConfigurableListableBeanFactory getBeanFactory() {
 }
 ```
 
-##### 9.3、准备各种类型的BeanFactory
+##### 9.3、创建BeanFactory
 
 默认的BeanFactory为 `org.springframework.beans.factory.support.DefaultListableBeanFactory` ，
 
@@ -804,7 +804,7 @@ protected void prepareBeanFactory(ConfigurableListableBeanFactory beanFactory) {
 }
 ```
 
-##### 9.4 在上下文添加Bean的后置处理器
+##### 9.4 注册实现了BeanPostProcessor接口的bean
 
 添加BeanFactory后处理器，调用所有已添加的BeanFactoryPostProcessors[一个容器扩展点]。在标准初始化之后修改应用程序上下文的内部bean工厂。 将加载所有bean定义，但尚未实例化任何bean。 这允许在某些ApplicationContext实现中注册特殊的BeanPostProcessors等。默认实现 `AnnotationConfigEmbeddedWebApplicationContext` 。注册 `ServletContextAwareProcessor`。
 
@@ -842,7 +842,7 @@ protected void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactor
 
 ![beanfactory4](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-springboot/images/beanfactory4.png)
 
-##### 9.5 调用已经注册到容器中的处理器
+##### 9.5 初始化和执行BeanFactoryPostProcessor beans
 
 ```java
 /**
@@ -1216,7 +1216,7 @@ public static boolean checkConfigurationClassCandidate(BeanDefinition beanDef, M
 }
 ```
 
-##### 9.6、注册Bean的后置处理器拦截Bean的创建
+##### 9.6、初始化和执行BeanPostProcessor beans
 
 ```java
 /**
@@ -1342,7 +1342,7 @@ protected void initMessageSource() {
 }
 ```
 
-##### 9.8 、初始化上下文事件多播器
+##### 9.8 、初始化EventMulticaster
 
 ```java
 
@@ -1487,6 +1487,8 @@ protected void registerListeners() {
 
 ##### 9.11 、实例化所有剩余（非延迟初始化）单例。
 
+创建Bean的实例并构建Bean的关系网。都在此方法中。
+
 ```java
 /**
  * Finish the initialization of this context's bean factory,
@@ -1522,6 +1524,7 @@ protected void finishBeanFactoryInitialization(ConfigurableListableBeanFactory b
    beanFactory.setTempClassLoader(null);
 
    // Allow for caching all bean definition metadata, not expecting further changes.
+   //禁止修改当前bean的配置信息
    beanFactory.freezeConfiguration();
 
    // Instantiate all remaining (non-lazy-init) singletons.
@@ -1529,7 +1532,76 @@ protected void finishBeanFactoryInitialization(ConfigurableListableBeanFactory b
 }
 ```
 
+```java
+@Override
+public void preInstantiateSingletons() throws BeansException {
+    if (this.logger.isDebugEnabled()) {
+        this.logger.debug("Pre-instantiating singletons in " + this);
+    }
+
+    // Iterate over a copy to allow for init methods which in turn register new bean definitions.
+    // While this may not be part of the regular factory bootstrap, it does otherwise work fine.
+    List<String> beanNames = new ArrayList<String>(this.beanDefinitionNames);
+
+    // Trigger initialization of all non-lazy singleton beans...
+    //1、循环遍历beanNames中的beanName
+    for (String beanName : beanNames) {
+        //2、获取RootBeanDefinition对象
+        RootBeanDefinition bd = getMergedLocalBeanDefinition(beanName);
+        //3、如果是单例对象，不是抽象类，不是LazyInit。
+        if (!bd.isAbstract() && bd.isSingleton() && !bd.isLazyInit()) {
+            //4、判断是否是FactoryBean
+            if (isFactoryBean(beanName)) {
+                //5、获取FactoryBean对象本身
+                final FactoryBean<?> factory = (FactoryBean<?>) getBean(FACTORY_BEAN_PREFIX + beanName);
+                //6、是否是EagreInit
+                boolean isEagerInit;
+                if (System.getSecurityManager() != null && factory instanceof SmartFactoryBean) {
+                    isEagerInit = AccessController.doPrivileged(new PrivilegedAction<Boolean>() {
+                        @Override
+                        public Boolean run() {
+                            return ((SmartFactoryBean<?>) factory).isEagerInit();
+                        }
+                    }, getAccessControlContext());
+                }
+                else {
+                    isEagerInit = (factory instanceof SmartFactoryBean &&
+                                   ((SmartFactoryBean<?>) factory).isEagerInit());
+                }
+                if (isEagerInit) {
+                    getBean(beanName);
+                }
+            }
+            else {
+                getBean(beanName);
+            }
+        }
+    }
+
+    // Trigger post-initialization callback for all applicable beans...
+    for (String beanName : beanNames) {
+        Object singletonInstance = getSingleton(beanName);
+        if (singletonInstance instanceof SmartInitializingSingleton) {
+            final SmartInitializingSingleton smartSingleton = (SmartInitializingSingleton) singletonInstance;
+            if (System.getSecurityManager() != null) {
+                AccessController.doPrivileged(new PrivilegedAction<Object>() {
+                    @Override
+                    public Object run() {
+                        smartSingleton.afterSingletonsInstantiated();
+                        return null;
+                    }
+                }, getAccessControlContext());
+            }
+            else {
+                smartSingleton.afterSingletonsInstantiated();
+            }
+        }
+    }
+}
+```
+
 ##### 9.12 、最后一步：发布相应的事件。
+
 
 ```java
 /**
