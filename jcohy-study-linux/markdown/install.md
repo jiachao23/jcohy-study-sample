@@ -10,6 +10,7 @@
 > * [Mysql](#mysql)
 > * [Redis](#redis)
 > * [Nginx](#nginx)
+> * [RabbitMq](#RabbitMq)
 
 <p id ="jdk">
 
@@ -304,3 +305,77 @@ yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel
 
 6、使用docker安装[nginx](http://www.runoob.com/docker/docker-install-nginx.html)
 
+## RabbitMq安装
+
+1、由于RabbitMQ依赖Erlang， 所以需要先安装Erlang
+
+```shell
+  wget https://packages.erlang-solutions.com/erlang-solutions-1.0-1.noarch.rpm
+  rpm -Uvh erlang-solutions-1.0-1.noarch.rpm
+  yum install erlang
+```
+
+2、安装
+
+```shell
+  wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.6.6/rabbitmq-server-3.6.6-1.el7.noarch.rpm
+  yum install rabbitmq-server-3.6.6-1.el7.noarch.rpm
+```
+
+3、启动
+
+```shell
+  rabbitmq-server start
+```
+
+4、开启web管理接口
+
+```shell
+rabbitmq-plugins enable rabbitmq_management
+```
+
+5、通过浏览器访问
+
+```shell
+  http://localhost:15672
+```
+
+  6、其他命令
+
+  ```shell
+sudo chkconfig rabbitmq-server on  # 添加开机启动RabbitMQ服务
+/sbin/service rabbitmq-server start # 启动服务
+/sbin/service rabbitmq-server status  # 查看服务状态
+/sbin/service rabbitmq-server stop   # 停止服务
+
+# 查看当前所有用户
+rabbitmqctl list_users
+
+# 查看默认guest用户的权限
+rabbitmqctl list_user_permissions guest
+
+# 由于RabbitMQ默认的账号用户名和密码都是guest。为了安全起见, 先删掉默认用户
+rabbitmqctl delete_user guest
+
+# 添加新用户
+rabbitmqctl add_user username password
+
+# 设置用户tag
+rabbitmqctl set_user_tags username administrator
+
+# 赋予用户默认vhost的全部操作权限
+rabbitmqctl set_permissions -p / username ".*" ".*" ".*"
+
+# 查看用户的权限
+rabbitmqctl list_user_permissions username
+
+  ```
+  7、使用docker构建
+ * 在docker官网查找docker镜像，https://hub.docker.com/
+
+* 拉取镜像,我们选择带有“mangement”的版本（包含web管理页面）
+```shell
+  docker pull rabbitmq:3.7.12-management
+
+  docker run --restart=always -d -p 5672:5672 -p 15672:15672 --name myrabbitmq df80af9ca0c9
+```
