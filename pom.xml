@@ -19,9 +19,10 @@
     <module>jcohy-study-nosql</module>
     <module>jcohy-study-linux</module>
     <module>jcohy-study-zookeeper</module>
-    <module>com-jcohy-nginx</module>
+    <module>jcohy-study-nginx</module>
     <module>jcohy-study-docker</module>
     <module>jcohy-study-ViewGuide</module>
+    <module>jcohy-study-framework</module>
   </modules>
 
   <dependencies>

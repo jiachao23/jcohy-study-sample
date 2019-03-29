@@ -18,6 +18,6 @@ public class Test {
         //使用对象的适配器模式。
         // 需要先创建一个被适配类的对象作为参数
         Target adapter2 = new Adapter2(new Adaptee());
-        adapter.request();
+        adapter2.request();
     }
 }
