@@ -92,6 +92,11 @@
       <artifactId>junit-jupiter-api</artifactId>
       <version>RELEASE</version>
     </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>RELEASE</version>
+    </dependency>
   </dependencies>
 
   <!-- 这个插件，可以将应用打包成一个可执行的jar包；-->

@@ -23,6 +23,7 @@
     <module>jcohy-study-docker</module>
     <module>jcohy-study-ViewGuide</module>
     <module>jcohy-study-framework</module>
+    <module>jcohy-study-quartz</module>
   </modules>
 
   <dependencies>

@@ -1,198 +1,198 @@
 #  Sql
-> #### PS:´ı¿ª·¢ÖĞ¡£¡£¡£¡£
-> #### ×÷ÕßÍøÒ³£º[www.jcohy.com](http://www.jcohy.com)  	
+> #### PS:å¾…å¼€å‘ä¸­ã€‚ã€‚ã€‚ã€‚
+> #### ä½œè€…ç½‘é¡µï¼š[www.jcohy.com](http://www.jcohy.com)  	
 
->  ÎÒµÄÑ§Ï°±Ê¼Ç£¬¼ÇÂ¼Ñ§Ï°¹ı³ÌÖĞµÄ±Ê¼ÇÒÔ¼°Óöµ½µÄÎÊÌâ,ÒÔ¼°ÎÒµÄÒ»Ğ©¾­Ñé×Ü½á¡£Èç¹û³öÏÖÁ´½ÓÊ§Ğ§,»òÕßÏëÖªµÀ¸ü¶àµÄÄÚÈİµÈÇé¿ö¿ÉÒÔÌá½» Issues ÌáĞÑÎÒĞŞ¸ÄÏà¹ØÄÚÈİ¡£
+>  æˆ‘çš„å­¦ä¹ ç¬”è®°ï¼Œè®°å½•å­¦ä¹ è¿‡ç¨‹ä¸­çš„ç¬”è®°ä»¥åŠé‡åˆ°çš„é—®é¢˜,ä»¥åŠæˆ‘çš„ä¸€äº›ç»éªŒæ€»ç»“ã€‚å¦‚æœå‡ºç°é“¾æ¥å¤±æ•ˆ,æˆ–è€…æƒ³çŸ¥é“æ›´å¤šçš„å†…å®¹ç­‰æƒ…å†µå¯ä»¥æäº¤ Issues æé†’æˆ‘ä¿®æ”¹ç›¸å…³å†…å®¹ã€‚
 
 ## Sql
 > * [Statement](#sql-1)
-> * [ÓÎ±ê ](#sql-2)
-> * [ÁĞ³ö 5 ¸öÓ¦¸Ã×ñÑ­µÄ JDBC ×î¼ÑÊµ¼ù](#sql-3)
-> * [Êı¾İ¿âË÷ÒıµÄÊµÏÖ](#sql-4)
+> * [æ¸¸æ ‡ ](#sql-2)
+> * [åˆ—å‡º 5 ä¸ªåº”è¯¥éµå¾ªçš„ JDBC æœ€ä½³å®è·µ](#sql-3)
+> * [æ•°æ®åº“ç´¢å¼•çš„å®ç°](#sql-4)
 > * [demo](#sql-5)
 
 <p id="sql-1">
 
 #### Statement
 
-1.1 »ù±¾ÄÚÈİ
+1.1 åŸºæœ¬å†…å®¹
 
-- StatementÊÇ×î»ù±¾µÄÓÃ·¨, ²»´«²Î, ²ÉÓÃ×Ö·û´®Æ´½Ó£¬´æÔÚ×¢ÈëÂ©¶´
-- PreparedStatement´«Èë²ÎÊı»¯µÄsqlÓï¾ä, Í¬Ê±¼ì²éºÏ·¨ĞÔ, Ğ§ÂÊ¸ß¿ÉÒÔÖØÓÃ, ·ÀÖ¹sql×¢Èë
-- CallableStatement½Ó¿ÚÀ©Õ¹PreparedStatement£¬ÓÃÀ´µ÷ÓÃ´æ´¢¹ı³Ì
-- BatchedStatementÓÃÓÚÅúÁ¿²Ù×÷Êı¾İ¿â£¬BatchedStatement²»ÊÇ±ê×¼µÄStatementÀà
+- Statementæ˜¯æœ€åŸºæœ¬çš„ç”¨æ³•, ä¸ä¼ å‚, é‡‡ç”¨å­—ç¬¦ä¸²æ‹¼æ¥ï¼Œå­˜åœ¨æ³¨å…¥æ¼æ´
+- PreparedStatementä¼ å…¥å‚æ•°åŒ–çš„sqlè¯­å¥, åŒæ—¶æ£€æŸ¥åˆæ³•æ€§, æ•ˆç‡é«˜å¯ä»¥é‡ç”¨, é˜²æ­¢sqlæ³¨å…¥
+- CallableStatementæ¥å£æ‰©å±•PreparedStatementï¼Œç”¨æ¥è°ƒç”¨å­˜å‚¨è¿‡ç¨‹
+- BatchedStatementç”¨äºæ‰¹é‡æ“ä½œæ•°æ®åº“ï¼ŒBatchedStatementä¸æ˜¯æ ‡å‡†çš„Statementç±»
 
 ```java
 public interface CallableStatement extends PreparedStatement 
 public interface PreparedStatement extends Statement 
 ```
 
-1.2 StatementÓëPrepareStatementµÄÇø±ğ
+1.2 Statementä¸PrepareStatementçš„åŒºåˆ«
 
-- ´´½¨Ê±µÄÇø±ğ
+- åˆ›å»ºæ—¶çš„åŒºåˆ«
 ```
 Statement statement = conn.createStatement();
 PreparedStatement preStatement = conn.prepareStatement(sql);
 ```
-- Ö´ĞĞµÄÊ±ºò
+- æ‰§è¡Œçš„æ—¶å€™
 ```
 ResultSet rSet = statement.executeQuery(sql);
 ResultSet pSet = preStatement.executeQuery();
 ```
-ÓÉÉÏ¿ÉÒÔ¿´³ö£¬PreparedStatementÓĞÔ¤±àÒëµÄ¹ı³Ì£¬ÒÑ¾­°ó¶¨sql£¬Ö®ºóÎŞÂÛÖ´ĞĞ¶àÉÙ±é£¬¶¼²»»áÔÙÈ¥½øĞĞ±àÒë£¬¶ø statement ²»Í¬£¬Èç¹ûÖ´ĞĞ¶à±é£¬ÔòÏàÓ¦µÄ¾ÍÒª±àÒë¶àÉÙ±ésql£¬ËùÒÔ´ÓÕâµã¿´£¬preStatement µÄĞ§ÂÊ»á±È StatementÒª¸ßÒ»Ğ©
+ç”±ä¸Šå¯ä»¥çœ‹å‡ºï¼ŒPreparedStatementæœ‰é¢„ç¼–è¯‘çš„è¿‡ç¨‹ï¼Œå·²ç»ç»‘å®šsqlï¼Œä¹‹åæ— è®ºæ‰§è¡Œå¤šå°‘éï¼Œéƒ½ä¸ä¼šå†å»è¿›è¡Œç¼–è¯‘ï¼Œè€Œ statement ä¸åŒï¼Œå¦‚æœæ‰§è¡Œå¤šéï¼Œåˆ™ç›¸åº”çš„å°±è¦ç¼–è¯‘å¤šå°‘ésqlï¼Œæ‰€ä»¥ä»è¿™ç‚¹çœ‹ï¼ŒpreStatement çš„æ•ˆç‡ä¼šæ¯” Statementè¦é«˜ä¸€äº›
 
-- °²È«ĞÔ
+- å®‰å…¨æ€§
 
-PreparedStatementÊÇÔ¤±àÒëµÄ£¬ËùÒÔ¿ÉÒÔÓĞĞ§µÄ·ÀÖ¹SQL×¢ÈëµÈÎÊÌâ
+PreparedStatementæ˜¯é¢„ç¼–è¯‘çš„ï¼Œæ‰€ä»¥å¯ä»¥æœ‰æ•ˆçš„é˜²æ­¢SQLæ³¨å…¥ç­‰é—®é¢˜
 
-- ´úÂëµÄ¿É¶ÁĞÔºÍ¿ÉÎ¬»¤ĞÔ
+- ä»£ç çš„å¯è¯»æ€§å’Œå¯ç»´æŠ¤æ€§
 
-PreparedStatement¸üÊ¤Ò»³ï
+PreparedStatementæ›´èƒœä¸€ç­¹
 
 <p id="sql-2">
 
-#### ÓÎ±ê 
+#### æ¸¸æ ‡ 
 
 <p id="sql-3">
 
-#### ÁĞ³ö 5 ¸öÓ¦¸Ã×ñÑ­µÄ JDBC ×î¼ÑÊµ¼ù
+#### åˆ—å‡º 5 ä¸ªåº”è¯¥éµå¾ªçš„ JDBC æœ€ä½³å®è·µ
 
-ÓĞºÜ¶àµÄ×î¼ÑÊµ¼ù£¬Äã¿ÉÒÔ¸ù¾İÄãµÄÏ²ºÃÀ´Àı¾Ù¡£ÏÂÃæÊÇÒ»Ğ©¸üÍ¨ÓÃµÄÔ­Ôò£º
+æœ‰å¾ˆå¤šçš„æœ€ä½³å®è·µï¼Œä½ å¯ä»¥æ ¹æ®ä½ çš„å–œå¥½æ¥ä¾‹ä¸¾ã€‚ä¸‹é¢æ˜¯ä¸€äº›æ›´é€šç”¨çš„åŸåˆ™ï¼š
 
-a£©Ê¹ÓÃÅúÁ¿µÄ²Ù×÷À´²åÈëºÍ¸üĞÂÊı¾İ
+aï¼‰ä½¿ç”¨æ‰¹é‡çš„æ“ä½œæ¥æ’å…¥å’Œæ›´æ–°æ•°æ®
 
-b£©Ê¹ÓÃ PreparedStatement À´±ÜÃâ SQL Òì³££¬²¢Ìá¸ßĞÔÄÜ
+bï¼‰ä½¿ç”¨ PreparedStatement æ¥é¿å… SQL å¼‚å¸¸ï¼Œå¹¶æé«˜æ€§èƒ½
 
-c£©Ê¹ÓÃÊı¾İ¿âÁ¬½Ó³Ø
+cï¼‰ä½¿ç”¨æ•°æ®åº“è¿æ¥æ± 
 
-d£©Í¨¹ıÁĞÃûÀ´»ñÈ¡½á¹û¼¯£¬²»ÒªÊ¹ÓÃÁĞµÄÏÂ±êÀ´»ñÈ¡
+dï¼‰é€šè¿‡åˆ—åæ¥è·å–ç»“æœé›†ï¼Œä¸è¦ä½¿ç”¨åˆ—çš„ä¸‹æ ‡æ¥è·å–
 
 <p id="sql-4">
 
-####  Êı¾İ¿âË÷ÒıµÄÊµÏÖ
+####  æ•°æ®åº“ç´¢å¼•çš„å®ç°
 
-Êı¾İ¿âÏµÍ³»¹Î¬»¤×ÅÂú×ãÌØ¶¨²éÕÒËã·¨µÄÊı¾İ½á¹¹£¬ÕâĞ©Êı¾İ½á¹¹ÒÔÄ³ÖÖ·½Ê½ÒıÓÃ£¨Ö¸Ïò£©Êı¾İ£¬ÕâÑù¾Í¿ÉÒÔÔÚÕâĞ©Êı¾İ½á¹¹ÉÏÊµÏÖ¸ß¼¶²éÕÒËã·¨¡£ÕâÖÖÊı¾İ½á¹¹£¬¾ÍÊÇË÷Òı¡£
+æ•°æ®åº“ç³»ç»Ÿè¿˜ç»´æŠ¤ç€æ»¡è¶³ç‰¹å®šæŸ¥æ‰¾ç®—æ³•çš„æ•°æ®ç»“æ„ï¼Œè¿™äº›æ•°æ®ç»“æ„ä»¥æŸç§æ–¹å¼å¼•ç”¨ï¼ˆæŒ‡å‘ï¼‰æ•°æ®ï¼Œè¿™æ ·å°±å¯ä»¥åœ¨è¿™äº›æ•°æ®ç»“æ„ä¸Šå®ç°é«˜çº§æŸ¥æ‰¾ç®—æ³•ã€‚è¿™ç§æ•°æ®ç»“æ„ï¼Œå°±æ˜¯ç´¢å¼•ã€‚
 
-BÊ÷£º
+Bæ ‘ï¼š
 
-Ò»¿Ãm½×BÊ÷(balanced tree of order m)ÊÇÒ»¿ÃÆ½ºâµÄmÂ·ËÑË÷Ê÷¡£Ëü»òÕßÊÇ¿ÕÊ÷£¬»òÕßÊÇÂú×ãÏÂÁĞĞÔÖÊµÄÊ÷£º
+ä¸€æ£µmé˜¶Bæ ‘(balanced tree of order m)æ˜¯ä¸€æ£µå¹³è¡¡çš„mè·¯æœç´¢æ ‘ã€‚å®ƒæˆ–è€…æ˜¯ç©ºæ ‘ï¼Œæˆ–è€…æ˜¯æ»¡è¶³ä¸‹åˆ—æ€§è´¨çš„æ ‘ï¼š
 
-1¡¢¸ù½áµãÖÁÉÙÓĞÁ½¸ö×ÓÅ®£»
-2¡¢Ã¿¸ö·Ç¸ù½ÚµãËù°üº¬µÄ¹Ø¼ü×Ö¸öÊı j Âú×ã£º©°m/2©´ - 1 <= j <= m - 1£»
-3¡¢³ı¸ù½áµãÒÔÍâµÄËùÓĞ½áµã£¨²»°üÀ¨Ò¶×Ó½áµã£©µÄ¶ÈÊıÕıºÃÊÇ¹Ø¼ü×Ö×ÜÊı¼Ó1£¬¹ÊÄÚ²¿×ÓÊ÷¸öÊı k Âú×ã£º©°m/2©´ <= k <= m £»
-4¡¢ËùÓĞµÄÒ¶×Ó½áµã¶¼Î»ÓÚÍ¬Ò»²ã¡£
+1ã€æ ¹ç»“ç‚¹è‡³å°‘æœ‰ä¸¤ä¸ªå­å¥³ï¼›
+2ã€æ¯ä¸ªéæ ¹èŠ‚ç‚¹æ‰€åŒ…å«çš„å…³é”®å­—ä¸ªæ•° j æ»¡è¶³ï¼šâ”Œm/2â” - 1 <= j <= m - 1ï¼›
+3ã€é™¤æ ¹ç»“ç‚¹ä»¥å¤–çš„æ‰€æœ‰ç»“ç‚¹ï¼ˆä¸åŒ…æ‹¬å¶å­ç»“ç‚¹ï¼‰çš„åº¦æ•°æ­£å¥½æ˜¯å…³é”®å­—æ€»æ•°åŠ 1ï¼Œæ•…å†…éƒ¨å­æ ‘ä¸ªæ•° k æ»¡è¶³ï¼šâ”Œm/2â” <= k <= m ï¼›
+4ã€æ‰€æœ‰çš„å¶å­ç»“ç‚¹éƒ½ä½äºåŒä¸€å±‚ã€‚
 
-ÓÉÓÚB-TreeµÄÌØĞÔ£¬ÔÚB-TreeÖĞ°´key¼ìË÷Êı¾İµÄËã·¨·Ç³£Ö±¹Û£ºÊ×ÏÈ´Ó¸ù½Úµã½øĞĞ¶ş·Ö²éÕÒ£¬Èç¹ûÕÒµ½Ôò·µ»Ø¶ÔÓ¦½ÚµãµÄdata£¬·ñÔò¶ÔÏàÓ¦Çø¼äµÄÖ¸ÕëÖ¸ÏòµÄ½Úµãµİ¹é½øĞĞ²éÕÒ£¬Ö±µ½ÕÒµ½½Úµã»òÕÒµ½nullÖ¸Õë£¬Ç°Õß²éÕÒ³É¹¦£¬ºóÕß²éÕÒÊ§°Ü¡£
+ç”±äºB-Treeçš„ç‰¹æ€§ï¼Œåœ¨B-Treeä¸­æŒ‰keyæ£€ç´¢æ•°æ®çš„ç®—æ³•éå¸¸ç›´è§‚ï¼šé¦–å…ˆä»æ ¹èŠ‚ç‚¹è¿›è¡ŒäºŒåˆ†æŸ¥æ‰¾ï¼Œå¦‚æœæ‰¾åˆ°åˆ™è¿”å›å¯¹åº”èŠ‚ç‚¹çš„dataï¼Œå¦åˆ™å¯¹ç›¸åº”åŒºé—´çš„æŒ‡é’ˆæŒ‡å‘çš„èŠ‚ç‚¹é€’å½’è¿›è¡ŒæŸ¥æ‰¾ï¼Œç›´åˆ°æ‰¾åˆ°èŠ‚ç‚¹æˆ–æ‰¾åˆ°nullæŒ‡é’ˆï¼Œå‰è€…æŸ¥æ‰¾æˆåŠŸï¼Œåè€…æŸ¥æ‰¾å¤±è´¥ã€‚
 
-Ò»¸ö¶ÈÎªdµÄB-Tree£¬ÉèÆäË÷ÒıN¸ökey£¬ÔòÆäÊ÷¸ßhµÄÉÏÏŞÎªlogd((N+1)/2)£¬¼ìË÷Ò»¸ökey£¬Æä²éÕÒ½Úµã¸öÊıµÄ½¥½ø¸´ÔÓ¶ÈÎªO(logdN)¡£´ÓÕâµã¿ÉÒÔ¿´³ö£¬B-TreeÊÇÒ»¸ö·Ç³£ÓĞĞ§ÂÊµÄË÷ÒıÊı¾İ½á¹¹¡£
+ä¸€ä¸ªåº¦ä¸ºdçš„B-Treeï¼Œè®¾å…¶ç´¢å¼•Nä¸ªkeyï¼Œåˆ™å…¶æ ‘é«˜hçš„ä¸Šé™ä¸ºlogd((N+1)/2)ï¼Œæ£€ç´¢ä¸€ä¸ªkeyï¼Œå…¶æŸ¥æ‰¾èŠ‚ç‚¹ä¸ªæ•°çš„æ¸è¿›å¤æ‚åº¦ä¸ºO(logdN)ã€‚ä»è¿™ç‚¹å¯ä»¥çœ‹å‡ºï¼ŒB-Treeæ˜¯ä¸€ä¸ªéå¸¸æœ‰æ•ˆç‡çš„ç´¢å¼•æ•°æ®ç»“æ„ã€‚
 
-B+Ê÷£º
+B+æ ‘ï¼š
 
-B-TreeÓĞĞí¶à±äÖÖ£¬ÆäÖĞ×î³£¼ûµÄÊÇB+Tree£¬ÀıÈçMySQL¾ÍÆÕ±éÊ¹ÓÃB+TreeÊµÏÖÆäË÷Òı½á¹¹¡£
+B-Treeæœ‰è®¸å¤šå˜ç§ï¼Œå…¶ä¸­æœ€å¸¸è§çš„æ˜¯B+Treeï¼Œä¾‹å¦‚MySQLå°±æ™®éä½¿ç”¨B+Treeå®ç°å…¶ç´¢å¼•ç»“æ„ã€‚
 
-B+Ê÷ÊÇBÊ÷µÄ±äĞÎ£¬Ëü°ÑËùÓĞµÄdata¶¼·ÅÔÚÒ¶×Ó½áµãÖĞ£¬Ö»½«¹Ø¼ü×ÖºÍ×ÓÅ®Ö¸Õë±£´æÓÚÄÚ½áµã£¬ÄÚ½áµãÍêÈ«ÊÇË÷ÒıµÄ¹¦ÄÜ¡£
+B+æ ‘æ˜¯Bæ ‘çš„å˜å½¢ï¼Œå®ƒæŠŠæ‰€æœ‰çš„dataéƒ½æ”¾åœ¨å¶å­ç»“ç‚¹ä¸­ï¼Œåªå°†å…³é”®å­—å’Œå­å¥³æŒ‡é’ˆä¿å­˜äºå†…ç»“ç‚¹ï¼Œå†…ç»“ç‚¹å®Œå…¨æ˜¯ç´¢å¼•çš„åŠŸèƒ½ã€‚
 
-ÓëB-TreeÏà±È£¬B+TreeÓĞÒÔÏÂ²»Í¬µã£º
+ä¸B-Treeç›¸æ¯”ï¼ŒB+Treeæœ‰ä»¥ä¸‹ä¸åŒç‚¹ï¼š
 
-1¡¢Ã¿¸ö½ÚµãµÄÖ¸ÕëÉÏÏŞÎª2d¶ø²»ÊÇ2d+1¡£
+1ã€æ¯ä¸ªèŠ‚ç‚¹çš„æŒ‡é’ˆä¸Šé™ä¸º2dè€Œä¸æ˜¯2d+1ã€‚
 
-2¡¢ÄÚ½Úµã²»´æ´¢data£¬Ö»´æ´¢key£»Ò¶×Ó½Úµã´æ´¢data²»´æ´¢Ö¸Õë¡£
+2ã€å†…èŠ‚ç‚¹ä¸å­˜å‚¨dataï¼Œåªå­˜å‚¨keyï¼›å¶å­èŠ‚ç‚¹å­˜å‚¨dataä¸å­˜å‚¨æŒ‡é’ˆã€‚
 
-Ò»°ãÔÚÊı¾İ¿âÏµÍ³»òÎÄ¼şÏµÍ³ÖĞÊ¹ÓÃµÄB+Tree½á¹¹¶¼ÔÚ¾­µäB+TreeµÄ»ù´¡ÉÏ½øĞĞÁËÓÅ»¯£¬Ôö¼ÓÁËË³Ğò·ÃÎÊÖ¸Õë¡£
+ä¸€èˆ¬åœ¨æ•°æ®åº“ç³»ç»Ÿæˆ–æ–‡ä»¶ç³»ç»Ÿä¸­ä½¿ç”¨çš„B+Treeç»“æ„éƒ½åœ¨ç»å…¸B+Treeçš„åŸºç¡€ä¸Šè¿›è¡Œäº†ä¼˜åŒ–ï¼Œå¢åŠ äº†é¡ºåºè®¿é—®æŒ‡é’ˆã€‚
 
-ÔÚB+TreeµÄÃ¿¸öÒ¶×Ó½ÚµãÔö¼ÓÒ»¸öÖ¸ÏòÏàÁÚÒ¶×Ó½ÚµãµÄÖ¸Õë
+åœ¨B+Treeçš„æ¯ä¸ªå¶å­èŠ‚ç‚¹å¢åŠ ä¸€ä¸ªæŒ‡å‘ç›¸é‚»å¶å­èŠ‚ç‚¹çš„æŒ‡é’ˆ
 
-ÀıÈçÍ¼4ÖĞÈç¹ûÒª²éÑ¯keyÎª´Ó18µ½49µÄËùÓĞÊı¾İ¼ÇÂ¼£¬µ±ÕÒµ½18ºó£¬Ö»ĞèË³×Å½ÚµãºÍÖ¸ÕëË³Ğò±éÀú¾Í¿ÉÒÔÒ»´ÎĞÔ·ÃÎÊµ½ËùÓĞÊı¾İ½Úµã£¬¼«´óÌáµ½ÁËÇø¼ä²éÑ¯Ğ§ÂÊ¡£
+ä¾‹å¦‚å›¾4ä¸­å¦‚æœè¦æŸ¥è¯¢keyä¸ºä»18åˆ°49çš„æ‰€æœ‰æ•°æ®è®°å½•ï¼Œå½“æ‰¾åˆ°18åï¼Œåªéœ€é¡ºç€èŠ‚ç‚¹å’ŒæŒ‡é’ˆé¡ºåºéå†å°±å¯ä»¥ä¸€æ¬¡æ€§è®¿é—®åˆ°æ‰€æœ‰æ•°æ®èŠ‚ç‚¹ï¼Œæå¤§æåˆ°äº†åŒºé—´æŸ¥è¯¢æ•ˆç‡ã€‚
 
-ÎªÊ²Ã´BÊ÷£¨B+Ê÷£©£¿
+ä¸ºä»€ä¹ˆBæ ‘ï¼ˆB+æ ‘ï¼‰ï¼Ÿ
 
-Ò»°ãÀ´Ëµ£¬Ë÷Òı±¾ÉíÒ²ºÜ´ó£¬²»¿ÉÄÜÈ«²¿´æ´¢ÔÚÄÚ´æÖĞ£¬Òò´ËË÷ÒıÍùÍùÒÔË÷ÒıÎÄ¼şµÄĞÎÊ½´æ´¢µÄ´ÅÅÌÉÏ¡£ÕâÑùµÄ»°£¬Ë÷Òı²éÕÒ¹ı³ÌÖĞ¾ÍÒª²úÉú´ÅÅÌI/OÏûºÄ£¬Ïà¶ÔÓÚÄÚ´æ´æÈ¡£¬I/O´æÈ¡µÄÏûºÄÒª¸ß¼¸¸öÊıÁ¿¼¶£¬ËùÒÔÆÀ¼ÛÒ»¸öÊı¾İ½á¹¹×÷ÎªË÷ÒıµÄÓÅÁÓ×îÖØÒªµÄÖ¸±ê¾ÍÊÇÔÚ²éÕÒ¹ı³ÌÖĞ´ÅÅÌI/O²Ù×÷´ÎÊıµÄ½¥½ø¸´ÔÓ¶È¡£»»¾ä»°Ëµ£¬Ë÷ÒıµÄ½á¹¹×éÖ¯Òª¾¡Á¿¼õÉÙ²éÕÒ¹ı³ÌÖĞ´ÅÅÌI/OµÄ´æÈ¡´ÎÊı¡£
+ä¸€èˆ¬æ¥è¯´ï¼Œç´¢å¼•æœ¬èº«ä¹Ÿå¾ˆå¤§ï¼Œä¸å¯èƒ½å…¨éƒ¨å­˜å‚¨åœ¨å†…å­˜ä¸­ï¼Œå› æ­¤ç´¢å¼•å¾€å¾€ä»¥ç´¢å¼•æ–‡ä»¶çš„å½¢å¼å­˜å‚¨çš„ç£ç›˜ä¸Šã€‚è¿™æ ·çš„è¯ï¼Œç´¢å¼•æŸ¥æ‰¾è¿‡ç¨‹ä¸­å°±è¦äº§ç”Ÿç£ç›˜I/Oæ¶ˆè€—ï¼Œç›¸å¯¹äºå†…å­˜å­˜å–ï¼ŒI/Oå­˜å–çš„æ¶ˆè€—è¦é«˜å‡ ä¸ªæ•°é‡çº§ï¼Œæ‰€ä»¥è¯„ä»·ä¸€ä¸ªæ•°æ®ç»“æ„ä½œä¸ºç´¢å¼•çš„ä¼˜åŠ£æœ€é‡è¦çš„æŒ‡æ ‡å°±æ˜¯åœ¨æŸ¥æ‰¾è¿‡ç¨‹ä¸­ç£ç›˜I/Oæ“ä½œæ¬¡æ•°çš„æ¸è¿›å¤æ‚åº¦ã€‚æ¢å¥è¯è¯´ï¼Œç´¢å¼•çš„ç»“æ„ç»„ç»‡è¦å°½é‡å‡å°‘æŸ¥æ‰¾è¿‡ç¨‹ä¸­ç£ç›˜I/Oçš„å­˜å–æ¬¡æ•°ã€‚
 
-ÕâÉæ¼°µ½´ÅÅÌ´æÈ¡Ô­Àí¡¢¾Ö²¿ĞÔÔ­ÀíºÍ´ÅÅÌÔ¤¶Á¡£
+è¿™æ¶‰åŠåˆ°ç£ç›˜å­˜å–åŸç†ã€å±€éƒ¨æ€§åŸç†å’Œç£ç›˜é¢„è¯»ã€‚
 
-ÏÈ´ÓB-Tree·ÖÎö£¬¸ù¾İB-TreeµÄ¶¨Òå£¬**¿ÉÖª¼ìË÷Ò»´Î×î¶àĞèÒª·ÃÎÊh¸ö½Úµã¡£Êı¾İ¿âÏµÍ³µÄÉè¼ÆÕßÇÉÃîÀûÓÃÁË´ÅÅÌÔ¤¶ÁÔ­Àí£¬½«Ò»¸ö½ÚµãµÄ´óĞ¡ÉèÎªµÈÓÚÒ»¸öÒ³£¬ÕâÑùÃ¿¸ö½ÚµãÖ»ĞèÒªÒ»´ÎI/O¾Í¿ÉÒÔÍêÈ«ÔØÈë¡£**ÎªÁË´ïµ½Õâ¸öÄ¿µÄ£¬ÔÚÊµ¼ÊÊµÏÖB-Tree»¹ĞèÒªÊ¹ÓÃÈçÏÂ¼¼ÇÉ£º
+å…ˆä»B-Treeåˆ†æï¼Œæ ¹æ®B-Treeçš„å®šä¹‰ï¼Œ**å¯çŸ¥æ£€ç´¢ä¸€æ¬¡æœ€å¤šéœ€è¦è®¿é—®hä¸ªèŠ‚ç‚¹ã€‚æ•°æ®åº“ç³»ç»Ÿçš„è®¾è®¡è€…å·§å¦™åˆ©ç”¨äº†ç£ç›˜é¢„è¯»åŸç†ï¼Œå°†ä¸€ä¸ªèŠ‚ç‚¹çš„å¤§å°è®¾ä¸ºç­‰äºä¸€ä¸ªé¡µï¼Œè¿™æ ·æ¯ä¸ªèŠ‚ç‚¹åªéœ€è¦ä¸€æ¬¡I/Oå°±å¯ä»¥å®Œå…¨è½½å…¥ã€‚**ä¸ºäº†è¾¾åˆ°è¿™ä¸ªç›®çš„ï¼Œåœ¨å®é™…å®ç°B-Treeè¿˜éœ€è¦ä½¿ç”¨å¦‚ä¸‹æŠ€å·§ï¼š
 
-**Ã¿´ÎĞÂ½¨½ÚµãÊ±£¬Ö±½ÓÉêÇëÒ»¸öÒ³µÄ¿Õ¼ä£¬ÕâÑù¾Í±£Ö¤Ò»¸ö½ÚµãÎïÀíÉÏÒ²´æ´¢ÔÚÒ»¸öÒ³Àï£¬¼ÓÖ®¼ÆËã»ú´æ´¢·ÖÅä¶¼ÊÇ°´Ò³¶ÔÆëµÄ£¬¾ÍÊµÏÖÁËÒ»¸önodeÖ»ĞèÒ»´ÎI/O¡£**
+**æ¯æ¬¡æ–°å»ºèŠ‚ç‚¹æ—¶ï¼Œç›´æ¥ç”³è¯·ä¸€ä¸ªé¡µçš„ç©ºé—´ï¼Œè¿™æ ·å°±ä¿è¯ä¸€ä¸ªèŠ‚ç‚¹ç‰©ç†ä¸Šä¹Ÿå­˜å‚¨åœ¨ä¸€ä¸ªé¡µé‡Œï¼ŒåŠ ä¹‹è®¡ç®—æœºå­˜å‚¨åˆ†é…éƒ½æ˜¯æŒ‰é¡µå¯¹é½çš„ï¼Œå°±å®ç°äº†ä¸€ä¸ªnodeåªéœ€ä¸€æ¬¡I/Oã€‚**
 
-**B-TreeÖĞÒ»´Î¼ìË÷×î¶àĞèÒªh-1´ÎI/O£¨¸ù½Úµã³£×¤ÄÚ´æ£©£¬½¥½ø¸´ÔÓ¶ÈÎªO(h)=O(logdN)¡£Ò»°ãÊµ¼ÊÓ¦ÓÃÖĞ£¬³ö¶ÈdÊÇ·Ç³£´óµÄÊı×Ö£¬Í¨³£³¬¹ı100£¬Òò´Ëh·Ç³£Ğ¡£¨Í¨³£²»³¬¹ı3£©¡£**
+**B-Treeä¸­ä¸€æ¬¡æ£€ç´¢æœ€å¤šéœ€è¦h-1æ¬¡I/Oï¼ˆæ ¹èŠ‚ç‚¹å¸¸é©»å†…å­˜ï¼‰ï¼Œæ¸è¿›å¤æ‚åº¦ä¸ºO(h)=O(logdN)ã€‚ä¸€èˆ¬å®é™…åº”ç”¨ä¸­ï¼Œå‡ºåº¦dæ˜¯éå¸¸å¤§çš„æ•°å­—ï¼Œé€šå¸¸è¶…è¿‡100ï¼Œå› æ­¤héå¸¸å°ï¼ˆé€šå¸¸ä¸è¶…è¿‡3ï¼‰ã€‚**
 
-×ÛÉÏËùÊö£¬ÓÃB-Tree×÷ÎªË÷Òı½á¹¹Ğ§ÂÊÊÇ·Ç³£¸ßµÄ¡£
+ç»¼ä¸Šæ‰€è¿°ï¼Œç”¨B-Treeä½œä¸ºç´¢å¼•ç»“æ„æ•ˆç‡æ˜¯éå¸¸é«˜çš„ã€‚
 
-¶øºìºÚÊ÷ÕâÖÖ½á¹¹£¬hÃ÷ÏÔÒªÉîµÄ¶à¡£ÓÉÓÚÂß¼­ÉÏºÜ½üµÄ½Úµã£¨¸¸×Ó£©ÎïÀíÉÏ¿ÉÄÜºÜÔ¶£¬ÎŞ·¨ÀûÓÃ¾Ö²¿ĞÔ£¬ËùÒÔºìºÚÊ÷µÄI/O½¥½ø¸´ÔÓ¶ÈÒ²ÎªO(h)£¬Ğ§ÂÊÃ÷ÏÔ±ÈB-Tree²îºÜ¶à¡£
+è€Œçº¢é»‘æ ‘è¿™ç§ç»“æ„ï¼Œhæ˜æ˜¾è¦æ·±çš„å¤šã€‚ç”±äºé€»è¾‘ä¸Šå¾ˆè¿‘çš„èŠ‚ç‚¹ï¼ˆçˆ¶å­ï¼‰ç‰©ç†ä¸Šå¯èƒ½å¾ˆè¿œï¼Œæ— æ³•åˆ©ç”¨å±€éƒ¨æ€§ï¼Œæ‰€ä»¥çº¢é»‘æ ‘çš„I/Oæ¸è¿›å¤æ‚åº¦ä¹Ÿä¸ºO(h)ï¼Œæ•ˆç‡æ˜æ˜¾æ¯”B-Treeå·®å¾ˆå¤šã€‚
 
-ÖÁÓÚB+TreeÎªÊ²Ã´¸üÊÊºÏÍâ´æË÷Òı£¬Ô­ÒòºÍÄÚ½Úµã³ö¶ÈdÓĞ¹Ø¡£
+è‡³äºB+Treeä¸ºä»€ä¹ˆæ›´é€‚åˆå¤–å­˜ç´¢å¼•ï¼ŒåŸå› å’Œå†…èŠ‚ç‚¹å‡ºåº¦dæœ‰å…³ã€‚
 
-ÓÉÓÚB+TreeÄÚ½ÚµãÈ¥µôÁËdataÓò£¬Òò´Ë¿ÉÒÔÓµÓĞ¸ü´óµÄ³ö¶È£¬ÓµÓĞ¸üºÃµÄĞÔÄÜ¡£
+ç”±äºB+Treeå†…èŠ‚ç‚¹å»æ‰äº†dataåŸŸï¼Œå› æ­¤å¯ä»¥æ‹¥æœ‰æ›´å¤§çš„å‡ºåº¦ï¼Œæ‹¥æœ‰æ›´å¥½çš„æ€§èƒ½ã€‚
 
 
 #### demo1
 
-StudentÑ§Éú±í
+Studentå­¦ç”Ÿè¡¨
 
-| ±í×Ö¶Î                     | ËµÃ÷                                                         |
+| è¡¨å­—æ®µ                     | è¯´æ˜                                                         |
 | ------------------------ | ------------------------------------------------------------ |
-| SID              | Ö÷¼ü                                                   |
-| Sname         | Ãû×Ö  |
-| Sage           | ÄêÁä                    |
-| Ssex           | ĞÔ±ğ                    |
-| Sbirth           | ÉúÈÕ                    |
+| SID              | ä¸»é”®                                                   |
+| Sname         | åå­—  |
+| Sage           | å¹´é¾„                    |
+| Ssex           | æ€§åˆ«                    |
+| Sbirth           | ç”Ÿæ—¥                    |
 
-Course¿Î³Ì±í£º
+Courseè¯¾ç¨‹è¡¨ï¼š
 
-| ±í×Ö¶Î                     | ËµÃ÷                                                         |
+| è¡¨å­—æ®µ                     | è¯´æ˜                                                         |
 | ------------------------ | ------------------------------------------------------------ |
-| CID              | Ö÷¼ü                                                   |
-| Cname         | Ãû×Ö  |
-| TID           | ½ÌÊ¦ID                    |
+| CID              | ä¸»é”®                                                   |
+| Cname         | åå­—  |
+| TID           | æ•™å¸ˆID                    |
 
-SC³É¼¨±í£º
+SCæˆç»©è¡¨ï¼š
 
-| ±í×Ö¶Î                     | ËµÃ÷                                                         |
+| è¡¨å­—æ®µ                     | è¯´æ˜                                                         |
 | ------------------------ | ------------------------------------------------------------ |
-| SID              | Ö÷¼ü                                                   |
-| CID         | ¿Î³ÌID  |
-| score           | ·ÖÊı                    |
+| SID              | ä¸»é”®                                                   |
+| CID         | è¯¾ç¨‹ID  |
+| score           | åˆ†æ•°                    |
 
-Teacher½ÌÊ¦±í£º
+Teacheræ•™å¸ˆè¡¨ï¼š
 
-| ±í×Ö¶Î                     | ËµÃ÷                                                         |
+| è¡¨å­—æ®µ                     | è¯´æ˜                                                         |
 | ------------------------ | ------------------------------------------------------------ |
-| TID              | Ö÷¼ü                                                   |
-| Tname         | Ãû×Ö  |
+| TID              | ä¸»é”®                                                   |
+| Tname         | åå­—  |
 
-1¡¢²éÑ¯201¿Î³Ì±È202¿Î³Ì³É¼¨¸ßµÄËùÓĞÑ§ÉúµÄÑ§ºÅ
+1ã€æŸ¥è¯¢201è¯¾ç¨‹æ¯”202è¯¾ç¨‹æˆç»©é«˜çš„æ‰€æœ‰å­¦ç”Ÿçš„å­¦å·
 
 ```sql
 select a.SID from (select Sid,score from SC where CID=201) a,(select Sid,score from SC where CID=202) b where a.score>b.score a.score>b.score and a.Sid=b.Sid;
 ```
 
-2¡¢²éÑ¯Æ½¾ù³É¼¨´óÓÚ60·ÖµÄÍ¬Ñ§µÄÑ§ºÅºÍÆ½¾ù³É¼¨£»
+2ã€æŸ¥è¯¢å¹³å‡æˆç»©å¤§äº60åˆ†çš„åŒå­¦çš„å­¦å·å’Œå¹³å‡æˆç»©ï¼›
 
 ```sql
 select SID,avg(score) from sc group by SID having avg(score) >60;
 ```
 
-3¡¢²éÑ¯ËùÓĞÍ¬Ñ§µÄÑ§ºÅ¡¢ĞÕÃû¡¢Ñ¡¿ÎÊı¡¢×Ü³É¼¨£»
+3ã€æŸ¥è¯¢æ‰€æœ‰åŒå­¦çš„å­¦å·ã€å§“åã€é€‰è¯¾æ•°ã€æ€»æˆç»©ï¼›
 
 ```sql
 select Student.SID,Student.Sname,count(SC.CID),sum(score) from Student left Outer join SC on Student.SID=SC.SID
     group by Student.SID,Sname
 ```
 
-4¡¢²éÑ¯ĞÕ¡°Àî¡±µÄÀÏÊ¦µÄ¸öÊı£»
+4ã€æŸ¥è¯¢å§“â€œæâ€çš„è€å¸ˆçš„ä¸ªæ•°ï¼›
 ```sql
 select count(distinct(Tname))
 from Teacher
-where Tname like 'Àî%';
+where Tname like 'æ%';
 ```
 
-5¡¢²éÑ¯Ã»Ñ§¹ı¡°Ò¶Æ½¡±ÀÏÊ¦¿ÎµÄÍ¬Ñ§µÄÑ§ºÅ¡¢ĞÕÃû£»
+5ã€æŸ¥è¯¢æ²¡å­¦è¿‡â€œå¶å¹³â€è€å¸ˆè¯¾çš„åŒå­¦çš„å­¦å·ã€å§“åï¼›
 
 ```sql
 select Student.SID,Student.Sname
 from Student
 where SID not in (select distinct(SC.SID) from SC,Course,Teacher
-                  where SC.CID=Course.CID and Teacher.TID=Course.TID and Teacher.Tname='Ò¶Æ½');
+                  where SC.CID=Course.CID and Teacher.TID=Course.TID and Teacher.Tname='å¶å¹³');
 select student.sid,student.sname
 from student
 where sid not in (
@@ -203,12 +203,12 @@ where sid not in (
         from course
         where tid = (select tid
                      from teacher
-                     where tname = 'Ò¶Æ½')
+                     where tname = 'å¶å¹³')
     )
 )
 ```
 
-6¡¢²éÑ¯Ñ§¹ı¡°201¡±²¢ÇÒÒ²Ñ§¹ı±àºÅ¡°202¡±¿Î³ÌµÄÍ¬Ñ§µÄÑ§ºÅ¡¢ĞÕÃû£»
+6ã€æŸ¥è¯¢å­¦è¿‡â€œ201â€å¹¶ä¸”ä¹Ÿå­¦è¿‡ç¼–å·â€œ202â€è¯¾ç¨‹çš„åŒå­¦çš„å­¦å·ã€å§“åï¼›
 
 ```sql
 select Student.SID,Student.Sname
@@ -217,27 +217,27 @@ where Student.SID=SC.SID and SC.CID='001'and exists(
     Select * from SC as SC_2 where SC_2.SID=SC.SID and SC_2.CID='002');
 ```
 
-7¡¢²éÑ¯Ñ§¹ı¡°Ò¶Æ½¡±ÀÏÊ¦Ëù½ÌµÄËùÓĞ¿ÎµÄÍ¬Ñ§µÄÑ§ºÅ¡¢ĞÕÃû£»
+7ã€æŸ¥è¯¢å­¦è¿‡â€œå¶å¹³â€è€å¸ˆæ‰€æ•™çš„æ‰€æœ‰è¯¾çš„åŒå­¦çš„å­¦å·ã€å§“åï¼›
 
 ```sql
 select SID,Sname
 from Student
 where SID in (select SID from SC ,Course ,Teacher
-              where SC.CID=Course.CID and Teacher.TID=Course.TID and Teacher.Tname='Ò¶Æ½'
+              where SC.CID=Course.CID and Teacher.TID=Course.TID and Teacher.Tname='å¶å¹³'
               group by SID having count(SC.CID)=(select count(CID) from Course,Teacher
-                                                 where Teacher.TID=Course.TID and Tname='Ò¶Æ½'));
+                                                 where Teacher.TID=Course.TID and Tname='å¶å¹³'));
 ```
 
 
-8¡¢²éÑ¯¿Î³Ì±àºÅ¡°202¡±µÄ³É¼¨±È¿Î³Ì±àºÅ¡°201¡±¿Î³ÌµÍµÄËùÓĞÍ¬Ñ§µÄÑ§ºÅ¡¢ĞÕÃû£»
+8ã€æŸ¥è¯¢è¯¾ç¨‹ç¼–å·â€œ202â€çš„æˆç»©æ¯”è¯¾ç¨‹ç¼–å·â€œ201â€è¯¾ç¨‹ä½çš„æ‰€æœ‰åŒå­¦çš„å­¦å·ã€å§“åï¼›
 
 ```sql
 Select SID,Sname from (select Student.SID,Student.Sname,score ,(select score from SC SC_2 where SC_2.SID=Student.SID and SC_2.CID='002') score2
                        from Student,SC where Student.SID=SC.SID and CID='001') S_2 where score2 <score;
 ```
 
-9¡¢²éÑ¯ËùÓĞ¿Î³Ì³É¼¨Ğ¡ÓÚ60·ÖµÄÍ¬Ñ§µÄÑ§ºÅ¡¢ĞÕÃû£»
-£¨È¡·´²Ù×÷´¦Àí£©
+9ã€æŸ¥è¯¢æ‰€æœ‰è¯¾ç¨‹æˆç»©å°äº60åˆ†çš„åŒå­¦çš„å­¦å·ã€å§“åï¼›
+ï¼ˆå–åæ“ä½œå¤„ç†ï¼‰
 
 ```sql
 select SID,Sname
@@ -245,9 +245,9 @@ from Student
 where SID not in (select Student.SID from Student,SC where S.SID=SC.SID and score>60);
 ```
 
-10¡¢²éÑ¯Ã»ÓĞÑ§È«ËùÓĞ¿ÎµÄÍ¬Ñ§µÄÑ§ºÅ¡¢ĞÕÃû£»
+10ã€æŸ¥è¯¢æ²¡æœ‰å­¦å…¨æ‰€æœ‰è¯¾çš„åŒå­¦çš„å­¦å·ã€å§“åï¼›
 
-£¨count(CID)µÃµ½¿Î³ÌµÄÊıÄ¿£©
+ï¼ˆcount(CID)å¾—åˆ°è¯¾ç¨‹çš„æ•°ç›®ï¼‰
 
 ```sql
 select Student.SID,Student.Sname
@@ -256,13 +256,13 @@ where Student.SID=SC.SID group by Student.SID,Student.Sname having count(CID) <(
 ```
 
 
-11¡¢²éÑ¯ÖÁÉÙÓĞÒ»ÃÅ¿ÎÓëÑ§ºÅÎª¡°1001¡±µÄÍ¬Ñ§ËùÑ§ÏàÍ¬µÄÍ¬Ñ§µÄÑ§ºÅºÍĞÕÃû£»
+11ã€æŸ¥è¯¢è‡³å°‘æœ‰ä¸€é—¨è¯¾ä¸å­¦å·ä¸ºâ€œ1001â€çš„åŒå­¦æ‰€å­¦ç›¸åŒçš„åŒå­¦çš„å­¦å·å’Œå§“åï¼›
 
 ```sql
 select SID,Sname from Student,SC where Student.SID=SC.SID and CID in (select CID from SC where SID='1001');
 ```
 
-12¡¢²éÑ¯ÖÁÉÙÑ§¹ıÑ§ºÅÎª¡°1001¡±Í¬Ñ§ËùÓĞÒ»ÃÅ¿ÎµÄÆäËûÍ¬Ñ§Ñ§ºÅºÍĞÕÃû£»
+12ã€æŸ¥è¯¢è‡³å°‘å­¦è¿‡å­¦å·ä¸ºâ€œ1001â€åŒå­¦æ‰€æœ‰ä¸€é—¨è¯¾çš„å…¶ä»–åŒå­¦å­¦å·å’Œå§“åï¼›
 
 ```sql
 select distinct SC.SID,Sname
@@ -272,7 +272,7 @@ and Student.SID <> 1001;
 ```
 
 
-13¡¢°Ñ¡°SC¡±±íÖĞ¡°Ò¶Æ½¡±ÀÏÊ¦½ÌµÄ¿ÎµÄ³É¼¨¶¼¸ü¸ÄÎª´Ë¿Î³ÌµÄÆ½¾ù³É¼¨£»
+13ã€æŠŠâ€œSCâ€è¡¨ä¸­â€œå¶å¹³â€è€å¸ˆæ•™çš„è¯¾çš„æˆç»©éƒ½æ›´æ”¹ä¸ºæ­¤è¯¾ç¨‹çš„å¹³å‡æˆç»©ï¼›
 
 ```sql
 update SC
@@ -282,12 +282,12 @@ set score=(select avg(SC_2.score)
 where cid = (
     select cid
     from Course,Teacher
-    where Course.CID=SC.CID and Course.TID=Teacher.TID and Teacher.Tname='Ò¶Æ½'
+    where Course.CID=SC.CID and Course.TID=Teacher.TID and Teacher.Tname='å¶å¹³'
 )
 ```
 
 
-14¡¢²éÑ¯ºÍ¡°1002¡±ºÅµÄÍ¬Ñ§Ñ§Ï°µÄ¿Î³ÌÍêÈ«ÏàÍ¬µÄÆäËûÍ¬Ñ§Ñ§ºÅºÍĞÕÃû£»
+14ã€æŸ¥è¯¢å’Œâ€œ1002â€å·çš„åŒå­¦å­¦ä¹ çš„è¯¾ç¨‹å®Œå…¨ç›¸åŒçš„å…¶ä»–åŒå­¦å­¦å·å’Œå§“åï¼›
 
 ```sql
 select SID
@@ -296,19 +296,19 @@ where CID in (select CID from SC where SID='1002')
 group by SID having count(*)=(select count(*) from SC where SID='1002');
 ```
 
-15¡¢É¾³ıÑ§Ï°¡°Ò¶Æ½¡±ÀÏÊ¦¿ÎµÄSC±í¼ÇÂ¼£»
+15ã€åˆ é™¤å­¦ä¹ â€œå¶å¹³â€è€å¸ˆè¯¾çš„SCè¡¨è®°å½•ï¼›
 
 ```sql
 Delete from sc
 where cid = (
     select cid
     from course ,Teacher
-    where Course.CID=SC.CID and Course.TID= Teacher.TID and Tname='Ò¶Æ½'
+    where Course.CID=SC.CID and Course.TID= Teacher.TID and Tname='å¶å¹³'
 )
 
 ```
 
-16¡¢ÏòSC±íÖĞ²åÈëÒ»Ğ©¼ÇÂ¼£¬ÕâĞ©¼ÇÂ¼ÒªÇó·ûºÏÒÔÏÂÌõ¼ş£ºÃ»ÓĞÉÏ¹ı±àºÅ¡°003¡±¿Î³ÌµÄÍ¬Ñ§Ñ§ºÅ¡¢002ºÅ¿ÎµÄÆ½¾ù³É¼¨£»
+16ã€å‘SCè¡¨ä¸­æ’å…¥ä¸€äº›è®°å½•ï¼Œè¿™äº›è®°å½•è¦æ±‚ç¬¦åˆä»¥ä¸‹æ¡ä»¶ï¼šæ²¡æœ‰ä¸Šè¿‡ç¼–å·â€œ003â€è¯¾ç¨‹çš„åŒå­¦å­¦å·ã€002å·è¯¾çš„å¹³å‡æˆç»©ï¼›
 
 ```sql
 Insert into SC
@@ -318,24 +318,24 @@ from Student
 where SID not in (Select SID from SC where CID='002');
 ```
 
-17¡¢°´Ñ§ÉúÆ½¾ù³É¼¨´Ó¸ßµ½µÍÏÔÊ¾ËùÓĞÑ§ÉúµÄ¡°Êı¾İ¿â¡±¡¢¡°ÆóÒµ¹ÜÀí¡±¡¢¡°Ó¢Óï¡±ÈıÃÅµÄ¿Î³Ì³É¼¨£¬°´ÈçÏÂĞÎÊ½ÏÔÊ¾£ºÑ§ÉúID,Êı¾İ¿â,ÆóÒµ¹ÜÀí,Ó¢Óï,ÓĞĞ§¿Î³ÌÊı,ÓĞĞ§Æ½¾ù·Ö
-£¨Ä¬ÈÏÊı¾İ¿âÊÇ004£¬ÆóÒµ¹ÜÀíÊÇ001£¬Ó¢ÓïÊÇ006£©
+17ã€æŒ‰å­¦ç”Ÿå¹³å‡æˆç»©ä»é«˜åˆ°ä½æ˜¾ç¤ºæ‰€æœ‰å­¦ç”Ÿçš„â€œæ•°æ®åº“â€ã€â€œä¼ä¸šç®¡ç†â€ã€â€œè‹±è¯­â€ä¸‰é—¨çš„è¯¾ç¨‹æˆç»©ï¼ŒæŒ‰å¦‚ä¸‹å½¢å¼æ˜¾ç¤ºï¼šå­¦ç”ŸID,æ•°æ®åº“,ä¼ä¸šç®¡ç†,è‹±è¯­,æœ‰æ•ˆè¯¾ç¨‹æ•°,æœ‰æ•ˆå¹³å‡åˆ†
+ï¼ˆé»˜è®¤æ•°æ®åº“æ˜¯004ï¼Œä¼ä¸šç®¡ç†æ˜¯001ï¼Œè‹±è¯­æ˜¯006ï¼‰
 
 ```sql
-SELECT SID as Ñ§ÉúID
-,(SELECT score FROM SC WHERE SC.SID=t.SID AND CID='004') AS Êı¾İ¿â
-,(SELECT score FROM SC WHERE SC.SID=t.SID AND CID='001') AS ÆóÒµ¹ÜÀí
-,(SELECT score FROM SC WHERE SC.SID=t.SID AND CID='006') AS Ó¢Óï
-,COUNT(*) AS ÓĞĞ§¿Î³ÌÊı, AVG(t.score) AS Æ½¾ù³É¼¨
+SELECT SID as å­¦ç”ŸID
+,(SELECT score FROM SC WHERE SC.SID=t.SID AND CID='004') AS æ•°æ®åº“
+,(SELECT score FROM SC WHERE SC.SID=t.SID AND CID='001') AS ä¼ä¸šç®¡ç†
+,(SELECT score FROM SC WHERE SC.SID=t.SID AND CID='006') AS è‹±è¯­
+,COUNT(*) AS æœ‰æ•ˆè¯¾ç¨‹æ•°, AVG(t.score) AS å¹³å‡æˆç»©
 FROM SC AS t
 GROUP BY SID
 ORDER BY avg(t.score)
 ```
 
-18¡¢²éÑ¯¸÷¿Æ³É¼¨×î¸ßºÍ×îµÍµÄ·Ö£¬ÒÔ¼°¶ÔÓ¦µÄÑ§ºÅ£ºÒÔÈçÏÂĞÎÊ½ÏÔÊ¾£º¿Î³ÌID£¬×î¸ß·Ö£¬Ñ§ºÅ£¬×îµÍ·Ö£¬Ñ§ºÅ
+18ã€æŸ¥è¯¢å„ç§‘æˆç»©æœ€é«˜å’Œæœ€ä½çš„åˆ†ï¼Œä»¥åŠå¯¹åº”çš„å­¦å·ï¼šä»¥å¦‚ä¸‹å½¢å¼æ˜¾ç¤ºï¼šè¯¾ç¨‹IDï¼Œæœ€é«˜åˆ†ï¼Œå­¦å·ï¼Œæœ€ä½åˆ†ï¼Œå­¦å·
 
 ```sql
-SELECT L.CID courseID,L.score ×î¸ß·Ö,L.sid Ñ§ºÅ,R.score ×îµÍ·Ö,R.sid Ñ§ºÅ
+SELECT L.CID courseID,L.score æœ€é«˜åˆ†,L.sid å­¦å·,R.score æœ€ä½åˆ†,R.sid å­¦å·
 FROM SC L ,SC R
 WHERE L.CID = R.CID and
 L.score = (SELECT MAX(IL.score)
@@ -349,53 +349,53 @@ R.Score = (SELECT MIN(IR.score)
            GROUP BY IR.CID)
 ```
 
-19¡¢²éÑ¯¿Î³ÌºÅ£¬¿Î³ÌÃû³Æ£¬Æ½¾ù³É¼¨ºÍ¼°¸ñÂÊ£¬²¢°´¸÷¿ÆÆ½¾ù³É¼¨´ÓµÍµ½¸ßºÍ¼°¸ñÂÊµÄ°Ù·ÖÊı´Ó¸ßµ½µÍË³Ğò
+19ã€æŸ¥è¯¢è¯¾ç¨‹å·ï¼Œè¯¾ç¨‹åç§°ï¼Œå¹³å‡æˆç»©å’ŒåŠæ ¼ç‡ï¼Œå¹¶æŒ‰å„ç§‘å¹³å‡æˆç»©ä»ä½åˆ°é«˜å’ŒåŠæ ¼ç‡çš„ç™¾åˆ†æ•°ä»é«˜åˆ°ä½é¡ºåº
 
 ```sql
-SELECT t.CID AS ¿Î³ÌºÅ,max(course.Cname)AS ¿Î³ÌÃû,isnull(AVG(score),0) AS Æ½¾ù³É¼¨
-,100 * SUM(CASE WHEN isnull(score,0)>=60 THEN 1 ELSE 0 END)/COUNT(*) AS ¼°¸ñ°Ù·ÖÊı
+SELECT t.CID AS è¯¾ç¨‹å·,max(course.Cname)AS è¯¾ç¨‹å,isnull(AVG(score),0) AS å¹³å‡æˆç»©
+,100 * SUM(CASE WHEN isnull(score,0)>=60 THEN 1 ELSE 0 END)/COUNT(*) AS åŠæ ¼ç™¾åˆ†æ•°
 FROM SC T,Course
 where t.CID=course.CID
 GROUP BY t.CID
 ORDER BY 100 * SUM(CASE WHEN isnull(score,0)>=60 THEN 1 ELSE 0 END)/COUNT(*) DESC
 ```
 
-20¡¢²éÑ¯ÈçÏÂ¿Î³ÌÆ½¾ù³É¼¨ºÍ¼°¸ñÂÊµÄ°Ù·ÖÊı(ÓÃ"1ĞĞ"ÏÔÊ¾): ÆóÒµ¹ÜÀí£¨001£©£¬Âí¿ËË¼£¨002£©£¬OO&UML £¨003£©£¬Êı¾İ¿â£¨004£©
+20ã€æŸ¥è¯¢å¦‚ä¸‹è¯¾ç¨‹å¹³å‡æˆç»©å’ŒåŠæ ¼ç‡çš„ç™¾åˆ†æ•°(ç”¨"1è¡Œ"æ˜¾ç¤º): ä¼ä¸šç®¡ç†ï¼ˆ001ï¼‰ï¼Œé©¬å…‹æ€ï¼ˆ002ï¼‰ï¼ŒOO&UML ï¼ˆ003ï¼‰ï¼Œæ•°æ®åº“ï¼ˆ004ï¼‰
 
 ```sql
-SELECT SUM(CASE WHEN CID ='001' THEN score ELSE 0 END)/SUM(CASE CID WHEN '001' THEN 1 ELSE 0 END) AS ÆóÒµ¹ÜÀíÆ½¾ù·Ö
-,100 * SUM(CASE WHEN CID = '001' AND score >= 60 THEN 1 ELSE 0 END)/SUM(CASE WHEN CID = '001' THEN 1 ELSE 0 END) AS ÆóÒµ¹ÜÀí¼°¸ñ°Ù·ÖÊı
-,SUM(CASE WHEN CID = '002' THEN score ELSE 0 END)/SUM(CASE CID WHEN '002' THEN 1 ELSE 0 END) AS Âí¿ËË¼Æ½¾ù·Ö
-,100 * SUM(CASE WHEN CID = '002' AND score >= 60 THEN 1 ELSE 0 END)/SUM(CASE WHEN CID = '002' THEN 1 ELSE 0 END) AS Âí¿ËË¼¼°¸ñ°Ù·ÖÊı
-,SUM(CASE WHEN CID = '003' THEN score ELSE 0 END)/SUM(CASE CID WHEN '003' THEN 1 ELSE 0 END) AS UMLÆ½¾ù·Ö
-,100 * SUM(CASE WHEN CID = '003' AND score >= 60 THEN 1 ELSE 0 END)/SUM(CASE WHEN CID = '003' THEN 1 ELSE 0 END) AS UML¼°¸ñ°Ù·ÖÊı
-,SUM(CASE WHEN CID = '004' THEN score ELSE 0 END)/SUM(CASE CID WHEN '004' THEN 1 ELSE 0 END) AS Êı¾İ¿âÆ½¾ù·Ö
-,100 * SUM(CASE WHEN CID = '004' AND score >= 60 THEN 1 ELSE 0 END)/SUM(CASE WHEN CID = '004' THEN 1 ELSE 0 END) AS Êı¾İ¿â¼°¸ñ°Ù·ÖÊı
+SELECT SUM(CASE WHEN CID ='001' THEN score ELSE 0 END)/SUM(CASE CID WHEN '001' THEN 1 ELSE 0 END) AS ä¼ä¸šç®¡ç†å¹³å‡åˆ†
+,100 * SUM(CASE WHEN CID = '001' AND score >= 60 THEN 1 ELSE 0 END)/SUM(CASE WHEN CID = '001' THEN 1 ELSE 0 END) AS ä¼ä¸šç®¡ç†åŠæ ¼ç™¾åˆ†æ•°
+,SUM(CASE WHEN CID = '002' THEN score ELSE 0 END)/SUM(CASE CID WHEN '002' THEN 1 ELSE 0 END) AS é©¬å…‹æ€å¹³å‡åˆ†
+,100 * SUM(CASE WHEN CID = '002' AND score >= 60 THEN 1 ELSE 0 END)/SUM(CASE WHEN CID = '002' THEN 1 ELSE 0 END) AS é©¬å…‹æ€åŠæ ¼ç™¾åˆ†æ•°
+,SUM(CASE WHEN CID = '003' THEN score ELSE 0 END)/SUM(CASE CID WHEN '003' THEN 1 ELSE 0 END) AS UMLå¹³å‡åˆ†
+,100 * SUM(CASE WHEN CID = '003' AND score >= 60 THEN 1 ELSE 0 END)/SUM(CASE WHEN CID = '003' THEN 1 ELSE 0 END) AS UMLåŠæ ¼ç™¾åˆ†æ•°
+,SUM(CASE WHEN CID = '004' THEN score ELSE 0 END)/SUM(CASE CID WHEN '004' THEN 1 ELSE 0 END) AS æ•°æ®åº“å¹³å‡åˆ†
+,100 * SUM(CASE WHEN CID = '004' AND score >= 60 THEN 1 ELSE 0 END)/SUM(CASE WHEN CID = '004' THEN 1 ELSE 0 END) AS æ•°æ®åº“åŠæ ¼ç™¾åˆ†æ•°
 FROM SC
 ```
 
-21¡¢²éÑ¯²»Í¬ÀÏÊ¦Ëù½Ì²»Í¬¿Î³ÌÆ½¾ù·Ö´Ó¸ßµ½µÍÏÔÊ¾
+21ã€æŸ¥è¯¢ä¸åŒè€å¸ˆæ‰€æ•™ä¸åŒè¯¾ç¨‹å¹³å‡åˆ†ä»é«˜åˆ°ä½æ˜¾ç¤º
 
 ```sql
-SELECT max(Z.TID) AS ½ÌÊ¦ID,MAX(Z.Tname) AS ½ÌÊ¦ĞÕÃû,C.CID AS ¿Î³Ì£É£Ä,MAX(C.Cname) AS ¿Î³ÌÃû³Æ,AVG(Score) AS Æ½¾ù³É¼¨
+SELECT max(Z.TID) AS æ•™å¸ˆID,MAX(Z.Tname) AS æ•™å¸ˆå§“å,C.CID AS è¯¾ç¨‹ï¼©ï¼¤,MAX(C.Cname) AS è¯¾ç¨‹åç§°,AVG(Score) AS å¹³å‡æˆç»©
 FROM SC AS T,Course AS C ,Teacher AS Z
 where T.CID=C.CID and C.TID=Z.TID
 GROUP BY C.CID
 ORDER BY AVG(Score) DESC
 ```
 
-22¡¢²éÑ¯ÈçÏÂ¿Î³Ì³É¼¨µÚ 3 Ãûµ½µÚ 6 ÃûµÄÑ§Éú³É¼¨µ¥£ºÆóÒµ¹ÜÀí£¨001£©£¬Âí¿ËË¼£¨002£©£¬UML £¨003£©£¬Êı¾İ¿â£¨004£©
-[Ñ§ÉúID],[Ñ§ÉúĞÕÃû],ÆóÒµ¹ÜÀí,Âí¿ËË¼,UML,Êı¾İ¿â,Æ½¾ù³É¼¨
+22ã€æŸ¥è¯¢å¦‚ä¸‹è¯¾ç¨‹æˆç»©ç¬¬ 3 ååˆ°ç¬¬ 6 åçš„å­¦ç”Ÿæˆç»©å•ï¼šä¼ä¸šç®¡ç†ï¼ˆ001ï¼‰ï¼Œé©¬å…‹æ€ï¼ˆ002ï¼‰ï¼ŒUML ï¼ˆ003ï¼‰ï¼Œæ•°æ®åº“ï¼ˆ004ï¼‰
+[å­¦ç”ŸID],[å­¦ç”Ÿå§“å],ä¼ä¸šç®¡ç†,é©¬å…‹æ€,UML,æ•°æ®åº“,å¹³å‡æˆç»©
 
 ```sql
 SELECT DISTINCT top 3
-SC.SID As Ñ§ÉúÑ§ºÅ,
-Student.Sname AS Ñ§ÉúĞÕÃû ,
-T1.score AS ÆóÒµ¹ÜÀí,
-T2.score AS Âí¿ËË¼,
+SC.SID As å­¦ç”Ÿå­¦å·,
+Student.Sname AS å­¦ç”Ÿå§“å ,
+T1.score AS ä¼ä¸šç®¡ç†,
+T2.score AS é©¬å…‹æ€,
 T3.score AS UML,
-T4.score AS Êı¾İ¿â,
-ISNULL(T1.score,0) + ISNULL(T2.score,0) + ISNULL(T3.score,0) + ISNULL(T4.score,0) as ×Ü·Ö
+T4.score AS æ•°æ®åº“,
+ISNULL(T1.score,0) + ISNULL(T2.score,0) + ISNULL(T3.score,0) + ISNULL(T4.score,0) as æ€»åˆ†
 FROM Student,SC LEFT JOIN SC AS T1
 ON SC.SID = T1.SID AND T1.CID = '001'
 LEFT JOIN SC AS T2
@@ -423,10 +423,10 @@ NOT IN
  ORDER BY ISNULL(T1.score,0) + ISNULL(T2.score,0) + ISNULL(T3.score,0) + ISNULL(T4.score,0) DESC);
 ```
 
-23¡¢Í³¼Æ¸÷¿Æ³É¼¨,¸÷·ÖÊı¶ÎÈËÊı:¿Î³ÌID,¿Î³ÌÃû³Æ,[100-85],[85-70],[70-60],[ <60]
+23ã€ç»Ÿè®¡å„ç§‘æˆç»©,å„åˆ†æ•°æ®µäººæ•°:è¯¾ç¨‹ID,è¯¾ç¨‹åç§°,[100-85],[85-70],[70-60],[ <60]
 
 ```sql
-SELECT SC.CID as ¿Î³ÌID, Cname as ¿Î³ÌÃû³Æ
+SELECT SC.CID as è¯¾ç¨‹ID, Cname as è¯¾ç¨‹åç§°
 ,SUM(CASE WHEN score BETWEEN 85 AND 100 THEN 1 ELSE 0 END) AS [100 - 85]
 ,SUM(CASE WHEN score BETWEEN 70 AND 85 THEN 1 ELSE 0 END) AS [85 - 70]
 ,SUM(CASE WHEN score BETWEEN 60 AND 70 THEN 1 ELSE 0 END) AS [70 - 60]
@@ -436,27 +436,27 @@ where SC.CID=Course.CID
 GROUP BY SC.CID,Cname;
 ```
 
-24¡¢²éÑ¯Ñ§ÉúÆ½¾ù³É¼¨¼°ÆäÃû´Î
+24ã€æŸ¥è¯¢å­¦ç”Ÿå¹³å‡æˆç»©åŠå…¶åæ¬¡
 
 ```sql
-SELECT 1+(SELECT COUNT( distinct Æ½¾ù³É¼¨)
-          FROM (SELECT SID,AVG(score) AS Æ½¾ù³É¼¨
+SELECT 1+(SELECT COUNT( distinct å¹³å‡æˆç»©)
+          FROM (SELECT SID,AVG(score) AS å¹³å‡æˆç»©
                 FROM SC
                 GROUP BY SID
                ) AS T1
-          WHERE Æ½¾ù³É¼¨> T2.Æ½¾ù³É¼¨) as Ãû´Î,
-SID as Ñ§ÉúÑ§ºÅ,Æ½¾ù³É¼¨
-FROM (SELECT SID,AVG(score) Æ½¾ù³É¼¨
+          WHERE å¹³å‡æˆç»©> T2.å¹³å‡æˆç»©) as åæ¬¡,
+SID as å­¦ç”Ÿå­¦å·,å¹³å‡æˆç»©
+FROM (SELECT SID,AVG(score) å¹³å‡æˆç»©
       FROM SC
       GROUP BY SID
      ) AS T2
-ORDER BY Æ½¾ù³É¼¨desc;
+ORDER BY å¹³å‡æˆç»©desc;
 ```
 
-25¡¢²éÑ¯¸÷¿Æ³É¼¨Ç°ÈıÃûµÄ¼ÇÂ¼:(²»¿¼ÂÇ³É¼¨²¢ÁĞÇé¿ö)
+25ã€æŸ¥è¯¢å„ç§‘æˆç»©å‰ä¸‰åçš„è®°å½•:(ä¸è€ƒè™‘æˆç»©å¹¶åˆ—æƒ…å†µ)
 
 ```sql
-SELECT t1.SID as Ñ§ÉúID,t1.CID as ¿Î³ÌID,Score as ·ÖÊı
+SELECT t1.SID as å­¦ç”ŸID,t1.CID as è¯¾ç¨‹ID,Score as åˆ†æ•°
 FROM SC t1
 WHERE score IN (SELECT TOP 3 score
                 FROM SC
@@ -466,41 +466,41 @@ WHERE score IN (SELECT TOP 3 score
 ORDER BY t1.CID;
 ```
 
-26¡¢²éÑ¯Ã¿ÃÅ¿Î³Ì±»Ñ¡ĞŞµÄÑ§ÉúÊı
+26ã€æŸ¥è¯¢æ¯é—¨è¯¾ç¨‹è¢«é€‰ä¿®çš„å­¦ç”Ÿæ•°
 
 ```sql
 select Cid,count(SID) from sc group by CID;
 ```
 
-27¡¢²éÑ¯³öÖ»Ñ¡ĞŞÁËÒ»ÃÅ¿Î³ÌµÄÈ«²¿Ñ§ÉúµÄÑ§ºÅºÍĞÕÃû
+27ã€æŸ¥è¯¢å‡ºåªé€‰ä¿®äº†ä¸€é—¨è¯¾ç¨‹çš„å…¨éƒ¨å­¦ç”Ÿçš„å­¦å·å’Œå§“å
 
 ```sql
-select SC.SID,Student.Sname,count(CID) AS Ñ¡¿ÎÊı
+select SC.SID,Student.Sname,count(CID) AS é€‰è¯¾æ•°
 from SC ,Student
 where SC.SID=Student.SID group by SC.SID ,Student.Sname having count(CID)=1;
 ```
 
-28¡¢²éÑ¯ÄĞÉú¡¢Å®ÉúÈËÊı
+28ã€æŸ¥è¯¢ç”·ç”Ÿã€å¥³ç”Ÿäººæ•°
 
 ```sql
-Select count(Ssex) as ÄĞÉúÈËÊı from Student group by Ssex having Ssex='ÄĞ';
-Select count(Ssex) as Å®ÉúÈËÊı from Student group by Ssex having Ssex='Å®'£»
+Select count(Ssex) as ç”·ç”Ÿäººæ•° from Student group by Ssex having Ssex='ç”·';
+Select count(Ssex) as å¥³ç”Ÿäººæ•° from Student group by Ssex having Ssex='å¥³'ï¼›
 ```
 
 
-29¡¢²éÑ¯ĞÕ¡°ÕÅ¡±µÄÑ§ÉúÃûµ¥
+29ã€æŸ¥è¯¢å§“â€œå¼ â€çš„å­¦ç”Ÿåå•
 
 ```sql
-SELECT Sname FROM Student WHERE Sname like 'ÕÅ%';
+SELECT Sname FROM Student WHERE Sname like 'å¼ %';
 ```
 
-30¡¢²éÑ¯Í¬ÃûÑ§ÉúÃûµ¥£¬²¢Í³¼ÆÍ¬ÃûÈËÊı
+30ã€æŸ¥è¯¢åŒåå­¦ç”Ÿåå•ï¼Œå¹¶ç»Ÿè®¡åŒåäººæ•°
 
 ```sql
 select Sname,count(*) from Student group by Sname having count(*)>1;
 ```
 
-31¡¢1981Äê³öÉúµÄÑ§ÉúÃûµ¥(×¢£ºStudent±íÖĞSageÁĞµÄÀàĞÍÊÇdatetime)
+31ã€1981å¹´å‡ºç”Ÿçš„å­¦ç”Ÿåå•(æ³¨ï¼šStudentè¡¨ä¸­Sageåˆ—çš„ç±»å‹æ˜¯datetime)
 
 ```sql
 select Sname, CONVERT(char (11),DATEPART(year,Sage)) as age
@@ -508,13 +508,13 @@ from student
 where CONVERT(char(11),DATEPART(year,Sage))='1981';
 ```
 
-32¡¢²éÑ¯Ã¿ÃÅ¿Î³ÌµÄÆ½¾ù³É¼¨£¬½á¹û°´Æ½¾ù³É¼¨ÉıĞòÅÅÁĞ£¬Æ½¾ù³É¼¨ÏàÍ¬Ê±£¬°´¿Î³ÌºÅ½µĞòÅÅÁĞ
+32ã€æŸ¥è¯¢æ¯é—¨è¯¾ç¨‹çš„å¹³å‡æˆç»©ï¼Œç»“æœæŒ‰å¹³å‡æˆç»©å‡åºæ’åˆ—ï¼Œå¹³å‡æˆç»©ç›¸åŒæ—¶ï¼ŒæŒ‰è¯¾ç¨‹å·é™åºæ’åˆ—
 
 ```sql
 Select CID,Avg(score) from SC group by CID order by Avg(score),CID DESC ;
 ```
 
-33¡¢²éÑ¯Æ½¾ù³É¼¨´óÓÚ85µÄËùÓĞÑ§ÉúµÄÑ§ºÅ¡¢ĞÕÃûºÍÆ½¾ù³É¼¨
+33ã€æŸ¥è¯¢å¹³å‡æˆç»©å¤§äº85çš„æ‰€æœ‰å­¦ç”Ÿçš„å­¦å·ã€å§“åå’Œå¹³å‡æˆç»©
 
 ```sql
 select Sname,SC.SID ,avg(score)
@@ -522,15 +522,15 @@ from Student,SC
 where Student.SID=SC.SID group by SC.SID,Sname having avg(score)>85;
 ```
 
-34¡¢²éÑ¯¿Î³ÌÃû³ÆÎª¡°Êı¾İ¿â¡±£¬ÇÒ·ÖÊıµÍÓÚ60µÄÑ§ÉúĞÕÃûºÍ·ÖÊı
+34ã€æŸ¥è¯¢è¯¾ç¨‹åç§°ä¸ºâ€œæ•°æ®åº“â€ï¼Œä¸”åˆ†æ•°ä½äº60çš„å­¦ç”Ÿå§“åå’Œåˆ†æ•°
 
 ```sql
 Select Sname,isnull(score,0)
 from Student,SC,Course
-where SC.SID=Student.SID and SC.CID=Course.CID and Course.Cname='Êı¾İ¿â'and score <60;
+where SC.SID=Student.SID and SC.CID=Course.CID and Course.Cname='æ•°æ®åº“'and score <60;
 ```
 
-35¡¢²éÑ¯ËùÓĞÑ§ÉúµÄÑ¡¿ÎÇé¿ö£» £¨Ñ§ºÅ£¬ĞÕÃû£¬¿Î³Ì±àºÅ£¬¿Î³ÌÃû×Ö£©
+35ã€æŸ¥è¯¢æ‰€æœ‰å­¦ç”Ÿçš„é€‰è¯¾æƒ…å†µï¼› ï¼ˆå­¦å·ï¼Œå§“åï¼Œè¯¾ç¨‹ç¼–å·ï¼Œè¯¾ç¨‹åå­—ï¼‰
 
 ```sql
 SELECT SC.SID,SC.CID,Sname,Cname
@@ -538,7 +538,7 @@ FROM SC,Student,Course
 where SC.SID=Student.SID and SC.CID=Course.CID ;
 ```
 
-36¡¢²éÑ¯ÈÎºÎÒ»ÃÅ¿Î³Ì³É¼¨ÔÚ70·ÖÒÔÉÏµÄÑ§ºÅ¡¢ĞÕÃû¡¢¿Î³Ì±àºÅºÍ·ÖÊı£»
+36ã€æŸ¥è¯¢ä»»ä½•ä¸€é—¨è¯¾ç¨‹æˆç»©åœ¨70åˆ†ä»¥ä¸Šçš„å­¦å·ã€å§“åã€è¯¾ç¨‹ç¼–å·å’Œåˆ†æ•°ï¼›
 
 ```sql
 SELECT distinct student.SID,student.Sname,SC.CID,SC.score
@@ -546,49 +546,49 @@ FROM student,Sc
 WHERE SC.score>=70 AND SC.SID=student.SID;
 ```
 
-37¡¢²éÑ¯Ñ§ÉúÑ§ºÅ£¬ÒÔ¼°Æä²»¼°¸ñµÄ¿Î³Ì£¬²¢°´¿Î³ÌºÅ´Ó´óµ½Ğ¡ÅÅÁĞ
+37ã€æŸ¥è¯¢å­¦ç”Ÿå­¦å·ï¼Œä»¥åŠå…¶ä¸åŠæ ¼çš„è¯¾ç¨‹ï¼Œå¹¶æŒ‰è¯¾ç¨‹å·ä»å¤§åˆ°å°æ’åˆ—
 
 ```sql
 select sid,Cid from sc where score <60 order by CID ;
 ```
 
-38¡¢²éÑ¯¿Î³Ì±àºÅÎª003ÇÒ¿Î³Ì³É¼¨ÔÚ80·ÖÒÔÉÏµÄÑ§ÉúµÄÑ§ºÅºÍĞÕÃû£»
+38ã€æŸ¥è¯¢è¯¾ç¨‹ç¼–å·ä¸º003ä¸”è¯¾ç¨‹æˆç»©åœ¨80åˆ†ä»¥ä¸Šçš„å­¦ç”Ÿçš„å­¦å·å’Œå§“åï¼›
 
 ```sql
 select SC.SID,Student.Sname from SC,Student where SC.SID=Student.SID and Score>80 and CID='003';
 ```
 
-39¡¢ÇóÑ¡ÁË¿Î³ÌµÄÑ§ÉúÈËÊı
+39ã€æ±‚é€‰äº†è¯¾ç¨‹çš„å­¦ç”Ÿäººæ•°
 
 ```sql
 select count(*) from sc;
 ```
 
-40¡¢²éÑ¯Ñ¡ĞŞ¡°Ò¶Æ½¡±ÀÏÊ¦ËùÊÚ¿Î³ÌµÄÑ§ÉúÖĞ£¬³É¼¨×î¸ßµÄÑ§ÉúĞÕÃû¼°Æä³É¼¨
+40ã€æŸ¥è¯¢é€‰ä¿®â€œå¶å¹³â€è€å¸ˆæ‰€æˆè¯¾ç¨‹çš„å­¦ç”Ÿä¸­ï¼Œæˆç»©æœ€é«˜çš„å­¦ç”Ÿå§“ååŠå…¶æˆç»©
 
 ```sql
 select Student.Sname,score
 from Student,SC,CourseC,Teacher
-where Student.SID=SC.SID and SC.CID=C.CID and C.TID=Teacher.TID and Teacher.Tname='Ò¶Æ½' and SC.score=(select max(score)from SC where CID=C.CID );
+where Student.SID=SC.SID and SC.CID=C.CID and C.TID=Teacher.TID and Teacher.Tname='å¶å¹³' and SC.score=(select max(score)from SC where CID=C.CID );
 ```
 
-41¡¢²éÑ¯¸÷¸ö¿Î³Ì¼°ÏàÓ¦µÄÑ¡ĞŞÈËÊı
+41ã€æŸ¥è¯¢å„ä¸ªè¯¾ç¨‹åŠç›¸åº”çš„é€‰ä¿®äººæ•°
 
 ```sql
 select count(*) from sc group by CID;
 ```
 
-42¡¢²éÑ¯²»Í¬¿Î³Ì³É¼¨ÏàÍ¬µÄÑ§ÉúµÄÑ§ºÅ¡¢¿Î³ÌºÅ¡¢Ñ§Éú³É¼¨
+42ã€æŸ¥è¯¢ä¸åŒè¯¾ç¨‹æˆç»©ç›¸åŒçš„å­¦ç”Ÿçš„å­¦å·ã€è¯¾ç¨‹å·ã€å­¦ç”Ÿæˆç»©
 
 ```sql
 select distinct A.SID,B.score from SC A ,SC B where A.Score=B.Score and A.CID <>B.CID ;
 ```
 
 
-43¡¢²éÑ¯Ã¿ÃÅ¹¦³É¼¨×îºÃµÄÇ°Á½Ãû
+43ã€æŸ¥è¯¢æ¯é—¨åŠŸæˆç»©æœ€å¥½çš„å‰ä¸¤å
 
 ```sql
-SELECT t1.SID as Ñ§ÉúID,t1.CID as ¿Î³ÌID,Score as ·ÖÊı
+SELECT t1.SID as å­¦ç”ŸID,t1.CID as è¯¾ç¨‹ID,Score as åˆ†æ•°
 FROM SC t1
 WHERE score IN (SELECT TOP 2 score
                 FROM SC
@@ -598,16 +598,16 @@ WHERE score IN (SELECT TOP 2 score
 ORDER BY t1.CID;
 ```
 
-44¡¢Í³¼ÆÃ¿ÃÅ¿Î³ÌµÄÑ§ÉúÑ¡ĞŞÈËÊı£¨³¬¹ı10ÈËµÄ¿Î³Ì²ÅÍ³¼Æ£©¡£ÒªÇóÊä³ö¿Î³ÌºÅºÍÑ¡ĞŞÈËÊı£¬²éÑ¯½á¹û°´ÈËÊı½µĞòÅÅÁĞ£¬²éÑ¯½á¹û°´ÈËÊı½µĞòÅÅÁĞ£¬ÈôÈËÊıÏàÍ¬£¬°´¿Î³ÌºÅÉıĞòÅÅÁĞ
+44ã€ç»Ÿè®¡æ¯é—¨è¯¾ç¨‹çš„å­¦ç”Ÿé€‰ä¿®äººæ•°ï¼ˆè¶…è¿‡10äººçš„è¯¾ç¨‹æ‰ç»Ÿè®¡ï¼‰ã€‚è¦æ±‚è¾“å‡ºè¯¾ç¨‹å·å’Œé€‰ä¿®äººæ•°ï¼ŒæŸ¥è¯¢ç»“æœæŒ‰äººæ•°é™åºæ’åˆ—ï¼ŒæŸ¥è¯¢ç»“æœæŒ‰äººæ•°é™åºæ’åˆ—ï¼Œè‹¥äººæ•°ç›¸åŒï¼ŒæŒ‰è¯¾ç¨‹å·å‡åºæ’åˆ—
 
 ```sql
-select CID as ¿Î³ÌºÅ,count(*) as ÈËÊı
+select CID as è¯¾ç¨‹å·,count(*) as äººæ•°
 from sc
 group by CID
 order by count(*) desc,Cid
 ```
 
-45¡¢¼ìË÷ÖÁÉÙÑ¡ĞŞÁ½ÃÅ¿Î³ÌµÄÑ§ÉúÑ§ºÅ
+45ã€æ£€ç´¢è‡³å°‘é€‰ä¿®ä¸¤é—¨è¯¾ç¨‹çš„å­¦ç”Ÿå­¦å·
 
 ```sql
 select SID
@@ -616,7 +616,7 @@ group by Sid
 having count(*) > = 2
 ```
 
-46¡¢²éÑ¯È«²¿Ñ§Éú¶¼Ñ¡ĞŞµÄ¿Î³ÌµÄ¿Î³ÌºÅºÍ¿Î³ÌÃû
+46ã€æŸ¥è¯¢å…¨éƒ¨å­¦ç”Ÿéƒ½é€‰ä¿®çš„è¯¾ç¨‹çš„è¯¾ç¨‹å·å’Œè¯¾ç¨‹å
 
 ```sql
 select CID,Cname
@@ -624,13 +624,13 @@ from Course
 where CID in (select Cid from sc group by Cid)
 ```
 
-47¡¢²éÑ¯Ã»Ñ§¹ı¡°Ò¶Æ½¡±ÀÏÊ¦½²ÊÚµÄÈÎÒ»ÃÅ¿Î³ÌµÄÑ§ÉúĞÕÃû
+47ã€æŸ¥è¯¢æ²¡å­¦è¿‡â€œå¶å¹³â€è€å¸ˆè®²æˆçš„ä»»ä¸€é—¨è¯¾ç¨‹çš„å­¦ç”Ÿå§“å
 
 ```sql
-select Sname from Student where SID not in (select SID from Course,Teacher,SC where Course.TID=Teacher.TID and SC.CID=course.CID and Tname='Ò¶Æ½');
+select Sname from Student where SID not in (select SID from Course,Teacher,SC where Course.TID=Teacher.TID and SC.CID=course.CID and Tname='å¶å¹³');
 ```
 
-48¡¢²éÑ¯Á½ÃÅÒÔÉÏ²»¼°¸ñ¿Î³ÌµÄÍ¬Ñ§µÄÑ§ºÅ¼°ÆäÆ½¾ù³É¼¨
+48ã€æŸ¥è¯¢ä¸¤é—¨ä»¥ä¸Šä¸åŠæ ¼è¯¾ç¨‹çš„åŒå­¦çš„å­¦å·åŠå…¶å¹³å‡æˆç»©
 
 ```sql
 select SID,avg(isnull(score,0)) from SC where SID in (select SID from SC where score <60 group by SID having count(*)>2)group by SID;
