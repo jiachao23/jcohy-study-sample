@@ -1,13 +1,13 @@
-2. Spring ÈçºÎÕûºÏ Struts2 ?
+2. Spring å¦‚ä½•æ•´åˆ Struts2 ?
 
-1). ÕûºÏÄ¿±ê ? Ê¹ IOC ÈİÆ÷À´¹ÜÀí Struts2 µÄ Action!
+1). æ•´åˆç›®æ ‡ ? ä½¿ IOC å®¹å™¨æ¥ç®¡ç† Struts2 çš„ Action!
 
-2). ÈçºÎ½øĞĞÕûºÏ ? 
+2). å¦‚ä½•è¿›è¡Œæ•´åˆ ? 
 
-¢Ù. Õı³£¼ÓÈë Struts2
+â‘ . æ­£å¸¸åŠ å…¥ Struts2
 
-¢Ú. ÔÚ Spring µÄ IOC ÈİÆ÷ÖĞÅäÖÃ Struts2 µÄ Action
-×¢Òâ: ÔÚ IOC ÈİÆ÷ÖĞÅäÖÃ Struts2 µÄ Action Ê±, ĞèÒªÅäÖÃ scope ÊôĞÔ, ÆäÖµ±ØĞëÎª prototype
+â‘¡. åœ¨ Spring çš„ IOC å®¹å™¨ä¸­é…ç½® Struts2 çš„ Action
+æ³¨æ„: åœ¨ IOC å®¹å™¨ä¸­é…ç½® Struts2 çš„ Action æ—¶, éœ€è¦é…ç½® scope å±æ€§, å…¶å€¼å¿…é¡»ä¸º prototype
 
 <bean id="personAction" 
 	class="com.atguigu.spring.struts2.actions.PersonAction"
@@ -15,16 +15,16 @@
 	<property name="personService" ref="personService"></property>	
 </bean>
 
-¢Û. ÅäÖÃ Struts2 µÄÅäÖÃÎÄ¼ş: action ½ÚµãµÄ class ÊôĞÔĞèÒªÖ¸Ïò IOC ÈİÆ÷ÖĞ¸Ã bean µÄ id
+â‘¢. é…ç½® Struts2 çš„é…ç½®æ–‡ä»¶: action èŠ‚ç‚¹çš„ class å±æ€§éœ€è¦æŒ‡å‘ IOC å®¹å™¨ä¸­è¯¥ bean çš„ id
 
 <action name="person-save" class="personAction">
 	<result>/success.jsp</result>
 </action> 
 
-¢Ü. ¼ÓÈë struts2-spring-plugin-2.3.15.3.jar
+â‘£. åŠ å…¥ struts2-spring-plugin-2.3.15.3.jar
 
-3). ÕûºÏÔ­Àí: Í¨¹ıÌí¼Ó struts2-spring-plugin-2.3.15.3.jar ÒÔºó, Struts2 »áÏÈ´Ó IOC ÈİÆ÷ÖĞ
-»ñÈ¡ Action µÄÊµÀı.
+3). æ•´åˆåŸç†: é€šè¿‡æ·»åŠ  struts2-spring-plugin-2.3.15.3.jar ä»¥å, Struts2 ä¼šå…ˆä» IOC å®¹å™¨ä¸­
+è·å– Action çš„å®ä¾‹.
 
 if (appContext.containsBean(beanName)) {
     o = appContext.getBean(beanName);

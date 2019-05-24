@@ -37,7 +37,7 @@ public class TestReadWriteLock {
 	
 }
 
-class ReadWriteLockDemo{
+class ReadWriteLockDemo {
 	
 	private int number = 0;
 	

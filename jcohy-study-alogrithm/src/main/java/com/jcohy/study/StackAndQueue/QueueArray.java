@@ -6,16 +6,16 @@ import java.io.InputStreamReader;
 
 public class QueueArray {
 	/*
-	 * ���кͶ�ջ���������б���Ҳ���ڳ������������͡����еļ����ɾ���������ڲ�ͬ�����ˡ�
-	 * ���е����ԣ��Ƚ��ȳ�
-	 * ӵ�����ֻ����Ĳ������ȼ�����ɾ��������ʹ��front����rear����ָ��ָ����е�ǰ�˺�β�ˡ�
-	 * ���еĻ������㣺Create�������ն���
-	 * 				Add���������ݼ�����е�β�ˣ������¶���
-	 * 				Delete��ɾ������ǰ�˵����ݣ������¶���
-	 * 				Front�����ض���ǰ�˵�ֵ
-	 * 				Empty��������Ϊ�ռ��ϣ������档
-	 * ����������ķ�ʽʵ�ֶ��У�������һ��С���⣬�����е������ݲ��ܲ��룬��ǰ�滹�п���ռ䡣
-	 * ��Ȼ���ǿ����ڶ����н�������ǰ�ƶ���Ȼ���ڲ������ݡ������ݹ���ʱ�������ʱ���˷�
+	 * 队列和堆栈都是有序列表，也属于抽象型数据类型。所有的加入和删除都发生在不同的两端。
+	 * 队列的特性：先进先出
+	 * 拥有两种基本的操作，既加入与删除。而且使用front坏人rear两个指针指向队列的前端和尾端。
+	 * 队列的基本运算：Create：建立空队列
+	 * 				Add：将新数据加入队列的尾端，返回新队列
+	 * 				Delete：删除队列前端的数据，返回新队列
+	 * 				Front：返回队列前端的值
+	 * 				Empty：若队列为空集合，返回真。
+	 * 下面以数组的方式实现队列，但是有一个小问题，队列中的新数据不能插入，而前面还有空余空间。
+	 * 虽然我们可以在队列中讲数据向前移动，然后在插入数据。但数据过多时，会造成时间浪费
 	 */
 	public static int front =-1,rear=-1,max=20;
 	public static int val;
@@ -26,12 +26,12 @@ public class QueueArray {
 		int M=0;
 		BufferedReader keyin=new BufferedReader(new InputStreamReader(System.in));
 		while(rear<max-1&&M!=3){
-			System.out.println("[1]����һ����ֵ[2]ȡ��һ����ֵ[3]����");
+			System.out.println("[1]存入一个数值[2]取出一个数值[3]结束");
 			strM=keyin.readLine();
 			M=Integer.valueOf(strM);
 			switch(M){
 			case 1:
-				System.out.println("\n������һ������");
+				System.out.println("\n请输入一个数：");
 				strM=keyin.readLine();
 				val=Integer.valueOf(strM);
 				rear++;
@@ -40,10 +40,10 @@ public class QueueArray {
 			case 2:
 				if(rear>front){
 					front++;
-					System.out.print("\nȡ����ֵΪ��["+queue[front]+"]"+"\n");
+					System.out.print("\n取出的值为：["+queue[front]+"]"+"\n");
 					queue[front]=0;
 				}else{
-					System.out.print("�����Ѿ�����");
+					System.out.print("队列已经空了");
 					break;
 				}
 				break;
@@ -53,11 +53,11 @@ public class QueueArray {
 			}
 		}
 		if(rear==max-1) 
-			System.out.print("[�����Ѿ�����]\n");
-		System.out.print("\n[Ŀǰ�����е�����]:");
+			System.out.print("[队列已经满了]\n");
+		System.out.print("\n[目前队列中的数据]:");
 		if(front>=rear){
-			System.out.print("û��\n");
-			System.out.print("[�����Ѿ�����]\n");
+			System.out.print("没有\n");
+			System.out.print("[队列已经空了]\n");
 		}
 		else{
 			while(rear>front){

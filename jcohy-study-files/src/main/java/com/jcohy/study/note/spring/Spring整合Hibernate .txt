@@ -1,19 +1,19 @@
-1. Spring ÕûºÏ Hibernate ÕûºÏÊ²Ã´ ?
+1. Spring æ•´åˆ Hibernate æ•´åˆä»€ä¹ˆ ?
 
-1). ÓĞ IOC ÈİÆ÷À´¹ÜÀí Hibernate µÄ SessionFactory
-2). ÈÃ Hibernate Ê¹ÓÃÉÏ Spring µÄÉùÃ÷Ê½ÊÂÎñ
+1). æœ‰ IOC å®¹å™¨æ¥ç®¡ç† Hibernate çš„ SessionFactory
+2). è®© Hibernate ä½¿ç”¨ä¸Š Spring çš„å£°æ˜å¼äº‹åŠ¡
 
-2. ÕûºÏ²½Öè:
+2. æ•´åˆæ­¥éª¤:
 
-1). ¼ÓÈë hibernate
-¢Ù. jar °ü
-¢Ú. Ìí¼Ó hibernate µÄÅäÖÃÎÄ¼ş: hibernate.cfg.xml
-¢Û. ±àĞ´ÁË³Ö¾Ã»¯Àà¶ÔÓ¦µÄ .hbm.xml ÎÄ¼ş¡£ 
+1). åŠ å…¥ hibernate
+â‘ . jar åŒ…
+â‘¡. æ·»åŠ  hibernate çš„é…ç½®æ–‡ä»¶: hibernate.cfg.xml
+â‘¢. ç¼–å†™äº†æŒä¹…åŒ–ç±»å¯¹åº”çš„ .hbm.xml æ–‡ä»¶ã€‚ 
 
-2). ¼ÓÈë Spring
-¢Ù. jar °ü
-¢Ú. ¼ÓÈë Spring µÄÅäÖÃÎÄ¼ş
+2). åŠ å…¥ Spring
+â‘ . jar åŒ…
+â‘¡. åŠ å…¥ Spring çš„é…ç½®æ–‡ä»¶
 
-3). ÕûºÏ.
+3). æ•´åˆ.
 
-3. ±àĞ´´úÂë
+3. ç¼–å†™ä»£ç 

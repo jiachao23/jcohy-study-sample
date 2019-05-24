@@ -23,15 +23,15 @@ public class Hmac {
 	}
 	public static void jdkHmacMD5(){
 		try {
-			KeyGenerator keyGenerator = KeyGenerator.getInstance("HmacMD5");//³õÊ¼»¯
-			SecretKey secretkey = keyGenerator.generateKey();//²úÉúÃÜÔ¿
-//			byte[] key = secretkey.getEncoded();//»ñµÃÃÜÔ¿
+			KeyGenerator keyGenerator = KeyGenerator.getInstance("HmacMD5");//åˆå§‹åŒ–
+			SecretKey secretkey = keyGenerator.generateKey();//äº§ç”Ÿå¯†é’¥
+//			byte[] key = secretkey.getEncoded();//è·å¾—å¯†é’¥
 			byte[] key = org.apache.commons.codec.binary.Hex.decodeHex(new char[]{'a',
 					'a','a','a','a','a','a','a','a','a'});
-			SecretKey restoreKey = new SecretKeySpec(key, "HmacMD5");//»¹Ô­ÃÜÔ¿
-			Mac mac = Mac.getInstance(restoreKey.getAlgorithm());//ÊµÀı»¯mac
-			mac.init(restoreKey);//³õÊ¼»¯mac
-			byte[] HmacMD5Bytes = mac.doFinal(src.getBytes());//Ö´ĞĞÕªÒª
+			SecretKey restoreKey = new SecretKeySpec(key, "HmacMD5");//è¿˜åŸå¯†é’¥
+			Mac mac = Mac.getInstance(restoreKey.getAlgorithm());//å®ä¾‹åŒ–mac
+			mac.init(restoreKey);//åˆå§‹åŒ–mac
+			byte[] HmacMD5Bytes = mac.doFinal(src.getBytes());//æ‰§è¡Œæ‘˜è¦
 			System.out.println("HmacMD5:"+Hex.toHexString(HmacMD5Bytes));
 		} catch (Exception e) {
 			e.printStackTrace();

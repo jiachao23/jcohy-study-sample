@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
  */
 public class TestLocalDateTime {
 
-    //1. LocalDate°¢LocalTime°¢LocalDateTime
+    //1. LocalDate„ÄÅLocalTime„ÄÅLocalDateTime
     @Test
     public void test1(){
         LocalDateTime ldt = LocalDateTime.now();

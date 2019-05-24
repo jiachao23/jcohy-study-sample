@@ -1,7 +1,7 @@
 package com.jcohy.study.proxy.DynamicProxy;
 
 /**
- * ³éÏó½ÇÉ«
+ * æŠ½è±¡è§’è‰²
  * @author jiachao
  *
  */

@@ -1,23 +1,23 @@
 5. result:
 
-1). result ÊÇ action ½ÚµãµÄ×Ó½Úµã
+1). result æ˜¯ action èŠ‚ç‚¹çš„å­èŠ‚ç‚¹
 
-2). result ´ú±í action ·½·¨Ö´ĞĞºó, ¿ÉÄÜÈ¥µÄÒ»¸öÄ¿µÄµØ
+2). result ä»£è¡¨ action æ–¹æ³•æ‰§è¡Œå, å¯èƒ½å»çš„ä¸€ä¸ªç›®çš„åœ°
 
-3). Ò»¸ö action ½Úµã¿ÉÒÔÅäÖÃ¶à¸ö result ×Ó½Úµã. 
+3). ä¸€ä¸ª action èŠ‚ç‚¹å¯ä»¥é…ç½®å¤šä¸ª result å­èŠ‚ç‚¹. 
 
-4). result µÄ name ÊôĞÔÖµ¶ÔÓ¦×Å action ·½·¨¿ÉÄÜÓĞµÄÒ»¸ö·µ»ØÖµ. 
+4). result çš„ name å±æ€§å€¼å¯¹åº”ç€ action æ–¹æ³•å¯èƒ½æœ‰çš„ä¸€ä¸ªè¿”å›å€¼. 
 
 <result name="index">/index.jsp</result>
 
-5). result Ò»¹²ÓĞ 2 ¸öÊôĞÔ, »¹ÓĞÒ»¸öÊÇ type: ±íÊ¾½á¹ûµÄÏìÓ¦ÀàĞÍ
+5). result ä¸€å…±æœ‰ 2 ä¸ªå±æ€§, è¿˜æœ‰ä¸€ä¸ªæ˜¯ type: è¡¨ç¤ºç»“æœçš„å“åº”ç±»å‹
 
-6). result µÄ type ÊôĞÔÖµÔÚ struts-default °üµÄ result-types ½ÚµãµÄ name ÊôĞÔÖĞ¶¨Òå.
-         ³£ÓÃµÄÓĞ 
-    > dispatcher(Ä¬ÈÏµÄ): ×ª·¢. Í¬ Servlet ÖĞµÄ×ª·¢. 
-    > redirect: ÖØ¶¨Ïò
-    > redirectAction: ÖØ¶¨Ïòµ½Ò»¸ö Action
-    	×¢Òâ: Í¨¹ı redirect µÄÏìÓ¦ÀàĞÍÒ²¿ÉÒÔ±ã½İµÄÊµÏÖ redirectAction µÄ¹¦ÄÜ!
+6). result çš„ type å±æ€§å€¼åœ¨ struts-default åŒ…çš„ result-types èŠ‚ç‚¹çš„ name å±æ€§ä¸­å®šä¹‰.
+         å¸¸ç”¨çš„æœ‰ 
+    > dispatcher(é»˜è®¤çš„): è½¬å‘. åŒ Servlet ä¸­çš„è½¬å‘. 
+    > redirect: é‡å®šå‘
+    > redirectAction: é‡å®šå‘åˆ°ä¸€ä¸ª Action
+    	æ³¨æ„: é€šè¿‡ redirect çš„å“åº”ç±»å‹ä¹Ÿå¯ä»¥ä¾¿æ·çš„å®ç° redirectAction çš„åŠŸèƒ½!
     	
     <result name="index" type="redirectAction">
 		<param name="actionName">testAction</param>
@@ -28,17 +28,17 @@
 	
 	<result name="index" type="redirect">/atguigu/testAction.do</result>
     	
-    > chain: ×ª·¢µ½Ò»¸ö Action
-    	×¢Òâ: ²»ÄÜÍ¨¹ı type=dispatcher µÄ·½Ê½×ª·¢µ½Ò»¸ö Action
+    > chain: è½¬å‘åˆ°ä¸€ä¸ª Action
+    	æ³¨æ„: ä¸èƒ½é€šè¿‡ type=dispatcher çš„æ–¹å¼è½¬å‘åˆ°ä¸€ä¸ª Action
     	
-         Ö»ÄÜÊÇ:
+         åªèƒ½æ˜¯:
          
     <result name="test" type="chain">
 		<param name="actionName">testAction</param>
 		<param name="namespace">/atguigu</param>
 	</result>
 	
-	²»ÄÜÊÇ:
+	ä¸èƒ½æ˜¯:
 	
 	<result name="test">/atguigu/testAction.do</result>
 			
@@ -46,14 +46,14 @@
 
 4. ActionSupport
 
-1). ActionSupport ÊÇÄ¬ÈÏµÄ Action Àà: ÈôÄ³¸ö action ½ÚµãÃ»ÓĞÅäÖÃ class ÊôĞÔ, Ôò ActionSupport ¼´Îª
-´ıÖ´ĞĞµÄ Action Àà. ¶ø execute ·½·¨¼´ÎªÒªÄ¬ÈÏÖ´ĞĞµÄ action ·½·¨
+1). ActionSupport æ˜¯é»˜è®¤çš„ Action ç±»: è‹¥æŸä¸ª action èŠ‚ç‚¹æ²¡æœ‰é…ç½® class å±æ€§, åˆ™ ActionSupport å³ä¸º
+å¾…æ‰§è¡Œçš„ Action ç±». è€Œ execute æ–¹æ³•å³ä¸ºè¦é»˜è®¤æ‰§è¡Œçš„ action æ–¹æ³•
 
 <action name="testActionSupport">
 	<result>/testActionSupport.jsp</result>
 </action>
 
-µÈÍ¬ÓÚ
+ç­‰åŒäº
 
 <action name="testActionSupport"
 	class="com.opensymphony.xwork2.ActionSupport"
@@ -61,75 +61,75 @@
 	<result>/testActionSupport.jsp</result>
 </action>
 
-2). ÔÚÊÖ¹¤Íê³É×Ö¶ÎÑéÖ¤, ÏÔÊ¾´íÎóÏûÏ¢, ¹ú¼Ê»¯µÈÇé¿öÏÂ, ÍÆ¼ö¼Ì³Ğ ActionSupport. 
+2). åœ¨æ‰‹å·¥å®Œæˆå­—æ®µéªŒè¯, æ˜¾ç¤ºé”™è¯¯æ¶ˆæ¯, å›½é™…åŒ–ç­‰æƒ…å†µä¸‹, æ¨èç»§æ‰¿ ActionSupport. 
 
 
 
 
-3. ¹ØÓÚ Struts2 ÇëÇóµÄÀ©Õ¹ÃûÎÊÌâ
+3. å…³äº Struts2 è¯·æ±‚çš„æ‰©å±•åé—®é¢˜
 
-1). org.apache.struts2 °üÏÂµÄ default.properties ÖĞÅäÖÃÁË Struts2 Ó¦ÓÃ¸öµÄÒ»Ğ©³£Á¿
+1). org.apache.struts2 åŒ…ä¸‹çš„ default.properties ä¸­é…ç½®äº† Struts2 åº”ç”¨ä¸ªçš„ä¸€äº›å¸¸é‡
 
-2). struts.action.extension ¶¨ÒåÁËµ±Ç° Struts2 Ó¦ÓÃ¿ÉÒÔ½ÓÊÜµÄÇëÇóµÄÀ©Õ¹Ãû.
+2). struts.action.extension å®šä¹‰äº†å½“å‰ Struts2 åº”ç”¨å¯ä»¥æ¥å—çš„è¯·æ±‚çš„æ‰©å±•å.
 
-3). ¿ÉÒÔÔÚ struts.xml ÎÄ¼şÖĞÒÔ³£Á¿ÅäÖÃµÄ·½Ê½ĞŞ¸Ä default.properties ËùÅäÖÃµÄ³£Á¿.
+3). å¯ä»¥åœ¨ struts.xml æ–‡ä»¶ä¸­ä»¥å¸¸é‡é…ç½®çš„æ–¹å¼ä¿®æ”¹ default.properties æ‰€é…ç½®çš„å¸¸é‡.
 
 <constant name="struts.action.extension" value="action,do,"></constant>
 
-2. ÔÚ Action ÖĞ·ÃÎÊ WEB ×ÊÔ´:
+2. åœ¨ Action ä¸­è®¿é—® WEB èµ„æº:
 
-1). Ê²Ã´ÊÇ WEB ×ÊÔ´ ?
+1). ä»€ä¹ˆæ˜¯ WEB èµ„æº ?
 
-	HttpServletRequest, HttpSession, ServletContext µÈÔ­ÉúµÄ Servlet API¡£ 
+	HttpServletRequest, HttpSession, ServletContext ç­‰åŸç”Ÿçš„ Servlet APIã€‚ 
 
-2). ÎªÊ²Ã´·ÃÎÊ WEB ×ÊÔ´?
+2). ä¸ºä»€ä¹ˆè®¿é—® WEB èµ„æº?
 
-	B\S µÄÓ¦ÓÃµÄ Controller ÖĞ±ØÈ»ĞèÒª·ÃÎÊ WEB ×ÊÔ´: ÏòÓò¶ÔÏóÖĞ¶ÁĞ´ÊôĞÔ, ¶ÁĞ´ Cookie, »ñÈ¡ 
+	B\S çš„åº”ç”¨çš„ Controller ä¸­å¿…ç„¶éœ€è¦è®¿é—® WEB èµ„æº: å‘åŸŸå¯¹è±¡ä¸­è¯»å†™å±æ€§, è¯»å†™ Cookie, è·å– 
 
 realPath ....
 
-3). ÈçºÎ·ÃÎÊ ?
+3). å¦‚ä½•è®¿é—® ?
 
-I. ºÍ Servlet API ½âñîµÄ·½Ê½: Ö»ÄÜ·ÃÎÊÓĞÏŞµÄ Servlet API ¶ÔÏó, ÇÒÖ»ÄÜ·ÃÎÊÆäÓĞÏŞµÄ·½·¨(¶ÁÈ¡ÇëÇó²ÎÊı
+I. å’Œ Servlet API è§£è€¦çš„æ–¹å¼: åªèƒ½è®¿é—®æœ‰é™çš„ Servlet API å¯¹è±¡, ä¸”åªèƒ½è®¿é—®å…¶æœ‰é™çš„æ–¹æ³•(è¯»å–è¯·æ±‚å‚æ•°
 
-, ¶ÁĞ´Óò¶ÔÏóµÄÊôĞÔ, Ê¹ session Ê§Ğ§...). 
+, è¯»å†™åŸŸå¯¹è±¡çš„å±æ€§, ä½¿ session å¤±æ•ˆ...). 
 
-	> Ê¹ÓÃ ActionContext
+	> ä½¿ç”¨ ActionContext
 	
-	> ÊµÏÖ XxxAware ½Ó¿Ú
+	> å®ç° XxxAware æ¥å£
 	
-	> Ñ¡ÓÃµÄ½¨Òé: ÈôÒ»¸ö Action ÀàÖĞÓĞ¶à¸ö action ·½·¨, ÇÒ¶à¸ö·½·¨¶¼ĞèÒªÊ¹ÓÃÓò¶ÔÏóµÄ Map »ò 
+	> é€‰ç”¨çš„å»ºè®®: è‹¥ä¸€ä¸ª Action ç±»ä¸­æœ‰å¤šä¸ª action æ–¹æ³•, ä¸”å¤šä¸ªæ–¹æ³•éƒ½éœ€è¦ä½¿ç”¨åŸŸå¯¹è±¡çš„ Map æˆ– 
 
-parameters, Ôò½¨ÒéÊ¹ÓÃ
-	Aware ½Ó¿ÚµÄ·½Ê½
+parameters, åˆ™å»ºè®®ä½¿ç”¨
+	Aware æ¥å£çš„æ–¹å¼
 	
-	> session ¶ÔÓ¦µÄ Map Êµ¼ÊÉÏÊÇ SessionMap ÀàĞÍµÄ! Ç¿×ªºóÈôµ÷ÓÃÆä invalidate() ·½·¨, ¿ÉÒÔÊ¹
+	> session å¯¹åº”çš„ Map å®é™…ä¸Šæ˜¯ SessionMap ç±»å‹çš„! å¼ºè½¬åè‹¥è°ƒç”¨å…¶ invalidate() æ–¹æ³•, å¯ä»¥ä½¿
 
-Æä session Ê§Ğ§!
+å…¶ session å¤±æ•ˆ!
 
-II. ºÍ Servlet API ñîºÏµÄ·½Ê½: ¿ÉÒÔ·ÃÎÊ¸ü¶àµÄ Servlet API ¶ÔÏó, ÇÒ¿ÉÒÔµ÷ÓÃÆäÔ­ÉúµÄ·½·¨.  
+II. å’Œ Servlet API è€¦åˆçš„æ–¹å¼: å¯ä»¥è®¿é—®æ›´å¤šçš„ Servlet API å¯¹è±¡, ä¸”å¯ä»¥è°ƒç”¨å…¶åŸç”Ÿçš„æ–¹æ³•.  
 
-	> Ê¹ÓÃ ServletActionContext
+	> ä½¿ç”¨ ServletActionContext
 	
-	> ÊµÏÖ ServletXxxAware ½Ó¿Ú.
+	> å®ç° ServletXxxAware æ¥å£.
 
-1. ¸´Ï°´î½¨ Struts2 µÄ¿ª·¢»·¾³: 3 ¸ö²½Öè
+1. å¤ä¹ æ­å»º Struts2 çš„å¼€å‘ç¯å¢ƒ: 3 ä¸ªæ­¥éª¤
 
-2. action VS Action Àà
+2. action VS Action ç±»
 
-1). action: ´ú±íÒ»¸ö  Struts2 µÄÇëÇó. 
+1). action: ä»£è¡¨ä¸€ä¸ª  Struts2 çš„è¯·æ±‚. 
 
-2). Action Àà: ÄÜ¹»´¦Àí Struts2 ÇëÇóµÄÀà. 
+2). Action ç±»: èƒ½å¤Ÿå¤„ç† Struts2 è¯·æ±‚çš„ç±». 
 
-	> ÊôĞÔµÄÃû×Ö±ØĞë×ñÊØÓë JavaBeans ÊôĞÔÃûÏàÍ¬µÄÃüÃû¹æÔò. 
-	    ÊôĞÔµÄÀàĞÍ¿ÉÒÔÊÇÈÎÒâÀàĞÍ. ´Ó×Ö·û´®µ½·Ç×Ö·û´®(»ù±¾Êı¾İ¿âÀàĞÍ)Ö®¼äµÄÊı¾İ×ª»»¿ÉÒÔ×Ô¶¯·¢Éú
+	> å±æ€§çš„åå­—å¿…é¡»éµå®ˆä¸ JavaBeans å±æ€§åç›¸åŒçš„å‘½åè§„åˆ™. 
+	    å±æ€§çš„ç±»å‹å¯ä»¥æ˜¯ä»»æ„ç±»å‹. ä»å­—ç¬¦ä¸²åˆ°éå­—ç¬¦ä¸²(åŸºæœ¬æ•°æ®åº“ç±»å‹)ä¹‹é—´çš„æ•°æ®è½¬æ¢å¯ä»¥è‡ªåŠ¨å‘ç”Ÿ
 
-	> ±ØĞëÓĞÒ»¸ö²»´ø²ÎµÄ¹¹ÔìÆ÷: Í¨¹ı·´Éä´´½¨ÊµÀı 
+	> å¿…é¡»æœ‰ä¸€ä¸ªä¸å¸¦å‚çš„æ„é€ å™¨: é€šè¿‡åå°„åˆ›å»ºå®ä¾‹ 
 	
-	> ÖÁÉÙÓĞÒ»¸ö¹© struts ÔÚÖ´ĞĞÕâ¸ö action Ê±µ÷ÓÃµÄ·½·¨
+	> è‡³å°‘æœ‰ä¸€ä¸ªä¾› struts åœ¨æ‰§è¡Œè¿™ä¸ª action æ—¶è°ƒç”¨çš„æ–¹æ³•
 	
-	> Í¬Ò»¸ö Action Àà¿ÉÒÔ°üº¬¶à¸ö action ·½·¨. 
+	> åŒä¸€ä¸ª Action ç±»å¯ä»¥åŒ…å«å¤šä¸ª action æ–¹æ³•. 
 	
-	> Struts2 »áÎªÃ¿Ò»¸ö HTTP ÇëÇó´´½¨Ò»¸öĞÂµÄ Action ÊµÀı, ¼´ Action ²»ÊÇµ¥ÀıµÄ, ÊÇÏß³Ì°²È«µÄ
+	> Struts2 ä¼šä¸ºæ¯ä¸€ä¸ª HTTP è¯·æ±‚åˆ›å»ºä¸€ä¸ªæ–°çš„ Action å®ä¾‹, å³ Action ä¸æ˜¯å•ä¾‹çš„, æ˜¯çº¿ç¨‹å®‰å…¨çš„
 
 . 

@@ -7,9 +7,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ResFileByDelFile {
-	private static int count = 0;//¿ØÖÆ¼ì²âÍâÉèµÄ²å°Î 
+	private static int count = 0;//æ§åˆ¶æ£€æµ‹å¤–è®¾çš„æ’æ‹” 
 	private static int value = 0;
-    //ÅĞ¶ÏÊÇ·ñÓĞÉè±¸²åÈëµÄ±ê¼Ç  
+    //åˆ¤æ–­æ˜¯å¦æœ‰è®¾å¤‡æ’å…¥çš„æ ‡è®°  
     private boolean flag = false; 
     private File[] dirs;
     public static String rootPath;
@@ -18,61 +18,61 @@ public class ResFileByDelFile {
         this.count = count;
         this.value = count;
     }  
-    //µİ¹é¸´ÖÆÎÄ¼ş  
+    //é€’å½’å¤åˆ¶æ–‡ä»¶  
     public static void copyFileFromDir(String toPath, String fromPath) {  
         File file = new File(fromPath);  
-        createFile(toPath, false);// true:´´½¨ÎÄ¼ş false´´½¨Ä¿Â¼  
-        if (file.isDirectory()) {// Èç¹ûÊÇÄ¿Â¼  
+        createFile(toPath, false);// true:åˆ›å»ºæ–‡ä»¶ falseåˆ›å»ºç›®å½•  
+        if (file.isDirectory()) {// å¦‚æœæ˜¯ç›®å½•  
             copyFileToDir(toPath, listFile(file));  
         }  
     }  
   
-    // ¸´ÖÆÄ¿Â¼µ½Ö¸¶¨Ä¿Â¼,½«Ä¿Â¼ÒÔ¼°Ä¿Â¼ÏÂµÄÎÄ¼şºÍ×ÓÄ¿Â¼È«²¿¸´ÖÆµ½Ä¿±êÄ¿Â¼  
+    // å¤åˆ¶ç›®å½•åˆ°æŒ‡å®šç›®å½•,å°†ç›®å½•ä»¥åŠç›®å½•ä¸‹çš„æ–‡ä»¶å’Œå­ç›®å½•å…¨éƒ¨å¤åˆ¶åˆ°ç›®æ ‡ç›®å½•  
     public static void copyDir(String toPath, String fromPath) { 
 //    	System.out.println("---toPath--->"+toPath+"---fromPath--->"+fromPath);
-        File targetFile = new File(toPath);// ´´½¨ÎÄ¼ş  
-        createFile(targetFile, false);// ´´½¨Ä¿Â¼  
-        File file = new File(fromPath);// ´´½¨ÎÄ¼ş  
-        if (targetFile.isDirectory() && file.isDirectory()) {// Èç¹û´«ÈëÊÇÄ¿Â¼ 
+        File targetFile = new File(toPath);// åˆ›å»ºæ–‡ä»¶  
+        createFile(targetFile, false);// åˆ›å»ºç›®å½•  
+        File file = new File(fromPath);// åˆ›å»ºæ–‡ä»¶  
+        if (targetFile.isDirectory() && file.isDirectory()) {// å¦‚æœä¼ å…¥æ˜¯ç›®å½• 
 //        	System.out.println("targetFileAndFile"+targetFile.getAbsolutePath() + "/" + file.getName());
             copyFileToDir(targetFile.getAbsolutePath() + "/" + file.getName(),  
-                    listFile(file));// ¸´ÖÆÎÄ¼şµ½Ö¸¶¨Ä¿Â¼  
+                    listFile(file));// å¤åˆ¶æ–‡ä»¶åˆ°æŒ‡å®šç›®å½•  
         }  
     }  
   
-    // ¸´ÖÆÒ»×éÎÄ¼şµ½Ö¸¶¨Ä¿Â¼¡£targetDirÊÇÄ¿±êÄ¿Â¼£¬filePathÊÇĞèÒª¸´ÖÆµÄÎÄ¼şÂ·¾¶  
+    // å¤åˆ¶ä¸€ç»„æ–‡ä»¶åˆ°æŒ‡å®šç›®å½•ã€‚targetDiræ˜¯ç›®æ ‡ç›®å½•ï¼ŒfilePathæ˜¯éœ€è¦å¤åˆ¶çš„æ–‡ä»¶è·¯å¾„  
     public static void copyFileToDir(String toDir, String[] filePath) {  
-        if (toDir == null || "".equals(toDir)) {// Ä¿Â¼Â·¾¶Îª¿Õ  
-//            System.out.println("²ÎÊı´íÎó£¬Ä¿±êÂ·¾¶²»ÄÜÎª¿Õ");  
+        if (toDir == null || "".equals(toDir)) {// ç›®å½•è·¯å¾„ä¸ºç©º  
+//            System.out.println("å‚æ•°é”™è¯¯ï¼Œç›®æ ‡è·¯å¾„ä¸èƒ½ä¸ºç©º");  
         	FileUtils.appendFile(rootPath,
-            		sdf.format(new Date())+"²ÎÊı´íÎó£¬Ä¿±êÂ·¾¶²»ÄÜÎª¿Õ!!");
+            		sdf.format(new Date())+"å‚æ•°é”™è¯¯ï¼Œç›®æ ‡è·¯å¾„ä¸èƒ½ä¸ºç©º!!");
             return;  
         }  
         File targetFile = new File(toDir);  
-        if (!targetFile.exists()) {// Èç¹ûÖ¸¶¨Ä¿Â¼²»´æÔÚ  
-            targetFile.mkdir();// ĞÂ½¨Ä¿Â¼  
+        if (!targetFile.exists()) {// å¦‚æœæŒ‡å®šç›®å½•ä¸å­˜åœ¨  
+            targetFile.mkdir();// æ–°å»ºç›®å½•  
         } else {  
-            if (!targetFile.isDirectory()) {// Èç¹û²»ÊÇÄ¿Â¼  
-//                System.out.println("²ÎÊı´íÎó£¬Ä¿±êÂ·¾¶Ö¸ÏòµÄ²»ÊÇÒ»¸öÄ¿Â¼£¡");  
+            if (!targetFile.isDirectory()) {// å¦‚æœä¸æ˜¯ç›®å½•  
+//                System.out.println("å‚æ•°é”™è¯¯ï¼Œç›®æ ‡è·¯å¾„æŒ‡å‘çš„ä¸æ˜¯ä¸€ä¸ªç›®å½•ï¼");  
             	FileUtils.appendFile(rootPath, 
-                		sdf.format(new Date())+"²ÎÊı´íÎó£¬Ä¿±êÂ·¾¶Ö¸ÏòµÄ²»ÊÇÒ»¸öÄ¿Â¼£¡");
+                		sdf.format(new Date())+"å‚æ•°é”™è¯¯ï¼Œç›®æ ‡è·¯å¾„æŒ‡å‘çš„ä¸æ˜¯ä¸€ä¸ªç›®å½•ï¼");
                 return;  
             }  
         } 
         if(filePath!=null){
-        	for (int i = 0; i < filePath.length; i++) {// ±éÀúĞèÒª¸´ÖÆµÄÎÄ¼şÂ·¾¶  
-        		File file = new File(filePath[i]);// ´´½¨ÎÄ¼ş  
-        		if (file.isDirectory()) {// ÅĞ¶ÏÊÇ·ñÊÇÄ¿Â¼  
-        			copyFileToDir(toDir + "/" + file.getName(), listFile(file));// µİ¹éµ÷ÓÃ·½·¨»ñµÃÄ¿Â¼ÏÂµÄÎÄ¼ş  
-        			System.out.println("¸´ÖÆÎÄ¼ş " + file);  
+        	for (int i = 0; i < filePath.length; i++) {// éå†éœ€è¦å¤åˆ¶çš„æ–‡ä»¶è·¯å¾„  
+        		File file = new File(filePath[i]);// åˆ›å»ºæ–‡ä»¶  
+        		if (file.isDirectory()) {// åˆ¤æ–­æ˜¯å¦æ˜¯ç›®å½•  
+        			copyFileToDir(toDir + "/" + file.getName(), listFile(file));// é€’å½’è°ƒç”¨æ–¹æ³•è·å¾—ç›®å½•ä¸‹çš„æ–‡ä»¶  
+        			System.out.println("å¤åˆ¶æ–‡ä»¶ " + file);  
         		} else {  
-        			copyFileToDir(toDir, file, "");// ¸´ÖÆÎÄ¼şµ½Ö¸¶¨Ä¿Â¼  
+        			copyFileToDir(toDir, file, "");// å¤åˆ¶æ–‡ä»¶åˆ°æŒ‡å®šç›®å½•  
         		}  
         	}  
         }
     }  
   
-    public static void copyFileToDir(String toDir, File file, String newName) {// ¸´ÖÆÎÄ¼şµ½Ö¸¶¨Ä¿Â¼  
+    public static void copyFileToDir(String toDir, File file, String newName) {// å¤åˆ¶æ–‡ä»¶åˆ°æŒ‡å®šç›®å½•  
         String newFile = "";  
         if (newName != null && !"".equals(newName)) {  
             newFile = toDir + "/" + newName;  
@@ -80,46 +80,46 @@ public class ResFileByDelFile {
             newFile = toDir + "/" + file.getName();  
         }  
         File tFile = new File(newFile);  
-        copyFile(tFile, file);// µ÷ÓÃ·½·¨¸´ÖÆÎÄ¼ş  
+        copyFile(tFile, file);// è°ƒç”¨æ–¹æ³•å¤åˆ¶æ–‡ä»¶  
     }  
   
-    public static void copyFile(File toFile, File fromFile) {// ¸´ÖÆÎÄ¼ş  
-        if (toFile.exists()) {// ÅĞ¶ÏÄ¿±êÄ¿Â¼ÖĞÎÄ¼şÊÇ·ñ´æÔÚ  
-//            System.out.println("ÎÄ¼ş" + toFile.getAbsolutePath() + "ÒÑ¾­´æÔÚ£¬Ìø¹ı¸ÃÎÄ¼ş£¡");
+    public static void copyFile(File toFile, File fromFile) {// å¤åˆ¶æ–‡ä»¶  
+        if (toFile.exists()) {// åˆ¤æ–­ç›®æ ‡ç›®å½•ä¸­æ–‡ä»¶æ˜¯å¦å­˜åœ¨  
+//            System.out.println("æ–‡ä»¶" + toFile.getAbsolutePath() + "å·²ç»å­˜åœ¨ï¼Œè·³è¿‡è¯¥æ–‡ä»¶ï¼");
             FileUtils.appendFile(rootPath, 
-            		sdf.format(new Date())+toFile.getAbsolutePath() + "ÒÑ¾­´æÔÚ£¬Ìø¹ı¸ÃÎÄ¼ş£¡");
+            		sdf.format(new Date())+toFile.getAbsolutePath() + "å·²ç»å­˜åœ¨ï¼Œè·³è¿‡è¯¥æ–‡ä»¶ï¼");
             return;  
         } else {  
-            createFile(toFile, true);// ´´½¨ÎÄ¼ş  
+            createFile(toFile, true);// åˆ›å»ºæ–‡ä»¶  
         }  
-//        System.out.println("¸´ÖÆÎÄ¼ş" + fromFile.getAbsolutePath() + "µ½"  
+//        System.out.println("å¤åˆ¶æ–‡ä»¶" + fromFile.getAbsolutePath() + "åˆ°"  
 //                + toFile.getAbsolutePath());
         FileUtils.appendFile(rootPath, 
         		sdf.format(new Date())+fromFile.getAbsolutePath() + "-------->"  
                 + toFile.getAbsolutePath());
         try {  
-            InputStream is = new FileInputStream(fromFile);// ´´½¨ÎÄ¼şÊäÈëÁ÷  
-            FileOutputStream fos = new FileOutputStream(toFile);// ÎÄ¼şÊä³öÁ÷  
-            byte[] buffer = new byte[1024];// ×Ö½ÚÊı×é  
-            while (is.read(buffer) != -1) {// ½«ÎÄ¼şÄÚÈİĞ´µ½ÎÄ¼şÖĞ  
+            InputStream is = new FileInputStream(fromFile);// åˆ›å»ºæ–‡ä»¶è¾“å…¥æµ  
+            FileOutputStream fos = new FileOutputStream(toFile);// æ–‡ä»¶è¾“å‡ºæµ  
+            byte[] buffer = new byte[1024];// å­—èŠ‚æ•°ç»„  
+            while (is.read(buffer) != -1) {// å°†æ–‡ä»¶å†…å®¹å†™åˆ°æ–‡ä»¶ä¸­  
                 fos.write(buffer);  
             }  
-            is.close();// ÊäÈëÁ÷¹Ø±Õ  
-            fos.close();// Êä³öÁ÷¹Ø±Õ  
-        } catch (FileNotFoundException e) {// ²¶»ñÎÄ¼ş²»´æÔÚÒì³£  
+            is.close();// è¾“å…¥æµå…³é—­  
+            fos.close();// è¾“å‡ºæµå…³é—­  
+        } catch (FileNotFoundException e) {// æ•è·æ–‡ä»¶ä¸å­˜åœ¨å¼‚å¸¸  
             e.printStackTrace();  
-        } catch (IOException e) {// ²¶»ñÒì³£  
+        } catch (IOException e) {// æ•è·å¼‚å¸¸  
             e.printStackTrace();  
         }  
     }  
-    public static String[] listFile(File dir) {// »ñÈ¡ÎÄ¼ş¾ø¶ÔÂ·¾¶  
-        String absolutPath = dir.getAbsolutePath();// Éù»ñ×Ö·û´®¸³ÖµÎªÂ·´«ÈëÎÄ¼şµÄÂ·¾¶  
-        String[] paths = dir.list();// ÎÄ¼şÃûÊı×é
+    public static String[] listFile(File dir) {// è·å–æ–‡ä»¶ç»å¯¹è·¯å¾„  
+        String absolutPath = dir.getAbsolutePath();// å£°è·å­—ç¬¦ä¸²èµ‹å€¼ä¸ºè·¯ä¼ å…¥æ–‡ä»¶çš„è·¯å¾„  
+        String[] paths = dir.list();// æ–‡ä»¶åæ•°ç»„
         String[] files;
         if(paths!=null){
         	
-        	files = new String[paths.length];// ÉùÃ÷×Ö·û´®Êı×é£¬³¤¶ÈÎª´«ÈëÎÄ¼şµÄ¸öÊı  
-        	for (int i = 0; i < paths.length; i++) {// ±éÀúÏÔÊ¾ÎÄ¼ş¾ø¶ÔÂ·¾¶  
+        	files = new String[paths.length];// å£°æ˜å­—ç¬¦ä¸²æ•°ç»„ï¼Œé•¿åº¦ä¸ºä¼ å…¥æ–‡ä»¶çš„ä¸ªæ•°  
+        	for (int i = 0; i < paths.length; i++) {// éå†æ˜¾ç¤ºæ–‡ä»¶ç»å¯¹è·¯å¾„  
         		files[i] = absolutPath + "/" + paths[i];  
         	}  
         	return files;  
@@ -127,23 +127,23 @@ public class ResFileByDelFile {
         return null;
     }  
   
-    public static void createFile(String path, boolean isFile) {// ´´½¨ÎÄ¼ş»òÄ¿Â¼  
-        createFile(new File(path), isFile);// µ÷ÓÃ·½·¨´´½¨ĞÂÎÄ¼ş»òÄ¿Â¼  
+    public static void createFile(String path, boolean isFile) {// åˆ›å»ºæ–‡ä»¶æˆ–ç›®å½•  
+        createFile(new File(path), isFile);// è°ƒç”¨æ–¹æ³•åˆ›å»ºæ–°æ–‡ä»¶æˆ–ç›®å½•  
     }  
   
-    public static void createFile(File file, boolean isFile) {// ´´½¨ÎÄ¼ş  
-        if (!file.exists()) {// Èç¹ûÎÄ¼ş²»´æÔÚ  
-            if (!file.getParentFile().exists()) {// Èç¹ûÎÄ¼ş¸¸Ä¿Â¼²»´æÔÚ  
+    public static void createFile(File file, boolean isFile) {// åˆ›å»ºæ–‡ä»¶  
+        if (!file.exists()) {// å¦‚æœæ–‡ä»¶ä¸å­˜åœ¨  
+            if (!file.getParentFile().exists()) {// å¦‚æœæ–‡ä»¶çˆ¶ç›®å½•ä¸å­˜åœ¨  
                 createFile(file.getParentFile(), false);  
-            } else {// ´æÔÚÎÄ¼ş¸¸Ä¿Â¼  
-                if (isFile) {// ´´½¨ÎÄ¼ş  
+            } else {// å­˜åœ¨æ–‡ä»¶çˆ¶ç›®å½•  
+                if (isFile) {// åˆ›å»ºæ–‡ä»¶  
                     try {  
-                        file.createNewFile();// ´´½¨ĞÂÎÄ¼ş  
+                        file.createNewFile();// åˆ›å»ºæ–°æ–‡ä»¶  
                     } catch (IOException e) {  
                         e.printStackTrace();  
                     }  
                 } else {  
-                    file.mkdir();// ´´½¨Ä¿Â¼  
+                    file.mkdir();// åˆ›å»ºç›®å½•  
                 }  
             }  
         }  
@@ -151,10 +151,10 @@ public class ResFileByDelFile {
   
     
     
-    //²éÕÒ×ÊÔ´--Éú²úÕßÊ¹ÓÃ  
+    //æŸ¥æ‰¾èµ„æº--ç”Ÿäº§è€…ä½¿ç”¨  
     public synchronized void searchFile() {  
-        //Èç¹ûflagÎªtrue£¬ËµÃ÷¼ì²â³öÓĞÉè±¸²åÈë£¬ÔòµÈ´ı£»  
-        //Èç¹ûflagÎªfalse£¬ËµÃ÷Ã»ÓĞÉè±¸²åÈë  
+        //å¦‚æœflagä¸ºtrueï¼Œè¯´æ˜æ£€æµ‹å‡ºæœ‰è®¾å¤‡æ’å…¥ï¼Œåˆ™ç­‰å¾…ï¼›  
+        //å¦‚æœflagä¸ºfalseï¼Œè¯´æ˜æ²¡æœ‰è®¾å¤‡æ’å…¥  
         if (flag) {  
             try {  
                 wait();  
@@ -163,7 +163,7 @@ public class ResFileByDelFile {
             }  
         }  
         dirs = File.listRoots();
-        //Ò»µ«ÓĞÉè±¸²åÈë£¬µ±Ç°ÅÌ·ûÊı»á´óÓÚÏµÍ³Ò»¿ªÊ¼µÄÅÌ·ûÊı  
+        //ä¸€ä½†æœ‰è®¾å¤‡æ’å…¥ï¼Œå½“å‰ç›˜ç¬¦æ•°ä¼šå¤§äºç³»ç»Ÿä¸€å¼€å§‹çš„ç›˜ç¬¦æ•°  
         if (dirs.length > count) {  
 //        	System.out.println("search dirs----->"+dirs.length);
 //        	System.out.println("count----->"+count);
@@ -176,7 +176,7 @@ public class ResFileByDelFile {
         	count=dirs.length;
         }
     }  
-    //Ïû·Ñ×ÊÔ´--Ïû·ÑÕßÊ¹ÓÃ  
+    //æ¶ˆè´¹èµ„æº--æ¶ˆè´¹è€…ä½¿ç”¨  
     public synchronized void copyFile() throws IOException {  
         if (!flag) {  
             try {  

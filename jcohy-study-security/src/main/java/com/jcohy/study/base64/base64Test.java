@@ -25,7 +25,7 @@ public class base64Test {
 		try {
 			BASE64Encoder encoder =new BASE64Encoder();
 			String encode = encoder.encode(src.getBytes());
-			System.out.println("JDKencoder£º"+encode);
+			System.out.println("JDKencoderï¼š"+encode);
 			
 			BASE64Decoder decoder = new BASE64Decoder();
 			byte[] decode = decoder.decodeBuffer(encode);

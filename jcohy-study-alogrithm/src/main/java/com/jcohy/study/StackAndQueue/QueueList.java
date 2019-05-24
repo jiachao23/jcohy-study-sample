@@ -1,6 +1,6 @@
 package com.jcohy.study.StackAndQueue;
 
-//¶ÓÁĞ½ÚµãÀà
+//é˜Ÿåˆ—èŠ‚ç‚¹ç±»
 class QueueNode{
 	int data;
 	QueueNode next;
@@ -10,63 +10,63 @@ class QueueNode{
 	}
 };
 
-//¶ÓÁĞÀà
+//é˜Ÿåˆ—ç±»
 class Linked_List_Queue{
-	public QueueNode front;//¶ÓÁĞµÄÇ°¶ËÖ¸Õë
-	public QueueNode rear;//¶ÓÁĞµÄÎ²¶ËÖ¸Õë
+	public QueueNode front;//é˜Ÿåˆ—çš„å‰ç«¯æŒ‡é’ˆ
+	public QueueNode rear;//é˜Ÿåˆ—çš„å°¾ç«¯æŒ‡é’ˆ
 	public Linked_List_Queue(){
 		front=null;
 		rear=null;
 	}
-	//·½·¨enqueue¶ÓÁĞÊı¾İµÄ´æÈë
+	//æ–¹æ³•enqueueé˜Ÿåˆ—æ•°æ®çš„å­˜å…¥
 	public boolean enqueue(int value){
 		QueueNode node=new QueueNode(value);
-		//¼ì²éÊÇ·ñÎª¿Õ¶ÓÁĞ
+		//æ£€æŸ¥æ˜¯å¦ä¸ºç©ºé˜Ÿåˆ—
 		if(rear==null)
-			front=node;//ĞÂ½¨Á¢µÄ½Úµã³ÉÎªµÚÒ»¸ö½Úµã
+			front=node;//æ–°å»ºç«‹çš„èŠ‚ç‚¹æˆä¸ºç¬¬ä¸€ä¸ªèŠ‚ç‚¹
 		else
-		//½²½Úµã¼ÓÈë¶ÓÁĞµÄÎ²¶Ë
+		//è®²èŠ‚ç‚¹åŠ å…¥é˜Ÿåˆ—çš„å°¾ç«¯
 			rear.next=node;
-		rear=node;//½²¶ÓÁĞµÄÎ²¶ËÖ¸ÕëÖ¸ÏòĞÂ¼ÓÈëµÄ½Úµã
+		rear=node;//è®²é˜Ÿåˆ—çš„å°¾ç«¯æŒ‡é’ˆæŒ‡å‘æ–°åŠ å…¥çš„èŠ‚ç‚¹
 		return true;
 
 	}
-	//·½·¨dequeue¶ÓÁĞÊı¾İµÄÈ¡³ö
+	//æ–¹æ³•dequeueé˜Ÿåˆ—æ•°æ®çš„å–å‡º
 	public int dequeue(){
 		int value;
-		//¼ì²é¶ÓÁĞÊÇ·ñÎª¿Õ
+		//æ£€æŸ¥é˜Ÿåˆ—æ˜¯å¦ä¸ºç©º
 		if(!(front==null)){
 			if(front==rear)
 				rear=null;
-			value=front.data;//½«¶ÓÁĞµÄÊı¾İÈ¡³ö
-			front=front.next;//½«¶ÓÁĞµÄÇ°¶ËÖ¸ÕëÖ¸ÏòÏÂÒ»¸ö
+			value=front.data;//å°†é˜Ÿåˆ—çš„æ•°æ®å–å‡º
+			front=front.next;//å°†é˜Ÿåˆ—çš„å‰ç«¯æŒ‡é’ˆæŒ‡å‘ä¸‹ä¸€ä¸ª
 			return value;	
 		}
 		return -1;
 	}
-}//¶ÓÁĞÀàÉùÃ÷½áÊø
+}//é˜Ÿåˆ—ç±»å£°æ˜ç»“æŸ
 
 public  class QueueList{
 	public static void main(String[] args) {
 		Linked_List_Queue queue=new Linked_List_Queue();
 		int temp;
-		System.out.println("ÒÔÁ´±íµÄ·½Ê½ÊµÏÖ");
+		System.out.println("ä»¥é“¾è¡¨çš„æ–¹å¼å®ç°");
 		System.out.println("============================");
-		System.out.println("ÔÚ¶ÓÁĞµÄÇ°¶Ë¼ÓÈëµÚ1¸öÊı¾İ£¬´ËÊıÖµÎª1");
+		System.out.println("åœ¨é˜Ÿåˆ—çš„å‰ç«¯åŠ å…¥ç¬¬1ä¸ªæ•°æ®ï¼Œæ­¤æ•°å€¼ä¸º1");
 		queue.enqueue(1);
-		System.out.println("ÔÚ¶ÓÁĞµÄÇ°¶Ë¼ÓÈëµÚ2¸öÊı¾İ£¬´ËÊıÖµÎª3");
+		System.out.println("åœ¨é˜Ÿåˆ—çš„å‰ç«¯åŠ å…¥ç¬¬2ä¸ªæ•°æ®ï¼Œæ­¤æ•°å€¼ä¸º3");
 		queue.enqueue(3);
-		System.out.println("ÔÚ¶ÓÁĞµÄÇ°¶Ë¼ÓÈëµÚ3¸öÊı¾İ£¬´ËÊıÖµÎª5");
+		System.out.println("åœ¨é˜Ÿåˆ—çš„å‰ç«¯åŠ å…¥ç¬¬3ä¸ªæ•°æ®ï¼Œæ­¤æ•°å€¼ä¸º5");
 		queue.enqueue(5);
-		System.out.println("ÔÚ¶ÓÁĞµÄÇ°¶Ë¼ÓÈëµÚ4¸öÊı¾İ£¬´ËÊıÖµÎª7");
+		System.out.println("åœ¨é˜Ÿåˆ—çš„å‰ç«¯åŠ å…¥ç¬¬4ä¸ªæ•°æ®ï¼Œæ­¤æ•°å€¼ä¸º7");
 		queue.enqueue(7);
-		System.out.println("ÔÚ¶ÓÁĞµÄÇ°¶Ë¼ÓÈëµÚ5¸öÊı¾İ£¬´ËÊıÖµÎª9");
+		System.out.println("åœ¨é˜Ÿåˆ—çš„å‰ç«¯åŠ å…¥ç¬¬5ä¸ªæ•°æ®ï¼Œæ­¤æ•°å€¼ä¸º9");
 		queue.enqueue(9);
 		System.out.println("============================");
 		while(true){
 			if(!(queue.front==null)){
 				temp=queue.dequeue();
-				System.out.println("´Ó¶ÓÁĞÇ°¶ËÒÀĞòÈ¡³öµÄÔªËØÎª:"+temp);
+				System.out.println("ä»é˜Ÿåˆ—å‰ç«¯ä¾åºå–å‡ºçš„å…ƒç´ ä¸º:"+temp);
 			}
 			else 
 				break;

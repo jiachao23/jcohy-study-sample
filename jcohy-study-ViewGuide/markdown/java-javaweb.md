@@ -1,96 +1,96 @@
 
 #  Java
-> #### PS:´ý¿ª·¢ÖÐ¡£¡£¡£¡£
-> #### ×÷ÕßÍøÒ³£º[www.jcohy.com](http://www.jcohy.com)  	
+> #### PS:å¾…å¼€å‘ä¸­ã€‚ã€‚ã€‚ã€‚
+> #### ä½œè€…ç½‘é¡µï¼š[www.jcohy.com](http://www.jcohy.com)  	
 
->  ÎÒµÄÑ§Ï°±Ê¼Ç£¬¼ÇÂ¼Ñ§Ï°¹ý³ÌÖÐµÄ±Ê¼ÇÒÔ¼°Óöµ½µÄÎÊÌâ,ÒÔ¼°ÎÒµÄÒ»Ð©¾­Ñé×Ü½á¡£Èç¹û³öÏÖÁ´½ÓÊ§Ð§,»òÕßÏëÖªµÀ¸ü¶àµÄÄÚÈÝµÈÇé¿ö¿ÉÒÔÌá½» Issues ÌáÐÑÎÒÐÞ¸ÄÏà¹ØÄÚÈÝ¡£
+>  æˆ‘çš„å­¦ä¹ ç¬”è®°ï¼Œè®°å½•å­¦ä¹ è¿‡ç¨‹ä¸­çš„ç¬”è®°ä»¥åŠé‡åˆ°çš„é—®é¢˜,ä»¥åŠæˆ‘çš„ä¸€äº›ç»éªŒæ€»ç»“ã€‚å¦‚æžœå‡ºçŽ°é“¾æŽ¥å¤±æ•ˆ,æˆ–è€…æƒ³çŸ¥é“æ›´å¤šçš„å†…å®¹ç­‰æƒ…å†µå¯ä»¥æäº¤ Issues æé†’æˆ‘ä¿®æ”¹ç›¸å…³å†…å®¹ã€‚
 
-## javaWebÃæÊÔ
-> * [XMLÎÄµµ¶¨ÒåÓÐ¼¸ÖÖÐÎÊ½£¿ËüÃÇÖ®¼äÓÐºÎ±¾ÖÊÇø±ð£¿½âÎöXMLÎÄµµÓÐÄÄ¼¸ÖÖ·½Ê½£¿](#javaweb-1)
-> * [XMLÓëJSON¶Ô±ÈºÍÇø±ð?](#javaweb-43)
+## javaWebé¢è¯•
+> * [XMLæ–‡æ¡£å®šä¹‰æœ‰å‡ ç§å½¢å¼ï¼Ÿå®ƒä»¬ä¹‹é—´æœ‰ä½•æœ¬è´¨åŒºåˆ«ï¼Ÿè§£æžXMLæ–‡æ¡£æœ‰å“ªå‡ ç§æ–¹å¼ï¼Ÿ](#javaweb-1)
+> * [XMLä¸ŽJSONå¯¹æ¯”å’ŒåŒºåˆ«?](#javaweb-43)
 > * [Servlet](#javaweb-42)
-> * [ÄãÔÚÏîÄ¿ÖÐÄÄÐ©µØ·½ÓÃµ½ÁËXML£¿](#javaweb-2)
-> * [²ûÊöJDBC²Ù×÷Êý¾Ý¿âµÄ²½Öè¡£](#javaweb-3)
-> * [StatementºÍPreparedStatementÓÐÊ²Ã´Çø±ð£¿ÄÄ¸öÐÔÄÜ¸üºÃ£¿](#javaweb-4)
-> * [ÔÚ½øÐÐÊý¾Ý¿â±à³ÌÊ±£¬Á¬½Ó³ØÓÐÊ²Ã´×÷ÓÃ£¿](#javaweb-5)
-> * [Ê²Ã´ÊÇDAOÄ£Ê½£¿](#javaweb-6)
-> * [ÊÂÎñµÄACIDÊÇÖ¸Ê²Ã´£¿](#javaweb-7)
-> * [JDBCÖÐÈçºÎ½øÐÐÊÂÎñ´¦Àí£¿](#javaweb-8)
-> * [JDBCÄÜ·ñ´¦ÀíBlobºÍClob£¿](#javaweb-9)
-> * [²ûÊöServletºÍCGIµÄÇø±ð?](#javaweb-10)
-> * [Servlet½Ó¿ÚÖÐÓÐÄÄÐ©·½·¨£¿](#javaweb-11)
-> * [JSPÓÐÄÄÐ©ÄÚÖÃ¶ÔÏó£¿×÷ÓÃ·Ö±ðÊÇÊ²Ã´£¿](#javaweb-12)
-> * [getºÍpostÇëÇóµÄÇø±ð£¿](#javaweb-13)
-> * [³£ÓÃµÄWeb·þÎñÆ÷ÓÐÄÄÐ©£¿](#javaweb-14)
-> * [JSPºÍServletÊÇÊ²Ã´¹ØÏµ£¿](#javaweb-15)
-> * [½²½âJSPÖÐµÄËÄÖÖ×÷ÓÃÓò¡£](#javaweb-16)
-> * [ÈçºÎÊµÏÖJSP»òServletµÄµ¥Ïß³ÌÄ£Ê½£¿](#javaweb-17)
-> * [ÊµÏÖ»á»°¸ú×ÙµÄ¼¼ÊõÓÐÄÄÐ©£¿](#javaweb-18)
-> * [¹ýÂËÆ÷ÓÐÄÄÐ©×÷ÓÃºÍÓÃ·¨£¿](#javaweb-19)
-> * [¼àÌýÆ÷ÓÐÄÄÐ©×÷ÓÃºÍÓÃ·¨£¿](#javaweb-20)
-> * [web.xmlÎÄ¼þÖÐ¿ÉÒÔÅäÖÃÄÄÐ©ÄÚÈÝ£¿](#javaweb-21)
-> * [ÄãµÄÏîÄ¿ÖÐÊ¹ÓÃ¹ýÄÄÐ©JSTL±êÇ©£¿](#javaweb-22)
-> * [Ê¹ÓÃ±êÇ©¿âÓÐÊ²Ã´ºÃ´¦£¿ÈçºÎ×Ô¶¨ÒåJSP±êÇ©£¿](#javaweb-23)
-> * [ËµÒ»ÏÂ±í´ïÊ½ÓïÑÔ£¨EL£©µÄÒþÊ½¶ÔÏó¼°Æä×÷ÓÃ](#javaweb-24)
-> * [±í´ïÊ½ÓïÑÔ£¨EL£©Ö§³ÖÄÄÐ©ÔËËã·û£¿](#javaweb-25)
-> * [Java Web¿ª·¢µÄModel 1ºÍModel 2·Ö±ðÖ¸µÄÊÇÊ²Ã´£¿](#javaweb-26)
-> * [Servlet 3ÖÐµÄÒì²½´¦ÀíÖ¸µÄÊÇÊ²Ã´£¿](#javaweb-27)
-> * [ÈçºÎÔÚ»ùÓÚJavaµÄWebÏîÄ¿ÖÐÊµÏÖÎÄ¼þÉÏ´«ºÍÏÂÔØ£¿](#javaweb-28)
-> * [·þÎñÆ÷ÊÕµ½ÓÃ»§Ìá½»µÄ±íµ¥Êý¾Ý£¬µ½µ×ÊÇµ÷ÓÃServletµÄdoGet()»¹ÊÇdoPost()·½·¨£¿](#javaweb-29)
-> * [JSPÖÐµÄ¾²Ì¬°üº¬ºÍ¶¯Ì¬°üº¬ÓÐÊ²Ã´Çø±ð£¿](#javaweb-30)
-> * [ServletÖÐÈçºÎ»ñÈ¡ÓÃ»§Ìá½»µÄ²éÑ¯²ÎÊý»ò±íµ¥Êý¾Ý£¿](#javaweb-31)
-> * [ServletÖÐÈçºÎ»ñÈ¡ÓÃ»§ÅäÖÃµÄ³õÊ¼»¯²ÎÊýÒÔ¼°·þÎñÆ÷ÉÏÏÂÎÄ²ÎÊý£¿](#javaweb-32)
-> * [ÈçºÎÉèÖÃÇëÇóµÄ±àÂëÒÔ¼°ÏìÓ¦ÄÚÈÝµÄÀàÐÍ£¿](#javaweb-33)
-> * [½âÊÍÒ»ÏÂÍøÂçÓ¦ÓÃµÄÄ£Ê½¼°ÆäÌØµã¡£](#javaweb-34)
-> * [Ê²Ã´ÊÇWeb Service£¨Web·þÎñ£©£¿](#javaweb-35)
-> * [¸ÅÄî½âÊÍ£ºSOAP¡¢WSDL¡¢UDDI¡£](#javaweb-36)
-> * [Java¹æ·¶ÖÐºÍWeb ServiceÏà¹ØµÄ¹æ·¶ÓÐÄÄÐ©£¿](#javaweb-37)
-> * [½éÉÜÒ»ÏÂÄãÁË½âµÄJavaÁìÓòµÄWeb Service¿ò¼Ü¡£](#javaweb-38)
-> * [×ª·¢ÓëÖØ¶¨ÏòµÄÇø±ð](#javaweb-39)
-> * [sessionºÍcookieµÄÇø±ð](#javaweb-40)
-> * [ÈçºÎ·ÀÖ¹±íµ¥ÖØ¸´Ìá½»](#javaweb-41)
+> * [ä½ åœ¨é¡¹ç›®ä¸­å“ªäº›åœ°æ–¹ç”¨åˆ°äº†XMLï¼Ÿ](#javaweb-2)
+> * [é˜è¿°JDBCæ“ä½œæ•°æ®åº“çš„æ­¥éª¤ã€‚](#javaweb-3)
+> * [Statementå’ŒPreparedStatementæœ‰ä»€ä¹ˆåŒºåˆ«ï¼Ÿå“ªä¸ªæ€§èƒ½æ›´å¥½ï¼Ÿ](#javaweb-4)
+> * [åœ¨è¿›è¡Œæ•°æ®åº“ç¼–ç¨‹æ—¶ï¼Œè¿žæŽ¥æ± æœ‰ä»€ä¹ˆä½œç”¨ï¼Ÿ](#javaweb-5)
+> * [ä»€ä¹ˆæ˜¯DAOæ¨¡å¼ï¼Ÿ](#javaweb-6)
+> * [äº‹åŠ¡çš„ACIDæ˜¯æŒ‡ä»€ä¹ˆï¼Ÿ](#javaweb-7)
+> * [JDBCä¸­å¦‚ä½•è¿›è¡Œäº‹åŠ¡å¤„ç†ï¼Ÿ](#javaweb-8)
+> * [JDBCèƒ½å¦å¤„ç†Blobå’ŒClobï¼Ÿ](#javaweb-9)
+> * [é˜è¿°Servletå’ŒCGIçš„åŒºåˆ«?](#javaweb-10)
+> * [ServletæŽ¥å£ä¸­æœ‰å“ªäº›æ–¹æ³•ï¼Ÿ](#javaweb-11)
+> * [JSPæœ‰å“ªäº›å†…ç½®å¯¹è±¡ï¼Ÿä½œç”¨åˆ†åˆ«æ˜¯ä»€ä¹ˆï¼Ÿ](#javaweb-12)
+> * [getå’Œpostè¯·æ±‚çš„åŒºåˆ«ï¼Ÿ](#javaweb-13)
+> * [å¸¸ç”¨çš„WebæœåŠ¡å™¨æœ‰å“ªäº›ï¼Ÿ](#javaweb-14)
+> * [JSPå’ŒServletæ˜¯ä»€ä¹ˆå…³ç³»ï¼Ÿ](#javaweb-15)
+> * [è®²è§£JSPä¸­çš„å››ç§ä½œç”¨åŸŸã€‚](#javaweb-16)
+> * [å¦‚ä½•å®žçŽ°JSPæˆ–Servletçš„å•çº¿ç¨‹æ¨¡å¼ï¼Ÿ](#javaweb-17)
+> * [å®žçŽ°ä¼šè¯è·Ÿè¸ªçš„æŠ€æœ¯æœ‰å“ªäº›ï¼Ÿ](#javaweb-18)
+> * [è¿‡æ»¤å™¨æœ‰å“ªäº›ä½œç”¨å’Œç”¨æ³•ï¼Ÿ](#javaweb-19)
+> * [ç›‘å¬å™¨æœ‰å“ªäº›ä½œç”¨å’Œç”¨æ³•ï¼Ÿ](#javaweb-20)
+> * [web.xmlæ–‡ä»¶ä¸­å¯ä»¥é…ç½®å“ªäº›å†…å®¹ï¼Ÿ](#javaweb-21)
+> * [ä½ çš„é¡¹ç›®ä¸­ä½¿ç”¨è¿‡å“ªäº›JSTLæ ‡ç­¾ï¼Ÿ](#javaweb-22)
+> * [ä½¿ç”¨æ ‡ç­¾åº“æœ‰ä»€ä¹ˆå¥½å¤„ï¼Ÿå¦‚ä½•è‡ªå®šä¹‰JSPæ ‡ç­¾ï¼Ÿ](#javaweb-23)
+> * [è¯´ä¸€ä¸‹è¡¨è¾¾å¼è¯­è¨€ï¼ˆELï¼‰çš„éšå¼å¯¹è±¡åŠå…¶ä½œç”¨](#javaweb-24)
+> * [è¡¨è¾¾å¼è¯­è¨€ï¼ˆELï¼‰æ”¯æŒå“ªäº›è¿ç®—ç¬¦ï¼Ÿ](#javaweb-25)
+> * [Java Webå¼€å‘çš„Model 1å’ŒModel 2åˆ†åˆ«æŒ‡çš„æ˜¯ä»€ä¹ˆï¼Ÿ](#javaweb-26)
+> * [Servlet 3ä¸­çš„å¼‚æ­¥å¤„ç†æŒ‡çš„æ˜¯ä»€ä¹ˆï¼Ÿ](#javaweb-27)
+> * [å¦‚ä½•åœ¨åŸºäºŽJavaçš„Webé¡¹ç›®ä¸­å®žçŽ°æ–‡ä»¶ä¸Šä¼ å’Œä¸‹è½½ï¼Ÿ](#javaweb-28)
+> * [æœåŠ¡å™¨æ”¶åˆ°ç”¨æˆ·æäº¤çš„è¡¨å•æ•°æ®ï¼Œåˆ°åº•æ˜¯è°ƒç”¨Servletçš„doGet()è¿˜æ˜¯doPost()æ–¹æ³•ï¼Ÿ](#javaweb-29)
+> * [JSPä¸­çš„é™æ€åŒ…å«å’ŒåŠ¨æ€åŒ…å«æœ‰ä»€ä¹ˆåŒºåˆ«ï¼Ÿ](#javaweb-30)
+> * [Servletä¸­å¦‚ä½•èŽ·å–ç”¨æˆ·æäº¤çš„æŸ¥è¯¢å‚æ•°æˆ–è¡¨å•æ•°æ®ï¼Ÿ](#javaweb-31)
+> * [Servletä¸­å¦‚ä½•èŽ·å–ç”¨æˆ·é…ç½®çš„åˆå§‹åŒ–å‚æ•°ä»¥åŠæœåŠ¡å™¨ä¸Šä¸‹æ–‡å‚æ•°ï¼Ÿ](#javaweb-32)
+> * [å¦‚ä½•è®¾ç½®è¯·æ±‚çš„ç¼–ç ä»¥åŠå“åº”å†…å®¹çš„ç±»åž‹ï¼Ÿ](#javaweb-33)
+> * [è§£é‡Šä¸€ä¸‹ç½‘ç»œåº”ç”¨çš„æ¨¡å¼åŠå…¶ç‰¹ç‚¹ã€‚](#javaweb-34)
+> * [ä»€ä¹ˆæ˜¯Web Serviceï¼ˆWebæœåŠ¡ï¼‰ï¼Ÿ](#javaweb-35)
+> * [æ¦‚å¿µè§£é‡Šï¼šSOAPã€WSDLã€UDDIã€‚](#javaweb-36)
+> * [Javaè§„èŒƒä¸­å’ŒWeb Serviceç›¸å…³çš„è§„èŒƒæœ‰å“ªäº›ï¼Ÿ](#javaweb-37)
+> * [ä»‹ç»ä¸€ä¸‹ä½ äº†è§£çš„Javaé¢†åŸŸçš„Web Serviceæ¡†æž¶ã€‚](#javaweb-38)
+> * [è½¬å‘ä¸Žé‡å®šå‘çš„åŒºåˆ«](#javaweb-39)
+> * [sessionå’Œcookieçš„åŒºåˆ«](#javaweb-40)
+> * [å¦‚ä½•é˜²æ­¢è¡¨å•é‡å¤æäº¤](#javaweb-41)
 
 <p id="javaweb-1">
 
-#### XMLÎÄµµ¶¨ÒåÓÐ¼¸ÖÖÐÎÊ½£¿ËüÃÇÖ®¼äÓÐºÎ±¾ÖÊÇø±ð£¿½âÎöXMLÎÄµµÓÐÄÄ¼¸ÖÖ·½Ê½£¿
-XMLÎÄµµ¶¨Òå·ÖÎªDTDºÍSchemaÁ½ÖÖÐÎÊ½£¬¶þÕß¶¼ÊÇ¶ÔXMLÓï·¨µÄÔ¼Êø£¬Æä±¾ÖÊÇø±ðÔÚÓÚSchema±¾ÉíÒ²ÊÇÒ»¸öXMLÎÄ¼þ£¬¿ÉÒÔ±»XML½âÎöÆ÷½âÎö£¬¶øÇÒ¿ÉÒÔÎªXML³ÐÔØµÄÊý¾Ý¶¨ÒåÀàÐÍ£¬Ô¼ÊøÄÜÁ¦½ÏÖ®DTD¸üÇ¿´ó¡£¶ÔXMLµÄ½âÎöÖ÷ÒªÓÐDOM£¨ÎÄµµ¶ÔÏóÄ£ÐÍ£¬Document Object Model£©¡¢SAX£¨Simple API for XML£©ºÍStAX£¨Java 6ÖÐÒýÈëµÄÐÂµÄ½âÎöXMLµÄ·½Ê½£¬Streaming API for XML£©£¬ÆäÖÐDOM´¦Àí´óÐÍÎÄ¼þÊ±ÆäÐÔÄÜÏÂ½µµÄ·Ç³£À÷º¦£¬Õâ¸öÎÊÌâÊÇÓÉDOMÊ÷½á¹¹Õ¼ÓÃµÄÄÚ´æ½Ï¶àÔì³ÉµÄ£¬¶øÇÒDOM½âÎö·½Ê½±ØÐëÔÚ½âÎöÎÄ¼þÖ®Ç°°ÑÕû¸öÎÄµµ×°ÈëÄÚ´æ£¬ÊÊºÏ¶ÔXMLµÄËæ»ú·ÃÎÊ£¨µäÐÍµÄÓÃ¿Õ¼ä»»È¡Ê±¼äµÄ²ßÂÔ£©£»SAXÊÇÊÂ¼þÇý¶¯ÐÍµÄXML½âÎö·½Ê½£¬ËüË³Ðò¶ÁÈ¡XMLÎÄ¼þ£¬²»ÐèÒªÒ»´ÎÈ«²¿×°ÔØÕû¸öÎÄ¼þ¡£µ±Óöµ½ÏñÎÄ¼þ¿ªÍ·£¬ÎÄµµ½áÊø£¬»òÕß±êÇ©¿ªÍ·Óë±êÇ©½áÊøÊ±£¬Ëü»á´¥·¢Ò»¸öÊÂ¼þ£¬ÓÃ»§Í¨¹ýÊÂ¼þ»Øµ÷´úÂëÀ´´¦ÀíXMLÎÄ¼þ£¬ÊÊºÏ¶ÔXMLµÄË³Ðò·ÃÎÊ£»¹ËÃûË¼Òå£¬StAX°ÑÖØµã·ÅÔÚÁ÷ÉÏ£¬Êµ¼ÊÉÏStAXÓëÆäËû½âÎö·½Ê½µÄ±¾ÖÊÇø±ð¾ÍÔÚÓÚÓ¦ÓÃ³ÌÐòÄÜ¹»°ÑXML×÷ÎªÒ»¸öÊÂ¼þÁ÷À´´¦Àí¡£½«XML×÷ÎªÒ»×éÊÂ¼þÀ´´¦ÀíµÄÏë·¨²¢²»ÐÂÓ±£¨SAX¾ÍÊÇÕâÑù×öµÄ£©£¬µ«²»Í¬Ö®´¦ÔÚÓÚStAXÔÊÐíÓ¦ÓÃ³ÌÐò´úÂë°ÑÕâÐ©ÊÂ¼þÖð¸öÀ­³öÀ´£¬¶ø²»ÓÃÌá¹©ÔÚ½âÎöÆ÷·½±ãÊ±´Ó½âÎöÆ÷ÖÐ½ÓÊÕÊÂ¼þµÄ´¦Àí³ÌÐò¡£
+#### XMLæ–‡æ¡£å®šä¹‰æœ‰å‡ ç§å½¢å¼ï¼Ÿå®ƒä»¬ä¹‹é—´æœ‰ä½•æœ¬è´¨åŒºåˆ«ï¼Ÿè§£æžXMLæ–‡æ¡£æœ‰å“ªå‡ ç§æ–¹å¼ï¼Ÿ
+XMLæ–‡æ¡£å®šä¹‰åˆ†ä¸ºDTDå’ŒSchemaä¸¤ç§å½¢å¼ï¼ŒäºŒè€…éƒ½æ˜¯å¯¹XMLè¯­æ³•çš„çº¦æŸï¼Œå…¶æœ¬è´¨åŒºåˆ«åœ¨äºŽSchemaæœ¬èº«ä¹Ÿæ˜¯ä¸€ä¸ªXMLæ–‡ä»¶ï¼Œå¯ä»¥è¢«XMLè§£æžå™¨è§£æžï¼Œè€Œä¸”å¯ä»¥ä¸ºXMLæ‰¿è½½çš„æ•°æ®å®šä¹‰ç±»åž‹ï¼Œçº¦æŸèƒ½åŠ›è¾ƒä¹‹DTDæ›´å¼ºå¤§ã€‚å¯¹XMLçš„è§£æžä¸»è¦æœ‰DOMï¼ˆæ–‡æ¡£å¯¹è±¡æ¨¡åž‹ï¼ŒDocument Object Modelï¼‰ã€SAXï¼ˆSimple API for XMLï¼‰å’ŒStAXï¼ˆJava 6ä¸­å¼•å…¥çš„æ–°çš„è§£æžXMLçš„æ–¹å¼ï¼ŒStreaming API for XMLï¼‰ï¼Œå…¶ä¸­DOMå¤„ç†å¤§åž‹æ–‡ä»¶æ—¶å…¶æ€§èƒ½ä¸‹é™çš„éžå¸¸åŽ‰å®³ï¼Œè¿™ä¸ªé—®é¢˜æ˜¯ç”±DOMæ ‘ç»“æž„å ç”¨çš„å†…å­˜è¾ƒå¤šé€ æˆçš„ï¼Œè€Œä¸”DOMè§£æžæ–¹å¼å¿…é¡»åœ¨è§£æžæ–‡ä»¶ä¹‹å‰æŠŠæ•´ä¸ªæ–‡æ¡£è£…å…¥å†…å­˜ï¼Œé€‚åˆå¯¹XMLçš„éšæœºè®¿é—®ï¼ˆå…¸åž‹çš„ç”¨ç©ºé—´æ¢å–æ—¶é—´çš„ç­–ç•¥ï¼‰ï¼›SAXæ˜¯äº‹ä»¶é©±åŠ¨åž‹çš„XMLè§£æžæ–¹å¼ï¼Œå®ƒé¡ºåºè¯»å–XMLæ–‡ä»¶ï¼Œä¸éœ€è¦ä¸€æ¬¡å…¨éƒ¨è£…è½½æ•´ä¸ªæ–‡ä»¶ã€‚å½“é‡åˆ°åƒæ–‡ä»¶å¼€å¤´ï¼Œæ–‡æ¡£ç»“æŸï¼Œæˆ–è€…æ ‡ç­¾å¼€å¤´ä¸Žæ ‡ç­¾ç»“æŸæ—¶ï¼Œå®ƒä¼šè§¦å‘ä¸€ä¸ªäº‹ä»¶ï¼Œç”¨æˆ·é€šè¿‡äº‹ä»¶å›žè°ƒä»£ç æ¥å¤„ç†XMLæ–‡ä»¶ï¼Œé€‚åˆå¯¹XMLçš„é¡ºåºè®¿é—®ï¼›é¡¾åæ€ä¹‰ï¼ŒStAXæŠŠé‡ç‚¹æ”¾åœ¨æµä¸Šï¼Œå®žé™…ä¸ŠStAXä¸Žå…¶ä»–è§£æžæ–¹å¼çš„æœ¬è´¨åŒºåˆ«å°±åœ¨äºŽåº”ç”¨ç¨‹åºèƒ½å¤ŸæŠŠXMLä½œä¸ºä¸€ä¸ªäº‹ä»¶æµæ¥å¤„ç†ã€‚å°†XMLä½œä¸ºä¸€ç»„äº‹ä»¶æ¥å¤„ç†çš„æƒ³æ³•å¹¶ä¸æ–°é¢–ï¼ˆSAXå°±æ˜¯è¿™æ ·åšçš„ï¼‰ï¼Œä½†ä¸åŒä¹‹å¤„åœ¨äºŽStAXå…è®¸åº”ç”¨ç¨‹åºä»£ç æŠŠè¿™äº›äº‹ä»¶é€ä¸ªæ‹‰å‡ºæ¥ï¼Œè€Œä¸ç”¨æä¾›åœ¨è§£æžå™¨æ–¹ä¾¿æ—¶ä»Žè§£æžå™¨ä¸­æŽ¥æ”¶äº‹ä»¶çš„å¤„ç†ç¨‹åºã€‚
 
 
 <p id="javaweb-2">
 
-#### ÄãÔÚÏîÄ¿ÖÐÄÄÐ©µØ·½ÓÃµ½ÁËXML£¿
+#### ä½ åœ¨é¡¹ç›®ä¸­å“ªäº›åœ°æ–¹ç”¨åˆ°äº†XMLï¼Ÿ
 
-XMLµÄÖ÷Òª×÷ÓÃÓÐÁ½¸ö·½Ãæ£ºÊý¾Ý½»»»ºÍÐÅÏ¢ÅäÖÃ¡£ÔÚ×öÊý¾Ý½»»»Ê±£¬XML½«Êý¾ÝÓÃ±êÇ©×é×°³ÉÆðÀ´£¬È»ºóÑ¹Ëõ´ò°ü¼ÓÃÜºóÍ¨¹ýÍøÂç´«ËÍ¸ø½ÓÊÕÕß£¬½ÓÊÕ½âÃÜÓë½âÑ¹ËõºóÔÙ´ÓXMLÎÄ¼þÖÐ»¹Ô­Ïà¹ØÐÅÏ¢½øÐÐ´¦Àí¡£
-XMLÔø¾­ÊÇÒì¹¹ÏµÍ³¼ä½»»»Êý¾ÝµÄÊÂÊµ±ê×¼£¬µ«´ËÏî¹¦ÄÜ¼¸ºõÒÑ¾­±»JSON£¨JavaScript Object Notation£©È¡¶ø´úÖ®¡£µ±È»£¬Ä¿Ç°ºÜ¶àÈí¼þÈÔÈ»Ê¹ÓÃXMLÀ´´æ´¢ÅäÖÃÐÅÏ¢£¬ÎÒÃÇÔÚºÜ¶àÏîÄ¿ÖÐÍ¨³£Ò²»á½«×÷ÎªÅäÖÃÐÅÏ¢µÄÓ²´úÂëÐ´ÔÚXMLÎÄ¼þÖÐ£¬JavaµÄºÜ¶à¿ò¼ÜÒ²ÊÇÕâÃ´×öµÄ£¬¶øÇÒÕâÐ©¿ò¼Ü¶¼Ñ¡ÔñÁËdom4j×÷Îª´¦ÀíXMLµÄ¹¤¾ß£¬ÒòÎªSun¹«Ë¾µÄ¹Ù·½APIÊµÔÚ²»ÔõÃ´ºÃÓÃ¡£
-²¹³ä£ºÏÖÔÚÓÐºÜ¶àÊ±÷ÖµÄÈí¼þ£¨ÈçSublime£©ÒÑ¾­¿ªÊ¼½«ÅäÖÃÎÄ¼þÊéÐ´³ÉJSON¸ñÊ½£¬ÎÒÃÇÒÑ¾­Ç¿ÁÒµÄ¸ÐÊÜµ½XMLµÄÁíÒ»Ïî¹¦ÄÜÒ²½«Öð½¥±»Òµ½çÅ×Æú¡£
+XMLçš„ä¸»è¦ä½œç”¨æœ‰ä¸¤ä¸ªæ–¹é¢ï¼šæ•°æ®äº¤æ¢å’Œä¿¡æ¯é…ç½®ã€‚åœ¨åšæ•°æ®äº¤æ¢æ—¶ï¼ŒXMLå°†æ•°æ®ç”¨æ ‡ç­¾ç»„è£…æˆèµ·æ¥ï¼Œç„¶åŽåŽ‹ç¼©æ‰“åŒ…åŠ å¯†åŽé€šè¿‡ç½‘ç»œä¼ é€ç»™æŽ¥æ”¶è€…ï¼ŒæŽ¥æ”¶è§£å¯†ä¸Žè§£åŽ‹ç¼©åŽå†ä»ŽXMLæ–‡ä»¶ä¸­è¿˜åŽŸç›¸å…³ä¿¡æ¯è¿›è¡Œå¤„ç†ã€‚
+XMLæ›¾ç»æ˜¯å¼‚æž„ç³»ç»Ÿé—´äº¤æ¢æ•°æ®çš„äº‹å®žæ ‡å‡†ï¼Œä½†æ­¤é¡¹åŠŸèƒ½å‡ ä¹Žå·²ç»è¢«JSONï¼ˆJavaScript Object Notationï¼‰å–è€Œä»£ä¹‹ã€‚å½“ç„¶ï¼Œç›®å‰å¾ˆå¤šè½¯ä»¶ä»ç„¶ä½¿ç”¨XMLæ¥å­˜å‚¨é…ç½®ä¿¡æ¯ï¼Œæˆ‘ä»¬åœ¨å¾ˆå¤šé¡¹ç›®ä¸­é€šå¸¸ä¹Ÿä¼šå°†ä½œä¸ºé…ç½®ä¿¡æ¯çš„ç¡¬ä»£ç å†™åœ¨XMLæ–‡ä»¶ä¸­ï¼ŒJavaçš„å¾ˆå¤šæ¡†æž¶ä¹Ÿæ˜¯è¿™ä¹ˆåšçš„ï¼Œè€Œä¸”è¿™äº›æ¡†æž¶éƒ½é€‰æ‹©äº†dom4jä½œä¸ºå¤„ç†XMLçš„å·¥å…·ï¼Œå› ä¸ºSunå…¬å¸çš„å®˜æ–¹APIå®žåœ¨ä¸æ€Žä¹ˆå¥½ç”¨ã€‚
+è¡¥å……ï¼šçŽ°åœ¨æœ‰å¾ˆå¤šæ—¶é«¦çš„è½¯ä»¶ï¼ˆå¦‚Sublimeï¼‰å·²ç»å¼€å§‹å°†é…ç½®æ–‡ä»¶ä¹¦å†™æˆJSONæ ¼å¼ï¼Œæˆ‘ä»¬å·²ç»å¼ºçƒˆçš„æ„Ÿå—åˆ°XMLçš„å¦ä¸€é¡¹åŠŸèƒ½ä¹Ÿå°†é€æ¸è¢«ä¸šç•ŒæŠ›å¼ƒã€‚
 
 <p id="javaweb-3">
 
-#### ²ûÊöJDBC²Ù×÷Êý¾Ý¿âµÄ²½Öè¡£
+#### é˜è¿°JDBCæ“ä½œæ•°æ®åº“çš„æ­¥éª¤ã€‚
 
-ÏÂÃæµÄ´úÂëÒÔÁ¬½Ó±¾»úµÄOracleÊý¾Ý¿âÎªÀý£¬ÑÝÊ¾JDBC²Ù×÷Êý¾Ý¿âµÄ²½Öè¡£
+ä¸‹é¢çš„ä»£ç ä»¥è¿žæŽ¥æœ¬æœºçš„Oracleæ•°æ®åº“ä¸ºä¾‹ï¼Œæ¼”ç¤ºJDBCæ“ä½œæ•°æ®åº“çš„æ­¥éª¤ã€‚
 
 ```java
-//1.¼ÓÔØÇý¶¯¡£
+//1.åŠ è½½é©±åŠ¨ã€‚
 Class.forName("oracle.jdbc.driver.OracleDriver");
 
-//2.´´½¨Á¬½Ó¡£
+//2.åˆ›å»ºè¿žæŽ¥ã€‚
 Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "scott", "tiger");
 
-//3.´´½¨Óï¾ä¡£
+//3.åˆ›å»ºè¯­å¥ã€‚
 PreparedStatement ps = con.prepareStatement("select * from emp where sal between ? and ?");
 ps.setInt(1, 1000);
 ps.setInt(2, 3000);
 
-//4. Ö´ÐÐÓï¾ä¡£
+//4. æ‰§è¡Œè¯­å¥ã€‚
 ResultSet rs = ps.executeQuery();
 
-//5.´¦Àí½á¹û¡£
+//5.å¤„ç†ç»“æžœã€‚
 while(rs.next()) {
     System.out.println(rs.getInt("empno") + " - " + rs.getString("ename"));
 }
 
-//6 ¹Ø±Õ×ÊÔ´¡£
+//6 å…³é—­èµ„æºã€‚
 finally {
     if(con != null) {
         try {
@@ -103,135 +103,135 @@ finally {
 
 ```
 
-ÌáÊ¾£º¹Ø±ÕÍâ²¿×ÊÔ´µÄË³ÐòÓ¦¸ÃºÍ´ò¿ªµÄË³ÐòÏà·´£¬Ò²¾ÍÊÇËµÏÈ¹Ø±ÕResultSet¡¢ÔÙ¹Ø±ÕStatement¡¢ÔÚ¹Ø±ÕConnection¡£ÉÏÃæµÄ´úÂëÖ»¹Ø±ÕÁËConnection£¨Á¬½Ó£©£¬ËäÈ»Í¨³£Çé¿öÏÂÔÚ¹Ø±ÕÁ¬½ÓÊ±£¬Á¬½ÓÉÏ´´½¨µÄÓï¾äºÍ´ò¿ªµÄÓÎ±êÒ²»á¹Ø±Õ£¬µ«²»ÄÜ±£Ö¤×ÜÊÇÈç´Ë£¬Òò´ËÓ¦¸Ã°´ÕÕ¸Õ²ÅËµµÄË³Ðò·Ö±ð¹Ø±Õ¡£´ËÍâ£¬µÚÒ»²½¼ÓÔØÇý¶¯ÔÚJDBC 4.0ÖÐÊÇ¿ÉÒÔÊ¡ÂÔµÄ£¨×Ô¶¯´ÓÀàÂ·¾¶ÖÐ¼ÓÔØÇý¶¯£©£¬µ«ÊÇÎÒÃÇ½¨Òé±£Áô¡£
+æç¤ºï¼šå…³é—­å¤–éƒ¨èµ„æºçš„é¡ºåºåº”è¯¥å’Œæ‰“å¼€çš„é¡ºåºç›¸åï¼Œä¹Ÿå°±æ˜¯è¯´å…ˆå…³é—­ResultSetã€å†å…³é—­Statementã€åœ¨å…³é—­Connectionã€‚ä¸Šé¢çš„ä»£ç åªå…³é—­äº†Connectionï¼ˆè¿žæŽ¥ï¼‰ï¼Œè™½ç„¶é€šå¸¸æƒ…å†µä¸‹åœ¨å…³é—­è¿žæŽ¥æ—¶ï¼Œè¿žæŽ¥ä¸Šåˆ›å»ºçš„è¯­å¥å’Œæ‰“å¼€çš„æ¸¸æ ‡ä¹Ÿä¼šå…³é—­ï¼Œä½†ä¸èƒ½ä¿è¯æ€»æ˜¯å¦‚æ­¤ï¼Œå› æ­¤åº”è¯¥æŒ‰ç…§åˆšæ‰è¯´çš„é¡ºåºåˆ†åˆ«å…³é—­ã€‚æ­¤å¤–ï¼Œç¬¬ä¸€æ­¥åŠ è½½é©±åŠ¨åœ¨JDBC 4.0ä¸­æ˜¯å¯ä»¥çœç•¥çš„ï¼ˆè‡ªåŠ¨ä»Žç±»è·¯å¾„ä¸­åŠ è½½é©±åŠ¨ï¼‰ï¼Œä½†æ˜¯æˆ‘ä»¬å»ºè®®ä¿ç•™ã€‚
 
 <p id="javaweb-4">
 
-#### StatementºÍPreparedStatementÓÐÊ²Ã´Çø±ð£¿ÄÄ¸öÐÔÄÜ¸üºÃ£¿
+#### Statementå’ŒPreparedStatementæœ‰ä»€ä¹ˆåŒºåˆ«ï¼Ÿå“ªä¸ªæ€§èƒ½æ›´å¥½ï¼Ÿ
 
-ÓëStatementÏà±È£¬¢ÙPreparedStatement½Ó¿Ú´ú±íÔ¤±àÒëµÄÓï¾ä£¬ËüÖ÷ÒªµÄÓÅÊÆÔÚÓÚ¿ÉÒÔ¼õÉÙSQLµÄ±àÒë´íÎó²¢Ôö¼ÓSQLµÄ°²È«ÐÔ£¨¼õÉÙSQL×¢Éä¹¥»÷µÄ¿ÉÄÜÐÔ£©£»¢ÚPreparedStatementÖÐµÄSQLÓï¾äÊÇ¿ÉÒÔ´ø²ÎÊýµÄ£¬±ÜÃâÁËÓÃ×Ö·û´®Á¬½ÓÆ´½ÓSQLÓï¾äµÄÂé·³ºÍ²»°²È«£»¢Ûµ±ÅúÁ¿´¦ÀíSQL»òÆµ·±Ö´ÐÐÏàÍ¬µÄ²éÑ¯Ê±£¬PreparedStatementÓÐÃ÷ÏÔµÄÐÔÄÜÉÏµÄÓÅÊÆ£¬ÓÉÓÚÊý¾Ý¿â¿ÉÒÔ½«±àÒëÓÅ»¯ºóµÄSQLÓï¾ä»º´æÆðÀ´£¬ÏÂ´ÎÖ´ÐÐÏàÍ¬½á¹¹µÄÓï¾äÊ±¾Í»áºÜ¿ì£¨²»ÓÃÔÙ´Î±àÒëºÍÉú³ÉÖ´ÐÐ¼Æ»®£©¡£
-²¹³ä£ºÎªÁËÌá¹©¶Ô´æ´¢¹ý³ÌµÄµ÷ÓÃ£¬JDBC APIÖÐ»¹Ìá¹©ÁËCallableStatement½Ó¿Ú¡£´æ´¢¹ý³Ì£¨Stored Procedure£©ÊÇÊý¾Ý¿âÖÐÒ»×éÎªÁËÍê³ÉÌØ¶¨¹¦ÄÜµÄSQLÓï¾äµÄ¼¯ºÏ£¬¾­±àÒëºó´æ´¢ÔÚÊý¾Ý¿âÖÐ£¬ÓÃ»§Í¨¹ýÖ¸¶¨´æ´¢¹ý³ÌµÄÃû×Ö²¢¸ø³ö²ÎÊý£¨Èç¹û¸Ã´æ´¢¹ý³Ì´øÓÐ²ÎÊý£©À´Ö´ÐÐËü¡£ËäÈ»µ÷ÓÃ´æ´¢¹ý³Ì»áÔÚÍøÂç¿ªÏú¡¢°²È«ÐÔ¡¢ÐÔÄÜÉÏ»ñµÃºÜ¶àºÃ´¦£¬µ«ÊÇ´æÔÚÈç¹ûµ×²ãÊý¾Ý¿â·¢ÉúÇ¨ÒÆÊ±¾Í»áÓÐºÜ¶àÂé·³£¬ÒòÎªÃ¿ÖÖÊý¾Ý¿âµÄ´æ´¢¹ý³ÌÔÚÊéÐ´ÉÏ´æÔÚ²»ÉÙµÄ²î±ð¡£
+ä¸ŽStatementç›¸æ¯”ï¼Œâ‘ PreparedStatementæŽ¥å£ä»£è¡¨é¢„ç¼–è¯‘çš„è¯­å¥ï¼Œå®ƒä¸»è¦çš„ä¼˜åŠ¿åœ¨äºŽå¯ä»¥å‡å°‘SQLçš„ç¼–è¯‘é”™è¯¯å¹¶å¢žåŠ SQLçš„å®‰å…¨æ€§ï¼ˆå‡å°‘SQLæ³¨å°„æ”»å‡»çš„å¯èƒ½æ€§ï¼‰ï¼›â‘¡PreparedStatementä¸­çš„SQLè¯­å¥æ˜¯å¯ä»¥å¸¦å‚æ•°çš„ï¼Œé¿å…äº†ç”¨å­—ç¬¦ä¸²è¿žæŽ¥æ‹¼æŽ¥SQLè¯­å¥çš„éº»çƒ¦å’Œä¸å®‰å…¨ï¼›â‘¢å½“æ‰¹é‡å¤„ç†SQLæˆ–é¢‘ç¹æ‰§è¡Œç›¸åŒçš„æŸ¥è¯¢æ—¶ï¼ŒPreparedStatementæœ‰æ˜Žæ˜¾çš„æ€§èƒ½ä¸Šçš„ä¼˜åŠ¿ï¼Œç”±äºŽæ•°æ®åº“å¯ä»¥å°†ç¼–è¯‘ä¼˜åŒ–åŽçš„SQLè¯­å¥ç¼“å­˜èµ·æ¥ï¼Œä¸‹æ¬¡æ‰§è¡Œç›¸åŒç»“æž„çš„è¯­å¥æ—¶å°±ä¼šå¾ˆå¿«ï¼ˆä¸ç”¨å†æ¬¡ç¼–è¯‘å’Œç”Ÿæˆæ‰§è¡Œè®¡åˆ’ï¼‰ã€‚
+è¡¥å……ï¼šä¸ºäº†æä¾›å¯¹å­˜å‚¨è¿‡ç¨‹çš„è°ƒç”¨ï¼ŒJDBC APIä¸­è¿˜æä¾›äº†CallableStatementæŽ¥å£ã€‚å­˜å‚¨è¿‡ç¨‹ï¼ˆStored Procedureï¼‰æ˜¯æ•°æ®åº“ä¸­ä¸€ç»„ä¸ºäº†å®Œæˆç‰¹å®šåŠŸèƒ½çš„SQLè¯­å¥çš„é›†åˆï¼Œç»ç¼–è¯‘åŽå­˜å‚¨åœ¨æ•°æ®åº“ä¸­ï¼Œç”¨æˆ·é€šè¿‡æŒ‡å®šå­˜å‚¨è¿‡ç¨‹çš„åå­—å¹¶ç»™å‡ºå‚æ•°ï¼ˆå¦‚æžœè¯¥å­˜å‚¨è¿‡ç¨‹å¸¦æœ‰å‚æ•°ï¼‰æ¥æ‰§è¡Œå®ƒã€‚è™½ç„¶è°ƒç”¨å­˜å‚¨è¿‡ç¨‹ä¼šåœ¨ç½‘ç»œå¼€é”€ã€å®‰å…¨æ€§ã€æ€§èƒ½ä¸ŠèŽ·å¾—å¾ˆå¤šå¥½å¤„ï¼Œä½†æ˜¯å­˜åœ¨å¦‚æžœåº•å±‚æ•°æ®åº“å‘ç”Ÿè¿ç§»æ—¶å°±ä¼šæœ‰å¾ˆå¤šéº»çƒ¦ï¼Œå› ä¸ºæ¯ç§æ•°æ®åº“çš„å­˜å‚¨è¿‡ç¨‹åœ¨ä¹¦å†™ä¸Šå­˜åœ¨ä¸å°‘çš„å·®åˆ«ã€‚
 
 <p id="javaweb-5">
 
-#### ÔÚ½øÐÐÊý¾Ý¿â±à³ÌÊ±£¬Á¬½Ó³ØÓÐÊ²Ã´×÷ÓÃ£¿
+#### åœ¨è¿›è¡Œæ•°æ®åº“ç¼–ç¨‹æ—¶ï¼Œè¿žæŽ¥æ± æœ‰ä»€ä¹ˆä½œç”¨ï¼Ÿ
 
-ÓÉÓÚ´´½¨Á¬½ÓºÍÊÍ·ÅÁ¬½Ó¶¼ÓÐºÜ´óµÄ¿ªÏú£¨ÓÈÆäÊÇÊý¾Ý¿â·þÎñÆ÷²»ÔÚ±¾µØÊ±£¬Ã¿´Î½¨Á¢Á¬½Ó¶¼ÐèÒª½øÐÐTCPµÄÈý´ÎÎÕÊÖ£¬ÊÍ·ÅÁ¬½ÓÐèÒª½øÐÐTCPËÄ´ÎÎÕÊÖ£¬Ôì³ÉµÄ¿ªÏúÊÇ²»¿ÉºöÊÓµÄ£©£¬ÎªÁËÌáÉýÏµÍ³·ÃÎÊÊý¾Ý¿âµÄÐÔÄÜ£¬¿ÉÒÔÊÂÏÈ´´½¨Èô¸ÉÁ¬½ÓÖÃÓÚÁ¬½Ó³ØÖÐ£¬ÐèÒªÊ±Ö±½Ó´ÓÁ¬½Ó³Ø»ñÈ¡£¬Ê¹ÓÃ½áÊøÊ±¹é»¹Á¬½Ó³Ø¶ø²»±Ø¹Ø±ÕÁ¬½Ó£¬´Ó¶ø±ÜÃâÆµ·±´´½¨ºÍÊÍ·ÅÁ¬½ÓËùÔì³ÉµÄ¿ªÏú£¬ÕâÊÇµäÐÍµÄÓÃ¿Õ¼ä»»È¡Ê±¼äµÄ²ßÂÔ£¨ÀË·ÑÁË¿Õ¼ä´æ´¢Á¬½Ó£¬µ«½ÚÊ¡ÁË´´½¨ºÍÊÍ·ÅÁ¬½ÓµÄÊ±¼ä£©¡£³Ø»¯¼¼ÊõÔÚJava¿ª·¢ÖÐÊÇºÜ³£¼ûµÄ£¬ÔÚÊ¹ÓÃÏß³ÌÊ±´´½¨Ïß³Ì³ØµÄµÀÀíÓë´ËÏàÍ¬¡£»ùÓÚJavaµÄ¿ªÔ´Êý¾Ý¿âÁ¬½Ó³ØÖ÷ÒªÓÐ£ºC3P0¡¢Proxool¡¢DBCP¡¢BoneCP¡¢DruidµÈ¡£
-²¹³ä£ºÔÚ¼ÆËã»úÏµÍ³ÖÐÊ±¼äºÍ¿Õ¼äÊÇ²»¿Éµ÷ºÍµÄÃ¬¶Ü£¬Àí½âÕâÒ»µã¶ÔÉè¼ÆÂú×ãÐÔÄÜÒªÇóµÄËã·¨ÊÇÖÁ¹ØÖØÒªµÄ¡£´óÐÍÍøÕ¾ÐÔÄÜÓÅ»¯µÄÒ»¸ö¹Ø¼ü¾ÍÊÇÊ¹ÓÃ»º´æ£¬¶ø»º´æ¸úÉÏÃæ½²µÄÁ¬½Ó³ØµÀÀí·Ç³£ÀàËÆ£¬Ò²ÊÇÊ¹ÓÃ¿Õ¼ä»»Ê±¼äµÄ²ßÂÔ¡£¿ÉÒÔ½«ÈÈµãÊý¾ÝÖÃÓÚ»º´æÖÐ£¬µ±ÓÃ»§²éÑ¯ÕâÐ©Êý¾ÝÊ±¿ÉÒÔÖ±½Ó´Ó»º´æÖÐµÃµ½£¬ÕâÎÞÂÛÈçºÎÒ²¿ì¹ýÈ¥Êý¾Ý¿âÖÐ²éÑ¯¡£µ±È»£¬»º´æµÄÖÃ»»²ßÂÔµÈÒ²»á¶ÔÏµÍ³ÐÔÄÜ²úÉúÖØÒªÓ°Ïì£¬¶ÔÓÚÕâ¸öÎÊÌâµÄÌÖÂÛÒÑ¾­³¬³öÁËÕâÀïÒª²ûÊöµÄ·¶Î§¡£
+ç”±äºŽåˆ›å»ºè¿žæŽ¥å’Œé‡Šæ”¾è¿žæŽ¥éƒ½æœ‰å¾ˆå¤§çš„å¼€é”€ï¼ˆå°¤å…¶æ˜¯æ•°æ®åº“æœåŠ¡å™¨ä¸åœ¨æœ¬åœ°æ—¶ï¼Œæ¯æ¬¡å»ºç«‹è¿žæŽ¥éƒ½éœ€è¦è¿›è¡ŒTCPçš„ä¸‰æ¬¡æ¡æ‰‹ï¼Œé‡Šæ”¾è¿žæŽ¥éœ€è¦è¿›è¡ŒTCPå››æ¬¡æ¡æ‰‹ï¼Œé€ æˆçš„å¼€é”€æ˜¯ä¸å¯å¿½è§†çš„ï¼‰ï¼Œä¸ºäº†æå‡ç³»ç»Ÿè®¿é—®æ•°æ®åº“çš„æ€§èƒ½ï¼Œå¯ä»¥äº‹å…ˆåˆ›å»ºè‹¥å¹²è¿žæŽ¥ç½®äºŽè¿žæŽ¥æ± ä¸­ï¼Œéœ€è¦æ—¶ç›´æŽ¥ä»Žè¿žæŽ¥æ± èŽ·å–ï¼Œä½¿ç”¨ç»“æŸæ—¶å½’è¿˜è¿žæŽ¥æ± è€Œä¸å¿…å…³é—­è¿žæŽ¥ï¼Œä»Žè€Œé¿å…é¢‘ç¹åˆ›å»ºå’Œé‡Šæ”¾è¿žæŽ¥æ‰€é€ æˆçš„å¼€é”€ï¼Œè¿™æ˜¯å…¸åž‹çš„ç”¨ç©ºé—´æ¢å–æ—¶é—´çš„ç­–ç•¥ï¼ˆæµªè´¹äº†ç©ºé—´å­˜å‚¨è¿žæŽ¥ï¼Œä½†èŠ‚çœäº†åˆ›å»ºå’Œé‡Šæ”¾è¿žæŽ¥çš„æ—¶é—´ï¼‰ã€‚æ± åŒ–æŠ€æœ¯åœ¨Javaå¼€å‘ä¸­æ˜¯å¾ˆå¸¸è§çš„ï¼Œåœ¨ä½¿ç”¨çº¿ç¨‹æ—¶åˆ›å»ºçº¿ç¨‹æ± çš„é“ç†ä¸Žæ­¤ç›¸åŒã€‚åŸºäºŽJavaçš„å¼€æºæ•°æ®åº“è¿žæŽ¥æ± ä¸»è¦æœ‰ï¼šC3P0ã€Proxoolã€DBCPã€BoneCPã€Druidç­‰ã€‚
+è¡¥å……ï¼šåœ¨è®¡ç®—æœºç³»ç»Ÿä¸­æ—¶é—´å’Œç©ºé—´æ˜¯ä¸å¯è°ƒå’Œçš„çŸ›ç›¾ï¼Œç†è§£è¿™ä¸€ç‚¹å¯¹è®¾è®¡æ»¡è¶³æ€§èƒ½è¦æ±‚çš„ç®—æ³•æ˜¯è‡³å…³é‡è¦çš„ã€‚å¤§åž‹ç½‘ç«™æ€§èƒ½ä¼˜åŒ–çš„ä¸€ä¸ªå…³é”®å°±æ˜¯ä½¿ç”¨ç¼“å­˜ï¼Œè€Œç¼“å­˜è·Ÿä¸Šé¢è®²çš„è¿žæŽ¥æ± é“ç†éžå¸¸ç±»ä¼¼ï¼Œä¹Ÿæ˜¯ä½¿ç”¨ç©ºé—´æ¢æ—¶é—´çš„ç­–ç•¥ã€‚å¯ä»¥å°†çƒ­ç‚¹æ•°æ®ç½®äºŽç¼“å­˜ä¸­ï¼Œå½“ç”¨æˆ·æŸ¥è¯¢è¿™äº›æ•°æ®æ—¶å¯ä»¥ç›´æŽ¥ä»Žç¼“å­˜ä¸­å¾—åˆ°ï¼Œè¿™æ— è®ºå¦‚ä½•ä¹Ÿå¿«è¿‡åŽ»æ•°æ®åº“ä¸­æŸ¥è¯¢ã€‚å½“ç„¶ï¼Œç¼“å­˜çš„ç½®æ¢ç­–ç•¥ç­‰ä¹Ÿä¼šå¯¹ç³»ç»Ÿæ€§èƒ½äº§ç”Ÿé‡è¦å½±å“ï¼Œå¯¹äºŽè¿™ä¸ªé—®é¢˜çš„è®¨è®ºå·²ç»è¶…å‡ºäº†è¿™é‡Œè¦é˜è¿°çš„èŒƒå›´ã€‚
 
 <p id="javaweb-6">
 
-#### Ê²Ã´ÊÇDAOÄ£Ê½£¿
+#### ä»€ä¹ˆæ˜¯DAOæ¨¡å¼ï¼Ÿ
 
-DAO£¨Data Access Object£©¹ËÃûË¼ÒåÊÇÒ»¸öÎªÊý¾Ý¿â»òÆäËû³Ö¾Ã»¯»úÖÆÌá¹©ÁË³éÏó½Ó¿ÚµÄ¶ÔÏó£¬ÔÚ²»±©Â¶µ×²ã³Ö¾Ã»¯·½°¸ÊµÏÖÏ¸½ÚµÄÇ°ÌáÏÂÌá¹©ÁË¸÷ÖÖÊý¾Ý·ÃÎÊ²Ù×÷¡£ÔÚÊµ¼ÊµÄ¿ª·¢ÖÐ£¬Ó¦¸Ã½«ËùÓÐ¶ÔÊý¾ÝÔ´µÄ·ÃÎÊ²Ù×÷½øÐÐ³éÏó»¯ºó·â×°ÔÚÒ»¸ö¹«¹²APIÖÐ¡£ÓÃ³ÌÐòÉè¼ÆÓïÑÔÀ´Ëµ£¬¾ÍÊÇ½¨Á¢Ò»¸ö½Ó¿Ú£¬½Ó¿ÚÖÐ¶¨ÒåÁË´ËÓ¦ÓÃ³ÌÐòÖÐ½«»áÓÃµ½µÄËùÓÐÊÂÎñ·½·¨¡£ÔÚÕâ¸öÓ¦ÓÃ³ÌÐòÖÐ£¬µ±ÐèÒªºÍÊý¾ÝÔ´½øÐÐ½»»¥µÄÊ±ºòÔòÊ¹ÓÃÕâ¸ö½Ó¿Ú£¬²¢ÇÒ±àÐ´Ò»¸öµ¥¶ÀµÄÀàÀ´ÊµÏÖÕâ¸ö½Ó¿Ú£¬ÔÚÂß¼­ÉÏ¸ÃÀà¶ÔÓ¦Ò»¸öÌØ¶¨µÄÊý¾Ý´æ´¢¡£DAOÄ£Ê½Êµ¼ÊÉÏ°üº¬ÁËÁ½¸öÄ£Ê½£¬Ò»ÊÇData Accessor£¨Êý¾Ý·ÃÎÊÆ÷£©£¬¶þÊÇData Object£¨Êý¾Ý¶ÔÏó£©£¬Ç°ÕßÒª½â¾öÈçºÎ·ÃÎÊÊý¾ÝµÄÎÊÌâ£¬¶øºóÕßÒª½â¾öµÄÊÇÈçºÎÓÃ¶ÔÏó·â×°Êý¾Ý¡£
+DAOï¼ˆData Access Objectï¼‰é¡¾åæ€ä¹‰æ˜¯ä¸€ä¸ªä¸ºæ•°æ®åº“æˆ–å…¶ä»–æŒä¹…åŒ–æœºåˆ¶æä¾›äº†æŠ½è±¡æŽ¥å£çš„å¯¹è±¡ï¼Œåœ¨ä¸æš´éœ²åº•å±‚æŒä¹…åŒ–æ–¹æ¡ˆå®žçŽ°ç»†èŠ‚çš„å‰æä¸‹æä¾›äº†å„ç§æ•°æ®è®¿é—®æ“ä½œã€‚åœ¨å®žé™…çš„å¼€å‘ä¸­ï¼Œåº”è¯¥å°†æ‰€æœ‰å¯¹æ•°æ®æºçš„è®¿é—®æ“ä½œè¿›è¡ŒæŠ½è±¡åŒ–åŽå°è£…åœ¨ä¸€ä¸ªå…¬å…±APIä¸­ã€‚ç”¨ç¨‹åºè®¾è®¡è¯­è¨€æ¥è¯´ï¼Œå°±æ˜¯å»ºç«‹ä¸€ä¸ªæŽ¥å£ï¼ŒæŽ¥å£ä¸­å®šä¹‰äº†æ­¤åº”ç”¨ç¨‹åºä¸­å°†ä¼šç”¨åˆ°çš„æ‰€æœ‰äº‹åŠ¡æ–¹æ³•ã€‚åœ¨è¿™ä¸ªåº”ç”¨ç¨‹åºä¸­ï¼Œå½“éœ€è¦å’Œæ•°æ®æºè¿›è¡Œäº¤äº’çš„æ—¶å€™åˆ™ä½¿ç”¨è¿™ä¸ªæŽ¥å£ï¼Œå¹¶ä¸”ç¼–å†™ä¸€ä¸ªå•ç‹¬çš„ç±»æ¥å®žçŽ°è¿™ä¸ªæŽ¥å£ï¼Œåœ¨é€»è¾‘ä¸Šè¯¥ç±»å¯¹åº”ä¸€ä¸ªç‰¹å®šçš„æ•°æ®å­˜å‚¨ã€‚DAOæ¨¡å¼å®žé™…ä¸ŠåŒ…å«äº†ä¸¤ä¸ªæ¨¡å¼ï¼Œä¸€æ˜¯Data Accessorï¼ˆæ•°æ®è®¿é—®å™¨ï¼‰ï¼ŒäºŒæ˜¯Data Objectï¼ˆæ•°æ®å¯¹è±¡ï¼‰ï¼Œå‰è€…è¦è§£å†³å¦‚ä½•è®¿é—®æ•°æ®çš„é—®é¢˜ï¼Œè€ŒåŽè€…è¦è§£å†³çš„æ˜¯å¦‚ä½•ç”¨å¯¹è±¡å°è£…æ•°æ®ã€‚
 
 <p id="javaweb-7">
 
-#### ÊÂÎñµÄACIDÊÇÖ¸Ê²Ã´£¿
+#### äº‹åŠ¡çš„ACIDæ˜¯æŒ‡ä»€ä¹ˆï¼Ÿ
 
-- Ô­×ÓÐÔ(Atomic)£ºÊÂÎñÖÐ¸÷Ïî²Ù×÷£¬ÒªÃ´È«×öÒªÃ´È«²»×ö£¬ÈÎºÎÒ»Ïî²Ù×÷µÄÊ§°Ü¶¼»áµ¼ÖÂÕû¸öÊÂÎñµÄÊ§°Ü
+- åŽŸå­æ€§(Atomic)ï¼šäº‹åŠ¡ä¸­å„é¡¹æ“ä½œï¼Œè¦ä¹ˆå…¨åšè¦ä¹ˆå…¨ä¸åšï¼Œä»»ä½•ä¸€é¡¹æ“ä½œçš„å¤±è´¥éƒ½ä¼šå¯¼è‡´æ•´ä¸ªäº‹åŠ¡çš„å¤±è´¥
 
-- Ò»ÖÂÐÔ(Consistent)£ºÊÂÎñ½áÊøºóÏµÍ³×´Ì¬ÊÇÒ»ÖÂµÄ£»
+- ä¸€è‡´æ€§(Consistent)ï¼šäº‹åŠ¡ç»“æŸåŽç³»ç»ŸçŠ¶æ€æ˜¯ä¸€è‡´çš„ï¼›
 
-- ¸ôÀëÐÔ(Isolated)£º²¢·¢Ö´ÐÐµÄÊÂÎñ±Ë´ËÎÞ·¨¿´µ½¶Ô·½µÄÖÐ¼ä×´Ì¬£»
+- éš”ç¦»æ€§(Isolated)ï¼šå¹¶å‘æ‰§è¡Œçš„äº‹åŠ¡å½¼æ­¤æ— æ³•çœ‹åˆ°å¯¹æ–¹çš„ä¸­é—´çŠ¶æ€ï¼›
 
-- ³Ö¾ÃÐÔ(Durable)£ºÊÂÎñÍê³ÉºóËù×öµÄ¸Ä¶¯¶¼»á±»³Ö¾Ã»¯£¬¼´Ê¹·¢ÉúÔÖÄÑÐÔµÄÊ§°Ü¡£Í¨¹ýÈÕÖ¾ºÍÍ¬²½±¸·Ý¿ÉÒÔÔÚ¹ÊÕÏ·¢ÉúºóÖØ½¨Êý¾Ý¡£
+- æŒä¹…æ€§(Durable)ï¼šäº‹åŠ¡å®ŒæˆåŽæ‰€åšçš„æ”¹åŠ¨éƒ½ä¼šè¢«æŒä¹…åŒ–ï¼Œå³ä½¿å‘ç”Ÿç¾éš¾æ€§çš„å¤±è´¥ã€‚é€šè¿‡æ—¥å¿—å’ŒåŒæ­¥å¤‡ä»½å¯ä»¥åœ¨æ•…éšœå‘ç”ŸåŽé‡å»ºæ•°æ®ã€‚
   
-²¹³ä£º¹ØÓÚÊÂÎñ£¬ÔÚÃæÊÔÖÐ±»ÎÊµ½µÄ¸ÅÂÊÊÇºÜ¸ßµÄ£¬¿ÉÒÔÎÊµÄÎÊÌâÒ²ÊÇºÜ¶àµÄ¡£Ê×ÏÈÐèÒªÖªµÀµÄÊÇ£¬Ö»ÓÐ´æÔÚ²¢·¢Êý¾Ý·ÃÎÊÊ±²ÅÐèÒªÊÂÎñ¡£µ±¶à¸öÊÂÎñ·ÃÎÊÍ¬Ò»Êý¾ÝÊ±£¬¿ÉÄÜ»á´æÔÚ5ÀàÎÊÌâ£¬°üÀ¨3ÀàÊý¾Ý¶ÁÈ¡ÎÊÌâ£¨Ôà¶Á¡¢²»¿ÉÖØ¸´¶ÁºÍ»Ã¶Á£©ºÍ2ÀàÊý¾Ý¸üÐÂÎÊÌâ£¨µÚ1Àà¶ªÊ§¸üÐÂºÍµÚ2Àà¶ªÊ§¸üÐÂ£©¡£
+è¡¥å……ï¼šå…³äºŽäº‹åŠ¡ï¼Œåœ¨é¢è¯•ä¸­è¢«é—®åˆ°çš„æ¦‚çŽ‡æ˜¯å¾ˆé«˜çš„ï¼Œå¯ä»¥é—®çš„é—®é¢˜ä¹Ÿæ˜¯å¾ˆå¤šçš„ã€‚é¦–å…ˆéœ€è¦çŸ¥é“çš„æ˜¯ï¼Œåªæœ‰å­˜åœ¨å¹¶å‘æ•°æ®è®¿é—®æ—¶æ‰éœ€è¦äº‹åŠ¡ã€‚å½“å¤šä¸ªäº‹åŠ¡è®¿é—®åŒä¸€æ•°æ®æ—¶ï¼Œå¯èƒ½ä¼šå­˜åœ¨5ç±»é—®é¢˜ï¼ŒåŒ…æ‹¬3ç±»æ•°æ®è¯»å–é—®é¢˜ï¼ˆè„è¯»ã€ä¸å¯é‡å¤è¯»å’Œå¹»è¯»ï¼‰å’Œ2ç±»æ•°æ®æ›´æ–°é—®é¢˜ï¼ˆç¬¬1ç±»ä¸¢å¤±æ›´æ–°å’Œç¬¬2ç±»ä¸¢å¤±æ›´æ–°ï¼‰ã€‚
 
-- Ôà¶Á£¨Dirty Read£©£ºAÊÂÎñ¶ÁÈ¡BÊÂÎñÉÐÎ´Ìá½»µÄÊý¾Ý²¢ÔÚ´Ë»ù´¡ÉÏ²Ù×÷£¬¶øBÊÂÎñÖ´ÐÐ»Ø¹ö£¬ÄÇÃ´A¶ÁÈ¡µ½µÄÊý¾Ý¾ÍÊÇÔàÊý¾Ý¡£
+- è„è¯»ï¼ˆDirty Readï¼‰ï¼šAäº‹åŠ¡è¯»å–Bäº‹åŠ¡å°šæœªæäº¤çš„æ•°æ®å¹¶åœ¨æ­¤åŸºç¡€ä¸Šæ“ä½œï¼Œè€ŒBäº‹åŠ¡æ‰§è¡Œå›žæ»šï¼Œé‚£ä¹ˆAè¯»å–åˆ°çš„æ•°æ®å°±æ˜¯è„æ•°æ®ã€‚
 
-  | Ê±¼ä | ×ªÕËÊÂÎñA                   | È¡¿îÊÂÎñB                |
+  | æ—¶é—´ | è½¬è´¦äº‹åŠ¡A                   | å–æ¬¾äº‹åŠ¡B                |
   | ---- | --------------------------- | ------------------------ |
-  | T1   |                             | ¿ªÊ¼ÊÂÎñ                 |
-  | T2   | ¿ªÊ¼ÊÂÎñ                    |                          |
-  | T3   |                             | ²éÑ¯ÕË»§Óà¶îÎª1000Ôª     |
-  | T4   |                             | È¡³ö500ÔªÓà¶îÐÞ¸ÄÎª500Ôª |
-  | T5   | ²éÑ¯ÕË»§Óà¶îÎª500Ôª£¨Ôà¶Á£© |                          |
-  | T6   |                            | ³·ÏúÊÂÎñÓà¶î»Ö¸´Îª1000Ôª |
-  | T7   | »ãÈë100Ôª°ÑÓà¶îÐÞ¸ÄÎª600Ôª |                          |
-  | T8   | Ìá½»ÊÂÎñ                   |                          |
+  | T1   |                             | å¼€å§‹äº‹åŠ¡                 |
+  | T2   | å¼€å§‹äº‹åŠ¡                    |                          |
+  | T3   |                             | æŸ¥è¯¢è´¦æˆ·ä½™é¢ä¸º1000å…ƒ     |
+  | T4   |                             | å–å‡º500å…ƒä½™é¢ä¿®æ”¹ä¸º500å…ƒ |
+  | T5   | æŸ¥è¯¢è´¦æˆ·ä½™é¢ä¸º500å…ƒï¼ˆè„è¯»ï¼‰ |                          |
+  | T6   |                            | æ’¤é”€äº‹åŠ¡ä½™é¢æ¢å¤ä¸º1000å…ƒ |
+  | T7   | æ±‡å…¥100å…ƒæŠŠä½™é¢ä¿®æ”¹ä¸º600å…ƒ |                          |
+  | T8   | æäº¤äº‹åŠ¡                   |                          |
   
-- ²»¿ÉÖØ¸´¶Á£¨Unrepeatable Read£©£ºÊÂÎñAÖØÐÂ¶ÁÈ¡Ç°Ãæ¶ÁÈ¡¹ýµÄÊý¾Ý£¬·¢ÏÖ¸ÃÊý¾ÝÒÑ¾­±»ÁíÒ»¸öÒÑÌá½»µÄÊÂÎñBÐÞ¸Ä¹ýÁË¡£
+- ä¸å¯é‡å¤è¯»ï¼ˆUnrepeatable Readï¼‰ï¼šäº‹åŠ¡Aé‡æ–°è¯»å–å‰é¢è¯»å–è¿‡çš„æ•°æ®ï¼Œå‘çŽ°è¯¥æ•°æ®å·²ç»è¢«å¦ä¸€ä¸ªå·²æäº¤çš„äº‹åŠ¡Bä¿®æ”¹è¿‡äº†ã€‚
 
 
-| Ê±¼ä | ×ªÕËÊÂÎñA                   | È¡¿îÊÂÎñB                |
+| æ—¶é—´ | è½¬è´¦äº‹åŠ¡A                   | å–æ¬¾äº‹åŠ¡B                |
 | ---- | --------------------------- | ------------------------ |
-| T1   |                             | ¿ªÊ¼ÊÂÎñ                 |
-| T2   | ¿ªÊ¼ÊÂÎñ                    |                          |
-| T3   |                             | ²éÑ¯ÕË»§Óà¶îÎª1000Ôª     |
-| T4   |       ²éÑ¯ÕË»§Óà¶îÎª1000Ôª                      |  |
-| T5   |  |        È¡³ö100ÔªÐÞ¸ÄÓà¶îÎª900Ôª                  |
-| T6   |  |        Ìá½»ÊÂÎñ                  |
-| T7   | ²éÑ¯ÕË»§Óà¶îÎª900Ôª£¨²»¿ÉÖØ¸´¶Á£© |                          |
+| T1   |                             | å¼€å§‹äº‹åŠ¡                 |
+| T2   | å¼€å§‹äº‹åŠ¡                    |                          |
+| T3   |                             | æŸ¥è¯¢è´¦æˆ·ä½™é¢ä¸º1000å…ƒ     |
+| T4   |       æŸ¥è¯¢è´¦æˆ·ä½™é¢ä¸º1000å…ƒ                      |  |
+| T5   |  |        å–å‡º100å…ƒä¿®æ”¹ä½™é¢ä¸º900å…ƒ                  |
+| T6   |  |        æäº¤äº‹åŠ¡                  |
+| T7   | æŸ¥è¯¢è´¦æˆ·ä½™é¢ä¸º900å…ƒï¼ˆä¸å¯é‡å¤è¯»ï¼‰ |                          |
 
-- »Ã¶Á£¨Phantom Read£©£ºÊÂÎñAÖØÐÂÖ´ÐÐÒ»¸ö²éÑ¯£¬·µ»ØÒ»ÏµÁÐ·ûºÏ²éÑ¯Ìõ¼þµÄÐÐ£¬·¢ÏÖÆäÖÐ²åÈëÁË±»ÊÂÎñBÌá½»µÄÐÐ¡£
+- å¹»è¯»ï¼ˆPhantom Readï¼‰ï¼šäº‹åŠ¡Aé‡æ–°æ‰§è¡Œä¸€ä¸ªæŸ¥è¯¢ï¼Œè¿”å›žä¸€ç³»åˆ—ç¬¦åˆæŸ¥è¯¢æ¡ä»¶çš„è¡Œï¼Œå‘çŽ°å…¶ä¸­æ’å…¥äº†è¢«äº‹åŠ¡Bæäº¤çš„è¡Œã€‚
 
 
-| Ê±¼ä | Í³¼Æ½ð¶îÊÂÎñA                   | ×ªÕËÊÂÎñB                |
+| æ—¶é—´ | ç»Ÿè®¡é‡‘é¢äº‹åŠ¡A                   | è½¬è´¦äº‹åŠ¡B                |
 | ---- | --------------------------- | ------------------------ |
-| T1   |                             | ¿ªÊ¼ÊÂÎñ                 |
-| T2   | ¿ªÊ¼ÊÂÎñ                    |                          |
-| T3   |  Í³¼Æ×Ü´æ¿îÎª10000Ôª                           |     |
-| T4   |                         | ÐÂÔöÒ»¸ö´æ¿îÕË»§´æÈë100Ôª |
-| T5   |  |        Ìá½»ÊÂÎñ          |
-| T6   |  |       ÔÙ´ÎÍ³¼Æ×Ü´æ¿îÎª10100Ôª£¨»Ã¶Á£©                  |
+| T1   |                             | å¼€å§‹äº‹åŠ¡                 |
+| T2   | å¼€å§‹äº‹åŠ¡                    |                          |
+| T3   |  ç»Ÿè®¡æ€»å­˜æ¬¾ä¸º10000å…ƒ                           |     |
+| T4   |                         | æ–°å¢žä¸€ä¸ªå­˜æ¬¾è´¦æˆ·å­˜å…¥100å…ƒ |
+| T5   |  |        æäº¤äº‹åŠ¡          |
+| T6   |  |       å†æ¬¡ç»Ÿè®¡æ€»å­˜æ¬¾ä¸º10100å…ƒï¼ˆå¹»è¯»ï¼‰                  |
 
-- µÚ1Àà¶ªÊ§¸üÐÂ£ºÊÂÎñA³·ÏúÊ±£¬°ÑÒÑ¾­Ìá½»µÄÊÂÎñBµÄ¸üÐÂÊý¾Ý¸²¸ÇÁË¡£
+- ç¬¬1ç±»ä¸¢å¤±æ›´æ–°ï¼šäº‹åŠ¡Aæ’¤é”€æ—¶ï¼ŒæŠŠå·²ç»æäº¤çš„äº‹åŠ¡Bçš„æ›´æ–°æ•°æ®è¦†ç›–äº†ã€‚
 
 
-| Ê±¼ä | È¡¿îÊÂÎñA              | ×ªÕËÊÂÎñB                |
+| æ—¶é—´ | å–æ¬¾äº‹åŠ¡A              | è½¬è´¦äº‹åŠ¡B                |
 | ---- | --------------------------- | ------------------------ |
-| T1   |  ¿ªÊ¼ÊÂÎñ                           |                  |
-| T2   |                     |    ¿ªÊ¼ÊÂÎñ                      |
-| T3   |  ²éÑ¯ÕË»§Óà¶îÎª1000Ôª                           |     |
-| T4   |                         | ²éÑ¯ÕË»§Óà¶îÎª1000Ôª |
-| T5   |  |        »ãÈë100ÔªÐÞ¸ÄÓà¶îÎª1100Ôª          |
-| T6   |  |       Ìá½»ÊÂÎñ                 |
-| T7   |  È¡³ö100Ôª½«Óà¶îÐÞ¸ÄÎª900Ôª|                        |
-| T8   |  ³·ÏúÊÂÎñ|                        |
-| T9   |  Óà¶î»Ö¸´Îª1000Ôª£¨¶ªÊ§¸üÐÂ£©|                        |
+| T1   |  å¼€å§‹äº‹åŠ¡                           |                  |
+| T2   |                     |    å¼€å§‹äº‹åŠ¡                      |
+| T3   |  æŸ¥è¯¢è´¦æˆ·ä½™é¢ä¸º1000å…ƒ                           |     |
+| T4   |                         | æŸ¥è¯¢è´¦æˆ·ä½™é¢ä¸º1000å…ƒ |
+| T5   |  |        æ±‡å…¥100å…ƒä¿®æ”¹ä½™é¢ä¸º1100å…ƒ          |
+| T6   |  |       æäº¤äº‹åŠ¡                 |
+| T7   |  å–å‡º100å…ƒå°†ä½™é¢ä¿®æ”¹ä¸º900å…ƒ|                        |
+| T8   |  æ’¤é”€äº‹åŠ¡|                        |
+| T9   |  ä½™é¢æ¢å¤ä¸º1000å…ƒï¼ˆä¸¢å¤±æ›´æ–°ï¼‰|                        |
 
-- µÚ2Àà¶ªÊ§¸üÐÂ£ºÊÂÎñA¸²¸ÇÊÂÎñBÒÑ¾­Ìá½»µÄÊý¾Ý£¬Ôì³ÉÊÂÎñBËù×öµÄ²Ù×÷¶ªÊ§¡£
+- ç¬¬2ç±»ä¸¢å¤±æ›´æ–°ï¼šäº‹åŠ¡Aè¦†ç›–äº‹åŠ¡Bå·²ç»æäº¤çš„æ•°æ®ï¼Œé€ æˆäº‹åŠ¡Bæ‰€åšçš„æ“ä½œä¸¢å¤±ã€‚
 
 
-| Ê±¼ä | ×ªÕËÊÂÎñA              | È¡¿îÊÂÎñB                |
+| æ—¶é—´ | è½¬è´¦äº‹åŠ¡A              | å–æ¬¾äº‹åŠ¡B                |
 | ---- | --------------------------- | ------------------------ |
-| T1   |                             |     ¿ªÊ¼ÊÂÎñ             |
-| T2   |       ¿ªÊ¼ÊÂÎñ              |                          |
-| T3   |                             | ²éÑ¯ÕË»§Óà¶îÎª1000Ôª    |
-| T4   |         ²éÑ¯ÕË»§Óà¶îÎª1000Ôª                |  |
-| T5   |  |        È¡³ö100Ôª½«Óà¶îÐÞ¸ÄÎª900Ôª          |
-| T6   |  |       Ìá½»ÊÂÎñ                 |
-| T7   |  »ãÈë100Ôª½«Óà¶îÐÞ¸ÄÎª1100Ôª|                        |
-| T8   |  Ìá½»ÊÂÎñ|                        |
-| T9   |  ²éÑ¯ÕË»§Óà¶îÎª1100Ôª£¨¶ªÊ§¸üÐÂ£©|                        |
+| T1   |                             |     å¼€å§‹äº‹åŠ¡             |
+| T2   |       å¼€å§‹äº‹åŠ¡              |                          |
+| T3   |                             | æŸ¥è¯¢è´¦æˆ·ä½™é¢ä¸º1000å…ƒ    |
+| T4   |         æŸ¥è¯¢è´¦æˆ·ä½™é¢ä¸º1000å…ƒ                |  |
+| T5   |  |        å–å‡º100å…ƒå°†ä½™é¢ä¿®æ”¹ä¸º900å…ƒ          |
+| T6   |  |       æäº¤äº‹åŠ¡                 |
+| T7   |  æ±‡å…¥100å…ƒå°†ä½™é¢ä¿®æ”¹ä¸º1100å…ƒ|                        |
+| T8   |  æäº¤äº‹åŠ¡|                        |
+| T9   |  æŸ¥è¯¢è´¦æˆ·ä½™é¢ä¸º1100å…ƒï¼ˆä¸¢å¤±æ›´æ–°ï¼‰|                        |
 
-Êý¾Ý²¢·¢·ÃÎÊËù²úÉúµÄÎÊÌâ£¬ÔÚÓÐÐ©³¡¾°ÏÂ¿ÉÄÜÊÇÔÊÐíµÄ£¬µ«ÊÇÓÐÐ©³¡¾°ÏÂ¿ÉÄÜ¾ÍÊÇÖÂÃüµÄ£¬Êý¾Ý¿âÍ¨³£»áÍ¨¹ýËø»úÖÆÀ´½â¾öÊý¾Ý²¢·¢·ÃÎÊÎÊÌâ£¬°´Ëø¶¨¶ÔÏó²»Í¬¿ÉÒÔ·ÖÎª±í¼¶ËøºÍÐÐ¼¶Ëø£»°´²¢·¢ÊÂÎñËø¶¨¹ØÏµ¿ÉÒÔ·ÖÎª¹²ÏíËøºÍ¶ÀÕ¼Ëø£¬¾ßÌåµÄÄÚÈÝ´ó¼Ò¿ÉÒÔ×ÔÐÐ²éÔÄ×ÊÁÏ½øÐÐÁË½â¡£Ö±½ÓÊ¹ÓÃËøÊÇ·Ç³£Âé·³µÄ£¬Îª´ËÊý¾Ý¿âÎªÓÃ»§Ìá¹©ÁË×Ô¶¯Ëø»úÖÆ£¬Ö»ÒªÓÃ»§Ö¸¶¨»á»°µÄÊÂÎñ¸ôÀë¼¶±ð£¬Êý¾Ý¿â¾Í»áÍ¨¹ý·ÖÎöSQLÓï¾äÈ»ºóÎªÊÂÎñ·ÃÎÊµÄ×ÊÔ´¼ÓÉÏºÏÊÊµÄËø£¬´ËÍâ£¬Êý¾Ý¿â»¹»áÎ¬»¤ÕâÐ©ËøÍ¨¹ý¸÷ÖÖÊÖ¶ÎÌá¸ßÏµÍ³µÄÐÔÄÜ£¬ÕâÐ©¶ÔÓÃ»§À´Ëµ¶¼ÊÇÍ¸Ã÷µÄ£¨¾ÍÊÇËµÄã²»ÓÃÀí½â£¬ÊÂÊµÉÏÎÒÈ·ÊµÒ²²»ÖªµÀ£©¡£ANSI/ISO SQL 92±ê×¼¶¨ÒåÁË4¸öµÈ¼¶µÄÊÂÎñ¸ôÀë¼¶±ð£¬ÈçÏÂ±íËùÊ¾£º
+æ•°æ®å¹¶å‘è®¿é—®æ‰€äº§ç”Ÿçš„é—®é¢˜ï¼Œåœ¨æœ‰äº›åœºæ™¯ä¸‹å¯èƒ½æ˜¯å…è®¸çš„ï¼Œä½†æ˜¯æœ‰äº›åœºæ™¯ä¸‹å¯èƒ½å°±æ˜¯è‡´å‘½çš„ï¼Œæ•°æ®åº“é€šå¸¸ä¼šé€šè¿‡é”æœºåˆ¶æ¥è§£å†³æ•°æ®å¹¶å‘è®¿é—®é—®é¢˜ï¼ŒæŒ‰é”å®šå¯¹è±¡ä¸åŒå¯ä»¥åˆ†ä¸ºè¡¨çº§é”å’Œè¡Œçº§é”ï¼›æŒ‰å¹¶å‘äº‹åŠ¡é”å®šå…³ç³»å¯ä»¥åˆ†ä¸ºå…±äº«é”å’Œç‹¬å é”ï¼Œå…·ä½“çš„å†…å®¹å¤§å®¶å¯ä»¥è‡ªè¡ŒæŸ¥é˜…èµ„æ–™è¿›è¡Œäº†è§£ã€‚ç›´æŽ¥ä½¿ç”¨é”æ˜¯éžå¸¸éº»çƒ¦çš„ï¼Œä¸ºæ­¤æ•°æ®åº“ä¸ºç”¨æˆ·æä¾›äº†è‡ªåŠ¨é”æœºåˆ¶ï¼Œåªè¦ç”¨æˆ·æŒ‡å®šä¼šè¯çš„äº‹åŠ¡éš”ç¦»çº§åˆ«ï¼Œæ•°æ®åº“å°±ä¼šé€šè¿‡åˆ†æžSQLè¯­å¥ç„¶åŽä¸ºäº‹åŠ¡è®¿é—®çš„èµ„æºåŠ ä¸Šåˆé€‚çš„é”ï¼Œæ­¤å¤–ï¼Œæ•°æ®åº“è¿˜ä¼šç»´æŠ¤è¿™äº›é”é€šè¿‡å„ç§æ‰‹æ®µæé«˜ç³»ç»Ÿçš„æ€§èƒ½ï¼Œè¿™äº›å¯¹ç”¨æˆ·æ¥è¯´éƒ½æ˜¯é€æ˜Žçš„ï¼ˆå°±æ˜¯è¯´ä½ ä¸ç”¨ç†è§£ï¼Œäº‹å®žä¸Šæˆ‘ç¡®å®žä¹Ÿä¸çŸ¥é“ï¼‰ã€‚ANSI/ISO SQL 92æ ‡å‡†å®šä¹‰äº†4ä¸ªç­‰çº§çš„äº‹åŠ¡éš”ç¦»çº§åˆ«ï¼Œå¦‚ä¸‹è¡¨æ‰€ç¤ºï¼š
 
-| ¸ôÀë¼¶±ð        | Ôà¶Á   | ²»¿ÉÖØ¸´¶Á | »Ã¶Á   | µÚÒ»Àà¶ªÊ§¸üÐÂ | µÚ¶þÀà¶ªÊ§¸üÐÂ |
+| éš”ç¦»çº§åˆ«        | è„è¯»   | ä¸å¯é‡å¤è¯» | å¹»è¯»   | ç¬¬ä¸€ç±»ä¸¢å¤±æ›´æ–° | ç¬¬äºŒç±»ä¸¢å¤±æ›´æ–° |
 | --------------- | ------ | ---------- | ------ | -------------- | -------------- |
-| READ UNCOMMITED | ÔÊÐí   | ÔÊÐí       | ÔÊÐí   | ²»ÔÊÐí         | ÔÊÐí           |
-| READ COMMITTED  | ²»ÔÊÐí | ÔÊÐí       | ÔÊÐí   | ²»ÔÊÐí         | ÔÊÐí           |
-| REPEATABLE READ | ²»ÔÊÐí | ²»ÔÊÐí     | ÔÊÐí   | ²»ÔÊÐí         | ²»ÔÊÐí         |
-| SERIALIZABLE    | ²»ÔÊÐí | ²»ÔÊÐí     | ²»ÔÊÐí |                | ²»ÔÊÐí         |
+| READ UNCOMMITED | å…è®¸   | å…è®¸       | å…è®¸   | ä¸å…è®¸         | å…è®¸           |
+| READ COMMITTED  | ä¸å…è®¸ | å…è®¸       | å…è®¸   | ä¸å…è®¸         | å…è®¸           |
+| REPEATABLE READ | ä¸å…è®¸ | ä¸å…è®¸     | å…è®¸   | ä¸å…è®¸         | ä¸å…è®¸         |
+| SERIALIZABLE    | ä¸å…è®¸ | ä¸å…è®¸     | ä¸å…è®¸ |                | ä¸å…è®¸         |
 
-ÐèÒªËµÃ÷µÄÊÇ£¬ÊÂÎñ¸ôÀë¼¶±ðºÍÊý¾Ý·ÃÎÊµÄ²¢·¢ÐÔÊÇ¶ÔÁ¢µÄ£¬ÊÂÎñ¸ôÀë¼¶±ðÔ½¸ß²¢·¢ÐÔ¾ÍÔ½²î¡£ËùÒÔÒª¸ù¾Ý¾ßÌåµÄÓ¦ÓÃÀ´È·¶¨ºÏÊÊµÄÊÂÎñ¸ôÀë¼¶±ð£¬Õâ¸öµØ·½Ã»ÓÐÍòÄÜµÄÔ­Ôò¡£
+éœ€è¦è¯´æ˜Žçš„æ˜¯ï¼Œäº‹åŠ¡éš”ç¦»çº§åˆ«å’Œæ•°æ®è®¿é—®çš„å¹¶å‘æ€§æ˜¯å¯¹ç«‹çš„ï¼Œäº‹åŠ¡éš”ç¦»çº§åˆ«è¶Šé«˜å¹¶å‘æ€§å°±è¶Šå·®ã€‚æ‰€ä»¥è¦æ ¹æ®å…·ä½“çš„åº”ç”¨æ¥ç¡®å®šåˆé€‚çš„äº‹åŠ¡éš”ç¦»çº§åˆ«ï¼Œè¿™ä¸ªåœ°æ–¹æ²¡æœ‰ä¸‡èƒ½çš„åŽŸåˆ™ã€‚
 
 <p id="javaweb-8">
 
-#### JDBCÖÐÈçºÎ½øÐÐÊÂÎñ´¦Àí£¿
+#### JDBCä¸­å¦‚ä½•è¿›è¡Œäº‹åŠ¡å¤„ç†ï¼Ÿ
 
-ConnectionÌá¹©ÁËÊÂÎñ´¦ÀíµÄ·½·¨£¬Í¨¹ýµ÷ÓÃsetAutoCommit(false)¿ÉÒÔÉèÖÃÊÖ¶¯Ìá½»ÊÂÎñ£»µ±ÊÂÎñÍê³ÉºóÓÃcommit()ÏÔÊ½Ìá½»ÊÂÎñ£»Èç¹ûÔÚÊÂÎñ´¦Àí¹ý³ÌÖÐ·¢ÉúÒì³£ÔòÍ¨¹ýrollback()½øÐÐÊÂÎñ»Ø¹ö¡£³ý´ËÖ®Íâ£¬´ÓJDBC 3.0ÖÐ»¹ÒýÈëÁËSavepoint£¨±£´æµã£©µÄ¸ÅÄî£¬ÔÊÐíÍ¨¹ý´úÂëÉèÖÃ±£´æµã²¢ÈÃÊÂÎñ»Ø¹öµ½Ö¸¶¨µÄ±£´æµã¡£
+Connectionæä¾›äº†äº‹åŠ¡å¤„ç†çš„æ–¹æ³•ï¼Œé€šè¿‡è°ƒç”¨setAutoCommit(false)å¯ä»¥è®¾ç½®æ‰‹åŠ¨æäº¤äº‹åŠ¡ï¼›å½“äº‹åŠ¡å®ŒæˆåŽç”¨commit()æ˜¾å¼æäº¤äº‹åŠ¡ï¼›å¦‚æžœåœ¨äº‹åŠ¡å¤„ç†è¿‡ç¨‹ä¸­å‘ç”Ÿå¼‚å¸¸åˆ™é€šè¿‡rollback()è¿›è¡Œäº‹åŠ¡å›žæ»šã€‚é™¤æ­¤ä¹‹å¤–ï¼Œä»ŽJDBC 3.0ä¸­è¿˜å¼•å…¥äº†Savepointï¼ˆä¿å­˜ç‚¹ï¼‰çš„æ¦‚å¿µï¼Œå…è®¸é€šè¿‡ä»£ç è®¾ç½®ä¿å­˜ç‚¹å¹¶è®©äº‹åŠ¡å›žæ»šåˆ°æŒ‡å®šçš„ä¿å­˜ç‚¹ã€‚
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/src/main/resources/static/images/2.jpg)
 
 <p id="javaweb-9">
 
-#### JDBCÄÜ·ñ´¦ÀíBlobºÍClob£¿
+#### JDBCèƒ½å¦å¤„ç†Blobå’ŒClobï¼Ÿ
 
-BlobÊÇÖ¸¶þ½øÖÆ´ó¶ÔÏó£¨Binary Large Object£©£¬¶øClobÊÇÖ¸´ó×Ö·û¶ÔÏó£¨Character Large Objec£©£¬Òò´ËÆäÖÐBlobÊÇÎª´æ´¢´óµÄ¶þ½øÖÆÊý¾Ý¶øÉè¼ÆµÄ£¬¶øClobÊÇÎª´æ´¢´óµÄÎÄ±¾Êý¾Ý¶øÉè¼ÆµÄ¡£JDBCµÄPreparedStatementºÍResultSet¶¼Ìá¹©ÁËÏàÓ¦µÄ·½·¨À´Ö§³ÖBlobºÍClob²Ù×÷¡£ÏÂÃæµÄ´úÂëÕ¹Ê¾ÁËÈçºÎÊ¹ÓÃJDBC²Ù×÷LOB£º 
+Blobæ˜¯æŒ‡äºŒè¿›åˆ¶å¤§å¯¹è±¡ï¼ˆBinary Large Objectï¼‰ï¼Œè€ŒClobæ˜¯æŒ‡å¤§å­—ç¬¦å¯¹è±¡ï¼ˆCharacter Large Objecï¼‰ï¼Œå› æ­¤å…¶ä¸­Blobæ˜¯ä¸ºå­˜å‚¨å¤§çš„äºŒè¿›åˆ¶æ•°æ®è€Œè®¾è®¡çš„ï¼Œè€ŒClobæ˜¯ä¸ºå­˜å‚¨å¤§çš„æ–‡æœ¬æ•°æ®è€Œè®¾è®¡çš„ã€‚JDBCçš„PreparedStatementå’ŒResultSetéƒ½æä¾›äº†ç›¸åº”çš„æ–¹æ³•æ¥æ”¯æŒBlobå’ŒClobæ“ä½œã€‚ä¸‹é¢çš„ä»£ç å±•ç¤ºäº†å¦‚ä½•ä½¿ç”¨JDBCæ“ä½œLOBï¼š 
 
-ÏÂÃæÒÔMySQLÊý¾Ý¿âÎªÀý£¬´´½¨Ò»¸öÕÅÓÐÈý¸ö×Ö¶ÎµÄÓÃ»§±í£¬°üÀ¨±àºÅ£¨id£©¡¢ÐÕÃû£¨name£©ºÍÕÕÆ¬£¨photo£©£¬½¨±íÓï¾äÈçÏÂ£º
+ä¸‹é¢ä»¥MySQLæ•°æ®åº“ä¸ºä¾‹ï¼Œåˆ›å»ºä¸€ä¸ªå¼ æœ‰ä¸‰ä¸ªå­—æ®µçš„ç”¨æˆ·è¡¨ï¼ŒåŒ…æ‹¬ç¼–å·ï¼ˆidï¼‰ã€å§“åï¼ˆnameï¼‰å’Œç…§ç‰‡ï¼ˆphotoï¼‰ï¼Œå»ºè¡¨è¯­å¥å¦‚ä¸‹ï¼š
 
 ```sql
 create table tb_user
@@ -242,7 +242,7 @@ photo longblob
 );
 ```
 
-ÏÂÃæµÄJava´úÂëÏòÊý¾Ý¿âÖÐ²åÈëÒ»Ìõ¼ÇÂ¼£º
+ä¸‹é¢çš„Javaä»£ç å‘æ•°æ®åº“ä¸­æ’å…¥ä¸€æ¡è®°å½•ï¼š
 
 ```java
 import java.io.FileInputStream;
@@ -256,27 +256,27 @@ class JdbcLobTest {
     public static void main(String[] args) {
         Connection con = null;
         try {
-            // 1. ¼ÓÔØÇý¶¯£¨Java6ÒÔÉÏ°æ±¾¿ÉÒÔÊ¡ÂÔ£©
+            // 1. åŠ è½½é©±åŠ¨ï¼ˆJava6ä»¥ä¸Šç‰ˆæœ¬å¯ä»¥çœç•¥ï¼‰
             Class.forName("com.mysql.jdbc.Driver");
-            // 2. ½¨Á¢Á¬½Ó
+            // 2. å»ºç«‹è¿žæŽ¥
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "123456");
-            // 3. ´´½¨Óï¾ä¶ÔÏó
+            // 3. åˆ›å»ºè¯­å¥å¯¹è±¡
             PreparedStatement ps = con.prepareStatement("insert into tb_user values (default, ?, ?)");
-            ps.setString(1, "Âæê»"); // ½«SQLÓï¾äÖÐµÚÒ»¸öÕ¼Î»·û»»³É×Ö·û´®
-            try (InputStream in = new FileInputStream("test.jpg")) { // Java 7µÄTWR
-                ps.setBinaryStream(2, in); // ½«SQLÓï¾äÖÐµÚ¶þ¸öÕ¼Î»·û»»³É¶þ½øÖÆÁ÷
-                // 4. ·¢³öSQLÓï¾ä»ñµÃÊÜÓ°ÏìÐÐÊý
-                System.out.println(ps.executeUpdate() == 1 ? "²åÈë³É¹¦" : "²åÈëÊ§°Ü");
+            ps.setString(1, "éª†æ˜Š"); // å°†SQLè¯­å¥ä¸­ç¬¬ä¸€ä¸ªå ä½ç¬¦æ¢æˆå­—ç¬¦ä¸²
+            try (InputStream in = new FileInputStream("test.jpg")) { // Java 7çš„TWR
+                ps.setBinaryStream(2, in); // å°†SQLè¯­å¥ä¸­ç¬¬äºŒä¸ªå ä½ç¬¦æ¢æˆäºŒè¿›åˆ¶æµ
+                // 4. å‘å‡ºSQLè¯­å¥èŽ·å¾—å—å½±å“è¡Œæ•°
+                System.out.println(ps.executeUpdate() == 1 ? "æ’å…¥æˆåŠŸ" : "æ’å…¥å¤±è´¥");
             } catch(IOException e) {
-                System.out.println("¶ÁÈ¡ÕÕÆ¬Ê§°Ü!");
+                System.out.println("è¯»å–ç…§ç‰‡å¤±è´¥!");
             }
-        } catch (ClassNotFoundException | SQLException e) { // Java 7µÄ¶àÒì³£²¶»ñ
+        } catch (ClassNotFoundException | SQLException e) { // Java 7çš„å¤šå¼‚å¸¸æ•èŽ·
             e.printStackTrace();
-        } finally { // ÊÍ·ÅÍâ²¿×ÊÔ´µÄ´úÂë¶¼Ó¦µ±·ÅÔÚfinallyÖÐ±£Ö¤ÆäÄÜ¹»µÃµ½Ö´ÐÐ
+        } finally { // é‡Šæ”¾å¤–éƒ¨èµ„æºçš„ä»£ç éƒ½åº”å½“æ”¾åœ¨finallyä¸­ä¿è¯å…¶èƒ½å¤Ÿå¾—åˆ°æ‰§è¡Œ
             try {
                 if(con != null && !con.isClosed()) {
-                    con.close(); // 5. ÊÍ·ÅÊý¾Ý¿âÁ¬½Ó
-                    con = null; // Ö¸Ê¾À¬»ø»ØÊÕÆ÷¿ÉÒÔ»ØÊÕ¸Ã¶ÔÏó
+                    con.close(); // 5. é‡Šæ”¾æ•°æ®åº“è¿žæŽ¥
+                    con = null; // æŒ‡ç¤ºåžƒåœ¾å›žæ”¶å™¨å¯ä»¥å›žæ”¶è¯¥å¯¹è±¡
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -288,16 +288,16 @@ class JdbcLobTest {
 
 <p id="javaweb-10">
 
-#### ²ûÊöServletºÍCGIµÄÇø±ð?
+#### é˜è¿°Servletå’ŒCGIçš„åŒºåˆ«?
 
-ServletÓëCGIµÄÇø±ðÔÚÓÚServlet´¦ÓÚ·þÎñÆ÷½ø³ÌÖÐ£¬ËüÍ¨¹ý¶àÏß³Ì·½Ê½ÔËÐÐÆäservice()·½·¨£¬Ò»¸öÊµÀý¿ÉÒÔ·þÎñÓÚ¶à¸öÇëÇó£¬²¢ÇÒÆäÊµÀýÒ»°ã²»»áÏú»Ù£¬¶øCGI¶ÔÃ¿¸öÇëÇó¶¼²úÉúÐÂµÄ½ø³Ì£¬·þÎñÍê³Éºó¾ÍÏú»Ù£¬ËùÒÔÐ§ÂÊÉÏµÍÓÚServlet¡£
-²¹³ä£ºSun Microsystems¹«Ë¾ÔÚ1996Äê·¢²¼Servlet¼¼Êõ¾ÍÊÇÎªÁËºÍCGI½øÐÐ¾ºÕù£¬ServletÊÇÒ»¸öÌØÊâµÄJava³ÌÐò£¬Ò»¸ö»ùÓÚJavaµÄWebÓ¦ÓÃÍ¨³£°üº¬Ò»¸ö»ò¶à¸öServletÀà¡£Servlet²»ÄÜ¹»×ÔÐÐ´´½¨²¢Ö´ÐÐ£¬ËüÊÇÔÚServletÈÝÆ÷ÖÐÔËÐÐµÄ£¬ÈÝÆ÷½«ÓÃ»§µÄÇëÇó´«µÝ¸øServlet³ÌÐò£¬²¢½«ServletµÄÏìÓ¦»Ø´«¸øÓÃ»§¡£Í¨³£Ò»¸öServlet»á¹ØÁªÒ»¸ö»ò¶à¸öJSPÒ³Ãæ¡£ÒÔÇ°CGI¾­³£ÒòÎªÐÔÄÜ¿ªÏúÉÏµÄÎÊÌâ±»Ú¸²¡£¬È»¶øFast CGIÔç¾ÍÒÑ¾­½â¾öÁËCGIÐ§ÂÊÉÏµÄÎÊÌâ£¬ËùÒÔÃæÊÔµÄÊ±ºò´ó¿É²»±ØÐÅ¿Ú¿ªºÓµÄÚ¸²¡CGI£¬ÊÂÊµÉÏÓÐºÜ¶àÄãÊìÏ¤µÄÍøÕ¾¶¼Ê¹ÓÃÁËCGI¼¼Êõ¡£
+Servletä¸ŽCGIçš„åŒºåˆ«åœ¨äºŽServletå¤„äºŽæœåŠ¡å™¨è¿›ç¨‹ä¸­ï¼Œå®ƒé€šè¿‡å¤šçº¿ç¨‹æ–¹å¼è¿è¡Œå…¶service()æ–¹æ³•ï¼Œä¸€ä¸ªå®žä¾‹å¯ä»¥æœåŠ¡äºŽå¤šä¸ªè¯·æ±‚ï¼Œå¹¶ä¸”å…¶å®žä¾‹ä¸€èˆ¬ä¸ä¼šé”€æ¯ï¼Œè€ŒCGIå¯¹æ¯ä¸ªè¯·æ±‚éƒ½äº§ç”Ÿæ–°çš„è¿›ç¨‹ï¼ŒæœåŠ¡å®ŒæˆåŽå°±é”€æ¯ï¼Œæ‰€ä»¥æ•ˆçŽ‡ä¸Šä½ŽäºŽServletã€‚
+è¡¥å……ï¼šSun Microsystemså…¬å¸åœ¨1996å¹´å‘å¸ƒServletæŠ€æœ¯å°±æ˜¯ä¸ºäº†å’ŒCGIè¿›è¡Œç«žäº‰ï¼ŒServletæ˜¯ä¸€ä¸ªç‰¹æ®Šçš„Javaç¨‹åºï¼Œä¸€ä¸ªåŸºäºŽJavaçš„Webåº”ç”¨é€šå¸¸åŒ…å«ä¸€ä¸ªæˆ–å¤šä¸ªServletç±»ã€‚Servletä¸èƒ½å¤Ÿè‡ªè¡Œåˆ›å»ºå¹¶æ‰§è¡Œï¼Œå®ƒæ˜¯åœ¨Servletå®¹å™¨ä¸­è¿è¡Œçš„ï¼Œå®¹å™¨å°†ç”¨æˆ·çš„è¯·æ±‚ä¼ é€’ç»™Servletç¨‹åºï¼Œå¹¶å°†Servletçš„å“åº”å›žä¼ ç»™ç”¨æˆ·ã€‚é€šå¸¸ä¸€ä¸ªServletä¼šå…³è”ä¸€ä¸ªæˆ–å¤šä¸ªJSPé¡µé¢ã€‚ä»¥å‰CGIç»å¸¸å› ä¸ºæ€§èƒ½å¼€é”€ä¸Šçš„é—®é¢˜è¢«è¯Ÿç—…ï¼Œç„¶è€ŒFast CGIæ—©å°±å·²ç»è§£å†³äº†CGIæ•ˆçŽ‡ä¸Šçš„é—®é¢˜ï¼Œæ‰€ä»¥é¢è¯•çš„æ—¶å€™å¤§å¯ä¸å¿…ä¿¡å£å¼€æ²³çš„è¯Ÿç—…CGIï¼Œäº‹å®žä¸Šæœ‰å¾ˆå¤šä½ ç†Ÿæ‚‰çš„ç½‘ç«™éƒ½ä½¿ç”¨äº†CGIæŠ€æœ¯ã€‚
 
 <p id="javaweb-11">
 
-#### Servlet½Ó¿ÚÖÐÓÐÄÄÐ©·½·¨£¿
+#### ServletæŽ¥å£ä¸­æœ‰å“ªäº›æ–¹æ³•ï¼Ÿ
 
-Servlet½Ó¿Ú¶¨ÒåÁË5¸ö·½·¨£¬ÆäÖÐÇ°Èý¸ö·½·¨ÓëServletÉúÃüÖÜÆÚÏà¹Ø£º 
+ServletæŽ¥å£å®šä¹‰äº†5ä¸ªæ–¹æ³•ï¼Œå…¶ä¸­å‰ä¸‰ä¸ªæ–¹æ³•ä¸ŽServletç”Ÿå‘½å‘¨æœŸç›¸å…³ï¼š 
 
 - void init(ServletConfig config) throws ServletException 
 
@@ -305,23 +305,23 @@ Servlet½Ó¿Ú¶¨ÒåÁË5¸ö·½·¨£¬ÆäÖÐÇ°Èý¸ö·½·¨ÓëServletÉúÃüÖÜÆÚÏà¹Ø£º
 
 - void destory() - java.lang.String getServletInfo() - ServletConfig getServletConfig()
 
-WebÈÝÆ÷¼ÓÔØServlet²¢½«ÆäÊµÀý»¯ºó£¬ServletÉúÃüÖÜÆÚ¿ªÊ¼£¬ÈÝÆ÷ÔËÐÐÆäinit()·½·¨½øÐÐServletµÄ³õÊ¼»¯£»ÇëÇóµ½´ïÊ±µ÷ÓÃServletµÄservice()·½·¨£¬service()·½·¨»á¸ù¾ÝÐèÒªµ÷ÓÃÓëÇëÇó¶ÔÓ¦µÄdoGet»òdoPostµÈ·½·¨£»µ±·þÎñÆ÷¹Ø±Õ»òÏîÄ¿±»Ð¶ÔØÊ±·þÎñÆ÷»á½«ServletÊµÀýÏú»Ù£¬´ËÊ±»áµ÷ÓÃServletµÄdestroy()·½·¨¡£
+Webå®¹å™¨åŠ è½½Servletå¹¶å°†å…¶å®žä¾‹åŒ–åŽï¼ŒServletç”Ÿå‘½å‘¨æœŸå¼€å§‹ï¼Œå®¹å™¨è¿è¡Œå…¶init()æ–¹æ³•è¿›è¡ŒServletçš„åˆå§‹åŒ–ï¼›è¯·æ±‚åˆ°è¾¾æ—¶è°ƒç”¨Servletçš„service()æ–¹æ³•ï¼Œservice()æ–¹æ³•ä¼šæ ¹æ®éœ€è¦è°ƒç”¨ä¸Žè¯·æ±‚å¯¹åº”çš„doGetæˆ–doPostç­‰æ–¹æ³•ï¼›å½“æœåŠ¡å™¨å…³é—­æˆ–é¡¹ç›®è¢«å¸è½½æ—¶æœåŠ¡å™¨ä¼šå°†Servletå®žä¾‹é”€æ¯ï¼Œæ­¤æ—¶ä¼šè°ƒç”¨Servletçš„destroy()æ–¹æ³•ã€‚
 
 <p id="javaweb-12">
 
-#### JSPÓÐÄÄÐ©ÄÚÖÃ¶ÔÏó£¿×÷ÓÃ·Ö±ðÊÇÊ²Ã´£¿
-JSPÓÐ9¸öÄÚÖÃ¶ÔÏó£º
-- request£º·â×°¿Í»§¶ËµÄÇëÇó£¬ÆäÖÐ°üº¬À´×ÔGET»òPOSTÇëÇóµÄ²ÎÊý£»
-- response£º·â×°·þÎñÆ÷¶Ô¿Í»§¶ËµÄÏìÓ¦£»
-- pageContext£ºÍ¨¹ý¸Ã¶ÔÏó¿ÉÒÔ»ñÈ¡ÆäËû¶ÔÏó£»
-- session£º·â×°ÓÃ»§»á»°µÄ¶ÔÏó£»
-- application£º·â×°·þÎñÆ÷ÔËÐÐ»·¾³µÄ¶ÔÏó£»
-- out£ºÊä³ö·þÎñÆ÷ÏìÓ¦µÄÊä³öÁ÷¶ÔÏó£»
-- config£ºWebÓ¦ÓÃµÄÅäÖÃ¶ÔÏó£»
-- page£ºJSPÒ³Ãæ±¾Éí£¨Ïàµ±ÓÚJava³ÌÐòÖÐµÄthis£©£»
-- exception£º·â×°Ò³ÃæÅ×³öÒì³£µÄ¶ÔÏó¡£
-  ²¹³ä£ºÈç¹ûÓÃServletÀ´Éú³ÉÍøÒ³ÖÐµÄ¶¯Ì¬ÄÚÈÝÎÞÒÉÊÇ·Ç³£·±ËöµÄ¹¤×÷£¬ÁíÒ»·½Ãæ£¬ËùÓÐµÄÎÄ±¾ºÍHTML±êÇ©¶¼ÊÇÓ²±àÂë£¬¼´Ê¹×ö³öÎ¢Ð¡µÄÐÞ¸Ä£¬¶¼ÐèÒª½øÐÐÖØÐÂ±àÒë¡£JSP½â¾öÁËServletµÄÕâÐ©ÎÊÌâ£¬ËüÊÇServletºÜºÃµÄ²¹³ä£¬¿ÉÒÔ×¨ÃÅÓÃ×÷ÎªÓÃ»§³ÊÏÖÊÓÍ¼£¨View£©£¬¶øServlet×÷Îª¿ØÖÆÆ÷£¨Controller£©×¨ÃÅ¸ºÔð´¦ÀíÓÃ»§ÇëÇó²¢×ª·¢»òÖØ¶¨Ïòµ½Ä³¸öÒ³Ãæ¡£»ùÓÚJavaµÄWeb¿ª·¢ºÜ¶à¶¼Í¬Ê±Ê¹ÓÃÁËServletºÍJSP¡£JSPÒ³ÃæÆäÊµÊÇÒ»¸öServlet£¬ÄÜ¹»ÔËÐÐServletµÄ·þÎñÆ÷£¨ServletÈÝÆ÷£©Í¨³£Ò²ÊÇJSPÈÝÆ÷£¬¿ÉÒÔÌá¹©JSPÒ³ÃæµÄÔËÐÐ»·¾³£¬Tomcat¾ÍÊÇÒ»¸öServlet/JSPÈÝÆ÷¡£µÚÒ»´ÎÇëÇóÒ»¸öJSPÒ³ÃæÊ±£¬Servlet/JSPÈÝÆ÷Ê×ÏÈ½«JSPÒ³Ãæ×ª»»³ÉÒ»¸öJSPÒ³ÃæµÄÊµÏÖÀà£¬ÕâÊÇÒ»¸öÊµÏÖÁËJspPage½Ó¿Ú»òÆä×Ó½Ó¿ÚHttpJspPageµÄJavaÀà¡£JspPage½Ó¿ÚÊÇServletµÄ×Ó½Ó¿Ú£¬Òò´ËÃ¿¸öJSPÒ³Ãæ¶¼ÊÇÒ»¸öServlet¡£×ª»»³É¹¦ºó£¬ÈÝÆ÷»á±àÒëServletÀà£¬Ö®ºóÈÝÆ÷¼ÓÔØºÍÊµÀý»¯Java×Ö½ÚÂë£¬²¢Ö´ÐÐËüÍ¨³£¶ÔServletËù×öµÄÉúÃüÖÜÆÚ²Ù×÷¡£¶ÔÍ¬Ò»¸öJSPÒ³ÃæµÄºóÐøÇëÇó£¬ÈÝÆ÷»á²é¿´Õâ¸öJSPÒ³ÃæÊÇ·ñ±»ÐÞ¸Ä¹ý£¬Èç¹ûÐÞ¸Ä¹ý¾Í»áÖØÐÂ×ª»»²¢ÖØÐÂ±àÒë²¢Ö´ÐÐ¡£Èç¹ûÃ»ÓÐÔòÖ´ÐÐÄÚ´æÖÐÒÑ¾­´æÔÚµÄServletÊµÀý¡£ÎÒÃÇ¿ÉÒÔ¿´Ò»¶ÎJSP´úÂë¶ÔÓ¦µÄJava³ÌÐò¾ÍÖªµÀÒ»ÇÐÁË£¬¶øÇÒ9¸öÄÚÖÃ¶ÔÏóµÄÉñÃØÃæÉ´Ò²»á±»½Ò¿ª¡£
-  JSPÒ³Ãæ£º
+#### JSPæœ‰å“ªäº›å†…ç½®å¯¹è±¡ï¼Ÿä½œç”¨åˆ†åˆ«æ˜¯ä»€ä¹ˆï¼Ÿ
+JSPæœ‰9ä¸ªå†…ç½®å¯¹è±¡ï¼š
+- requestï¼šå°è£…å®¢æˆ·ç«¯çš„è¯·æ±‚ï¼Œå…¶ä¸­åŒ…å«æ¥è‡ªGETæˆ–POSTè¯·æ±‚çš„å‚æ•°ï¼›
+- responseï¼šå°è£…æœåŠ¡å™¨å¯¹å®¢æˆ·ç«¯çš„å“åº”ï¼›
+- pageContextï¼šé€šè¿‡è¯¥å¯¹è±¡å¯ä»¥èŽ·å–å…¶ä»–å¯¹è±¡ï¼›
+- sessionï¼šå°è£…ç”¨æˆ·ä¼šè¯çš„å¯¹è±¡ï¼›
+- applicationï¼šå°è£…æœåŠ¡å™¨è¿è¡ŒçŽ¯å¢ƒçš„å¯¹è±¡ï¼›
+- outï¼šè¾“å‡ºæœåŠ¡å™¨å“åº”çš„è¾“å‡ºæµå¯¹è±¡ï¼›
+- configï¼šWebåº”ç”¨çš„é…ç½®å¯¹è±¡ï¼›
+- pageï¼šJSPé¡µé¢æœ¬èº«ï¼ˆç›¸å½“äºŽJavaç¨‹åºä¸­çš„thisï¼‰ï¼›
+- exceptionï¼šå°è£…é¡µé¢æŠ›å‡ºå¼‚å¸¸çš„å¯¹è±¡ã€‚
+  è¡¥å……ï¼šå¦‚æžœç”¨Servletæ¥ç”Ÿæˆç½‘é¡µä¸­çš„åŠ¨æ€å†…å®¹æ— ç–‘æ˜¯éžå¸¸ç¹ççš„å·¥ä½œï¼Œå¦ä¸€æ–¹é¢ï¼Œæ‰€æœ‰çš„æ–‡æœ¬å’ŒHTMLæ ‡ç­¾éƒ½æ˜¯ç¡¬ç¼–ç ï¼Œå³ä½¿åšå‡ºå¾®å°çš„ä¿®æ”¹ï¼Œéƒ½éœ€è¦è¿›è¡Œé‡æ–°ç¼–è¯‘ã€‚JSPè§£å†³äº†Servletçš„è¿™äº›é—®é¢˜ï¼Œå®ƒæ˜¯Servletå¾ˆå¥½çš„è¡¥å……ï¼Œå¯ä»¥ä¸“é—¨ç”¨ä½œä¸ºç”¨æˆ·å‘ˆçŽ°è§†å›¾ï¼ˆViewï¼‰ï¼Œè€ŒServletä½œä¸ºæŽ§åˆ¶å™¨ï¼ˆControllerï¼‰ä¸“é—¨è´Ÿè´£å¤„ç†ç”¨æˆ·è¯·æ±‚å¹¶è½¬å‘æˆ–é‡å®šå‘åˆ°æŸä¸ªé¡µé¢ã€‚åŸºäºŽJavaçš„Webå¼€å‘å¾ˆå¤šéƒ½åŒæ—¶ä½¿ç”¨äº†Servletå’ŒJSPã€‚JSPé¡µé¢å…¶å®žæ˜¯ä¸€ä¸ªServletï¼Œèƒ½å¤Ÿè¿è¡ŒServletçš„æœåŠ¡å™¨ï¼ˆServletå®¹å™¨ï¼‰é€šå¸¸ä¹Ÿæ˜¯JSPå®¹å™¨ï¼Œå¯ä»¥æä¾›JSPé¡µé¢çš„è¿è¡ŒçŽ¯å¢ƒï¼ŒTomcatå°±æ˜¯ä¸€ä¸ªServlet/JSPå®¹å™¨ã€‚ç¬¬ä¸€æ¬¡è¯·æ±‚ä¸€ä¸ªJSPé¡µé¢æ—¶ï¼ŒServlet/JSPå®¹å™¨é¦–å…ˆå°†JSPé¡µé¢è½¬æ¢æˆä¸€ä¸ªJSPé¡µé¢çš„å®žçŽ°ç±»ï¼Œè¿™æ˜¯ä¸€ä¸ªå®žçŽ°äº†JspPageæŽ¥å£æˆ–å…¶å­æŽ¥å£HttpJspPageçš„Javaç±»ã€‚JspPageæŽ¥å£æ˜¯Servletçš„å­æŽ¥å£ï¼Œå› æ­¤æ¯ä¸ªJSPé¡µé¢éƒ½æ˜¯ä¸€ä¸ªServletã€‚è½¬æ¢æˆåŠŸåŽï¼Œå®¹å™¨ä¼šç¼–è¯‘Servletç±»ï¼Œä¹‹åŽå®¹å™¨åŠ è½½å’Œå®žä¾‹åŒ–Javaå­—èŠ‚ç ï¼Œå¹¶æ‰§è¡Œå®ƒé€šå¸¸å¯¹Servletæ‰€åšçš„ç”Ÿå‘½å‘¨æœŸæ“ä½œã€‚å¯¹åŒä¸€ä¸ªJSPé¡µé¢çš„åŽç»­è¯·æ±‚ï¼Œå®¹å™¨ä¼šæŸ¥çœ‹è¿™ä¸ªJSPé¡µé¢æ˜¯å¦è¢«ä¿®æ”¹è¿‡ï¼Œå¦‚æžœä¿®æ”¹è¿‡å°±ä¼šé‡æ–°è½¬æ¢å¹¶é‡æ–°ç¼–è¯‘å¹¶æ‰§è¡Œã€‚å¦‚æžœæ²¡æœ‰åˆ™æ‰§è¡Œå†…å­˜ä¸­å·²ç»å­˜åœ¨çš„Servletå®žä¾‹ã€‚æˆ‘ä»¬å¯ä»¥çœ‹ä¸€æ®µJSPä»£ç å¯¹åº”çš„Javaç¨‹åºå°±çŸ¥é“ä¸€åˆ‡äº†ï¼Œè€Œä¸”9ä¸ªå†…ç½®å¯¹è±¡çš„ç¥žç§˜é¢çº±ä¹Ÿä¼šè¢«æ­å¼€ã€‚
+  JSPé¡µé¢ï¼š
 ```jsp
 <%@ page pageEncoding="UTF-8"%>
 <%
@@ -332,7 +332,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 <html>
     <head>
         <base href="<%=basePath%>">
-        <title>Ê×Ò³</title>
+        <title>é¦–é¡µ</title>
         <style type="text/css">
             * { font-family: "Arial"; }
         </style>
@@ -346,7 +346,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 ```
 
 
-¶ÔÓ¦µÄJava´úÂë£º
+å¯¹åº”çš„Javaä»£ç ï¼š
 ```java
 /*
 * Generated by the Jasper component of Apache Tomcat
@@ -381,7 +381,7 @@ public void _jspService(
 final javax.servlet.http.HttpServletRequest request,
 final javax.servlet.http.HttpServletResponse response)
 throws java.io.IOException, javax.servlet.ServletException {
-// ÄÚÖÃ¶ÔÏó¾ÍÊÇÔÚÕâÀï¶¨ÒåµÄ
+// å†…ç½®å¯¹è±¡å°±æ˜¯åœ¨è¿™é‡Œå®šä¹‰çš„
 final javax.servlet.jsp.PageContext pageContext;
 javax.servlet.http.HttpSession session = null;
 final javax.servlet.ServletContext application;
@@ -406,7 +406,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme() + "://"
 + request.getServerName() + ":" + request.getServerPort()
 + path + "/";
-// ÒÔÏÂ´úÂëÍ¨¹ýÊä³öÁ÷½«HTML±êÇ©Êä³öµ½ä¯ÀÀÆ÷ÖÐ
+// ä»¥ä¸‹ä»£ç é€šè¿‡è¾“å‡ºæµå°†HTMLæ ‡ç­¾è¾“å‡ºåˆ°æµè§ˆå™¨ä¸­
 out.write("\r\n");
 out.write("\r\n");
 out.write("<!DOCTYPE html>\r\n");
@@ -415,7 +415,7 @@ out.write(" <head>\r\n");
 out.write(" <base href=\"");
 out.print(basePath);
 out.write("\">\r\n");
-out.write(" <title>Ê×Ò³</title>\r\n");
+out.write(" <title>é¦–é¡µ</title>\r\n");
 out.write(" <style type=\"text/css\">\r\n");
 out.write(" \t* { font-family: \"Arial\"; }\r\n");
 out.write(" </style>\r\n");
@@ -451,84 +451,84 @@ _jspxFactory.releasePageContext(_jspx_page_context);
 
 <p id="javaweb-13">
 
-#### getºÍpostÇëÇóµÄÇø±ð£¿
+#### getå’Œpostè¯·æ±‚çš„åŒºåˆ«ï¼Ÿ
 
-- getÇëÇóÓÃÀ´´Ó·þÎñÆ÷ÉÏ»ñµÃ×ÊÔ´£¬¶øpostÊÇÓÃÀ´Ïò·þÎñÆ÷Ìá½»Êý¾Ý£» 
+- getè¯·æ±‚ç”¨æ¥ä»ŽæœåŠ¡å™¨ä¸ŠèŽ·å¾—èµ„æºï¼Œè€Œpostæ˜¯ç”¨æ¥å‘æœåŠ¡å™¨æäº¤æ•°æ®ï¼› 
 
-- get½«±íµ¥ÖÐÊý¾Ý°´ÕÕname=valueµÄÐÎÊ½£¬Ìí¼Óµ½action ËùÖ¸ÏòµÄURL ºóÃæ£¬²¢ÇÒÁ½ÕßÊ¹ÓÃ"?"Á¬½Ó£¬¶ø¸÷¸ö±äÁ¿Ö®¼äÊ¹ÓÃ"&"Á¬½Ó£»postÊÇ½«±íµ¥ÖÐµÄÊý¾Ý·ÅÔÚHTTPÐ­ÒéµÄÇëÇóÍ·»òÏûÏ¢ÌåÖÐ£¬´«µÝµ½actionËùÖ¸ÏòURL£» 
-- get´«ÊäµÄÊý¾ÝÒªÊÜµ½URL³¤¶ÈÏÞÖÆ£¨1024×Ö½Ú£©£»¶øpost¿ÉÒÔ´«Êä´óÁ¿µÄÊý¾Ý£¬ÉÏ´«ÎÄ¼þÍ¨³£ÒªÊ¹ÓÃpost·½Ê½£» 
-- Ê¹ÓÃgetÊ±²ÎÊý»áÏÔÊ¾ÔÚµØÖ·À¸ÉÏ£¬Èç¹ûÕâÐ©Êý¾Ý²»ÊÇÃô¸ÐÊý¾Ý£¬ÄÇÃ´¿ÉÒÔÊ¹ÓÃget£»¶ÔÓÚÃô¸ÐÊý¾Ý»¹ÊÇÓ¦ÓÃÊ¹ÓÃpost£» 
-- getÊ¹ÓÃMIMEÀàÐÍapplication/x-www-form-urlencodedµÄURL±àÂë£¨Ò²½Ð°Ù·ÖºÅ±àÂë£©ÎÄ±¾µÄ¸ñÊ½´«µÝ²ÎÊý£¬±£Ö¤±»´«ËÍµÄ²ÎÊýÓÉ×ñÑ­¹æ·¶µÄÎÄ±¾×é³É£¬ÀýÈçÒ»¸ö¿Õ¸ñµÄ±àÂëÊÇ"%20"¡£
+- getå°†è¡¨å•ä¸­æ•°æ®æŒ‰ç…§name=valueçš„å½¢å¼ï¼Œæ·»åŠ åˆ°action æ‰€æŒ‡å‘çš„URL åŽé¢ï¼Œå¹¶ä¸”ä¸¤è€…ä½¿ç”¨"?"è¿žæŽ¥ï¼Œè€Œå„ä¸ªå˜é‡ä¹‹é—´ä½¿ç”¨"&"è¿žæŽ¥ï¼›postæ˜¯å°†è¡¨å•ä¸­çš„æ•°æ®æ”¾åœ¨HTTPåè®®çš„è¯·æ±‚å¤´æˆ–æ¶ˆæ¯ä½“ä¸­ï¼Œä¼ é€’åˆ°actionæ‰€æŒ‡å‘URLï¼› 
+- getä¼ è¾“çš„æ•°æ®è¦å—åˆ°URLé•¿åº¦é™åˆ¶ï¼ˆ1024å­—èŠ‚ï¼‰ï¼›è€Œpostå¯ä»¥ä¼ è¾“å¤§é‡çš„æ•°æ®ï¼Œä¸Šä¼ æ–‡ä»¶é€šå¸¸è¦ä½¿ç”¨postæ–¹å¼ï¼› 
+- ä½¿ç”¨getæ—¶å‚æ•°ä¼šæ˜¾ç¤ºåœ¨åœ°å€æ ä¸Šï¼Œå¦‚æžœè¿™äº›æ•°æ®ä¸æ˜¯æ•æ„Ÿæ•°æ®ï¼Œé‚£ä¹ˆå¯ä»¥ä½¿ç”¨getï¼›å¯¹äºŽæ•æ„Ÿæ•°æ®è¿˜æ˜¯åº”ç”¨ä½¿ç”¨postï¼› 
+- getä½¿ç”¨MIMEç±»åž‹application/x-www-form-urlencodedçš„URLç¼–ç ï¼ˆä¹Ÿå«ç™¾åˆ†å·ç¼–ç ï¼‰æ–‡æœ¬çš„æ ¼å¼ä¼ é€’å‚æ•°ï¼Œä¿è¯è¢«ä¼ é€çš„å‚æ•°ç”±éµå¾ªè§„èŒƒçš„æ–‡æœ¬ç»„æˆï¼Œä¾‹å¦‚ä¸€ä¸ªç©ºæ ¼çš„ç¼–ç æ˜¯"%20"ã€‚
 
 <p id="javaweb-14">
 
-#### ³£ÓÃµÄWeb·þÎñÆ÷ÓÐÄÄÐ©£¿
+#### å¸¸ç”¨çš„WebæœåŠ¡å™¨æœ‰å“ªäº›ï¼Ÿ
 
-UnixºÍLinuxÆ½Ì¨ÏÂÊ¹ÓÃ×î¹ã·ºµÄÃâ·ÑHTTP·þÎñÆ÷ÊÇApache·þÎñÆ÷£¬¶øWindowsÆ½Ì¨µÄ·þÎñÆ÷Í¨³£Ê¹ÓÃIIS×÷ÎªWeb·þÎñÆ÷¡£Ñ¡ÔñWeb·þÎñÆ÷Ó¦¿¼ÂÇµÄÒòËØÓÐ£ºÐÔÄÜ¡¢°²È«ÐÔ¡¢ÈÕÖ¾ºÍÍ³¼Æ¡¢ÐéÄâÖ÷»ú¡¢´úÀí·þÎñÆ÷¡¢»º³å·þÎñºÍ¼¯³ÉÓ¦ÓÃ³ÌÐòµÈ¡£ÏÂÃæÊÇ¶Ô³£¼û·þÎñÆ÷µÄ¼ò½é£º
+Unixå’ŒLinuxå¹³å°ä¸‹ä½¿ç”¨æœ€å¹¿æ³›çš„å…è´¹HTTPæœåŠ¡å™¨æ˜¯ApacheæœåŠ¡å™¨ï¼Œè€ŒWindowså¹³å°çš„æœåŠ¡å™¨é€šå¸¸ä½¿ç”¨IISä½œä¸ºWebæœåŠ¡å™¨ã€‚é€‰æ‹©WebæœåŠ¡å™¨åº”è€ƒè™‘çš„å› ç´ æœ‰ï¼šæ€§èƒ½ã€å®‰å…¨æ€§ã€æ—¥å¿—å’Œç»Ÿè®¡ã€è™šæ‹Ÿä¸»æœºã€ä»£ç†æœåŠ¡å™¨ã€ç¼“å†²æœåŠ¡å’Œé›†æˆåº”ç”¨ç¨‹åºç­‰ã€‚ä¸‹é¢æ˜¯å¯¹å¸¸è§æœåŠ¡å™¨çš„ç®€ä»‹ï¼š
 
-- IIS£ºMicrosoftµÄWeb·þÎñÆ÷²úÆ·£¬È«³ÆÊÇInternet Information Services¡£IISÊÇÔÊÐíÔÚ¹«¹²Intranet»òInternetÉÏ·¢²¼ÐÅÏ¢µÄWeb·þÎñÆ÷¡£IISÊÇÄ¿Ç°×îÁ÷ÐÐµÄWeb·þÎñÆ÷²úÆ·Ö®Ò»£¬ºÜ¶àÖøÃûµÄÍøÕ¾¶¼ÊÇ½¨Á¢ÔÚIISµÄÆ½Ì¨ÉÏ¡£IISÌá¹©ÁËÒ»¸öÍ¼ÐÎ½çÃæµÄ¹ÜÀí¹¤¾ß£¬³ÆÎªInternet·þÎñ¹ÜÀíÆ÷£¬¿ÉÓÃÓÚ¼àÊÓÅäÖÃºÍ¿ØÖÆInternet·þÎñ¡£IISÊÇÒ»ÖÖWeb·þÎñ×é¼þ£¬ÆäÖÐ°üÀ¨Web·þÎñÆ÷¡¢FTP·þÎñÆ÷¡¢NNTP·þÎñÆ÷ºÍSMTP·þÎñÆ÷£¬·Ö±ðÓÃÓÚÍøÒ³ä¯ÀÀ¡¢ÎÄ¼þ´«Êä¡¢ÐÂÎÅ·þÎñºÍÓÊ¼þ·¢ËÍµÈ·½Ãæ£¬ËüÊ¹µÃÔÚÍøÂç£¨°üÀ¨»¥ÁªÍøºÍ¾ÖÓòÍø£©ÉÏ·¢²¼ÐÅÏ¢³ÉÁËÒ»¼þºÜÈÝÒ×µÄÊÂ¡£ËüÌá¹©ISAPI(Intranet Server API£©×÷ÎªÀ©Õ¹Web·þÎñÆ÷¹¦ÄÜµÄ±à³Ì½Ó¿Ú£»Í¬Ê±£¬Ëü»¹Ìá¹©Ò»¸öInternetÊý¾Ý¿âÁ¬½ÓÆ÷£¬¿ÉÒÔÊµÏÖ¶ÔÊý¾Ý¿âµÄ²éÑ¯ºÍ¸üÐÂ¡£
-- Kangle£ºKangle Web·þÎñÆ÷ÊÇÒ»¿î¿çÆ½Ì¨¡¢¹¦ÄÜÇ¿´ó¡¢°²È«ÎÈ¶¨¡¢Ò×²Ù×÷µÄ¸ßÐÔÄÜWeb·þÎñÆ÷ºÍ·´Ïò´úÀí·þÎñÆ÷Èí¼þ¡£´ËÍâ£¬KangleÒ²ÊÇÒ»¿î×¨Îª×öÐéÄâÖ÷»úÑÐ·¢µÄWeb·þÎñÆ÷¡£ÊµÏÖÐéÄâÖ÷»ú¶ÀÁ¢½ø³Ì¡¢¶ÀÁ¢Éí·ÝÔËÐÐ¡£ÓÃ»§Ö®¼ä°²È«¸ôÀë£¬Ò»¸öÓÃ»§³öÎÊÌâ²»Ó°ÏìÆäËûÓÃ»§¡£Ö§³ÖPHP¡¢ASP¡¢ASP.NET¡¢Java¡¢RubyµÈ¶àÖÖ¶¯Ì¬¿ª·¢ÓïÑÔ¡£- WebSphere£ºWebSphere Application ServerÊÇ¹¦ÄÜÍêÉÆ¡¢¿ª·ÅµÄWebÓ¦ÓÃ³ÌÐò·þÎñÆ÷£¬ÊÇIBMµç×ÓÉÌÎñ¼Æ»®µÄºËÐÄ²¿·Ö£¬ËüÊÇ»ùÓÚJavaµÄÓ¦ÓÃ»·¾³£¬ÓÃÓÚ½¨Á¢¡¢²¿ÊðºÍ¹ÜÀíInternetºÍIntranet WebÓ¦ÓÃ³ÌÐò£¬ÊÊÓ¦¸÷ÖÖWebÓ¦ÓÃ³ÌÐò·þÎñÆ÷µÄÐèÒª¡£
-- WebLogic£ºWebLogic ServerÊÇÒ»¿î¶à¹¦ÄÜ¡¢»ùÓÚ±ê×¼µÄWebÓ¦ÓÃ·þÎñÆ÷£¬ÎªÆóÒµ¹¹½¨ÆóÒµÓ¦ÓÃÌá¹©ÁË¼áÊµµÄ»ù´¡¡£Õë¶Ô¸÷ÖÖÓ¦ÓÃ¿ª·¢¡¢¹Ø¼üÐÔÈÎÎñµÄ²¿Êð£¬¸÷ÖÖÏµÍ³ºÍÊý¾Ý¿âµÄ¼¯³É¡¢¿çInternetÐ­×÷µÈWeblogic¶¼Ìá¹©ÁËÏàÓ¦µÄÖ§³Ö¡£ÓÉÓÚËü¾ßÓÐÈ«ÃæµÄ¹¦ÄÜ¡¢¶Ô¿ª·Å±ê×¼µÄ×ñ´ÓÐÔ¡¢¶à²ã¼Ü¹¹¡¢Ö§³Ö»ùÓÚ×é¼þµÄ¿ª·¢µÈÓÅÊÆ£¬ºÜ¶à¹«Ë¾µÄÆóÒµ¼¶Ó¦ÓÃ¶¼Ñ¡ÔñËüÀ´×÷Îª¿ª·¢ºÍ²¿ÊðµÄ»·¾³¡£WebLogic ServerÔÚÊ¹Ó¦ÓÃ·þÎñÆ÷³ÉÎªÆóÒµÓ¦ÓÃ¼Ü¹¹µÄ»ù´¡·½ÃæÒ»Ö±´¦ÓÚÁìÏÈµØÎ»£¬Îª¹¹½¨¼¯³É»¯µÄÆóÒµ¼¶Ó¦ÓÃÌá¹©ÁËÎÈ¹ÌµÄ»ù´¡¡£
-- Apache£ºÄ¿Ç°ApacheÈÔÈ»ÊÇÊÀ½çÉÏÓÃµÃ×î¶àµÄWeb·þÎñÆ÷£¬ÆäÊÐ³¡Õ¼ÓÐÂÊºÜ³¤Ê±¼ä¶¼±£³ÖÔÚ60%ÒÔÉÏ£¨Ä¿Ç°µÄÊÐ³¡·Ý¶îÔ¼40%×óÓÒ£©¡£ÊÀ½çÉÏºÜ¶àÖøÃûµÄÍøÕ¾¶¼ÊÇApacheµÄ²úÎï£¬ËüµÄ³É¹¦Ö®´¦Ö÷ÒªÔÚÓÚËüµÄÔ´´úÂë¿ª·Å¡¢ÓÐÒ»Ö§Ç¿´óµÄ¿ª·¢ÍÅ¶Ó¡¢Ö§³Ö¿çÆ½Ì¨µÄÓ¦ÓÃ£¨¿ÉÒÔÔËÐÐÔÚ¼¸ºõËùÓÐµÄUnix¡¢Windows¡¢LinuxÏµÍ³Æ½Ì¨ÉÏ£©ÒÔ¼°ËüµÄ¿ÉÒÆÖ²ÐÔµÈ·½Ãæ¡£
-- Tomcat£ºTomcatÊÇÒ»¸ö¿ª·ÅÔ´´úÂë¡¢ÔËÐÐServletºÍJSPµÄÈÝÆ÷¡£TomcatÊµÏÖÁËServletºÍJSP¹æ·¶¡£´ËÍâ£¬Tomcat»¹ÊµÏÖÁËApache-Jakarta¹æ·¶¶øÇÒ±È¾ø´ó¶àÊýÉÌÒµÓ¦ÓÃÈí¼þ·þÎñÆ÷ÒªºÃ£¬Òò´ËÄ¿Ç°Ò²ÓÐ²»ÉÙµÄWeb·þÎñÆ÷¶¼Ñ¡ÔñÁËTomcat¡£
-- Nginx£º¶Á×÷"engine x"£¬ÊÇÒ»¸ö¸ßÐÔÄÜµÄHTTPºÍ·´Ïò´úÀí·þÎñÆ÷£¬Ò²ÊÇÒ»¸öIMAP/POP3/SMTP´úÀí·þÎñÆ÷¡£NginxÊÇÓÉIgor SysoevÎª¶íÂÞË¹·ÃÎÊÁ¿µÚ¶þµÄRamblerÕ¾µã¿ª·¢µÄ£¬µÚÒ»¸ö¹«¿ª°æ±¾0.1.0·¢²¼ÓÚ2004Äê10ÔÂ4ÈÕ¡£Æä½«Ô´´úÂëÒÔÀàBSDÐí¿ÉÖ¤µÄÐÎÊ½·¢²¼£¬ÒòËüµÄÎÈ¶¨ÐÔ¡¢·á¸»µÄ¹¦ÄÜ¼¯¡¢Ê¾ÀýÅäÖÃÎÄ¼þºÍµÍÏµÍ³×ÊÔ´µÄÏûºÄ¶øÎÅÃû¡£ÔÚ2014ÄêÏÂ°ëÄê£¬NginxµÄÊÐ³¡·Ý¶î´ïµ½ÁË14%¡£
+- IISï¼šMicrosoftçš„WebæœåŠ¡å™¨äº§å“ï¼Œå…¨ç§°æ˜¯Internet Information Servicesã€‚IISæ˜¯å…è®¸åœ¨å…¬å…±Intranetæˆ–Internetä¸Šå‘å¸ƒä¿¡æ¯çš„WebæœåŠ¡å™¨ã€‚IISæ˜¯ç›®å‰æœ€æµè¡Œçš„WebæœåŠ¡å™¨äº§å“ä¹‹ä¸€ï¼Œå¾ˆå¤šè‘—åçš„ç½‘ç«™éƒ½æ˜¯å»ºç«‹åœ¨IISçš„å¹³å°ä¸Šã€‚IISæä¾›äº†ä¸€ä¸ªå›¾å½¢ç•Œé¢çš„ç®¡ç†å·¥å…·ï¼Œç§°ä¸ºInternetæœåŠ¡ç®¡ç†å™¨ï¼Œå¯ç”¨äºŽç›‘è§†é…ç½®å’ŒæŽ§åˆ¶InternetæœåŠ¡ã€‚IISæ˜¯ä¸€ç§WebæœåŠ¡ç»„ä»¶ï¼Œå…¶ä¸­åŒ…æ‹¬WebæœåŠ¡å™¨ã€FTPæœåŠ¡å™¨ã€NNTPæœåŠ¡å™¨å’ŒSMTPæœåŠ¡å™¨ï¼Œåˆ†åˆ«ç”¨äºŽç½‘é¡µæµè§ˆã€æ–‡ä»¶ä¼ è¾“ã€æ–°é—»æœåŠ¡å’Œé‚®ä»¶å‘é€ç­‰æ–¹é¢ï¼Œå®ƒä½¿å¾—åœ¨ç½‘ç»œï¼ˆåŒ…æ‹¬äº’è”ç½‘å’Œå±€åŸŸç½‘ï¼‰ä¸Šå‘å¸ƒä¿¡æ¯æˆäº†ä¸€ä»¶å¾ˆå®¹æ˜“çš„äº‹ã€‚å®ƒæä¾›ISAPI(Intranet Server APIï¼‰ä½œä¸ºæ‰©å±•WebæœåŠ¡å™¨åŠŸèƒ½çš„ç¼–ç¨‹æŽ¥å£ï¼›åŒæ—¶ï¼Œå®ƒè¿˜æä¾›ä¸€ä¸ªInternetæ•°æ®åº“è¿žæŽ¥å™¨ï¼Œå¯ä»¥å®žçŽ°å¯¹æ•°æ®åº“çš„æŸ¥è¯¢å’Œæ›´æ–°ã€‚
+- Kangleï¼šKangle WebæœåŠ¡å™¨æ˜¯ä¸€æ¬¾è·¨å¹³å°ã€åŠŸèƒ½å¼ºå¤§ã€å®‰å…¨ç¨³å®šã€æ˜“æ“ä½œçš„é«˜æ€§èƒ½WebæœåŠ¡å™¨å’Œåå‘ä»£ç†æœåŠ¡å™¨è½¯ä»¶ã€‚æ­¤å¤–ï¼ŒKangleä¹Ÿæ˜¯ä¸€æ¬¾ä¸“ä¸ºåšè™šæ‹Ÿä¸»æœºç ”å‘çš„WebæœåŠ¡å™¨ã€‚å®žçŽ°è™šæ‹Ÿä¸»æœºç‹¬ç«‹è¿›ç¨‹ã€ç‹¬ç«‹èº«ä»½è¿è¡Œã€‚ç”¨æˆ·ä¹‹é—´å®‰å…¨éš”ç¦»ï¼Œä¸€ä¸ªç”¨æˆ·å‡ºé—®é¢˜ä¸å½±å“å…¶ä»–ç”¨æˆ·ã€‚æ”¯æŒPHPã€ASPã€ASP.NETã€Javaã€Rubyç­‰å¤šç§åŠ¨æ€å¼€å‘è¯­è¨€ã€‚- WebSphereï¼šWebSphere Application Serveræ˜¯åŠŸèƒ½å®Œå–„ã€å¼€æ”¾çš„Webåº”ç”¨ç¨‹åºæœåŠ¡å™¨ï¼Œæ˜¯IBMç”µå­å•†åŠ¡è®¡åˆ’çš„æ ¸å¿ƒéƒ¨åˆ†ï¼Œå®ƒæ˜¯åŸºäºŽJavaçš„åº”ç”¨çŽ¯å¢ƒï¼Œç”¨äºŽå»ºç«‹ã€éƒ¨ç½²å’Œç®¡ç†Internetå’ŒIntranet Webåº”ç”¨ç¨‹åºï¼Œé€‚åº”å„ç§Webåº”ç”¨ç¨‹åºæœåŠ¡å™¨çš„éœ€è¦ã€‚
+- WebLogicï¼šWebLogic Serveræ˜¯ä¸€æ¬¾å¤šåŠŸèƒ½ã€åŸºäºŽæ ‡å‡†çš„Webåº”ç”¨æœåŠ¡å™¨ï¼Œä¸ºä¼ä¸šæž„å»ºä¼ä¸šåº”ç”¨æä¾›äº†åšå®žçš„åŸºç¡€ã€‚é’ˆå¯¹å„ç§åº”ç”¨å¼€å‘ã€å…³é”®æ€§ä»»åŠ¡çš„éƒ¨ç½²ï¼Œå„ç§ç³»ç»Ÿå’Œæ•°æ®åº“çš„é›†æˆã€è·¨Internetåä½œç­‰Weblogicéƒ½æä¾›äº†ç›¸åº”çš„æ”¯æŒã€‚ç”±äºŽå®ƒå…·æœ‰å…¨é¢çš„åŠŸèƒ½ã€å¯¹å¼€æ”¾æ ‡å‡†çš„éµä»Žæ€§ã€å¤šå±‚æž¶æž„ã€æ”¯æŒåŸºäºŽç»„ä»¶çš„å¼€å‘ç­‰ä¼˜åŠ¿ï¼Œå¾ˆå¤šå…¬å¸çš„ä¼ä¸šçº§åº”ç”¨éƒ½é€‰æ‹©å®ƒæ¥ä½œä¸ºå¼€å‘å’Œéƒ¨ç½²çš„çŽ¯å¢ƒã€‚WebLogic Serveråœ¨ä½¿åº”ç”¨æœåŠ¡å™¨æˆä¸ºä¼ä¸šåº”ç”¨æž¶æž„çš„åŸºç¡€æ–¹é¢ä¸€ç›´å¤„äºŽé¢†å…ˆåœ°ä½ï¼Œä¸ºæž„å»ºé›†æˆåŒ–çš„ä¼ä¸šçº§åº”ç”¨æä¾›äº†ç¨³å›ºçš„åŸºç¡€ã€‚
+- Apacheï¼šç›®å‰Apacheä»ç„¶æ˜¯ä¸–ç•Œä¸Šç”¨å¾—æœ€å¤šçš„WebæœåŠ¡å™¨ï¼Œå…¶å¸‚åœºå æœ‰çŽ‡å¾ˆé•¿æ—¶é—´éƒ½ä¿æŒåœ¨60%ä»¥ä¸Šï¼ˆç›®å‰çš„å¸‚åœºä»½é¢çº¦40%å·¦å³ï¼‰ã€‚ä¸–ç•Œä¸Šå¾ˆå¤šè‘—åçš„ç½‘ç«™éƒ½æ˜¯Apacheçš„äº§ç‰©ï¼Œå®ƒçš„æˆåŠŸä¹‹å¤„ä¸»è¦åœ¨äºŽå®ƒçš„æºä»£ç å¼€æ”¾ã€æœ‰ä¸€æ”¯å¼ºå¤§çš„å¼€å‘å›¢é˜Ÿã€æ”¯æŒè·¨å¹³å°çš„åº”ç”¨ï¼ˆå¯ä»¥è¿è¡Œåœ¨å‡ ä¹Žæ‰€æœ‰çš„Unixã€Windowsã€Linuxç³»ç»Ÿå¹³å°ä¸Šï¼‰ä»¥åŠå®ƒçš„å¯ç§»æ¤æ€§ç­‰æ–¹é¢ã€‚
+- Tomcatï¼šTomcatæ˜¯ä¸€ä¸ªå¼€æ”¾æºä»£ç ã€è¿è¡ŒServletå’ŒJSPçš„å®¹å™¨ã€‚Tomcatå®žçŽ°äº†Servletå’ŒJSPè§„èŒƒã€‚æ­¤å¤–ï¼ŒTomcatè¿˜å®žçŽ°äº†Apache-Jakartaè§„èŒƒè€Œä¸”æ¯”ç»å¤§å¤šæ•°å•†ä¸šåº”ç”¨è½¯ä»¶æœåŠ¡å™¨è¦å¥½ï¼Œå› æ­¤ç›®å‰ä¹Ÿæœ‰ä¸å°‘çš„WebæœåŠ¡å™¨éƒ½é€‰æ‹©äº†Tomcatã€‚
+- Nginxï¼šè¯»ä½œ"engine x"ï¼Œæ˜¯ä¸€ä¸ªé«˜æ€§èƒ½çš„HTTPå’Œåå‘ä»£ç†æœåŠ¡å™¨ï¼Œä¹Ÿæ˜¯ä¸€ä¸ªIMAP/POP3/SMTPä»£ç†æœåŠ¡å™¨ã€‚Nginxæ˜¯ç”±Igor Sysoevä¸ºä¿„ç½—æ–¯è®¿é—®é‡ç¬¬äºŒçš„Ramblerç«™ç‚¹å¼€å‘çš„ï¼Œç¬¬ä¸€ä¸ªå…¬å¼€ç‰ˆæœ¬0.1.0å‘å¸ƒäºŽ2004å¹´10æœˆ4æ—¥ã€‚å…¶å°†æºä»£ç ä»¥ç±»BSDè®¸å¯è¯çš„å½¢å¼å‘å¸ƒï¼Œå› å®ƒçš„ç¨³å®šæ€§ã€ä¸°å¯Œçš„åŠŸèƒ½é›†ã€ç¤ºä¾‹é…ç½®æ–‡ä»¶å’Œä½Žç³»ç»Ÿèµ„æºçš„æ¶ˆè€—è€Œé—»åã€‚åœ¨2014å¹´ä¸‹åŠå¹´ï¼ŒNginxçš„å¸‚åœºä»½é¢è¾¾åˆ°äº†14%ã€‚
 
 <p id="javaweb-15">
 
-#### JSPºÍServletÊÇÊ²Ã´¹ØÏµ£¿
+#### JSPå’ŒServletæ˜¯ä»€ä¹ˆå…³ç³»ï¼Ÿ
 
-ÆäÊµÕâ¸öÎÊÌâÔÚÉÏÃæÒÑ¾­²ûÊö¹ýÁË£¬ServletÊÇÒ»¸öÌØÊâµÄJava³ÌÐò£¬ËüÔËÐÐÓÚ·þÎñÆ÷µÄJVMÖÐ£¬ÄÜ¹»ÒÀ¿¿·þÎñÆ÷µÄÖ§³ÖÏòä¯ÀÀÆ÷Ìá¹©ÏÔÊ¾ÄÚÈÝ¡£JSP±¾ÖÊÉÏÊÇServletµÄÒ»ÖÖ¼òÒ×ÐÎÊ½£¬JSP»á±»·þÎñÆ÷´¦Àí³ÉÒ»¸öÀàËÆÓÚServletµÄJava³ÌÐò£¬¿ÉÒÔ¼ò»¯Ò³ÃæÄÚÈÝµÄÉú³É¡£ServletºÍJSP×îÖ÷ÒªµÄ²»Í¬µãÔÚÓÚ£¬ServletµÄÓ¦ÓÃÂß¼­ÊÇÔÚJavaÎÄ¼þÖÐ£¬²¢ÇÒÍêÈ«´Ó±íÊ¾²ãÖÐµÄHTML·ÖÀë¿ªÀ´¡£¶øJSPµÄÇé¿öÊÇJavaºÍHTML¿ÉÒÔ×éºÏ³ÉÒ»¸öÀ©Õ¹ÃûÎª.jspµÄÎÄ¼þ¡£ÓÐÈËËµ£¬Servlet¾ÍÊÇÔÚJavaÖÐÐ´HTML£¬¶øJSP¾ÍÊÇÔÚHTMLÖÐÐ´Java´úÂë£¬µ±È»Õâ¸öËµ·¨ÊÇºÜÆ¬ÃæÇÒ²»¹»×¼È·µÄ¡£JSP²àÖØÓÚÊÓÍ¼£¬Servlet¸ü²àÖØÓÚ¿ØÖÆÂß¼­£¬ÔÚMVC¼Ü¹¹Ä£Ê½ÖÐ£¬JSPÊÊºÏ³äµ±ÊÓÍ¼£¨view£©¶øServletÊÊºÏ³äµ±¿ØÖÆÆ÷£¨controller£©¡£
+å…¶å®žè¿™ä¸ªé—®é¢˜åœ¨ä¸Šé¢å·²ç»é˜è¿°è¿‡äº†ï¼ŒServletæ˜¯ä¸€ä¸ªç‰¹æ®Šçš„Javaç¨‹åºï¼Œå®ƒè¿è¡ŒäºŽæœåŠ¡å™¨çš„JVMä¸­ï¼Œèƒ½å¤Ÿä¾é æœåŠ¡å™¨çš„æ”¯æŒå‘æµè§ˆå™¨æä¾›æ˜¾ç¤ºå†…å®¹ã€‚JSPæœ¬è´¨ä¸Šæ˜¯Servletçš„ä¸€ç§ç®€æ˜“å½¢å¼ï¼ŒJSPä¼šè¢«æœåŠ¡å™¨å¤„ç†æˆä¸€ä¸ªç±»ä¼¼äºŽServletçš„Javaç¨‹åºï¼Œå¯ä»¥ç®€åŒ–é¡µé¢å†…å®¹çš„ç”Ÿæˆã€‚Servletå’ŒJSPæœ€ä¸»è¦çš„ä¸åŒç‚¹åœ¨äºŽï¼ŒServletçš„åº”ç”¨é€»è¾‘æ˜¯åœ¨Javaæ–‡ä»¶ä¸­ï¼Œå¹¶ä¸”å®Œå…¨ä»Žè¡¨ç¤ºå±‚ä¸­çš„HTMLåˆ†ç¦»å¼€æ¥ã€‚è€ŒJSPçš„æƒ…å†µæ˜¯Javaå’ŒHTMLå¯ä»¥ç»„åˆæˆä¸€ä¸ªæ‰©å±•åä¸º.jspçš„æ–‡ä»¶ã€‚æœ‰äººè¯´ï¼ŒServletå°±æ˜¯åœ¨Javaä¸­å†™HTMLï¼Œè€ŒJSPå°±æ˜¯åœ¨HTMLä¸­å†™Javaä»£ç ï¼Œå½“ç„¶è¿™ä¸ªè¯´æ³•æ˜¯å¾ˆç‰‡é¢ä¸”ä¸å¤Ÿå‡†ç¡®çš„ã€‚JSPä¾§é‡äºŽè§†å›¾ï¼ŒServletæ›´ä¾§é‡äºŽæŽ§åˆ¶é€»è¾‘ï¼Œåœ¨MVCæž¶æž„æ¨¡å¼ä¸­ï¼ŒJSPé€‚åˆå……å½“è§†å›¾ï¼ˆviewï¼‰è€ŒServleté€‚åˆå……å½“æŽ§åˆ¶å™¨ï¼ˆcontrollerï¼‰ã€‚
 
 <p id="javaweb-16">
 
-#### ½²½âJSPÖÐµÄËÄÖÖ×÷ÓÃÓò¡£
+#### è®²è§£JSPä¸­çš„å››ç§ä½œç”¨åŸŸã€‚
 
-JSPÖÐµÄËÄÖÖ×÷ÓÃÓò°üÀ¨page¡¢request¡¢sessionºÍapplication£¬¾ßÌåÀ´Ëµ£º
+JSPä¸­çš„å››ç§ä½œç”¨åŸŸåŒ…æ‹¬pageã€requestã€sessionå’Œapplicationï¼Œå…·ä½“æ¥è¯´ï¼š
 
-- page´ú±íÓëÒ»¸öÒ³ÃæÏà¹ØµÄ¶ÔÏóºÍÊôÐÔ¡£
+- pageä»£è¡¨ä¸Žä¸€ä¸ªé¡µé¢ç›¸å…³çš„å¯¹è±¡å’Œå±žæ€§ã€‚
 
-- request´ú±íÓëWeb¿Í»§»ú·¢³öµÄÒ»¸öÇëÇóÏà¹ØµÄ¶ÔÏóºÍÊôÐÔ¡£Ò»¸öÇëÇó¿ÉÄÜ¿çÔ½¶à¸öÒ³Ãæ£¬Éæ¼°¶à¸öWeb×é¼þ£»ÐèÒªÔÚÒ³ÃæÏÔÊ¾µÄÁÙÊ±Êý¾Ý¿ÉÒÔÖÃÓÚ´Ë×÷ÓÃÓò¡£
+- requestä»£è¡¨ä¸ŽWebå®¢æˆ·æœºå‘å‡ºçš„ä¸€ä¸ªè¯·æ±‚ç›¸å…³çš„å¯¹è±¡å’Œå±žæ€§ã€‚ä¸€ä¸ªè¯·æ±‚å¯èƒ½è·¨è¶Šå¤šä¸ªé¡µé¢ï¼Œæ¶‰åŠå¤šä¸ªWebç»„ä»¶ï¼›éœ€è¦åœ¨é¡µé¢æ˜¾ç¤ºçš„ä¸´æ—¶æ•°æ®å¯ä»¥ç½®äºŽæ­¤ä½œç”¨åŸŸã€‚
 
-- session´ú±íÓëÄ³¸öÓÃ»§Óë·þÎñÆ÷½¨Á¢µÄÒ»´Î»á»°Ïà¹ØµÄ¶ÔÏóºÍÊôÐÔ¡£¸úÄ³¸öÓÃ»§Ïà¹ØµÄÊý¾ÝÓ¦¸Ã·ÅÔÚÓÃ»§×Ô¼ºµÄsessionÖÐ¡£
+- sessionä»£è¡¨ä¸ŽæŸä¸ªç”¨æˆ·ä¸ŽæœåŠ¡å™¨å»ºç«‹çš„ä¸€æ¬¡ä¼šè¯ç›¸å…³çš„å¯¹è±¡å’Œå±žæ€§ã€‚è·ŸæŸä¸ªç”¨æˆ·ç›¸å…³çš„æ•°æ®åº”è¯¥æ”¾åœ¨ç”¨æˆ·è‡ªå·±çš„sessionä¸­ã€‚
 
-- application´ú±íÓëÕû¸öWebÓ¦ÓÃ³ÌÐòÏà¹ØµÄ¶ÔÏóºÍÊôÐÔ£¬ËüÊµÖÊÉÏÊÇ¿çÔ½Õû¸öWebÓ¦ÓÃ³ÌÐò£¬°üÀ¨¶à¸öÒ³Ãæ¡¢ÇëÇóºÍ»á»°µÄÒ»¸öÈ«¾Ö×÷ÓÃÓò¡£
+- applicationä»£è¡¨ä¸Žæ•´ä¸ªWebåº”ç”¨ç¨‹åºç›¸å…³çš„å¯¹è±¡å’Œå±žæ€§ï¼Œå®ƒå®žè´¨ä¸Šæ˜¯è·¨è¶Šæ•´ä¸ªWebåº”ç”¨ç¨‹åºï¼ŒåŒ…æ‹¬å¤šä¸ªé¡µé¢ã€è¯·æ±‚å’Œä¼šè¯çš„ä¸€ä¸ªå…¨å±€ä½œç”¨åŸŸã€‚
 
 <p id="javaweb-17">
 
-#### ÈçºÎÊµÏÖJSP»òServletµÄµ¥Ïß³ÌÄ£Ê½£¿
+#### å¦‚ä½•å®žçŽ°JSPæˆ–Servletçš„å•çº¿ç¨‹æ¨¡å¼ï¼Ÿ
 
-¶ÔÓÚJSPÒ³Ãæ£¬¿ÉÒÔÍ¨¹ýpageÖ¸Áî½øÐÐÉèÖÃ¡£
+å¯¹äºŽJSPé¡µé¢ï¼Œå¯ä»¥é€šè¿‡pageæŒ‡ä»¤è¿›è¡Œè®¾ç½®ã€‚
 ```jsp
-<%@page isThreadSafe=¡±false¡±%>
+<%@page isThreadSafe=â€falseâ€%>
 ```
 
-¶ÔÓÚServlet£¬¿ÉÒÔÈÃ×Ô¶¨ÒåµÄServletÊµÏÖSingleThreadModel±êÊ¶½Ó¿Ú¡£
-ËµÃ÷£ºÈç¹û½«JSP»òServletÉèÖÃ³Éµ¥Ïß³Ì¹¤×÷Ä£Ê½£¬»áµ¼ÖÂÃ¿¸öÇëÇó´´½¨Ò»¸öServletÊµÀý£¬ÕâÖÖÊµ¼ù½«µ¼ÖÂÑÏÖØµÄÐÔÄÜÎÊÌâ£¨·þÎñÆ÷µÄÄÚ´æÑ¹Á¦ºÜ´ó£¬»¹»áµ¼ÖÂÆµ·±µÄÀ¬»ø»ØÊÕ£©£¬ËùÒÔÍ¨³£Çé¿öÏÂ²¢²»»áÕâÃ´×ö¡£
+å¯¹äºŽServletï¼Œå¯ä»¥è®©è‡ªå®šä¹‰çš„Servletå®žçŽ°SingleThreadModelæ ‡è¯†æŽ¥å£ã€‚
+è¯´æ˜Žï¼šå¦‚æžœå°†JSPæˆ–Servletè®¾ç½®æˆå•çº¿ç¨‹å·¥ä½œæ¨¡å¼ï¼Œä¼šå¯¼è‡´æ¯ä¸ªè¯·æ±‚åˆ›å»ºä¸€ä¸ªServletå®žä¾‹ï¼Œè¿™ç§å®žè·µå°†å¯¼è‡´ä¸¥é‡çš„æ€§èƒ½é—®é¢˜ï¼ˆæœåŠ¡å™¨çš„å†…å­˜åŽ‹åŠ›å¾ˆå¤§ï¼Œè¿˜ä¼šå¯¼è‡´é¢‘ç¹çš„åžƒåœ¾å›žæ”¶ï¼‰ï¼Œæ‰€ä»¥é€šå¸¸æƒ…å†µä¸‹å¹¶ä¸ä¼šè¿™ä¹ˆåšã€‚
 
 <p id="javaweb-18">
 
-#### ÊµÏÖ»á»°¸ú×ÙµÄ¼¼ÊõÓÐÄÄÐ©£¿
+#### å®žçŽ°ä¼šè¯è·Ÿè¸ªçš„æŠ€æœ¯æœ‰å“ªäº›ï¼Ÿ
 
-ÓÉÓÚHTTPÐ­Òé±¾ÉíÊÇÎÞ×´Ì¬µÄ£¬·þÎñÆ÷ÎªÁËÇø·Ö²»Í¬µÄÓÃ»§£¬¾ÍÐèÒª¶ÔÓÃ»§»á»°½øÐÐ¸ú×Ù£¬¼òµ¥µÄËµ¾ÍÊÇÎªÓÃ»§½øÐÐµÇ¼Ç£¬ÎªÓÃ»§·ÖÅäÎ¨Ò»µÄID£¬ÏÂÒ»´ÎÓÃ»§ÔÚÇëÇóÖÐ°üº¬´ËID£¬·þÎñÆ÷¾Ý´ËÅÐ¶Ïµ½µ×ÊÇÄÄÒ»¸öÓÃ»§¡£
+ç”±äºŽHTTPåè®®æœ¬èº«æ˜¯æ— çŠ¶æ€çš„ï¼ŒæœåŠ¡å™¨ä¸ºäº†åŒºåˆ†ä¸åŒçš„ç”¨æˆ·ï¼Œå°±éœ€è¦å¯¹ç”¨æˆ·ä¼šè¯è¿›è¡Œè·Ÿè¸ªï¼Œç®€å•çš„è¯´å°±æ˜¯ä¸ºç”¨æˆ·è¿›è¡Œç™»è®°ï¼Œä¸ºç”¨æˆ·åˆ†é…å”¯ä¸€çš„IDï¼Œä¸‹ä¸€æ¬¡ç”¨æˆ·åœ¨è¯·æ±‚ä¸­åŒ…å«æ­¤IDï¼ŒæœåŠ¡å™¨æ®æ­¤åˆ¤æ–­åˆ°åº•æ˜¯å“ªä¸€ä¸ªç”¨æˆ·ã€‚
 
-- URL ÖØÐ´£ºÔÚURLÖÐÌí¼ÓÓÃ»§»á»°µÄÐÅÏ¢×÷ÎªÇëÇóµÄ²ÎÊý£¬»òÕß½«Î¨Ò»µÄ»á»°IDÌí¼Óµ½URL½áÎ²ÒÔ±êÊ¶Ò»¸ö»á»°¡£
+- URL é‡å†™ï¼šåœ¨URLä¸­æ·»åŠ ç”¨æˆ·ä¼šè¯çš„ä¿¡æ¯ä½œä¸ºè¯·æ±‚çš„å‚æ•°ï¼Œæˆ–è€…å°†å”¯ä¸€çš„ä¼šè¯IDæ·»åŠ åˆ°URLç»“å°¾ä»¥æ ‡è¯†ä¸€ä¸ªä¼šè¯ã€‚
 
-- ÉèÖÃ±íµ¥Òþ²ØÓò£º½«ºÍ»á»°¸ú×ÙÏà¹ØµÄ×Ö¶ÎÌí¼Óµ½ÒþÊ½±íµ¥ÓòÖÐ£¬ÕâÐ©ÐÅÏ¢²»»áÔÚä¯ÀÀÆ÷ÖÐÏÔÊ¾µ«ÊÇÌá½»±íµ¥Ê±»áÌá½»¸ø·þÎñÆ÷¡£ÕâÁ½ÖÖ·½Ê½ºÜÄÑ´¦Àí¿çÔ½¶à¸öÒ³ÃæµÄÐÅÏ¢´«µÝ£¬ÒòÎªÈç¹ûÃ¿´Î¶¼ÒªÐÞ¸ÄURL»òÔÚÒ³ÃæÖÐÌí¼ÓÒþÊ½±íµ¥ÓòÀ´´æ´¢ÓÃ»§»á»°Ïà¹ØÐÅÏ¢£¬ÊÂÇé½«±äµÃ·Ç³£Âé·³¡£
+- è®¾ç½®è¡¨å•éšè—åŸŸï¼šå°†å’Œä¼šè¯è·Ÿè¸ªç›¸å…³çš„å­—æ®µæ·»åŠ åˆ°éšå¼è¡¨å•åŸŸä¸­ï¼Œè¿™äº›ä¿¡æ¯ä¸ä¼šåœ¨æµè§ˆå™¨ä¸­æ˜¾ç¤ºä½†æ˜¯æäº¤è¡¨å•æ—¶ä¼šæäº¤ç»™æœåŠ¡å™¨ã€‚è¿™ä¸¤ç§æ–¹å¼å¾ˆéš¾å¤„ç†è·¨è¶Šå¤šä¸ªé¡µé¢çš„ä¿¡æ¯ä¼ é€’ï¼Œå› ä¸ºå¦‚æžœæ¯æ¬¡éƒ½è¦ä¿®æ”¹URLæˆ–åœ¨é¡µé¢ä¸­æ·»åŠ éšå¼è¡¨å•åŸŸæ¥å­˜å‚¨ç”¨æˆ·ä¼šè¯ç›¸å…³ä¿¡æ¯ï¼Œäº‹æƒ…å°†å˜å¾—éžå¸¸éº»çƒ¦ã€‚
 
-- cookie£ºcookieÓÐÁ½ÖÖ£¬Ò»ÖÖÊÇ»ùÓÚ´°¿ÚµÄ£¬ä¯ÀÀÆ÷´°¿Ú¹Ø±Õºó£¬cookie¾ÍÃ»ÓÐÁË£»ÁíÒ»ÖÖÊÇ½«ÐÅÏ¢´æ´¢ÔÚÒ»¸öÁÙÊ±ÎÄ¼þÖÐ£¬²¢ÉèÖÃ´æÔÚµÄÊ±¼ä¡£µ±ÓÃ»§Í¨¹ýä¯ÀÀÆ÷ºÍ·þÎñÆ÷½¨Á¢Ò»´Î»á»°ºó£¬»á»°ID¾Í»áËæÏìÓ¦ÐÅÏ¢·µ»Ø´æ´¢ÔÚ»ùÓÚ´°¿ÚµÄcookieÖÐ£¬ÄÇ¾ÍÒâÎ¶×ÅÖ»Òªä¯ÀÀÆ÷Ã»ÓÐ¹Ø±Õ£¬»á»°Ã»ÓÐ³¬Ê±£¬ÏÂÒ»´ÎÇëÇóÊ±Õâ¸ö»á»°IDÓÖ»áÌá½»¸ø·þÎñÆ÷ÈÃ·þÎñÆ÷Ê¶±ðÓÃ»§Éí·Ý¡£»á»°ÖÐ¿ÉÒÔÎªÓÃ»§±£´æÐÅÏ¢¡£»á»°¶ÔÏóÊÇÔÚ·þÎñÆ÷ÄÚ´æÖÐµÄ£¬¶ø»ùÓÚ´°¿ÚµÄcookieÊÇÔÚ¿Í»§¶ËÄÚ´æÖÐµÄ¡£Èç¹ûä¯ÀÀÆ÷½ûÓÃÁËcookie£¬ÄÇÃ´¾ÍÐèÒªÍ¨¹ýÏÂÃæÁ½ÖÖ·½Ê½½øÐÐ»á»°¸ú×Ù¡£µ±È»£¬ÔÚÊ¹ÓÃcookieÊ±Òª×¢Òâ¼¸µã£ºÊ×ÏÈ²»ÒªÔÚcookieÖÐ´æ·ÅÃô¸ÐÐÅÏ¢£»Æä´Îcookie´æ´¢µÄÊý¾ÝÁ¿ÓÐÏÞ£¨4k£©£¬²»ÄÜ½«¹ý¶àµÄÄÚÈÝ´æ´¢cookieÖÐ£»ÔÙÕßä¯ÀÀÆ÷Í¨³£Ö»ÔÊÐíÒ»¸öÕ¾µã×î¶à´æ·Å20¸öcookie¡£µ±È»£¬ºÍÓÃ»§»á»°Ïà¹ØµÄÆäËûÐÅÏ¢£¨³ýÁË»á»°ID£©Ò²¿ÉÒÔ´æÔÚcookie·½±ã½øÐÐ»á»°¸ú×Ù¡£
+- cookieï¼šcookieæœ‰ä¸¤ç§ï¼Œä¸€ç§æ˜¯åŸºäºŽçª—å£çš„ï¼Œæµè§ˆå™¨çª—å£å…³é—­åŽï¼Œcookieå°±æ²¡æœ‰äº†ï¼›å¦ä¸€ç§æ˜¯å°†ä¿¡æ¯å­˜å‚¨åœ¨ä¸€ä¸ªä¸´æ—¶æ–‡ä»¶ä¸­ï¼Œå¹¶è®¾ç½®å­˜åœ¨çš„æ—¶é—´ã€‚å½“ç”¨æˆ·é€šè¿‡æµè§ˆå™¨å’ŒæœåŠ¡å™¨å»ºç«‹ä¸€æ¬¡ä¼šè¯åŽï¼Œä¼šè¯IDå°±ä¼šéšå“åº”ä¿¡æ¯è¿”å›žå­˜å‚¨åœ¨åŸºäºŽçª—å£çš„cookieä¸­ï¼Œé‚£å°±æ„å‘³ç€åªè¦æµè§ˆå™¨æ²¡æœ‰å…³é—­ï¼Œä¼šè¯æ²¡æœ‰è¶…æ—¶ï¼Œä¸‹ä¸€æ¬¡è¯·æ±‚æ—¶è¿™ä¸ªä¼šè¯IDåˆä¼šæäº¤ç»™æœåŠ¡å™¨è®©æœåŠ¡å™¨è¯†åˆ«ç”¨æˆ·èº«ä»½ã€‚ä¼šè¯ä¸­å¯ä»¥ä¸ºç”¨æˆ·ä¿å­˜ä¿¡æ¯ã€‚ä¼šè¯å¯¹è±¡æ˜¯åœ¨æœåŠ¡å™¨å†…å­˜ä¸­çš„ï¼Œè€ŒåŸºäºŽçª—å£çš„cookieæ˜¯åœ¨å®¢æˆ·ç«¯å†…å­˜ä¸­çš„ã€‚å¦‚æžœæµè§ˆå™¨ç¦ç”¨äº†cookieï¼Œé‚£ä¹ˆå°±éœ€è¦é€šè¿‡ä¸‹é¢ä¸¤ç§æ–¹å¼è¿›è¡Œä¼šè¯è·Ÿè¸ªã€‚å½“ç„¶ï¼Œåœ¨ä½¿ç”¨cookieæ—¶è¦æ³¨æ„å‡ ç‚¹ï¼šé¦–å…ˆä¸è¦åœ¨cookieä¸­å­˜æ”¾æ•æ„Ÿä¿¡æ¯ï¼›å…¶æ¬¡cookieå­˜å‚¨çš„æ•°æ®é‡æœ‰é™ï¼ˆ4kï¼‰ï¼Œä¸èƒ½å°†è¿‡å¤šçš„å†…å®¹å­˜å‚¨cookieä¸­ï¼›å†è€…æµè§ˆå™¨é€šå¸¸åªå…è®¸ä¸€ä¸ªç«™ç‚¹æœ€å¤šå­˜æ”¾20ä¸ªcookieã€‚å½“ç„¶ï¼Œå’Œç”¨æˆ·ä¼šè¯ç›¸å…³çš„å…¶ä»–ä¿¡æ¯ï¼ˆé™¤äº†ä¼šè¯IDï¼‰ä¹Ÿå¯ä»¥å­˜åœ¨cookieæ–¹ä¾¿è¿›è¡Œä¼šè¯è·Ÿè¸ªã€‚
 
-- HttpSession£ºÔÚËùÓÐ»á»°¸ú×Ù¼¼ÊõÖÐ£¬HttpSession¶ÔÏóÊÇ×îÇ¿´óÒ²ÊÇ¹¦ÄÜ×î¶àµÄ¡£µ±Ò»¸öÓÃ»§µÚÒ»´Î·ÃÎÊÄ³¸öÍøÕ¾Ê±»á×Ô¶¯´´½¨HttpSession£¬Ã¿¸öÓÃ»§¿ÉÒÔ·ÃÎÊËû×Ô¼ºµÄHttpSession¡£¿ÉÒÔÍ¨¹ýHttpServletRequest¶ÔÏóµÄgetSession·½·¨»ñµÃHttpSession£¬Í¨¹ýHttpSessionµÄsetAttribute·½·¨¿ÉÒÔ½«Ò»¸öÖµ·ÅÔÚHttpSessionÖÐ£¬Í¨¹ýµ÷ÓÃHttpSession¶ÔÏóµÄgetAttribute·½·¨£¬Í¬Ê±´«ÈëÊôÐÔÃû¾Í¿ÉÒÔ»ñÈ¡±£´æÔÚHttpSessionÖÐµÄ¶ÔÏó¡£ÓëÉÏÃæÈýÖÖ·½Ê½²»Í¬µÄÊÇ£¬HttpSession·ÅÔÚ·þÎñÆ÷µÄÄÚ´æÖÐ£¬Òò´Ë²»Òª½«¹ý´óµÄ¶ÔÏó·ÅÔÚÀïÃæ£¬¼´Ê¹Ä¿Ç°µÄServletÈÝÆ÷¿ÉÒÔÔÚÄÚ´æ½«ÂúÊ±½«HttpSessionÖÐµÄ¶ÔÏóÒÆµ½ÆäËû´æ´¢Éè±¸ÖÐ£¬µ«ÊÇÕâÑùÊÆ±ØÓ°ÏìÐÔÄÜ¡£Ìí¼Óµ½HttpSessionÖÐµÄÖµ¿ÉÒÔÊÇÈÎÒâJava¶ÔÏó£¬Õâ¸ö¶ÔÏó×îºÃÊµÏÖÁËSerializable½Ó¿Ú£¬ÕâÑùServletÈÝÆ÷ÔÚ±ØÒªµÄÊ±ºò¿ÉÒÔ½«ÆäÐòÁÐ»¯µ½ÎÄ¼þÖÐ£¬·ñÔòÔÚÐòÁÐ»¯Ê±¾Í»á³öÏÖÒì³£¡£
+- HttpSessionï¼šåœ¨æ‰€æœ‰ä¼šè¯è·Ÿè¸ªæŠ€æœ¯ä¸­ï¼ŒHttpSessionå¯¹è±¡æ˜¯æœ€å¼ºå¤§ä¹Ÿæ˜¯åŠŸèƒ½æœ€å¤šçš„ã€‚å½“ä¸€ä¸ªç”¨æˆ·ç¬¬ä¸€æ¬¡è®¿é—®æŸä¸ªç½‘ç«™æ—¶ä¼šè‡ªåŠ¨åˆ›å»ºHttpSessionï¼Œæ¯ä¸ªç”¨æˆ·å¯ä»¥è®¿é—®ä»–è‡ªå·±çš„HttpSessionã€‚å¯ä»¥é€šè¿‡HttpServletRequestå¯¹è±¡çš„getSessionæ–¹æ³•èŽ·å¾—HttpSessionï¼Œé€šè¿‡HttpSessionçš„setAttributeæ–¹æ³•å¯ä»¥å°†ä¸€ä¸ªå€¼æ”¾åœ¨HttpSessionä¸­ï¼Œé€šè¿‡è°ƒç”¨HttpSessionå¯¹è±¡çš„getAttributeæ–¹æ³•ï¼ŒåŒæ—¶ä¼ å…¥å±žæ€§åå°±å¯ä»¥èŽ·å–ä¿å­˜åœ¨HttpSessionä¸­çš„å¯¹è±¡ã€‚ä¸Žä¸Šé¢ä¸‰ç§æ–¹å¼ä¸åŒçš„æ˜¯ï¼ŒHttpSessionæ”¾åœ¨æœåŠ¡å™¨çš„å†…å­˜ä¸­ï¼Œå› æ­¤ä¸è¦å°†è¿‡å¤§çš„å¯¹è±¡æ”¾åœ¨é‡Œé¢ï¼Œå³ä½¿ç›®å‰çš„Servletå®¹å™¨å¯ä»¥åœ¨å†…å­˜å°†æ»¡æ—¶å°†HttpSessionä¸­çš„å¯¹è±¡ç§»åˆ°å…¶ä»–å­˜å‚¨è®¾å¤‡ä¸­ï¼Œä½†æ˜¯è¿™æ ·åŠ¿å¿…å½±å“æ€§èƒ½ã€‚æ·»åŠ åˆ°HttpSessionä¸­çš„å€¼å¯ä»¥æ˜¯ä»»æ„Javaå¯¹è±¡ï¼Œè¿™ä¸ªå¯¹è±¡æœ€å¥½å®žçŽ°äº†SerializableæŽ¥å£ï¼Œè¿™æ ·Servletå®¹å™¨åœ¨å¿…è¦çš„æ—¶å€™å¯ä»¥å°†å…¶åºåˆ—åŒ–åˆ°æ–‡ä»¶ä¸­ï¼Œå¦åˆ™åœ¨åºåˆ—åŒ–æ—¶å°±ä¼šå‡ºçŽ°å¼‚å¸¸ã€‚
 
-  **²¹³ä£º**HTML5ÖÐ¿ÉÒÔÊ¹ÓÃWeb Storage¼¼ÊõÍ¨¹ýJavaScriptÀ´±£´æÊý¾Ý£¬ÀýÈç¿ÉÒÔÊ¹ÓÃlocalStorageºÍsessionStorageÀ´±£´æÓÃ»§»á»°µÄÐÅÏ¢£¬Ò²ÄÜ¹»ÊµÏÖ»á»°¸ú×Ù
+  **è¡¥å……ï¼š**HTML5ä¸­å¯ä»¥ä½¿ç”¨Web StorageæŠ€æœ¯é€šè¿‡JavaScriptæ¥ä¿å­˜æ•°æ®ï¼Œä¾‹å¦‚å¯ä»¥ä½¿ç”¨localStorageå’ŒsessionStorageæ¥ä¿å­˜ç”¨æˆ·ä¼šè¯çš„ä¿¡æ¯ï¼Œä¹Ÿèƒ½å¤Ÿå®žçŽ°ä¼šè¯è·Ÿè¸ª
 
 <p id="javaweb-19">
 
-#### ¹ýÂËÆ÷ÓÐÄÄÐ©×÷ÓÃºÍÓÃ·¨£¿
+#### è¿‡æ»¤å™¨æœ‰å“ªäº›ä½œç”¨å’Œç”¨æ³•ï¼Ÿ
 
-Java Web¿ª·¢ÖÐµÄ¹ýÂËÆ÷£¨filter£©ÊÇ´ÓServlet 2.3¹æ·¶¿ªÊ¼Ôö¼ÓµÄ¹¦ÄÜ£¬²¢ÔÚServlet 2.4¹æ·¶ÖÐµÃµ½ÔöÇ¿¡£¶ÔWebÓ¦ÓÃÀ´Ëµ£¬¹ýÂËÆ÷ÊÇÒ»¸ö×¤ÁôÔÚ·þÎñÆ÷¶ËµÄWeb×é¼þ£¬Ëü¿ÉÒÔ½ØÈ¡¿Í»§¶ËºÍ·þÎñÆ÷Ö®¼äµÄÇëÇóÓëÏìÓ¦ÐÅÏ¢£¬²¢¶ÔÕâÐ©ÐÅÏ¢½øÐÐ¹ýÂË¡£µ±WebÈÝÆ÷½ÓÊÜµ½Ò»¸ö¶Ô×ÊÔ´µÄÇëÇóÊ±£¬Ëü½«ÅÐ¶ÏÊÇ·ñÓÐ¹ýÂËÆ÷ÓëÕâ¸ö×ÊÔ´Ïà¹ØÁª¡£Èç¹ûÓÐ£¬ÄÇÃ´ÈÝÆ÷½«°ÑÇëÇó½»¸ø¹ýÂËÆ÷½øÐÐ´¦Àí¡£ÔÚ¹ýÂËÆ÷ÖÐ£¬Äã¿ÉÒÔ¸Ä±äÇëÇóµÄÄÚÈÝ£¬»òÕßÖØÐÂÉèÖÃÇëÇóµÄ±¨Í·ÐÅÏ¢£¬È»ºóÔÙ½«ÇëÇó·¢ËÍ¸øÄ¿±ê×ÊÔ´¡£µ±Ä¿±ê×ÊÔ´¶ÔÇëÇó×÷³öÏìÓ¦Ê±ºò£¬ÈÝÆ÷Í¬Ñù»á½«ÏìÓ¦ÏÈ×ª·¢¸ø¹ýÂËÆ÷£¬ÔÚ¹ýÂËÆ÷ÖÐÄã¿ÉÒÔ¶ÔÏìÓ¦µÄÄÚÈÝ½øÐÐ×ª»»£¬È»ºóÔÙ½«ÏìÓ¦·¢ËÍµ½¿Í»§¶Ë¡£
-³£¼ûµÄ¹ýÂËÆ÷ÓÃÍ¾Ö÷Òª°üÀ¨£º¶ÔÓÃ»§ÇëÇó½øÐÐÍ³Ò»ÈÏÖ¤¡¢¶ÔÓÃ»§µÄ·ÃÎÊÇëÇó½øÐÐ¼ÇÂ¼ºÍÉóºË¡¢¶ÔÓÃ»§·¢ËÍµÄÊý¾Ý½øÐÐ¹ýÂË»òÌæ»»¡¢×ª»»Í¼Ïó¸ñÊ½¡¢¶ÔÏìÓ¦ÄÚÈÝ½øÐÐÑ¹ËõÒÔ¼õÉÙ´«ÊäÁ¿¡¢¶ÔÇëÇó»òÏìÓ¦½øÐÐ¼Ó½âÃÜ´¦Àí¡¢´¥·¢×ÊÔ´·ÃÎÊÊÂ¼þ¡¢¶ÔXMLµÄÊä³öÓ¦ÓÃXSLTµÈ¡£
-ºÍ¹ýÂËÆ÷Ïà¹ØµÄ½Ó¿ÚÖ÷ÒªÓÐ£ºFilter¡¢FilterConfigºÍFilterChain¡£
-±àÂë¹ýÂËÆ÷µÄÀý×Ó£º
+Java Webå¼€å‘ä¸­çš„è¿‡æ»¤å™¨ï¼ˆfilterï¼‰æ˜¯ä»ŽServlet 2.3è§„èŒƒå¼€å§‹å¢žåŠ çš„åŠŸèƒ½ï¼Œå¹¶åœ¨Servlet 2.4è§„èŒƒä¸­å¾—åˆ°å¢žå¼ºã€‚å¯¹Webåº”ç”¨æ¥è¯´ï¼Œè¿‡æ»¤å™¨æ˜¯ä¸€ä¸ªé©»ç•™åœ¨æœåŠ¡å™¨ç«¯çš„Webç»„ä»¶ï¼Œå®ƒå¯ä»¥æˆªå–å®¢æˆ·ç«¯å’ŒæœåŠ¡å™¨ä¹‹é—´çš„è¯·æ±‚ä¸Žå“åº”ä¿¡æ¯ï¼Œå¹¶å¯¹è¿™äº›ä¿¡æ¯è¿›è¡Œè¿‡æ»¤ã€‚å½“Webå®¹å™¨æŽ¥å—åˆ°ä¸€ä¸ªå¯¹èµ„æºçš„è¯·æ±‚æ—¶ï¼Œå®ƒå°†åˆ¤æ–­æ˜¯å¦æœ‰è¿‡æ»¤å™¨ä¸Žè¿™ä¸ªèµ„æºç›¸å…³è”ã€‚å¦‚æžœæœ‰ï¼Œé‚£ä¹ˆå®¹å™¨å°†æŠŠè¯·æ±‚äº¤ç»™è¿‡æ»¤å™¨è¿›è¡Œå¤„ç†ã€‚åœ¨è¿‡æ»¤å™¨ä¸­ï¼Œä½ å¯ä»¥æ”¹å˜è¯·æ±‚çš„å†…å®¹ï¼Œæˆ–è€…é‡æ–°è®¾ç½®è¯·æ±‚çš„æŠ¥å¤´ä¿¡æ¯ï¼Œç„¶åŽå†å°†è¯·æ±‚å‘é€ç»™ç›®æ ‡èµ„æºã€‚å½“ç›®æ ‡èµ„æºå¯¹è¯·æ±‚ä½œå‡ºå“åº”æ—¶å€™ï¼Œå®¹å™¨åŒæ ·ä¼šå°†å“åº”å…ˆè½¬å‘ç»™è¿‡æ»¤å™¨ï¼Œåœ¨è¿‡æ»¤å™¨ä¸­ä½ å¯ä»¥å¯¹å“åº”çš„å†…å®¹è¿›è¡Œè½¬æ¢ï¼Œç„¶åŽå†å°†å“åº”å‘é€åˆ°å®¢æˆ·ç«¯ã€‚
+å¸¸è§çš„è¿‡æ»¤å™¨ç”¨é€”ä¸»è¦åŒ…æ‹¬ï¼šå¯¹ç”¨æˆ·è¯·æ±‚è¿›è¡Œç»Ÿä¸€è®¤è¯ã€å¯¹ç”¨æˆ·çš„è®¿é—®è¯·æ±‚è¿›è¡Œè®°å½•å’Œå®¡æ ¸ã€å¯¹ç”¨æˆ·å‘é€çš„æ•°æ®è¿›è¡Œè¿‡æ»¤æˆ–æ›¿æ¢ã€è½¬æ¢å›¾è±¡æ ¼å¼ã€å¯¹å“åº”å†…å®¹è¿›è¡ŒåŽ‹ç¼©ä»¥å‡å°‘ä¼ è¾“é‡ã€å¯¹è¯·æ±‚æˆ–å“åº”è¿›è¡ŒåŠ è§£å¯†å¤„ç†ã€è§¦å‘èµ„æºè®¿é—®äº‹ä»¶ã€å¯¹XMLçš„è¾“å‡ºåº”ç”¨XSLTç­‰ã€‚
+å’Œè¿‡æ»¤å™¨ç›¸å…³çš„æŽ¥å£ä¸»è¦æœ‰ï¼šFilterã€FilterConfigå’ŒFilterChainã€‚
+ç¼–ç è¿‡æ»¤å™¨çš„ä¾‹å­ï¼š
 ```java
 import java.io.IOException;
 import javax.servlet.Filter;
@@ -563,7 +563,7 @@ public class CodingFilter implements Filter {
 }
 ```
 
-ÏÂÔØ¼ÆÊý¹ýÂËÆ÷µÄÀý×Ó£º
+ä¸‹è½½è®¡æ•°è¿‡æ»¤å™¨çš„ä¾‹å­ï¼š
 ```java
 import java.io.File;
 import java.io.FileReader;
@@ -637,38 +637,38 @@ public class DownloadCounterFilter implements Filter {
 }
 ```
 
-ËµÃ÷£ºÕâÀïÊ¹ÓÃÁËServlet 3¹æ·¶ÖÐµÄ×¢½âÀ´²¿Êð¹ýÂËÆ÷£¬µ±È»Ò²¿ÉÒÔÔÚweb.xmlÖÐÊ¹ÓÃ<filter>ºÍ<filter-mapping>±êÇ©²¿Êð¹ýÂËÆ÷¡£
+è¯´æ˜Žï¼šè¿™é‡Œä½¿ç”¨äº†Servlet 3è§„èŒƒä¸­çš„æ³¨è§£æ¥éƒ¨ç½²è¿‡æ»¤å™¨ï¼Œå½“ç„¶ä¹Ÿå¯ä»¥åœ¨web.xmlä¸­ä½¿ç”¨<filter>å’Œ<filter-mapping>æ ‡ç­¾éƒ¨ç½²è¿‡æ»¤å™¨ã€‚
 
 <p id="javaweb-20">
 
-#### ¼àÌýÆ÷ÓÐÄÄÐ©×÷ÓÃºÍÓÃ·¨£¿
+#### ç›‘å¬å™¨æœ‰å“ªäº›ä½œç”¨å’Œç”¨æ³•ï¼Ÿ
 
-Java Web¿ª·¢ÖÐµÄ¼àÌýÆ÷£¨listener£©¾ÍÊÇapplication¡¢session¡¢requestÈý¸ö¶ÔÏó´´½¨¡¢Ïú»Ù»òÕßÍùÆäÖÐÌí¼ÓÐÞ¸ÄÉ¾³ýÊôÐÔÊ±×Ô¶¯Ö´ÐÐ´úÂëµÄ¹¦ÄÜ×é¼þ£¬ÈçÏÂËùÊ¾£º
+Java Webå¼€å‘ä¸­çš„ç›‘å¬å™¨ï¼ˆlistenerï¼‰å°±æ˜¯applicationã€sessionã€requestä¸‰ä¸ªå¯¹è±¡åˆ›å»ºã€é”€æ¯æˆ–è€…å¾€å…¶ä¸­æ·»åŠ ä¿®æ”¹åˆ é™¤å±žæ€§æ—¶è‡ªåŠ¨æ‰§è¡Œä»£ç çš„åŠŸèƒ½ç»„ä»¶ï¼Œå¦‚ä¸‹æ‰€ç¤ºï¼š
 
-1. ServletContextListener£º¶ÔServletÉÏÏÂÎÄµÄ´´½¨ºÍÏú»Ù½øÐÐ¼àÌý¡£
+1. ServletContextListenerï¼šå¯¹Servletä¸Šä¸‹æ–‡çš„åˆ›å»ºå’Œé”€æ¯è¿›è¡Œç›‘å¬ã€‚
 
-2. ServletContextAttributeListener£º¼àÌýServletÉÏÏÂÎÄÊôÐÔµÄÌí¼Ó¡¢É¾³ýºÍÌæ»»¡£
+2. ServletContextAttributeListenerï¼šç›‘å¬Servletä¸Šä¸‹æ–‡å±žæ€§çš„æ·»åŠ ã€åˆ é™¤å’Œæ›¿æ¢ã€‚
 
-3. HttpSessionListener£º¶ÔSessionµÄ´´½¨ºÍÏú»Ù½øÐÐ¼àÌý¡£
-  ²¹³ä£ºsessionµÄÏú»ÙÓÐÁ½ÖÖÇé¿ö£º
+3. HttpSessionListenerï¼šå¯¹Sessionçš„åˆ›å»ºå’Œé”€æ¯è¿›è¡Œç›‘å¬ã€‚
+  è¡¥å……ï¼šsessionçš„é”€æ¯æœ‰ä¸¤ç§æƒ…å†µï¼š
 
-    -  session³¬Ê±£¨¿ÉÒÔÔÚweb.xmlÖÐÍ¨¹ý<session-config>/<session-timeout>±êÇ©ÅäÖÃ³¬Ê±Ê±¼ä£©£»
+    -  sessionè¶…æ—¶ï¼ˆå¯ä»¥åœ¨web.xmlä¸­é€šè¿‡<session-config>/<session-timeout>æ ‡ç­¾é…ç½®è¶…æ—¶æ—¶é—´ï¼‰ï¼›
 
-    -  Í¨¹ýµ÷ÓÃsession¶ÔÏóµÄinvalidate()·½·¨Ê¹sessionÊ§Ð§¡£
+    -  é€šè¿‡è°ƒç”¨sessionå¯¹è±¡çš„invalidate()æ–¹æ³•ä½¿sessionå¤±æ•ˆã€‚
 
-4. HttpSessionAttributeListener£º¶ÔSession¶ÔÏóÖÐÊôÐÔµÄÌí¼Ó¡¢É¾³ýºÍÌæ»»½øÐÐ¼àÌý¡£
+4. HttpSessionAttributeListenerï¼šå¯¹Sessionå¯¹è±¡ä¸­å±žæ€§çš„æ·»åŠ ã€åˆ é™¤å’Œæ›¿æ¢è¿›è¡Œç›‘å¬ã€‚
 
-5. ServletRequestListener£º¶ÔÇëÇó¶ÔÏóµÄ³õÊ¼»¯ºÍÏú»Ù½øÐÐ¼àÌý¡£
+5. ServletRequestListenerï¼šå¯¹è¯·æ±‚å¯¹è±¡çš„åˆå§‹åŒ–å’Œé”€æ¯è¿›è¡Œç›‘å¬ã€‚
 
-6. ServletRequestAttributeListener£º¶ÔÇëÇó¶ÔÏóÊôÐÔµÄÌí¼Ó¡¢É¾³ýºÍÌæ»»½øÐÐ¼àÌý¡£
+6. ServletRequestAttributeListenerï¼šå¯¹è¯·æ±‚å¯¹è±¡å±žæ€§çš„æ·»åŠ ã€åˆ é™¤å’Œæ›¿æ¢è¿›è¡Œç›‘å¬ã€‚
 
-   ÏÂÃæÊÇÒ»¸öÍ³¼ÆÍøÕ¾×î¶àÔÚÏßÈËÊý¼àÌýÆ÷µÄÀý×Ó£º
+   ä¸‹é¢æ˜¯ä¸€ä¸ªç»Ÿè®¡ç½‘ç«™æœ€å¤šåœ¨çº¿äººæ•°ç›‘å¬å™¨çš„ä¾‹å­ï¼š
 
 ```java
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
-/** ÉÏÏÂÎÄ¼àÌýÆ÷£¬ÔÚ·þÎñÆ÷Æô¶¯Ê±³õÊ¼»¯onLineCountºÍmaxOnLineCountÁ½¸ö±äÁ¿²¢½«ÆäÖÃÓÚ·þÎñÆ÷ÉÏÏÂÎÄ£¨ServletContext£©ÖÐ£¬Æä³õÊ¼Öµ¶¼ÊÇ0
+/** ä¸Šä¸‹æ–‡ç›‘å¬å™¨ï¼Œåœ¨æœåŠ¡å™¨å¯åŠ¨æ—¶åˆå§‹åŒ–onLineCountå’ŒmaxOnLineCountä¸¤ä¸ªå˜é‡å¹¶å°†å…¶ç½®äºŽæœåŠ¡å™¨ä¸Šä¸‹æ–‡ï¼ˆServletContextï¼‰ä¸­ï¼Œå…¶åˆå§‹å€¼éƒ½æ˜¯0
 */
 @WebListener
 public class InitListener implements ServletContextListener {
@@ -689,7 +689,7 @@ import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 /**
-»á»°¼àÌýÆ÷£¬ÔÚÓÃ»§»á»°´´½¨ºÍÏú»ÙµÄÊ±ºò¸ù¾ÝÇé¿öÐÞ¸ÄonLineCountºÍmaxOnLineCountµÄÖµ
+ä¼šè¯ç›‘å¬å™¨ï¼Œåœ¨ç”¨æˆ·ä¼šè¯åˆ›å»ºå’Œé”€æ¯çš„æ—¶å€™æ ¹æ®æƒ…å†µä¿®æ”¹onLineCountå’ŒmaxOnLineCountçš„å€¼
 */
 @WebListener
 public class MaxCountListener implements HttpSessionListener {
@@ -716,16 +716,16 @@ public class MaxCountListener implements HttpSessionListener {
 }
 ```
 
-ËµÃ÷£ºÕâÀïÊ¹ÓÃÁËServlet 3¹æ·¶ÖÐµÄ@WebListener×¢½âÅäÖÃ¼àÌýÆ÷£¬µ±È»Äã¿ÉÒÔÔÚweb.xmlÎÄ¼þÖÐÓÃ<listener>±êÇ©ÅäÖÃ¼àÌýÆ÷¡£
+è¯´æ˜Žï¼šè¿™é‡Œä½¿ç”¨äº†Servlet 3è§„èŒƒä¸­çš„@WebListeneræ³¨è§£é…ç½®ç›‘å¬å™¨ï¼Œå½“ç„¶ä½ å¯ä»¥åœ¨web.xmlæ–‡ä»¶ä¸­ç”¨<listener>æ ‡ç­¾é…ç½®ç›‘å¬å™¨ã€‚
 
 <p id="javaweb-21">
 
-#### web.xmlÎÄ¼þÖÐ¿ÉÒÔÅäÖÃÄÄÐ©ÄÚÈÝ£¿
+#### web.xmlæ–‡ä»¶ä¸­å¯ä»¥é…ç½®å“ªäº›å†…å®¹ï¼Ÿ
 
-web.xmlÓÃÓÚÅäÖÃWebÓ¦ÓÃµÄÏà¹ØÐÅÏ¢£¬Èç£º¼àÌýÆ÷£¨listener£©¡¢¹ýÂËÆ÷£¨filter£©¡¢Servlet¡¢Ïà¹Ø²ÎÊý¡¢»á»°³¬Ê±Ê±¼ä¡¢°²È«ÑéÖ¤·½Ê½¡¢´íÎóÒ³ÃæµÈ£¬ÏÂÃæÊÇÒ»Ð©¿ª·¢ÖÐ³£¼ûµÄÅäÖÃ£º
+web.xmlç”¨äºŽé…ç½®Webåº”ç”¨çš„ç›¸å…³ä¿¡æ¯ï¼Œå¦‚ï¼šç›‘å¬å™¨ï¼ˆlistenerï¼‰ã€è¿‡æ»¤å™¨ï¼ˆfilterï¼‰ã€Servletã€ç›¸å…³å‚æ•°ã€ä¼šè¯è¶…æ—¶æ—¶é—´ã€å®‰å…¨éªŒè¯æ–¹å¼ã€é”™è¯¯é¡µé¢ç­‰ï¼Œä¸‹é¢æ˜¯ä¸€äº›å¼€å‘ä¸­å¸¸è§çš„é…ç½®ï¼š
 
 ```xml
-<--ÅäÖÃSpringÉÏÏÂÎÄ¼ÓÔØ¼àÌýÆ÷¼ÓÔØSpringÅäÖÃÎÄ¼þ²¢´´½¨IoCÈÝÆ÷£º-->
+<--é…ç½®Springä¸Šä¸‹æ–‡åŠ è½½ç›‘å¬å™¨åŠ è½½Springé…ç½®æ–‡ä»¶å¹¶åˆ›å»ºIoCå®¹å™¨ï¼š-->
 <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath:applicationContext.xml</param-value>
@@ -736,7 +736,7 @@ web.xmlÓÃÓÚÅäÖÃWebÓ¦ÓÃµÄÏà¹ØÐÅÏ¢£¬Èç£º¼àÌýÆ÷£¨listener£©¡¢¹ýÂËÆ÷£¨filter£©¡¢Serv
     </listener-class>
 </listener>
     
-<--ÅäÖÃSpringµÄOpenSessionInView¹ýÂËÆ÷À´½â¾öÑÓ³Ù¼ÓÔØºÍHibernate»á»°¹Ø±ÕµÄÃ¬¶Ü£º-->
+<--é…ç½®Springçš„OpenSessionInViewè¿‡æ»¤å™¨æ¥è§£å†³å»¶è¿ŸåŠ è½½å’ŒHibernateä¼šè¯å…³é—­çš„çŸ›ç›¾ï¼š-->
 <filter>
     <filter-name>openSessionInView</filter-name>
     <filter-class>
@@ -748,12 +748,12 @@ web.xmlÓÃÓÚÅäÖÃWebÓ¦ÓÃµÄÏà¹ØÐÅÏ¢£¬Èç£º¼àÌýÆ÷£¨listener£©¡¢¹ýÂËÆ÷£¨filter£©¡¢Serv
     <url-pattern>/*</url-pattern>
 </filter-mapping>
     
-<--ÅäÖÃ»á»°³¬Ê±Ê±¼äÎª10·ÖÖÓ£º-->
+<--é…ç½®ä¼šè¯è¶…æ—¶æ—¶é—´ä¸º10åˆ†é’Ÿï¼š-->
 <session-config>
     <session-timeout>10</session-timeout>
 </session-config>
     
-<--ÅäÖÃ404ºÍExceptionµÄ´íÎóÒ³Ãæ£º-->
+<--é…ç½®404å’ŒExceptionçš„é”™è¯¯é¡µé¢ï¼š-->
 <error-page>
     <error-code>404</error-code>
     <location>/error.jsp</location>
@@ -763,7 +763,7 @@ web.xmlÓÃÓÚÅäÖÃWebÓ¦ÓÃµÄÏà¹ØÐÅÏ¢£¬Èç£º¼àÌýÆ÷£¨listener£©¡¢¹ýÂËÆ÷£¨filter£©¡¢Serv
     <location>/error.jsp</location>
 </error-page>
     
-<--ÅäÖÃ°²È«ÈÏÖ¤·½Ê½£º-->
+<--é…ç½®å®‰å…¨è®¤è¯æ–¹å¼ï¼š-->
 <security-constraint>
     <web-resource-collection>
         <web-resource-name>ProtectedArea</web-resource-name>
@@ -783,44 +783,44 @@ web.xmlÓÃÓÚÅäÖÃWebÓ¦ÓÃµÄÏà¹ØÐÅÏ¢£¬Èç£º¼àÌýÆ÷£¨listener£©¡¢¹ýÂËÆ÷£¨filter£©¡¢Serv
 </security-role>
 ```
 
-ËµÃ÷£º¶ÔServlet£¨Ð¡·þÎñ£©¡¢Listener£¨¼àÌýÆ÷£©ºÍFilter£¨¹ýÂËÆ÷£©µÈWeb×é¼þµÄÅäÖÃ£¬Servlet 3¹æ·¶Ìá¹©ÁË»ùÓÚ×¢½âµÄÅäÖÃ·½Ê½£¬¿ÉÒÔ·Ö±ðÊ¹ÓÃ@WebServlet¡¢@WebListener¡¢@WebFilter×¢½â½øÐÐÅäÖÃ¡£²¹³ä£ºÈç¹ûWebÌá¹©ÁËÓÐ¼ÛÖµµÄÉÌÒµÐÅÏ¢»òÕßÊÇÃô¸ÐÊý¾Ý£¬ÄÇÃ´Õ¾µãµÄ°²È«ÐÔ¾ÍÊÇ±ØÐë¿¼ÂÇµÄÎÊÌâ¡£°²È«ÈÏÖ¤ÊÇÊµÏÖ°²È«ÐÔµÄÖØÒªÊÖ¶Î£¬ÈÏÖ¤¾ÍÊÇÒª½â¾ö¡°Are you who you say you are?¡±µÄÎÊÌâ¡£ÈÏÖ¤µÄ·½Ê½·Ç³£¶à£¬¼òµ¥ËµÀ´¿ÉÒÔ·ÖÎªÈýÀà£º
+è¯´æ˜Žï¼šå¯¹Servletï¼ˆå°æœåŠ¡ï¼‰ã€Listenerï¼ˆç›‘å¬å™¨ï¼‰å’ŒFilterï¼ˆè¿‡æ»¤å™¨ï¼‰ç­‰Webç»„ä»¶çš„é…ç½®ï¼ŒServlet 3è§„èŒƒæä¾›äº†åŸºäºŽæ³¨è§£çš„é…ç½®æ–¹å¼ï¼Œå¯ä»¥åˆ†åˆ«ä½¿ç”¨@WebServletã€@WebListenerã€@WebFilteræ³¨è§£è¿›è¡Œé…ç½®ã€‚è¡¥å……ï¼šå¦‚æžœWebæä¾›äº†æœ‰ä»·å€¼çš„å•†ä¸šä¿¡æ¯æˆ–è€…æ˜¯æ•æ„Ÿæ•°æ®ï¼Œé‚£ä¹ˆç«™ç‚¹çš„å®‰å…¨æ€§å°±æ˜¯å¿…é¡»è€ƒè™‘çš„é—®é¢˜ã€‚å®‰å…¨è®¤è¯æ˜¯å®žçŽ°å®‰å…¨æ€§çš„é‡è¦æ‰‹æ®µï¼Œè®¤è¯å°±æ˜¯è¦è§£å†³â€œAre you who you say you are?â€çš„é—®é¢˜ã€‚è®¤è¯çš„æ–¹å¼éžå¸¸å¤šï¼Œç®€å•è¯´æ¥å¯ä»¥åˆ†ä¸ºä¸‰ç±»ï¼š
 
- A. What you know? ? ¿ÚÁî 
+ A. What you know? ? å£ä»¤ 
 
-B. What you have? ? Êý×ÖÖ¤Êé£¨U¶Ü¡¢ÃÜ±£¿¨£©
+B. What you have? ? æ•°å­—è¯ä¹¦ï¼ˆUç›¾ã€å¯†ä¿å¡ï¼‰
 
-C. Who you are? ?Ö¸ÎÆÊ¶±ð¡¢ºçÄ¤Ê¶±ð ÔÚTomcatÖÐ¿ÉÒÔÍ¨¹ý½¨Á¢°²È«Ì×½Ó×Ö²ã£¨Secure Socket Layer, SSL£©ÒÔ¼°Í¨¹ý»ù±¾ÑéÖ¤»ò±íµ¥ÑéÖ¤À´ÊµÏÖ¶Ô°²È«ÐÔµÄÖ§³Ö¡£
+C. Who you are? ?æŒ‡çº¹è¯†åˆ«ã€è™¹è†œè¯†åˆ« åœ¨Tomcatä¸­å¯ä»¥é€šè¿‡å»ºç«‹å®‰å…¨å¥—æŽ¥å­—å±‚ï¼ˆSecure Socket Layer, SSLï¼‰ä»¥åŠé€šè¿‡åŸºæœ¬éªŒè¯æˆ–è¡¨å•éªŒè¯æ¥å®žçŽ°å¯¹å®‰å…¨æ€§çš„æ”¯æŒã€‚
 
 <p id="javaweb-22">
 
-#### ÄãµÄÏîÄ¿ÖÐÊ¹ÓÃ¹ýÄÄÐ©JSTL±êÇ©£¿
+#### ä½ çš„é¡¹ç›®ä¸­ä½¿ç”¨è¿‡å“ªäº›JSTLæ ‡ç­¾ï¼Ÿ
 
-ÏîÄ¿ÖÐÖ÷ÒªÊ¹ÓÃÁËJSTLµÄºËÐÄ±êÇ©¿â£¬°üÀ¨<c:if>¡¢<c:choose>¡¢<c: when>¡¢<c: otherwise>¡¢<c:forEach>µÈ£¬Ö÷ÒªÓÃÓÚ¹¹ÔìÑ­»·ºÍ·ÖÖ§½á¹¹ÒÔ¿ØÖÆÏÔÊ¾Âß¼­¡£
-ËµÃ÷£ºËäÈ»JSTL±êÇ©¿âÌá¹©ÁËcore¡¢sql¡¢fmt¡¢xmlµÈ±êÇ©¿â£¬µ«ÊÇÊµ¼Ê¿ª·¢ÖÐ½¨ÒéÖ»Ê¹ÓÃºËÐÄ±êÇ©¿â£¨core£©£¬¶øÇÒ×îºÃÖ»Ê¹ÓÃ·ÖÖ§ºÍÑ­»·±êÇ©²¢¸¨ÒÔ±í´ïÊ½ÓïÑÔ£¨EL£©£¬ÕâÑù²ÅÄÜÕæÕý×öµ½Êý¾ÝÏÔÊ¾ºÍÒµÎñÂß¼­µÄ·ÖÀë£¬Õâ²ÅÊÇ×î¼ÑÊµ¼ù¡£
+é¡¹ç›®ä¸­ä¸»è¦ä½¿ç”¨äº†JSTLçš„æ ¸å¿ƒæ ‡ç­¾åº“ï¼ŒåŒ…æ‹¬<c:if>ã€<c:choose>ã€<c: when>ã€<c: otherwise>ã€<c:forEach>ç­‰ï¼Œä¸»è¦ç”¨äºŽæž„é€ å¾ªçŽ¯å’Œåˆ†æ”¯ç»“æž„ä»¥æŽ§åˆ¶æ˜¾ç¤ºé€»è¾‘ã€‚
+è¯´æ˜Žï¼šè™½ç„¶JSTLæ ‡ç­¾åº“æä¾›äº†coreã€sqlã€fmtã€xmlç­‰æ ‡ç­¾åº“ï¼Œä½†æ˜¯å®žé™…å¼€å‘ä¸­å»ºè®®åªä½¿ç”¨æ ¸å¿ƒæ ‡ç­¾åº“ï¼ˆcoreï¼‰ï¼Œè€Œä¸”æœ€å¥½åªä½¿ç”¨åˆ†æ”¯å’Œå¾ªçŽ¯æ ‡ç­¾å¹¶è¾…ä»¥è¡¨è¾¾å¼è¯­è¨€ï¼ˆELï¼‰ï¼Œè¿™æ ·æ‰èƒ½çœŸæ­£åšåˆ°æ•°æ®æ˜¾ç¤ºå’Œä¸šåŠ¡é€»è¾‘çš„åˆ†ç¦»ï¼Œè¿™æ‰æ˜¯æœ€ä½³å®žè·µã€‚
 
 <p id="javaweb-23">
 
-#### Ê¹ÓÃ±êÇ©¿âÓÐÊ²Ã´ºÃ´¦£¿ÈçºÎ×Ô¶¨ÒåJSP±êÇ©£¿
+#### ä½¿ç”¨æ ‡ç­¾åº“æœ‰ä»€ä¹ˆå¥½å¤„ï¼Ÿå¦‚ä½•è‡ªå®šä¹‰JSPæ ‡ç­¾ï¼Ÿ
 
-- ·ÖÀëJSPÒ³ÃæµÄÄÚÈÝºÍÂß¼­£¬¼ò»¯ÁËWeb¿ª·¢£»
+- åˆ†ç¦»JSPé¡µé¢çš„å†…å®¹å’Œé€»è¾‘ï¼Œç®€åŒ–äº†Webå¼€å‘ï¼›
 
-- ¿ª·¢Õß¿ÉÒÔ´´½¨×Ô¶¨Òå±êÇ©À´·â×°ÒµÎñÂß¼­ºÍÏÔÊ¾Âß¼­£»
+- å¼€å‘è€…å¯ä»¥åˆ›å»ºè‡ªå®šä¹‰æ ‡ç­¾æ¥å°è£…ä¸šåŠ¡é€»è¾‘å’Œæ˜¾ç¤ºé€»è¾‘ï¼›
 
-- ±êÇ©¾ßÓÐºÜºÃµÄ¿ÉÒÆÖ²ÐÔ¡¢¿ÉÎ¬»¤ÐÔºÍ¿ÉÖØÓÃÐÔ£» 
+- æ ‡ç­¾å…·æœ‰å¾ˆå¥½çš„å¯ç§»æ¤æ€§ã€å¯ç»´æŠ¤æ€§å’Œå¯é‡ç”¨æ€§ï¼› 
 
-- ±ÜÃâÁË¶ÔScriptlet£¨Ð¡½Å±¾£©µÄÊ¹ÓÃ£¨ºÜ¶à¹«Ë¾µÄÏîÄ¿¿ª·¢¶¼²»ÔÊÐíÔÚJSPÖÐÊéÐ´Ð¡½Å±¾£©
+- é¿å…äº†å¯¹Scriptletï¼ˆå°è„šæœ¬ï¼‰çš„ä½¿ç”¨ï¼ˆå¾ˆå¤šå…¬å¸çš„é¡¹ç›®å¼€å‘éƒ½ä¸å…è®¸åœ¨JSPä¸­ä¹¦å†™å°è„šæœ¬ï¼‰
 
-×Ô¶¨ÒåJSP±êÇ©°üÀ¨ÒÔÏÂ¼¸¸ö²½Öè£º
+è‡ªå®šä¹‰JSPæ ‡ç­¾åŒ…æ‹¬ä»¥ä¸‹å‡ ä¸ªæ­¥éª¤ï¼š
 
-1. ±àÐ´Ò»¸öJavaÀàÊµÏÖÊµÏÖTag/BodyTag/IterationTag½Ó¿Ú£¨¿ª·¢ÖÐÍ¨³£²»Ö±½ÓÊµÏÖÕâÐ©½Ó¿Ú¶øÊÇ¼Ì³ÐTagSupport/BodyTagSupport/SimpleTagSupportÀà£¬ÕâÊÇ¶ÔÈ±Ê¡ÊÊÅäÄ£Ê½µÄÓ¦ÓÃ£©
+1. ç¼–å†™ä¸€ä¸ªJavaç±»å®žçŽ°å®žçŽ°Tag/BodyTag/IterationTagæŽ¥å£ï¼ˆå¼€å‘ä¸­é€šå¸¸ä¸ç›´æŽ¥å®žçŽ°è¿™äº›æŽ¥å£è€Œæ˜¯ç»§æ‰¿TagSupport/BodyTagSupport/SimpleTagSupportç±»ï¼Œè¿™æ˜¯å¯¹ç¼ºçœé€‚é…æ¨¡å¼çš„åº”ç”¨ï¼‰
 
-2. ÖØÐ´doStartTag()¡¢doEndTag()µÈ·½·¨£¬¶¨Òå±êÇ©ÒªÍê³ÉµÄ¹¦ÄÜ
+2. é‡å†™doStartTag()ã€doEndTag()ç­‰æ–¹æ³•ï¼Œå®šä¹‰æ ‡ç­¾è¦å®Œæˆçš„åŠŸèƒ½
 
-3. ±àÐ´À©Õ¹ÃûÎªtldµÄ±êÇ©ÃèÊöÎÄ¼þ¶Ô×Ô¶¨Òå±êÇ©½øÐÐ²¿Êð£¬tldÎÄ¼þÍ¨³£·ÅÔÚWEB-INFÎÄ¼þ¼ÐÏÂ»òÆä×ÓÄ¿Â¼ÖÐ- ÔÚJSPÒ³ÃæÖÐÊ¹ÓÃtaglibÖ¸ÁîÒýÓÃ¸Ã±êÇ©¿â¡£
+3. ç¼–å†™æ‰©å±•åä¸ºtldçš„æ ‡ç­¾æè¿°æ–‡ä»¶å¯¹è‡ªå®šä¹‰æ ‡ç­¾è¿›è¡Œéƒ¨ç½²ï¼Œtldæ–‡ä»¶é€šå¸¸æ”¾åœ¨WEB-INFæ–‡ä»¶å¤¹ä¸‹æˆ–å…¶å­ç›®å½•ä¸­- åœ¨JSPé¡µé¢ä¸­ä½¿ç”¨taglibæŒ‡ä»¤å¼•ç”¨è¯¥æ ‡ç­¾åº“ã€‚
 
 
-ÏÂÃæÊÇÒ»¸ö×Ô¶¨Òå±êÇ©¿âµÄÀý×Ó¡£
-²½Öè1 - ±êÇ©ÀàÔ´´úÂëTimeTag.java£º
+ä¸‹é¢æ˜¯ä¸€ä¸ªè‡ªå®šä¹‰æ ‡ç­¾åº“çš„ä¾‹å­ã€‚
+æ­¥éª¤1 - æ ‡ç­¾ç±»æºä»£ç TimeTag.javaï¼š
 
 ```java
 package com.jackfrued.tags;
@@ -859,7 +859,7 @@ public class TimeTag extends TagSupport {
     }
 }
 ```
-²½Öè2 - ±àÐ´±êÇ©¿âÃèÊöÎÄ¼þmy.tld£º
+æ­¥éª¤2 - ç¼–å†™æ ‡ç­¾åº“æè¿°æ–‡ä»¶my.tldï¼š
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -868,7 +868,7 @@ public class TimeTag extends TagSupport {
         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
                             http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
         version="2.0">
-    <description>¶¨Òå±êÇ©¿â</description>
+    <description>å®šä¹‰æ ‡ç­¾åº“</description>
     <tlib-version>1.0</tlib-version>
     <short-name>MyTag</short-name>
     <tag>
@@ -888,7 +888,7 @@ public class TimeTag extends TagSupport {
     </tag>
 </taglib>
 ```
-²½Öè3 - ÔÚJSPÒ³ÃæÖÐÊ¹ÓÃ×Ô¶¨Òå±êÇ©£º
+æ­¥éª¤3 - åœ¨JSPé¡µé¢ä¸­ä½¿ç”¨è‡ªå®šä¹‰æ ‡ç­¾ï¼š
 ```jsp
 <%@ page pageEncoding="UTF-8"%>
 <%@ taglib prefix="my" uri="/WEB-INF/tld/my.tld" %>
@@ -900,7 +900,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 <html>
     <head>
         <base href="<%=basePath%>">
-        <title>Ê×Ò³</title>
+        <title>é¦–é¡µ</title>
         <style type="text/css">
             * { font-family: "Arial"; font-size:72px; }
         </style>
@@ -911,14 +911,14 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 </html>
 ```
 
-ÌáÊ¾£ºÈç¹ûÒª½«×Ô¶¨ÒåµÄ±êÇ©¿â·¢²¼³ÉJARÎÄ¼þ£¬ÐèÒª½«±êÇ©¿âÃèÊöÎÄ¼þ£¨tldÎÄ¼þ£©·ÅÔÚJARÎÄ¼þµÄMETA-INFÄ¿Â¼ÏÂ£¬¿ÉÒÔJDKÖÐµÄjar¹¤¾ßÍê³ÉJARÎÄ¼þµÄÉú³É¡£
+æç¤ºï¼šå¦‚æžœè¦å°†è‡ªå®šä¹‰çš„æ ‡ç­¾åº“å‘å¸ƒæˆJARæ–‡ä»¶ï¼Œéœ€è¦å°†æ ‡ç­¾åº“æè¿°æ–‡ä»¶ï¼ˆtldæ–‡ä»¶ï¼‰æ”¾åœ¨JARæ–‡ä»¶çš„META-INFç›®å½•ä¸‹ï¼Œå¯ä»¥JDKä¸­çš„jarå·¥å…·å®ŒæˆJARæ–‡ä»¶çš„ç”Ÿæˆã€‚
 
 <p id="javaweb-24">
 
-#### ËµÒ»ÏÂ±í´ïÊ½ÓïÑÔ£¨EL£©µÄÒþÊ½¶ÔÏó¼°Æä×÷ÓÃ
+#### è¯´ä¸€ä¸‹è¡¨è¾¾å¼è¯­è¨€ï¼ˆELï¼‰çš„éšå¼å¯¹è±¡åŠå…¶ä½œç”¨
 
-ELµÄÒþÊ½¶ÔÏó°üÀ¨£ºpageContext¡¢initParam£¨·ÃÎÊÉÏÏÂÎÄ²ÎÊý£©¡¢param£¨·ÃÎÊÇëÇó²ÎÊý£©¡¢paramValues¡¢header£¨·ÃÎÊÇëÇóÍ·£©¡¢headerValues¡¢cookie£¨·ÃÎÊcookie£©¡¢applicationScope£¨·ÃÎÊapplication×÷ÓÃÓò£©¡¢sessionScope£¨·ÃÎÊsession×÷ÓÃÓò£©¡¢requestScope£¨·ÃÎÊrequest×÷ÓÃÓò£©¡¢pageScope£¨·ÃÎÊpage×÷ÓÃÓò£©¡£
-ÓÃ·¨ÈçÏÂËùÊ¾£º
+ELçš„éšå¼å¯¹è±¡åŒ…æ‹¬ï¼špageContextã€initParamï¼ˆè®¿é—®ä¸Šä¸‹æ–‡å‚æ•°ï¼‰ã€paramï¼ˆè®¿é—®è¯·æ±‚å‚æ•°ï¼‰ã€paramValuesã€headerï¼ˆè®¿é—®è¯·æ±‚å¤´ï¼‰ã€headerValuesã€cookieï¼ˆè®¿é—®cookieï¼‰ã€applicationScopeï¼ˆè®¿é—®applicationä½œç”¨åŸŸï¼‰ã€sessionScopeï¼ˆè®¿é—®sessionä½œç”¨åŸŸï¼‰ã€requestScopeï¼ˆè®¿é—®requestä½œç”¨åŸŸï¼‰ã€pageScopeï¼ˆè®¿é—®pageä½œç”¨åŸŸï¼‰ã€‚
+ç”¨æ³•å¦‚ä¸‹æ‰€ç¤ºï¼š
 ${pageContext.request.method}
 ${pageContext["request"]["method"]}
 ${pageContext.request["method"]}
@@ -928,39 +928,39 @@ ${header["accept-language"]}
 ${headerValues["accept-language"][0]}
 ${cookie.jsessionid.value}
 ${sessionScope.loginUser.username}
-²¹³ä£º±í´ïÊ½ÓïÑÔµÄ.ºÍ[]ÔËËã×÷ÓÃÊÇÒ»ÖÂµÄ£¬Î¨Ò»µÄ²î±ðÔÚÓÚÈç¹û·ÃÎÊµÄÊôÐÔÃû²»·ûºÏJava±êÊ¶·ûÃüÃû¹æÔò£¬ÀýÈçÉÏÃæµÄaccept-language¾Í²»ÊÇÒ»¸öÓÐÐ§µÄJava±êÊ¶·û£¬ÄÇÃ´ÕâÊ±ºò¾ÍÖ»ÄÜÓÃ[]ÔËËã·û¶ø²»ÄÜÊ¹ÓÃ.ÔËËã·û»ñÈ¡ËüµÄÖµ
+è¡¥å……ï¼šè¡¨è¾¾å¼è¯­è¨€çš„.å’Œ[]è¿ç®—ä½œç”¨æ˜¯ä¸€è‡´çš„ï¼Œå”¯ä¸€çš„å·®åˆ«åœ¨äºŽå¦‚æžœè®¿é—®çš„å±žæ€§åä¸ç¬¦åˆJavaæ ‡è¯†ç¬¦å‘½åè§„åˆ™ï¼Œä¾‹å¦‚ä¸Šé¢çš„accept-languageå°±ä¸æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„Javaæ ‡è¯†ç¬¦ï¼Œé‚£ä¹ˆè¿™æ—¶å€™å°±åªèƒ½ç”¨[]è¿ç®—ç¬¦è€Œä¸èƒ½ä½¿ç”¨.è¿ç®—ç¬¦èŽ·å–å®ƒçš„å€¼
 
 <p id="javaweb-25">
 
-#### ±í´ïÊ½ÓïÑÔ£¨EL£©Ö§³ÖÄÄÐ©ÔËËã·û£¿
+#### è¡¨è¾¾å¼è¯­è¨€ï¼ˆELï¼‰æ”¯æŒå“ªäº›è¿ç®—ç¬¦ï¼Ÿ
 
-³ýÁË.ºÍ[]ÔËËã·û£¬EL»¹Ìá¹©ÁË£º
+é™¤äº†.å’Œ[]è¿ç®—ç¬¦ï¼ŒELè¿˜æä¾›äº†ï¼š
 
-- ËãÊõÔËËã·û£º+¡¢-¡¢*¡¢/»òdiv¡¢%»òmod
+- ç®—æœ¯è¿ç®—ç¬¦ï¼š+ã€-ã€*ã€/æˆ–divã€%æˆ–mod
 
-- ¹ØÏµÔËËã·û£º==»òeq¡¢!=»òne¡¢>»ògt¡¢>=»òge¡¢<»òlt¡¢<=»òle 
+- å…³ç³»è¿ç®—ç¬¦ï¼š==æˆ–eqã€!=æˆ–neã€>æˆ–gtã€>=æˆ–geã€<æˆ–ltã€<=æˆ–le 
 
-- Âß¼­ÔËËã·û£º&&»òand¡¢||»òor¡¢!»ònot
+- é€»è¾‘è¿ç®—ç¬¦ï¼š&&æˆ–andã€||æˆ–orã€!æˆ–not
 
-- Ìõ¼þÔËËã·û£º${statement? A : B}£¨¸úJavaµÄÌõ¼þÔËËã·ûÀàËÆ£©
+- æ¡ä»¶è¿ç®—ç¬¦ï¼š${statement? A : B}ï¼ˆè·ŸJavaçš„æ¡ä»¶è¿ç®—ç¬¦ç±»ä¼¼ï¼‰
 
-- emptyÔËËã·û£º¼ì²éÒ»¸öÖµÊÇ·ñÎªnull»òÕß¿Õ£¨Êý×é³¤¶ÈÎª0»ò¼¯ºÏÖÐÃ»ÓÐÔªËØÒ²·µ»Øtrue£©
+- emptyè¿ç®—ç¬¦ï¼šæ£€æŸ¥ä¸€ä¸ªå€¼æ˜¯å¦ä¸ºnullæˆ–è€…ç©ºï¼ˆæ•°ç»„é•¿åº¦ä¸º0æˆ–é›†åˆä¸­æ²¡æœ‰å…ƒç´ ä¹Ÿè¿”å›žtrueï¼‰
 
 <p id="javaweb-26">
 
-#### Java Web¿ª·¢µÄModel 1ºÍModel 2·Ö±ðÖ¸µÄÊÇÊ²Ã´£¿
+#### Java Webå¼€å‘çš„Model 1å’ŒModel 2åˆ†åˆ«æŒ‡çš„æ˜¯ä»€ä¹ˆï¼Ÿ
 
-Model 1ÊÇÒÔÒ³ÃæÎªÖÐÐÄµÄJava Web¿ª·¢£¬Ê¹ÓÃJSP+JavaBean¼¼Êõ½«Ò³ÃæÏÔÊ¾Âß¼­ºÍÒµÎñÂß¼­´¦Àí·Ö¿ª£¬JSPÊµÏÖÒ³ÃæÏÔÊ¾£¬JavaBean¶ÔÏóÓÃÀ´±£´æÊý¾ÝºÍÊµÏÖÒµÎñÂß¼­¡£Model 2ÊÇ»ùÓÚMVC£¨Ä£ÐÍ-ÊÓÍ¼-¿ØÖÆÆ÷£¬Model-View-Controller£©¼Ü¹¹Ä£Ê½µÄ¿ª·¢Ä£ÐÍ£¬ÊµÏÖÁËÄ£ÐÍºÍÊÓÍ¼µÄ³¹µ×·ÖÀë£¬ÀûÓÚÍÅ¶Ó¿ª·¢ºÍ´úÂë¸´ÓÃ£¬ÈçÏÂÍ¼ËùÊ¾¡£
+Model 1æ˜¯ä»¥é¡µé¢ä¸ºä¸­å¿ƒçš„Java Webå¼€å‘ï¼Œä½¿ç”¨JSP+JavaBeanæŠ€æœ¯å°†é¡µé¢æ˜¾ç¤ºé€»è¾‘å’Œä¸šåŠ¡é€»è¾‘å¤„ç†åˆ†å¼€ï¼ŒJSPå®žçŽ°é¡µé¢æ˜¾ç¤ºï¼ŒJavaBeanå¯¹è±¡ç”¨æ¥ä¿å­˜æ•°æ®å’Œå®žçŽ°ä¸šåŠ¡é€»è¾‘ã€‚Model 2æ˜¯åŸºäºŽMVCï¼ˆæ¨¡åž‹-è§†å›¾-æŽ§åˆ¶å™¨ï¼ŒModel-View-Controllerï¼‰æž¶æž„æ¨¡å¼çš„å¼€å‘æ¨¡åž‹ï¼Œå®žçŽ°äº†æ¨¡åž‹å’Œè§†å›¾çš„å½»åº•åˆ†ç¦»ï¼Œåˆ©äºŽå›¢é˜Ÿå¼€å‘å’Œä»£ç å¤ç”¨ï¼Œå¦‚ä¸‹å›¾æ‰€ç¤ºã€‚
 
   ![](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/src/main/resources/static/images/3.jpg)
 
 <p id="javaweb-27">
 
-#### Servlet 3ÖÐµÄÒì²½´¦ÀíÖ¸µÄÊÇÊ²Ã´£¿
+#### Servlet 3ä¸­çš„å¼‚æ­¥å¤„ç†æŒ‡çš„æ˜¯ä»€ä¹ˆï¼Ÿ
 
-ÔÚServlet 3ÖÐÒýÈëÁËÒ»ÏîÐÂµÄ¼¼Êõ¿ÉÒÔÈÃServletÒì²½´¦ÀíÇëÇó¡£ÓÐÈË¿ÉÄÜ»áÖÊÒÉ£¬¼ÈÈ»¶¼ÓÐ¶àÏß³ÌÁË£¬»¹ÐèÒªÒì²½´¦ÀíÇëÇóÂð£¿´ð°¸ÊÇ¿Ï¶¨µÄ£¬ÒòÎªÈç¹ûÒ»¸öÈÎÎñ´¦ÀíÊ±¼äÏàµ±³¤£¬ÄÇÃ´Servlet»òFilter»áÒ»Ö±Õ¼ÓÃ×ÅÇëÇó´¦ÀíÏß³ÌÖ±µ½ÈÎÎñ½áÊø£¬Ëæ×Å²¢·¢ÓÃ»§µÄÔö¼Ó£¬ÈÝÆ÷½«»áÔâÓöÏß³Ì³¬³öµÄ·çÏÕ£¬ÕâÕâÖÖÇé¿öÏÂºÜ¶àµÄÇëÇó½«»á±»¶Ñ»ýÆðÀ´¶øºóÐøµÄÇëÇó¿ÉÄÜ»áÔâÓö¾Ü¾ø·þÎñ£¬Ö±µ½ÓÐ×ÊÔ´¿ÉÒÔ´¦ÀíÇëÇóÎªÖ¹¡£Òì²½ÌØÐÔ¿ÉÒÔ°ïÖúÓ¦ÓÃ½ÚÊ¡ÈÝÆ÷ÖÐµÄÏß³Ì£¬ÌØ±ðÊÊºÏÖ´ÐÐÊ±¼ä³¤¶øÇÒÓÃ»§ÐèÒªµÃµ½½á¹ûµÄÈÎÎñ£¬Èç¹ûÓÃ»§²»ÐèÒªµÃµ½½á¹ûÔòÖ±½Ó½«Ò»¸öRunnable¶ÔÏó½»¸øExecutor²¢Á¢¼´·µ»Ø¼´¿É¡£
-²¹³ä£º¶àÏß³ÌÔÚJavaµ®Éú³õÆÚÎÞÒÉÊÇÒ»¸öÁÁµã£¬¶øServletµ¥ÊµÀý¶àÏß³ÌµÄ¹¤×÷·½Ê½Ò²ÔøÎªÆäÓ®µÃÃÀÃû£¬È»¶ø¼¼ÊõµÄ·¢Õ¹ÍùÍù»áµß¸²ÎÒÃÇºÜ¶àµÄÈÏÖª£¬¾ÍÈçÍ¬µ±Äê°®ÒòË¹Ì¹µÄÏà¶ÔÂÛµß¸²ÁËÅ£¶ÙµÄ¾­µäÁ¦Ñ§Ò»°ã¡£ÊÂÊµÉÏ£¬Òì²½´¦Àí¾ø²»ÊÇSerlvet 3Ê×´´£¬Èç¹ûÄãÁË½âNode.jsµÄ»°£¬¶ÔServlet 3µÄÕâ¸öÖØÒª¸Ä½ø¾Í²»ÒÔÎªÆæÁË¡£
-ÏÂÃæÊÇÒ»¸öÖ§³ÖÒì²½´¦ÀíÇëÇóµÄServletµÄÀý×Ó¡£
+åœ¨Servlet 3ä¸­å¼•å…¥äº†ä¸€é¡¹æ–°çš„æŠ€æœ¯å¯ä»¥è®©Servletå¼‚æ­¥å¤„ç†è¯·æ±‚ã€‚æœ‰äººå¯èƒ½ä¼šè´¨ç–‘ï¼Œæ—¢ç„¶éƒ½æœ‰å¤šçº¿ç¨‹äº†ï¼Œè¿˜éœ€è¦å¼‚æ­¥å¤„ç†è¯·æ±‚å—ï¼Ÿç­”æ¡ˆæ˜¯è‚¯å®šçš„ï¼Œå› ä¸ºå¦‚æžœä¸€ä¸ªä»»åŠ¡å¤„ç†æ—¶é—´ç›¸å½“é•¿ï¼Œé‚£ä¹ˆServletæˆ–Filterä¼šä¸€ç›´å ç”¨ç€è¯·æ±‚å¤„ç†çº¿ç¨‹ç›´åˆ°ä»»åŠ¡ç»“æŸï¼Œéšç€å¹¶å‘ç”¨æˆ·çš„å¢žåŠ ï¼Œå®¹å™¨å°†ä¼šé­é‡çº¿ç¨‹è¶…å‡ºçš„é£Žé™©ï¼Œè¿™è¿™ç§æƒ…å†µä¸‹å¾ˆå¤šçš„è¯·æ±‚å°†ä¼šè¢«å †ç§¯èµ·æ¥è€ŒåŽç»­çš„è¯·æ±‚å¯èƒ½ä¼šé­é‡æ‹’ç»æœåŠ¡ï¼Œç›´åˆ°æœ‰èµ„æºå¯ä»¥å¤„ç†è¯·æ±‚ä¸ºæ­¢ã€‚å¼‚æ­¥ç‰¹æ€§å¯ä»¥å¸®åŠ©åº”ç”¨èŠ‚çœå®¹å™¨ä¸­çš„çº¿ç¨‹ï¼Œç‰¹åˆ«é€‚åˆæ‰§è¡Œæ—¶é—´é•¿è€Œä¸”ç”¨æˆ·éœ€è¦å¾—åˆ°ç»“æžœçš„ä»»åŠ¡ï¼Œå¦‚æžœç”¨æˆ·ä¸éœ€è¦å¾—åˆ°ç»“æžœåˆ™ç›´æŽ¥å°†ä¸€ä¸ªRunnableå¯¹è±¡äº¤ç»™Executorå¹¶ç«‹å³è¿”å›žå³å¯ã€‚
+è¡¥å……ï¼šå¤šçº¿ç¨‹åœ¨Javaè¯žç”ŸåˆæœŸæ— ç–‘æ˜¯ä¸€ä¸ªäº®ç‚¹ï¼Œè€ŒServletå•å®žä¾‹å¤šçº¿ç¨‹çš„å·¥ä½œæ–¹å¼ä¹Ÿæ›¾ä¸ºå…¶èµ¢å¾—ç¾Žåï¼Œç„¶è€ŒæŠ€æœ¯çš„å‘å±•å¾€å¾€ä¼šé¢ è¦†æˆ‘ä»¬å¾ˆå¤šçš„è®¤çŸ¥ï¼Œå°±å¦‚åŒå½“å¹´çˆ±å› æ–¯å¦çš„ç›¸å¯¹è®ºé¢ è¦†äº†ç‰›é¡¿çš„ç»å…¸åŠ›å­¦ä¸€èˆ¬ã€‚äº‹å®žä¸Šï¼Œå¼‚æ­¥å¤„ç†ç»ä¸æ˜¯Serlvet 3é¦–åˆ›ï¼Œå¦‚æžœä½ äº†è§£Node.jsçš„è¯ï¼Œå¯¹Servlet 3çš„è¿™ä¸ªé‡è¦æ”¹è¿›å°±ä¸ä»¥ä¸ºå¥‡äº†ã€‚
+ä¸‹é¢æ˜¯ä¸€ä¸ªæ”¯æŒå¼‚æ­¥å¤„ç†è¯·æ±‚çš„Servletçš„ä¾‹å­ã€‚
 
 ```java
 import java.io.IOException;
@@ -976,14 +976,14 @@ public class AsyncServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp)
         throws ServletException, IOException {
-        // ¿ªÆôTomcatÒì²½ServletÖ§³Ö
+        // å¼€å¯Tomcatå¼‚æ­¥Servletæ”¯æŒ
         req.setAttribute("org.apache.catalina.ASYNC_SUPPORTED", true);
-        final AsyncContext ctx = req.startAsync(); // Æô¶¯Òì²½´¦ÀíµÄÉÏÏÂÎÄ
+        final AsyncContext ctx = req.startAsync(); // å¯åŠ¨å¼‚æ­¥å¤„ç†çš„ä¸Šä¸‹æ–‡
         // ctx.setTimeout(30000);
         ctx.start(new Runnable() {
             @Override
             public void run() {
-                // ÔÚ´Ë´¦Ìí¼ÓÒì²½´¦ÀíµÄ´úÂë
+                // åœ¨æ­¤å¤„æ·»åŠ å¼‚æ­¥å¤„ç†çš„ä»£ç 
                 ctx.complete();
             }
         });
@@ -993,10 +993,10 @@ public class AsyncServlet extends HttpServlet {
 
 <p id="javaweb-28">
 
-#### ÈçºÎÔÚ»ùÓÚJavaµÄWebÏîÄ¿ÖÐÊµÏÖÎÄ¼þÉÏ´«ºÍÏÂÔØ£¿
+#### å¦‚ä½•åœ¨åŸºäºŽJavaçš„Webé¡¹ç›®ä¸­å®žçŽ°æ–‡ä»¶ä¸Šä¼ å’Œä¸‹è½½ï¼Ÿ
 
-ÔÚSevlet 3 ÒÔÇ°£¬Servlet APIÖÐÃ»ÓÐÖ§³ÖÉÏ´«¹¦ÄÜµÄAPI£¬Òò´ËÒªÊµÏÖÉÏ´«¹¦ÄÜÐèÒªÒýÈëµÚÈý·½¹¤¾ß´ÓPOSTÇëÇóÖÐ»ñµÃÉÏ´«µÄ¸½¼þ»òÕßÍ¨¹ý×ÔÐÐ´¦ÀíÊäÈëÁ÷À´»ñµÃÉÏ´«µÄÎÄ¼þ£¬ÎÒÃÇÍÆ¼öÊ¹ÓÃApacheµÄcommons-fileupload¡£´ÓServlet 3¿ªÊ¼£¬ÎÄ¼þÉÏ´«±äµÃÎÞ±È¼òµ¥£¬ÏàÐÅ¿´¿´ÏÂÃæµÄÀý×ÓÒ»ÇÐ¶¼Çå³þÁË¡£
-ÉÏ´«Ò³Ãæindex.jsp£º
+åœ¨Sevlet 3 ä»¥å‰ï¼ŒServlet APIä¸­æ²¡æœ‰æ”¯æŒä¸Šä¼ åŠŸèƒ½çš„APIï¼Œå› æ­¤è¦å®žçŽ°ä¸Šä¼ åŠŸèƒ½éœ€è¦å¼•å…¥ç¬¬ä¸‰æ–¹å·¥å…·ä»ŽPOSTè¯·æ±‚ä¸­èŽ·å¾—ä¸Šä¼ çš„é™„ä»¶æˆ–è€…é€šè¿‡è‡ªè¡Œå¤„ç†è¾“å…¥æµæ¥èŽ·å¾—ä¸Šä¼ çš„æ–‡ä»¶ï¼Œæˆ‘ä»¬æŽ¨èä½¿ç”¨Apacheçš„commons-fileuploadã€‚ä»ŽServlet 3å¼€å§‹ï¼Œæ–‡ä»¶ä¸Šä¼ å˜å¾—æ— æ¯”ç®€å•ï¼Œç›¸ä¿¡çœ‹çœ‹ä¸‹é¢çš„ä¾‹å­ä¸€åˆ‡éƒ½æ¸…æ¥šäº†ã€‚
+ä¸Šä¼ é¡µé¢index.jspï¼š
 
 ```jsp
 <%@ page pageEncoding="utf-8"%>
@@ -1017,7 +1017,7 @@ public class AsyncServlet extends HttpServlet {
     </body>
 </html>
 ```
-Ö§³ÖÉÏ´«µÄServlet£º
+æ”¯æŒä¸Šä¼ çš„Servletï¼š
 ```java
 package com.jackfrued.servlet;
 import java.io.IOException;
@@ -1034,21 +1034,21 @@ public class UploadServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response) throws ServletException, IOException {
-        // ¿ÉÒÔÓÃrequest.getPart()·½·¨»ñµÃÃûÎªphotoµÄÉÏ´«¸½¼þ
-        // Ò²¿ÉÒÔÓÃrequest.getParts()»ñµÃËùÓÐÉÏ´«¸½¼þ£¨¶àÎÄ¼þÉÏ´«£©
-        // È»ºóÍ¨¹ýÑ­»··Ö±ð´¦ÀíÃ¿Ò»¸öÉÏ´«µÄÎÄ¼þ
+        // å¯ä»¥ç”¨request.getPart()æ–¹æ³•èŽ·å¾—åä¸ºphotoçš„ä¸Šä¼ é™„ä»¶
+        // ä¹Ÿå¯ä»¥ç”¨request.getParts()èŽ·å¾—æ‰€æœ‰ä¸Šä¼ é™„ä»¶ï¼ˆå¤šæ–‡ä»¶ä¸Šä¼ ï¼‰
+        // ç„¶åŽé€šè¿‡å¾ªçŽ¯åˆ†åˆ«å¤„ç†æ¯ä¸€ä¸ªä¸Šä¼ çš„æ–‡ä»¶
         Part part = request.getPart("photo");
         if (part != null && part.getSubmittedFileName().length() > 0) {
-            // ÓÃServletContext¶ÔÏóµÄgetRealPath()·½·¨»ñµÃÉÏ´«ÎÄ¼þ¼ÐµÄ¾ø¶ÔÂ·¾¶
+            // ç”¨ServletContextå¯¹è±¡çš„getRealPath()æ–¹æ³•èŽ·å¾—ä¸Šä¼ æ–‡ä»¶å¤¹çš„ç»å¯¹è·¯å¾„
             String savePath = request.getServletContext().getRealPath("/upload");
-            // Servlet 3.1¹æ·¶ÖÐ¿ÉÒÔÓÃPart¶ÔÏóµÄgetSubmittedFileName()·½·¨»ñµÃÉÏ´«µÄÎÄ¼þÃû
-            // ¸üºÃµÄ×ö·¨ÊÇÎªÉÏ´«µÄÎÄ¼þ½øÐÐÖØÃüÃû£¨±ÜÃâÍ¬ÃûÎÄ¼þµÄÏà»¥¸²¸Ç£©
+            // Servlet 3.1è§„èŒƒä¸­å¯ä»¥ç”¨Partå¯¹è±¡çš„getSubmittedFileName()æ–¹æ³•èŽ·å¾—ä¸Šä¼ çš„æ–‡ä»¶å
+            // æ›´å¥½çš„åšæ³•æ˜¯ä¸ºä¸Šä¼ çš„æ–‡ä»¶è¿›è¡Œé‡å‘½åï¼ˆé¿å…åŒåæ–‡ä»¶çš„ç›¸äº’è¦†ç›–ï¼‰
             part.write(savePath + "/" + part.getSubmittedFileName());
             request.setAttribute("hint", "Upload Successfully!");
         } else {
             request.setAttribute("hint", "Upload failed!");
         }
-        // Ìø×ª»Øµ½ÉÏ´«Ò³Ãæ
+        // è·³è½¬å›žåˆ°ä¸Šä¼ é¡µé¢
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 }
@@ -1056,19 +1056,19 @@ public class UploadServlet extends HttpServlet {
 
 <p id="javaweb-29">
 
-#### ·þÎñÆ÷ÊÕµ½ÓÃ»§Ìá½»µÄ±íµ¥Êý¾Ý£¬µ½µ×ÊÇµ÷ÓÃServletµÄdoGet()»¹ÊÇdoPost()·½·¨£¿
-HTMLµÄ<form>ÔªËØÓÐÒ»¸ömethodÊôÐÔ£¬ÓÃÀ´Ö¸¶¨Ìá½»±íµ¥µÄ·½Ê½£¬ÆäÖµ¿ÉÒÔÊÇget»òpost¡£ÎÒÃÇ×Ô¶¨ÒåµÄServletÒ»°ãÇé¿öÏÂ»áÖØÐ´doGet()»òdoPost()Á½¸ö·½·¨Ö®Ò»»òÈ«²¿£¬Èç¹ûÊÇGETÇëÇó¾Íµ÷ÓÃdoGet()·½·¨£¬Èç¹ûÊÇPOSTÇëÇó¾Íµ÷ÓÃdoPost()·½·¨£¬ÄÇÎªÊ²Ã´ÎªÊ²Ã´ÕâÑùÄØ£¿ÎÒÃÇ×Ô¶¨ÒåµÄServletÍ¨³£¼Ì³Ð×ÔHttpServlet£¬HttpServlet¼Ì³Ð×ÔGenericServlet²¢ÖØÐ´ÁËÆäÖÐµÄservice()·½·¨£¬Õâ¸ö·½·¨ÊÇServlet½Ó¿ÚÖÐ¶¨ÒåµÄ¡£HttpServletÖØÐ´µÄservice()·½·¨»áÏÈ»ñÈ¡ÓÃ»§ÇëÇóµÄ·½·¨£¬È»ºó¸ù¾ÝÇëÇó·½·¨µ÷ÓÃdoGet()¡¢doPost()¡¢doPut()¡¢doDelete()µÈ·½·¨£¬Èç¹ûÔÚ×Ô¶¨ÒåServletÖÐÖØÐ´ÁËÕâÐ©·½·¨£¬ÄÇÃ´ÏÔÈ»»áµ÷ÓÃÖØÐ´¹ýµÄ£¨×Ô¶¨ÒåµÄ£©·½·¨£¬ÕâÏÔÈ»ÊÇ¶ÔÄ£°å·½·¨Ä£Ê½µÄÓ¦ÓÃ£¨Èç¹û²»Àí½â£¬Çë²Î¿¼ÑÖºê²©Ê¿µÄ¡¶JavaÓëÄ£Ê½¡·Ò»ÊéµÄµÚ37ÕÂ£©¡£µ±È»£¬×Ô¶¨ÒåServletÖÐÒ²¿ÉÒÔÖ±½ÓÖØÐ´service()·½·¨£¬ÄÇÃ´²»¹ÜÊÇÄÄÖÖ·½Ê½µÄÇëÇó£¬¶¼¿ÉÒÔÍ¨¹ý×Ô¼ºµÄ´úÂë½øÐÐ´¦Àí£¬Õâ¶ÔÓÚ²»Çø·ÖÇëÇó·½·¨µÄ³¡¾°±È½ÏºÏÊÊ¡£
+#### æœåŠ¡å™¨æ”¶åˆ°ç”¨æˆ·æäº¤çš„è¡¨å•æ•°æ®ï¼Œåˆ°åº•æ˜¯è°ƒç”¨Servletçš„doGet()è¿˜æ˜¯doPost()æ–¹æ³•ï¼Ÿ
+HTMLçš„<form>å…ƒç´ æœ‰ä¸€ä¸ªmethodå±žæ€§ï¼Œç”¨æ¥æŒ‡å®šæäº¤è¡¨å•çš„æ–¹å¼ï¼Œå…¶å€¼å¯ä»¥æ˜¯getæˆ–postã€‚æˆ‘ä»¬è‡ªå®šä¹‰çš„Servletä¸€èˆ¬æƒ…å†µä¸‹ä¼šé‡å†™doGet()æˆ–doPost()ä¸¤ä¸ªæ–¹æ³•ä¹‹ä¸€æˆ–å…¨éƒ¨ï¼Œå¦‚æžœæ˜¯GETè¯·æ±‚å°±è°ƒç”¨doGet()æ–¹æ³•ï¼Œå¦‚æžœæ˜¯POSTè¯·æ±‚å°±è°ƒç”¨doPost()æ–¹æ³•ï¼Œé‚£ä¸ºä»€ä¹ˆä¸ºä»€ä¹ˆè¿™æ ·å‘¢ï¼Ÿæˆ‘ä»¬è‡ªå®šä¹‰çš„Servleté€šå¸¸ç»§æ‰¿è‡ªHttpServletï¼ŒHttpServletç»§æ‰¿è‡ªGenericServletå¹¶é‡å†™äº†å…¶ä¸­çš„service()æ–¹æ³•ï¼Œè¿™ä¸ªæ–¹æ³•æ˜¯ServletæŽ¥å£ä¸­å®šä¹‰çš„ã€‚HttpServleté‡å†™çš„service()æ–¹æ³•ä¼šå…ˆèŽ·å–ç”¨æˆ·è¯·æ±‚çš„æ–¹æ³•ï¼Œç„¶åŽæ ¹æ®è¯·æ±‚æ–¹æ³•è°ƒç”¨doGet()ã€doPost()ã€doPut()ã€doDelete()ç­‰æ–¹æ³•ï¼Œå¦‚æžœåœ¨è‡ªå®šä¹‰Servletä¸­é‡å†™äº†è¿™äº›æ–¹æ³•ï¼Œé‚£ä¹ˆæ˜¾ç„¶ä¼šè°ƒç”¨é‡å†™è¿‡çš„ï¼ˆè‡ªå®šä¹‰çš„ï¼‰æ–¹æ³•ï¼Œè¿™æ˜¾ç„¶æ˜¯å¯¹æ¨¡æ¿æ–¹æ³•æ¨¡å¼çš„åº”ç”¨ï¼ˆå¦‚æžœä¸ç†è§£ï¼Œè¯·å‚è€ƒé˜Žå®åšå£«çš„ã€ŠJavaä¸Žæ¨¡å¼ã€‹ä¸€ä¹¦çš„ç¬¬37ç« ï¼‰ã€‚å½“ç„¶ï¼Œè‡ªå®šä¹‰Servletä¸­ä¹Ÿå¯ä»¥ç›´æŽ¥é‡å†™service()æ–¹æ³•ï¼Œé‚£ä¹ˆä¸ç®¡æ˜¯å“ªç§æ–¹å¼çš„è¯·æ±‚ï¼Œéƒ½å¯ä»¥é€šè¿‡è‡ªå·±çš„ä»£ç è¿›è¡Œå¤„ç†ï¼Œè¿™å¯¹äºŽä¸åŒºåˆ†è¯·æ±‚æ–¹æ³•çš„åœºæ™¯æ¯”è¾ƒåˆé€‚ã€‚
 
 <p id="javaweb-30">
 
-#### JSPÖÐµÄ¾²Ì¬°üº¬ºÍ¶¯Ì¬°üº¬ÓÐÊ²Ã´Çø±ð£¿
+#### JSPä¸­çš„é™æ€åŒ…å«å’ŒåŠ¨æ€åŒ…å«æœ‰ä»€ä¹ˆåŒºåˆ«ï¼Ÿ
 
-¾²Ì¬°üº¬ÊÇÍ¨¹ýJSPµÄincludeÖ¸Áî°üº¬Ò³Ãæ£¬¶¯Ì¬°üº¬ÊÇÍ¨¹ýJSP±ê×¼¶¯×÷<jsp:forward>°üº¬Ò³Ãæ¡£¾²Ì¬°üº¬ÊÇ±àÒëÊ±°üº¬£¬Èç¹û°üº¬µÄÒ³Ãæ²»´æÔÚÔò»á²úÉú±àÒë´íÎó£¬¶øÇÒÁ½¸öÒ³ÃæµÄ"contentType"ÊôÐÔÓ¦±£³ÖÒ»ÖÂ£¬ÒòÎªÁ½¸öÒ³Ãæ»áºÏ¶þÎªÒ»£¬Ö»²úÉúÒ»¸öclassÎÄ¼þ£¬Òò´Ë±»°üº¬Ò³Ãæ·¢ÉúµÄ±ä¶¯ÔÙ°üº¬ËüµÄÒ³Ãæ¸üÐÂÇ°²»»áµÃµ½¸üÐÂ¡£¶¯Ì¬°üº¬ÊÇÔËÐÐÊ±°üº¬£¬¿ÉÒÔÏò±»°üº¬µÄÒ³Ãæ´«µÝ²ÎÊý£¬°üº¬Ò³ÃæºÍ±»°üº¬Ò³ÃæÊÇ¶ÀÁ¢µÄ£¬»á±àÒë³öÁ½¸öclassÎÄ¼þ£¬Èç¹û±»°üº¬µÄÒ³Ãæ²»´æÔÚ£¬²»»á²úÉú±àÒë´íÎó£¬Ò²²»Ó°ÏìÒ³ÃæÆäËû²¿·ÖµÄÖ´ÐÐ¡£´úÂëÈçÏÂËùÊ¾£º
+é™æ€åŒ…å«æ˜¯é€šè¿‡JSPçš„includeæŒ‡ä»¤åŒ…å«é¡µé¢ï¼ŒåŠ¨æ€åŒ…å«æ˜¯é€šè¿‡JSPæ ‡å‡†åŠ¨ä½œ<jsp:forward>åŒ…å«é¡µé¢ã€‚é™æ€åŒ…å«æ˜¯ç¼–è¯‘æ—¶åŒ…å«ï¼Œå¦‚æžœåŒ…å«çš„é¡µé¢ä¸å­˜åœ¨åˆ™ä¼šäº§ç”Ÿç¼–è¯‘é”™è¯¯ï¼Œè€Œä¸”ä¸¤ä¸ªé¡µé¢çš„"contentType"å±žæ€§åº”ä¿æŒä¸€è‡´ï¼Œå› ä¸ºä¸¤ä¸ªé¡µé¢ä¼šåˆäºŒä¸ºä¸€ï¼Œåªäº§ç”Ÿä¸€ä¸ªclassæ–‡ä»¶ï¼Œå› æ­¤è¢«åŒ…å«é¡µé¢å‘ç”Ÿçš„å˜åŠ¨å†åŒ…å«å®ƒçš„é¡µé¢æ›´æ–°å‰ä¸ä¼šå¾—åˆ°æ›´æ–°ã€‚åŠ¨æ€åŒ…å«æ˜¯è¿è¡Œæ—¶åŒ…å«ï¼Œå¯ä»¥å‘è¢«åŒ…å«çš„é¡µé¢ä¼ é€’å‚æ•°ï¼ŒåŒ…å«é¡µé¢å’Œè¢«åŒ…å«é¡µé¢æ˜¯ç‹¬ç«‹çš„ï¼Œä¼šç¼–è¯‘å‡ºä¸¤ä¸ªclassæ–‡ä»¶ï¼Œå¦‚æžœè¢«åŒ…å«çš„é¡µé¢ä¸å­˜åœ¨ï¼Œä¸ä¼šäº§ç”Ÿç¼–è¯‘é”™è¯¯ï¼Œä¹Ÿä¸å½±å“é¡µé¢å…¶ä»–éƒ¨åˆ†çš„æ‰§è¡Œã€‚ä»£ç å¦‚ä¸‹æ‰€ç¤ºï¼š
 
 ```jsp
-<%-- ¾²Ì¬°üº¬--%>
+<%-- é™æ€åŒ…å«--%>
 <%@ include file="..." %>
-<%-- ¶¯Ì¬°üº¬--%>
+<%-- åŠ¨æ€åŒ…å«--%>
 <jsp:include page="...">
     <jsp:param name="..." value="..." />
 </jsp:include>
@@ -1076,165 +1076,165 @@ HTMLµÄ<form>ÔªËØÓÐÒ»¸ömethodÊôÐÔ£¬ÓÃÀ´Ö¸¶¨Ìá½»±íµ¥µÄ·½Ê½£¬ÆäÖµ¿ÉÒÔÊÇget»òpost¡£Î
 
 <p id="javaweb-31">
 
-#### ServletÖÐÈçºÎ»ñÈ¡ÓÃ»§Ìá½»µÄ²éÑ¯²ÎÊý»ò±íµ¥Êý¾Ý£¿
-¿ÉÒÔÍ¨¹ýÇëÇó¶ÔÏó£¨HttpServletRequest£©µÄgetParameter()·½·¨Í¨¹ý²ÎÊýÃû»ñµÃ²ÎÊýÖµ¡£Èç¹ûÓÐ°üº¬¶à¸öÖµµÄ²ÎÊý£¨ÀýÈç¸´Ñ¡¿ò£©£¬¿ÉÒÔÍ¨¹ýÇëÇó¶ÔÏóµÄgetParameterValues()·½·¨»ñµÃ¡£µ±È»Ò²¿ÉÒÔÍ¨¹ýÇëÇó¶ÔÏóµÄgetParameterMap()»ñµÃÒ»¸ö²ÎÊýÃûºÍ²ÎÊýÖµµÄÓ³Éä£¨Map£©¡£
+#### Servletä¸­å¦‚ä½•èŽ·å–ç”¨æˆ·æäº¤çš„æŸ¥è¯¢å‚æ•°æˆ–è¡¨å•æ•°æ®ï¼Ÿ
+å¯ä»¥é€šè¿‡è¯·æ±‚å¯¹è±¡ï¼ˆHttpServletRequestï¼‰çš„getParameter()æ–¹æ³•é€šè¿‡å‚æ•°åèŽ·å¾—å‚æ•°å€¼ã€‚å¦‚æžœæœ‰åŒ…å«å¤šä¸ªå€¼çš„å‚æ•°ï¼ˆä¾‹å¦‚å¤é€‰æ¡†ï¼‰ï¼Œå¯ä»¥é€šè¿‡è¯·æ±‚å¯¹è±¡çš„getParameterValues()æ–¹æ³•èŽ·å¾—ã€‚å½“ç„¶ä¹Ÿå¯ä»¥é€šè¿‡è¯·æ±‚å¯¹è±¡çš„getParameterMap()èŽ·å¾—ä¸€ä¸ªå‚æ•°åå’Œå‚æ•°å€¼çš„æ˜ å°„ï¼ˆMapï¼‰ã€‚
 
 <p id="javaweb-32">
 
-#### ServletÖÐÈçºÎ»ñÈ¡ÓÃ»§ÅäÖÃµÄ³õÊ¼»¯²ÎÊýÒÔ¼°·þÎñÆ÷ÉÏÏÂÎÄ²ÎÊý£¿
+#### Servletä¸­å¦‚ä½•èŽ·å–ç”¨æˆ·é…ç½®çš„åˆå§‹åŒ–å‚æ•°ä»¥åŠæœåŠ¡å™¨ä¸Šä¸‹æ–‡å‚æ•°ï¼Ÿ
 
-¿ÉÒÔÍ¨¹ýÖØÐ´Servlet½Ó¿ÚµÄinit(ServletConfig)·½·¨²¢Í¨¹ýServletConfig¶ÔÏóµÄgetInitParameter()·½·¨À´»ñÈ¡ServletµÄ³õÊ¼»¯²ÎÊý¡£¿ÉÒÔÍ¨¹ýServletConfig¶ÔÏóµÄgetServletContext()·½·¨»ñÈ¡ServletContext¶ÔÏó£¬²¢Í¨¹ý¸Ã¶ÔÏóµÄgetInitParameter()·½·¨À´»ñÈ¡·þÎñÆ÷ÉÏÏÂÎÄ²ÎÊý¡£µ±È»£¬ServletContext¶ÔÏóÒ²ÔÚ´¦ÀíÓÃ»§ÇëÇóµÄ·½·¨£¨ÈçdoGet()·½·¨£©ÖÐÍ¨¹ýÇëÇó¶ÔÏóµÄgetServletContext()·½·¨À´»ñµÃ¡£
+å¯ä»¥é€šè¿‡é‡å†™ServletæŽ¥å£çš„init(ServletConfig)æ–¹æ³•å¹¶é€šè¿‡ServletConfigå¯¹è±¡çš„getInitParameter()æ–¹æ³•æ¥èŽ·å–Servletçš„åˆå§‹åŒ–å‚æ•°ã€‚å¯ä»¥é€šè¿‡ServletConfigå¯¹è±¡çš„getServletContext()æ–¹æ³•èŽ·å–ServletContextå¯¹è±¡ï¼Œå¹¶é€šè¿‡è¯¥å¯¹è±¡çš„getInitParameter()æ–¹æ³•æ¥èŽ·å–æœåŠ¡å™¨ä¸Šä¸‹æ–‡å‚æ•°ã€‚å½“ç„¶ï¼ŒServletContextå¯¹è±¡ä¹Ÿåœ¨å¤„ç†ç”¨æˆ·è¯·æ±‚çš„æ–¹æ³•ï¼ˆå¦‚doGet()æ–¹æ³•ï¼‰ä¸­é€šè¿‡è¯·æ±‚å¯¹è±¡çš„getServletContext()æ–¹æ³•æ¥èŽ·å¾—ã€‚
 
 <p id="javaweb-33">
 
-#### ÈçºÎÉèÖÃÇëÇóµÄ±àÂëÒÔ¼°ÏìÓ¦ÄÚÈÝµÄÀàÐÍ£¿
+#### å¦‚ä½•è®¾ç½®è¯·æ±‚çš„ç¼–ç ä»¥åŠå“åº”å†…å®¹çš„ç±»åž‹ï¼Ÿ
 
-Í¨¹ýÇëÇó¶ÔÏó£¨ServletRequest£©µÄsetCharacterEncoding(String)·½·¨¿ÉÒÔÉèÖÃÇëÇóµÄ±àÂë£¬ÆäÊµÒª³¹µ×½â¾öÂÒÂëÎÊÌâ¾ÍÓ¦¸ÃÈÃÒ³Ãæ¡¢·þÎñÆ÷¡¢ÇëÇóºÍÏìÓ¦¡¢Java³ÌÐò¶¼Ê¹ÓÃÍ³Ò»µÄ±àÂë£¬×îºÃµÄÑ¡Ôñµ±È»ÊÇUTF-8£»Í¨¹ýÏìÓ¦¶ÔÏó£¨ServletResponse£©µÄsetContentType(String)·½·¨¿ÉÒÔÉèÖÃÏìÓ¦ÄÚÈÝµÄÀàÐÍ£¬µ±È»Ò²¿ÉÒÔÍ¨¹ýHttpServletResponsed¶ÔÏóµÄsetHeader(String, String)·½·¨À´ÉèÖÃ¡£
-ËµÃ÷£ºÏÖÔÚÈç¹û»¹ÓÐ¹«Ë¾ÔÚÃæÊÔµÄÊ±ºòÎÊJSPµÄÉùÃ÷±ê¼Ç¡¢±í´ïÊ½±ê¼Ç¡¢Ð¡½Å±¾±ê¼ÇÕâÐ©ÄÚÈÝµÄ»°£¬ÕâÑùµÄ¹«Ë¾Ò²²»ÓÃÈ¥ÁË£¬ÆäÊµJSPÄÚÖÃ¶ÔÏó¡¢JSPÖ¸ÁîÕâÐ©¶«Î÷»ù±¾ÉÏ¶¼¿ÉÒÔÍüÈ´ÁË£¬¹ØÓÚJava Web¿ª·¢µÄÏà¹ØÖªÊ¶£¬¿ÉÒÔ¿´Ò»ÏÂ¡¶Servlet&JSPË¼Î¬µ¼Í¼¡·£¬ÉÏÃæÓÐÍêÕûµÄÖªÊ¶µãµÄÂÞÁÐ¡£ÏëÁË½âÈçºÎÊµÏÖ×Ô¶¨ÒåMVC¿ò¼ÜµÄ£¬¿ÉÒÔ¿´Ò»ÏÂ¡¶Java Web×Ô¶¨ÒåMVC¿ò¼ÜÏê½â¡·¡£
+é€šè¿‡è¯·æ±‚å¯¹è±¡ï¼ˆServletRequestï¼‰çš„setCharacterEncoding(String)æ–¹æ³•å¯ä»¥è®¾ç½®è¯·æ±‚çš„ç¼–ç ï¼Œå…¶å®žè¦å½»åº•è§£å†³ä¹±ç é—®é¢˜å°±åº”è¯¥è®©é¡µé¢ã€æœåŠ¡å™¨ã€è¯·æ±‚å’Œå“åº”ã€Javaç¨‹åºéƒ½ä½¿ç”¨ç»Ÿä¸€çš„ç¼–ç ï¼Œæœ€å¥½çš„é€‰æ‹©å½“ç„¶æ˜¯UTF-8ï¼›é€šè¿‡å“åº”å¯¹è±¡ï¼ˆServletResponseï¼‰çš„setContentType(String)æ–¹æ³•å¯ä»¥è®¾ç½®å“åº”å†…å®¹çš„ç±»åž‹ï¼Œå½“ç„¶ä¹Ÿå¯ä»¥é€šè¿‡HttpServletResponsedå¯¹è±¡çš„setHeader(String, String)æ–¹æ³•æ¥è®¾ç½®ã€‚
+è¯´æ˜Žï¼šçŽ°åœ¨å¦‚æžœè¿˜æœ‰å…¬å¸åœ¨é¢è¯•çš„æ—¶å€™é—®JSPçš„å£°æ˜Žæ ‡è®°ã€è¡¨è¾¾å¼æ ‡è®°ã€å°è„šæœ¬æ ‡è®°è¿™äº›å†…å®¹çš„è¯ï¼Œè¿™æ ·çš„å…¬å¸ä¹Ÿä¸ç”¨åŽ»äº†ï¼Œå…¶å®žJSPå†…ç½®å¯¹è±¡ã€JSPæŒ‡ä»¤è¿™äº›ä¸œè¥¿åŸºæœ¬ä¸Šéƒ½å¯ä»¥å¿˜å´äº†ï¼Œå…³äºŽJava Webå¼€å‘çš„ç›¸å…³çŸ¥è¯†ï¼Œå¯ä»¥çœ‹ä¸€ä¸‹ã€ŠServlet&JSPæ€ç»´å¯¼å›¾ã€‹ï¼Œä¸Šé¢æœ‰å®Œæ•´çš„çŸ¥è¯†ç‚¹çš„ç½—åˆ—ã€‚æƒ³äº†è§£å¦‚ä½•å®žçŽ°è‡ªå®šä¹‰MVCæ¡†æž¶çš„ï¼Œå¯ä»¥çœ‹ä¸€ä¸‹ã€ŠJava Webè‡ªå®šä¹‰MVCæ¡†æž¶è¯¦è§£ã€‹ã€‚
 
 <p id="javaweb-34">
 
-#### ½âÊÍÒ»ÏÂÍøÂçÓ¦ÓÃµÄÄ£Ê½¼°ÆäÌØµã¡£
+#### è§£é‡Šä¸€ä¸‹ç½‘ç»œåº”ç”¨çš„æ¨¡å¼åŠå…¶ç‰¹ç‚¹ã€‚
 
-µäÐÍµÄÍøÂçÓ¦ÓÃÄ£Ê½´óÖÂÓÐÈýÀà£ºB/S¡¢C/S¡¢P2P¡£ÆäÖÐB´ú±íä¯ÀÀÆ÷£¨Browser£©¡¢C´ú±í¿Í»§¶Ë£¨Client£©¡¢S´ú±í·þÎñÆ÷£¨Server£©£¬P2PÊÇ¶ÔµÈÄ£Ê½£¬²»Çø·Ö¿Í»§¶ËºÍ·þÎñÆ÷¡£B/SÓ¦ÓÃÄ£Ê½ÖÐ¿ÉÒÔÊÓÎªÌØÊâµÄC/SÓ¦ÓÃÄ£Ê½£¬Ö»ÊÇ½«C/SÓ¦ÓÃÄ£Ê½ÖÐµÄÌØÊâµÄ¿Í»§¶Ë»»³ÉÁËä¯ÀÀÆ÷£¬ÒòÎª¼¸ºõËùÓÐµÄÏµÍ³ÉÏ¶¼ÓÐä¯ÀÀÆ÷£¬ÄÇÃ´Ö»Òª´ò¿ªä¯ÀÀÆ÷¾Í¿ÉÒÔÊ¹ÓÃÓ¦ÓÃ£¬Ã»ÓÐ°²×°¡¢ÅäÖÃ¡¢Éý¼¶¿Í»§¶ËËù´øÀ´µÄ¸÷ÖÖ¿ªÏú¡£P2PÓ¦ÓÃÄ£Ê½ÖÐ£¬³ÉÇ§ÉÏÍòÌ¨±Ë´ËÁ¬½ÓµÄ¼ÆËã»ú¶¼´¦ÓÚ¶ÔµÈµÄµØÎ»£¬Õû¸öÍøÂçÒ»°ãÀ´Ëµ²»ÒÀÀµ×¨ÓÃµÄ¼¯ÖÐ·þÎñÆ÷¡£ÍøÂçÖÐµÄÃ¿Ò»Ì¨¼ÆËã»ú¼ÈÄÜ³äµ±ÍøÂç·þÎñµÄÇëÇóÕß£¬ÓÖ¶ÔÆäËü¼ÆËã»úµÄÇëÇó×÷³öÏìÓ¦£¬Ìá¹©×ÊÔ´ºÍ·þÎñ¡£Í¨³£ÕâÐ©×ÊÔ´ºÍ·þÎñ°üÀ¨£ºÐÅÏ¢µÄ¹²ÏíºÍ½»»»¡¢¼ÆËã×ÊÔ´£¨ÈçCPUµÄ¹²Ïí£©¡¢´æ´¢¹²Ïí£¨Èç»º´æºÍ´ÅÅÌ¿Õ¼äµÄÊ¹ÓÃ£©µÈ£¬ÕâÖÖÓ¦ÓÃÄ£Ê½×î´óµÄ×èÁ¦°²È«ÐÔ¡¢°æ±¾µÈÎÊÌâ£¬Ä¿Ç°ÓÐºÜ¶àÓ¦ÓÃ¶¼»ìºÏÊ¹ÓÃÁË¶àÖÖÓ¦ÓÃÄ£ÐÍ£¬×î³£¼ûµÄÍøÂçÊÓÆµÓ¦ÓÃ£¬Ëü¼¸ºõ°ÑÈýÖÖÄ£Ê½¶¼ÓÃÉÏÁË¡£
-²¹³ä£º´ËÌâÒª¸ú"µç×ÓÉÌÎñÄ£Ê½"Çø·Ö¿ª£¬ÒòÎªÓÐºÜ¶àÈË±»ÎÊµ½Õâ¸öÎÊÌâµÄÊ±ºòÂíÉÏÏëµ½µÄÊÇB2B£¨Èç°¢Àï°Í°Í£©¡¢B2C£¨Èçµ±µ±¡¢ÑÇÂíÑ·¡¢¾©¶«£©¡¢C2C£¨ÈçÌÔ±¦¡¢ÅÄÅÄ£©¡¢C2B£¨ÈçÍþ¿Í£©¡¢O2O£¨ÈçÃÀÍÅ¡¢¶öÁËÃ´£©¡£¶ÔÓÚÕâÀàÎÊÌâ£¬¿ÉÒÔÈ¥°Ù¶ÈÉÏÃæ¿ÆÆÕÒ»ÏÂ¡£
+å…¸åž‹çš„ç½‘ç»œåº”ç”¨æ¨¡å¼å¤§è‡´æœ‰ä¸‰ç±»ï¼šB/Sã€C/Sã€P2Pã€‚å…¶ä¸­Bä»£è¡¨æµè§ˆå™¨ï¼ˆBrowserï¼‰ã€Cä»£è¡¨å®¢æˆ·ç«¯ï¼ˆClientï¼‰ã€Sä»£è¡¨æœåŠ¡å™¨ï¼ˆServerï¼‰ï¼ŒP2Pæ˜¯å¯¹ç­‰æ¨¡å¼ï¼Œä¸åŒºåˆ†å®¢æˆ·ç«¯å’ŒæœåŠ¡å™¨ã€‚B/Såº”ç”¨æ¨¡å¼ä¸­å¯ä»¥è§†ä¸ºç‰¹æ®Šçš„C/Såº”ç”¨æ¨¡å¼ï¼Œåªæ˜¯å°†C/Såº”ç”¨æ¨¡å¼ä¸­çš„ç‰¹æ®Šçš„å®¢æˆ·ç«¯æ¢æˆäº†æµè§ˆå™¨ï¼Œå› ä¸ºå‡ ä¹Žæ‰€æœ‰çš„ç³»ç»Ÿä¸Šéƒ½æœ‰æµè§ˆå™¨ï¼Œé‚£ä¹ˆåªè¦æ‰“å¼€æµè§ˆå™¨å°±å¯ä»¥ä½¿ç”¨åº”ç”¨ï¼Œæ²¡æœ‰å®‰è£…ã€é…ç½®ã€å‡çº§å®¢æˆ·ç«¯æ‰€å¸¦æ¥çš„å„ç§å¼€é”€ã€‚P2Påº”ç”¨æ¨¡å¼ä¸­ï¼Œæˆåƒä¸Šä¸‡å°å½¼æ­¤è¿žæŽ¥çš„è®¡ç®—æœºéƒ½å¤„äºŽå¯¹ç­‰çš„åœ°ä½ï¼Œæ•´ä¸ªç½‘ç»œä¸€èˆ¬æ¥è¯´ä¸ä¾èµ–ä¸“ç”¨çš„é›†ä¸­æœåŠ¡å™¨ã€‚ç½‘ç»œä¸­çš„æ¯ä¸€å°è®¡ç®—æœºæ—¢èƒ½å……å½“ç½‘ç»œæœåŠ¡çš„è¯·æ±‚è€…ï¼Œåˆå¯¹å…¶å®ƒè®¡ç®—æœºçš„è¯·æ±‚ä½œå‡ºå“åº”ï¼Œæä¾›èµ„æºå’ŒæœåŠ¡ã€‚é€šå¸¸è¿™äº›èµ„æºå’ŒæœåŠ¡åŒ…æ‹¬ï¼šä¿¡æ¯çš„å…±äº«å’Œäº¤æ¢ã€è®¡ç®—èµ„æºï¼ˆå¦‚CPUçš„å…±äº«ï¼‰ã€å­˜å‚¨å…±äº«ï¼ˆå¦‚ç¼“å­˜å’Œç£ç›˜ç©ºé—´çš„ä½¿ç”¨ï¼‰ç­‰ï¼Œè¿™ç§åº”ç”¨æ¨¡å¼æœ€å¤§çš„é˜»åŠ›å®‰å…¨æ€§ã€ç‰ˆæœ¬ç­‰é—®é¢˜ï¼Œç›®å‰æœ‰å¾ˆå¤šåº”ç”¨éƒ½æ··åˆä½¿ç”¨äº†å¤šç§åº”ç”¨æ¨¡åž‹ï¼Œæœ€å¸¸è§çš„ç½‘ç»œè§†é¢‘åº”ç”¨ï¼Œå®ƒå‡ ä¹ŽæŠŠä¸‰ç§æ¨¡å¼éƒ½ç”¨ä¸Šäº†ã€‚
+è¡¥å……ï¼šæ­¤é¢˜è¦è·Ÿ"ç”µå­å•†åŠ¡æ¨¡å¼"åŒºåˆ†å¼€ï¼Œå› ä¸ºæœ‰å¾ˆå¤šäººè¢«é—®åˆ°è¿™ä¸ªé—®é¢˜çš„æ—¶å€™é©¬ä¸Šæƒ³åˆ°çš„æ˜¯B2Bï¼ˆå¦‚é˜¿é‡Œå·´å·´ï¼‰ã€B2Cï¼ˆå¦‚å½“å½“ã€äºšé©¬é€Šã€äº¬ä¸œï¼‰ã€C2Cï¼ˆå¦‚æ·˜å®ã€æ‹æ‹ï¼‰ã€C2Bï¼ˆå¦‚å¨å®¢ï¼‰ã€O2Oï¼ˆå¦‚ç¾Žå›¢ã€é¥¿äº†ä¹ˆï¼‰ã€‚å¯¹äºŽè¿™ç±»é—®é¢˜ï¼Œå¯ä»¥åŽ»ç™¾åº¦ä¸Šé¢ç§‘æ™®ä¸€ä¸‹ã€‚
 
 <p id="javaweb-35">
 
-#### Ê²Ã´ÊÇWeb Service£¨Web·þÎñ£©£¿
+#### ä»€ä¹ˆæ˜¯Web Serviceï¼ˆWebæœåŠ¡ï¼‰ï¼Ÿ
 
-´Ó±íÃæÉÏ¿´£¬Web Service¾ÍÊÇÒ»¸öÓ¦ÓÃ³ÌÐò£¬ËüÏòÍâ½ç±©Â¶³öÒ»¸öÄÜ¹»Í¨¹ýWeb½øÐÐµ÷ÓÃµÄAPI¡£Õâ¾ÍÊÇËµ£¬ÄãÄÜ¹»ÓÃ±à³ÌµÄ·½·¨Í¸Ã÷µÄµ÷ÓÃÕâ¸öÓ¦ÓÃ³ÌÐò£¬²»ÐèÒªÁË½âËüµÄÈÎºÎÏ¸½Ú£¬¸úÄãÊ¹ÓÃµÄ±à³ÌÓïÑÔÒ²Ã»ÓÐ¹ØÏµ¡£ÀýÈç¿ÉÒÔ´´½¨Ò»¸öÌá¹©ÌìÆøÔ¤±¨µÄWeb Service£¬ÄÇÃ´ÎÞÂÛÄãÓÃÄÄÖÖ±à³ÌÓïÑÔ¿ª·¢µÄÓ¦ÓÃ¶¼¿ÉÒÔÍ¨¹ýµ÷ÓÃËüµÄAPI²¢´«Èë³ÇÊÐÐÅÏ¢À´»ñµÃ¸Ã³ÇÊÐµÄÌìÆøÔ¤±¨¡£Ö®ËùÒÔ³ÆÖ®ÎªWeb Service£¬ÊÇÒòÎªËü»ùÓÚHTTPÐ­Òé´«ÊäÊý¾Ý£¬ÕâÊ¹µÃÔËÐÐÔÚ²»Í¬»úÆ÷ÉÏµÄ²»Í¬Ó¦ÓÃÎÞÐë½èÖú¸½¼ÓµÄ¡¢×¨ÃÅµÄµÚÈý·½Èí¼þ»òÓ²¼þ£¬¾Í¿ÉÏà»¥½»»»Êý¾Ý»ò¼¯³É¡£
-²¹³ä£ºÕâÀï±ØÐëÒªÌá¼°µÄÒ»¸ö¸ÅÄîÊÇSOA£¨Service-Oriented Architecture£¬ÃæÏò·þÎñµÄ¼Ü¹¹£©£¬SOAÊÇÒ»ÖÖË¼Ïë£¬Ëü½«Ó¦ÓÃ³ÌÐòµÄ²»Í¬¹¦ÄÜµ¥ÔªÍ¨¹ýÖÐÁ¢µÄÆõÔ¼ÁªÏµÆðÀ´£¬¶ÀÁ¢ÓÚÓ²¼þÆ½Ì¨¡¢²Ù×÷ÏµÍ³ºÍ±à³ÌÓïÑÔ£¬Ê¹µÃ¸÷ÖÖÐÎÊ½µÄ¹¦ÄÜµ¥ÔªÄÜ¹»¸üºÃµÄ¼¯³É¡£ÏÔÈ»£¬Web ServiceÊÇSOAµÄÒ»ÖÖ½ÏºÃµÄ½â¾ö·½°¸£¬Ëü¸ü¶àµÄÊÇÒ»ÖÖ±ê×¼£¬¶ø²»ÊÇÒ»ÖÖ¾ßÌåµÄ¼¼Êõ¡£
+ä»Žè¡¨é¢ä¸Šçœ‹ï¼ŒWeb Serviceå°±æ˜¯ä¸€ä¸ªåº”ç”¨ç¨‹åºï¼Œå®ƒå‘å¤–ç•Œæš´éœ²å‡ºä¸€ä¸ªèƒ½å¤Ÿé€šè¿‡Webè¿›è¡Œè°ƒç”¨çš„APIã€‚è¿™å°±æ˜¯è¯´ï¼Œä½ èƒ½å¤Ÿç”¨ç¼–ç¨‹çš„æ–¹æ³•é€æ˜Žçš„è°ƒç”¨è¿™ä¸ªåº”ç”¨ç¨‹åºï¼Œä¸éœ€è¦äº†è§£å®ƒçš„ä»»ä½•ç»†èŠ‚ï¼Œè·Ÿä½ ä½¿ç”¨çš„ç¼–ç¨‹è¯­è¨€ä¹Ÿæ²¡æœ‰å…³ç³»ã€‚ä¾‹å¦‚å¯ä»¥åˆ›å»ºä¸€ä¸ªæä¾›å¤©æ°”é¢„æŠ¥çš„Web Serviceï¼Œé‚£ä¹ˆæ— è®ºä½ ç”¨å“ªç§ç¼–ç¨‹è¯­è¨€å¼€å‘çš„åº”ç”¨éƒ½å¯ä»¥é€šè¿‡è°ƒç”¨å®ƒçš„APIå¹¶ä¼ å…¥åŸŽå¸‚ä¿¡æ¯æ¥èŽ·å¾—è¯¥åŸŽå¸‚çš„å¤©æ°”é¢„æŠ¥ã€‚ä¹‹æ‰€ä»¥ç§°ä¹‹ä¸ºWeb Serviceï¼Œæ˜¯å› ä¸ºå®ƒåŸºäºŽHTTPåè®®ä¼ è¾“æ•°æ®ï¼Œè¿™ä½¿å¾—è¿è¡Œåœ¨ä¸åŒæœºå™¨ä¸Šçš„ä¸åŒåº”ç”¨æ— é¡»å€ŸåŠ©é™„åŠ çš„ã€ä¸“é—¨çš„ç¬¬ä¸‰æ–¹è½¯ä»¶æˆ–ç¡¬ä»¶ï¼Œå°±å¯ç›¸äº’äº¤æ¢æ•°æ®æˆ–é›†æˆã€‚
+è¡¥å……ï¼šè¿™é‡Œå¿…é¡»è¦æåŠçš„ä¸€ä¸ªæ¦‚å¿µæ˜¯SOAï¼ˆService-Oriented Architectureï¼Œé¢å‘æœåŠ¡çš„æž¶æž„ï¼‰ï¼ŒSOAæ˜¯ä¸€ç§æ€æƒ³ï¼Œå®ƒå°†åº”ç”¨ç¨‹åºçš„ä¸åŒåŠŸèƒ½å•å…ƒé€šè¿‡ä¸­ç«‹çš„å¥‘çº¦è”ç³»èµ·æ¥ï¼Œç‹¬ç«‹äºŽç¡¬ä»¶å¹³å°ã€æ“ä½œç³»ç»Ÿå’Œç¼–ç¨‹è¯­è¨€ï¼Œä½¿å¾—å„ç§å½¢å¼çš„åŠŸèƒ½å•å…ƒèƒ½å¤Ÿæ›´å¥½çš„é›†æˆã€‚æ˜¾ç„¶ï¼ŒWeb Serviceæ˜¯SOAçš„ä¸€ç§è¾ƒå¥½çš„è§£å†³æ–¹æ¡ˆï¼Œå®ƒæ›´å¤šçš„æ˜¯ä¸€ç§æ ‡å‡†ï¼Œè€Œä¸æ˜¯ä¸€ç§å…·ä½“çš„æŠ€æœ¯ã€‚
 
 <p id="javaweb-36">
 
-#### ¸ÅÄî½âÊÍ£ºSOAP¡¢WSDL¡¢UDDI¡£
+#### æ¦‚å¿µè§£é‡Šï¼šSOAPã€WSDLã€UDDIã€‚
 
-- SOAP£º¼òµ¥¶ÔÏó·ÃÎÊÐ­Òé£¨Simple Object Access Protocol£©£¬ÊÇWeb ServiceÖÐ½»»»Êý¾ÝµÄÒ»ÖÖÐ­Òé¹æ·¶¡£
-- WSDL£ºWeb·þÎñÃèÊöÓïÑÔ£¨Web Service Description Language£©£¬ËüÃèÊöÁËWeb·þÎñµÄ¹«¹²½Ó¿Ú¡£ÕâÊÇÒ»¸ö»ùÓÚXMLµÄ¹ØÓÚÈçºÎÓëWeb·þÎñÍ¨Ñ¶ºÍÊ¹ÓÃµÄ·þÎñÃèÊö£»Ò²¾ÍÊÇÃèÊöÓëÄ¿Â¼ÖÐÁÐ³öµÄWeb·þÎñ½øÐÐ½»»¥Ê±ÐèÒª°ó¶¨µÄÐ­ÒéºÍÐÅÏ¢¸ñÊ½¡£Í¨³£²ÉÓÃ³éÏóÓïÑÔÃèÊö¸Ã·þÎñÖ§³ÖµÄ²Ù×÷ºÍÐÅÏ¢£¬Ê¹ÓÃµÄÊ±ºòÔÙ½«Êµ¼ÊµÄÍøÂçÐ­ÒéºÍÐÅÏ¢¸ñÊ½°ó¶¨¸ø¸Ã·þÎñ¡£
-- UDDI£ºÍ³Ò»ÃèÊö¡¢·¢ÏÖºÍ¼¯³É£¨Universal Description, Discovery and Integration£©£¬ËüÊÇÒ»¸ö»ùÓÚXMLµÄ¿çÆ½Ì¨µÄÃèÊö¹æ·¶£¬¿ÉÒÔÊ¹ÊÀ½ç·¶Î§ÄÚµÄÆóÒµÔÚ»¥ÁªÍøÉÏ·¢²¼×Ô¼ºËùÌá¹©µÄ·þÎñ¡£¼òµ¥µÄËµ£¬UDDIÊÇ·ÃÎÊ¸÷ÖÖWSDLµÄÒ»¸öÃÅÃæ£¨¿ÉÒÔ²Î¿¼Éè¼ÆÄ£Ê½ÖÐµÄÃÅÃæÄ£Ê½£©¡£
-  ÌáÊ¾£º¹ØÓÚWeb ServiceµÄÏà¹Ø¸ÅÄîºÍÖªÊ¶¿ÉÒÔÔÚW3CSchoolÉÏÕÒµ½Ïà¹ØµÄ×ÊÁÏ¡£
+- SOAPï¼šç®€å•å¯¹è±¡è®¿é—®åè®®ï¼ˆSimple Object Access Protocolï¼‰ï¼Œæ˜¯Web Serviceä¸­äº¤æ¢æ•°æ®çš„ä¸€ç§åè®®è§„èŒƒã€‚
+- WSDLï¼šWebæœåŠ¡æè¿°è¯­è¨€ï¼ˆWeb Service Description Languageï¼‰ï¼Œå®ƒæè¿°äº†WebæœåŠ¡çš„å…¬å…±æŽ¥å£ã€‚è¿™æ˜¯ä¸€ä¸ªåŸºäºŽXMLçš„å…³äºŽå¦‚ä½•ä¸ŽWebæœåŠ¡é€šè®¯å’Œä½¿ç”¨çš„æœåŠ¡æè¿°ï¼›ä¹Ÿå°±æ˜¯æè¿°ä¸Žç›®å½•ä¸­åˆ—å‡ºçš„WebæœåŠ¡è¿›è¡Œäº¤äº’æ—¶éœ€è¦ç»‘å®šçš„åè®®å’Œä¿¡æ¯æ ¼å¼ã€‚é€šå¸¸é‡‡ç”¨æŠ½è±¡è¯­è¨€æè¿°è¯¥æœåŠ¡æ”¯æŒçš„æ“ä½œå’Œä¿¡æ¯ï¼Œä½¿ç”¨çš„æ—¶å€™å†å°†å®žé™…çš„ç½‘ç»œåè®®å’Œä¿¡æ¯æ ¼å¼ç»‘å®šç»™è¯¥æœåŠ¡ã€‚
+- UDDIï¼šç»Ÿä¸€æè¿°ã€å‘çŽ°å’Œé›†æˆï¼ˆUniversal Description, Discovery and Integrationï¼‰ï¼Œå®ƒæ˜¯ä¸€ä¸ªåŸºäºŽXMLçš„è·¨å¹³å°çš„æè¿°è§„èŒƒï¼Œå¯ä»¥ä½¿ä¸–ç•ŒèŒƒå›´å†…çš„ä¼ä¸šåœ¨äº’è”ç½‘ä¸Šå‘å¸ƒè‡ªå·±æ‰€æä¾›çš„æœåŠ¡ã€‚ç®€å•çš„è¯´ï¼ŒUDDIæ˜¯è®¿é—®å„ç§WSDLçš„ä¸€ä¸ªé—¨é¢ï¼ˆå¯ä»¥å‚è€ƒè®¾è®¡æ¨¡å¼ä¸­çš„é—¨é¢æ¨¡å¼ï¼‰ã€‚
+  æç¤ºï¼šå…³äºŽWeb Serviceçš„ç›¸å…³æ¦‚å¿µå’ŒçŸ¥è¯†å¯ä»¥åœ¨W3CSchoolä¸Šæ‰¾åˆ°ç›¸å…³çš„èµ„æ–™ã€‚
 
 <p id="javaweb-37">
 
-#### Java¹æ·¶ÖÐºÍWeb ServiceÏà¹ØµÄ¹æ·¶ÓÐÄÄÐ©£¿
+#### Javaè§„èŒƒä¸­å’ŒWeb Serviceç›¸å…³çš„è§„èŒƒæœ‰å“ªäº›ï¼Ÿ
 
-Java¹æ·¶ÖÐºÍWeb ServiceÏà¹ØµÄÓÐÈý¸ö£º
+Javaè§„èŒƒä¸­å’ŒWeb Serviceç›¸å…³çš„æœ‰ä¸‰ä¸ªï¼š
 
-- JAX-WS(JSR 224)£ºÕâ¸ö¹æ·¶ÊÇÔçÆÚµÄ»ùÓÚSOAPµÄWeb Service¹æ·¶JAX-RPCµÄÌæ´ú°æ±¾£¬Ëü²¢²»Ìá¹©ÏòÏÂ¼æÈÝÐÔ£¬ÒòÎªRPCÑùÊ½µÄWSDLÒÔ¼°Ïà¹ØµÄAPIÒÑ¾­ÔÚJava EE5ÖÐ±»ÒÆ³ýÁË¡£WS-MetaDataÊÇJAX-WSµÄÒÀÀµ¹æ·¶£¬Ìá¹©ÁË»ùÓÚ×¢½âÅäÖÃWeb ServiceºÍSOAPÏûÏ¢µÄÏà¹ØAPI¡£
+- JAX-WS(JSR 224)ï¼šè¿™ä¸ªè§„èŒƒæ˜¯æ—©æœŸçš„åŸºäºŽSOAPçš„Web Serviceè§„èŒƒJAX-RPCçš„æ›¿ä»£ç‰ˆæœ¬ï¼Œå®ƒå¹¶ä¸æä¾›å‘ä¸‹å…¼å®¹æ€§ï¼Œå› ä¸ºRPCæ ·å¼çš„WSDLä»¥åŠç›¸å…³çš„APIå·²ç»åœ¨Java EE5ä¸­è¢«ç§»é™¤äº†ã€‚WS-MetaDataæ˜¯JAX-WSçš„ä¾èµ–è§„èŒƒï¼Œæä¾›äº†åŸºäºŽæ³¨è§£é…ç½®Web Serviceå’ŒSOAPæ¶ˆæ¯çš„ç›¸å…³APIã€‚
 
-- JAXM(JSR 67)£º¶¨ÒåÁË·¢ËÍºÍ½ÓÊÕÏûÏ¢ËùÐèµÄAPI,Ïàµ±ÓÚWeb ServiceµÄ·þÎñÆ÷¶Ë¡£
+- JAXM(JSR 67)ï¼šå®šä¹‰äº†å‘é€å’ŒæŽ¥æ”¶æ¶ˆæ¯æ‰€éœ€çš„API,ç›¸å½“äºŽWeb Serviceçš„æœåŠ¡å™¨ç«¯ã€‚
 
-- JAX-RS(JSR 311 & JSR 339 & JSR 370)£ºÊÇJavaÕë¶ÔREST£¨Representation State Transfer£©¼Ü¹¹·ç¸ñÖÆ¶¨µÄÒ»Ì×Web Service¹æ·¶¡£
+- JAX-RS(JSR 311 & JSR 339 & JSR 370)ï¼šæ˜¯Javaé’ˆå¯¹RESTï¼ˆRepresentation State Transferï¼‰æž¶æž„é£Žæ ¼åˆ¶å®šçš„ä¸€å¥—Web Serviceè§„èŒƒã€‚
 
-  RESTÊÇÒ»ÖÖÈí¼þ¼Ü¹¹Ä£Ê½£¬ÊÇÒ»ÖÖ·ç¸ñ£¬Ëü²»ÏñSOAPÄÇÑù±¾Éí³ÐÔØ×ÅÒ»ÖÖÏûÏ¢Ð­Òé£¬ (Á½ÖÖ·ç¸ñµÄWeb Service¾ù²ÉÓÃÁËHTTP×ö´«ÊäÐ­Òé£¬ÒòÎªHTTPÐ­ÒéÄÜ´©Ô½·À»ðÇ½£¬JavaµÄÔ¶³Ì·½·¨µ÷ÓÃ£¨RMI£©µÈÊÇÖØÁ¿¼¶Ð­Òé£¬Í¨³£²»ÄÜ´©Ô½·À»ðÇ½£©£¬Òò´Ë¿ÉÒÔ½«RESTÊÓÎª»ùÓÚHTTPÐ­ÒéµÄÈí¼þ¼Ü¹¹¡£RESTÖÐ×îÖØÒªµÄÁ½¸ö¸ÅÄîÊÇ×ÊÔ´¶¨Î»ºÍ×ÊÔ´²Ù×÷£¬¶øHTTPÐ­ÒéÇ¡ºÃÍêÕûµÄÌá¹©ÁËÕâÁ½¸öµã¡£HTTPÐ­ÒéÖÐµÄURI¿ÉÒÔÍê³É×ÊÔ´¶¨Î»£¬¶øGET¡¢POST¡¢OPTION¡¢DELETE·½·¨¿ÉÒÔÍê³É×ÊÔ´²Ù×÷¡£Òò´ËRESTÍêÈ«ÒÀÀµHTTPÐ­Òé¾Í¿ÉÒÔÍê³ÉWeb Service£¬¶ø²»ÏñSOAPÐ­ÒéÄÇÑùÖ»ÀûÓÃÁËHTTPµÄ´«ÊäÌØÐÔ£¬¶¨Î»ºÍ²Ù×÷¶¼ÊÇÓÉSOAPÐ­Òé×ÔÉíÍê³ÉµÄ£¬Ò²ÕýÊÇÓÉÓÚSOAPÏûÏ¢µÄ´æÔÚÊ¹µÃ»ùÓÚSOAPµÄWeb ServiceÏÔµÃ±¿ÖØ¶øÖð½¥±»ÌÔÌ­¡£
+  RESTæ˜¯ä¸€ç§è½¯ä»¶æž¶æž„æ¨¡å¼ï¼Œæ˜¯ä¸€ç§é£Žæ ¼ï¼Œå®ƒä¸åƒSOAPé‚£æ ·æœ¬èº«æ‰¿è½½ç€ä¸€ç§æ¶ˆæ¯åè®®ï¼Œ (ä¸¤ç§é£Žæ ¼çš„Web Serviceå‡é‡‡ç”¨äº†HTTPåšä¼ è¾“åè®®ï¼Œå› ä¸ºHTTPåè®®èƒ½ç©¿è¶Šé˜²ç«å¢™ï¼ŒJavaçš„è¿œç¨‹æ–¹æ³•è°ƒç”¨ï¼ˆRMIï¼‰ç­‰æ˜¯é‡é‡çº§åè®®ï¼Œé€šå¸¸ä¸èƒ½ç©¿è¶Šé˜²ç«å¢™ï¼‰ï¼Œå› æ­¤å¯ä»¥å°†RESTè§†ä¸ºåŸºäºŽHTTPåè®®çš„è½¯ä»¶æž¶æž„ã€‚RESTä¸­æœ€é‡è¦çš„ä¸¤ä¸ªæ¦‚å¿µæ˜¯èµ„æºå®šä½å’Œèµ„æºæ“ä½œï¼Œè€ŒHTTPåè®®æ°å¥½å®Œæ•´çš„æä¾›äº†è¿™ä¸¤ä¸ªç‚¹ã€‚HTTPåè®®ä¸­çš„URIå¯ä»¥å®Œæˆèµ„æºå®šä½ï¼Œè€ŒGETã€POSTã€OPTIONã€DELETEæ–¹æ³•å¯ä»¥å®Œæˆèµ„æºæ“ä½œã€‚å› æ­¤RESTå®Œå…¨ä¾èµ–HTTPåè®®å°±å¯ä»¥å®ŒæˆWeb Serviceï¼Œè€Œä¸åƒSOAPåè®®é‚£æ ·åªåˆ©ç”¨äº†HTTPçš„ä¼ è¾“ç‰¹æ€§ï¼Œå®šä½å’Œæ“ä½œéƒ½æ˜¯ç”±SOAPåè®®è‡ªèº«å®Œæˆçš„ï¼Œä¹Ÿæ­£æ˜¯ç”±äºŽSOAPæ¶ˆæ¯çš„å­˜åœ¨ä½¿å¾—åŸºäºŽSOAPçš„Web Serviceæ˜¾å¾—ç¬¨é‡è€Œé€æ¸è¢«æ·˜æ±°ã€‚
 
 <p id="javaweb-38">
 
-#### ½éÉÜÒ»ÏÂÄãÁË½âµÄJavaÁìÓòµÄWeb Service¿ò¼Ü¡£
+#### ä»‹ç»ä¸€ä¸‹ä½ äº†è§£çš„Javaé¢†åŸŸçš„Web Serviceæ¡†æž¶ã€‚
 
-JavaÁìÓòµÄWeb Service¿ò¼ÜºÜ¶à£¬°üÀ¨Axis2£¨AxisµÄÉý¼¶°æ±¾£©¡¢Jersey£¨RESTfulµÄWeb Service¿ò¼Ü£©¡¢CXF£¨XFireµÄÑÓÐø°æ±¾£©¡¢Hessian¡¢Turmeric¡¢JBoss SOAµÈ£¬ÆäÖÐ¾ø´ó¶àÊý¶¼ÊÇ¿ªÔ´¿ò¼Ü¡£
-ÌáÊ¾£ºÃæÊÔ±»ÎÊµ½ÕâÀàÎÊÌâµÄÊ±ºòÒ»¶¨Ñ¡Ôñ×Ô¼ºÓÃ¹ýµÄ×îÊìÏ¤µÄ×÷´ð£¬Èç¹ûÖ®Ç°Ã»ÓÐÁË½â¹ý¾ÍÓ¦¸ÃÔÚÃæÊÔÇ°»¨Ò»Ð©Ê±¼äÁË½âÆäÖÐµÄÁ½¸ö£¬²¢±È½ÏÆäÓÅÈ±µã£¬ÕâÑù²ÅÄÜÔÚÃæÊÔÊ±¸ø³öÒ»¸öÆ¯ÁÁµÄ´ð°¸¡£
+Javaé¢†åŸŸçš„Web Serviceæ¡†æž¶å¾ˆå¤šï¼ŒåŒ…æ‹¬Axis2ï¼ˆAxisçš„å‡çº§ç‰ˆæœ¬ï¼‰ã€Jerseyï¼ˆRESTfulçš„Web Serviceæ¡†æž¶ï¼‰ã€CXFï¼ˆXFireçš„å»¶ç»­ç‰ˆæœ¬ï¼‰ã€Hessianã€Turmericã€JBoss SOAç­‰ï¼Œå…¶ä¸­ç»å¤§å¤šæ•°éƒ½æ˜¯å¼€æºæ¡†æž¶ã€‚
+æç¤ºï¼šé¢è¯•è¢«é—®åˆ°è¿™ç±»é—®é¢˜çš„æ—¶å€™ä¸€å®šé€‰æ‹©è‡ªå·±ç”¨è¿‡çš„æœ€ç†Ÿæ‚‰çš„ä½œç­”ï¼Œå¦‚æžœä¹‹å‰æ²¡æœ‰äº†è§£è¿‡å°±åº”è¯¥åœ¨é¢è¯•å‰èŠ±ä¸€äº›æ—¶é—´äº†è§£å…¶ä¸­çš„ä¸¤ä¸ªï¼Œå¹¶æ¯”è¾ƒå…¶ä¼˜ç¼ºç‚¹ï¼Œè¿™æ ·æ‰èƒ½åœ¨é¢è¯•æ—¶ç»™å‡ºä¸€ä¸ªæ¼‚äº®çš„ç­”æ¡ˆã€‚
 
 <p id="javaweb-39">
 
-#### ×ª·¢ÓëÖØ¶¨ÏòµÄÇø±ð
+#### è½¬å‘ä¸Žé‡å®šå‘çš„åŒºåˆ«
 
-×ª·¢£ºServletÊÕµ½ÇëÇóÒÔºó²»È¥´¦ÀíÇëÇó¶øÊÇÈ¥µ÷ÓÃ·þÎñÆ÷ÄÚ²¿µÄÆäËû×ÊÔ´´¦ÀíÇëÇó
-ÖØ¶¨Ïò£ºServlet·¢ËÍ¸øä¯ÀÀÆ÷Ò»¸öÌØÊâµÄÏìÓ¦£¬Õâ¸öÏìÓ¦¸æËßä¯ÀÀÆ÷ÔÙ´ÎÏòÁíÒ»¸öµØÖ··¢ËÍÇëÇó¡£
+è½¬å‘ï¼šServletæ”¶åˆ°è¯·æ±‚ä»¥åŽä¸åŽ»å¤„ç†è¯·æ±‚è€Œæ˜¯åŽ»è°ƒç”¨æœåŠ¡å™¨å†…éƒ¨çš„å…¶ä»–èµ„æºå¤„ç†è¯·æ±‚
+é‡å®šå‘ï¼šServletå‘é€ç»™æµè§ˆå™¨ä¸€ä¸ªç‰¹æ®Šçš„å“åº”ï¼Œè¿™ä¸ªå“åº”å‘Šè¯‰æµè§ˆå™¨å†æ¬¡å‘å¦ä¸€ä¸ªåœ°å€å‘é€è¯·æ±‚ã€‚
 
-|                | ×ª·¢   | ÖØ¶¨Ïò |
+|                | è½¬å‘   | é‡å®šå‘ |
 | -------------- | ------ | ------ |
-| ÇëÇóµÄ´ÎÊý     | 1      | 2      |
-| ·¢ÆðµÄÎ»ÖÃ     | ·þÎñÆ÷ | ä¯ÀÀÆ÷ |
-| µØÖ·À¸µÄ¸Ä±ä   | ²»¸Ä±ä | ¸Ä±ä   |
-| ä¯ÀÀÆ÷ÊÇ·ñ¸ÐÖª | ·ñ     | ÊÇ     |
+| è¯·æ±‚çš„æ¬¡æ•°     | 1      | 2      |
+| å‘èµ·çš„ä½ç½®     | æœåŠ¡å™¨ | æµè§ˆå™¨ |
+| åœ°å€æ çš„æ”¹å˜   | ä¸æ”¹å˜ | æ”¹å˜   |
+| æµè§ˆå™¨æ˜¯å¦æ„ŸçŸ¥ | å¦     | æ˜¯     |
 
-´ÓÊý¾Ý¹²ÏíÉÏ£¨Çø±ð£©£ºforwordÊÇÒ»¸öÇëÇóµÄÑÓÐø£¬¿ÉÒÔ¹²Ïírequest×÷ÓÃÓòµÄÊý¾Ý¡£redirect¿ªÆôÒ»¸öÐÂµÄÇëÇó£¬²»¿ÉÒÔ¹²Ïírequest×÷ÓÃÓòµÄÊý¾Ý£¬µ«¿ÉÒÔÍ¨¹ýURL·½Ê½½øÐÐÊý¾Ý·¢ËÍ¡£
-´ÓÐÔÄÜÉÏ£¨Çø±ð£©£ºforwordÐÔÄÜÒª¸ßÓÚredirect¡££¨ÒòÎªÐÔÄÜÉÏÓÐÇø±ð£¬ÔÚ±¾ÏµÍ³ÖÐÇëÇóÌø×ª½¨ÒéÊ¹ÓÃforword£¬Èç¹ûÊÇ¿çÓò·ÃÎÊ£¬½¨ÒéÊ¹ÓÃredirect¡££©
+ä»Žæ•°æ®å…±äº«ä¸Šï¼ˆåŒºåˆ«ï¼‰ï¼šforwordæ˜¯ä¸€ä¸ªè¯·æ±‚çš„å»¶ç»­ï¼Œå¯ä»¥å…±äº«requestä½œç”¨åŸŸçš„æ•°æ®ã€‚redirectå¼€å¯ä¸€ä¸ªæ–°çš„è¯·æ±‚ï¼Œä¸å¯ä»¥å…±äº«requestä½œç”¨åŸŸçš„æ•°æ®ï¼Œä½†å¯ä»¥é€šè¿‡URLæ–¹å¼è¿›è¡Œæ•°æ®å‘é€ã€‚
+ä»Žæ€§èƒ½ä¸Šï¼ˆåŒºåˆ«ï¼‰ï¼šforwordæ€§èƒ½è¦é«˜äºŽredirectã€‚ï¼ˆå› ä¸ºæ€§èƒ½ä¸Šæœ‰åŒºåˆ«ï¼Œåœ¨æœ¬ç³»ç»Ÿä¸­è¯·æ±‚è·³è½¬å»ºè®®ä½¿ç”¨forwordï¼Œå¦‚æžœæ˜¯è·¨åŸŸè®¿é—®ï¼Œå»ºè®®ä½¿ç”¨redirectã€‚ï¼‰
 
 <p id="javaweb-40">
 
-#### sessionºÍcookieµÄÇø±ð
+#### sessionå’Œcookieçš„åŒºåˆ«
 
-1. sessionÊÇ´æ´¢ÔÚ·þÎñÆ÷¶Ë£¬cookieÊÇ´æ´¢ÔÚ¿Í»§¶ËµÄ£¬ËùÒÔ´Ó°²È«À´½²sessionµÄ°²È«ÐÔÒª±Ècookie¸ß¡£
+1. sessionæ˜¯å­˜å‚¨åœ¨æœåŠ¡å™¨ç«¯ï¼Œcookieæ˜¯å­˜å‚¨åœ¨å®¢æˆ·ç«¯çš„ï¼Œæ‰€ä»¥ä»Žå®‰å…¨æ¥è®²sessionçš„å®‰å…¨æ€§è¦æ¯”cookieé«˜ã€‚
 
-2. µ¥¸öcookie±£´æµÄÊý¾Ý²»ÄÜ³¬¹ý4K£¬ºÜ¶àä¯ÀÀÆ÷¶¼ÏÞÖÆÒ»¸öÕ¾µã×î¶à±£´æ20¸öcookie£¬¶øsessionÊÇ´æ·ÅÔÚ·þÎñÆ÷µÄÄÚ´æÖÐ£¬ËùÒÔsessionÀïµÄ¶«Î÷²»¶ÏÔö¼Ó»áÔì³É·þÎñÆ÷µÄ¸ºµ££¬ËùÒÔÒ»°ã°ÑºÜÖØÒªµÄÐÅÏ¢²Å´æ´¢ÔÚsessionÖÐ£¬¶ø°ÑÒ»Ð©´ÎÒª¶«Î÷´æ´¢ÔÚ¿Í»§¶ËµÄcookieÀï(ÀýÈç½«µÇÂ½ÐÅÏ¢µÈÖØÒªÐÅÏ¢´æ·ÅÎªsession£¬ÆäËûÐÅÏ¢Èç¹ûÐèÒª±£Áô£¬¿ÉÒÔ·ÅÔÚcookie)
+2. å•ä¸ªcookieä¿å­˜çš„æ•°æ®ä¸èƒ½è¶…è¿‡4Kï¼Œå¾ˆå¤šæµè§ˆå™¨éƒ½é™åˆ¶ä¸€ä¸ªç«™ç‚¹æœ€å¤šä¿å­˜20ä¸ªcookieï¼Œè€Œsessionæ˜¯å­˜æ”¾åœ¨æœåŠ¡å™¨çš„å†…å­˜ä¸­ï¼Œæ‰€ä»¥sessioné‡Œçš„ä¸œè¥¿ä¸æ–­å¢žåŠ ä¼šé€ æˆæœåŠ¡å™¨çš„è´Ÿæ‹…ï¼Œæ‰€ä»¥ä¸€èˆ¬æŠŠå¾ˆé‡è¦çš„ä¿¡æ¯æ‰å­˜å‚¨åœ¨sessionä¸­ï¼Œè€ŒæŠŠä¸€äº›æ¬¡è¦ä¸œè¥¿å­˜å‚¨åœ¨å®¢æˆ·ç«¯çš„cookieé‡Œ(ä¾‹å¦‚å°†ç™»é™†ä¿¡æ¯ç­‰é‡è¦ä¿¡æ¯å­˜æ”¾ä¸ºsessionï¼Œå…¶ä»–ä¿¡æ¯å¦‚æžœéœ€è¦ä¿ç•™ï¼Œå¯ä»¥æ”¾åœ¨cookie)
 
-- cookie·ÖÎªÁ½´óÀà·ÖÎª»á»°cookieºÍ³Ö¾Ã»¯cookie£¬»á»°cookie£¬´æ·ÅÔÚ¿Í»§¶Ëä¯ÀÀÆ÷µÄÄÚ´æÖÐ,ËûµÄÉúÃüÖÜÆÚºÍä¯ÀÀÆ÷ÊÇÒ»ÖÂµÄ£¬ä¯ÀÀÆ÷¹ØÁË»á»°cookieÒ²¾ÍÏûÊ§ÁË£¬¶ø³Ö¾Ã»¯cookieÊÇ´æ·ÅÔÚ¿Í»§¶ËÓ²ÅÌÖÐ£¬¶ø³Ö¾Ã»¯cookieµÄÉúÃüÖÜÆÚ¾ÍÊÇÎÒÃÇÔÚÉèÖÃcookieÊ±ºòÉèÖÃµÄÄÇ¸ö±£´æÊ±¼ä
-
-
-- µ±ä¯ÀÀÆ÷¹Ø±ÕÊ±session»á²»»á¶ªÊ§£¬sessionµÄÐÅÏ¢ÊÇÍ¨¹ý»á»°cookieµÄsessionid»ñÈ¡µÄ£¬µ±ä¯ÀÀÆ÷¹Ø±ÕµÄÊ±ºò»á»°cookieÏûÊ§£¬ËùÒÔÎÒÃÇµÄsessionidÒ²¾ÍÏûÊ§ÁË£¬µ«ÊÇsessionµÄÐÅÏ¢»¹´æÔÚ·þÎñÆ÷¶Ë£¬ÕâÊ±ÎÒÃÇÖ»ÊÇ²é²»µ½ËùÎ½µÄsessionµ«Ëü²¢²»ÊÇ²»´æÔÚ¡£
+- cookieåˆ†ä¸ºä¸¤å¤§ç±»åˆ†ä¸ºä¼šè¯cookieå’ŒæŒä¹…åŒ–cookieï¼Œä¼šè¯cookieï¼Œå­˜æ”¾åœ¨å®¢æˆ·ç«¯æµè§ˆå™¨çš„å†…å­˜ä¸­,ä»–çš„ç”Ÿå‘½å‘¨æœŸå’Œæµè§ˆå™¨æ˜¯ä¸€è‡´çš„ï¼Œæµè§ˆå™¨å…³äº†ä¼šè¯cookieä¹Ÿå°±æ¶ˆå¤±äº†ï¼Œè€ŒæŒä¹…åŒ–cookieæ˜¯å­˜æ”¾åœ¨å®¢æˆ·ç«¯ç¡¬ç›˜ä¸­ï¼Œè€ŒæŒä¹…åŒ–cookieçš„ç”Ÿå‘½å‘¨æœŸå°±æ˜¯æˆ‘ä»¬åœ¨è®¾ç½®cookieæ—¶å€™è®¾ç½®çš„é‚£ä¸ªä¿å­˜æ—¶é—´
 
 
-- sessionÔÚÊ²Ã´Çé¿öÏÂ¶ªÊ§£¬¾ÍÊÇÔÚ·þÎñÆ÷¹Ø±ÕµÄÊ±ºò£¨Ò²¿ÉÒÔËµËµsessionµÄ»î»¯ºÍ¶Û»¯£©£¬»òÕßÊÇsession¹ýÆÚ(Ä¬ÈÏÊ±¼äÊÇ30·ÖÖÓ)£¬ÔÙ»òÕßµ÷ÓÃÁËinvalidate()µÄ»òÕßÊÇÎÒÃÇÏëÒªsessionÖÐµÄÄ³Ò»ÌõÊý¾ÝÏûÊ§µ÷ÓÃsession.removeAttribute()·½·¨
+- å½“æµè§ˆå™¨å…³é—­æ—¶sessionä¼šä¸ä¼šä¸¢å¤±ï¼Œsessionçš„ä¿¡æ¯æ˜¯é€šè¿‡ä¼šè¯cookieçš„sessionidèŽ·å–çš„ï¼Œå½“æµè§ˆå™¨å…³é—­çš„æ—¶å€™ä¼šè¯cookieæ¶ˆå¤±ï¼Œæ‰€ä»¥æˆ‘ä»¬çš„sessionidä¹Ÿå°±æ¶ˆå¤±äº†ï¼Œä½†æ˜¯sessionçš„ä¿¡æ¯è¿˜å­˜åœ¨æœåŠ¡å™¨ç«¯ï¼Œè¿™æ—¶æˆ‘ä»¬åªæ˜¯æŸ¥ä¸åˆ°æ‰€è°“çš„sessionä½†å®ƒå¹¶ä¸æ˜¯ä¸å­˜åœ¨ã€‚
 
 
-- sessionÔÚÊ²Ã´Ê±ºò±»´´½¨ÄØ£¬È·ÇÐµÄËµÊÇÍ¨¹ýµ÷ÓÃgetsession()À´´´½¨¡£·ÃÎÊHTMLÒ³ÃæÊÇ²»»á´´½¨session£¬µ«ÊÇ·ÃÎÊindex.JSPÊ±»á´´½¨session(JSPÊµ¼ÊÉÏÊÇÒ»¸öServlet£¬ServletÖÐÓÐgetSession·½·¨)¡£
+- sessionåœ¨ä»€ä¹ˆæƒ…å†µä¸‹ä¸¢å¤±ï¼Œå°±æ˜¯åœ¨æœåŠ¡å™¨å…³é—­çš„æ—¶å€™ï¼ˆä¹Ÿå¯ä»¥è¯´è¯´sessionçš„æ´»åŒ–å’Œé’åŒ–ï¼‰ï¼Œæˆ–è€…æ˜¯sessionè¿‡æœŸ(é»˜è®¤æ—¶é—´æ˜¯30åˆ†é’Ÿ)ï¼Œå†æˆ–è€…è°ƒç”¨äº†invalidate()çš„æˆ–è€…æ˜¯æˆ‘ä»¬æƒ³è¦sessionä¸­çš„æŸä¸€æ¡æ•°æ®æ¶ˆå¤±è°ƒç”¨session.removeAttribute()æ–¹æ³•
+
+
+- sessionåœ¨ä»€ä¹ˆæ—¶å€™è¢«åˆ›å»ºå‘¢ï¼Œç¡®åˆ‡çš„è¯´æ˜¯é€šè¿‡è°ƒç”¨getsession()æ¥åˆ›å»ºã€‚è®¿é—®HTMLé¡µé¢æ˜¯ä¸ä¼šåˆ›å»ºsessionï¼Œä½†æ˜¯è®¿é—®index.JSPæ—¶ä¼šåˆ›å»ºsession(JSPå®žé™…ä¸Šæ˜¯ä¸€ä¸ªServletï¼ŒServletä¸­æœ‰getSessionæ–¹æ³•)ã€‚
 
 
 <p id="javaweb-41">
 
-#### ÈçºÎ·ÀÖ¹±íµ¥ÖØ¸´Ìá½»
+#### å¦‚ä½•é˜²æ­¢è¡¨å•é‡å¤æäº¤
 
-Õë¶ÔÓÚÖØ¸´Ìá½»µÄÕûÌå½â¾ö·½°¸£º
+é’ˆå¯¹äºŽé‡å¤æäº¤çš„æ•´ä½“è§£å†³æ–¹æ¡ˆï¼š
 
-1. ÓÃredirect£¨ÖØ¶¨Ïò£©À´½â¾öÖØ¸´Ìá½»µÄÎÊÌâ
-2. µã»÷Ò»´ÎÖ®ºó£¬°´Å¥Ê§Ð§
-3. Í¨¹ýloading(LoadingÔ­ÀíÊÇÔÚµã»÷Ìá½»Ê±£¬Éú³ÉLoadingÑùÊ½£¬ÔÚÌá½»Íê³ÉÖ®ºóÒþ²Ø¸ÃÑùÊ½)
-4. ×Ô¶¨ÒåÖØ¸´Ìá½»¹ýÂËÆ÷
+1. ç”¨redirectï¼ˆé‡å®šå‘ï¼‰æ¥è§£å†³é‡å¤æäº¤çš„é—®é¢˜
+2. ç‚¹å‡»ä¸€æ¬¡ä¹‹åŽï¼ŒæŒ‰é’®å¤±æ•ˆ
+3. é€šè¿‡loading(LoadingåŽŸç†æ˜¯åœ¨ç‚¹å‡»æäº¤æ—¶ï¼Œç”ŸæˆLoadingæ ·å¼ï¼Œåœ¨æäº¤å®Œæˆä¹‹åŽéšè—è¯¥æ ·å¼)
+4. è‡ªå®šä¹‰é‡å¤æäº¤è¿‡æ»¤å™¨
 
 <p id="javaweb-42">
 
 #### Servlet
 
-1.1 Servlet¼Ì³ÐÊµÏÖ½á¹¹
+1.1 Servletç»§æ‰¿å®žçŽ°ç»“æž„
 
 ```sh
-Servlet (½Ó¿Ú) 			-->      init|service|destroy·½·¨
-GenericServlet(³éÏóÀà)  -->      ÓëÐ­ÒéÎÞ¹ØµÄServlet
-HttpServlet(³éÏóÀà)		-->		 ÊµÏÖÁËhttpÐ­Òé
-×Ô¶¨ÒåServlet			-->		 ÖØÐ´doGet/doPost
+Servlet (æŽ¥å£) 			-->      init|service|destroyæ–¹æ³•
+GenericServlet(æŠ½è±¡ç±»)  -->      ä¸Žåè®®æ— å…³çš„Servlet
+HttpServlet(æŠ½è±¡ç±»)		-->		 å®žçŽ°äº†httpåè®®
+è‡ªå®šä¹‰Servlet			-->		 é‡å†™doGet/doPost
 ```
 
-1.2 ±àÐ´ServletµÄ²½Öè
+1.2 ç¼–å†™Servletçš„æ­¥éª¤
 
-1. ¼Ì³ÐHttpServlet
-2. ÖØÐ´doGet/doPost·½·¨
-3. ÔÚweb.xmlÖÐ×¢²áservlet
+1. ç»§æ‰¿HttpServlet
+2. é‡å†™doGet/doPostæ–¹æ³•
+3. åœ¨web.xmlä¸­æ³¨å†Œservlet
 
-1.3 ServletÉúÃüÖÜÆÚ
+1.3 Servletç”Ÿå‘½å‘¨æœŸ
 
-1. `init`:½öÖ´ÐÐÒ»´Î,¸ºÔð×°ÔØservletÊ±³õÊ¼»¯servlet¶ÔÏó
-2. `service`:ºËÐÄ·½·¨,Ò»°ãget/postÁ½ÖÖ·½Ê½
-3. `destroy`:Í£Ö¹²¢Ð¶ÔØservlet,ÊÍ·Å×ÊÔ´
+1. `init`:ä»…æ‰§è¡Œä¸€æ¬¡,è´Ÿè´£è£…è½½servletæ—¶åˆå§‹åŒ–servletå¯¹è±¡
+2. `service`:æ ¸å¿ƒæ–¹æ³•,ä¸€èˆ¬get/postä¸¤ç§æ–¹å¼
+3. `destroy`:åœæ­¢å¹¶å¸è½½servlet,é‡Šæ”¾èµ„æº
 
-1.4 ¹ý³Ì
+1.4 è¿‡ç¨‹
 
-1. ¿Í»§¶ËrequestÇëÇó -> ·þÎñÆ÷¼ì²éServletÊµÀýÊÇ·ñ´æÔÚ -> Èô´æÔÚµ÷ÓÃÏàÓ¦service·½·¨
-2. ¿Í»§¶ËrequestÇëÇó -> ·þÎñÆ÷¼ì²éServletÊµÀýÊÇ·ñ´æÔÚ -> Èô²»´æÔÚ×°ÔØServletÀà²¢´´½¨ÊµÀý -> µ÷ÓÃinit³õÊ¼»¯ -> µ÷ÓÃservice
-3. ¼ÓÔØºÍÊµÀý»¯¡¢³õÊ¼»¯¡¢´¦ÀíÇëÇó¡¢·þÎñ½áÊø
+1. å®¢æˆ·ç«¯requestè¯·æ±‚ -> æœåŠ¡å™¨æ£€æŸ¥Servletå®žä¾‹æ˜¯å¦å­˜åœ¨ -> è‹¥å­˜åœ¨è°ƒç”¨ç›¸åº”serviceæ–¹æ³•
+2. å®¢æˆ·ç«¯requestè¯·æ±‚ -> æœåŠ¡å™¨æ£€æŸ¥Servletå®žä¾‹æ˜¯å¦å­˜åœ¨ -> è‹¥ä¸å­˜åœ¨è£…è½½Servletç±»å¹¶åˆ›å»ºå®žä¾‹ -> è°ƒç”¨initåˆå§‹åŒ– -> è°ƒç”¨service
+3. åŠ è½½å’Œå®žä¾‹åŒ–ã€åˆå§‹åŒ–ã€å¤„ç†è¯·æ±‚ã€æœåŠ¡ç»“æŸ
 
-1.5 doPost·½·¨ÒªÅ×³öµÄÒì³£:ServletExcception¡¢IOException
+1.5 doPostæ–¹æ³•è¦æŠ›å‡ºçš„å¼‚å¸¸:ServletExcceptionã€IOException
 
-1.6 ServletÈÝÆ÷×°ÔØServlet
+1.6 Servletå®¹å™¨è£…è½½Servlet
 
-1. web.xmlÖÐÅäÖÃload-on-startupÆô¶¯Ê±×°ÔØ
-2. ¿Í»§Ê×´ÎÏòServlet·¢ËÍÇëÇó
-3. ServletÀàÎÄ¼þ±»¸üÐÂºó, ÖØÐÂ×°ÔØServlet
+1. web.xmlä¸­é…ç½®load-on-startupå¯åŠ¨æ—¶è£…è½½
+2. å®¢æˆ·é¦–æ¬¡å‘Servletå‘é€è¯·æ±‚
+3. Servletç±»æ–‡ä»¶è¢«æ›´æ–°åŽ, é‡æ–°è£…è½½Servlet
 
-1.7 HttpServletÈÝÆ÷ÏìÓ¦web¿Í»§ÇëÇóÁ÷³Ì
+1.7 HttpServletå®¹å™¨å“åº”webå®¢æˆ·è¯·æ±‚æµç¨‹
 
-1. Web¿Í»§ÏòservletÈÝÆ÷·¢³öhttpÇëÇó
-2. servletÈÝÆ÷½âÎöWeb¿Í»§µÄhttpÇëÇó
-3. servletÈÝÆ÷´´½¨Ò»¸öHttpRequest¶ÔÏó, ·â×°httpÇëÇóÐÅÏ¢
-4. servletÈÝÆ÷´´½¨Ò»¸öHttpResponse¶ÔÏó
-5. servletÈÝÆ÷µ÷ÓÃHttpServletµÄservice·½·¨, °ÑHttpRequestºÍHttpResponse¶ÔÏó×÷Îªservice·½·¨µÄ²ÎÊý´«¸øHttpServlet¶ÔÏó
-6. HttpServletµ÷ÓÃhttprequestµÄÓÐ¹Ø·½·¨, »ñÈ¡httpÇëÇóÐÅÏ¢
-7. httpservletµ÷ÓÃhttpresponseµÄÓÐ¹Ø·½·¨, Éú³ÉÏìÓ¦Êý¾Ý
-8. ServletÈÝÆ÷°ÑHttpServletµÄÏìÓ¦½á¹û´«¸øweb¿Í»§
+1. Webå®¢æˆ·å‘servletå®¹å™¨å‘å‡ºhttpè¯·æ±‚
+2. servletå®¹å™¨è§£æžWebå®¢æˆ·çš„httpè¯·æ±‚
+3. servletå®¹å™¨åˆ›å»ºä¸€ä¸ªHttpRequestå¯¹è±¡, å°è£…httpè¯·æ±‚ä¿¡æ¯
+4. servletå®¹å™¨åˆ›å»ºä¸€ä¸ªHttpResponseå¯¹è±¡
+5. servletå®¹å™¨è°ƒç”¨HttpServletçš„serviceæ–¹æ³•, æŠŠHttpRequestå’ŒHttpResponseå¯¹è±¡ä½œä¸ºserviceæ–¹æ³•çš„å‚æ•°ä¼ ç»™HttpServletå¯¹è±¡
+6. HttpServletè°ƒç”¨httprequestçš„æœ‰å…³æ–¹æ³•, èŽ·å–httpè¯·æ±‚ä¿¡æ¯
+7. httpservletè°ƒç”¨httpresponseçš„æœ‰å…³æ–¹æ³•, ç”Ÿæˆå“åº”æ•°æ®
+8. Servletå®¹å™¨æŠŠHttpServletçš„å“åº”ç»“æžœä¼ ç»™webå®¢æˆ·
 
-1.8 HttpServletRequestÍê³ÉµÄÒ»Ð©¹¦ÄÜ
+1.8 HttpServletRequestå®Œæˆçš„ä¸€äº›åŠŸèƒ½
 
 1. request.getCookie()
 2. request.getHeader(String s)
@@ -1243,22 +1243,22 @@ HttpServlet(³éÏóÀà)		-->		 ÊµÏÖÁËhttpÐ­Òé
 
 ```
 HttpSession session = request.getSession(boolean create)
-·µ»Øµ±Ç°ÇëÇóµÄ»á»°
+è¿”å›žå½“å‰è¯·æ±‚çš„ä¼šè¯
 ```
 
-1.9 HttpServletResponseÍê³ÉÒ»Ð©µÄ¹¦ÄÜ
+1.9 HttpServletResponseå®Œæˆä¸€äº›çš„åŠŸèƒ½
 
-1. ÉèhttpÏìÓ¦Í·
-2. ÉèÖÃCookie
-3. Êä³ö·µ»ØÊý¾Ý
+1. è®¾httpå“åº”å¤´
+2. è®¾ç½®Cookie
+3. è¾“å‡ºè¿”å›žæ•°æ®
 
-1.10 ServletÓëJSP¾Å´óÄÚÖÃ¶ÔÏóµÄ¹ØÏµ
+1.10 Servletä¸ŽJSPä¹å¤§å†…ç½®å¯¹è±¡çš„å…³ç³»
 
-JSP¶ÔÏó 				ÔõÑù»ñµÃ
+JSPå¯¹è±¡ 				æ€Žæ ·èŽ·å¾—
 ```
 1. out				->		response.getWriter
-2. request 		->		Service·½·¨ÖÐµÄreq²ÎÊý
-3. response 		->		Service·½·¨ÖÐµÄresp²ÎÊý
+2. request 		->		Serviceæ–¹æ³•ä¸­çš„reqå‚æ•°
+3. response 		->		Serviceæ–¹æ³•ä¸­çš„respå‚æ•°
 4. session 		->		request.getSession
 5. application 	->		getServletContext
 6. exception 		->		Throwable
@@ -1267,27 +1267,27 @@ JSP¶ÔÏó 				ÔõÑù»ñµÃ
 9. Config 			->		getServletConfig
 ```
 
-exceptionÊÇJSP¾Å´óÄÚÖÃ¶ÔÏóÖ®Ò»£¬ÆäÊµÀý´ú±íÆäËûÒ³ÃæµÄÒì³£ºÍ´íÎó¡£Ö»ÓÐµ±Ò³ÃæÊÇ´íÎó´¦ÀíÒ³ÃæÊ±£¬¼´isErroePageÎª trueÊ±£¬¸Ã¶ÔÏó²Å¿ÉÒÔÊ¹ÓÃ¡£
+exceptionæ˜¯JSPä¹å¤§å†…ç½®å¯¹è±¡ä¹‹ä¸€ï¼Œå…¶å®žä¾‹ä»£è¡¨å…¶ä»–é¡µé¢çš„å¼‚å¸¸å’Œé”™è¯¯ã€‚åªæœ‰å½“é¡µé¢æ˜¯é”™è¯¯å¤„ç†é¡µé¢æ—¶ï¼Œå³isErroePageä¸º trueæ—¶ï¼Œè¯¥å¯¹è±¡æ‰å¯ä»¥ä½¿ç”¨ã€‚
 
 <p id="javaweb-43">
 
-#### XMLÓëJSON¶Ô±ÈºÍÇø±ð
+#### XMLä¸ŽJSONå¯¹æ¯”å’ŒåŒºåˆ«
 
 XML
 
 ```
-1£©Ó¦ÓÃ¹ã·º£¬¿ÉÀ©Õ¹ÐÔÇ¿£¬±»¹ã·ºÓ¦ÓÃ¸÷ÖÖ³¡ºÏ
-2£©¶ÁÈ¡¡¢½âÎöÃ»ÓÐJSON¿ì
-3£©¿É¶ÁÐÔÇ¿£¬¿ÉÃèÊö¸´ÔÓ½á¹¹
+1ï¼‰åº”ç”¨å¹¿æ³›ï¼Œå¯æ‰©å±•æ€§å¼ºï¼Œè¢«å¹¿æ³›åº”ç”¨å„ç§åœºåˆ
+2ï¼‰è¯»å–ã€è§£æžæ²¡æœ‰JSONå¿«
+3ï¼‰å¯è¯»æ€§å¼ºï¼Œå¯æè¿°å¤æ‚ç»“æž„
 ```
 
 JSON
 
 ```
-1£©½á¹¹¼òµ¥£¬¶¼ÊÇ¼üÖµ¶Ô
-2£©¶ÁÈ¡¡¢½âÎöËÙ¶È¿ì£¬ºÜ¶àÓïÑÔÖ§³Ö
-3£©´«ÊäÊý¾ÝÁ¿Ð¡£¬´«ÊäËÙÂÊ´ó´óÌá¸ß
-4£©ÃèÊö¸´ÔÓ½á¹¹ÄÜÁ¦½ÏÈõ
+1ï¼‰ç»“æž„ç®€å•ï¼Œéƒ½æ˜¯é”®å€¼å¯¹
+2ï¼‰è¯»å–ã€è§£æžé€Ÿåº¦å¿«ï¼Œå¾ˆå¤šè¯­è¨€æ”¯æŒ
+3ï¼‰ä¼ è¾“æ•°æ®é‡å°ï¼Œä¼ è¾“é€ŸçŽ‡å¤§å¤§æé«˜
+4ï¼‰æè¿°å¤æ‚ç»“æž„èƒ½åŠ›è¾ƒå¼±
 
-JavaScript¡¢PHPµÈÔ­ÉúÖ§³Ö£¬¼ò»¯ÁË¶ÁÈ¡½âÎö¡£³ÉÎªµ±Ç°»¥ÁªÍøÊ±´úÆÕ±éÓ¦ÓÃµÄÊý¾Ý½á¹¹¡£
+JavaScriptã€PHPç­‰åŽŸç”Ÿæ”¯æŒï¼Œç®€åŒ–äº†è¯»å–è§£æžã€‚æˆä¸ºå½“å‰äº’è”ç½‘æ—¶ä»£æ™®éåº”ç”¨çš„æ•°æ®ç»“æž„ã€‚
 ```

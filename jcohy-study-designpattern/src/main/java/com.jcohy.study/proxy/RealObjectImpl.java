@@ -6,7 +6,7 @@ public class RealObjectImpl implements Object {
 	
 	@Override
 	public void action() {
-		System.out.println("ÕâÊÇ±»´úÀíµÄÀà"+this.getClass());
+		System.out.println("è¿™æ˜¯è¢«ä»£ç†çš„ç±»"+this.getClass());
 	}
    
 }

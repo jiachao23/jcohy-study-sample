@@ -1,8 +1,8 @@
 package com.jcohy.study.strategy;
 /**
  * 
- * ¶¨ÒåÖ§³ÖËùÓĞËã·¨µÄ¹«¹²½Ó¿Ú£¬contextÊ¹ÓÃÕâ¸ö½Ó¿Ú
- * µ÷ÓÃConcreteStrategy¶¨ÒåµÄËã·¨
+ * å®šä¹‰æ”¯æŒæ‰€æœ‰ç®—æ³•çš„å…¬å…±æ¥å£ï¼Œcontextä½¿ç”¨è¿™ä¸ªæ¥å£
+ * è°ƒç”¨ConcreteStrategyå®šä¹‰çš„ç®—æ³•
  * @author admin
  *
  */

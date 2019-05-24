@@ -10,12 +10,12 @@ import java.util.Collections;
 import java.util.Comparator;
 
 /**
- * ×÷ÓÃ£º½âÎö¸è´Ê¹¤¾ßÀàs
+ * ä½œç”¨ï¼šè§£ææ­Œè¯å·¥å…·ç±»s
  */
 public class LyricUtils {
 
     /**
-     * µÃµ½½âÎöºÃµÄ¸è´ÊÁĞ±í
+     * å¾—åˆ°è§£æå¥½çš„æ­Œè¯åˆ—è¡¨
      * @return
      */
     public ArrayList<Lyric> getLyrics() {
@@ -25,7 +25,7 @@ public class LyricUtils {
     private ArrayList<Lyric> lyrics;
 
     /**
-     * ÊÇ·ñ´æÔÚ¸è´Ê
+     * æ˜¯å¦å­˜åœ¨æ­Œè¯
      * @return
      */
     public boolean isExistsLyric() {
@@ -33,23 +33,23 @@ public class LyricUtils {
     }
 
     /**
-     * ÊÇ·ñ´æÔÚ¸è´Ê
+     * æ˜¯å¦å­˜åœ¨æ­Œè¯
 
      */
     private boolean isExistsLyric  = false;
 
     /**
-     * ¶ÁÈ¡¸è´ÊÎÄ¼ş
+     * è¯»å–æ­Œè¯æ–‡ä»¶
      * @param file /mnt/scard/audio/beijingbeijing.txt
      */
     public void readLyricFile(File file){
         if(file == null || !file.exists()){
-            //¸è´ÊÎÄ¼ş²»´æÔÚ
+            //æ­Œè¯æ–‡ä»¶ä¸å­˜åœ¨
             lyrics = null;
             isExistsLyric = false;
         }else{
-            //¸è´ÊÎÄ¼ş´æÔÚ
-            //1.½âÎö¸è´Ê Ò»ĞĞµÄ¶ÁÈ¡-½âÎö
+            //æ­Œè¯æ–‡ä»¶å­˜åœ¨
+            //1.è§£ææ­Œè¯ ä¸€è¡Œçš„è¯»å–-è§£æ
             lyrics = new ArrayList<>();
             isExistsLyric = true;
             BufferedReader reader = null;
@@ -69,7 +69,7 @@ public class LyricUtils {
             }
 
 
-            //2.ÅÅĞò
+            //2.æ’åº
             Collections.sort(lyrics, new Comparator<Lyric>() {
                 @Override
                 public int compare(Lyric lhs, Lyric rhs) {
@@ -84,7 +84,7 @@ public class LyricUtils {
                 }
             });
 
-            //3.¼ÆËãÃ¿¾ä¸ßÁÁÏÔÊ¾µÄÊ±¼ä
+            //3.è®¡ç®—æ¯å¥é«˜äº®æ˜¾ç¤ºçš„æ—¶é—´
             for(int i=0;i<lyrics.size();i++){
                 Lyric oneLyric = lyrics.get(i);
                 if(i+1 < lyrics.size()){
@@ -98,9 +98,9 @@ public class LyricUtils {
 
 
     /**
-     * ÅĞ¶ÏÎÄ¼ş±àÂë
-     * @param file ÎÄ¼ş
-     * @return ±àÂë£ºGBK,UTF-8,UTF-16LE
+     * åˆ¤æ–­æ–‡ä»¶ç¼–ç 
+     * @param file æ–‡ä»¶
+     * @return ç¼–ç ï¼šGBK,UTF-8,UTF-16LE
      */
     public String getCharset(File file) {
         String charset = "GBK";
@@ -163,20 +163,20 @@ public class LyricUtils {
     }
 
     /**
-     * ½âÎöÒ»¾ä¸è´Ê
-     * @param line [02:04.12][03:37.32][00:59.73]ÎÒÔÚÕâÀï»¶Ğ¦
+     * è§£æä¸€å¥æ­Œè¯
+     * @param line [02:04.12][03:37.32][00:59.73]æˆ‘åœ¨è¿™é‡Œæ¬¢ç¬‘
      * @return
      */
     public String parsedLyric(String line) {
 //    	lyrics = new ArrayList<>();
-        ////indexOfµÚÒ»´Î³öÏÖ[µÄÎ»ÖÃ
-        int pos1 = line.indexOf("[");//0,Èç¹ûÃ»ÓĞ·µ»Ø-1
+        ////indexOfç¬¬ä¸€æ¬¡å‡ºç°[çš„ä½ç½®
+        int pos1 = line.indexOf("[");//0,å¦‚æœæ²¡æœ‰è¿”å›-1
 
-        int pos2 = line.indexOf("]");//9,Èç¹ûÃ»ÓĞ·µ»Ø-1
+        int pos2 = line.indexOf("]");//9,å¦‚æœæ²¡æœ‰è¿”å›-1
 
-        if(pos1 ==0 && pos2 != -1){//¿Ï¶¨ÊÇÓÉÒ»¾ä¸è´Ê
+        if(pos1 ==0 && pos2 != -1){//è‚¯å®šæ˜¯ç”±ä¸€å¥æ­Œè¯
 
-            //×°Ê±¼ä
+            //è£…æ—¶é—´
             long[] times = new long[getCountTag(line)];
 
             String strTime =line.substring(pos1+1,pos2) ;//02:04.12
@@ -185,7 +185,7 @@ public class LyricUtils {
             String content = line;
             int i = 1;
             while (pos1 ==0 && pos2 != -1){
-                content = content.substring(pos2 + 1); //[03:37.32][00:59.73]ÎÒÔÚÕâÀï»¶Ğ¦--->[00:59.73]ÎÒÔÚÕâÀï»¶Ğ¦-->ÎÒÔÚÕâÀï»¶Ğ¦
+                content = content.substring(pos2 + 1); //[03:37.32][00:59.73]æˆ‘åœ¨è¿™é‡Œæ¬¢ç¬‘--->[00:59.73]æˆ‘åœ¨è¿™é‡Œæ¬¢ç¬‘-->æˆ‘åœ¨è¿™é‡Œæ¬¢ç¬‘
                 pos1 = content.indexOf("[");//0/-1
                 pos2 = content.indexOf("]");//9//-1
 
@@ -203,14 +203,14 @@ public class LyricUtils {
             }
 
             Lyric lyric = new Lyric();
-            //°ÑÊ±¼äÊı×éºÍÎÄ±¾¹ØÁªÆğÀ´£¬²¢ÇÒ¼ÓÈëµ½¼¯ºÏÖĞ
+            //æŠŠæ—¶é—´æ•°ç»„å’Œæ–‡æœ¬å…³è”èµ·æ¥ï¼Œå¹¶ä¸”åŠ å…¥åˆ°é›†åˆä¸­
             for(int j = 0;j < times.length;j++){
 
-                if(times[j] !=0){//ÓĞÊ±¼ä´Á
+                if(times[j] !=0){//æœ‰æ—¶é—´æˆ³
 
                     lyric.setContent(content);
                     lyric.setTimePoint(times[j]);
-                    //Ìí¼Óµ½¼¯ºÏÖĞ
+                    //æ·»åŠ åˆ°é›†åˆä¸­
                     lyrics.add(lyric);
                     lyric = new Lyric();
 
@@ -219,7 +219,7 @@ public class LyricUtils {
 
             }
 
-            return  content;//ÎÒÔÚÕâÀï»¶Ğ¦
+            return  content;//æˆ‘åœ¨è¿™é‡Œæ¬¢ç¬‘
 
 
         }
@@ -229,7 +229,7 @@ public class LyricUtils {
     }
 
     /**
-     * °ÑStringÀàĞÍÊÇÊ±¼ä×ª»»³ÉlongÀàĞÍ
+     * æŠŠStringç±»å‹æ˜¯æ—¶é—´è½¬æ¢æˆlongç±»å‹
      * @param strTime 02:04.12
      * @return
      */
@@ -237,18 +237,18 @@ public class LyricUtils {
         long result = -1;
         try{
 
-            //1.°Ñ02:04.12°´ÕÕ:ÇĞ¸î³É02ºÍ04.12
+            //1.æŠŠ02:04.12æŒ‰ç…§:åˆ‡å‰²æˆ02å’Œ04.12
             String[] s1 = strTime.split(":");
-            //2.°Ñ04.12°´ÕÕ.ÇĞ¸î³É04ºÍ12
+            //2.æŠŠ04.12æŒ‰ç…§.åˆ‡å‰²æˆ04å’Œ12
             String[] s2 = s1[1].split("\\.");
 
-            //1.·Ö
+            //1.åˆ†
             long min = Long.parseLong(s1[0]);
 
-            //2.Ãë
+            //2.ç§’
             long second = Long.parseLong(s2[0]);
 
-            //3.ºÁÃë
+            //3.æ¯«ç§’
             long mil = Long.parseLong(s2[1]);
 
             result =  min * 60 * 1000 + second * 1000 + mil*10;
@@ -260,7 +260,7 @@ public class LyricUtils {
         return result;
     }
     /**
-     * °ÑlongÀàĞÍÊÇÊ±¼ä×ª»»³ÉStringÀàĞÍ
+     * æŠŠlongç±»å‹æ˜¯æ—¶é—´è½¬æ¢æˆStringç±»å‹
      * @param time 02:04.12
      * @return
      */
@@ -295,8 +295,8 @@ public class LyricUtils {
     }
     
     /**
-     * ÅĞ¶ÏÓĞ¶àÉÙ¾ä¸è´Ê
-     * @param line [02:04.12][03:37.32][00:59.73]ÎÒÔÚÕâÀï»¶Ğ¦
+     * åˆ¤æ–­æœ‰å¤šå°‘å¥æ­Œè¯
+     * @param line [02:04.12][03:37.32][00:59.73]æˆ‘åœ¨è¿™é‡Œæ¬¢ç¬‘
      * @return
      */
     public int getCountTag(String line) {

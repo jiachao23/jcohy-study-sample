@@ -1,28 +1,28 @@
-1. VS ×ÔÊµÏÖ:
+1. VS è‡ªå®ç°:
 
-1). ´î½¨ Struts2 µÄ¿ª·¢»·¾³
+1). æ­å»º Struts2 çš„å¼€å‘ç¯å¢ƒ
 
-2). ²»ĞèÒªÏÔÊ½µÄ¶¨Òå Filter, ¶øÊ¹ÓÃµÄÊÇ struts2 µÄÅäÖÃÎÄ¼ş. 
+2). ä¸éœ€è¦æ˜¾å¼çš„å®šä¹‰ Filter, è€Œä½¿ç”¨çš„æ˜¯ struts2 çš„é…ç½®æ–‡ä»¶. 
 
-3). details.jsp ±ÈÏÈÇ°±äµÃ¼òµ¥ÁË.
+3). details.jsp æ¯”å…ˆå‰å˜å¾—ç®€å•äº†.
 
 ${requestScope.product.productName} -> ${productName}
 
-4). ²½Öè:
+4). æ­¥éª¤:
 
-I.  ÓÉ product-input.action ×ªµ½ /WEB-INF/pages/input.jsp
+I.  ç”± product-input.action è½¬åˆ° /WEB-INF/pages/input.jsp
 	
-	ÔÚ struts2 ÖĞÅäÖÃÒ»¸ö action
+	åœ¨ struts2 ä¸­é…ç½®ä¸€ä¸ª action
 	
 	<action name="product-input">
 		<result>/WEB-INF/pages/input.jsp</result>
 	</action>
 	
-II. ÓÉ input.jsp Ò³ÃæµÄ action: product-save.action µ½ Product's save, ÔÙµ½  /WEB-INF/pages/details.jsp
+II. ç”± input.jsp é¡µé¢çš„ action: product-save.action åˆ° Product's save, å†åˆ°  /WEB-INF/pages/details.jsp
 
 	<action name="product-save" class="com.atguigu.struts2.helloworld.Product"
 		method="save">
 		<result name="details">/WEB-INF/pages/details.jsp</result>	
 	</action>
 	
-	ÔÚ Prodcut ÖĞ¶¨ÒåÒ»¸ö save ·½·¨, ÇÒ·µ»ØÖµÎª details
+	åœ¨ Prodcut ä¸­å®šä¹‰ä¸€ä¸ª save æ–¹æ³•, ä¸”è¿”å›å€¼ä¸º details

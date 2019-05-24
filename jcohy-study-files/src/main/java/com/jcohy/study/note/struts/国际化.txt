@@ -1,36 +1,36 @@
-1. ¹ú¼Ê»¯µÄÄ¿±ê
+1. å›½é™…åŒ–çš„ç›®æ ‡
 
-1). ÈçºÎÅäÖÃ¹ú¼Ê»¯×ÊÔ´ÎÄ¼þ
+1). å¦‚ä½•é…ç½®å›½é™…åŒ–èµ„æºæ–‡ä»¶
 
-I.   Action ·¶Î§×ÊÔ´ÎÄ¼þ: ÔÚActionÀàÎÄ¼þËùÔÚµÄÂ·¾¶½¨Á¢ÃûÎª ActionName_language_country.properties µÄÎÄ¼þ
-II.  °ü·¶Î§×ÊÔ´ÎÄ¼þ: ÔÚ°üµÄ¸ùÂ·¾¶ÏÂ½¨Á¢ÎÄ¼þÃûÎª package_language_country.properties µÄÊôÐÔÎÄ¼þ,
-Ò»µ©½¨Á¢£¬´¦ÓÚ¸Ã°üÏÂµÄËùÓÐ Action ¶¼¿ÉÒÔ·ÃÎÊ¸Ã×ÊÔ´ÎÄ¼þ¡£×¢Òâ£º°ü·¶Î§×ÊÔ´ÎÄ¼þµÄ baseName ¾ÍÊÇpackage£¬²»ÊÇActionËùÔÚµÄ°üÃû¡£
-III. È«¾Ö×ÊÔ´ÎÄ¼þ
-	> ÃüÃû·½Ê½: basename_language_country.properties
+I.   Action èŒƒå›´èµ„æºæ–‡ä»¶: åœ¨Actionç±»æ–‡ä»¶æ‰€åœ¨çš„è·¯å¾„å»ºç«‹åä¸º ActionName_language_country.properties çš„æ–‡ä»¶
+II.  åŒ…èŒƒå›´èµ„æºæ–‡ä»¶: åœ¨åŒ…çš„æ ¹è·¯å¾„ä¸‹å»ºç«‹æ–‡ä»¶åä¸º package_language_country.properties çš„å±žæ€§æ–‡ä»¶,
+ä¸€æ—¦å»ºç«‹ï¼Œå¤„äºŽè¯¥åŒ…ä¸‹çš„æ‰€æœ‰ Action éƒ½å¯ä»¥è®¿é—®è¯¥èµ„æºæ–‡ä»¶ã€‚æ³¨æ„ï¼šåŒ…èŒƒå›´èµ„æºæ–‡ä»¶çš„ baseName å°±æ˜¯packageï¼Œä¸æ˜¯Actionæ‰€åœ¨çš„åŒ…åã€‚
+III. å…¨å±€èµ„æºæ–‡ä»¶
+	> å‘½åæ–¹å¼: basename_language_country.properties
 	> struts.xml <constant name="struts.custom.i18n.resources" value="baseName"/>
 
-IV.  ¹ú¼Ê»¯×ÊÔ´ÎÄ¼þ¼ÓÔØµÄË³ÐòÈçºÎÄØ ? Àëµ±Ç° Action ½Ï½üµÄ½«±»ÓÅÏÈ¼ÓÔØ. 
+IV.  å›½é™…åŒ–èµ„æºæ–‡ä»¶åŠ è½½çš„é¡ºåºå¦‚ä½•å‘¢ ? ç¦»å½“å‰ Action è¾ƒè¿‘çš„å°†è¢«ä¼˜å…ˆåŠ è½½. 
 
-¼ÙÉèÎÒÃÇÔÚÄ³¸ö ChildAction ÖÐµ÷ÓÃÁËgetText("username")£º
+å‡è®¾æˆ‘ä»¬åœ¨æŸä¸ª ChildAction ä¸­è°ƒç”¨äº†getText("username")ï¼š
 
-(1) ¼ÓÔØºÍ ChildAction µÄÀàÎÄ¼þÔÚÍ¬Ò»¸ö°üÏÂµÄÏµÁÐ×ÊÔ´ÎÄ¼þ ChildAction.properties
-(2) ¼ÓÔØ  ChildAction ÊµÏÖµÄ½Ó¿Ú IChild£¬ÇÒºÍ IChildn ÔÚÍ¬Ò»¸ö°üÏÂ IChild.properties ÏµÁÐ×ÊÔ´ÎÄ¼þ¡£
-(3) ¼ÓÔØ ChildAction ¸¸Àà Parent£¬ÇÒºÍ Parent ÔÚÍ¬Ò»¸ö°üÏÂµÄ baseName Îª Parent.properties ÏµÁÐ×ÊÔ´ÎÄ¼þ¡£
-(4) Èô ChildAction ÊµÏÖ ModelDriven ½Ó¿Ú£¬Ôò¶ÔÓÚgetModel()·½·¨·µ»ØµÄmodel ¶ÔÏó£¬ÖØÐÂÖ´ÐÐµÚ(1)²½²Ù×÷¡£
-(5) ²éÕÒµ±Ç°°üÏÂ package.properties ÏµÁÐ×ÊÔ´ÎÄ¼þ¡£
-(6) ÑØ×Åµ±Ç°°üÉÏËÝ£¬Ö±µ½×î¶¥²ã°üÀ´²éÕÒ package.properties µÄÏµÁÐ×ÊÔ´ÎÄ¼þ¡£
-(7) ²éÕÒ struts.custom.i18n.resources ³£Á¿Ö¸¶¨ baseName µÄÏµÁÐ×ÊÔ´ÎÄ¼þ¡£
-(8) Ö±½ÓÊä³ö¸ÃkeyµÄ×Ö·û´®Öµ¡£
+(1) åŠ è½½å’Œ ChildAction çš„ç±»æ–‡ä»¶åœ¨åŒä¸€ä¸ªåŒ…ä¸‹çš„ç³»åˆ—èµ„æºæ–‡ä»¶ ChildAction.properties
+(2) åŠ è½½  ChildAction å®žçŽ°çš„æŽ¥å£ IChildï¼Œä¸”å’Œ IChildn åœ¨åŒä¸€ä¸ªåŒ…ä¸‹ IChild.properties ç³»åˆ—èµ„æºæ–‡ä»¶ã€‚
+(3) åŠ è½½ ChildAction çˆ¶ç±» Parentï¼Œä¸”å’Œ Parent åœ¨åŒä¸€ä¸ªåŒ…ä¸‹çš„ baseName ä¸º Parent.properties ç³»åˆ—èµ„æºæ–‡ä»¶ã€‚
+(4) è‹¥ ChildAction å®žçŽ° ModelDriven æŽ¥å£ï¼Œåˆ™å¯¹äºŽgetModel()æ–¹æ³•è¿”å›žçš„model å¯¹è±¡ï¼Œé‡æ–°æ‰§è¡Œç¬¬(1)æ­¥æ“ä½œã€‚
+(5) æŸ¥æ‰¾å½“å‰åŒ…ä¸‹ package.properties ç³»åˆ—èµ„æºæ–‡ä»¶ã€‚
+(6) æ²¿ç€å½“å‰åŒ…ä¸Šæº¯ï¼Œç›´åˆ°æœ€é¡¶å±‚åŒ…æ¥æŸ¥æ‰¾ package.properties çš„ç³»åˆ—èµ„æºæ–‡ä»¶ã€‚
+(7) æŸ¥æ‰¾ struts.custom.i18n.resources å¸¸é‡æŒ‡å®š baseName çš„ç³»åˆ—èµ„æºæ–‡ä»¶ã€‚
+(8) ç›´æŽ¥è¾“å‡ºè¯¥keyçš„å­—ç¬¦ä¸²å€¼ã€‚
 
 
-2). ÈçºÎÔÚÒ³ÃæÉÏ ºÍ Action ÀàÖÐ·ÃÎÊ¹ú¼Ê»¯×ÊÔ´ÎÄ¼þµÄ  value Öµ
+2). å¦‚ä½•åœ¨é¡µé¢ä¸Š å’Œ Action ç±»ä¸­è®¿é—®å›½é™…åŒ–èµ„æºæ–‡ä»¶çš„  value å€¼
 
-I. ÔÚ Action ÀàÖÐ. Èô Action ÊµÏÖÁË TextProvider ½Ó¿Ú, Ôò¿ÉÒÔµ÷ÓÃÆä getText() ·½·¨»ñÈ¡ value Öµ
-	> Í¨¹ý¼Ì³Ð ActionSupport µÄ·½Ê½¡£ 
+I. åœ¨ Action ç±»ä¸­. è‹¥ Action å®žçŽ°äº† TextProvider æŽ¥å£, åˆ™å¯ä»¥è°ƒç”¨å…¶ getText() æ–¹æ³•èŽ·å– value å€¼
+	> é€šè¿‡ç»§æ‰¿ ActionSupport çš„æ–¹å¼ã€‚ 
 	
-II. Ò³ÃæÉÏ¿ÉÒÔÊ¹ÓÃ s:text ±êÇ©; ¶ÔÓÚ±íµ¥±êÇ©¿ÉÒÔÊ¹ÓÃ±íµ¥±êÇ©µÄ key ÊôÐÔÖµ
-	> ÈôÓÐÕ¼Î»·û, Ôò¿ÉÒÔÊ¹ÓÃ s:text ±êÇ©µÄ s:param ×Ó±êÇ©À´Ìî³äÕ¼Î»·û
-	> ¿ÉÒÔÀûÓÃ±êÇ©ºÍ OGNL ±í´ïÊ½Ö±½Ó·ÃÎÊÖµÕ»ÖÐµÄÊôÐÔÖµ(¶ÔÏóÕ» ºÍ Map Õ»)
+II. é¡µé¢ä¸Šå¯ä»¥ä½¿ç”¨ s:text æ ‡ç­¾; å¯¹äºŽè¡¨å•æ ‡ç­¾å¯ä»¥ä½¿ç”¨è¡¨å•æ ‡ç­¾çš„ key å±žæ€§å€¼
+	> è‹¥æœ‰å ä½ç¬¦, åˆ™å¯ä»¥ä½¿ç”¨ s:text æ ‡ç­¾çš„ s:param å­æ ‡ç­¾æ¥å¡«å……å ä½ç¬¦
+	> å¯ä»¥åˆ©ç”¨æ ‡ç­¾å’Œ OGNL è¡¨è¾¾å¼ç›´æŽ¥è®¿é—®å€¼æ ˆä¸­çš„å±žæ€§å€¼(å¯¹è±¡æ ˆ å’Œ Map æ ˆ)
 	
 	time=Time:{0}
 	
@@ -45,25 +45,25 @@ II. Ò³ÃæÉÏ¿ÉÒÔÊ¹ÓÃ s:text ±êÇ©; ¶ÔÓÚ±íµ¥±êÇ©¿ÉÒÔÊ¹ÓÃ±íµ¥±êÇ©µÄ key ÊôÐÔÖµ
 	<s:text name="time2"></s:text>
 	
 
-3). ÊµÏÖÍ¨¹ý³¬Á´½ÓÇÐ»»ÓïÑÔ. 
+3). å®žçŽ°é€šè¿‡è¶…é“¾æŽ¥åˆ‡æ¢è¯­è¨€. 
 
-I.  ¹Ø¼üÖ®´¦ÔÚÓÚÖªµÀ Struts2 ¿ò¼ÜÊÇÈçºÎÈ·¶¨ Local ¶ÔÏóµÄ !
-II. ¿ÉÒÔÍ¨¹ýÔÄ¶Á I18N À¹½ØÆ÷ÖªµÀ. 
-III. ¾ßÌåÈ·¶¨ Locale ¶ÔÏóµÄ¹ý³Ì:
+I.  å…³é”®ä¹‹å¤„åœ¨äºŽçŸ¥é“ Struts2 æ¡†æž¶æ˜¯å¦‚ä½•ç¡®å®š Local å¯¹è±¡çš„ !
+II. å¯ä»¥é€šè¿‡é˜…è¯» I18N æ‹¦æˆªå™¨çŸ¥é“. 
+III. å…·ä½“ç¡®å®š Locale å¯¹è±¡çš„è¿‡ç¨‹:
 
-	> Struts2 Ê¹ÓÃ i18n À¹½ØÆ÷ ´¦Àí¹ú¼Ê»¯£¬²¢ÇÒ½«Æä×¢²áÔÚÄ¬ÈÏµÄÀ¹½ØÆ÷Õ»ÖÐ
-	> i18nÀ¹½ØÆ÷ÔÚÖ´ÐÐAction·½·¨Ç°£¬×Ô¶¯²éÕÒÇëÇóÖÐÒ»¸öÃûÎª request_locale µÄ²ÎÊý¡£
-	      Èç¹û¸Ã²ÎÊý´æÔÚ£¬À¹½ØÆ÷¾Í½«Æä×÷Îª²ÎÊý£¬×ª»»³ÉLocale¶ÔÏó£¬²¢½«ÆäÉèÎªÓÃ»§Ä¬ÈÏµÄLocale(´ú±í¹ú¼Ò/ÓïÑÔ»·¾³)¡£
-	      ²¢°ÑÆäÉèÖÃÎª session µÄ WW_TRANS_I18N_LOCALE ÊôÐÔ
-	> Èô request Ã»ÓÐÃûÎªrequest_locale µÄ²ÎÊý£¬Ôò i18n À¹½ØÆ÷»á´Ó Session ÖÐ»ñÈ¡ WW_TRANS_I18N_LOCALE µÄÊôÐÔÖµ£¬
-	     Èô¸ÃÖµ²»Îª¿Õ£¬Ôò½«¸ÃÊôÐÔÖµÉèÖÃÎªä¯ÀÀÕßµÄÄ¬ÈÏLocale 
-	> Èô session ÖÐµÄ WW_TRANS_I18N_LOCALE µÄÊôÐÔÖµÎª¿Õ£¬Ôò´Ó ActionContext ÖÐ»ñÈ¡ Locale ¶ÔÏó¡£
+	> Struts2 ä½¿ç”¨ i18n æ‹¦æˆªå™¨ å¤„ç†å›½é™…åŒ–ï¼Œå¹¶ä¸”å°†å…¶æ³¨å†Œåœ¨é»˜è®¤çš„æ‹¦æˆªå™¨æ ˆä¸­
+	> i18næ‹¦æˆªå™¨åœ¨æ‰§è¡ŒActionæ–¹æ³•å‰ï¼Œè‡ªåŠ¨æŸ¥æ‰¾è¯·æ±‚ä¸­ä¸€ä¸ªåä¸º request_locale çš„å‚æ•°ã€‚
+	      å¦‚æžœè¯¥å‚æ•°å­˜åœ¨ï¼Œæ‹¦æˆªå™¨å°±å°†å…¶ä½œä¸ºå‚æ•°ï¼Œè½¬æ¢æˆLocaleå¯¹è±¡ï¼Œå¹¶å°†å…¶è®¾ä¸ºç”¨æˆ·é»˜è®¤çš„Locale(ä»£è¡¨å›½å®¶/è¯­è¨€çŽ¯å¢ƒ)ã€‚
+	      å¹¶æŠŠå…¶è®¾ç½®ä¸º session çš„ WW_TRANS_I18N_LOCALE å±žæ€§
+	> è‹¥ request æ²¡æœ‰åä¸ºrequest_locale çš„å‚æ•°ï¼Œåˆ™ i18n æ‹¦æˆªå™¨ä¼šä»Ž Session ä¸­èŽ·å– WW_TRANS_I18N_LOCALE çš„å±žæ€§å€¼ï¼Œ
+	     è‹¥è¯¥å€¼ä¸ä¸ºç©ºï¼Œåˆ™å°†è¯¥å±žæ€§å€¼è®¾ç½®ä¸ºæµè§ˆè€…çš„é»˜è®¤Locale 
+	> è‹¥ session ä¸­çš„ WW_TRANS_I18N_LOCALE çš„å±žæ€§å€¼ä¸ºç©ºï¼Œåˆ™ä»Ž ActionContext ä¸­èŽ·å– Locale å¯¹è±¡ã€‚
 	
-IV.  ¾ßÌåÊµÏÖ: Ö»ÐèÒªÔÚ³¬Á¬½ÓµÄºóÃæ¸½×Å  request_locale µÄÇëÇó²ÎÊý, ÖµÊÇ ÓïÑÔ¹ú¼Ò ´úÂë.
+IV.  å…·ä½“å®žçŽ°: åªéœ€è¦åœ¨è¶…è¿žæŽ¥çš„åŽé¢é™„ç€  request_locale çš„è¯·æ±‚å‚æ•°, å€¼æ˜¯ è¯­è¨€å›½å®¶ ä»£ç .
 	<a href="testI18n.action?request_locale=en_US">English</a>
-	<a href="testI18n.action?request_locale=zh_CN">ÖÐÎÄ</a>
+	<a href="testI18n.action?request_locale=zh_CN">ä¸­æ–‡</a>
 	
-	> ×¢Òâ: ³¬Á´½Ó±ØÐëÊÇÒ»¸ö Struts2 µÄÇëÇó, ¼´Ê¹ i18n À¹½ØÆ÷¹¤×÷!
+	> æ³¨æ„: è¶…é“¾æŽ¥å¿…é¡»æ˜¯ä¸€ä¸ª Struts2 çš„è¯·æ±‚, å³ä½¿ i18n æ‹¦æˆªå™¨å·¥ä½œ!
 	
 
  

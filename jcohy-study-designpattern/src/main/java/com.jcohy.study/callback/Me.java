@@ -2,9 +2,9 @@ package com.jcohy.study.callback;
 
 /**
  * /** 
- * Õâ¸öÀà´ú±íÎÒ£¬ÒòÎªÄãÒª¸æËßÎÒ´ğ°¸ËùÒÔÒªÊµÏÖCallBack»Øµ÷½Ó¿ÚºÍ½Ó¿ÚÖĞµÄ»Øµ÷·½·¨µÄÊµÏÖ 
- * ÎÒÒªÏòÄãÌáÎÊËùÒÔÓĞÒ»¸öÌáÎÊµÄ·½·¨askQqstion(),ÔÚÌáÎÊµÄÍ¬Ê±ÒªÏò¶Ô·½£¨Äã£©×¢²á»Øµ÷½Ó¿Ú£¬
- * µ±ÄãÖªµÀ´ğ°¸µÄÊ±ºòµ÷ÓÃÎÒÀïÃæµÄ½Ó¿ÚÊµÏÖ·½·¨£¬×îºóµÃµ½´ğ°¸ 
+ * è¿™ä¸ªç±»ä»£è¡¨æˆ‘ï¼Œå› ä¸ºä½ è¦å‘Šè¯‰æˆ‘ç­”æ¡ˆæ‰€ä»¥è¦å®ç°CallBackå›è°ƒæ¥å£å’Œæ¥å£ä¸­çš„å›è°ƒæ–¹æ³•çš„å®ç° 
+ * æˆ‘è¦å‘ä½ æé—®æ‰€ä»¥æœ‰ä¸€ä¸ªæé—®çš„æ–¹æ³•askQqstion(),åœ¨æé—®çš„åŒæ—¶è¦å‘å¯¹æ–¹ï¼ˆä½ ï¼‰æ³¨å†Œå›è°ƒæ¥å£ï¼Œ
+ * å½“ä½ çŸ¥é“ç­”æ¡ˆçš„æ—¶å€™è°ƒç”¨æˆ‘é‡Œé¢çš„æ¥å£å®ç°æ–¹æ³•ï¼Œæœ€åå¾—åˆ°ç­”æ¡ˆ 
  * @author jiachao
  *
  */
@@ -21,19 +21,19 @@ public class Me implements CallBack {
 	public void askQuestion(final String qusetion){
 		new Thread(){
 			public void run() {
-				System.out.println("ÎÒµÄÎÊÌâÊÇ:"+qusetion);
+				System.out.println("æˆ‘çš„é—®é¢˜æ˜¯:"+qusetion);
 				you = new You(Me.this, qusetion);
 				you.ReceiverQuestion();
 			};
 		}.start();
 	}
 	public void play(){  
-        System.out.println("ÎÒÈ¥ÍêÁË");  
+        System.out.println("æˆ‘å»å®Œäº†");  
     }  
 	@Override
 	public void solve(String result) {
 		// TODO Auto-generated method stub
-		System.out.println("Äã¸æËßÎÒµÄ´ğ°¸ÊÇ--->"+result);  
+		System.out.println("ä½ å‘Šè¯‰æˆ‘çš„ç­”æ¡ˆæ˜¯--->"+result);  
 	}
 
 }

@@ -18,7 +18,7 @@ public class TestLambda {
 
     @Test
     public void test1(){
-        System.out.println("------´ÓÄäÃûÀàµ½Lambda µÄ×ª»»------");
+        System.out.println("------ä»åŒ¿åç±»åˆ°Lambda çš„è½¬æ¢------");
 
         Runnable r = new Runnable() {
             public void run() {
@@ -43,7 +43,7 @@ public class TestLambda {
     @Test
     public void test3(){
        Comparator<Integer> com = (x, y) -> {
-           System.out.println("º¯ÊıÊ½±à³Ì");
+           System.out.println("å‡½æ•°å¼ç¼–ç¨‹");
            return Integer.compare(x,y);
        };
 
@@ -61,13 +61,13 @@ public class TestLambda {
     }
 
     List<Employee> emps = Arrays.asList(
-            new Employee(101,"ÕÅÈı",18,1111.11),
-            new Employee(102,"ÀîËÄ",59,2222.22),
-            new Employee(103,"ÍõÎå",28,3333.33),
-            new Employee(104,"ÕÔÁù",8,4444.44),
-            new Employee(105,"ÌïÆß",38,5555.55),
-            new Employee(106,"¶­°Ë",42,6666.66),
-            new Employee(107,"ÖÜÊ®",69,7777.77)
+            new Employee(101,"å¼ ä¸‰",18,1111.11),
+            new Employee(102,"æå››",59,2222.22),
+            new Employee(103,"ç‹äº”",28,3333.33),
+            new Employee(104,"èµµå…­",8,4444.44),
+            new Employee(105,"ç”°ä¸ƒ",38,5555.55),
+            new Employee(106,"è‘£å…«",42,6666.66),
+            new Employee(107,"å‘¨å",69,7777.77)
             );
     @Test
     public void test5(){

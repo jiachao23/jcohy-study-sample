@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class TwoStackQueue {
 	/**
-	 * ÓÃÁ½¸öÕ»ÊµÏÖÒ»¸ö¶ÓÁĞ,²¢ÇÒÖ§³Ö¶ÓÁĞµÄ»ù±¾²Ù×÷£¨add£¬poll£¬peek£©
+	 * ç”¨ä¸¤ä¸ªæ ˆå®ç°ä¸€ä¸ªé˜Ÿåˆ—,å¹¶ä¸”æ”¯æŒé˜Ÿåˆ—çš„åŸºæœ¬æ“ä½œï¼ˆaddï¼Œpollï¼Œpeekï¼‰
 	 * @param args
 	 */
 	private Stack<Integer> stackPush;

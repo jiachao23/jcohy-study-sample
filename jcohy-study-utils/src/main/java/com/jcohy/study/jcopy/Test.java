@@ -1,12 +1,12 @@
 package com.jcohy.study.jcopy;
 
 public class Test {
-	public static void main(String[] args) {// java³ÌĞòÖ÷Èë¿Ú´¦  
+	public static void main(String[] args) {// javaç¨‹åºä¸»å…¥å£å¤„  
     	String fromPath="D:";
 		String toPath="E:/1";
-        System.out.println("¸´ÖÆÄ¿Â¼ " + fromPath + "µ½Ö¸¶¨Ä¿Â¼ " + toPath  
-                + " ,½«Ä¿Â¼ÒÔ¼°Ä¿Â¼ÏÂµÄÎÄ¼şºÍ×ÓÄ¿Â¼È«²¿¸´ÖÆµ½Ä¿±êÄ¿Â¼");
-     // µ÷ÓÃ·½·¨ÊµÏÖÄ¿Â¼ÒÔÓÃÄ¿Â¼ÏÂµÄÎÄ¼şºÍ×ÓÄ¿Â¼È«²¿¸´ÖÆ  
+        System.out.println("å¤åˆ¶ç›®å½• " + fromPath + "åˆ°æŒ‡å®šç›®å½• " + toPath  
+                + " ,å°†ç›®å½•ä»¥åŠç›®å½•ä¸‹çš„æ–‡ä»¶å’Œå­ç›®å½•å…¨éƒ¨å¤åˆ¶åˆ°ç›®æ ‡ç›®å½•");
+     // è°ƒç”¨æ–¹æ³•å®ç°ç›®å½•ä»¥ç”¨ç›®å½•ä¸‹çš„æ–‡ä»¶å’Œå­ç›®å½•å…¨éƒ¨å¤åˆ¶  
         ResFileByDelFile.copyDir(toPath, fromPath);
     }  
 }

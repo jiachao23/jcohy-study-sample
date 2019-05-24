@@ -11,12 +11,12 @@ public class MyStack1 {
 		this.stackMin = new Stack<Integer>();
 	}
 	/*
-	 * Êı¾İÑ¹Èë¹æÔò
-	 * µ±Ç°Êı¾İÎªnewNum,ÏÈ½«ÆäÑ¹ÈëstackData£¬È»ºóÅĞ¶ÏstackMinÊÇ·ñÎª¿Õ
-	 * Èç¹ûÎª¿Õ£¬ÔònewNumÒ²Ñ¹ÈëstackMin.
-	 * Èç¹û²»Îª¿Õ£¬Ôò±È½ÏnewNumºÍstackMinµÄÕ»¶¥ÔªËØÄÄÒ»¸ö¸üĞ¡
-	 * Èç¹ûnewNumĞ¡ÓÚµÈÓÚ¡£ÔònewNumÒ²Ñ¹ÈëstackMin
-	 * Èç¹ûstackMinÖĞÕ»¶¥ÔªËØĞ¡£¬ÔòstackMinÖĞ²»Ñ¹ÈëÈÎºÎÔªËØ
+	 * æ•°æ®å‹å…¥è§„åˆ™
+	 * å½“å‰æ•°æ®ä¸ºnewNum,å…ˆå°†å…¶å‹å…¥stackDataï¼Œç„¶ååˆ¤æ–­stackMinæ˜¯å¦ä¸ºç©º
+	 * å¦‚æœä¸ºç©ºï¼Œåˆ™newNumä¹Ÿå‹å…¥stackMin.
+	 * å¦‚æœä¸ä¸ºç©ºï¼Œåˆ™æ¯”è¾ƒnewNumå’ŒstackMinçš„æ ˆé¡¶å…ƒç´ å“ªä¸€ä¸ªæ›´å°
+	 * å¦‚æœnewNumå°äºç­‰äºã€‚åˆ™newNumä¹Ÿå‹å…¥stackMin
+	 * å¦‚æœstackMinä¸­æ ˆé¡¶å…ƒç´ å°ï¼Œåˆ™stackMinä¸­ä¸å‹å…¥ä»»ä½•å…ƒç´ 
 	 */
 	public void push(int newNum){
 		if(this.stackMin.isEmpty()){
@@ -27,11 +27,11 @@ public class MyStack1 {
 		this.stackData.push(newNum);
 	}
 	/*
-	 * Êı¾İµ¯³ö¹æÔò
-	 * ÏÈÔÚstackDataÖĞµ¯³öÕ»¶¥ÔªËØ£¬¼ÇÎªvalue£¬È»ºó±È½Ïµ±Ç°stackMinµÄÕ»¶¥ÔªËØºÍvalueÄÄÒ»¸ö¸üĞ¡
-	 * ÓÉÑ¹Èë¹æÔòÎÒÃÇÄÜÖªµÀ£¬²»»á³öÏÖvalue±ÈstackMinÕ»¶¥ÔªËØ¸üĞ¡µÄÇé¿ö£¬Ö»ÄÜ´óÓÚ»òÕßµÈÓÚ
-	 * µ±valueµÈÓÚstackMinµÄÕ»¶¥ÔªËØ£¬stackMinµ¯³öÕ»¶¥ÔªËØ
-	 * µ±value´óÓÚstackMinµÄÕ»¶¥ÔªËØ£¬stackMin²»µ¯³öÕ»¶¥ÔªËØ
+	 * æ•°æ®å¼¹å‡ºè§„åˆ™
+	 * å…ˆåœ¨stackDataä¸­å¼¹å‡ºæ ˆé¡¶å…ƒç´ ï¼Œè®°ä¸ºvalueï¼Œç„¶åæ¯”è¾ƒå½“å‰stackMinçš„æ ˆé¡¶å…ƒç´ å’Œvalueå“ªä¸€ä¸ªæ›´å°
+	 * ç”±å‹å…¥è§„åˆ™æˆ‘ä»¬èƒ½çŸ¥é“ï¼Œä¸ä¼šå‡ºç°valueæ¯”stackMinæ ˆé¡¶å…ƒç´ æ›´å°çš„æƒ…å†µï¼Œåªèƒ½å¤§äºæˆ–è€…ç­‰äº
+	 * å½“valueç­‰äºstackMinçš„æ ˆé¡¶å…ƒç´ ï¼ŒstackMinå¼¹å‡ºæ ˆé¡¶å…ƒç´ 
+	 * å½“valueå¤§äºstackMinçš„æ ˆé¡¶å…ƒç´ ï¼ŒstackMinä¸å¼¹å‡ºæ ˆé¡¶å…ƒç´ 
 	 */
 	public int pop(){
 		if(this.stackData.isEmpty())

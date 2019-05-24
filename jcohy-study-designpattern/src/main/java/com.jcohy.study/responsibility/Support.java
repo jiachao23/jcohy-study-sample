@@ -1,17 +1,17 @@
 package com.jcohy.study.responsibility;
 
 /**
- * ½â¾öÎÊÌâµÄ³éÏóÀà
+ * è§£å†³é—®é¢˜çš„æŠ½è±¡ç±»
  *
  * @author jiachao
  */
 public abstract class Support {
-    // ÎÊÌâ½â¾öÕßµÄÃû³Æ
+    // é—®é¢˜è§£å†³è€…çš„åç§°
     private String name;
-    // ×ªÏòÎ»ÖÃ
+    // è½¬å‘ä½ç½®
     private Support next;
 
-    // ²úÉúÎÊÌâµÄ½â¾öÕß
+    // äº§ç”Ÿé—®é¢˜çš„è§£å†³è€…
     public Support(String name) {
         this.name = name;
     }
@@ -30,15 +30,15 @@ public abstract class Support {
             fail(trouble);
         }
     }
-    //ÉĞÎ´½â¾öµÄ
+    //å°šæœªè§£å†³çš„
     protected  void fail(Trouble trouble) {
         System.out.println(trouble+"cannot be resolved !");
     }
-    //ÒÑ½â¾ö
+    //å·²è§£å†³
     protected  void done(Trouble trouble) {
         System.out.println(trouble+"is resolved by"+ this);
     }
-    //½â¾öµÄ·½·¨
+    //è§£å†³çš„æ–¹æ³•
     protected abstract boolean resolve(Trouble trouble);
 
     @Override

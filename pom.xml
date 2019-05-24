@@ -24,6 +24,8 @@
     <module>jcohy-study-ViewGuide</module>
     <module>jcohy-study-framework</module>
     <module>jcohy-study-quartz</module>
+    <module>jcohy-study-ansyc</module>
+    <module>jcohy-study-go</module>
   </modules>
 
   <dependencies>

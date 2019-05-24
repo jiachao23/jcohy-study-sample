@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * 筛法求之N内的素数
+ * 绛涙硶姹備箣N鍐呯殑绱犳暟
  */
 public class Test_1021 {
 

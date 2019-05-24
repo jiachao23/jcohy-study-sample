@@ -1,7 +1,7 @@
 package com.jcohy.study.StackAndQueue;
 
 /**
- * ³£¹æÍæ·¨
+ * å¸¸è§„ç©æ³•
  * @author jiachao
  *
  */
@@ -23,6 +23,6 @@ static int step = 0;
     }  
     public static void move(int num ,String a,String b){  
         step ++ ;  
-        System.out.println("µÚ"+step+"²½£¬ÅÌ×Ó"+num+"´Ó"+a+"ËşÒÆµ½"+b+"Ëş/n");  
+        System.out.println("ç¬¬"+step+"æ­¥ï¼Œç›˜å­"+num+"ä»"+a+"å¡”ç§»åˆ°"+b+"å¡”/n");  
     }  
 }

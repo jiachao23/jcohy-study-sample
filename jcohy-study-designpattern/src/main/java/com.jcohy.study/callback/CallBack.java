@@ -1,21 +1,21 @@
 package com.jcohy.study.callback;
 
 /**
- * »Øµ÷½Ó¿Ú
+ * å›è°ƒæ¥å£
  * @author jiachao
  *
  */
 public interface CallBack {
 	
 	/** 
-     * Õâ¾ÍÊÇService»Øµ÷ClientµÄ·½·¨ 
-     * @param result »Øµ÷Ê±Ğ¯´øµÄ²ÎÊı£¨¿ÉÑ¡£© 
+     * è¿™å°±æ˜¯Serviceå›è°ƒClientçš„æ–¹æ³• 
+     * @param result å›è°ƒæ—¶æºå¸¦çš„å‚æ•°ï¼ˆå¯é€‰ï¼‰ 
      */  
     public void B(String result);
     
     /** 
-     * µ±ÄãÖªµÀ´ğ°¸¿ÉÒÔµ÷ÓÃ¸Ã»Øµ÷º¯Êı¸æËßÎÒ´ğ°¸ 
-     * @param result ´ğ°¸ 
+     * å½“ä½ çŸ¥é“ç­”æ¡ˆå¯ä»¥è°ƒç”¨è¯¥å›è°ƒå‡½æ•°å‘Šè¯‰æˆ‘ç­”æ¡ˆ 
+     * @param result ç­”æ¡ˆ 
      */  
     public void solve(String result); 
 }

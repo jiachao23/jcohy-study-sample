@@ -41,7 +41,7 @@ public class Test {
             latch.countDown();
             one.join();other.join();
 
-            String result = "µÚ" + i + "´Î (" + x + "," + y + "£©";
+            String result = "ç¬¬" + i + "æ¬¡ (" + x + "," + y + "ï¼‰";
             if(x == 0 && y == 0) {
                 System.err.println(result);
                 break;

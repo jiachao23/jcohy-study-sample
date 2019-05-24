@@ -3,16 +3,16 @@ package com.jcohy.study.StackAndQueue;
 import java.util.Stack;
 
 /**
- * ·ÇµÝ¹é·½·¨£¬ÓÃÕ»À´Ä£Äâ
- * ×ó£¬ÖÐ£¬ÓÒ£¬³éÏóÎªÈý¸öÕ»ls£¬ms£¬rs£¬×î³õµÄ¶¼ÔÚlsÉÏ
- * Ö»ÓÐËÄ¸ö¶¯×÷¡£×óÖÐ£¬ÖÐ×ó£¬ÖÐÓÒ£¬ÓÒÖÐ
- * Èç¹ûÒª×ß³ö×îÐ¡²½Êý£¬±ØÐë×ñÑ­ÏÂÃæÁ½¸ö¹æÔò
- * Á½¸ö¹æÔò£¬Ð¡Ñ¹´óºÍÏàÁÚ²»¿ÉÄæ¡£Èç¹ûfromÕ»µ¯³öµÄÔªËØnumÈç¹ûÏëÑ¹ÈëtoÖÐ£¬ÄÇÃ´numµÄÖµ±ØÐë
- * Ð¡ÓÚtoÕ»µÄÕ»¶¥ÔªËØ
- * ×óÖÐºÍÖÐ×ó»¥ÎªÄæ¹ý³Ì
- * 1£¬ÓÎÏ·µÄµÚÒ»¸ö¶¯×÷Îª×óµÀÖÐ
- * ÔÚ×ß³ö×îÐ¡²½Êý¹ý³ÌÖÐµÄÈÎºÎÊ±¿Ì£¬ËÄ¸ö¶¯×÷Ö»ÓÐÒ»¸ö¶¯×÷²»Î¥·´Ð¡Ñ¹´óºÓÏàÁÚ²»¿ÉÄæÔ­Ôò£¬ÁíÍâ
- * Èý¸ö¶¯×÷Ïà·´
+ * éžé€’å½’æ–¹æ³•ï¼Œç”¨æ ˆæ¥æ¨¡æ‹Ÿ
+ * å·¦ï¼Œä¸­ï¼Œå³ï¼ŒæŠ½è±¡ä¸ºä¸‰ä¸ªæ ˆlsï¼Œmsï¼Œrsï¼Œæœ€åˆçš„éƒ½åœ¨lsä¸Š
+ * åªæœ‰å››ä¸ªåŠ¨ä½œã€‚å·¦ä¸­ï¼Œä¸­å·¦ï¼Œä¸­å³ï¼Œå³ä¸­
+ * å¦‚æžœè¦èµ°å‡ºæœ€å°æ­¥æ•°ï¼Œå¿…é¡»éµå¾ªä¸‹é¢ä¸¤ä¸ªè§„åˆ™
+ * ä¸¤ä¸ªè§„åˆ™ï¼Œå°åŽ‹å¤§å’Œç›¸é‚»ä¸å¯é€†ã€‚å¦‚æžœfromæ ˆå¼¹å‡ºçš„å…ƒç´ numå¦‚æžœæƒ³åŽ‹å…¥toä¸­ï¼Œé‚£ä¹ˆnumçš„å€¼å¿…é¡»
+ * å°äºŽtoæ ˆçš„æ ˆé¡¶å…ƒç´ 
+ * å·¦ä¸­å’Œä¸­å·¦äº’ä¸ºé€†è¿‡ç¨‹
+ * 1ï¼Œæ¸¸æˆçš„ç¬¬ä¸€ä¸ªåŠ¨ä½œä¸ºå·¦é“ä¸­
+ * åœ¨èµ°å‡ºæœ€å°æ­¥æ•°è¿‡ç¨‹ä¸­çš„ä»»ä½•æ—¶åˆ»ï¼Œå››ä¸ªåŠ¨ä½œåªæœ‰ä¸€ä¸ªåŠ¨ä½œä¸è¿åå°åŽ‹å¤§æ²³ç›¸é‚»ä¸å¯é€†åŽŸåˆ™ï¼Œå¦å¤–
+ * ä¸‰ä¸ªåŠ¨ä½œç›¸å
  * @author jiachao
  *
  */
@@ -44,7 +44,7 @@ public class Hano1 {
 			Stack<Integer> fstack, Stack<Integer> tstack, String from, String to) {
 			if(record[0]!=preNoAct&&(fstack.peek()<tstack.peek())){
 				tstack.push(fstack.pop());
-				System.out.println("½« "+tstack.peek()+" ´Ó "+from+" ÒÆµ½ "+to);
+				System.out.println("å°† "+tstack.peek()+" ä»Ž "+from+" ç§»åˆ° "+to);
 				record[0]=nowAct;
 				return 1;
 			}
@@ -52,7 +52,7 @@ public class Hano1 {
 	}
 	public static void main(String[] args) {
 		Hano1 h1 = new Hano1();
-		int result =h1.hanoi2(10, "×ó","ÖÐ","ÓÒ");
+		int result =h1.hanoi2(10, "å·¦","ä¸­","å³");
 		System.out.println(result);
 	}
 }

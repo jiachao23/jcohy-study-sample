@@ -10,11 +10,11 @@ import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.lang3.StringEscapeUtils;
 
 /**
- * ·â×°¸÷ÖÖ¸ñÊ½µÄ±àÂë½âÂë¹¤¾ßÀà.
- * 1.Commons-CodecµÄ hex/base64 ±àÂë
- * 2.×ÔÖÆµÄbase62 ±àÂë
- * 3.Commons-LangµÄxml/html escape
- * 4.JDKÌá¹©µÄURLEncoder
+ * å°è£…å„ç§æ ¼å¼çš„ç¼–ç è§£ç å·¥å…·ç±».
+ * 1.Commons-Codecçš„ hex/base64 ç¼–ç 
+ * 2.è‡ªåˆ¶çš„base62 ç¼–ç 
+ * 3.Commons-Langçš„xml/html escape
+ * 4.JDKæä¾›çš„URLEncoder
  * @author calvin
  * @version 2013-01-15
  */
@@ -24,14 +24,14 @@ public class Encodes {
     private static final char[] BASE62 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".toCharArray();
 
     /**
-     * Hex±àÂë.
+     * Hexç¼–ç .
      */
     public static String encodeHex(byte[] input) {
         return new String(Hex.encodeHex(input));
     }
 
     /**
-     * Hex½âÂë.
+     * Hexè§£ç .
      */
     public static byte[] decodeHex(String input) {
         try {
@@ -42,14 +42,14 @@ public class Encodes {
     }
 
     /**
-     * Base64±àÂë.
+     * Base64ç¼–ç .
      */
     public static String encodeBase64(byte[] input) {
         return new String(Base64.encodeBase64(input));
     }
 
     /**
-     * Base64±àÂë.
+     * Base64ç¼–ç .
      */
     public static String encodeBase64(String input) {
         try {
@@ -60,21 +60,21 @@ public class Encodes {
     }
 
 //	/**
-//	 * Base64±àÂë, URL°²È«(½«Base64ÖĞµÄURL·Ç·¨×Ö·û'+'ºÍ'/'×ªÎª'-'ºÍ'_', ¼ûRFC3548).
+//	 * Base64ç¼–ç , URLå®‰å…¨(å°†Base64ä¸­çš„URLéæ³•å­—ç¬¦'+'å’Œ'/'è½¬ä¸º'-'å’Œ'_', è§RFC3548).
 //	 */
 //	public static String encodeUrlSafeBase64(byte[] input) {
 //		return Base64.encodeBase64URLSafe(input);
 //	}
 
     /**
-     * Base64½âÂë.
+     * Base64è§£ç .
      */
     public static byte[] decodeBase64(String input) {
         return Base64.decodeBase64(input.getBytes());
     }
 
     /**
-     * Base64½âÂë.
+     * Base64è§£ç .
      */
     public static String decodeBase64String(String input) {
         try {
@@ -85,7 +85,7 @@ public class Encodes {
     }
 
     /**
-     * Base62±àÂë¡£
+     * Base62ç¼–ç ã€‚
      */
     public static String encodeBase62(byte[] input) {
         char[] chars = new char[input.length];
@@ -96,35 +96,35 @@ public class Encodes {
     }
 
     /**
-     * Html ×ªÂë.
+     * Html è½¬ç .
      */
     public static String escapeHtml(String html) {
         return StringEscapeUtils.escapeHtml4(html);
     }
 
     /**
-     * Html ½âÂë.
+     * Html è§£ç .
      */
     public static String unescapeHtml(String htmlEscaped) {
         return StringEscapeUtils.unescapeHtml4(htmlEscaped);
     }
 
     /**
-     * Xml ×ªÂë.
+     * Xml è½¬ç .
      */
     public static String escapeXml(String xml) {
         return StringEscapeUtils.escapeXml10(xml);
     }
 
     /**
-     * Xml ½âÂë.
+     * Xml è§£ç .
      */
     public static String unescapeXml(String xmlEscaped) {
         return StringEscapeUtils.unescapeXml(xmlEscaped);
     }
 
     /**
-     * URL ±àÂë, EncodeÄ¬ÈÏÎªUTF-8.
+     * URL ç¼–ç , Encodeé»˜è®¤ä¸ºUTF-8.
      */
     public static String urlEncode(String part) {
         try {
@@ -135,7 +135,7 @@ public class Encodes {
     }
 
     /**
-     * URL ½âÂë, EncodeÄ¬ÈÏÎªUTF-8.
+     * URL è§£ç , Encodeé»˜è®¤ä¸ºUTF-8.
      */
     public static String urlDecode(String part) {
 

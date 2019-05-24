@@ -22,7 +22,7 @@ public class MD5Test {
 		jdkMD5();
 		System.out.println("encode:"+encode(src));
 		jdkMD2();
-		jdkMD4();//Ìí¼ÓÌá¹©Õß
+		jdkMD4();//æ·»åŠ æä¾›è€…
 		BCMD4();
 		BCMD2();
 		BCMD5();
@@ -35,7 +35,7 @@ public class MD5Test {
 			System.out.println("jdkmd5: "+Hex.toHexString(md5bytes));
 //			md.update("ni".getBytes());
 //			byte[] md5bytes2 = md.digest();
-//			System.out.println("¸üĞÂºójdkmd5: "+Hex.toHexString(md5bytes2));
+//			System.out.println("æ›´æ–°åjdkmd5: "+Hex.toHexString(md5bytes2));
 		} catch (NoSuchAlgorithmException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -49,7 +49,7 @@ public class MD5Test {
 			System.out.println("jdkmd2: "+Hex.toHexString(md5bytes));
 //			md.update("ni".getBytes());
 //			byte[] md5bytes2 = md.digest();
-//			System.out.println("¸üĞÂºójdkmd2:"+Hex.toHexString(md5bytes2));
+//			System.out.println("æ›´æ–°åjdkmd2:"+Hex.toHexString(md5bytes2));
 		} catch (NoSuchAlgorithmException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -64,7 +64,7 @@ public class MD5Test {
 			System.out.println("jdkmd4: "+Hex.toHexString(md5bytes));
 //			md.update("ni".getBytes());
 //			byte[] md5bytes2 = md.digest();
-//			System.out.println("¸üĞÂºójdkmd2:"+Hex.toHexString(md5bytes2));
+//			System.out.println("æ›´æ–°åjdkmd2:"+Hex.toHexString(md5bytes2));
 		} catch (NoSuchAlgorithmException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -114,16 +114,16 @@ public class MD5Test {
 	}
 	public static String encode(String password) {
 		try {
-			MessageDigest instance = MessageDigest.getInstance("MD5");// »ñÈ¡MD5Ëã·¨¶ÔÏó
-			byte[] digest = instance.digest(password.getBytes());// ¶Ô×Ö·û´®¼ÓÃÜ,·µ»Ø×Ö½ÚÊı×é
+			MessageDigest instance = MessageDigest.getInstance("MD5");// è·å–MD5ç®—æ³•å¯¹è±¡
+			byte[] digest = instance.digest(password.getBytes());// å¯¹å­—ç¬¦ä¸²åŠ å¯†,è¿”å›å­—èŠ‚æ•°ç»„
 
 			StringBuffer sb = new StringBuffer();
 			for (byte b : digest) {
-				int i = b & 0xff;// »ñÈ¡×Ö½ÚµÄµÍ°ËÎ»ÓĞĞ§Öµ
-				String hexString = Integer.toHexString(i);// ½«ÕûÊı×ªÎª16½øÖÆ
+				int i = b & 0xff;// è·å–å­—èŠ‚çš„ä½å…«ä½æœ‰æ•ˆå€¼
+				String hexString = Integer.toHexString(i);// å°†æ•´æ•°è½¬ä¸º16è¿›åˆ¶
 
 				if (hexString.length() < 2) {
-					hexString = "0" + hexString;// Èç¹ûÊÇ1Î»µÄ»°,²¹0
+					hexString = "0" + hexString;// å¦‚æœæ˜¯1ä½çš„è¯,è¡¥0
 				}
 
 				sb.append(hexString);
@@ -132,7 +132,7 @@ public class MD5Test {
 			return sb.toString();
 		} catch (NoSuchAlgorithmException e) {
 			e.printStackTrace();
-			// Ã»ÓĞ¸ÃËã·¨Ê±,Å×³öÒì³£, ²»»á×ßµ½ÕâÀï
+			// æ²¡æœ‰è¯¥ç®—æ³•æ—¶,æŠ›å‡ºå¼‚å¸¸, ä¸ä¼šèµ°åˆ°è¿™é‡Œ
 		}
 
 		return "";

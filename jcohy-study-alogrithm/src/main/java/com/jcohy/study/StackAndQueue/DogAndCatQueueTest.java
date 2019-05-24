@@ -18,7 +18,7 @@ public class DogAndCatQueueTest {
 		adq.add(new Cat());
 		adq.add(new Dog());
 		adq.add(new Dog());
-		//进去的实例为:cat,cat,dog,dog,cat,dog,dog,cat,dog,cat,cat,cat,dog,dog
+		//杩涘幓鐨勫疄渚嬩负:cat,cat,dog,dog,cat,dog,dog,cat,dog,cat,cat,cat,dog,dog
 		System.out.print(adq.pollAll()+""+adq.pollAll()+""+adq.pollAll()+""+adq.pollAll()+""
 				+adq.pollAll()+"");
 //		System.out.println(adq.catIsEmpty());

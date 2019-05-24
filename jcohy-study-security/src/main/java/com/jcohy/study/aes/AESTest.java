@@ -20,21 +20,21 @@ public class AESTest {
 	}
 	public static void jdkAES(){
 		try {
-			//生成key
+			//鐢熸垚key
 			KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
 			keyGenerator.init(new SecureRandom());
 			SecretKey secretKey = keyGenerator.generateKey();
 			byte[] keyBytes = secretKey.getEncoded();
 			
-			//key转换
+			//key杞崲
 			Key key = new SecretKeySpec(keyBytes, "AES");
-			//加密
+			//鍔犲瘑
 			Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
 			cipher.init(Cipher.ENCRYPT_MODE, key);
 			byte[] result = cipher.doFinal(src.getBytes());
 			System.out.println("jdk AES encrpyt: "+Hex.toHexString(result));
 			
-			//解密
+			//瑙ｅ瘑
 			cipher.init(Cipher.DECRYPT_MODE, key);
 			 result = cipher.doFinal(result);
 			 System.out.println("jdk AES decrpyt: "+new String(result));

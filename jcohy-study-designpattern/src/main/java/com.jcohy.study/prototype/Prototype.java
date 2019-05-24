@@ -2,7 +2,7 @@ package com.jcohy.study.prototype;
 /**
  * 
  * @author admin
- *声明一个克隆自身的接口
+ *澹版槑涓�涓厠闅嗚嚜韬殑鎺ュ彛
  */
 public class Prototype implements Cloneable{
 	private String name;

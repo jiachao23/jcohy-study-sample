@@ -2,11 +2,11 @@ package com.jcohy.study.responsibility;
 
 
 /**
- * 解决问题具体类（解决特殊号码的问题）
+ * 瑙ｅ喅闂鍏蜂綋绫伙紙瑙ｅ喅鐗规畩鍙风爜鐨勯棶棰橈級
  */
 public class SpecialSupport extends Support {
 
-    private int number;//只能解决此号码的问题
+    private int number;//鍙兘瑙ｅ喅姝ゅ彿鐮佺殑闂
     public SpecialSupport(String name,int number) {
         super(name);
         this.number = number;

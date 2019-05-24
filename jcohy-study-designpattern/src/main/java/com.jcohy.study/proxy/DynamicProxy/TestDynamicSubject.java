@@ -6,11 +6,11 @@ import java.lang.reflect.Proxy;
 /**
  * @author jiachao
  * Proxy.newProxyInstance(ClassLoader loader, Class<?>[] interfaces,  InvocationHandler handler)
- *	loader:Ò»¸öClassLoader¶ÔÏó£¬¶¨ÒåÁËÓÉÄÄ¸öClassLoader¶ÔÏóÀ´¶ÔÉú³ÉµÄ´úÀí¶ÔÏó½øĞĞ¼ÓÔØ
- *	interfaces:Ò»¸öInterface¶ÔÏóµÄÊı×é£¬±íÊ¾µÄÊÇÎÒ½«Òª¸øÎÒĞèÒª´úÀíµÄ¶ÔÏóÌá¹©Ò»×éÊ²Ã´½Ó¿Ú£¬
- *		Èç¹ûÎÒÌá¹©ÁËÒ»×é½Ó¿Ú¸øËü£¬ÄÇÃ´Õâ¸ö´úÀí¶ÔÏó¾ÍĞû³ÆÊµÏÖÁË¸Ã½Ó¿Ú(¶àÌ¬)£¬ÕâÑùÎÒ¾ÍÄÜµ÷ÓÃÕâ×é½Ó¿ÚÖĞµÄ·½·¨ÁË
- *	handler:Ò»¸öInvocationHandler¶ÔÏó£¬±íÊ¾µÄÊÇµ±ÎÒÕâ¸ö¶¯Ì¬´úÀí¶ÔÏóÔÚµ÷ÓÃ·½·¨µÄÊ±ºò£¬
- *		»á¹ØÁªµ½ÄÄÒ»¸öInvocationHandler¶ÔÏóÉÏ
+ *	loader:ä¸€ä¸ªClassLoaderå¯¹è±¡ï¼Œå®šä¹‰äº†ç”±å“ªä¸ªClassLoaderå¯¹è±¡æ¥å¯¹ç”Ÿæˆçš„ä»£ç†å¯¹è±¡è¿›è¡ŒåŠ è½½
+ *	interfaces:ä¸€ä¸ªInterfaceå¯¹è±¡çš„æ•°ç»„ï¼Œè¡¨ç¤ºçš„æ˜¯æˆ‘å°†è¦ç»™æˆ‘éœ€è¦ä»£ç†çš„å¯¹è±¡æä¾›ä¸€ç»„ä»€ä¹ˆæ¥å£ï¼Œ
+ *		å¦‚æœæˆ‘æä¾›äº†ä¸€ç»„æ¥å£ç»™å®ƒï¼Œé‚£ä¹ˆè¿™ä¸ªä»£ç†å¯¹è±¡å°±å®£ç§°å®ç°äº†è¯¥æ¥å£(å¤šæ€)ï¼Œè¿™æ ·æˆ‘å°±èƒ½è°ƒç”¨è¿™ç»„æ¥å£ä¸­çš„æ–¹æ³•äº†
+ *	handler:ä¸€ä¸ªInvocationHandlerå¯¹è±¡ï¼Œè¡¨ç¤ºçš„æ˜¯å½“æˆ‘è¿™ä¸ªåŠ¨æ€ä»£ç†å¯¹è±¡åœ¨è°ƒç”¨æ–¹æ³•çš„æ—¶å€™ï¼Œ
+ *		ä¼šå…³è”åˆ°å“ªä¸€ä¸ªInvocationHandlerå¯¹è±¡ä¸Š
  */
 public class TestDynamicSubject {
 	public static void main(String[] args) {
@@ -24,6 +24,6 @@ public class TestDynamicSubject {
 //		System.out.println(sub.getClass());
 		sub.Request();
 		sub.rent();
-		sub.sayHello("ÎÒ²»ºÃ");
+		sub.sayHello("æˆ‘ä¸å¥½");
 	}
 }

@@ -24,7 +24,7 @@ public class TestScheduledThreadPool {
 
 	public static void main(String[] args) throws Exception {
 		ScheduledExecutorService pool = Executors.newScheduledThreadPool(5);
-		
+		Executors.newCachedThreadPool();
 		for (int i = 0; i < 5; i++) {
 			Future<Integer> result = pool.schedule(new Callable<Integer>(){
 

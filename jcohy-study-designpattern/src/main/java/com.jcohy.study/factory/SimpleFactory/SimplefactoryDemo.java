@@ -14,15 +14,15 @@ public class SimplefactoryDemo {
 		SimpleFactory sf = new SimpleFactory();
 //		Shape shape1 = sf.getshape("CYCLE");
 //		shape1.draw();
-//		//»ñÈ¡ Rectangle µÄ¶ÔÏó£¬²¢µ÷ÓÃËüµÄ draw ·½·¨
+//		//è·å– Rectangle çš„å¯¹è±¡ï¼Œå¹¶è°ƒç”¨å®ƒçš„ draw æ–¹æ³•
 //		Shape shape2 = sf.getshape("RECTANGLE");
-//		//µ÷ÓÃ Rectangle µÄ draw ·½·¨
+//		//è°ƒç”¨ Rectangle çš„ draw æ–¹æ³•
 //		shape2.draw();
-//		//»ñÈ¡ Square µÄ¶ÔÏó£¬²¢µ÷ÓÃËüµÄ draw ·½s·¨
+//		//è·å– Square çš„å¯¹è±¡ï¼Œå¹¶è°ƒç”¨å®ƒçš„ draw æ–¹sæ³•
 //		Shape shape3 = sf.getshape("SQUARE");
-//		//µ÷ÓÃ Square µÄ draw ·½·¨
+//		//è°ƒç”¨ Square çš„ draw æ–¹æ³•
 //		shape3.draw();
-		//·´ÉäµÄÀûÓÃ
+		//åå°„çš„åˆ©ç”¨
 //		Shape shape1=sf.getshape("com.jiachao.designpattern.Factory.SimpleFactory.Circle");
 //		shape1.draw();
 

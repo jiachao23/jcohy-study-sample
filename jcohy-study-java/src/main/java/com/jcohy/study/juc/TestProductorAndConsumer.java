@@ -20,7 +20,7 @@ public class TestProductorAndConsumer {
 	
 }
 
-/*//店员
+//店员
 class Clerk{
 	private int product = 0;
 	
@@ -91,4 +91,4 @@ class Consumer implements Runnable{
 			clerk.sale();
 		}
 	}
-}*/
+}

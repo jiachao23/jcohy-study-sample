@@ -21,24 +21,24 @@ public class PBETest {
 	}
 	public static void jdkPBE(){
 		try {
-			//³õÊ¼»¯ÑÎ
+			//åˆå§‹åŒ–ç›
 			SecureRandom random = new SecureRandom();
 			byte[] salt = random.generateSeed(8);
 			
-			//¿ÚÁîÓëÃÜÔ¿
+			//å£ä»¤ä¸å¯†é’¥
 			String password = "mylove";
 			PBEKeySpec pbeKeySpec = new PBEKeySpec(password.toCharArray());
 			SecretKeyFactory factory = SecretKeyFactory.getInstance("PBEWITHMD5andDES");
 			Key key = factory.generateSecret(pbeKeySpec);
 			
-			//¼ÓÃÜ
+			//åŠ å¯†
 			PBEParameterSpec pbeParameterSpec = new PBEParameterSpec(salt, 100);
 			Cipher cipher = Cipher.getInstance("PBEWITHMD5andDES");
 			cipher.init(Cipher.ENCRYPT_MODE, key, pbeParameterSpec);
 			byte[] result = cipher.doFinal(src.getBytes());
 			System.out.println("jdkPBE encrypt :"+Hex.toHexString(result));
 			
-			//½âÃÜ
+			//è§£å¯†
 			cipher.init(Cipher.DECRYPT_MODE, key, pbeParameterSpec);
 			result = cipher.doFinal(result);
 			System.out.println("jdkPBE encrypt :"+new String(result));

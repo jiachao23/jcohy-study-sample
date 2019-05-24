@@ -2,7 +2,7 @@ package com.jcohy.study.responsibility;
 
 
 /**
- * 解决问题具体类（解决奇数号码的问题）
+ * 瑙ｅ喅闂鍏蜂綋绫伙紙瑙ｅ喅濂囨暟鍙风爜鐨勯棶棰橈級
  */
 public class OddSupport extends Support {
 

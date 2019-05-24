@@ -8,13 +8,13 @@ public class test {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		int num;
-		System.out.println("ÇëÊäÈëÎå¸öÊı");
+		System.out.println("è¯·è¾“å…¥äº”ä¸ªæ•°");
 		LinkedList list=new LinkedList();
 		for(int i=1;i<6;i++){
 			num=Integer.parseInt(br.readLine());
 			list.insert(num);
 		}
-		System.out.println("´òÓ¡Êı");
+		System.out.println("æ‰“å°æ•°");
 		list.ReverseLinkedList();
 		list.delete(new Node(1));
 		list.print();

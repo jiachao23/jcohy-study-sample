@@ -1,30 +1,30 @@
-2. Ê¹ÓÃ paramsPrepareParamsStack À¹½ØÆ÷Õ»ºóµÄÔËĞĞÁ÷³Ì
+2. ä½¿ç”¨ paramsPrepareParamsStack æ‹¦æˆªå™¨æ ˆåçš„è¿è¡Œæµç¨‹
 
-1). paramsPrepareParamsStack ºÍ defaultStack Ò»Ñù¶¼ÊÇÀ¹½ØÆ÷Õ». ¶ø struts-default °üÄ¬ÈÏÊ¹ÓÃµÄÊÇ
+1). paramsPrepareParamsStack å’Œ defaultStack ä¸€æ ·éƒ½æ˜¯æ‹¦æˆªå™¨æ ˆ. è€Œ struts-default åŒ…é»˜è®¤ä½¿ç”¨çš„æ˜¯
 defaultStack
 
-2). ¿ÉÒÔÔÚ Struts ÅäÖÃÎÄ¼şÖĞÍ¨¹ıÒÔÏÂ·½Ê½ĞŞ¸ÄÊ¹ÓÃµÄÄ¬ÈÏµÄÀ¹½ØÆ÷Õ»
+2). å¯ä»¥åœ¨ Struts é…ç½®æ–‡ä»¶ä¸­é€šè¿‡ä»¥ä¸‹æ–¹å¼ä¿®æ”¹ä½¿ç”¨çš„é»˜è®¤çš„æ‹¦æˆªå™¨æ ˆ
 
 <default-interceptor-ref name="paramsPrepareParamsStack"></default-interceptor-ref>
 
-3). paramsPrepareParamsStack À¹½ØÆ÷ÔÚÓÚ
+3). paramsPrepareParamsStack æ‹¦æˆªå™¨åœ¨äº
 
 params -> modelDriven -> params
 
-ËùÒÔ¿ÉÒÔÏÈ°ÑÇëÇó²ÎÊı¸³¸ø Action ¶ÔÓ¦µÄÊôĞÔ, ÔÙ¸ù¾İ¸³¸ø Action µÄÄÇ¸öÊôĞÔÖµ¾ö¶¨Ñ¹µ½ÖµÕ»Õ»¶¥µÄ¶ÔÏó, ×îºóÔÙÎªÕ»¶¥¶ÔÏóµÄÊôĞÔ¸³Öµ.
+æ‰€ä»¥å¯ä»¥å…ˆæŠŠè¯·æ±‚å‚æ•°èµ‹ç»™ Action å¯¹åº”çš„å±æ€§, å†æ ¹æ®èµ‹ç»™ Action çš„é‚£ä¸ªå±æ€§å€¼å†³å®šå‹åˆ°å€¼æ ˆæ ˆé¡¶çš„å¯¹è±¡, æœ€åå†ä¸ºæ ˆé¡¶å¯¹è±¡çš„å±æ€§èµ‹å€¼.
 
-¶ÔÓÚ edit ²Ù×÷¶øÑÔ:
+å¯¹äº edit æ“ä½œè€Œè¨€:
 
-I.   ÏÈÎª EmployeeAction µÄ employeeId ¸³Öµ
-II.  ¸ù¾İ employeeId ´ÓÊı¾İ¿âÖĞ¼ÓÔØ¶ÔÓ¦µÄ¶ÔÏó, ²¢·ÅÈëµ½ÖµÕ»µÄÕ»¶¥
-III. ÔÙÎªÕ»¶¥¶ÔÏóµÄ employeeId ¸³Öµ(Êµ¼ÊÉÏ´ËÊ± employeeId ÊôĞÔÖµÒÑ¾­´æÔÚ)
-IV.  °ÑÕ»¶¥¶ÔÏóµÄÊôĞÔ»ØÏÔÔÚ±íµ¥ÖĞ.
+I.   å…ˆä¸º EmployeeAction çš„ employeeId èµ‹å€¼
+II.  æ ¹æ® employeeId ä»æ•°æ®åº“ä¸­åŠ è½½å¯¹åº”çš„å¯¹è±¡, å¹¶æ”¾å…¥åˆ°å€¼æ ˆçš„æ ˆé¡¶
+III. å†ä¸ºæ ˆé¡¶å¯¹è±¡çš„ employeeId èµ‹å€¼(å®é™…ä¸Šæ­¤æ—¶ employeeId å±æ€§å€¼å·²ç»å­˜åœ¨)
+IV.  æŠŠæ ˆé¡¶å¯¹è±¡çš„å±æ€§å›æ˜¾åœ¨è¡¨å•ä¸­.
 
-4). ¹ØÓÚ»ØÏÔ: Struts2 ±íµ¥±êÇ©»á´ÓÖµÕ»ÖĞ»ñÈ¡¶ÔÓ¦µÄÊôĞÔÖµ½øĞĞ»ØÏÔ. 
+4). å…³äºå›æ˜¾: Struts2 è¡¨å•æ ‡ç­¾ä¼šä»å€¼æ ˆä¸­è·å–å¯¹åº”çš„å±æ€§å€¼è¿›è¡Œå›æ˜¾. 
 
-5). ´æÔÚµÄÎÊÌâ: 
+5). å­˜åœ¨çš„é—®é¢˜: 
 
-getModel ·½·¨
+getModel æ–¹æ³•
 
 public Employee getModel() {
 	if(employeeId == null)
@@ -35,28 +35,28 @@ public Employee getModel() {
 	return employee;
 }
 
-I.   ÔÚÖ´ĞĞÉ¾³ıµÄÊ±ºò, employeeId ²»Îª null, µ« getModel ·½·¨È´´ÓÊı¾İ¿â¼ÓÔØÁËÒ»¸ö¶ÔÏó. ²»¸Ã¼ÓÔØ!
-II.  Ö¸Ïò²éÑ¯È«²¿ĞÅÏ¢Ê±, Ò² new Employee() ¶ÔÏó. ÀË·Ñ!
+I.   åœ¨æ‰§è¡Œåˆ é™¤çš„æ—¶å€™, employeeId ä¸ä¸º null, ä½† getModel æ–¹æ³•å´ä»æ•°æ®åº“åŠ è½½äº†ä¸€ä¸ªå¯¹è±¡. ä¸è¯¥åŠ è½½!
+II.  æŒ‡å‘æŸ¥è¯¢å…¨éƒ¨ä¿¡æ¯æ—¶, ä¹Ÿ new Employee() å¯¹è±¡. æµªè´¹!
 
-6). ½â¾ö·½°¸: Ê¹ÓÃ PrepareInterceptor ºÍ Preparable ½Ó¿Ú. 
+6). è§£å†³æ–¹æ¡ˆ: ä½¿ç”¨ PrepareInterceptor å’Œ Preparable æ¥å£. 
 
-7). ¹ØÓÚ PrepareInterceptor
+7). å…³äº PrepareInterceptor
 
-[·ÖÎöºóµÃµ½µÄ½áÂÛ]
+[åˆ†æåå¾—åˆ°çš„ç»“è®º]
  
-Èô Action ÊµÏÖÁË Preparable ½Ó¿Ú, Ôò Struts ½«³¢ÊÔÖ´ĞĞ prepare[ActionMethodName] ·½·¨,
-Èô prepare[ActionMethodName] ²»´æÔÚ, Ôò½«³¢ÊÔÖ´ĞĞ prepareDo[ActionMethodName] ·½·¨.
-Èô¶¼²»´æÔÚ, ¾Í¶¼²»Ö´ĞĞ.
+è‹¥ Action å®ç°äº† Preparable æ¥å£, åˆ™ Struts å°†å°è¯•æ‰§è¡Œ prepare[ActionMethodName] æ–¹æ³•,
+è‹¥ prepare[ActionMethodName] ä¸å­˜åœ¨, åˆ™å°†å°è¯•æ‰§è¡Œ prepareDo[ActionMethodName] æ–¹æ³•.
+è‹¥éƒ½ä¸å­˜åœ¨, å°±éƒ½ä¸æ‰§è¡Œ.
 
-Èô PrepareInterceptor  µÄ alwaysInvokePrepare ÊôĞÔÎª false, 
-Ôò Struts2 ½«²»»áµ÷ÓÃÊµÏÖÁË Preparable ½Ó¿ÚµÄ  Action µÄ prepare() ·½·¨
+è‹¥ PrepareInterceptor  çš„ alwaysInvokePrepare å±æ€§ä¸º false, 
+åˆ™ Struts2 å°†ä¸ä¼šè°ƒç”¨å®ç°äº† Preparable æ¥å£çš„  Action çš„ prepare() æ–¹æ³•
 
-[ÄÜ½â¾ö 5) µÄÎÊÌâµÄ·½°¸]
+[èƒ½è§£å†³ 5) çš„é—®é¢˜çš„æ–¹æ¡ˆ]
 
-¿ÉÒÔÎªÃ¿Ò»¸ö ActionMethod ×¼±¸ prepare[ActionMethdName] ·½·¨, ¶øÅ×ÆúµôÔ­À´µÄ prepare() ·½·¨
-½« PrepareInterceptor  µÄ alwaysInvokePrepare ÊôĞÔÖÃÎª false, ÒÔ±ÜÃâ Struts2 ¿ò¼ÜÔÙµ÷ÓÃ prepare() ·½·¨.
+å¯ä»¥ä¸ºæ¯ä¸€ä¸ª ActionMethod å‡†å¤‡ prepare[ActionMethdName] æ–¹æ³•, è€ŒæŠ›å¼ƒæ‰åŸæ¥çš„ prepare() æ–¹æ³•
+å°† PrepareInterceptor  çš„ alwaysInvokePrepare å±æ€§ç½®ä¸º false, ä»¥é¿å… Struts2 æ¡†æ¶å†è°ƒç”¨ prepare() æ–¹æ³•.
 
-ÈçºÎÔÚÅäÖÃÎÄ¼şÖĞÎªÀ¹½ØÆ÷Õ»µÄÊôĞÔ¸³Öµ: ²Î¿´ /struts-2.3.15.3/docs/WW/docs/interceptors.html
+å¦‚ä½•åœ¨é…ç½®æ–‡ä»¶ä¸­ä¸ºæ‹¦æˆªå™¨æ ˆçš„å±æ€§èµ‹å€¼: å‚çœ‹ /struts-2.3.15.3/docs/WW/docs/interceptors.html
 
 <interceptors>
     <interceptor-stack name="parentStack">
@@ -68,24 +68,24 @@ II.  Ö¸Ïò²éÑ¯È«²¿ĞÅÏ¢Ê±, Ò² new Employee() ¶ÔÏó. ÀË·Ñ!
  
 <default-interceptor-ref name="parentStack"/>
 
-----------------------------------Ô´´úÂë½âÎö---------------------------------
+----------------------------------æºä»£ç è§£æ---------------------------------
 
 public String doIntercept(ActionInvocation invocation) throws Exception {
-	//»ñÈ¡ Action ÊµÀı
+	//è·å– Action å®ä¾‹
     Object action = invocation.getAction();
 
-	//ÅĞ¶Ï Action ÊÇ·ñÊµÏÖÁË Preparable ½Ó¿Ú
+	//åˆ¤æ–­ Action æ˜¯å¦å®ç°äº† Preparable æ¥å£
     if (action instanceof Preparable) {
         try {
             String[] prefixes;
-            //¸ù¾İµ±Ç°À¹½ØÆ÷µÄ firstCallPrepareDo(Ä¬ÈÏÎª false) ÊôĞÔÈ·¶¨ prefixes
+            //æ ¹æ®å½“å‰æ‹¦æˆªå™¨çš„ firstCallPrepareDo(é»˜è®¤ä¸º false) å±æ€§ç¡®å®š prefixes
             if (firstCallPrepareDo) {
                 prefixes = new String[] {ALT_PREPARE_PREFIX, PREPARE_PREFIX};
             } else {
                 prefixes = new String[] {PREPARE_PREFIX, ALT_PREPARE_PREFIX};
             }
-            //ÈôÎª false, Ôò prefixes: prepare, prepareDo
-            //µ÷ÓÃÇ°×º·½·¨.
+            //è‹¥ä¸º false, åˆ™ prefixes: prepare, prepareDo
+            //è°ƒç”¨å‰ç¼€æ–¹æ³•.
             PrefixMethodInvocationUtil.invokePrefixMethod(invocation, prefixes);
         }
         catch (InvocationTargetException e) {
@@ -100,7 +100,7 @@ public String doIntercept(ActionInvocation invocation) throws Exception {
             }
         }
 
-		//¸ù¾İµ±Ç°À¹½ØÆ÷µÄ alwaysInvokePrepare(Ä¬ÈÏÊÇ true) ¾ö¶¨ÊÇ·ñµ÷ÓÃ Action µÄ prepare ·½·¨
+		//æ ¹æ®å½“å‰æ‹¦æˆªå™¨çš„ alwaysInvokePrepare(é»˜è®¤æ˜¯ true) å†³å®šæ˜¯å¦è°ƒç”¨ Action çš„ prepare æ–¹æ³•
         if (alwaysInvokePrepare) {
             ((Preparable) action).prepare();
         }
@@ -109,12 +109,12 @@ public String doIntercept(ActionInvocation invocation) throws Exception {
     return invocation.invoke();
 }
 
-PrefixMethodInvocationUtil.invokePrefixMethod(invocation, prefixes) ·½·¨: 
+PrefixMethodInvocationUtil.invokePrefixMethod(invocation, prefixes) æ–¹æ³•: 
 
 public static void invokePrefixMethod(ActionInvocation actionInvocation, String[] prefixes) throws InvocationTargetException, IllegalAccessException {
-	//»ñÈ¡ Action ÊµÀı
+	//è·å– Action å®ä¾‹
 	Object action = actionInvocation.getAction();
-	//»ñÈ¡Òªµ÷ÓÃµÄ Action ·½·¨µÄÃû×Ö(update)
+	//è·å–è¦è°ƒç”¨çš„ Action æ–¹æ³•çš„åå­—(update)
 	String methodName = actionInvocation.getProxy().getMethod();
 	
 	if (methodName == null) {
@@ -122,28 +122,28 @@ public static void invokePrefixMethod(ActionInvocation actionInvocation, String[
         methodName = DEFAULT_INVOCATION_METHODNAME;
 	}
 	
-	//»ñÈ¡Ç°×º·½·¨
+	//è·å–å‰ç¼€æ–¹æ³•
 	Method method = getPrefixedMethod(prefixes, methodName, action);
 	
-	//Èô·½·¨²»Îª null, ÔòÍ¨¹ı·´Éäµ÷ÓÃÇ°×º·½·¨
+	//è‹¥æ–¹æ³•ä¸ä¸º null, åˆ™é€šè¿‡åå°„è°ƒç”¨å‰ç¼€æ–¹æ³•
 	if (method != null) {
 		method.invoke(action, new Object[0]);
 	}
 }
 
-PrefixMethodInvocationUtil.getPrefixedMethod ·½·¨: 
+PrefixMethodInvocationUtil.getPrefixedMethod æ–¹æ³•: 
 
 public static Method getPrefixedMethod(String[] prefixes, String methodName, Object action) {
 	assert(prefixes != null);
-	//°Ñ·½·¨µÄÊ××ÖÄ¸±äÎª´óĞ´
+	//æŠŠæ–¹æ³•çš„é¦–å­—æ¯å˜ä¸ºå¤§å†™
 	String capitalizedMethodName = capitalizeMethodName(methodName);
     
-    //±éÀúÇ°×ºÊı×é
+    //éå†å‰ç¼€æ•°ç»„
     for (String prefixe : prefixes) {
-        //Í¨¹ıÆ´½ÓµÄ·½Ê½, µÃµ½Ç°×º·½·¨Ãû: µÚÒ»´Î prepareUpdate, µÚ¶ş´Î prepareDoUpdate
+        //é€šè¿‡æ‹¼æ¥çš„æ–¹å¼, å¾—åˆ°å‰ç¼€æ–¹æ³•å: ç¬¬ä¸€æ¬¡ prepareUpdate, ç¬¬äºŒæ¬¡ prepareDoUpdate
         String prefixedMethodName = prefixe + capitalizedMethodName;
         try {
-        	//ÀûÓÃ·´Éä»ñ´Ó action ÖĞ»ñÈ¡¶ÔÓ¦µÄ·½·¨, ÈôÓĞÖ±½Ó·µ»Ø. ²¢½áÊøÑ­»·.
+        	//åˆ©ç”¨åå°„è·ä» action ä¸­è·å–å¯¹åº”çš„æ–¹æ³•, è‹¥æœ‰ç›´æ¥è¿”å›. å¹¶ç»“æŸå¾ªç¯.
             return action.getClass().getMethod(prefixedMethodName, EMPTY_CLASS_ARRAY);
         }
         catch (NoSuchMethodException e) {
@@ -156,23 +156,23 @@ public static Method getPrefixedMethod(String[] prefixes, String methodName, Obj
 	return null;
 }
 
-1. Action ÊµÏÖ ModelDriven ½Ó¿ÚºóµÄÔËĞĞÁ÷³Ì
+1. Action å®ç° ModelDriven æ¥å£åçš„è¿è¡Œæµç¨‹
 
-1). ÏÈ»áÖ´ĞĞ ModelDrivenInterceptor µÄ intercept ·½·¨. 
+1). å…ˆä¼šæ‰§è¡Œ ModelDrivenInterceptor çš„ intercept æ–¹æ³•. 
 
     public String intercept(ActionInvocation invocation) throws Exception {
-    	//»ñÈ¡ Action ¶ÔÏó: EmployeeAction ¶ÔÏó, ´ËÊ±¸Ã Action ÒÑ¾­ÊµÏÖÁË ModelDriven ½Ó¿Ú
+    	//è·å– Action å¯¹è±¡: EmployeeAction å¯¹è±¡, æ­¤æ—¶è¯¥ Action å·²ç»å®ç°äº† ModelDriven æ¥å£
     	//public class EmployeeAction implements RequestAware, ModelDriven<Employee>
         Object action = invocation.getAction();
 
-		//ÅĞ¶Ï action ÊÇ·ñÊÇ ModelDriven µÄÊµÀı
+		//åˆ¤æ–­ action æ˜¯å¦æ˜¯ ModelDriven çš„å®ä¾‹
         if (action instanceof ModelDriven) {
-        	//Ç¿ÖÆ×ª»»Îª ModelDriven ÀàĞÍ
+        	//å¼ºåˆ¶è½¬æ¢ä¸º ModelDriven ç±»å‹
             ModelDriven modelDriven = (ModelDriven) action;
-            //»ñÈ¡ÖµÕ»
+            //è·å–å€¼æ ˆ
             ValueStack stack = invocation.getStack();
-            //µ÷ÓÃ ModelDriven ½Ó¿ÚµÄ getModel() ·½·¨
-            //¼´µ÷ÓÃ EmployeeAction µÄ getModel() ·½·¨
+            //è°ƒç”¨ ModelDriven æ¥å£çš„ getModel() æ–¹æ³•
+            //å³è°ƒç”¨ EmployeeAction çš„ getModel() æ–¹æ³•
             /*
             public Employee getModel() {
 				employee = new Employee();
@@ -181,7 +181,7 @@ public static Method getPrefixedMethod(String[] prefixes, String methodName, Obj
             */
             Object model = modelDriven.getModel();
             if (model !=  null) {
-            	//°Ñ getModel() ·½·¨µÄ·µ»ØÖµÑ¹Èëµ½ÖµÕ»µÄÕ»¶¥. Êµ¼ÊÑ¹ÈëµÄÊÇ EmployeeAction µÄ employee ³ÉÔ±±äÁ¿
+            	//æŠŠ getModel() æ–¹æ³•çš„è¿”å›å€¼å‹å…¥åˆ°å€¼æ ˆçš„æ ˆé¡¶. å®é™…å‹å…¥çš„æ˜¯ EmployeeAction çš„ employee æˆå‘˜å˜é‡
             	stack.push(model);
             }
             if (refreshModelBeforeResult) {
@@ -191,11 +191,11 @@ public static Method getPrefixedMethod(String[] prefixes, String methodName, Obj
         return invocation.invoke();
     }
    
-2). Ö´ĞĞ ParametersInterceptor µÄ intercept ·½·¨: °ÑÇëÇó²ÎÊıµÄÖµ¸³¸øÕ»¶¥¶ÔÏó¶ÔÓ¦µÄÊôĞÔ. ÈôÕ»¶¥¶ÔÏóÃ»ÓĞ¶ÔÓ¦µÄÊôĞÔ, Ôò²éÑ¯
-ÖµÕ»ÖĞÏÂÒ»¸ö¶ÔÏó¶ÔÓ¦µÄÊôĞÔ...
+2). æ‰§è¡Œ ParametersInterceptor çš„ intercept æ–¹æ³•: æŠŠè¯·æ±‚å‚æ•°çš„å€¼èµ‹ç»™æ ˆé¡¶å¯¹è±¡å¯¹åº”çš„å±æ€§. è‹¥æ ˆé¡¶å¯¹è±¡æ²¡æœ‰å¯¹åº”çš„å±æ€§, åˆ™æŸ¥è¯¢
+å€¼æ ˆä¸­ä¸‹ä¸€ä¸ªå¯¹è±¡å¯¹åº”çš„å±æ€§...
 
-3). ×¢Òâ: getModel ·½·¨²»ÄÜÌá¹©ÒÔÏÂÊµÏÖ. µÄÈ·»á·µ»ØÒ»¸ö Employee ¶ÔÏóµ½ÖµÕ»µÄÕ»¶¥. µ«µ±Ç° Action 
-µÄ employee ³ÉÔ±±äÁ¿È´ÊÇ null. 
+3). æ³¨æ„: getModel æ–¹æ³•ä¸èƒ½æä¾›ä»¥ä¸‹å®ç°. çš„ç¡®ä¼šè¿”å›ä¸€ä¸ª Employee å¯¹è±¡åˆ°å€¼æ ˆçš„æ ˆé¡¶. ä½†å½“å‰ Action 
+çš„ employee æˆå‘˜å˜é‡å´æ˜¯ null. 
 
 public Employee getModel() {
 	return new Employee();

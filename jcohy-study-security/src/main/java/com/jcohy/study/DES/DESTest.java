@@ -20,24 +20,24 @@ public class DESTest {
 	}
 	public static void jdkDES(){
 		try {
-			//Éú³Ékey
-			KeyGenerator keyGenerator = KeyGenerator.getInstance("DES");//3DESÎªDESede
-			keyGenerator.init(56);//3DESÎª112»ò168
+			//ç”Ÿæˆkey
+			KeyGenerator keyGenerator = KeyGenerator.getInstance("DES");//3DESä¸ºDESede
+			keyGenerator.init(56);//3DESä¸º112æˆ–168
 			SecretKey secreKey = keyGenerator.generateKey();
 			byte[] key = secreKey.getEncoded();
 			
-			//×ª»»key
+			//è½¬æ¢key
 			DESKeySpec desKeySpec = new DESKeySpec(key);
 			SecretKeyFactory factory= SecretKeyFactory.getInstance("DES");
 			SecretKey convertsecretKey = factory.generateSecret(desKeySpec);
 			
-			//¼ÓÃÜ
+			//åŠ å¯†
 			Cipher cipher = Cipher.getInstance("DES/ECB/PKCS5Padding");
 			cipher.init(Cipher.ENCRYPT_MODE, convertsecretKey);
 			byte[] result = cipher.doFinal(src.getBytes());
 			System.out.println("jdkDES: encrypt"+Hex.toHexString(result));
 			
-			//½âÃÜ
+			//è§£å¯†
 			cipher.init(Cipher.DECRYPT_MODE, convertsecretKey);
 			result = cipher.doFinal(result);
 			System.out.println("jdkDES decrypt:"+new String(result));
