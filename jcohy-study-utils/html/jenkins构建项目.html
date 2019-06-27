@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, minimumscale=1.0, maximum-scale=1.0" />
+<meta name="language" content="zh-cn" />
+<meta name="renderer" content="webkit" />
+<title>jcohy</title>
+	<link rel="stylesheet" type="text/css" href="../style/prettify.css" />
+	<link rel="stylesheet" type="text/css" href="../style/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../style/love.css" />
+	<script type="text/javascript" src="../style/jquery.min.js"></script>
+	<script type="text/javascript" src="../style/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../style/prettify.js"></script>
+</head>
+<body>
+<div class="m-bg">
+	<div>
+		<h1>Jenkins</h1>
+		<blockquote>
+			<h4>PS:待开发中。。。。</h4>
+			<h4>作者网页：<a href="http://www.jcohy.com">www.jcohy.com</a></h4>
+			<p> 我的学习笔记，记录学习过程中的笔记以及遇到的问题,以及我的一些经验总结。如果出现链接失效,或者想知道更多的内容等情况可以提交 Issues 提醒我修改相关内容。</p></blockquote>
+		</blockquote>
+	</div>
+
+	<hr>
+
+	<h1>Jenkins项目构建过程</h1>
+	<ol>
+		<li>
+			<p>登录Jenlis
+			</p>
+			<hr>
+
+		</li>
+
+		<li>
+			<span>新建一个项目</span>
+			<img src="../image/jenkins1.png" alt="">
+			<p>输入项目名</p>
+			<img src="../image/jenkins2.png" alt="">
+			<p>	选择项目类型</p>
+			<img src="../image/jenkins3.png" alt="">
+		</li>
+
+		<li>
+			<p>
+				点击ok，进入到下一步。修改项目地址
+
+			</p>
+			<img src="../image/jenkins4.png" alt="">
+			<hr>
+		</li>
+
+
+		<li>
+			<p>
+				进入到项目里面的master分支，点击左上角的 <code>立即构建</code>
+			</p>
+			<img src="../image/jenkins5.png" alt="">
+			<hr>
+			<p>
+				点击last build -> console output可以查看详细日志
+			</p>
+		</li>
+
+	</ol>
+</div>
+<div class="blockquote-inline-b">
+	<p>关于构建失败时常遇到的错误请参考 <a href="jenkins错误解决.html">jenkins常见错误</a>。</p>
+</div>
+
+<div class="m-bg text-center margin-t-10">
+	<p>
+		<a class="btn btn-xs btn-default" href="">jcohy</a>	</p>
+</div>
+<script type="text/javascript">
+$(function(){
+	$("pre").addClass("prettyprint linenums");
+	//代码高亮
+	prettyPrint();
+	$("table").attr('class','table table-striped table-bordered table-condensed');
+});
+</script>
+</body>
+</html>
+

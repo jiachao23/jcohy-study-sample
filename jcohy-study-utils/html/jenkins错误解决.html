@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jcohy</title>
+	<link rel="stylesheet" type="text/css" href="../style/prettify.css"/>
+	<link rel="stylesheet" type="text/css" href="../style/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../style/love.css"/>
+	<script type="text/javascript" src="../style/jquery.min.js"></script>
+	<script type="text/javascript" src="../style/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../style/prettify.js"></script>
+</head>
+<body>
+<div  class="m-bg">
+
+	<div>
+		<h1>Jenkinsfile</h1>
+		<blockquote>
+			<h4>PS:待开发中。。。。</h4>
+			<h4>作者网页：<a href="http://www.jcohy.com">www.jcohy.com</a></h4>
+			<p> 我的学习笔记，记录学习过程中的笔记以及遇到的问题,以及我的一些经验总结。如果出现链接失效,或者想知道更多的内容等情况可以提交 Issues 提醒我修改相关内容。</p></blockquote>
+		</blockquote>
+	</div>
+
+	<h3>Jenkins错误处理</h3>
+
+	<div class="blockquote-inline-b">
+		<p>在Jenkins上项目构建过程中，都是使用项目中的Jenkinsfiles脚本文件来进行自动化下载，构建，部署等一系列操作。</p>
+			<p>使用gradle工具来对项目进行构建。有关Jenkins详细说明请参考<a href="https://www.w3cschool.cn/jenkins/">Jenkins官方文档</a></p>
+			<p>研究院使用的通用的jenkinsfiles文件<a href="../bash/Jenkinsfiles.html">通用Jenkinsfiles文件</a></p>
+			<p>jenkins构建时使用的服务器：<a href="../terminal/account.html#jenkins"></a></p>
+			以下错误主要是针对执行通用的jenkinsfile脚本时所遇到的问题，Jenkins在构建项目中常见的错误问题以及处理方式
+			<p></p>
+	</div>
+
+	<blockquote>
+		<ol>
+			<li><a href="#permission">permission defined</a></li>
+			<li><a href="#symbol">connot find symbol</a></li>
+			<li><a href="#offline">您的jenkins处于离线模式</a></li>
+		</ol>
+	</blockquote>
+
+	<div class="breadcrumb">
+		<h2 id="permission">1.permission defined</h2>
+		<blockquote>
+			<p>  此问题是由于在执行脚本时，用户权限不足所造成的。需要在Jenkins的脚本文件中为当前命令添加所需要的权限</p>
+			<p>解决方法：</p>
+			<ol >
+				<li>
+					<strong>定位到所执行命令：</strong>
+					<pre class="prettyprint lang-java">
+ sh "./gradlew -Penv=${env.ENV} clean build"
+					</pre>
+				</li>
+
+				<li>
+					<strong> 给命令添加执行权限:</strong>
+					<pre class="prettyprint lang-java">sh "chmod +x gradlew";
+sh "./gradlew -Penv=${env.ENV} clean build"
+					</pre>
+				</li>
+			</ol>
+		</blockquote>
+	</div>
+
+	<div class="breadcrumb margin-t-10">
+		<h2 id="symbol">2.connot find the symbol</h2>
+
+		<blockquote>
+			<p><strong>造成此问题的原因是因为此符文所在的文件或者依赖不存在，主要还是因为jar包因为出现问题，出现的原因主要有以下两种情况。</strong></p>
+
+			<ol>
+				<li>
+					<p>此项目所依赖的服务版本未更新到最新版本，或者未上传发布到私服中央仓库</p>
+					<p>解决方法：使用Jenkins重新构建项目所依赖的微服务，将其生成的jar包上传至仓库中。</p>
+				</li>
+				<li>
+					<p>如果第一步解决不了，再来进行第二步。可能是因为本地缓存的原因造成的</p>
+					<p>1.登录到Jenkins服务器上</p>
+					<p>2.进入到目录，找到项目所依赖的微服务的本地缓存，然后删除</p>
+					<pre class="prettyprint lang-java">cd /var/lib/jenkins/.gradle/caches/modules-2/files-2.1</pre>
+					<p>3.然后重新构建项目</p>
+				</li>
+			</ol>
+		</blockquote>
+	</div>
+
+	<div class="breadcrumb margin-t-10">
+		<h2 id="offline">2.您的jenkins处于离线模式</h2>
+
+		<blockquote>
+			<p><strong></strong></p>
+			<ol>
+				<li>
+					<p></p>
+					<p>解决方法1：进入：ip:端口/pluginManager/advanced 修改升级站点中的地址，把https: 改成http: 并且点那个提交按钮</p>
+					<p>该文件为jenkins下载插件的源地址，改地址默认jenkins默认为：https://updates.jenkins.io/update-center.json，就是因为https的问题，此处我们将其改为http即可，之后重启jenkins服务即可。</p>
+					<img src="../image/jenkins6.jpg" alt="">
+				</li>
+				<li>
+					<p>解决方法2：修改/var/lib/jenkins/updates/default.json，所以图下的google改为www.baidu.com即可，更改完重启服务。</p>
+					<p>jenkins在下载插件之前会先检查网络连接，其会读取这个文件中的网址。默认是访问谷歌</p>
+					<img src="../image/jenkins7.jpg" alt="">
+				</li>
+			</ol>
+		</blockquote>
+	</div>
+
+</div>
+
+<div class="m-bg text-center margin-t-10">
+	<p>
+		<a class="btn btn-xs btn-default" href="">jcohy</a>	</p>
+</div>
+<script type="text/javascript">
+  $(function(){
+    $("pre").addClass("prettyprint linenums");
+    //代码高亮
+    prettyPrint();
+    $("table").attr('class','table table-striped table-bordered table-condensed');
+  });
+</script>
+</body>
+</html>

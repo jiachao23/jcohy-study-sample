@@ -1,0 +1,115 @@
+#!groovy
+
+/* Only keep the 5 most recent builds. */
+def projectProperties = [
+    [$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', numToKeepStr: '5']],
+]
+
+properties(projectProperties)
+
+node {
+
+    def map = ['dev': '47.107.92.75']
+
+    stage('Checkout Source Code') {
+        checkout scm
+    }
+
+    if (env.BRANCH_NAME == 'develop' || env.BRANCH_NAME == 'master' ) {
+        stage('Build') {
+            timeout(time: 1, unit: "MINUTES") {
+                try {
+                    def userInput = input(
+                        id : 'userInput', message: "Choose environment", ok: 'Submit', parameters: [
+                        [$class: 'ChoiceParameterDefinition', name: 'target', description:'', choices: 'dev'],
+                        ]
+                    )
+                    env.ENV = userInput
+                } catch(err) {
+                    def user = err.getCauses()[0].getUser()
+                    // 时钟到达，默认为dev
+                    if ('SYSTEM' == user.toString()) {
+                        env.ENV = 'dev'
+                    } else {
+                        echo "Aborted by: [${user}]"
+                    }
+                }
+            }
+            try {
+                sh "chmod +x gradlew"
+                sh "./gradlew -Penv=${env.ENV} clean build -x test"
+            } catch(err) {
+                stage('Faliure Notification') {
+//                    def to = emailextrecipients([
+//                     [$class: 'DevelopersRecipientProvider']
+//                     ])
+
+//                     mail to: to, subject: "${env.JOB_NAME} Failed!",
+                     body: "${env.JOB_NAME} failed the last time it was run. See ${env.BUILD_URL} for more information."
+                     currentBuild.result = 'FAILURE'
+                }
+            }
+        }
+//        stage('Publish') {
+//            try {
+//                env.REPO_URL = sh(returnStdout: true, script: "./gradlew -Penv=${env.ENV} publish | grep -oP -m 1 'http.*?zip'").trim()
+//                echo "Publish to url: ${env.REPO_URL}"
+//                def packageStr = env.REPO_URL.split('/')[-1]
+//                currentBuild.description = "Build Environment: ${env.ENV}; <br/> <a href=${env.REPO_URL}>${packageStr}</a>"
+//            } catch(err) {
+//                stage('Faliure Notification') {
+//                    def to = emailextrecipients([
+//                     [$class: 'DevelopersRecipientProvider']
+//                     ])
+//
+//                     mail to: to, subject: "${env.JOB_NAME} Failed!",
+//                     body: "${env.JOB_NAME} failed the last time it was run. See ${env.BUILD_URL} for more information."
+//                     currentBuild.result = 'FAILURE'
+//                }
+//            }
+//        }
+        stage('Deploy') {
+            def host = map["${env.ENV}"]
+            if (host != null) {
+                timeout(time: 1, unit: 'MINUTES') {
+                    try {
+                        input "Deploy to ${env.ENV} environment?"
+                        echo "${env.WORKSPACE}"
+                        //echo "${WORKSPACE},${JOB_NAME},${JENKINS_HOME},${env.BUILD_URL}，${BUILD_URL}，${JOB_URL}"
+//                        env.REPO_URL = sh(returnStdout: true, script: "./gradlew -Penv=${env.ENV} publish | grep -oP -m 1 'http.*?zip'").trim()
+                        env.REPO_URL = sh(returnStdout: true, script: "find ${env.WORKSPACE} -name '*?zip'").trim()
+                        echo "Deploy to url: ${env.REPO_URL}"
+                       // sh "ssh root@${host} 'bash -x -s' < ./deploy.sh " + "${env.REPO_URL}"
+                        sh "'bash -x -s' < ./deploy.sh " + "${env.REPO_URL}"
+                    } catch (err) {
+                        def user = err.getCauses()[0].getUser()
+                        if ('SYSTEM' == user.toString()) {
+                            echo "Input timeout"
+                        } else {
+                            echo "Aborted by: [${user}]"
+                        }
+                    }
+                }
+            } else {
+                println "We do not support CD to ${env.ENV} environment :("
+            }
+        }
+    } else {
+        stage('Build') {
+            try {
+                sh "./gradlew clean build"
+            } catch(err) {
+                stage('Faliure Notification') {
+                    def to = emailextrecipients([
+                     [$class: 'DevelopersRecipientProvider']
+                     ])
+
+                     mail to: to, subject: "${env.JOB_NAME} Failed!",
+                     body: "${env.JOB_NAME} failed the last time it was run. See ${env.BUILD_URL} for more information."
+                     currentBuild.result = 'FAILURE'
+                }
+            }
+        }
+    }
+}
+

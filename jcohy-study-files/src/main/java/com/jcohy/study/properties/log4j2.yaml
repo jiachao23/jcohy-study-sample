@@ -1,0 +1,61 @@
+Configuration:
+  # Internal Log4j events level
+  status: warn
+  # Automatic Reconfiguration, unit: second
+  monitorInterval: 5
+  dest: err
+  name: YAMLConfig
+  properties:
+    property:
+      name: filename
+      value: $${env:APP_HOME}/../logs/uums
+  thresholdFilter:
+    level: debug
+  appenders:
+    ## Console appender
+    Console:
+      name: STDOUT
+      PatternLayout:
+        Pattern: "%d %-5p %c [%L] [%t] - %m%n"
+    ## RollingFile appender
+    RollingFile:
+      -
+        name: RollingFile
+        filename: "${filename}.log"
+        filePattern: "${filename}.log.%d{yyyy-MM-dd}.gz"
+        PatternLayout:
+          Pattern: "%d %-5p %c [%L] [%t] - %m%n"
+        Policies:
+          SizeBasedTriggeringPolicy:
+            size: 20MB
+        DefaultRollOverStrategy:
+          max: 5
+      -
+        name: ErrorFile
+        filename: "${filename}-error.log"
+        filePattern: "${filename}-error.log.%d{yyyy-MM-dd}.gz"
+        PatternLayout:
+          Pattern: "%d %-5p %c [%L] [%t] - %m%n"
+        Policies:
+          SizeBasedTriggeringPolicy:
+            size: 20MB
+        DefaultRollOverStrategy:
+          max: 5
+
+  Loggers:
+    logger:
+      -
+        name: com.study.jcohy
+        level: debug
+      -
+        name: org.hibernate.SQL
+        level: debug
+    Root:
+      level: info
+      AppenderRef:
+        - ref: STDOUT
+          level: info
+        - ref: RollingFile
+          level: info
+        - ref: ErrorFile
+          level: error
