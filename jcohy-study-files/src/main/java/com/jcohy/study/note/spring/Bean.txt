@@ -1,14 +1,14 @@
 IOC
-	(Inversion of Control)£ºÆäË¼ÏëÊÇ·´×ª×ÊÔ´»ñÈ¡µÄ·½Ïò. ´«Í³µÄ×ÊÔ´²éÕÒ·½Ê½ÒªÇó×é¼þÏòÈÝÆ÷·¢ÆðÇëÇó²éÕÒ×ÊÔ´. ×÷Îª»ØÓ¦, ÈÝÆ÷ÊÊÊ±µÄ·µ»Ø×ÊÔ´. ¶øÓ¦ÓÃÁË IOC Ö®ºó, ÔòÊÇÈÝÆ÷Ö÷¶¯µØ½«×ÊÔ´ÍÆËÍ¸øËüËù¹ÜÀíµÄ×é¼þ, ×é¼þËùÒª×öµÄ½öÊÇÑ¡ÔñÒ»ÖÖºÏÊÊµÄ·½Ê½À´½ÓÊÜ×ÊÔ´. ÕâÖÖÐÐÎªÒ²±»³ÆÎª²éÕÒµÄ±»¶¯ÐÎÊ½¡£
+	(Inversion of Control)ï¼šå…¶æ€æƒ³æ˜¯åè½¬èµ„æºèŽ·å–çš„æ–¹å‘. ä¼ ç»Ÿçš„èµ„æºæŸ¥æ‰¾æ–¹å¼è¦æ±‚ç»„ä»¶å‘å®¹å™¨å‘èµ·è¯·æ±‚æŸ¥æ‰¾èµ„æº. ä½œä¸ºå›žåº”, å®¹å™¨é€‚æ—¶çš„è¿”å›žèµ„æº. è€Œåº”ç”¨äº† IOC ä¹‹åŽ, åˆ™æ˜¯å®¹å™¨ä¸»åŠ¨åœ°å°†èµ„æºæŽ¨é€ç»™å®ƒæ‰€ç®¡ç†çš„ç»„ä»¶, ç»„ä»¶æ‰€è¦åšçš„ä»…æ˜¯é€‰æ‹©ä¸€ç§åˆé€‚çš„æ–¹å¼æ¥æŽ¥å—èµ„æº. è¿™ç§è¡Œä¸ºä¹Ÿè¢«ç§°ä¸ºæŸ¥æ‰¾çš„è¢«åŠ¨å½¢å¼ã€‚
 
 
-1. Ä¬ÈÏÇé¿öÏÂ, IOC ÈÝÆ÷ÖÐµÄ bean ÊÇµ¥ÀýµÄ! Èô¶ÔÏóÊÇµ¥ÀýµÄ, ÔòÔÚ´´½¨ IOC ÈÝÆ÷Ê±¼´´´½¨ bean µÄÊµÀý, ²¢¶Ô bean µÄÊôÐÔ½øÐÐ³õÊ¼»¯. 
-		2. ¿ÉÒÔÍ¨¹ý bean µÄ scope ÊôÐÔÀ´ÐÞ¸Ä bean µÄ×÷ÓÃÓò. ÈôÈ¡ÖµÎª prototype, Ôò bean ÎªÔ­ÐÍµÄ: Ã¿´ÎÏòÈÝÆ÷»ñÈ¡ÊµÀý, µÃµ½µÄ¶¼ÊÇÒ»¸öÐÂµÄ¶ÔÏó.
-		¶øÇÒ, ²»ÔÚ´´½¨ IOC ÈÝÆ÷Ê±´´½¨ bean µÄÊµÀýÁË. 
-		3. IOC ÈÝÆ÷ÖÐ bean µÄÉúÃüÖÜÆÚ: 
-		3.1 Ò»°ãµØ, ÌÖÂÛ bean µÄÉúÃüÖÜÆÚ, ÊÇ½¨Á¢ÔÚ bean ÊÇµ¥ÀýµÄ»ù´¡ÉÏµÄ. 
-		3.2 ¿ÉÒÔÎª bean Ö¸¶¨ init ºÍ destroy ·½·¨
-		3.3 »¹¿ÉÒÔÍ¨¹ý bean µÄºóÖÃ´¦ÀíÆ÷À´¸ü¼Ó·á¸» bean µÄÉúÃüÖÜÆÚ·½·¨(ÃæÊÔÊ±.).
+1. é»˜è®¤æƒ…å†µä¸‹, IOC å®¹å™¨ä¸­çš„ bean æ˜¯å•ä¾‹çš„! è‹¥å¯¹è±¡æ˜¯å•ä¾‹çš„, åˆ™åœ¨åˆ›å»º IOC å®¹å™¨æ—¶å³åˆ›å»º bean çš„å®žä¾‹, å¹¶å¯¹ bean çš„å±žæ€§è¿›è¡Œåˆå§‹åŒ–. 
+		2. å¯ä»¥é€šè¿‡ bean çš„ scope å±žæ€§æ¥ä¿®æ”¹ bean çš„ä½œç”¨åŸŸ. è‹¥å–å€¼ä¸º prototype, åˆ™ bean ä¸ºåŽŸåž‹çš„: æ¯æ¬¡å‘å®¹å™¨èŽ·å–å®žä¾‹, å¾—åˆ°çš„éƒ½æ˜¯ä¸€ä¸ªæ–°çš„å¯¹è±¡.
+		è€Œä¸”, ä¸åœ¨åˆ›å»º IOC å®¹å™¨æ—¶åˆ›å»º bean çš„å®žä¾‹äº†. 
+		3. IOC å®¹å™¨ä¸­ bean çš„ç”Ÿå‘½å‘¨æœŸ: 
+		3.1 ä¸€èˆ¬åœ°, è®¨è®º bean çš„ç”Ÿå‘½å‘¨æœŸ, æ˜¯å»ºç«‹åœ¨ bean æ˜¯å•ä¾‹çš„åŸºç¡€ä¸Šçš„. 
+		3.2 å¯ä»¥ä¸º bean æŒ‡å®š init å’Œ destroy æ–¹æ³•
+		3.3 è¿˜å¯ä»¥é€šè¿‡ bean çš„åŽç½®å¤„ç†å™¨æ¥æ›´åŠ ä¸°å¯Œ bean çš„ç”Ÿå‘½å‘¨æœŸæ–¹æ³•(é¢è¯•æ—¶.).
 	-->
 	<bean id="helloWorld" 
 		class="com.atguigu.spring.helloworld.HelloWorld" 
@@ -19,69 +19,86 @@ IOC
 	</bean>
 
 
-DI
 
-	(Dependency Injection) ¡ª IOC µÄÁíÒ»ÖÖ±íÊö·½Ê½£º¼´×é¼þÒÔÒ»Ð©Ô¤ÏÈ¶¨ÒåºÃµÄ·½Ê½(ÀýÈç: setter ·½·¨)½ÓÊÜÀ´×ÔÈçÈÝÆ÷µÄ×ÊÔ´×¢Èë. Ïà¶ÔÓÚ IOC ¶øÑÔ£¬ÕâÖÖ±íÊö¸üÖ±½Ó¡£
+DI
 
-BeanµÄÅäÖÃ¡£
-    class£ºbeanµÄÈ«ÀàÃûÍ¨¹ý·´ÉäµÄ·½Ê½ÔÚIOCÈÝÆ÷´´½¨Bean¡£ËùÒÔBeanÖÐ±ØÐëÓÐÎç²Í¹¹ÔìÆ÷
-    id£º±íÊ¾ÈÝÆ÷ÖÐµÄBean¡£idÎ¨Ò»£¬Èô²»Ö¸¶¨£¬Spring×Ô¶¯½«È¨ÏÞÏÞ¶¨ÐÔÀàÃû×÷ÎªBeanµÄÃû×Ö¡£
+	(Dependency Injection) â€” IOC çš„å¦ä¸€ç§è¡¨è¿°æ–¹å¼ï¼šå³ç»„ä»¶ä»¥ä¸€äº›é¢„å…ˆå®šä¹‰å¥½çš„æ–¹å¼(ä¾‹å¦‚: setter æ–¹æ³•)æŽ¥å—æ¥è‡ªå¦‚å®¹å™¨çš„èµ„æºæ³¨å…¥. ç›¸å¯¹äºŽ IOC è€Œè¨€ï¼Œè¿™ç§è¡¨è¿°æ›´ç›´æŽ¥
+ã€‚
 
-		<!-- ÅäÖÃ bean -->
+Beançš„é…ç½®ã€‚
+    classï¼šbeançš„å…¨ç±»åé€šè¿‡åå°„çš„æ–¹å¼åœ¨IOCå®¹å™¨åˆ›å»ºBeanã€‚æ‰€ä»¥Beanä¸­å¿…é¡»æœ‰åˆé¤æž„é€ å™¨
+    idï¼šè¡¨ç¤ºå®¹å™¨ä¸­çš„Beanã€‚idå”¯ä¸€ï¼Œè‹¥ä¸æŒ‡å®šï¼ŒSpringè‡ªåŠ¨å°†æƒé™é™å®šæ€§ç±»åä½œä¸ºBeançš„åå­—ã€‚
+
+		<!-- é…ç½® bean -->
 	<bean id="dao5" class="com.atguigu.spring.ref.Dao"></bean>
 
 	<bean id="service" class="com.atguigu.spring.ref.Service">
-		<!-- Í¨¹ý ref ÊôÐÔÖµÖ¸¶¨µ±Ç°ÊôÐÔÖ¸ÏòÄÄÒ»¸ö bean! -->
+		<!-- é€šè¿‡ ref å±žæ€§å€¼æŒ‡å®šå½“å‰å±žæ€§æŒ‡å‘å“ªä¸€ä¸ª bean! -->
 		<property name="dao" ref="dao5"></property>
 	</bean>
 
 
-ÔÚ Spring IOC ÈÝÆ÷¶ÁÈ¡ Bean ÅäÖÃ´´½¨ Bean ÊµÀýÖ®Ç°, ±ØÐë¶ÔËü½øÐÐÊµÀý»¯. Ö»ÓÐÔÚÈÝÆ÷ÊµÀý»¯ºó£¬²Å¿ÉÒÔ´Ó IOC ÈÝÆ÷Àï»ñÈ¡ Bean ÊµÀý²¢Ê¹ÓÃ.Spring Ìá¹©ÁËÁ½ÖÖÀàÐÍµÄ IOC ÈÝÆ÷ÊµÏÖ. 
---------BeanFactory: IOC ÈÝÆ÷µÄ»ù±¾ÊµÏÖ.
---------ApplicationContext: Ìá¹©ÁË¸ü¶àµÄ¸ß¼¶ÌØÐÔ. ÊÇ BeanFactory µÄ×Ó½Ó¿Ú.µ÷ÓÃgetBean£¨£©·½·¨»ñÈ¡¡£
-	ApplicationContext µÄÖ÷ÒªÊµÏÖÀà£º
-		---ClassPathXmlApplicationContext£º´Ó ÀàÂ·¾¶ÏÂ¼ÓÔØÅäÖÃÎÄ¼þ
-		---FileSystemXmlApplicationContext: ´ÓÎÄ¼þÏµÍ³ÖÐ¼ÓÔØÅäÖÃÎÄ¼þ¡£
-ConfigurableApplicationContext À©Õ¹ÓÚ ApplicationContext£¬ÐÂÔö¼ÓÁ½¸öÖ÷Òª·½·¨£º
-		refresh() ºÍ close()£¬
- ÈÃ ApplicationContext ¾ßÓÐÆô¶¯¡¢Ë¢ÐÂºÍ¹Ø±ÕÉÏÏÂÎÄµÄÄÜÁ¦ApplicationContext ÔÚ³õÊ¼»¯ÉÏÏÂÎÄÊ±¾ÍÊµÀý»¯ËùÓÐµ¥ÀýµÄ Bean¡£
+åœ¨ Spring IOC å®¹å™¨è¯»å– Bean é…ç½®åˆ›å»º Bean å®žä¾‹ä¹‹å‰, å¿…é¡»å¯¹å®ƒè¿›è¡Œå®žä¾‹åŒ–. åªæœ‰åœ¨å®¹å™¨å®žä¾‹åŒ–åŽï¼Œæ‰å¯ä»¥ä»Ž IOC å®¹å™¨é‡ŒèŽ·å– Bean å®žä¾‹å¹¶ä½¿ç”¨.
+Spring æä¾›äº†ä¸¤ç§ç±»åž‹çš„ IOC å®¹å™¨å®žçŽ°. 
+--------
+BeanFactory: IOC å®¹å™¨çš„åŸºæœ¬å®žçŽ°.
+--------
+ApplicationContext: æä¾›äº†æ›´å¤šçš„é«˜çº§ç‰¹æ€§. æ˜¯ BeanFactory çš„å­æŽ¥å£.è°ƒç”¨getBeanï¼ˆï¼‰æ–¹æ³•èŽ·å–ã€‚
+	ApplicationContext çš„ä¸»è¦å®žçŽ°ç±»ï¼š
+		---
+ClassPathXmlApplicationContextï¼šä»Ž ç±»è·¯å¾„ä¸‹åŠ è½½é…ç½®æ–‡ä»¶
+		
+---FileSystemXmlApplicationContext: ä»Žæ–‡ä»¶ç³»ç»Ÿä¸­åŠ è½½é…ç½®æ–‡ä»¶
+ã€‚
+ConfigurableApplicationContext æ‰©å±•äºŽ ApplicationContextï¼Œæ–°å¢žåŠ ä¸¤ä¸ªä¸»è¦æ–¹æ³•ï¼š
+		refresh() å’Œ close()ï¼Œ
+ è®© ApplicationContext å…·æœ‰å¯åŠ¨ã€åˆ·æ–°å’Œå…³é—­ä¸Šä¸‹æ–‡çš„èƒ½åŠ›
+ApplicationContext åœ¨åˆå§‹åŒ–ä¸Šä¸‹æ–‡æ—¶å°±å®žä¾‹åŒ–æ‰€æœ‰å•ä¾‹çš„ Beanã€‚
 
-WebApplicationContext ÊÇ×¨ÃÅÎª WEB Ó¦ÓÃ¶ø×¼±¸µÄ£¬ËüÔÊÐí´ÓÏà¶ÔÓÚ WEB ¸ùÄ¿Â¼µÄÂ·¾¶ÖÐÍê³É³õÊ¼»¯¹¤×÷
 
-BeanFactory ÊÇ Spring ¿ò¼ÜµÄ»ù´¡ÉèÊ©£¬ÃæÏò Spring ±¾Éí£»ApplicationContext ÃæÏòÊ¹ÓÃ Spring ¿ò¼ÜµÄ¿ª·¢Õß£¬
+WebApplicationContext æ˜¯ä¸“é—¨ä¸º WEB åº”ç”¨è€Œå‡†å¤‡çš„ï¼Œå®ƒå…è®¸ä»Žç›¸å¯¹äºŽ WEB æ ¹ç›®å½•çš„è·¯å¾„ä¸­å®Œæˆåˆå§‹åŒ–å·¥ä½œ
 
-¼¸ºõËùÓÐµÄÓ¦ÓÃ³¡ºÏ¶¼Ö±½ÓÊ¹ÓÃ ApplicationContext ¶ø·Çµ×²ãµÄ BeanFactoryÎÞÂÛÊ¹ÓÃºÎÖÖ·½Ê½, ÅäÖÃÎÄ¼þÊ±ÏàÍ¬µÄ.
 
-2.ÒÀÀµ×¢Èë
-  	->ÊôÐÔ×¢Èë
-		Í¨¹ýsetter·½·¨×¢ÈëBeanµÄÊôÐÔ»òÒÀÀµ¶ÔÏó
-		ÊôÐÔ×¢ÈëÊ¹ÓÃ <property> ÔªËØ, Ê¹ÓÃ name ÊôÐÔÖ¸¶¨ Bean µÄÊôÐÔÃû³Æ£¬
-				value ÊôÐÔ»ò <value> ×Ó½ÚµãÖ¸¶¨ÊôÐÔÖµ 	->¹¹ÔìÆ÷×¢Èë
-		ÒªÇó: ÔÚ Bean ÖÐ±ØÐëÓÐ¶ÔÓ¦µÄ¹¹ÔìÆ÷.
-			ÈôÒ»¸ö bean ÓÐ¶à¸ö¹¹ÔìÆ÷, ÈçºÎÍ¨¹ý¹¹ÔìÆ÷À´Îª bean µÄÊôÐÔ¸³Öµ -->
-			¿ÉÒÔ¸ù¾Ý index ºÍ value ½øÐÐ¸ü¼Ó¾«È·µÄ¶¨Î». (ÁË½â)
- 			Èô×ÖÃæÖµÖÐ°üº¬ÌØÊâ×Ö·û, Ôò¿ÉÒÔÊ¹ÓÃ DCDATA À´½øÐÐ¸³Öµ. (ÁË½â)	->¹¤³§·½·¨×¢Èë£¨ºÜÉÙÊ¹ÓÃ£¬²»ÍÆ¼ö£©
-3.ÒýÓÃÆäËü Bean	ÔÚ Bean µÄÅäÖÃÎÄ¼þÖÐ, ¿ÉÒÔÍ¨¹ý <ref> ÔªËØ»ò ref  ÊôÐÔÎª Bean µÄÊôÐÔ»ò¹¹ÔìÆ÷²ÎÊýÖ¸¶¨¶Ô Bean µÄÒýÓÃ. Ò²¿ÉÒÔÔÚÊôÐÔ»ò¹¹ÔìÆ÷Àï°üº¬ Bean µÄÉùÃ÷, ÕâÑùµÄ Bean ³ÆÎªÄÚ²¿ Bean¡£
+BeanFactory æ˜¯ Spring æ¡†æž¶çš„åŸºç¡€è®¾æ–½ï¼Œé¢å‘ Spring æœ¬èº«ï¼›ApplicationContext é¢å‘ä½¿ç”¨ Spring æ¡†æž¶çš„å¼€å‘è€…ï¼Œ
 
-4.null ÖµºÍ¼¶ÁªÊôÐÔ
+å‡ ä¹Žæ‰€æœ‰çš„åº”ç”¨åœºåˆéƒ½ç›´æŽ¥ä½¿ç”¨ ApplicationContext è€Œéžåº•å±‚çš„ BeanFactory
+æ— è®ºä½¿ç”¨ä½•ç§æ–¹å¼, é…ç½®æ–‡ä»¶æ—¶ç›¸åŒçš„.
+
+2.ä¾èµ–æ³¨å…¥
+  	->
+å±žæ€§æ³¨å…¥
+		é€šè¿‡setteræ–¹æ³•æ³¨å…¥Beançš„å±žæ€§æˆ–ä¾èµ–å¯¹è±¡
+		å±žæ€§æ³¨å…¥ä½¿ç”¨ <property> å…ƒç´ , ä½¿ç”¨ name å±žæ€§æŒ‡å®š Bean çš„å±žæ€§åç§°ï¼Œ
+				value å±žæ€§æˆ– <value> å­èŠ‚ç‚¹æŒ‡å®šå±žæ€§å€¼ 
+	->
+æž„é€ å™¨æ³¨å…¥
+		è¦æ±‚: åœ¨ Bean ä¸­å¿…é¡»æœ‰å¯¹åº”çš„æž„é€ å™¨.
+			è‹¥ä¸€ä¸ª bean æœ‰å¤šä¸ªæž„é€ å™¨, å¦‚ä½•é€šè¿‡æž„é€ å™¨æ¥ä¸º bean çš„å±žæ€§èµ‹å€¼ -->
+			å¯ä»¥æ ¹æ® index å’Œ value è¿›è¡Œæ›´åŠ ç²¾ç¡®çš„å®šä½. (äº†è§£)
+ 			è‹¥å­—é¢å€¼ä¸­åŒ…å«ç‰¹æ®Šå­—ç¬¦, åˆ™å¯ä»¥ä½¿ç”¨ DCDATA æ¥è¿›è¡Œèµ‹å€¼. (äº†è§£)	->å·¥åŽ‚æ–¹æ³•æ³¨å…¥ï¼ˆå¾ˆå°‘ä½¿ç”¨ï¼Œä¸æŽ¨èï¼‰
+3.å¼•ç”¨å…¶å®ƒ Bean	åœ¨ Bean çš„é…ç½®æ–‡ä»¶ä¸­, å¯ä»¥é€šè¿‡ <ref> å…ƒç´ æˆ– ref  å±žæ€§ä¸º Bean çš„å±žæ€§æˆ–æž„é€ å™¨å‚æ•°æŒ‡å®šå¯¹ Bean çš„å¼•ç”¨. 
+ä¹Ÿå¯ä»¥åœ¨å±žæ€§æˆ–æž„é€ å™¨é‡ŒåŒ…å« Bean çš„å£°æ˜Ž, è¿™æ ·çš„ Bean ç§°ä¸ºå†…éƒ¨ Bean
+ã€‚
+
+4.null å€¼å’Œçº§è”å±žæ€§
 	<bean id="action" class="com.atguigu.spring.ref.Action">
 		<property name="service" ref="service2"></property>
-		<!-- ÉèÖÃ¼¶ÁªÊôÐÔ(ÁË½â) -->
+		<!-- è®¾ç½®çº§è”å±žæ€§(äº†è§£) -->
 		<property name="service.dao.dataSource" value="DBCP2"></property>
 	</bean>
 	
 	<bean id="dao2" class="com.atguigu.spring.ref.Dao">
-		<!-- Îª Dao µÄ dataSource ÊôÐÔ¸³ÖµÎª null, ÈôÄ³Ò»¸ö bean µÄÊôÐÔÖµ²»ÊÇ null, Ê¹ÓÃÊ±ÐèÒªÎªÆäÉèÖÃÎª null(ÁË½â) -->
+		<!-- ä¸º Dao çš„ dataSource å±žæ€§èµ‹å€¼ä¸º null, è‹¥æŸä¸€ä¸ª bean çš„å±žæ€§å€¼ä¸æ˜¯ null, ä½¿ç”¨æ—¶éœ€è¦ä¸ºå…¶è®¾ç½®ä¸º null(äº†è§£) -->
 		<property name="dataSource"><null/></property>
 	</bean>	
 
 
-5.¼¯ºÏÊôÐÔ
-<!-- ×°Åä¼¯ºÏÊôÐÔ -->
+5.é›†åˆå±žæ€§
+<!-- è£…é…é›†åˆå±žæ€§ -->
 	<bean id="user" class="com.atguigu.spring.helloworld.User">
 		<property name="userName" value="Jack"></property>
 		<property name="cars">
-			<!-- Ê¹ÓÃ list ÔªËØÀ´×°Åä¼¯ºÏÊôÐÔ -->
+			<!-- ä½¿ç”¨ list å…ƒç´ æ¥è£…é…é›†åˆå±žæ€§ -->
 			<list>
 				<ref bean="car"/>
 				<ref bean="car2"/>
@@ -91,7 +108,7 @@ ConfigurableApplicationContext À©Õ¹ÓÚ ApplicationContext£¬ÐÂÔö¼ÓÁ½¸öÖ÷Òª·½·¨£º
 
 
 
-<!-- ÉùÃ÷¼¯ºÏÀàÐÍµÄ bean -->
+<!-- å£°æ˜Žé›†åˆç±»åž‹çš„ bean -->
 	<util:list id="cars">
 		<ref bean="car"/>
 		<ref bean="car2"/>
@@ -99,54 +116,57 @@ ConfigurableApplicationContext À©Õ¹ÓÚ ApplicationContext£¬ÐÂÔö¼ÓÁ½¸öÖ÷Òª·½·¨£º
 	
 	<bean id="user2" class="com.atguigu.spring.helloworld.User">
 		<property name="userName" value="Rose"></property>
-		<!-- ÒýÓÃÍâ²¿ÉùÃ÷µÄ list -->
+		<!-- å¼•ç”¨å¤–éƒ¨å£°æ˜Žçš„ list -->
 		<property name="cars" ref="cars"></property>
 	</bean>
 	
 	<bean id="user3" class="com.atguigu.spring.helloworld.User"
 		p:cars-ref="cars" p:userName="Titannic"></bean>
 
-6.×Ô¶¯×°Åä¡£
-	ÔÚ <bean> µÄ autowire ÊôÐÔÀïÖ¸¶¨×Ô¶¯×°ÅäµÄÄ£Ê½
-	--byType(¸ù¾ÝÀàÐÍ×Ô¶¯×°Åä): Èô IOC ÈÝÆ÷ÖÐÓÐ¶à¸öÓëÄ¿±ê Bean ÀàÐÍÒ»ÖÂµÄ Bean. ÔÚÕâÖÖÇé¿öÏÂ, 		Spring ½«ÎÞ·¨ÅÐ¶¨ÄÄ¸ö Bean ×îºÏÊÊ¸ÃÊôÐÔ, ËùÒÔ²»ÄÜÖ´ÐÐ×Ô¶¯×°Åä.
+6.è‡ªåŠ¨è£…é…ã€‚
+	åœ¨ <bean> çš„ autowire å±žæ€§é‡ŒæŒ‡å®šè‡ªåŠ¨è£…é…çš„æ¨¡å¼
+	--byType(æ ¹æ®ç±»åž‹è‡ªåŠ¨è£…é…): è‹¥ IOC å®¹å™¨ä¸­æœ‰å¤šä¸ªä¸Žç›®æ ‡ Bean ç±»åž‹ä¸€è‡´çš„ Bean. åœ¨è¿™ç§æƒ…å†µä¸‹, 		Spring å°†æ— æ³•åˆ¤å®šå“ªä¸ª Bean æœ€åˆé€‚è¯¥å±žæ€§, æ‰€ä»¥ä¸èƒ½æ‰§è¡Œè‡ªåŠ¨è£…é….
 
-	--byName(¸ù¾ÝÃû³Æ×Ô¶¯×°Åä): ±ØÐë½«Ä¿±ê Bean µÄÃû³ÆºÍÊôÐÔÃûÉèÖÃµÄÍêÈ«ÏàÍ¬.
-	--constructor(Í¨¹ý¹¹ÔìÆ÷×Ô¶¯×°Åä): µ± Bean ÖÐ´æÔÚ¶à¸ö¹¹ÔìÆ÷Ê±, ´ËÖÖ×Ô¶¯×°Åä·½Ê½½«»áºÜ¸´ÔÓ. 			²»ÍÆ¼öÊ¹ÓÃ
+	--
+byName(æ ¹æ®åç§°è‡ªåŠ¨è£…é…): å¿…é¡»å°†ç›®æ ‡ Bean çš„åç§°å’Œå±žæ€§åè®¾ç½®çš„å®Œå…¨ç›¸åŒ.
+	--constructor(é€šè¿‡æž„é€ å™¨è‡ªåŠ¨è£…é…): å½“ Bean ä¸­å­˜åœ¨å¤šä¸ªæž„é€ å™¨æ—¶, æ­¤ç§è‡ªåŠ¨è£…é…æ–¹å¼å°†ä¼šå¾ˆå¤æ‚. 			ä¸æŽ¨èä½¿ç”¨
 
 
-7.BeanÖ®¼äµÄ¹ØÏµ
-  	-->¼Ì³Ð
-		×Ó Bean ´Ó¸¸ Bean ÖÐ¼Ì³ÐÅäÖÃ, °üÀ¨ Bean µÄÊôÐÔÅäÖÃ×Ó Bean Ò²¿ÉÒÔ¸²¸Ç´Ó¸¸ Bean ¼Ì³Ð			¹ýÀ´µÄÅäÖÃ
-		¸¸ Bean ¿ÉÒÔ×÷ÎªÅäÖÃÄ£°å, Ò²¿ÉÒÔ×÷Îª Bean ÊµÀý.
+7.Beanä¹‹é—´çš„å…³ç³»
+  	-->ç»§æ‰¿
+		å­ Bean ä»Žçˆ¶ Bean ä¸­ç»§æ‰¿é…ç½®, åŒ…æ‹¬ Bean çš„å±žæ€§é…ç½®
+å­ Bean ä¹Ÿå¯ä»¥è¦†ç›–ä»Žçˆ¶ Bean ç»§æ‰¿			è¿‡æ¥çš„é…ç½®
+		çˆ¶ Bean å¯ä»¥ä½œä¸ºé…ç½®æ¨¡æ¿, ä¹Ÿå¯ä»¥ä½œä¸º Bean å®žä¾‹.
  
-		ÈôÖ»Ïë°Ñ¸¸ Bean ×÷ÎªÄ£°å, ¿ÉÒÔÉèÖÃ<bean> µÄabstract ÊôÐÔÎª true, ÕâÑù Spring ½«²»				»áÊµÀý»¯Õâ¸ö Bean²¢²»ÊÇ <bean> ÔªËØÀïµÄËùÓÐÊôÐÔ¶¼»á±»¼Ì³Ð. ±ÈÈç: autowire, 			abstract µÈ.
-		Ò²¿ÉÒÔºöÂÔ¸¸Bean µÄ class ÊôÐÔ, ÈÃ×Ó Bean Ö¸¶¨×Ô¼ºµÄÀà, ¶ø¹²ÏíÏàÍ¬µÄÊôÐÔÅäÖÃ. 
-			µ«´ËÊ± abstract ±ØÐëÉèÎª true
+		è‹¥åªæƒ³æŠŠçˆ¶ Bean ä½œä¸ºæ¨¡æ¿, å¯ä»¥è®¾ç½®<bean> çš„abstract å±žæ€§ä¸º true, è¿™æ · Spring å°†ä¸				ä¼šå®žä¾‹åŒ–è¿™ä¸ª Beanå¹¶ä¸æ˜¯ <bean> å…ƒç´ é‡Œçš„æ‰€æœ‰å±žæ€§éƒ½ä¼šè¢«ç»§æ‰¿. æ¯”å¦‚: autowire, 			abstract ç­‰.
+		ä¹Ÿå¯ä»¥å¿½ç•¥çˆ¶Bean çš„ class å±žæ€§, è®©å­ Bean æŒ‡å®šè‡ªå·±çš„ç±», è€Œå…±äº«ç›¸åŒçš„å±žæ€§é…ç½®. 
+			ä½†æ­¤æ—¶ abstract å¿…é¡»è®¾ä¸º true
 
-		<!-- bean µÄÅäÖÃÄÜ¹»¼Ì³ÐÂð ? Ê¹ÓÃ parent À´Íê³É¼Ì³Ð -->	
+		<!-- bean çš„é…ç½®èƒ½å¤Ÿç»§æ‰¿å— ? ä½¿ç”¨ parent æ¥å®Œæˆç»§æ‰¿ -->	
 			<bean id="user4" parent="user" p:userName="Bob"></bean>
 	
-			<bean id="user6" parent="user" p:userName="Î¬¶àÀûÑÇ"></bean>
+			<bean id="user6" parent="user" p:userName="ç»´å¤šåˆ©äºš"></bean>
 
-	-->ÒÀÀµ
-		Spring ÔÊÐíÓÃ»§Í¨¹ý depends-on ÊôÐÔÉè¶¨ Bean Ç°ÖÃÒÀÀµµÄBean£¬Ç°ÖÃÒÀÀµµÄ Bean »áÔÚ			±¾ Bean ÊµÀý»¯Ö®Ç°´´½¨ºÃ
+	-->ä¾èµ–
+		Spring å…è®¸ç”¨æˆ·é€šè¿‡ depends-on å±žæ€§è®¾å®š Bean å‰ç½®ä¾èµ–çš„Beanï¼Œå‰ç½®ä¾èµ–çš„ Bean ä¼šåœ¨			æœ¬ Bean å®žä¾‹åŒ–ä¹‹å‰åˆ›å»ºå¥½
 	
-		Èç¹ûÇ°ÖÃÒÀÀµÓÚ¶à¸ö Bean£¬Ôò¿ÉÒÔÍ¨¹ý¶ººÅ£¬¿Õ¸ñ»òµÄ·½Ê½ÅäÖÃan µÄÃû³Æ¡£
+		
+å¦‚æžœå‰ç½®ä¾èµ–äºŽå¤šä¸ª Beanï¼Œåˆ™å¯ä»¥é€šè¿‡é€—å·ï¼Œç©ºæ ¼æˆ–çš„æ–¹å¼é…ç½®an çš„åç§°ã€‚
 		<bean id="user5" parent="user" p:userName="Backham" depends-on="user6"></bean>
 
 
 
 
-8.BeanµÄ×÷ÓÃÓò(singleton, prototype:,request,session)
-	-->ÔÚ Spring ÖÐ, ¿ÉÒÔÔÚ <bean> ÔªËØµÄ scope ÊôÐÔÀïÉèÖÃ Bean µÄ×÷ÓÃÓò.
+8.Beançš„ä½œç”¨åŸŸ(singleton, prototype:,request,session)
+	-->åœ¨ Spring ä¸­, å¯ä»¥åœ¨ <bean> å…ƒç´ çš„ scope å±žæ€§é‡Œè®¾ç½® Bean çš„ä½œç”¨åŸŸ.
 
-	-->Ä¬ÈÏÇé¿öÏÂ, Spring Ö»ÎªÃ¿¸öÔÚ IOC ÈÝÆ÷ÀïÉùÃ÷µÄ Bean ´´½¨Î¨Ò»Ò»¸öÊµÀý, Õû¸ö IOC ÈÝÆ÷·¶Î§ÄÚ¶¼ÄÜ¹²Ïí¸ÃÊµÀý£ºËùÓÐºóÐøµÄ getBean() µ÷ÓÃºÍ Bean ÒýÓÃ¶¼½«·µ»ØÕâ¸öÎ¨Ò»µÄ Bean ÊµÀý.¸Ã×÷ÓÃÓò±»³ÆÎª singleton, ËüÊÇËùÓÐ Bean µÄÄ¬ÈÏ×÷ÓÃÓò. 	
-	<!-- Ä¬ÈÏÇé¿öÏÂ bean ÊÇµ¥ÀýµÄ! -->
-	<!-- µ«ÓÐµÄÊ±ºò, bean ¾Í²»ÄÜÊ¹µ¥ÀýµÄ. ÀýÈç: Struts2 µÄ Action ¾Í²»ÊÇµ¥ÀýµÄ! ¿ÉÒÔÍ¨¹ý scope ÊôÐÔÀ´Ö¸¶¨ bean µÄ×÷ÓÃÓò -->
+	-->é»˜è®¤æƒ…å†µä¸‹, Spring åªä¸ºæ¯ä¸ªåœ¨ IOC å®¹å™¨é‡Œå£°æ˜Žçš„ Bean åˆ›å»ºå”¯ä¸€ä¸€ä¸ªå®žä¾‹, æ•´ä¸ª IOC å®¹å™¨èŒƒå›´å†…éƒ½èƒ½å…±äº«è¯¥å®žä¾‹ï¼šæ‰€æœ‰åŽç»­çš„ getBean() è°ƒç”¨å’Œ Bean å¼•ç”¨éƒ½å°†è¿”å›žè¿™ä¸ªå”¯ä¸€çš„ Bean å®žä¾‹.è¯¥ä½œç”¨åŸŸè¢«ç§°ä¸º singleton, å®ƒæ˜¯æ‰€æœ‰ Bean çš„é»˜è®¤ä½œç”¨åŸŸ. 	
+	<!-- é»˜è®¤æƒ…å†µä¸‹ bean æ˜¯å•ä¾‹çš„! -->
+	<!-- ä½†æœ‰çš„æ—¶å€™, bean å°±ä¸èƒ½ä½¿å•ä¾‹çš„. ä¾‹å¦‚: Struts2 çš„ Action å°±ä¸æ˜¯å•ä¾‹çš„! å¯ä»¥é€šè¿‡ scope å±žæ€§æ¥æŒ‡å®š bean çš„ä½œç”¨åŸŸ -->
 
 	<!--  
-		prototype: Ô­ÐÍµÄ. Ã¿´Îµ÷ÓÃ getBean ·½·¨¶¼»á·µ»ØÒ»¸öÐÂµÄ bean. ÇÒÔÚµÚÒ»´Îµ÷ÓÃ getBean ·½·¨Ê±²Å´´½¨ÊµÀý
-		singleton: µ¥ÀýµÄ. Ã¿´Îµ÷ÓÃ getBean ·½·¨¶¼»á·µ»ØÍ¬Ò»¸ö bean. ÇÒÔÚ IOC ÈÝÆ÷³õÊ¼»¯Ê±¼´´´½¨ bean µÄÊµÀý. Ä¬ÈÏÖµ 
+		prototype: åŽŸåž‹çš„. æ¯æ¬¡è°ƒç”¨ getBean æ–¹æ³•éƒ½ä¼šè¿”å›žä¸€ä¸ªæ–°çš„ bean. ä¸”åœ¨ç¬¬ä¸€æ¬¡è°ƒç”¨ getBean æ–¹æ³•æ—¶æ‰åˆ›å»ºå®žä¾‹
+		singleton: å•ä¾‹çš„. æ¯æ¬¡è°ƒç”¨ getBean æ–¹æ³•éƒ½ä¼šè¿”å›žåŒä¸€ä¸ª bean. ä¸”åœ¨ IOC å®¹å™¨åˆå§‹åŒ–æ—¶å³åˆ›å»º bean çš„å®žä¾‹. é»˜è®¤å€¼ 
 	-->
 	<bean id="dao2" class="com.atguigu.spring.ref.Dao" scope="prototype"></bean>
 	
@@ -156,75 +176,84 @@ ConfigurableApplicationContext À©Õ¹ÓÚ ApplicationContext£¬ÐÂÔö¼ÓÁ½¸öÖ÷Òª·½·¨£º
 	
 
 
-9.SpEL£º×ÖÃæÁ¿
+9.SpELï¼šå­—é¢é‡
 
-	×ÖÃæÁ¿µÄ±íÊ¾£º
-		ÕûÊý£º<property name="count" value="#{5}"/>		Ð¡Êý£º<property name="frequency" value="#{89.7}"/>		¿ÆÑ§¼ÆÊý·¨£º<property name="capacity" value="#{1e4}"/>		String¿ÉÒÔÊ¹ÓÃµ¥ÒýºÅ»òÕßË«ÒýºÅ×÷Îª×Ö·û´®µÄ¶¨½ç·ûºÅ£º<property name=¡°name¡± value="#{'Chuck'}"/> »ò <property name='name' value='#{"Chuck"}'/>
-		Boolean£º<property name="enabled" value="#{false}"/>
+	å­—é¢é‡çš„è¡¨ç¤ºï¼š
+		
+æ•´æ•°ï¼š<property name="count" value="#{5}"/>		å°æ•°ï¼š<property name="frequency" value="#{89.7}"/>		ç§‘å­¦è®¡æ•°æ³•ï¼š<property name="capacity" value="#{1e4}"/>		Stringå¯ä»¥ä½¿ç”¨å•å¼•å·æˆ–è€…åŒå¼•å·ä½œä¸ºå­—ç¬¦ä¸²çš„å®šç•Œç¬¦å·ï¼š<property name=â€œnameâ€ value="#{'Chuck'}"/> æˆ– <property name='name' value='#{"Chuck"}'/>
+		
+Booleanï¼š<property name="enabled" value="#{false}"/>
 
 
-<!-- ²âÊÔ SpEL: ¿ÉÒÔÎªÊôÐÔ½øÐÐ¶¯Ì¬µÄ¸³Öµ(ÁË½â) -->
+<!-- æµ‹è¯• SpEL: å¯ä»¥ä¸ºå±žæ€§è¿›è¡ŒåŠ¨æ€çš„èµ‹å€¼(äº†è§£) -->
 	<bean id="girl" class="com.atguigu.spring.helloworld.User">
-		<property name="userName" value="ÖÜÑ¸"></property>
+		<property name="userName" value="å‘¨è¿…"></property>
 	</bean>
 	
 	<bean id="boy" class="com.atguigu.spring.helloworld.User" init-method="init" destroy-method="destroy">
-		<property name="userName" value="¸ßÊ¤Ô¶"></property>
+		<property name="userName" value="é«˜èƒœè¿œ"></property>
 		<property name="wifeName" value="#{girl.userName}"></property>
 	</bean>
 	
-	<!-- ÅäÖÃ bean ºóÖÃ´¦ÀíÆ÷: ²»ÐèÒªÅäÖÃ id ÊôÐÔ, IOC ÈÝÆ÷»áÊ¶±ðµ½ËûÊÇÒ»¸ö bean ºóÖÃ´¦ÀíÆ÷, ²¢µ÷ÓÃÆä·½·¨ -->
+	<!-- é…ç½® bean åŽç½®å¤„ç†å™¨: ä¸éœ€è¦é…ç½® id å±žæ€§, IOC å®¹å™¨ä¼šè¯†åˆ«åˆ°ä»–æ˜¯ä¸€ä¸ª bean åŽç½®å¤„ç†å™¨, å¹¶è°ƒç”¨å…¶æ–¹æ³• -->
 	<bean class="com.atguigu.spring.ref.MyBeanPostProcessor"></bean>
 
 	
 
-10¡£IOC ÈÝÆ÷ÖÐ Bean µÄÉúÃüÖÜÆÚ·½·¨¡£
-	Spring IOC ÈÝÆ÷¶Ô Bean µÄÉúÃüÖÜÆÚ½øÐÐ¹ÜÀíµÄ¹ý³Ì:		
-		--Í¨¹ý¹¹ÔìÆ÷»ò¹¤³§·½·¨´´½¨ Bean ÊµÀý	
-		--Îª Bean µÄÊôÐÔÉèÖÃÖµºÍ¶ÔÆäËû Bean µÄÒýÓÃ	
-		--µ÷ÓÃ Bean µÄ³õÊ¼»¯·½·¨		
-		--Bean ¿ÉÒÔÊ¹ÓÃÁË
-		--µ±ÈÝÆ÷¹Ø±ÕÊ±, µ÷ÓÃ Bean µÄÏú»Ù·½·¨
-	ÔÚ Bean µÄÉùÃ÷ÀïÉèÖÃ init-method ºÍ destroy-method ÊôÐÔ, Îª Bean Ö¸¶¨³õÊ¼»¯ºÍÏú»Ù·½·¨.
+10ã€‚IOC å®¹å™¨ä¸­ Bean çš„ç”Ÿå‘½å‘¨æœŸæ–¹æ³•ã€‚
+	Spring IOC å®¹å™¨å¯¹ Bean çš„ç”Ÿå‘½å‘¨æœŸè¿›è¡Œç®¡ç†çš„è¿‡ç¨‹:		
+		--é€šè¿‡æž„é€ å™¨æˆ–å·¥åŽ‚æ–¹æ³•åˆ›å»º Bean å®žä¾‹	
+		--ä¸º Bean çš„å±žæ€§è®¾ç½®å€¼å’Œå¯¹å…¶ä»– Bean çš„å¼•ç”¨	
+		--è°ƒç”¨ Bean çš„åˆå§‹åŒ–æ–¹æ³•		
+		--Bean å¯ä»¥ä½¿ç”¨äº†
+		--
+å½“å®¹å™¨å…³é—­æ—¶, è°ƒç”¨ Bean çš„é”€æ¯æ–¹æ³•
+	
+åœ¨ Bean çš„å£°æ˜Žé‡Œè®¾ç½® init-method å’Œ destroy-method å±žæ€§, ä¸º Bean æŒ‡å®šåˆå§‹åŒ–å’Œé”€æ¯æ–¹æ³•.
 
 
 
 
-		Bean ºóÖÃ´¦ÀíÆ÷ÔÊÐíÔÚµ÷ÓÃ³õÊ¼»¯·½·¨Ç°ºó¶Ô Bean ½øÐÐ¶îÍâµÄ´¦Àí.
-		Bean ºóÖÃ´¦ÀíÆ÷¶Ô IOC ÈÝÆ÷ÀïµÄËùÓÐ Bean ÊµÀýÖðÒ»´¦Àí, ¶ø·Çµ¥Ò»ÊµÀý. ÆäµäÐÍÓ¦ÓÃÊÇ: 			¼ì²é Bean ÊôÐÔµÄÕýÈ·ÐÔ»ò¸ù¾ÝÌØ¶¨µÄ±ê×¼¸ü¸Ä Bean µÄÊôÐÔ.
+		Bean åŽç½®å¤„ç†å™¨å…è®¸åœ¨è°ƒç”¨åˆå§‹åŒ–æ–¹æ³•å‰åŽå¯¹ Bean è¿›è¡Œé¢å¤–çš„å¤„ç†.
+		
+Bean åŽç½®å¤„ç†å™¨å¯¹ IOC å®¹å™¨é‡Œçš„æ‰€æœ‰ Bean å®žä¾‹é€ä¸€å¤„ç†, è€Œéžå•ä¸€å®žä¾‹. å…¶å…¸åž‹åº”ç”¨æ˜¯: 			æ£€æŸ¥ Bean å±žæ€§çš„æ­£ç¡®æ€§æˆ–æ ¹æ®ç‰¹å®šçš„æ ‡å‡†æ›´æ”¹ Bean çš„å±žæ€§.
 
-		¶ÔBean ºóÖÃ´¦ÀíÆ÷¶øÑÔ, ÐèÒªÊµÏÖBeanPostProcessor½Ó¿Ú. ÔÚ³õÊ¼»¯·½·¨±»µ÷ÓÃÇ°ºó, Spring ½«°ÑÃ¿¸ö Bean µÄÊµÀý·Ö±ð´«µÝ¸øÉÏÊö½Ó¿ÚµÄÒÔÏÂÁ½¸ö·½·¨:postProcessBeforeInitialization £¬postProcessAfterInitialization·½·¨´´½¨ Bean ºóÖÃ´¦ÀíÆ÷
+		å¯¹Bean åŽç½®å¤„ç†å™¨è€Œè¨€, éœ€è¦å®žçŽ°BeanPostProcessoræŽ¥å£. åœ¨åˆå§‹åŒ–æ–¹æ³•è¢«è°ƒç”¨å‰åŽ, Spring å°†æŠŠæ¯ä¸ª Bean çš„å®žä¾‹åˆ†åˆ«ä¼ é€’ç»™ä¸Šè¿°æŽ¥å£çš„ä»¥ä¸‹ä¸¤ä¸ªæ–¹æ³•:postProcessBeforeInitialization ï¼ŒpostProcessAfterInitializationæ–¹æ³•åˆ›å»º Bean åŽç½®å¤„ç†å™¨
 
-Ìí¼Ó Bean ºóÖÃ´¦ÀíÆ÷ºó Bean µÄÉúÃüÖÜÆÚ¡£
-		--Í¨¹ý¹¹ÔìÆ÷»ò¹¤³§·½·¨´´½¨ Bean ÊµÀý
-		--Îª Bean µÄÊôÐÔÉèÖÃÖµºÍ¶ÔÆäËû Bean µÄÒýÓÃ
-		--½« Bean ÊµÀý´«µÝ¸ø Bean ºóÖÃ´¦ÀíÆ÷µÄ postProcessBeforeInitialization ·½·¨		--µ÷ÓÃ Bean µÄ³õÊ¼»¯·½·¨
-		--½« Bean ÊµÀý´«µÝ¸ø Bean ºóÖÃ´¦ÀíÆ÷µÄ postProcessAfterInitialization·½·¨
-		--Bean ¿ÉÒÔÊ¹ÓÃÁË		--µ±ÈÝÆ÷¹Ø±ÕÊ±, µ÷ÓÃ Bean µÄÏú»Ù·½·¨
+æ·»åŠ  Bean åŽç½®å¤„ç†å™¨åŽ Bean çš„ç”Ÿå‘½å‘¨æœŸ
+ã€‚
+		--é€šè¿‡æž„é€ å™¨æˆ–å·¥åŽ‚æ–¹æ³•åˆ›å»º Bean å®žä¾‹
+		--
+ä¸º Bean çš„å±žæ€§è®¾ç½®å€¼å’Œå¯¹å…¶ä»– Bean çš„å¼•ç”¨
+		--
+å°† Bean å®žä¾‹ä¼ é€’ç»™ Bean åŽç½®å¤„ç†å™¨çš„ postProcessBeforeInitialization æ–¹æ³•		--è°ƒç”¨ Bean çš„åˆå§‹åŒ–æ–¹æ³•
+		--å°† Bean å®žä¾‹ä¼ é€’ç»™ Bean åŽç½®å¤„ç†å™¨çš„ postProcessAfterInitializationæ–¹æ³•
+		--
+Bean å¯ä»¥ä½¿ç”¨äº†		--å½“å®¹å™¨å…³é—­æ—¶, è°ƒç”¨ Bean çš„é”€æ¯æ–¹æ³•
 
 
-<!-- Í¨¹ý¹¤³§·½·¨µÄ·½Ê½À´ÅäÖÃ bean -->
-	<!-- 1. Í¨¹ý¾²Ì¬¹¤³§·½·¨: Ò»¸öÀàÖÐÓÐÒ»¸ö¾²Ì¬·½·¨, ¿ÉÒÔ·µ»ØÒ»¸öÀàµÄÊµÀý(ÁË½â) -->
-	<!-- ÔÚ class ÖÐÖ¸¶¨¾²Ì¬¹¤³§·½·¨µÄÈ«ÀàÃû, ÔÚ factory-method ÖÐÖ¸¶¨¾²Ì¬¹¤³§·½·¨µÄ·½·¨Ãû -->
+<!-- é€šè¿‡å·¥åŽ‚æ–¹æ³•çš„æ–¹å¼æ¥é…ç½® bean -->
+	<!-- 1. é€šè¿‡é™æ€å·¥åŽ‚æ–¹æ³•: ä¸€ä¸ªç±»ä¸­æœ‰ä¸€ä¸ªé™æ€æ–¹æ³•, å¯ä»¥è¿”å›žä¸€ä¸ªç±»çš„å®žä¾‹(äº†è§£) -->
+	<!-- åœ¨ class ä¸­æŒ‡å®šé™æ€å·¥åŽ‚æ–¹æ³•çš„å…¨ç±»å, åœ¨ factory-method ä¸­æŒ‡å®šé™æ€å·¥åŽ‚æ–¹æ³•çš„æ–¹æ³•å -->
 	<bean id="dateFormat" class="java.text.DateFormat" factory-method="getDateInstance">
-		<!-- ¿ÉÒÔÍ¨¹ý constructor-arg ×Ó½ÚµãÎª¾²Ì¬¹¤³§·½·¨Ö¸¶¨²ÎÊý -->
+		<!-- å¯ä»¥é€šè¿‡ constructor-arg å­èŠ‚ç‚¹ä¸ºé™æ€å·¥åŽ‚æ–¹æ³•æŒ‡å®šå‚æ•° -->
 		<constructor-arg value="2"></constructor-arg>
 	</bean>
 	
-	<!-- 2. ÊµÀý¹¤³§·½·¨: ÏÈÐèÒª´´½¨¹¤³§¶ÔÏó, ÔÙµ÷ÓÃ¹¤³§µÄ·Ç¾²Ì¬·½·¨·µ»ØÊµÀý(ÁË½â) -->
-	<!-- ¢Ù. ´´½¨¹¤³§¶ÔÓ¦µÄ bean -->
+	<!-- 2. å®žä¾‹å·¥åŽ‚æ–¹æ³•: å…ˆéœ€è¦åˆ›å»ºå·¥åŽ‚å¯¹è±¡, å†è°ƒç”¨å·¥åŽ‚çš„éžé™æ€æ–¹æ³•è¿”å›žå®žä¾‹(äº†è§£) -->
+	<!-- â‘ . åˆ›å»ºå·¥åŽ‚å¯¹åº”çš„ bean -->
 	<bean id="simpleDateFormat" class="java.text.SimpleDateFormat">
 		<constructor-arg value="yyyy-MM-dd hh:mm:ss"></constructor-arg>
 	</bean>
 	
-	<!-- ¢Ú. ÓÐÊµÀý¹¤³§·½·¨À´´´½¨ bean ÊµÀý -->
-	<!-- factory-bean Ö¸Ïò¹¤³§ bean, factory-method Ö¸¶¨¹¤³§·½·¨(ÁË½â) -->
+	<!-- â‘¡. æœ‰å®žä¾‹å·¥åŽ‚æ–¹æ³•æ¥åˆ›å»º bean å®žä¾‹ -->
+	<!-- factory-bean æŒ‡å‘å·¥åŽ‚ bean, factory-method æŒ‡å®šå·¥åŽ‚æ–¹æ³•(äº†è§£) -->
 	<bean id="datetime" factory-bean="simpleDateFormat" factory-method="parse">
-		<!-- Í¨¹ý constructor-arg Ö´ÐÐµ÷ÓÃ¹¤³§·½·¨ÐèÒª´«ÈëµÄ²ÎÊý -->
+		<!-- é€šè¿‡ constructor-arg æ‰§è¡Œè°ƒç”¨å·¥åŽ‚æ–¹æ³•éœ€è¦ä¼ å…¥çš„å‚æ•° -->
 		<constructor-arg value="1990-12-12 12:12:12"></constructor-arg>
 	</bean>
 	
-	<!-- ÅäÖÃÍ¨¹ý FactroyBean µÄ·½Ê½À´´´½¨ bean µÄÊµÀý(ÁË½â) -->
+	<!-- é…ç½®é€šè¿‡ FactroyBean çš„æ–¹å¼æ¥åˆ›å»º bean çš„å®žä¾‹(äº†è§£) -->
 	<bean id="user" class="com.atguigu.spring.ref.UserBean"></bean>
 	
 

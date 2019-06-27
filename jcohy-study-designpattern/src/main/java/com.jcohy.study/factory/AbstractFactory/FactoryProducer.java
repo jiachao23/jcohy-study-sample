@@ -1,7 +1,7 @@
 package com.jcohy.study.factory.AbstractFactory;
 
 /**
- * ´´½¨Ò»¸ö¹¤³§´´ÔìÆ÷/Éú³ÉÆ÷Àà£¬Í¨¹ý´«µÝÐÎ×´»òÑÕÉ«ÐÅÏ¢À´»ñÈ¡¹¤³§¡£
+ * åˆ›å»ºä¸€ä¸ªå·¥åŽ‚åˆ›é€ å™¨/ç”Ÿæˆå™¨ç±»ï¼Œé€šè¿‡ä¼ é€’å½¢çŠ¶æˆ–é¢œè‰²ä¿¡æ¯æ¥èŽ·å–å·¥åŽ‚ã€‚
  * @author jiachao
  *
  */

@@ -1,19 +1,19 @@
-flumeÊä³öÊı¾İÄ¿Â¼
+flumeè¾“å‡ºæ•°æ®ç›®å½•
 /data/flumedata/2016-03-18
 
-Ô¤´¦Àí³ÌĞòµÄÊäÈëÊı¾İÄ¿Â¼£º   
+é¢„å¤„ç†ç¨‹åºçš„è¾“å…¥æ•°æ®ç›®å½•ï¼š   
 /data/weblog/preprocess/input
 
-Ô¤´¦Àí³ÌĞòrawÊä³öÊı¾İÄ¿Â¼£º
+é¢„å¤„ç†ç¨‹åºrawè¾“å‡ºæ•°æ®ç›®å½•ï¼š
 /data/weblog/preprocess/output
 
-Ô¤´¦Àí³ÌĞòvalidÊä³öÊı¾İÄ¿Â¼£º
+é¢„å¤„ç†ç¨‹åºvalidè¾“å‡ºæ•°æ®ç›®å½•ï¼š
 /data/weblog/preprocess/valid_output
 
-Ô¤´¦Àíµã»÷Á÷Ä£ĞÍpageviewsÊı¾İÊä³öÄ¿Â¼
+é¢„å¤„ç†ç‚¹å‡»æµæ¨¡å‹pageviewsæ•°æ®è¾“å‡ºç›®å½•
 /data/weblog/preprocess/click_pv_out
 
-Ô¤´¦Àíµã»÷Á÷Ä£ĞÍvisitÊı¾İÊä³öÄ¿Â¼
+é¢„å¤„ç†ç‚¹å‡»æµæ¨¡å‹visitæ•°æ®è¾“å‡ºç›®å½•
 /data/weblog/preprocess/click_visit_out
 
 

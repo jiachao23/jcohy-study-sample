@@ -435,30 +435,7 @@ public OAuth2AccessToken createAccessToken(OAuth2Authentication authentication) 
         <h2 id="qa">8.Q&amp;A</h2>
         <blockquote>
             <ul>
-                <li>
-                    <p>当两个对象的hashcode相同会发生什么？</p>
-                    <div class="blockquote-inline">
-                        因为hashcode相同，所以它们的bucket位置相同，‘碰撞’会发生。因为HashMap使用链表存储对象，这个Entry(包含有键值对的Map.Entry对象)会存储在链表中。
-                    </div>
-                </li>
-                <li>
-                    <p>如果两个键的hashcode相同，你如何获取值对象？</p>
-                    <div class="blockquote-inline">
-                        当我们调用get()方法，HashMap会使用键对象的hashcode找到bucket位置，找到bucket位置之后，会调用keys.equals()方法去找到链表中正确的节点，最终找到要找的值对象。
-                    </div>
-                </li>
-                <li>
-                    <p>为什么String, Interger这样的wrapper类适合作为键？</p>
-                    <div class="blockquote-inline">
-                        可能产生条件竞争(race condition)。因为如果两个线程都发现HashMap需要重新调整大小了，它们会同时试着调整大小。在调整大小的过程中，存储在链表中的元素的次序会反过来，因为移动到新的bucket位置的时候，HashMap并不会将元素放在链表的尾部，而是放在头部，这是为了避免尾部遍历(tail traversing)。如果条件竞争发生了，那么就死循环了。
-                    </div>
-                </li>
-                <li>
-                    <p>如果两个键的hashcode相同，你如何获取值对象？</p>
-                    <div class="blockquote-inline">
-                        因为String是不可变的，也是final的，而且已经重写了equals()和hashCode()方法了。其他的wrapper类也有这个特点。不可变性是必要的，因为为了要计算hashCode()，就要防止键值改变，如果键值在放入时和获取时返回不同的hashcode的话，那么就不能从HashMap中找到你想要的对象。不可变性还有其他的优点如线程安全。
-                    </div>
-                </li>
+
             </ul>
         </blockquote>
     </div>

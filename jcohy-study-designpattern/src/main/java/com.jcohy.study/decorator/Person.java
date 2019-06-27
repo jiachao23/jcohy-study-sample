@@ -8,10 +8,10 @@ package com.jcohy.study.decorator;
  * Description:
  **/
 /**
- * װ��ģʽ����̬�ĸ�һ����������һЩ�����ְ�𣬾����ӹ�����˵��
- * װ��ģʽ��������������
+ * 装饰模式：动态的给一个对象添加一些额外的职责，就增加功能来说，
+ * 装饰模式相比生成子类更灵活。
  * @author jiachao
- *����һ������ӿڣ����Ը���Щ����̬����ְ��
+ *定义一个对象接口，可以给这些对象动态添加职责
  */
 public interface Person {
 

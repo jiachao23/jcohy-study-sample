@@ -13,7 +13,7 @@ import java.io.PrintWriter;
  **/
 public class HtmlBuilder extends Builder{
     /**
-     * ½«ÎÄ±¾½¨Á¢³ÉHTML¸ñÊ½
+     * å°†æ–‡æœ¬å»ºç«‹æˆHTMLæ ¼å¼
      */
     private String fileName;
     private PrintWriter printWriter;
@@ -48,6 +48,6 @@ public class HtmlBuilder extends Builder{
     public Object getResult() {
         printWriter.write("</body></html>");
         printWriter.close();
-        return fileName;//·µ»ØÎÄ¼şÃû
+        return fileName;//è¿”å›æ–‡ä»¶å
     }
 }

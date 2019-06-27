@@ -5,33 +5,33 @@ package com.jcohy.study.factory.AbstractFactory;
  */
 public class AbstractFactoryDemo {
 	public static void main(String[] args) {
-		//»ñÈ¡ĞÎ×´¹¤³§
+		//è·å–å½¢çŠ¶å·¥å‚
 		AbstractFactory shapeFactory = FactoryProducer.getFactory("SHAPE");
-		//»ñÈ¡ĞÎ×´Îª Circle µÄ¶ÔÏó
+		//è·å–å½¢çŠ¶ä¸º Circle çš„å¯¹è±¡
 		Shape shape1 =  shapeFactory.getShape("CIRCLE");
-		//µ÷ÓÃ Circle µÄ draw ·½·¨
+		//è°ƒç”¨ Circle çš„ draw æ–¹æ³•
 		shape1.draw();
-		//»ñÈ¡ĞÎ×´Îª Rectangle µÄ¶ÔÏó
+		//è·å–å½¢çŠ¶ä¸º Rectangle çš„å¯¹è±¡
 		Shape shape2 = shapeFactory.getShape("RECTANGLE");
-		//µ÷ÓÃ Rectangle µÄ draw ·½·¨
+		//è°ƒç”¨ Rectangle çš„ draw æ–¹æ³•
 		shape2.draw();
-		//»ñÈ¡ĞÎ×´Îª Square µÄ¶ÔÏó
+		//è·å–å½¢çŠ¶ä¸º Square çš„å¯¹è±¡
 		Shape shape3 = shapeFactory.getShape("SQUARE");
-		//µ÷ÓÃ Square µÄ draw ·½·¨
+		//è°ƒç”¨ Square çš„ draw æ–¹æ³•
 		shape3.draw();
-		//»ñÈ¡ÑÕÉ«¹¤³§
+		//è·å–é¢œè‰²å·¥å‚
 		AbstractFactory colorFactory = FactoryProducer.getFactory("COLOR");
-		//»ñÈ¡ÑÕÉ«Îª Red µÄ¶ÔÏó
+		//è·å–é¢œè‰²ä¸º Red çš„å¯¹è±¡
 		Color color1 = colorFactory.getColor("RED");
-		//µ÷ÓÃ Red µÄ fill ·½·¨
+		//è°ƒç”¨ Red çš„ fill æ–¹æ³•
 		color1.fill();
-		//»ñÈ¡ÑÕÉ«Îª Green µÄ¶ÔÏó
+		//è·å–é¢œè‰²ä¸º Green çš„å¯¹è±¡
 		Color color2 = colorFactory.getColor("Green");
-		//µ÷ÓÃ Green µÄ fill ·½·¨
+		//è°ƒç”¨ Green çš„ fill æ–¹æ³•
 		color2.fill();
-		//»ñÈ¡ÑÕÉ«Îª Blue µÄ¶ÔÏó
+		//è·å–é¢œè‰²ä¸º Blue çš„å¯¹è±¡
 		Color color3 = colorFactory.getColor("BLUE");
-		//µ÷ÓÃ Blue µÄ fill ·½·¨
+		//è°ƒç”¨ Blue çš„ fill æ–¹æ³•
 		color3.fill();
 	}
 }

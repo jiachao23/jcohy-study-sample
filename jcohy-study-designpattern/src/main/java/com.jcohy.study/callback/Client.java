@@ -1,29 +1,29 @@
 package com.jcohy.study.callback;
 
 /**
- * ¿Í»§¶Ë
+ * å®¢æˆ·ç«¯
  * @author jiachao
  *
  */
 public class Client implements CallBack {
 
 	/** 
-     * ClientÀà °üº¬ ServiceÀà µÄÒıÓÃ (Ìõ¼ş¶ş)  ÒòÎªClientÒªµ÷ÓÃServiceÖĞµÄ·½·¨ 
+     * Clientç±» åŒ…å« Serviceç±» çš„å¼•ç”¨ (æ¡ä»¶äºŒ)  å› ä¸ºClientè¦è°ƒç”¨Serviceä¸­çš„æ–¹æ³• 
      */  
-    Service service = new Service();//¿ÉÖ±½ÓÊµÀı»¯»òÔÚ¹¹Ôìº¯Êı»òÄ³¸ö·½·¨ÖĞ½øĞĞÊµÀı»¯  
+    Service service = new Service();//å¯ç›´æ¥å®ä¾‹åŒ–æˆ–åœ¨æ„é€ å‡½æ•°æˆ–æŸä¸ªæ–¹æ³•ä¸­è¿›è¡Œå®ä¾‹åŒ–  
     /** 
-     * ¸Ã·½·¨ÓÃÓÚÇëÇóServiceµ÷ÓÃServiceÖĞµÄ·½·¨ 
+     * è¯¥æ–¹æ³•ç”¨äºè¯·æ±‚Serviceè°ƒç”¨Serviceä¸­çš„æ–¹æ³• 
      */  
     public void requrst(){  
-        System.out.println("ÇëÇó·şÎñÆ÷µ÷ÓÃ·şÎñÆ÷µÄ·½·¨"); 
-        service.A(this);//´«Èëµ±Ç°¶ÔÏóÒ²¾ÍÊÇCallBack¶ÔÏó£¬ÒòÎªClientÊµÏÖÀàCallBack½Ó¿Ú  
+        System.out.println("è¯·æ±‚æœåŠ¡å™¨è°ƒç”¨æœåŠ¡å™¨çš„æ–¹æ³•"); 
+        service.A(this);//ä¼ å…¥å½“å‰å¯¹è±¡ä¹Ÿå°±æ˜¯CallBackå¯¹è±¡ï¼Œå› ä¸ºClientå®ç°ç±»CallBackæ¥å£  
     }  
 	@Override
 	public void B(String result) {
-		 System.out.println("·şÎñÆ÷»Øµ÷ÎÒµÄ·½·¨·µ»ØµÄ½á¹ûÊÇ£º"+result);  
+		 System.out.println("æœåŠ¡å™¨å›è°ƒæˆ‘çš„æ–¹æ³•è¿”å›çš„ç»“æœæ˜¯ï¼š"+result);  
 	}
 	/* 
-	 * µ±ÄãÖªµÀ´ğ°¸ÁËÔÙ¸æËßÎÒ¡£
+	 * å½“ä½ çŸ¥é“ç­”æ¡ˆäº†å†å‘Šè¯‰æˆ‘ã€‚
 	 */
 	@Override
 	public void solve(String result) {

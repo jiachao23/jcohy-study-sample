@@ -4,7 +4,7 @@ public class StrategyImplB extends Strategy{
 
 	@Override
 	public void method() {
-		System.out.println("ÕâÊÇBµÄËã·¨ÊµÏÖ");
+		System.out.println("è¿™æ˜¯Bçš„ç®—æ³•å®ç°");
 	}
 
 }

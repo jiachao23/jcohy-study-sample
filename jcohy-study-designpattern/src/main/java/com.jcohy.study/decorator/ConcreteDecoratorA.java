@@ -12,11 +12,11 @@ public class ConcreteDecoratorA extends Decorator {
 	public void eat() {
         super.eat();
         reEat();
-        System.out.println("ConcreteDecoratorAÀà");
+        System.out.println("ConcreteDecoratorAç±»");
     }
 
     public void reEat() {
-        System.out.println("ÔÙ³ÔÒ»¶Ù·¹");
+        System.out.println("å†åƒä¸€é¡¿é¥­");
     }
 
 }

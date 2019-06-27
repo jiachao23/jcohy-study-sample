@@ -25,7 +25,7 @@
 
 ## 代理模式的角色
 
->  ![结构图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/src/main/resources/static/images/proxy.png)
+>  ![结构图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/images/proxy.png)
 
 >  *  Subject:定义了RealSubject和Proxy的公共接口，这样就可以在任何使用RealSubject的地方可以使用Proxy
 >  *  RealSubject:定义Proxy代表的真实实体。

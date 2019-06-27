@@ -4,12 +4,12 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 /**
- * ¶¯Ì¬ Proxy ÊÇÕâÑùµÄÒ»ÖÖÀà:
- *ËüÊÇÔÚÔËÐÐÉú³ÉµÄÀà£¬ÔÚÉú³ÉÊ±Äã±ØÐëÌá¹©Ò»×é Interface ¸øËü£¬È»ºó¸Ã class ¾ÍÐû³Æ
- *ËüÊµÏÖÁËÕâÐ© interface¡£Äã¿ÉÒÔ°Ñ¸Ã class µÄÊµÀýµ±×÷ÕâÐ© interface ÖÐµÄÈÎºÎÒ»¸ö
- *À´ÓÃ¡£µ±È»£¬Õâ¸ö Dynamic Proxy ÆäÊµ¾ÍÊÇÒ»¸ö Proxy£¬Ëü²»»áÌæÄã×÷ÊµÖÊÐÔµÄ¹¤×÷£¬
- *ÔÚÉú³ÉËüµÄÊµÀýÊ±Äã±ØÐëÌá¹©Ò»¸ö handler£¬ÓÉËü½Ó¹ÜÊµ¼ÊµÄ¹¤×÷¡£
- *ÔÚÊ¹ÓÃ¶¯Ì¬´úÀíÀàÊ±£¬ÎÒÃÇ±ØÐëÊµÏÖ InvocationHandler ½Ó¿Ú
+ * åŠ¨æ€ Proxy æ˜¯è¿™æ ·çš„ä¸€ç§ç±»:
+ *å®ƒæ˜¯åœ¨è¿è¡Œç”Ÿæˆçš„ç±»ï¼Œåœ¨ç”Ÿæˆæ—¶ä½ å¿…é¡»æä¾›ä¸€ç»„ Interface ç»™å®ƒï¼Œç„¶åŽè¯¥ class å°±å®£ç§°
+ *å®ƒå®žçŽ°äº†è¿™äº› interfaceã€‚ä½ å¯ä»¥æŠŠè¯¥ class çš„å®žä¾‹å½“ä½œè¿™äº› interface ä¸­çš„ä»»ä½•ä¸€ä¸ª
+ *æ¥ç”¨ã€‚å½“ç„¶ï¼Œè¿™ä¸ª Dynamic Proxy å…¶å®žå°±æ˜¯ä¸€ä¸ª Proxyï¼Œå®ƒä¸ä¼šæ›¿ä½ ä½œå®žè´¨æ€§çš„å·¥ä½œï¼Œ
+ *åœ¨ç”Ÿæˆå®ƒçš„å®žä¾‹æ—¶ä½ å¿…é¡»æä¾›ä¸€ä¸ª handlerï¼Œç”±å®ƒæŽ¥ç®¡å®žé™…çš„å·¥ä½œã€‚
+ *åœ¨ä½¿ç”¨åŠ¨æ€ä»£ç†ç±»æ—¶ï¼Œæˆ‘ä»¬å¿…é¡»å®žçŽ° InvocationHandler æŽ¥å£
  * @author jiachao
  *
  */
@@ -23,20 +23,20 @@ public class Poxysubject implements InvocationHandler {
 		this.sub = sub;
 	}
 	/**
-	 * proxy:    Ö¸´úÎÒÃÇËù´úÀíµÄÄÇ¸öÕæÊµ¶ÔÏó
-	 * method:¡¡¡¡Ö¸´úµÄÊÇÎÒÃÇËùÒªµ÷ÓÃÕæÊµ¶ÔÏóµÄÄ³¸ö·½·¨µÄMethod¶ÔÏó
-	 * args:¡¡¡¡     Ö¸´úµÄÊÇµ÷ÓÃÕæÊµ¶ÔÏóÄ³¸ö·½·¨Ê±½ÓÊÜµÄ²ÎÊý
+	 * proxy:    æŒ‡ä»£æˆ‘ä»¬æ‰€ä»£ç†çš„é‚£ä¸ªçœŸå®žå¯¹è±¡
+	 * method:ã€€ã€€æŒ‡ä»£çš„æ˜¯æˆ‘ä»¬æ‰€è¦è°ƒç”¨çœŸå®žå¯¹è±¡çš„æŸä¸ªæ–¹æ³•çš„Methodå¯¹è±¡
+	 * args:ã€€ã€€     æŒ‡ä»£çš„æ˜¯è°ƒç”¨çœŸå®žå¯¹è±¡æŸä¸ªæ–¹æ³•æ—¶æŽ¥å—çš„å‚æ•°
 	 */
 
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable { 
-		//¡¡¡¡ÔÚ´úÀíÕæÊµ¶ÔÏóÇ°ÎÒÃÇ¿ÉÒÔÌí¼ÓÒ»Ð©×Ô¼ºµÄ²Ù×÷
+		//ã€€ã€€åœ¨ä»£ç†çœŸå®žå¯¹è±¡å‰æˆ‘ä»¬å¯ä»¥æ·»åŠ ä¸€äº›è‡ªå·±çš„æ“ä½œ
 		System.out.println("before rent house");
 		System.out.println("method:"+method+"  args:"+args );
 //		System.out.println("Method:" + method);
-		//	    µ±´úÀí¶ÔÏóµ÷ÓÃÕæÊµ¶ÔÏóµÄ·½·¨Ê±£¬Æä»á×Ô¶¯µÄÌø×ªµ½´úÀí¶ÔÏó¹ØÁªµÄhandler¶ÔÏóµÄinvoke·½·¨À´½øÐÐµ÷ÓÃ
+		//	    å½“ä»£ç†å¯¹è±¡è°ƒç”¨çœŸå®žå¯¹è±¡çš„æ–¹æ³•æ—¶ï¼Œå…¶ä¼šè‡ªåŠ¨çš„è·³è½¬åˆ°ä»£ç†å¯¹è±¡å…³è”çš„handlerå¯¹è±¡çš„invokeæ–¹æ³•æ¥è¿›è¡Œè°ƒç”¨
 		method.invoke(sub, args);
-		//¡¡¡¡ÔÚ´úÀíÕæÊµ¶ÔÏóºóÎÒÃÇÒ²¿ÉÒÔÌí¼ÓÒ»Ð©×Ô¼ºµÄ²Ù×÷
+		//ã€€ã€€åœ¨ä»£ç†çœŸå®žå¯¹è±¡åŽæˆ‘ä»¬ä¹Ÿå¯ä»¥æ·»åŠ ä¸€äº›è‡ªå·±çš„æ“ä½œ
 		System.out.println("after rent house");
 		System.out.println();
 		return null;

@@ -18,7 +18,7 @@ public class SimpleFactory{
 //			return new Square();
 //		}
 //		return null;
-		//ÎÒÃÇ¿ÉÒÔÀûÓÃ·´ÉäÀ´»ñÈ¡ÀàµÄÊµÀı
+		//æˆ‘ä»¬å¯ä»¥åˆ©ç”¨åå°„æ¥è·å–ç±»çš„å®ä¾‹
 		Shape shape = null;
 		try {
 			shape = (Shape) Class.forName(shapeType).newInstance();

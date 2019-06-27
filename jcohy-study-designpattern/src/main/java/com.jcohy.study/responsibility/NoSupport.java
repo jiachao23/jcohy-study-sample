@@ -2,14 +2,14 @@ package com.jcohy.study.responsibility;
 
 
 /**
- * 解决问题具体类（永远不处理）
+ * 瑙ｅ喅闂鍏蜂綋绫伙紙姘歌繙涓嶅鐞嗭級
  */
 public class NoSupport extends Support {
 
     public NoSupport(String name) {
         super(name);
     }
-    //解决的方法，自己不做处理
+    //瑙ｅ喅鐨勬柟娉曪紝鑷繁涓嶅仛澶勭悊
     @Override
     protected boolean resolve(Trouble trouble) {
         return false;

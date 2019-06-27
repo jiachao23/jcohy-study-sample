@@ -16,7 +16,7 @@ public class You {
 			public void run() {
 				try {
 					Thread.sleep(500);
-					 String result = "´ğ°¸¾ÍÊÇÎÒÒ²²»ÖªµÀ";      
+					 String result = "ç­”æ¡ˆå°±æ˜¯æˆ‘ä¹Ÿä¸çŸ¥é“";      
 					 callback.solve(result);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block

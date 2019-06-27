@@ -40,7 +40,7 @@
 
 ####  原型模式的参与者
 
->  ![结构图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/src/main/resources/static/images/prototype.png)
+>  ![结构图](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/images/prototype.png)
 >  *  Prototype(原型):Prototype规定复制对象实例建立新对象实例的方法。</br>
 >  *  ConcretePrototype:实际上实现先复制对象实例再建立新对象实例的方法。</br>
 >  *  Client:利用复制对象的方法以产生另一个新对象实例</br>

@@ -6,12 +6,12 @@ package com.jcohy.study.callback;
  */
 public class Service {
 	
-	CallBack callback;//¶¨Òå½Ó¿ÚÀàĞÍ¶ÔÏó£¬Òªµ÷ÓÃ½Ó¿ÚÖĞµÄ»Øµ÷·½·¨  
+	CallBack callback;//å®šä¹‰æ¥å£ç±»å‹å¯¹è±¡ï¼Œè¦è°ƒç”¨æ¥å£ä¸­çš„å›è°ƒæ–¹æ³•  
 	  
-    String result = "Ğ»Ğ»ÄãµÄÇëÇó";  
+    String result = "è°¢è°¢ä½ çš„è¯·æ±‚";  
   
     public void A(Client client) {  
         this.callback = client;  
-        callback.B(result);//µ÷ÓÃµÄÊÇ¸Ã½Ó¿ÚµÄÊµÏÖ·½·¨£¨¼´ClientÖĞµÄB£©  
+        callback.B(result);//è°ƒç”¨çš„æ˜¯è¯¥æ¥å£çš„å®ç°æ–¹æ³•ï¼ˆå³Clientä¸­çš„Bï¼‰  
     }  
 }

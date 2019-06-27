@@ -1,4 +1,4 @@
-<!-- ÅäÖÃÊý¾ÝÔ´ -->
+<!-- é…ç½®æ•°æ®æº -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="user" value="${jdbc.user}"></property>
 		<property name="password" value="${jdbc.password}"></property>

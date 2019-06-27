@@ -9,13 +9,13 @@ package com.jcohy.study.decorator;
  **/
 /**
  * @author jiachao
- *¶¨ÒåÒ»¸ö¶ÔÏó£¬¿ÉÒÔ¸øÕâ¸ö¶ÔÏóÌí¼ÓÖ°Ôğ
+ *å®šä¹‰ä¸€ä¸ªå¯¹è±¡ï¼Œå¯ä»¥ç»™è¿™ä¸ªå¯¹è±¡æ·»åŠ èŒè´£
  */
 public class ConcreteComponent implements Person{
 
 	
 	public void eat() {
-		System.out.println("Ğ¡»ï×ÓÔÚ³Ô");
+		System.out.println("å°ä¼™å­åœ¨åƒ");
 	}
 
 }

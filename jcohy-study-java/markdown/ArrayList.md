@@ -235,4 +235,5 @@
 <p id="kuozhan">
 
 ##  扩展
-     
+
+ArrayList不安全实例 

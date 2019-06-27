@@ -304,6 +304,7 @@
 ##  扩展
 
 >  *  ConcurrentHashMap。
+>  *  [Java8中的HashMap](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/HashMap8.md)
 
     
     

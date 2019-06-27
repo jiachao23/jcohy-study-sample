@@ -1,10 +1,10 @@
 package com.jcohy.study.responsibility;
 
 /**
- * ½â¾öÎÊÌâ¾ßÌåÀà£¨½â¾öĞ¡ÓàÖ¸¶¨ºÅÂëµÄÀà£©
+ * è§£å†³é—®é¢˜å…·ä½“ç±»ï¼ˆè§£å†³å°ä½™æŒ‡å®šå·ç çš„ç±»ï¼‰
  */
 public class LimitSupport extends Support {
-    private int limit;//ÈôĞ¡Óà´ÎºÅÂë¿É½â¾ö
+    private int limit;//è‹¥å°ä½™æ¬¡å·ç å¯è§£å†³
     public LimitSupport(String name, int limit) {
         super(name);
         this.limit = limit;

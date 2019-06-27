@@ -1,7 +1,7 @@
 package com.jcohy.study.responsibility;
 
 /**
- * ±íÊ¾·¢ÉúÎÊÌâµÄÀà£¬ÄÚÓĞÎÊÌâ±àºÅ
+ * è¡¨ç¤ºå‘ç”Ÿé—®é¢˜çš„ç±»ï¼Œå†…æœ‰é—®é¢˜ç¼–å·
  * @author jiachao
  */
 public class Trouble {

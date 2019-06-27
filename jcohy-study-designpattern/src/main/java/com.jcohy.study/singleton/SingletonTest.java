@@ -3,7 +3,7 @@ package com.jcohy.study.singleton;
 import java.util.Vector;
 
 /**
- *£º ²ÉÓÃ" Ó°×ÓÊµÀı"µÄ°ì·¨Îªµ¥Àı¶ÔÏóµÄÊôĞÔÍ¬²½¸üĞÂ
+ *ï¼š é‡‡ç”¨" å½±å­å®ä¾‹"çš„åŠæ³•ä¸ºå•ä¾‹å¯¹è±¡çš„å±æ€§åŒæ­¥æ›´æ–°
  * @author jiachao
  *
  */

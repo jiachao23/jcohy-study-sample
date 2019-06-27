@@ -1,5 +1,5 @@
-<!-- µ¼ÈëÍâ²¿µÄ×ÊÔ´ÎÄ¼þ -->
+<!-- å¯¼å…¥å¤–éƒ¨çš„èµ„æºæ–‡ä»¶ -->
 	<context:property-placeholder location="classpath:db.properties"/>
 
-<!-- ÅäÖÃ×Ô¶¯É¨ÃèµÄ°ü: ÐèÒª¼ÓÈë aop ¶ÔÓ¦µÄ jar °ü -->
+<!-- é…ç½®è‡ªåŠ¨æ‰«æçš„åŒ…: éœ€è¦åŠ å…¥ aop å¯¹åº”çš„ jar åŒ… -->
 	<context:component-scan base-package="com.atguigu.spring.annotation.generic"></context:component-scan>

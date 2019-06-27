@@ -3,7 +3,7 @@ package com.jcohy.study.jcopy;
 import java.io.IOException;
 
 /**
- * Ïû·ÑÕß
+ * æ¶ˆè´¹è€…
  * 
  * @author jiachao
  *

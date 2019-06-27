@@ -3,8 +3,8 @@ package com.jcohy.study.proxy;
 
 /**
  * @author admin
- * ¶¨ÒåRealSubjectºÍProxyµÄ¹²ÓÃ½Ó¿Ú£¬ÕâÑù¾ÍÔÚÈÎºÎÊ¹ÓÃRealSubjectµÄµØ·½
- * ¶¼¿ÉÒÔÊ¹ÓÃProxy¡£
+ * å®šä¹‰RealSubjectå’ŒProxyçš„å…±ç”¨æ¥å£ï¼Œè¿™æ ·å°±åœ¨ä»»ä½•ä½¿ç”¨RealSubjectçš„åœ°æ–¹
+ * éƒ½å¯ä»¥ä½¿ç”¨Proxyã€‚
 
  */
 public interface Object {

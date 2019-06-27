@@ -1,44 +1,44 @@
-1. Spring ÈçºÎÔÚ WEB Ó¦ÓÃÖĞÊ¹ÓÃ ?
+1. Spring å¦‚ä½•åœ¨ WEB åº”ç”¨ä¸­ä½¿ç”¨ ?
 
-1). ĞèÒª¶îÍâ¼ÓÈëµÄ jar °ü:
-
-spring-web-4.0.0.RELEASE.jar
-spring-webmvc-4.0.0.RELEASE.jar
-
-2). Spring µÄÅäÖÃÎÄ¼ş, Ã»ÓĞÊ²Ã´²»Í¬
-
-3). ÈçºÎ´´½¨ IOC ÈİÆ÷ ? 
-
-¢Ù. ·Ç WEB Ó¦ÓÃÔÚ main ·½·¨ÖĞÖ±½Ó´´½¨
-¢Ú. Ó¦¸ÃÔÚ WEB Ó¦ÓÃ±»·şÎñÆ÷¼ÓÔØÊ±¾Í´´½¨ IOC ÈİÆ÷: 
-
-ÔÚ ServletContextListener#contextInitialized(ServletContextEvent sce) ·½·¨ÖĞ´´½¨ IOC ÈİÆ÷.
-
-¢Û. ÔÚ WEB Ó¦ÓÃµÄÆäËû×é¼şÖĞÈçºÎÀ´·ÃÎÊ IOC ÈİÆ÷ÄØ ?
-
-ÔÚ ServletContextListener#contextInitialized(ServletContextEvent sce) ·½·¨ÖĞ´´½¨ IOC ÈİÆ÷ºó, ¿ÉÒÔ°ÑÆä·ÅÔÚ
-ServletContext(¼´ application Óò)µÄÒ»¸öÊôĞÔÖĞ. 
-
-¢Ü. Êµ¼ÊÉÏ, Spring ÅäÖÃÎÄ¼şµÄÃû×ÖºÍÎ»ÖÃÓ¦¸ÃÒ²ÊÇ¿ÉÅäÖÃµÄ! ½«ÆäÅäÖÃµ½µ±Ç° WEB Ó¦ÓÃµÄ³õÊ¼»¯²ÎÊıÖĞ½ÏÎªºÏÊÊ. 
-
-4). ÔÚ WEB »·¾³ÏÂÊ¹ÓÃ Spring
-
-¢Ù. ĞèÒª¶îÍâ¼ÓÈëµÄ jar °ü:
+1). éœ€è¦é¢å¤–åŠ å…¥çš„ jar åŒ…:
 
 spring-web-4.0.0.RELEASE.jar
 spring-webmvc-4.0.0.RELEASE.jar
 
-¢Ú. Spring µÄÅäÖÃÎÄ¼ş, ºÍ·Ç WEB »·¾³Ã»ÓĞÊ²Ã´²»Í¬
+2). Spring çš„é…ç½®æ–‡ä»¶, æ²¡æœ‰ä»€ä¹ˆä¸åŒ
 
-¢Û. ĞèÒªÔÚ web.xml ÎÄ¼şÖĞ¼ÓÈëÈçÏÂÅäÖÃ:
+3). å¦‚ä½•åˆ›å»º IOC å®¹å™¨ ? 
 
-<!-- ÅäÖÃ Spring ÅäÖÃÎÄ¼şµÄÃû³ÆºÍÎ»ÖÃ -->
+â‘ . é WEB åº”ç”¨åœ¨ main æ–¹æ³•ä¸­ç›´æ¥åˆ›å»º
+â‘¡. åº”è¯¥åœ¨ WEB åº”ç”¨è¢«æœåŠ¡å™¨åŠ è½½æ—¶å°±åˆ›å»º IOC å®¹å™¨: 
+
+åœ¨ ServletContextListener#contextInitialized(ServletContextEvent sce) æ–¹æ³•ä¸­åˆ›å»º IOC å®¹å™¨.
+
+â‘¢. åœ¨ WEB åº”ç”¨çš„å…¶ä»–ç»„ä»¶ä¸­å¦‚ä½•æ¥è®¿é—® IOC å®¹å™¨å‘¢ ?
+
+åœ¨ ServletContextListener#contextInitialized(ServletContextEvent sce) æ–¹æ³•ä¸­åˆ›å»º IOC å®¹å™¨å, å¯ä»¥æŠŠå…¶æ”¾åœ¨
+ServletContext(å³ application åŸŸ)çš„ä¸€ä¸ªå±æ€§ä¸­. 
+
+â‘£. å®é™…ä¸Š, Spring é…ç½®æ–‡ä»¶çš„åå­—å’Œä½ç½®åº”è¯¥ä¹Ÿæ˜¯å¯é…ç½®çš„! å°†å…¶é…ç½®åˆ°å½“å‰ WEB åº”ç”¨çš„åˆå§‹åŒ–å‚æ•°ä¸­è¾ƒä¸ºåˆé€‚. 
+
+4). åœ¨ WEB ç¯å¢ƒä¸‹ä½¿ç”¨ Spring
+
+â‘ . éœ€è¦é¢å¤–åŠ å…¥çš„ jar åŒ…:
+
+spring-web-4.0.0.RELEASE.jar
+spring-webmvc-4.0.0.RELEASE.jar
+
+â‘¡. Spring çš„é…ç½®æ–‡ä»¶, å’Œé WEB ç¯å¢ƒæ²¡æœ‰ä»€ä¹ˆä¸åŒ
+
+â‘¢. éœ€è¦åœ¨ web.xml æ–‡ä»¶ä¸­åŠ å…¥å¦‚ä¸‹é…ç½®:
+
+<!-- é…ç½® Spring é…ç½®æ–‡ä»¶çš„åç§°å’Œä½ç½® -->
 <context-param>
 	<param-name>contextConfigLocation</param-name>
 	<param-value>classpath:applicationContext.xml</param-value>
 </context-param>
 
-<!-- Æô¶¯ IOC ÈİÆ÷µÄ ServletContextListener -->
+<!-- å¯åŠ¨ IOC å®¹å™¨çš„ ServletContextListener -->
 <listener>
 	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 </listener>
