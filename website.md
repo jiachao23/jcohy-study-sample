@@ -7,7 +7,7 @@
 ## Website
 
 >   * [Coding](#Coding)
->   * [Coding](#https://lippiouyang.gitbooks.io/gradle-in-action-cn/content/)
+>   * [Gradle In Action(Gradle实战)中文版](https://lippiouyang.gitbooks.io/gradle-in-action-cn/content/)
 
   <p id="Coding"></p>
   
