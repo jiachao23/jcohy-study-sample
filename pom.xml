@@ -26,6 +26,7 @@
     <module>jcohy-study-quartz</module>
     <module>jcohy-study-ansyc</module>
     <module>jcohy-study-go</module>
+      <module>jcohy-study-spring</module>
   </modules>
 
   <dependencies>
