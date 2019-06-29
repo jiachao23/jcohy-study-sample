@@ -5,7 +5,9 @@
 >  我的学习笔记，记录学习过程中的笔记以及遇到的问题,以及我的一些经验总结。如果出现链接失效,或者想知道更多的内容等情况可以提交 Issues 提醒我修改相关内容。
 
 ## Website
+
 >   * [Coding](#Coding)
+>   * [Coding](#https://lippiouyang.gitbooks.io/gradle-in-action-cn/content/)
 
   <p id="Coding"></p>
   
