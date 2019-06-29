@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/com-jcohy-nginx/com-jcohy-nginx.iml" filepath="$PROJECT_DIR$/com-jcohy-nginx/com-jcohy-nginx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jcohy-study-DataStructures/jcohy-study-DataStructures.iml" filepath="$PROJECT_DIR$/jcohy-study-DataStructures/jcohy-study-DataStructures.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jcohy-study-alogrithm/jcohy-study-alogrithm.iml" filepath="$PROJECT_DIR$/jcohy-study-alogrithm/jcohy-study-alogrithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jcohy-study-designpattern/jcohy-study-designpattern.iml" filepath="$PROJECT_DIR$/jcohy-study-designpattern/jcohy-study-designpattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jcohy-study-files/jcohy-study-files.iml" filepath="$PROJECT_DIR$/jcohy-study-files/jcohy-study-files.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jcohy-study-java/jcohy-study-java.iml" filepath="$PROJECT_DIR$/jcohy-study-java/jcohy-study-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jcohy-study-linux/jcohy-study-linux.iml" filepath="$PROJECT_DIR$/jcohy-study-linux/jcohy-study-linux.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jcohy-study-nosql/jcohy-study-nosql.iml" filepath="$PROJECT_DIR$/jcohy-study-nosql/jcohy-study-nosql.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/jcohy-study-sample.iml" filepath="$PROJECT_DIR$/.idea/jcohy-study-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jcohy-study-security/jcohy-study-security.iml" filepath="$PROJECT_DIR$/jcohy-study-security/jcohy-study-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jcohy-study-springboot/jcohy-study-springboot.iml" filepath="$PROJECT_DIR$/jcohy-study-springboot/jcohy-study-springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jcohy-study-thread/jcohy-study-thread.iml" filepath="$PROJECT_DIR$/jcohy-study-thread/jcohy-study-thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jcohy-study-utils/jcohy-study-utils.iml" filepath="$PROJECT_DIR$/jcohy-study-utils/jcohy-study-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jcohy-study-web/jcohy-study-web.iml" filepath="$PROJECT_DIR$/jcohy-study-web/jcohy-study-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jcohy-study-zookeeper/jcohy-study-zookeeper.iml" filepath="$PROJECT_DIR$/jcohy-study-zookeeper/jcohy-study-zookeeper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jcohy-study-gui/jcohy.study.gui.iml" filepath="$PROJECT_DIR$/jcohy-study-gui/jcohy.study.gui.iml" />
+    </modules>
+  </component>
+</project>
