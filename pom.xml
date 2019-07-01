@@ -2,45 +2,51 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.jcohy.study</groupId>
-  <artifactId>jcohy-study-sample</artifactId>
-  <packaging>pom</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <modules>
-    <module>jcohy-study-designpattern</module>
-    <module>jcohy-study-utils</module>
-    <module>jcohy-study-files</module>
-    <module>jcohy-study-security</module>
-    <module>jcohy-study-alogrithm</module>
-    <module>jcohy-study-java</module>
-    <module>jcohy-study-springboot</module>
-    <module>jcohy-study-nosql</module>
-    <module>jcohy-study-linux</module>
-    <module>jcohy-study-zookeeper</module>
-    <module>jcohy-study-nginx</module>
-    <module>jcohy-study-docker</module>
-    <module>jcohy-study-ViewGuide</module>
-    <module>jcohy-study-framework</module>
-    <module>jcohy-study-quartz</module>
-    <module>jcohy-study-ansyc</module>
-    <module>jcohy-study-go</module>
-      <module>jcohy-study-spring</module>
-  </modules>
+    <groupId>com.jcohy.study</groupId>
+    <artifactId>jcohy-study-sample</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>jcohy-study-designpattern</module>
+        <module>jcohy-study-utils</module>
+        <module>jcohy-study-files</module>
+        <module>jcohy-study-security</module>
+        <module>jcohy-study-alogrithm</module>
+        <module>jcohy-study-java</module>
+        <module>jcohy-study-springboot</module>
+        <module>jcohy-study-nosql</module>
+        <module>jcohy-study-linux</module>
+        <module>jcohy-study-zookeeper</module>
+        <module>jcohy-study-nginx</module>
+        <module>jcohy-study-docker</module>
+        <module>jcohy-study-ViewGuide</module>
+        <module>jcohy-study-framework</module>
+        <module>jcohy-study-quartz</module>
+        <module>jcohy-study-ansyc</module>
+        <module>jcohy-study-go</module>
+        <module>jcohy-study-spring</module>
+    </modules>
 
-  <dependencies>
+
+      
+</project>
+
+<dependencyManagement>  
+ 
+<dependencies>
     <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
     <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <version>1.7.25</version>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.7.25</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/junit/junit -->
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>RELEASE</version>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>RELEASE</version>
     </dependency>
-  </dependencies>
-</project>
+</dependencies>
+</dependencyManagement>
