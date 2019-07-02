@@ -18,7 +18,7 @@ public class BloomFilterDemo {
 
     public static void main(String[] args) {
 
-        BloomFilter<String> bf = BloomFilter.create(Funnels.stringFunnel(Charsets.UTF_8),insertions,0.02);
+        BloomFilter<CharSequence> bf = BloomFilter.create(Funnels.stringFunnel(Charsets.UTF_8),insertions,0.02);
         Set<String> sets = new HashSet<>(insertions);
 
         List<String> lists = new ArrayList<>(insertions);

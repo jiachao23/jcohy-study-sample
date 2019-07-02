@@ -32,7 +32,7 @@ public class BloomTest {
 
     List<User> allUser;
 
-    BloomFilter<String> bf;
+    BloomFilter<CharSequence> bf;
 
     @PostConstruct
     public void add(){

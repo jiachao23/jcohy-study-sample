@@ -23,7 +23,7 @@ public class SpringBootStudyApplication {
 
     public static void main(String[] args) {
 
-        // SpringÓ¦ÓÃÆô¶¯ÆğÀ´
+        // Springåº”ç”¨å¯åŠ¨èµ·æ¥
         SpringApplication.run(SpringBootStudyApplication.class,args);
     }
 
@@ -41,10 +41,10 @@ public class SpringBootStudyApplication {
     }
 
     /**
-     * SpringBootÄ¬ÈÏÖ§³ÖÁ½ÖÖ¼¼ÊõÀ´ºÍES½»»¥
-     * 1.Jest£¨Ä¬ÈÏ²»ÉúĞ§£©£¬ĞèÒªµ¼ÈëjestµÄ¹¤¾ß°ü£¨io.searchbox.client.JestClient£©
+     * SpringBooté»˜è®¤æ”¯æŒä¸¤ç§æŠ€æœ¯æ¥å’ŒESäº¤äº’
+     * 1.Jestï¼ˆé»˜è®¤ä¸ç”Ÿæ•ˆï¼‰ï¼Œéœ€è¦å¯¼å…¥jestçš„å·¥å…·åŒ…ï¼ˆio.searchbox.client.JestClientï¼‰
      * 2.SpringData ElasticSearch
-     *1)¡¢Client ClusterNodes
+     *1)ã€Client ClusterNodes
      * Client ClusterNames
      */
 }

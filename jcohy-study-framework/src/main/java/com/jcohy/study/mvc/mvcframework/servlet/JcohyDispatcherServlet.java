@@ -5,7 +5,6 @@ import com.jcohy.study.mvc.mvcframework.annotation.JcohyAutowired;
 import com.jcohy.study.mvc.mvcframework.annotation.JcohyController;
 import com.jcohy.study.mvc.mvcframework.annotation.JcohyRequestMapping;
 import com.jcohy.study.mvc.mvcframework.annotation.JcohyService;
-import com.sun.deploy.net.HttpResponse;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -15,9 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.util.*;

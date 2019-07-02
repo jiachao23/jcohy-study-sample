@@ -3,8 +3,8 @@ package com.jcohy.study.springboot03.config;
 import com.jcohy.study.springboot03.filter.MyFilter;
 import com.jcohy.study.springboot03.listener.MyListener;
 import com.jcohy.study.springboot03.servlet.MyServlet;
-import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
-import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
+import org.springframework.boot.web.server.ConfigurableWebServerFactory;
+import org.springframework.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -39,18 +39,28 @@ public class MyServerConfig {
     }
 
 
-   // 配置嵌入式的Servlet容器
+   // 配置嵌入式的Servlet容器,此方法2.0版本已废弃，已经被WebServerFactoryCustomizer 替代
+
+//    @Bean
+//    public EmbeddedServletContainerCustomizer embeddedServletContainerCustomizer(){
+//
+//        return new EmbeddedServletContainerCustomizer() {
+//
+//            //定制嵌入式的Servlet容器相关的规则
+//            @Override
+//            public void customize(ConfigurableEmbeddedServletContainer container) {
+//                container.setPort(8083);
+//            }
+//        };
+//    }
+
     @Bean
-    public EmbeddedServletContainerCustomizer embeddedServletContainerCustomizer(){
-
-        return new EmbeddedServletContainerCustomizer() {
-
-            //定制嵌入式的Servlet容器相关的规则
+    public WebServerFactoryCustomizer<ConfigurableWebServerFactory> webServerFactoryCustomizer(){
+        return new WebServerFactoryCustomizer<ConfigurableWebServerFactory>() {
             @Override
-            public void customize(ConfigurableEmbeddedServletContainer container) {
-                container.setPort(8083);
+            public void customize(ConfigurableWebServerFactory factory) {
+                factory.setPort(8081);
             }
         };
     }
-
 }
