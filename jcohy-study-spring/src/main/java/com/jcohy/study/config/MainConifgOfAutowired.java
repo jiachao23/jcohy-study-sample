@@ -3,6 +3,7 @@ package com.jcohy.study.config;
 import com.jcohy.study.bean.Car;
 import com.jcohy.study.bean.Color;
 import com.jcohy.study.dao.BookDao;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -57,7 +58,7 @@ import org.springframework.context.annotation.Primary;
 @ComponentScan({"com.jcohy.study.service","com.jcohy.study.dao",
 	"com.jcohy.study.controller","com.jcohy.study.bean"})
 public class MainConifgOfAutowired {
-	
+	@Qualifier
 	@Primary
 	@Bean("bookDao2")
 	public BookDao bookDao(){

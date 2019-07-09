@@ -76,7 +76,19 @@ public @interface Bean {
 
 给容器注册一个Bean，类型为返回值类型，id默认为方法名
 
+@Bean标注的方法创建对象的时候，方法参数的值从容器中获取
 
+```java
+//此Car对象会自动从容器中获取
+@Bean
+public Color color(Car car){
+   Color color = new Color();
+   color.setCar(car);
+   return color;
+}
+
+
+```
 
 #### @ComponentScan，@ComponentScans
 
@@ -853,3 +865,168 @@ Spring底层对 BeanPostProcessor 的使用；
  * 		xxx BeanPostProcessor;
 
 ### 属性赋值
+
+#### @Value
+
+```java
+@Target({ElementType.FIELD, ElementType.METHOD, ElementType.PARAMETER, ElementType.ANNOTATION_TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface Value {
+
+   /**
+    * The actual value expression: for example {@code #{systemProperties.myProp}}.
+    */
+   String value();
+
+}
+```
+
+	//1、基本数值
+	//2、可以写SpEL； #{}
+	//3、可以写${}；取出配置文件【properties】中的值（在运行环境变量里面的值）
+```java
+@Value("张三")
+private String name;
+@Value("#{20-2}")
+private Integer age;
+
+@Value("${person.nickName}")
+private String nickName;
+```
+
+#### @PropertySource和@PropertySources
+
+使用@PropertySource读取外部配置文件中的k/v保存到运行的环境变量中;加载完外部的配置文件以后使用${}取出配置文件的值
+
+```java
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Repeatable(PropertySources.class)
+public @interface PropertySource {
+
+   /**
+    * Indicate the name of this property source. If omitted, a name will
+    * be generated based on the description of the underlying resource.
+    * @see org.springframework.core.env.PropertySource#getName()
+    * @see org.springframework.core.io.Resource#getDescription()
+    */
+   String name() default "";
+
+   /**
+    * Indicate the resource location(s) of the properties file to be loaded.
+    * For example, {@code "classpath:/com/myco/app.properties"} or
+    * {@code "file:/path/to/file"}.
+    * <p>Resource location wildcards (e.g. *&#42;/*.properties) are not permitted;
+    * each location must evaluate to exactly one {@code .properties} resource.
+    * <p>${...} placeholders will be resolved against any/all property sources already
+    * registered with the {@code Environment}. See {@linkplain PropertySource above}
+    * for examples.
+    * <p>Each location will be added to the enclosing {@code Environment} as its own
+    * property source, and in the order declared.
+    */
+   String[] value();
+
+   /**
+    * Indicate if failure to find the a {@link #value() property resource} should be
+    * ignored.
+    * <p>{@code true} is appropriate if the properties file is completely optional.
+    * Default is {@code false}.
+    * @since 4.0
+    */
+   boolean ignoreResourceNotFound() default false;
+
+   /**
+    * A specific character encoding for the given resources, e.g. "UTF-8".
+    * @since 4.3
+    */
+   String encoding() default "";
+
+   /**
+    * Specify a custom {@link PropertySourceFactory}, if any.
+    * <p>By default, a default factory for standard resource files will be used.
+    * @since 4.3
+    * @see org.springframework.core.io.support.DefaultPropertySourceFactory
+    * @see org.springframework.core.io.support.ResourcePropertySource
+    */
+   Class<? extends PropertySourceFactory> factory() default PropertySourceFactory.class;
+
+}
+```
+
+#### @Autowired
+
+自动装配;Spring利用依赖注入（DI），完成对IOC容器中中各个组件的依赖关系赋值；
+
+```java
+@Target({ElementType.CONSTRUCTOR, ElementType.METHOD, ElementType.PARAMETER, ElementType.FIELD, ElementType.ANNOTATION_TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface Autowired {
+
+   /**
+    * Declares whether the annotated dependency is required.
+    * <p>Defaults to {@code true}.
+    */
+   boolean required() default true;
+
+}
+
+```
+
+@Autowired:构造器，参数，方法，属性；都是从容器中获取参数组件的值
+1）、[标注在方法位置]：@Bean+方法参数；参数从容器中获取;默认不写@Autowired效果是一样的；都能自动装配
+2）、[标在构造器上]：如果组件只有一个有参构造器，这个有参构造器的@Autowired可以省略，参数位置的组件还是可以自动从容器中获取
+3）、放在参数位置：
+
+- @Autowired：自动注入：
+
+  1）、默认优先按照类型去容器中找对应的组件:applicationContext.getBean(BookDao.class);找到就赋值
+
+  2）、如果找到多个相同类型的组件，再将属性的名称作为组件的id去容器中查找
+
+  3）、@Qualifier("bookDao")：使用@Qualifier指定需要装配的组件的id，而不是使用属性名
+
+  4）、自动装配默认一定要将属性赋值好，没有就会报错；可以使用@Autowired(required=false);
+
+  5）、@Primary：让Spring进行自动装配的时候，默认使用首选的bean；也可以继续使用@Qualifier指定需要装配的bean的名字
+
+- @Qualifier
+
+  我们知道，自动装配注入时，可以使用@Resource或者@Autowired注入bean。 但有时候仅仅一个bean_id还无法清晰明确出要注入的bean，因此可以引入**@Qualifier**注解。使用@Qualifier指定需要装配的组件的id，而不是使用属性名
+
+```java
+@Target({ElementType.FIELD, ElementType.METHOD, ElementType.PARAMETER, ElementType.TYPE, ElementType.ANNOTATION_TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Inherited
+@Documented
+public @interface Qualifier {
+
+    String value() default "";
+
+}
+```
+
+- @Primary
+
+  让Spring进行自动装配的时候，默认使用首选的bean；也可以继续使用@Qualifier指定需要装配的bean的名字
+
+```java
+@Target({ElementType.TYPE, ElementType.METHOD})
+@Retention(RetentionPolicy.RUNTIME)
+@Inherited
+@Documented
+public @interface Primary {
+
+}
+```
+
+#### @Resource(JSR250)和@Inject(JSR330)[java规范的注解]
+
+- @Resource:可以和@Autowired一样实现自动装配功能；默认是按照组件名称进行装配的；没有能支持@Primary功能没有支持@Autowired（reqiured=false）;
+- @Inject:需要导入javax.inject的包，和Autowired的功能一样。没有required=false的功能；
+
+- @Autowired:Spring定义的； @Resource、@Inject都是java规范
+
+- AutowiredAnnotationBeanPostProcessor:解析完成自动装配功能；
