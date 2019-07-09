@@ -1030,3 +1030,69 @@ public @interface Primary {
 - @Autowired:Spring定义的； @Resource、@Inject都是java规范
 
 - AutowiredAnnotationBeanPostProcessor:解析完成自动装配功能；
+
+#### 自定义组件
+
+自定义组件想要使用Spring容器底层的一些组件（ApplicationContext，BeanFactory，xxx）；
+
+自定义组件实现xxxAware；在创建对象的时候，会调用接口规定的方法注入相关组件；Aware；
+
+把Spring底层一些组件注入到自定义的Bean中；
+
+xxxAware：功能使用xxxProcessor；
+
+ApplicationContextAware==》ApplicationContextAwareProcessor；
+
+
+
+#### @Profile
+
+Spring为我们提供的可以根据当前环境，动态的激活和切换一系列组件的功能；
+
+@Profile：指定组件在哪个环境的情况下才能被注册到容器中，不指定，任何环境下都能注册这个组件
+
+```java
+@Target({ElementType.TYPE, ElementType.METHOD})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Conditional(ProfileCondition.class)
+public @interface Profile {
+
+   /**
+    * The set of profiles for which the annotated component should be registered.
+    */
+   String[] value();
+
+}
+```
+
+1）、加了环境标识的bean，只有这个环境被激活的时候才能注册到容器中。默认是default环境
+
+2）、写在配置类上，只有是指定的环境的时候，整个配置类里面的所有配置才能开始生效
+
+3）、没有标注环境标识的bean在，任何环境下都是加载的；
+
+
+
+如何激活一个环境：
+
+- 使用命令行动态参数: 在虚拟机参数位置加载 -Dspring.profiles.active=test
+
+- 代码的方式激活某种环境；
+
+  ```java
+  AnnotationConfigApplicationContext applicationContext = 
+        new AnnotationConfigApplicationContext();
+  //1、创建一个applicationContext
+  //2、设置需要激活的环境
+  applicationContext.getEnvironment().setActiveProfiles("dev");
+  //3、注册主配置类
+  applicationContext.register(MainConfigOfProfile.class);
+  //4、启动刷新容器
+  applicationContext.refresh();
+  ```
+
+- 通过属性文件：spring.profiles.active=dev
+
+### AOP
+
