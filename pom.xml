@@ -70,6 +70,11 @@
             </snapshots>
         </repository>
         <repository>
+            <id>springsource-repos</id>
+            <name>SpringSource Repository</name>
+            <url>http://repo.spring.io/release/</url>
+        </repository>
+        <repository>
             <id>rabbit-milestone</id>
             <name>Rabbit Milestone</name>
             <url>https://dl.bintray.com/rabbitmq/maven-milestones</url>
