@@ -37,6 +37,7 @@
         <module>jcohy-study-springboot</module>
         <module>jcohy-study-ViewGuide</module>
         <module>jcohy-study-zookeeper</module>
+        <module>jcohy-study-test</module>
     </modules>
 
 

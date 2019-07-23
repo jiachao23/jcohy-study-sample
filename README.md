@@ -72,13 +72,13 @@
 >       * [中介者模式(Mediator)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Mediator.md)
 >       * [解释器模式(Interpreter)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/markdown/Interpreter.md)
 >  #### 适配器模式、装饰模式、代理模式、外观模式、桥接模式、组合模式、享元模式。其中对象的适配器模式是各种模式的起源，我们看下面的图：
-    
+
    ![adapter](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/images/adapter.png)
             
 > #### 策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。大致分为四类关系：
-    
+
    ![real](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-designpattern/images/real.png)
-  
+
 ## jcohy-study-alogrithm
 > #### Ps:经典算法，排序相关代码
 > * [编程题目录](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-alogrithm/README.md)
@@ -89,6 +89,9 @@
 
 ## jcohy-study-web
 > #### Ps:Web相关
+
+## jcohy-study-spring
+> #### Ps:Spring相关
 
 ##  jcohy-study-SpringBoot
 > #### Ps:SpringBoot相关知识。
@@ -141,11 +144,30 @@
 > #### Ps:相关工具类操作
 >   * [Jenkins](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-utils/markdown/Jenkins.md)
 
+## jcohy-study-ansyc
+> #### 异步
+
+## jcohy-study-docker
+> #### Ps:docker相关知识
+
+## jcohy-study-framework
+> #### Ps: 手写Spring MVC框架
+
+## jcohy-study-go
+> #### Ps: GO相关知识
+
+## jcohy-study-quartz
+> #### Ps: 任务调度
+
+## jcohy-study-test
+> #### Ps: 测试
+
 ##  Swagger
+
 > #### Ps:Swagger相关知识。
 >   * [Swagger简介](https://github.com/jiachao23/jcohy-study-sample/blob/master/Swagger.md#what)
 >   * [Swagger的使用](https://github.com/jiachao23/jcohy-study-sample/blob/master/Swagger.md#how)
->   * [Swagger在Java中常用注解](https://github.com/jiachao23/jcohy-study-sample/blob/master/Swagger.md#annotations)
+>   * [Swagger在Java中常用注解](https://github.cofm/jiachao23/jcohy-study-sample/blob/master/Swagger.md#annotations)
 >   * [Swagger在SpringBoot集成](https://github.com/jiachao23/jcohy-study-sample/blob/master/Swagger.md#jicheng)
 
 ##  面试指南
@@ -158,7 +180,7 @@
 >     * [Java虚拟机](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/java-jvm.md)
 >     * [JavaWeb](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/java-javaweb.md)
 >     * [JavaEE](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/java-javaee.md)
->  * 设计模式:查看jcohy-study-designpattern模块。
+>  * 设计模式:查看 jcohy-study-designpattern 模块。
 >  * 数据库:[数据库)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/sql.md)
 >  * 算法和数据结构:[算法和数据结构)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/alogrithm.md)
 >  * 计算机网络:[计算机网络)](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-ViewGuide/markdown/network.md)

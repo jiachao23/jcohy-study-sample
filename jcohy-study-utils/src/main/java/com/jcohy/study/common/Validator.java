@@ -19,9 +19,14 @@ public class Validator {
     private static final Pattern USERNAME_PATTERN = Pattern.compile(
             "^[a-zA-Z0-9._-]{6,18}$");
 
-    // 6 -- 18 位字母数字组合密码
+    /**
+     *
+     * 要求字母、数字、字符任意两种组合即可
+     * ^(?![0-9]+$)(?![a-zA-Z]+$)[A-Za-z0-9\\W]{6,18}$
+     * 6 -- 18 位字母数字组合密码
+     */
     private static final Pattern PASSWORD_PATTERN = Pattern.compile(
-            "^[a-zA-Z0-9]{6,50}$");
+            "^[a-zA-Z0-9]{6,18}$");
 
     private Validator() {
     }
@@ -37,6 +42,8 @@ public class Validator {
         if (Objects.isNull(email)) {
             return false;
         }
+
+
         Matcher matcher = EMAIL_ADDRESS_PATTERN.matcher(email);
         return matcher.matches();
     }
