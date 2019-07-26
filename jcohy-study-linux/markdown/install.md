@@ -431,7 +431,7 @@ rabbitmqctl list_user_permissions username
 
 * 拉取镜像,我们选择带有“mangement”的版本（包含web管理页面）
 ```shell
-  docker pull rabbitmq:3.7.12-management
+  docker pull rabbitmq:3.7.16-management
 
   docker run --restart=always -d -p 5672:5672 -p 15672:15672 --name myrabbitmq df80af9ca0c9
 ```
@@ -675,4 +675,4 @@ wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.0.6.tgz
 <p id ="jenkins">
 
 ## Jenkins
-[Jenkins](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-utils/markdown/Jenkins.md)
+
