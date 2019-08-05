@@ -1,0 +1,19 @@
+dn: dc=xuanwuai,dc=cn
+objectClass: top
+objectClass: dcObject
+objectclass: organization
+o: xuanwuai cn
+dc: xuanwuai
+
+dn: cn=Manager,dc=xuanwuai,dc=cn
+objectClass: organizationalRole
+cn: Manager
+description: Directory Manager
+
+dn: ou=People,dc=xuanwuai,dc=cn
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=Group,dc=xuanwuai,dc=cn
+objectClass: organizationalUnit
+ou: Group

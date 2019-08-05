@@ -2,6 +2,7 @@
 > #### PS:待开发中。。。。
 > #### 作者网页：jiac
 
+>  ### 相关软件地址：\\\192.168.11.220\tools\Linux\  目录下
 
 > * [JDK](#jdk)
 > * [Tomcat](#tomcat)
@@ -450,6 +451,8 @@ git --version
 
 ## gitlab
 
+https://about.gitlab.com/install/#centos-7
+
 1、安装依赖
 
 ```shell
@@ -514,6 +517,109 @@ git_data_dirs -> 修改成目标位置
 sudo gitlab-ctl reconfigure 配置执行 
 重新启动
 ```
+
+
+##### Docker安装中文版
+
+https://docs.gitlab.com/omnibus/docker/
+
+https://hub.docker.com/r/twang2218/gitlab-ce-zh
+
+1、下载镜像
+
+```shell
+docker pull twang2218/gitlab-ce-zh
+```
+
+2、运行
+
+```shell
+docker run --detach \
+  --hostname 192.168.11.238 \
+  --publish 443:443 --publish 80:80 --publish 222:22 \
+  --name gitlab \
+  --restart always \
+  --volume /opt/gitlab/config:/etc/gitlab  \
+  --volume /opt/gitlab/logs:/var/log/gitlab \
+  --volume /opt/gitlab/data:/var/opt/gitlab \
+  twang2218/gitlab-ce-zh
+  
+  docker run -d \
+    --hostname 192.168.11.238 \
+    -p 80:80 \
+    -p 443:443 \
+    -p 222:22 \
+    --privileged=true \
+    --name gitlab \
+    --restart always \
+    -v /opt/gitlab/gitlab-config:/etc/gitlab \
+    -v /opt/gitlab/gitlab-logs:/var/log/gitlab \
+    -v /opt/gitlab/gitlab-data:/var/opt/gitlab \
+   	twang2218/gitlab-ce-zh
+```
+
+3、数据存储
+
+| **当地的位置**     | **docker位置**  | **用法**               |
+| ------------------ | --------------- | ---------------------- |
+| /opt/gitlab/config | /etc/gitlab     | 用于存储应用数据       |
+| /opt/gitlab/logs   | /var/log/gitlab | 用于存储日志           |
+| /srv/gitlab/config | /var/opt/gitlab | 用于存储GitLab配置文件 |
+
+4、配置GitLab
+
+```
+docker exec -it gitlab /bin/bash
+docker exec -it gitlab vi /etc/gitlab/gitlab.rb
+修改external_url
+
+sudo docker restart gitlab
+```
+
+5、查看log
+
+```
+docker logs -f gitlab
+```
+
+6、配置邮箱
+
+```
+gitlab_rails['smtp_enable'] = true
+gitlab_rails['smtp_address'] = "smtp.exmail.qq.com"
+gitlab_rails['smtp_port'] = 465
+gitlab_rails['smtp_user_name'] = "jiachao@xuanwuai.com"
+gitlab_rails['smtp_password'] = "Jia@1203"
+gitlab_rails['smtp_authentication'] = "login"
+gitlab_rails['smtp_enable_starttls_auto'] = true
+gitlab_rails['smtp_tls'] = true
+gitlab_rails['gitlab_email_from'] = 'jiachao@xuanwuai.com'
+gitlab_rails['smtp_domain'] = "exmail.qq.com"
+
+```
+
+7、常用操作
+
+```
+//外部操作
+docker restart gitlab
+docker stop gitlab
+docker rm gitlab
+
+
+//内部操作
+//重新配置GitLab以使更改生效
+gitlab-ctl reconfigure
+gitlab-ctl restart
+//验证是否正确配置了所有内容：
+gitlab-rake gitlab:incoming_email:check
+gitlab-rails console
+Notify.test_email('jia_chao23@126.com', 'Message Subject', 'Message Body').deliver_now
+```
+
+
+
+
 <p id ="node">
 
 ## node
@@ -672,7 +778,324 @@ wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.0.6.tgz
 
 ## docker
 
-<p id ="jenkins">
+```shell
+yum -y install docker
+systemctl daemon-reload
+systemctl restart docker.service
+```
 
+https://docs.docker.com/install/
+
+
+
+<p id ="jenkins">
 ## Jenkins
 
+1、
+
+```
+docker pull jenkinsci/blueocean
+
+
+```
+
+2、
+
+```
+docker run \
+-u root \
+-d  \
+-p 80:8080 \
+-p 50000:50000 \
+--privileged=true \
+--name=jenkins \
+-v /opt/jenkins/jenkins-data:/var/jenkins_home  \
+-v /opt/jenkins/run/docker.sock:/var/run/docker.sock  \
+jenkinsci/blueocean 
+```
+
+
+
+## 安装高版本Gcc
+
+1、下载高版本gcc，这里使用的是8.3.0
+
+http://ftp.gnu.org/gnu/gcc/
+
+2、解压缩
+
+```shell
+tar -zxvf gcc-8.3.0.tar.gz -C /usr/local
+```
+
+3、下载依赖包
+
+```shell
+cd /usr/local/gcc-8.3.0/
+./contrib/download_prerequisites
+```
+
+4、编译+安装
+
+```shell
+mkdir gcc8.3.0build
+../gcc8.3.0build/configure --prefix=/usr/local/gcc8.3.0build --enable-checking=release --enable-languages=c,c++ --disable-multilib
+make && make install
+```
+
+5、之间已有低版本的gcc存在，先删除已建的软连接
+
+```shell
+rm -rf /usr/bin/gcc
+rm -rf /usr/bin/g++
+ln -s /usr/local/gcc8.3.0build/bin/gcc /usr/bin/gcc
+ln -s /usr/local/gcc8.3.0build/bin/g++ /usr/bin/g++
+```
+
+6、查看新版本
+
+```shell
+gcc --version
+```
+
+7、运行程序时可能会出现/lib64/libstdc++.so.6: version  `GLIBCXX_3.4.20' not found，是因为升级安装了gcc，生成的动态库没有替换老版本的gcc动态库导致的。
+
+查看包含最新的动态链接库的位置
+
+```shell
+find / -name "libstdc++.so*"
+```
+
+找到在/usr/local/gcc5/lib64/文件夹下
+
+```shell
+cp /usr/local/gcc8.3.0build/lib64/libstdc++.so.6.0.25  /usr/lib64/libstdc++.so.6.0.25
+rm -f /usr/lib64/libstdc++.so.6
+ln /usr/lib64/libstdc++.so.6.0.25 /usr/lib64/libstdc++.so.6
+
+```
+
+8、查看libstdc++.so.6链接包含的动态库
+
+```shell
+strings /usr/lib64/libstdc++.so.6|grep GLIBC
+```
+
+9、error 排除
+
+-  C++ preprocessor "/lib/cpp" fails sanity check
+
+```shell
+yum install -y glibc-headers
+yum install -y gcc-c++ 
+```
+
+
+
+## LDAP
+
+1、安装LDAP
+
+```shell
+yum install -y openldap-servers openldap-clients
+#拷贝数据库配置文件,DB_CONIFG中主要是关于Berkeley DB的相关的一些配置
+cp /usr/share/openldap-servers/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
+
+systemctl start slapd
+systemctl enable slapd
+systemctl status slapd
+```
+
+2、**配置ldap服务**
+
+```shell
+#生成管理员密码
+slappasswd
+New password:
+Re-enter new password:
+{SSHA}krOGXDmiCdSXuXocOf10F96LJO5ijdXo  #记住这个,下面会用到
+
+```
+
+
+
+3、新建一个rootpwd.ldif(名称是自定义的)的文件:
+
+```shell
+vi rootpwd.ldif
+
+dn: olcDatabase={0}config,cn=config
+changetype: modify
+add: olcRootPW
+olcRootPW: {SSHA}krOGXDmiCdSXuXocOf10F96LJO5ijdXo
+
+#ldif即LDAP Data Interchange Format，是LDAP中数据交换的一种文件格式。文件内容采用的是key-value形式，注意value后面不能有空格。
+#上面内容中dn即distingush name
+#olc即Online Configuration，表示写入LDAP后不需要重启即可生效
+#changetype: modify表示修改一个entry，changetype的值可以是add,delete, modify等。
+#add: olcRootPW表示对这个entry新增了一个olcRootPW的属性
+#olcRootPW: {SSHA}krOGXDmiCdSXuXocOf10F96LJO5ijdXo指定了属性值
+```
+
+```shell
+#下面使用ldapadd命令将上面的rootpwd.ldif文件写入LDAP:
+ldapadd -Y EXTERNAL -H ldapi:/// -f rootpwd.ldif
+SASL/EXTERNAL authentication started
+SASL username: gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth
+SASL SSF: 0
+modifying entry "olcDatabase={0}config,cn=config"
+```
+
+4、**导入schema**
+
+导入schema，schema包含为了支持特殊场景相关的属性，可根据选择导入，这里先全部导入:
+
+```shell
+ls /etc/openldap/schema/*.ldif | while read f; do ldapadd -Y EXTERNAL -H ldapi:/// -f $f; done
+```
+
+5、**设定默认域**
+
+```shell
+# 先使用slappasswd生成一个密码:
+slappasswd
+New password:
+Re-enter new password:
+{SSHA}OpMcf0c+pEqFLZm3i+YiI2qhId1G/yM3
+```
+
+```shell
+#新建一个domain.ldif的文件:
+
+vi domain.ldif
+
+dn: olcDatabase={1}monitor,cn=config
+changetype: modify
+replace: olcAccess
+olcAccess: {0}to * by dn.base="gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth"
+  read by dn.base="cn=Manager,dc=xuanwuai,dc=cn" read by * none
+
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+replace: olcSuffix
+olcSuffix: dc=xuanwuai,dc=cn
+
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+replace: olcRootDN
+olcRootDN: cn=Manager,dc=xuanwuai,dc=cn
+
+
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+add: olcRootPW
+olcRootPW: {SSHA}OpMcf0c+pEqFLZm3i+YiI2qhId1G/yM3 #替换上面生成的密码
+
+
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+add: olcAccess
+olcAccess: {0}to attrs=userPassword,shadowLastChange by
+  dn="cn=Manager,dc=xuanwuai,dc=cn" write by anonymous auth by self write by * none
+olcAccess: {1}to dn.base="" by * read
+olcAccess: {2}to * by dn="cn=Manager,dc=xuanwuai,dc=cn" write by * read
+```
+
+- `olcAccess`即access，该key用于指定目录的ACL即谁有什么权限可以存取什么
+- `olcRootDN`设定管理员root用户的distingush name
+- 注意替换上面文件内容中cn为具体的域信息
+- olcRootPW用上面新生成的密码替换
+
+```shell
+#写入
+ldapmodify -Y EXTERNAL -H ldapi:/// -f domain.ldif
+SASL/EXTERNAL authentication started
+SASL username: gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth
+SASL SSF: 0
+modifying entry "olcDatabase={1}monitor,cn=config"
+
+modifying entry "olcDatabase={2}hdb,cn=config"
+
+modifying entry "olcDatabase={2}hdb,cn=config"
+
+modifying entry "olcDatabase={2}hdb,cn=config"
+
+modifying entry "olcDatabase={2}hdb,cn=config"
+```
+
+6、**添加基本目录**
+
+```shell
+dn: dc=xuanwuai,dc=cn
+objectClass: top
+objectClass: dcObject
+objectclass: organization
+o: xuanwuai cn
+dc: xuanwuai
+
+dn: cn=Manager,dc=xuanwuai,dc=cn
+objectClass: organizationalRole
+cn: Manager
+description: Directory Manager
+
+dn: ou=People,dc=xuanwuai,dc=cn
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=Group,dc=xuanwuai,dc=cn
+objectClass: organizationalUnit
+ou: Group
+```
+
+- 注意替换上面文件内容中dn为具体的域信息
+- 理解dn,cn,dc
+  - DC即Domain Component，LDAP目录类似文件系统目录`dc=xuanwuai,dc=cn`相当于`/cn/xuanwuai`
+  - CN即Common Name，CN有可能代表一个用户名，例如`cn=Manager,dc=xuanwuai,dc=cn`表示在`/cn/xuanwuai`域下的管理员用户Manager
+  - OU即Organizational Unit，例如`ou=People,dc=xuanwuai,dc=cn`表示在`/cn/xuanwuai`域下的一个组织单元`People`
+
+```shell
+#写入:
+ldapadd -x -D cn=Manager,dc=xuanwuai,dc=cn -W -f basedomain.ldif
+Enter LDAP Password:
+adding new entry "dc=xuanwuai,dc=cn"
+
+adding new entry "cn=Manager,dc=xuanwuai,dc=cn"
+
+adding new entry "ou=People,dc=xuanwuai,dc=cn"
+
+adding new entry "ou=Group,dc=xuanwuai,dc=cn"
+```
+
+7、测试
+
+```shell
+ldapsearch -LLL -W -x -D "cn=Manager,dc=xuanwuai,dc=cn" -H ldap://localhost -b "dc=xuanwuai,dc=cn"
+Enter LDAP Password:
+dn: dc=xuanwuai,dc=cn
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: xuanwuai cn
+dc: xuanwuai
+
+dn: cn=Manager,dc=xuanwuai,dc=cn
+objectClass: organizationalRole
+cn: Manager
+description: Directory Manager
+
+dn: ou=People,dc=xuanwuai,dc=cn
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=Group,dc=xuanwuai,dc=cn
+objectClass: organizationalUnit
+ou: Group
+```
+
+8、可以在局域网内的windows电脑上下载[ldapadmin](http://www.ldapadmin.org/download/ldapadmin.html)作为管理工具
+
+[basedomain.ldif](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-linux/bash/basedomain.ldif)
+
+[domain.ldif](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-linux/bash/domain.ldif)
+
+[rootpwd.ldif](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-linux/bash/rootpwd.ldif)
