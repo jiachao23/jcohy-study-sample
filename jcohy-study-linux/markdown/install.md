@@ -94,7 +94,7 @@ netstat -anpt | grep 2465
 
 ```shell
 	mkdir -p /usr/local/mysql
-	tar -xvf mysql-8.0.16-2.el7.x86_64.rpm-bundle.tar -C /usr/local/mysql
+	tar -xvf mysql-8.0.16-2.el7.x86_64.rpm-bundle.tar
 ```
 
 
@@ -102,6 +102,8 @@ netstat -anpt | grep 2465
 
 ```shell
 	yum remove mariadb
+	rpm -qa|grep mariadb-libs
+	rpm -e mariadb-libs-5.5.60-1.el7_5.x86_64 --nodeps
 ```
 
 4. 安装相关依赖
@@ -115,6 +117,8 @@ yum install -y net-tools
 
 yum search perl
 yum install -y perl 
+
+yum install -y numactl
 ```
 
 5. mysql rpm 安装顺序
@@ -154,9 +158,15 @@ mysql -uroot -p
 
  mysql 5.8 修改密码加密方式，改成mysql_native_password,然后修改密码
 ```shell
+ #查看密码加密方式
+ use mysql
+ select host,user,plugin  from mysql.user;
  
+
+ ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'Xuanwuai@123';
+ ALTER USER 'root'@'%' IDENTIFIED BY 'Xuanwuai@123';
  ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Xuanwuai@123';
- SET PASSWORD FOR 'root'@'localhost' = PASSWORD('Xuanwuai@123');  
+ ALTER USER 'root'@'localhost' IDENTIFIED BY 'Xuanwuai@123';
  flush privileges;
 
 ```
@@ -206,12 +216,15 @@ init_connect='SET NAMES utf8'
 ```shell
 firewall-cmd --permanent --zone=public --add-port=3306/tcp
 firewall-cmd --permanent --zone=public --add-port=3306/udp
+firewall-cmd --reload
+firewall-cmd --list-ports  
 ```
 14.开启远程登录
 
 ```shell
 CREATE USER 'root'@'%' IDENTIFIED BY 'Xuanwuai@123';
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+flush privileges;
 ```
 
 <p id ="redis">
@@ -259,7 +272,9 @@ redis> get foo
 5、使用docker安装[redis](http://www.runoob.com/docker/docker-install-redis.html)
 
 ```shell
-docker run --restart=always -p 6379:6379 -v ~/data/redis/data:/data -v ~/conf/redis/redis.conf:/etc/redis/redis.conf --name myredis -d redis redis-server --appendonly yes
+docker pull redis
+mkdir -p /docker/redis/conf /docker/redis/data
+docker run --restart=always --privileged=true -p 6379:6379 -v /docker/redis/data:/data -v /docker/redis/conf/redis.conf:/etc/redis/redis.conf --name myredis -d redis redis-server --appendonly yes
 
 ```
 
@@ -268,6 +283,8 @@ docker run --restart=always -p 6379:6379 -v ~/data/redis/data:/data -v ~/conf/re
 <p id ="nginx">
 
 ## nginx
+
+http://nginx.org/en/linux_packages.html#RHEL-CentOS
 
 1、安装编译工具及库文件
 
@@ -280,7 +297,7 @@ yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel
 - 1、下载 PCRE 安装包，下载地址： <http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz>
 
 ```shell
-[root@bogon src]# cd /usr/local/src/
+[root@bogon src]# cd /opt/software
 [root@bogon src]# wget http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz
 ```
 
@@ -314,7 +331,7 @@ yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel
 - 下载 Nginx，下载地址：<http://nginx.org/download/nginx-1.6.2.tar.gz>
 
 ```shell
-[root@bogon src]# cd /usr/local/src/
+[root@bogon src]# cd /opt/software
 [root@bogon src]# wget http://nginx.org/download/nginx-1.6.2.tar.gz
 ```
 
@@ -333,21 +350,20 @@ yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel
 - 编译安装
 
 ```shell
-[root@bogon nginx-1.6.2]# ./configure --prefix=/usr/local/webserver/nginx --with-http_stub_status_module --with-http_ssl_module --with-pcre=/usr/local/src/pcre-8.35
-[root@bogon nginx-1.6.2]# make
-[root@bogon nginx-1.6.2]# make install
+[root@bogon nginx-1.6.2]# ./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-pcre=//opt/software/pcre-8.35
+[root@bogon nginx-1.6.2]# make && make install
 ```
 
 - 查看nginx版本
 
 ```shell
-[root@bogon nginx-1.6.2]# /usr/local/webserver/nginx/sbin/nginx -v
+[root@bogon nginx-1.6.2]# /usr/local/nginx/sbin/nginx -v
 ```
 
 4、启动nginx
 
 ```shell
-[root@bogon conf]# /usr/local/webserver/nginx/sbin/nginx
+[root@bogon conf]# /usr/local/nginx/sbin/nginx
 ```
 
 5、Nginx 其他命令
@@ -360,7 +376,32 @@ yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel
 
 6、使用docker安装[nginx](http://www.runoob.com/docker/docker-install-nginx.html)
 
+```shell
+docker pull nginx
+
+mkdir -p /docker/nginx/www /docker/nginx/logs /docker/nginx/conf
+
+docker run -d -p 80:80 --name nginx -v /docker/nginx/www:/usr/share/nginx/html -v /docker/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /docker/nginx/logs:/var/log/nginx nginx
+```
+
+8、错误处理
+
+```
+src/core/ngx_murmurhash.c: In function ‘ngx_murmur_hash2’:
+
+原因，是将警告当成了错误处理，打开/usr/local/nginx-1.6.2/objs/Makefile，
+去掉CFLAGS中的 -Werror
+再重新make
+```
+
+9、安装版安装
+
+
+
+
+
 <p id ="rabbit">
+
 
 ## RabbitMq
 
@@ -434,7 +475,7 @@ rabbitmqctl list_user_permissions username
 ```shell
   docker pull rabbitmq:3.7.16-management
 
-  docker run --restart=always -d -p 5672:5672 -p 15672:15672 --name myrabbitmq df80af9ca0c9
+  docker run --restart=always -d -p 5672:5672 -p 15672:15672 --name myrabbitmq 3f92e6354d11
 ```
 
 <p id ="git">
@@ -786,6 +827,15 @@ systemctl restart docker.service
 
 https://docs.docker.com/install/
 
+报错：IPv4 forwarding is disabled. Networking will not work.
+
+```shell
+vim  /usr/lib/sysctl.d/00-system.conf
+#添加下面的内容
+net.ipv4.ip_forward=1
+systemctl restart network && systemctl restart docker
+```
+
 
 
 <p id ="jenkins">
@@ -795,7 +845,6 @@ https://docs.docker.com/install/
 
 ```
 docker pull jenkinsci/blueocean
-
 
 ```
 
@@ -826,6 +875,12 @@ http://ftp.gnu.org/gnu/gcc/
 
 ```shell
 tar -zxvf gcc-8.3.0.tar.gz -C /usr/local
+yum install -y bzip2 glibc-headers gcc-c++ 
+yum install -y glibc-headers
+yum install -y gcc-c++ 
+
+
+
 ```
 
 3、下载依赖包
@@ -838,8 +893,9 @@ cd /usr/local/gcc-8.3.0/
 4、编译+安装
 
 ```shell
-mkdir gcc8.3.0build
-../gcc8.3.0build/configure --prefix=/usr/local/gcc8.3.0build --enable-checking=release --enable-languages=c,c++ --disable-multilib
+mkdir ../gcc8.3.0build && cd ../gcc8.3.0build
+
+../gcc-8.3.0/configure --prefix=/usr/local/gcc8.3.0build --enable-checking=release --enable-languages=c,c++ --disable-multilib
 make && make install
 ```
 
@@ -1099,3 +1155,124 @@ ou: Group
 [domain.ldif](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-linux/bash/domain.ldif)
 
 [rootpwd.ldif](https://github.com/jiachao23/jcohy-study-sample/tree/master/jcohy-study-linux/bash/rootpwd.ldif)
+
+## Confluence
+
+参考文档：
+
+https://www.cnblogs.com/ios9/p/9045035.html#_label0
+
+https://blog.csdn.net/LuckySuger/article/details/85121715
+
+https://confluence.atlassian.com/confkb/known-issues-for-mysql-13138.html
+
+https://www.cwiki.us/display/CONFLUENCEWIKI/Connecting+to+an+LDAP+Directory
+
+1、下载，不同的版本
+
+```shell
+wget https://downloads.atlassian.com/software/confluence/downloads/atlassian-confluence-6.12.1-x64.bin
+wget https://downloads.atlassian.com/software/confluence/downloads/atlassian-confluence-6.7.1-x64.bin
+wget https://downloads.atlassian.com/software/confluence/downloads/atlassian-confluence-6.9.1-x64.bin
+wget https://downloads.atlassian.com/software/confluence/downloads/atlassian-confluence-6.13.0-x64.bin
+```
+
+2、下载破解器
+
+https://files.cnblogs.com/files/Javame/confluence%E7%A0%B4%E8%A7%A3%E5%B7%A5%E5%85%B7.zip
+
+3、安装confluence
+
+```shell
+cd /opt
+chmod +x atlassian-confluence-6.12.1-x64.bin
+./atlassian-confluence-6.12.1-x64.bin
+```
+
+4、破解jar包
+
+下载破解和mysql驱动
+
+https://files.cnblogs.com/files/Javame/confluence%E7%A0%B4%E8%A7%A3%E5%B7%A5%E5%85%B7.rar
+
+- 1、备份jar包
+
+  ```shell
+  mv /opt/atlassian/confluence/confluence/WEB-INF/lib/atlassian-extras-decoder-v2-3.4.1.jar /opt/atlassian-extras-2.4.jar
+  ```
+
+  
+
+- 2、通过FTP将atlassian-extras-2.4.jar传到本地
+
+- 3、运行破解器confluence_keygen.jar
+
+  java -jar confluence_keygen.jar
+
+![](D:\self\document\picture\TIM截图20190806105347.png)
+
+- 4、点击.patch，选择atlassian-extras-2.4.jar文件，点击打开，jar文件破解成功
+
+- 5、上传破解后jar包到/opt/atlassian/confluence/confluence/WEB-INF/lib，并重命名atlassian-extras-decoder-v2-3.4.1.jar
+
+- 6、上传mysql驱动/opt/atlassian/confluence/confluence/WEB-INF/lib
+
+5、重启服务
+
+```shell
+chmod 777 atlassian-extras-decoder-v2-3.4.1.jar
+service confluence stop；
+service confluence start；
+```
+
+6、访问confluence
+
+http://localhost:8090
+
+7、点击产品安装
+
+8、拷贝服务ID通过破解器获取key
+
+9、设置外部数据库
+
+mysql设置问题：
+
+- 数据库字符编码
+
+  ＆characterEncoding = utf8
+  
+  ```none
+  utf8_bin
+  ```
+  
+- 事务隔离级别 
+
+	?sessionVariables=tx_isolation='READ-COMMITTED'
+
+  ```none
+  e.g. jdbc:mysql://127.0.0.1:3306/confdb?sessionVariables=tx_isolation='READ-COMMITTED'
+  ```
+
+- MySQL存储引擎
+
+  修改启动配置文件：default-storage-engine=INNODB
+
+10、配置邮箱服务器
+
+![1565061967220](D:\self\document\picture\邮箱服务器.png)
+
+
+
+11、Confluence修改数据库配置文件
+
+第一步：是找到confluence的安装目录，我的安装目录在 /opt/atlassian/；
+
+第二步：由于confluence把tomcat给改造了，所以confluence的应用并没有在workapps下，而是在confluence下面；
+
+我们的工程的配置文件在classes文件夹，于是我找到了/opt/atlassian/confluence/confluence/WEB-INF/classes这个目录，
+
+查看这个目录下面有一个confluence-init.properties文件，感觉像是大概的配置文件，打开这个文件，发现最后面有一行代码：confluence.home = /var/atlassian/application-data/confluence
+
+第三步、进入confluence.home配置的文件夹，打开这个文件夹看到 有一个confluence.cfg.xml文件，打开这个文件，发现配置的数据库连接池一类的东西，真正的算是找到了，修改hibernate.connection.url的value为新的数据库地址 重新启动服务；
+
+ /var/atlassian/application-data/confluence下confluence.cfg.xml文件：
