@@ -839,16 +839,16 @@ systemctl restart network && systemctl restart docker
 
 
 <p id ="jenkins">
+
 ## Jenkins
 
-1、
+1、获取镜像
 
 ```
 docker pull jenkinsci/blueocean
-
 ```
 
-2、
+2、运行镜像
 
 ```
 docker run \
@@ -878,9 +878,6 @@ tar -zxvf gcc-8.3.0.tar.gz -C /usr/local
 yum install -y bzip2 glibc-headers gcc-c++ 
 yum install -y glibc-headers
 yum install -y gcc-c++ 
-
-
-
 ```
 
 3、下载依赖包
@@ -970,10 +967,7 @@ slappasswd
 New password:
 Re-enter new password:
 {SSHA}krOGXDmiCdSXuXocOf10F96LJO5ijdXo  #记住这个,下面会用到
-
 ```
-
-
 
 3、新建一个rootpwd.ldif(名称是自定义的)的文件:
 
@@ -1209,7 +1203,7 @@ https://files.cnblogs.com/files/Javame/confluence%E7%A0%B4%E8%A7%A3%E5%B7%A5%E5%
 
   java -jar confluence_keygen.jar
 
-![](D:\self\document\picture\TIM截图20190806105347.png)
+![](D:\Document\picture\confluence_keygen1.png)
 
 - 4、点击.patch，选择atlassian-extras-2.4.jar文件，点击打开，jar文件破解成功
 
@@ -1259,7 +1253,7 @@ mysql设置问题：
 
 10、配置邮箱服务器
 
-![1565061967220](D:\self\document\picture\邮箱服务器.png)
+![1565061967220](D:\Document\picture\confluence_keygen2.png)
 
 
 
