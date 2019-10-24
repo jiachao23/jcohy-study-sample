@@ -1,19 +1,19 @@
-dn: dc=xuanwuai,dc=cn
+dn: dc=jiac,dc=cn
 objectClass: top
 objectClass: dcObject
 objectclass: organization
-o: xuanwuai cn
-dc: xuanwuai
+o: jiac cn
+dc: jiac
 
-dn: cn=Manager,dc=xuanwuai,dc=cn
+dn: cn=Manager,dc=jiac,dc=cn
 objectClass: organizationalRole
 cn: Manager
 description: Directory Manager
 
-dn: ou=People,dc=xuanwuai,dc=cn
+dn: ou=People,dc=jiac,dc=cn
 objectClass: organizationalUnit
 ou: People
 
-dn: ou=Group,dc=xuanwuai,dc=cn
+dn: ou=Group,dc=jiac,dc=cn
 objectClass: organizationalUnit
 ou: Group
