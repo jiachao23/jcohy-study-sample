@@ -31,10 +31,12 @@
 <p id="Features">
 
 ## jdk9新特性一览
-
+Java 9 正式发布于 2017 年 9 月 21 日 。作为 Java8 之后 3 年半才发布的新版本，Java 9 带 来了很多重大的变化。其中最重要的改动是 Java 平台模块系统的引入。除此之外，还有一些新的特性。 本文对 Java9 中包含的新特性做了概括性的介绍，可以帮助你快速了解 Java 9。
 java 9 提供了超过150项新功能特性，包括备受期待的模块化系统、可交互的 REPL 工具：jshell，JDK 编译工具，Java 公共 API 和私有代码，以及安全增强、扩展提升、性能管理改善等。可以说Java 9是一个庞大的系统工程，完全做了一个整体改变。
 
-目前官网已经不提供java9的下载。
+
+此版本为“功能性”版本，并非长期支持版本。Oracle 宣布这些版本只有短期支持（六个月）。目前最新的LTC版本为java11。目前官网已经不提供java9的下载。
+详情参考[java 11新特性](https://github.com/jiachao23/jcohy-study-sample/blob/master/jcohy-study-java/markdown/java11.md)
 
 资料来源： http://openjdk.java.net/projects/jdk9/ 
 
