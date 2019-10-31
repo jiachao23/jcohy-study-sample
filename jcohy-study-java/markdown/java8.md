@@ -1,3 +1,7 @@
+#  Java
+> #### PS:待开发中。。。。
+> #### 作者网页：[www.jcohy.com](http://www.jcohy.com)  
+
 # Java8新特性
 
 > * [Lambda表达式](#Lambda)
