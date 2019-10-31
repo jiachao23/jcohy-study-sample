@@ -9,22 +9,22 @@
 >   * [UnderScope（下划线使用的限制）](#UnderScope)
 > * [String存储结构变更](#String存储结构变更)
 > * [集合工厂方法](#集合工厂方法)
-> * [增强的 Stream API](#增强的 Stream API)
-> * [多分辨率图像 API](#多分辨率图像 API)
+> * [增强的StreamAPI](#增强的StreamAPI)
+> * [多分辨率图像API](#多分辨率图像API)
 > * [全新的HTTP客户端API](#全新的HTTP客户端API)
 > * [Deprecated的相关API](#Deprecated的相关API)
 > * [智能Java编译工具](#智能Java编译工具)
 > * [统一的JVM日志系统](#统一的JVM日志系统)
-> * [javadoc的HTML 5 支持](#javadoc的HTML 5 支持)
+> * [javadoc的HTML5支持](#javadoc的HTML5支持)
 > * [Javascript引擎升级：Nashorn](#Nashorn)
 > * [java的动态编译器](#java的动态编译器)
-> * [进程 API](#进程 API)
-> * [平台日志 API 和 服务](#平台日志 API 和 服务)
+> * [进程API](#进程API)
+> * [平台日志API和服务](#平台日志API和服务)
 > * [反应式流](#反应式流)
 > * [变量句柄](#变量句柄)
 > * [改进方法句柄](#改进方法句柄)
 > * [并发](#并发)
-> * [I/O 流新特性](#I/O 流新特性)
+> * [I/O流新特性](#I/O流新特性)
 > * [改进应用安全性能](#改进应用安全性能)
 > * [用户界面](#用户界面)
 
@@ -443,9 +443,9 @@ Set.of(1, 2, 3);
 Map.of();
 Map.of("Hello", 1, "World", 2);
 ```
-<p id="增强的 Stream API">
+<p id="增强的StreamAPI">
 
-## 增强的 Stream API
+## 增强的StreamAPI
 Stream 中增加了新的方法 ofNullable、dropWhile、takeWhile 和 iterate。在 如下代码中，流中包含了从 1 到 5 的 元素。断言检查元素是否为奇数。第一个元素 1 被删除，结果流中包含 4 个元素。
 ```java
 @Test 
@@ -481,9 +481,9 @@ public void testStream() throws Exception {
 }
 ```
 
-<p id="多分辨率图像 API">
+<p id="多分辨率图像API">
 
-## 多分辨率图像 API
+## 多分辨率图像API
 ### 官方Feature
 * 251: Multi-Resolution Images
 * 263: HiDPI Graphics on Windows and Linux
@@ -538,9 +538,9 @@ JDK 9 还更新了javac 编译器以便能够将 java 9 代码编译运行在低
   解决该问题最佳方法：对所有的JVM组件引入一个单一的系统，这些JVM组件支持细粒度的和易配置的JVM日志。
 
   > Java 9 中 ，JVM 有了统一的日志记录系统，可以使用新的命令行选项-Xlog 来控制 JVM 上 所有组件的日志记录。该日志记录系统可以设置输出的日志消息的标签、级别、修饰符和输出目标等。Java 9 移除了在 Java 8 中 被废弃的垃圾回收器配置组合，同时 把 G1 设为默认的垃圾回收器实现。另外，CMS 垃圾回收器已经被声明为废弃。Java 9 也增加了很多可以通过 jcmd 调用的诊断命令。
-<p id="javadoc的HTML 5 支持">
+<p id="javadoc的HTML5支持">
 
-## javadoc的HTML 5 支持
+## javadoc的HTML5支持
 ### 官方Feature
 * 224: HTML5 Javadoc
 * 225: Javadoc Search
@@ -569,7 +569,8 @@ JDK 9 包含一个用来解析 Nashorn 的 ECMAScript 语法树的 API。这个 
   但是 Java 技术供应商 Excelsior 的营销总监 Dmitry Leskov 担心 AoT 编译技术不够成熟，希望 Oracle 能够等到 Java 10 时有个更稳定版本才发布。
   另外 JVMCI （JEP 243: Java-Level JVM Compiler Interface）等特性，对于整个编程语言的发展，可能都具有非常重要的意义，虽然未必引起了广泛关注。目前 Graal Core API 已经被集成进入 Java 9，虽然还只是初始一小步，但是完全用 Java 语言来实现的可靠的、高性能的动态编译器，似乎不再是遥不可及，这是 Java 虚拟机开发工程师的福音。
   与此同时，随着 Truffle 框架和 Substrate VM 的发展，已经让个别信心满满的工程师高呼“One VM to Rule Them All!”， 也许就在不远的将来 Ploygot 以一种另类的方式成为现实。
-<p id="进程 API">
+
+<p id="进程API">
 
 ## 进程 API
 Java 9 增加了 ProcessHandle 接口，可以对原生进程进行管理，尤其适合于管理长时间运行的进程。在使用 P rocessBuilder 来启动一个进程之后，可以通过 Process.toHandle()方法来得到一个 ProcessHandl e 对象的实例。通过 ProcessHandle 可以获取到由 ProcessHandle.Info 表 示的进程的基本信息，如命令行参数、可执行文件路径和启动时间等。ProcessHandle 的 onExit()方法返回一个 C ompletableFuture<ProcessHandle>对象，可以在进程结束时执行自定义的动作。 下面代码 中给出了进程 API 的使用示例。
@@ -586,7 +587,7 @@ processHandle.onExit().whenCompleteAsync((handle, throwable) -> {
 });
 ```
 
-<p id="平台日志 API 和 服务">
+<p id="平台日志API和服务">
 
 ## 平台日志 API 和 服务
 Java 9 允许为 JDK 和应用配置同样的日志实现。新增的 System.LoggerFinder 用来管理 JDK 使 用的日志记录器实现。JVM 在运行时只有一个系统范围的 LoggerFinder 实例。LoggerFinder 通 过服务查找机制来加载日志记录器实现。默认情况下，JDK 使用 java.logging 模块中的 java.util.logging 实现。通过 LoggerFinder 的 getLogger()方法就可以获取到表示日志记录器的 System.Logger 实现。应用同样可以使用 System.Logger 来记录日志。这样就保证了 JDK 和应用使用同样的日志实现。我们也可以通过添加自己的 System.LoggerFinder 实现来让 JDK 和应用使用 SLF4J 等其他日志记录框架。 如下代码中给出了平台日志 API 的使用示例。
@@ -680,7 +681,7 @@ public class IteratedLoopTest {
 ## 并发
 在并发方面，类 CompletableFuture 中增加了几个新的方法。completeAsync 使用一个异步任务来获取结果并完成该 CompletableFuture。orTimeout 在 CompletableFuture 没有在给定的超时时间之前完成，使用 TimeoutException 异常来完成 CompletableFuture。completeOnTimeout 与 o rTimeout 类似，只不过它在超时时使用给定的值来完成 CompletableFuture。新的 Thread.onSpinWai t 方法在当前线程需要使用忙循环来等待时，可以提高等待的效率。
 
-<p id="I/O 流新特性">
+<p id="I/O流新特性">
 
 ## I/O 流新特性
 类 java.io.InputStream 中增加了新的方法来读取和复制 InputStream 中包含的数据。
