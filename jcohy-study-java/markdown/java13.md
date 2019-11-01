@@ -404,7 +404,7 @@ SocketImpl的USE_PLAINSOCKETIMPL取决于usePlainSocketImpl方法，而它会从
 <p id="other">
 
 ## 其他解读
-上面列出的是大方面的特性，除此之外还有一些api的更新及废弃，主要见https://jdk.java.net/13/release-notes，这里举几个例子
+上面列出的是大方面的特性，除此之外还有一些api的更新及废弃，主要见 [https://jdk.java.net/13/release-notes](https://jdk.java.net/13/release-notes)，这里举几个例子
 
 ### 增加项
 * 添加FileSystems.newFileSystem(Path, Map<String, ?>) Method
