@@ -95,7 +95,7 @@
         <mybatis.version>3.2.8</mybatis.version>
         <mybatis-spring.version>1.2.3</mybatis-spring.version>
         <druid.version>1.0.18</druid.version>
-        <shiro.version>1.2.3</shiro.version>
+        <shiro.version>1.4.2</shiro.version>
         <sitemesh.version>2.4.2</sitemesh.version>
         <activiti.version>5.21.0</activiti.version>
         <javax.servlet.version>4.0.0</javax.servlet.version>
