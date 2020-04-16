@@ -1,4 +1,7 @@
-#### 作者网页：[www.jcohy.com](http://www.jcohy.com)  	
+### 本项目已迁移至 https://github.com/jcohy/jcohy-study-sample
+
+#### 作者网页：[www.jcohy.com](http://www.jcohy.com)  
+#### 翻译文档：[docs.jcohy.com](http://docs.jcohy.com)
 > #### PS:待开发中。。。。
 
 >  我的学习笔记，记录学习过程中的笔记以及遇到的问题,以及我的一些经验总结。如果出现链接失效,或者想知道更多的内容等情况可以提交 Issues 提醒我修改相关内容。
